@@ -1,0 +1,4 @@
+# Concept samples. Crawling stays allowed on purpose: search engines must be able to read the
+# noindex tag and header to keep these pages out, and the GEO checker needs to read the page.
+User-agent: *
+Allow: /

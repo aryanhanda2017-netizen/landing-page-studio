@@ -1,0 +1,19 @@
+# {{BUSINESS}}
+
+> {{AEO_PASSAGE: one plain paragraph, 40 to 60 words: what they do, for whom, and where. The same passage that opens the services section.}}
+
+Contact: {{EMAIL}}, {{PHONE}}. {{ADDRESS_IF_PUBLIC}}
+
+## Work
+
+- [{{CASE_NAME}}]({{CASE_URL}}): {{one line with the real result, worded as on their site}}
+
+## People
+
+- {{NAME}}, {{ROLE}}
+
+## Links
+
+- [Homepage](https://{{DOMAIN}}/)
+- [Instagram]({{URL}})
+- [LinkedIn]({{URL}})

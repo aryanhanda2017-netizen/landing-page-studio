@@ -1,0 +1,17 @@
+{
+  "name": "landing-page-studio",
+  "description": "Design and rebuild premium, scroll-driven landing pages with Claude Code, checked on a phone-sized screen before anyone sees them.",
+  "owner": {
+    "name": "Aryan Handa"
+  },
+  "plugins": [
+    {
+      "name": "landing-page-studio",
+      "source": "./landing-page-studio",
+      "description": "Research a business, design a layered scroll-driven landing page from its real assets, verify it at phone and desktop sizes, build in SEO/AEO/GEO, and ship it.",
+      "version": "0.1.0",
+      "license": "MIT",
+      "homepage": "https://github.com/aryanhanda2017-netizen/landing-page-studio"
+    }
+  ]
+}

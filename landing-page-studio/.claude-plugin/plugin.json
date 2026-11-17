@@ -1,0 +1,22 @@
+{
+  "name": "landing-page-studio",
+  "version": "0.1.0",
+  "description": "Design and rebuild premium, scroll-driven landing pages from a business's real assets: layered hero with a reveal, sections picked from 21st.dev, SEO/AEO/GEO built in, and automatic checks for dead space, phone layout, contrast and motion before you ship.",
+  "author": {
+    "name": "Aryan Handa"
+  },
+  "license": "MIT",
+  "keywords": [
+    "landing page",
+    "website",
+    "design",
+    "scroll animation",
+    "seo",
+    "geo",
+    "aeo",
+    "21st.dev",
+    "scrollcraft"
+  ],
+  "homepage": "https://github.com/aryanhanda2017-netizen/landing-page-studio",
+  "repository": "https://github.com/aryanhanda2017-netizen/landing-page-studio"
+}
