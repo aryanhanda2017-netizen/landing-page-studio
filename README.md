@@ -15,10 +15,17 @@ Every rule in `references/` comes from real review rounds on real pages: each on
 
 ## Install
 
-In Claude Code:
+In Claude Code, paste these two lines one at a time (press enter after each and let it finish).
+
+1. Tell Claude Code where the plugin lives:
 
 ```
 /plugin marketplace add aryanhanda2017-netizen/landing-page-studio
+```
+
+2. Install it:
+
+```
 /plugin install landing-page-studio@landing-page-studio
 ```
 
