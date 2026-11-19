@@ -20,7 +20,8 @@ const run = cmd => { try { return execSync(cmd, { stdio: ['ignore', 'pipe', 'ign
 
 // Search the installed plugins for a skill folder by name.
 function findSkill(name) {
-  const roots = [join(home, '.claude', 'plugins'), join(home, '.claude', 'skills'), join(process.cwd(), '.claude', 'skills')];
+  const cfg = process.env.CLAUDE_CONFIG_DIR;
+  const roots = [...(cfg ? [join(cfg, 'plugins'), join(cfg, 'skills')] : []), join(home, '.claude', 'plugins'), join(home, '.claude', 'skills'), join(process.cwd(), '.claude', 'skills')];
   for (const root of roots) {
     if (!existsSync(root)) continue;
     const hit = run(`find "${root}" -maxdepth 8 -type f -path "*/${name}/SKILL.md" 2>/dev/null | head -1`);
@@ -85,6 +86,21 @@ if (missing.length) {
 }
 if (sc) console.log(`\nScrollCraft folder (use as $SC in verification.md): ${sc}`);
 if (seoCli) console.log(`claude-seo command: ${seoCli}`);
+
+// The website templates ship at the repo root, so they arrive with the marketplace clone
+// (or a plain git clone), not inside the plugin cache.
+const configDir = process.env.CLAUDE_CONFIG_DIR || join(home, '.claude');
+const tplCandidates = [
+  join(skillDir, '..', '..', '..', 'templates'),
+  join(configDir, 'plugins', 'marketplaces', 'landing-page-studio', 'templates'),
+];
+const tplDir = tplCandidates.find(p => existsSync(join(p, 'README.md')));
+if (tplDir) {
+  const names = readdirSync(tplDir, { withFileTypes: true }).filter(d => d.isDirectory() && existsSync(join(tplDir, d.name, 'index.html'))).map(d => d.name);
+  console.log(`Templates folder (${names.length} templates): ${tplDir}`);
+} else {
+  console.log('Templates: not found. They come with `/plugin marketplace add aryanhanda2017-netizen/landing-page-studio`, or clone that repo.');
+}
 const hardFail = rows.some(r => r.need === 'required' && !r.ok);
 console.log(hardFail ? '\nRequired pieces are missing. Install them before building.' : '\nReady.');
 process.exit(hardFail ? 1 : 0);

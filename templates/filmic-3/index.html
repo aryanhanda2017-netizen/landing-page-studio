@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and marketing studio in Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio of 32 people in Lowmere making brands, websites, films and campaigns people notice.">
+<meta name="theme-color" content="#16130F">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Brands worth remembering">
+<meta property="og:description" content="A creative and marketing studio in Lowmere: brand strategy and identity, websites, social, film, campaigns and paid media.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Brands worth remembering">
+<meta name="twitter:description" content="A creative and marketing studio in Lowmere: brand, websites, social, film, campaigns and paid media.">
+
+<script>
+  (function (d) {
+    d.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('fx', 'pre-reveal');
+    if (window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && !/[?&]nosd\b/.test(location.search)) d.classList.add('sd');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/poppins-900i-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/poppins-400-latin.woff2" crossorigin>
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-400-latin.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-500-latin.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-600-latin.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-700-latin.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-800i-latin.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-900i-latin.woff2") format("woff2"); font-weight: 900; font-style: italic; font-display: swap; }
+@property --lampc { syntax: "<color>"; inherits: true; initial-value: #F8D9BC; }
+@property --lampo { syntax: "<number>"; inherits: true; initial-value: .55; }
+
+/* Palette: Night Kiln. A warm night ground, ember orange for the signs, the dashes and the one action; Poppins; */
+:root {
+  --y: #E0763C;
+  --y2: #E8854F;
+  --ink: #16130F;
+  --asph: #231E18;
+  --text: #F1E9DC;
+  --soft: #A89D8C;
+  --line: rgba(241, 233, 220, .13);
+  --sc-canvas: #16130F; --sc-surface: #231E18; --sc-ink: #F1E9DC; --sc-ink-soft: #A89D8C; --sc-accent: #E0763C; --sc-accent-ink: #16130F;
+  --sys: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --pop: "Poppins", var(--sys);
+  --sc-font-display: var(--pop); --sc-font-text: var(--pop);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --io: cubic-bezier(.45, 0, .55, 1);
+  --bar: 64px;
+  --g: clamp(18px, 5.2vw, 76px);
+  --dock: 0px;
+  color-scheme: dark;
+}
+html { background: var(--ink); scroll-padding-top: var(--bar); }
+body { margin: 0; background: var(--ink); color: var(--text); font: 400 16px/1.7 var(--pop); -webkit-font-smoothing: antialiased; }
+main > section { overflow-x: clip; }
+a { color: inherit; }
+img { max-width: 100%; }
+:focus-visible { outline: 2px solid var(--y); outline-offset: 3px; }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 100; background: var(--y); color: #16130F; padding: 10px 14px; border-radius: 4px; font-weight: 600; }
+.skip:focus { top: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.disp { font-family: var(--pop); font-style: italic; font-weight: 900; text-transform: uppercase; letter-spacing: -.012em; line-height: .98; color: #FBF4EA; }
+.disp .y, .y { color: var(--y2); }
+.label { margin: 0; font: 600 .74rem/1.4 var(--pop); letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+.h2 { margin: 0; font-size: clamp(2rem, 1rem + 3.3vw, 4.1rem); text-wrap: balance; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 var(--g); }
+
+/* ---------------- the one action: an exit plate, lane dashes run on hover ---------------- */
+.cta { display: inline-flex; text-decoration: none; color: #16130F; border-radius: 3px; -webkit-tap-highlight-color: transparent; }
+.cta__plate { position: relative; display: inline-flex; align-items: center; gap: .65rem; padding: 0 1.55rem 0 1.05rem; min-height: 44px; background: var(--y); font: 700 .98rem/1.1 var(--pop); letter-spacing: -.005em; white-space: nowrap; clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%); transition: transform .18s var(--ease); }
+.cta:active .cta__plate { transform: scale(.97); }
+.cta__arw { width: 34px; height: 14px; flex: none; overflow: visible; }
+.cta__arw path { fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.cta__trail { stroke-dasharray: 5 5; stroke-dashoffset: 0; opacity: 0; transition: opacity .2s var(--ease); }
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover .cta__trail { opacity: 1; animation: cta-run .5s linear infinite; }
+}
+@keyframes cta-run { to { stroke-dashoffset: -10; } }
+.cta--big .cta__plate { min-height: 58px; padding: 0 2.1rem 0 1.4rem; font-size: 1.12rem; }
+.cta--big .cta__arw { width: 40px; height: 16px; }
+
+/* ---------------- bar: wordmark and the one action ---------------- */
+.bar { position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar); display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 var(--g); background: #0E0B08; }
+.bar__mark { display: block; line-height: 0; padding: 6px 0; }
+.bar__mark img { display: block; width: auto; height: 24px; }
+.dock { display: none; }
+
+/* ---------------- the signature: a road lamp warms up in a chase and lights the act forward ---------------- */
+.act { position: relative; }
+.lamp { position: absolute; z-index: 0; left: 0; top: 0; width: 100%; height: 0; pointer-events: none; --hx: max(var(--g), calc(50vw - 560px)); }
+.lamp__arm { position: absolute; left: 0; top: 34px; width: calc(var(--hx) + 30px); height: 5px; background: #352D26; }
+.lamp__arm::before { content: ""; position: absolute; left: 0; top: -34px; width: 9px; height: 60px; background: #352D26; }
+.lamp__head { position: absolute; left: var(--hx); top: 25px; width: 150px; height: 24px; border-radius: 5px 5px 12px 12px; background: #2A231D; display: flex; align-items: flex-end; justify-content: space-between; padding: 0 10px 5px; box-sizing: border-box; }
+.lamp__head i { display: block; width: 9px; height: 8px; border-radius: 2.5px; background: #3A2F26; }
+.lamp__cone { position: absolute; left: calc(var(--hx) - 150px); top: 49px; width: 450px; height: var(--cone, 560px); background: linear-gradient(180deg, rgba(242, 160, 101, .15), rgba(242, 160, 101, .055) 46%, rgba(242, 160, 101, 0)); clip-path: polygon(39% 0, 61% 0, 100% 100%, 0 100%); transform-origin: 50% 0; }
+.lz { position: relative; z-index: 1; }
+.lamp--r { top: var(--bar); --hx: calc(50vw - 75px); }
+.lamp--r .lamp__arm { width: calc(50vw - 45px); }
+.lamp--r .lamp__cone { --cone: 80svh; width: 760px; left: calc(50vw - 380px); clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%); }
+
+/* ================= 1 HERO: a road at night ================= */
+.hero__stage { position: relative; height: 100svh; min-height: 560px; overflow: hidden; background: linear-gradient(180deg, #0B0907 0%, #110E0B 44%, #1C1814 var(--hz), #17140F calc(var(--hz) + .5svh), #16130F 100%); }
+.hero { --wu: calc(100svh / 900); --hz: 62svh; --eye: 39.5svh; --pp: calc(1000 * var(--wu)); --rw: 1640; --gz: 900; --gh: 1250; --fz: 2000; --fw: 1300; --fp: 150; --D: 1250; --lift: -13.5svh; }
+.scene { position: absolute; inset: 0; overflow: hidden; }
+.haze { position: absolute; left: 0; right: 0; top: calc(var(--hz) - 22svh); height: 30svh; background: radial-gradient(60% 55% at 50% 72%, rgba(242, 160, 101, .085), rgba(242, 160, 101, 0) 70%); pointer-events: none; }
+.world { position: absolute; inset: 0; perspective: var(--pp); perspective-origin: 50% var(--hz); }
+.cam { position: absolute; inset: 0; transform-style: preserve-3d; }
+.ground { position: absolute; left: 50%; overflow: hidden; transform-origin: 50% 100%; transform: rotateX(90deg); }
+.ground--hero { --L: 7200; width: calc(var(--rw) * var(--wu)); height: calc(var(--L) * var(--wu)); margin-left: calc(var(--rw) * var(--wu) / -2); top: calc(var(--hz) + var(--eye) - var(--L) * var(--wu));
+  background:
+    linear-gradient(180deg, #1C1814 0%, #1C1814 22%, rgba(28, 24, 20, 0) 50%),
+    linear-gradient(90deg, rgba(241, 233, 220, .62) 0 1.2%, #231E18 1.2% 98.8%, rgba(241, 233, 220, .62) 98.8% 100%); }
+.hstrip { position: absolute; left: 0; right: 0; bottom: 0; height: calc(100% + var(--D) * var(--wu)); }
+.gfog { position: absolute; left: 0; right: 0; top: 0; height: 55%; background: linear-gradient(180deg, #1C1814 0%, #1C1814 40%, rgba(28, 24, 20, 0) 100%); }
+.dashes { position: absolute; left: 50%; top: 0; bottom: 0; width: calc(26 * var(--wu)); margin-left: calc(-13 * var(--wu)); background: repeating-linear-gradient(180deg, transparent 0 calc(210 * var(--wu)), var(--y2) calc(210 * var(--wu)) calc(380 * var(--wu))); }
+.pool { position: absolute; bottom: calc(var(--z) * var(--wu)); left: calc(50% + var(--side) * (var(--rw) * var(--wu) / 2 - 190 * var(--wu))); width: calc(760 * var(--wu)); height: calc(900 * var(--wu)); transform: translate(-50%, 50%); background: radial-gradient(closest-side, rgba(242, 160, 101, .2), rgba(242, 160, 101, .07) 55%, rgba(242, 160, 101, 0)); }
+.obj { position: absolute; left: 50%; top: var(--hz); }
+.lamp3d { width: calc(480 * var(--wu)); height: calc(470 * var(--wu)); margin: calc(-470 * var(--wu)) 0 0 calc(-240 * var(--wu)); transform: translate3d(calc(var(--side) * (var(--rw) / 2 + 60) * var(--wu)), var(--eye), calc(var(--z) * var(--wu) * -1)) scaleX(calc(var(--side) * -1)); }
+.lamp3d svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.gantry { width: calc((var(--rw) + 150) * var(--wu)); height: calc(var(--gh) * var(--wu)); margin: calc(var(--gh) * var(--wu) * -1) 0 0 calc((var(--rw) + 150) * var(--wu) / -2); transform: translate3d(0, var(--eye), calc(var(--gz) * var(--wu) * -1)); }
+.gantry__leg { position: absolute; bottom: 0; top: 0; width: calc(18 * var(--wu)); background: #332B24; }
+.gantry__leg--l { left: 0; } .gantry__leg--r { right: 0; }
+.gantry__beam { position: absolute; left: 0; right: 0; top: 0; height: calc(40 * var(--wu)); background: repeating-linear-gradient(90deg, #332B24 0 calc(6 * var(--wu)), #221C17 calc(6 * var(--wu)) calc(46 * var(--wu))); border-top: calc(6 * var(--wu)) solid #3B322A; border-bottom: calc(6 * var(--wu)) solid #3B322A; box-sizing: border-box; }
+.gantry__signs { position: absolute; left: 0; right: 0; top: calc(40 * var(--wu)); display: flex; justify-content: center; gap: calc(46 * var(--wu)); }
+.gsign { position: relative; width: calc(480 * var(--wu)); height: calc(196 * var(--wu)); box-sizing: border-box; padding: calc(30 * var(--wu)) calc(60 * var(--wu)) 0 calc(30 * var(--wu)); background: var(--y2); color: #16130F; clip-path: polygon(0 0, calc(100% - 52 * var(--wu)) 0, 100% 50%, calc(100% - 52 * var(--wu)) 100%, 0 100%); font-family: var(--pop); }
+.gsign::before { content: ""; position: absolute; left: calc(40 * var(--wu)); top: calc(-16 * var(--wu)); width: calc(8 * var(--wu)); height: calc(20 * var(--wu)); background: #332B24; }
+.gsign b { display: block; font: 700 calc(26 * var(--wu))/1 var(--pop); letter-spacing: .14em; }
+.gsign strong { display: block; margin-top: calc(16 * var(--wu)); font: italic 900 calc(64 * var(--wu))/1 var(--pop); letter-spacing: -.01em; text-transform: uppercase; }
+.farsign { width: calc(var(--fw) * var(--wu)); margin-left: calc(var(--fw) * var(--wu) / -2); transform: translate3d(0, var(--eye), calc(var(--fz) * var(--wu) * -1)) translateY(-100%); }
+.farsign__board { box-sizing: border-box; padding: calc(34 * var(--wu)) calc(58 * var(--wu)) calc(26 * var(--wu)); background: #100D0A; border: calc(16 * var(--wu)) dotted #6B3F25; border-radius: calc(10 * var(--wu)); }
+.farsign svg { display: block; width: 100%; height: auto; }
+html.fx .farsign__board { transition: border-color .5s var(--ease) .6s; }
+html.fx:not(.pre-reveal) .farsign__board, html:not(.fx) .farsign__board { border-color: #F3B58A; }
+.farsign__posts { display: flex; justify-content: space-between; padding: 0 24%; height: calc(var(--fp) * var(--wu)); }
+.farsign__posts i { width: calc(22 * var(--wu)); background: #332B24; }
+.lg-s { transition: fill .5s var(--ease) .55s; }
+.lg-b { transition: fill .16s linear calc(.75s + var(--i) * 34ms); }
+
+.hero__copy { position: absolute; z-index: 3; left: var(--g); right: var(--g); top: 25.5svh; text-align: center; }
+.hero__eyebrow { margin: 0 0 1.1rem; font: 600 clamp(.72rem, .66rem + .2vw, .82rem)/1.4 var(--pop); letter-spacing: .2em; text-transform: uppercase; color: #D9CFC0; }
+.hero__h1 { margin: 0 auto; font-size: clamp(2.2rem, 1rem + 3.5vw, 4.4rem); line-height: .96; }
+.hl { display: block; overflow: hidden; padding: .04em .1em .06em; margin: -.04em 0 -.06em; }
+.hl > span { display: block; text-wrap: balance; }
+.hero__act { position: absolute; z-index: 3; left: 0; right: 0; top: 80svh; display: flex; justify-content: center; }
+
+/* ================= 2 SERVICES: three exits ================= */
+.route { padding: 8.5svh 0 2svh; }
+.route__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: 2rem clamp(2rem, 6vw, 7rem); align-items: end; }
+.route__head .h2 { max-width: 12ch; }
+.lede { margin: 0; max-width: 36rem; font-size: clamp(1.02rem, .96rem + .3vw, 1.2rem); line-height: 1.7; color: var(--text); text-wrap: pretty; }
+.exits { list-style: none; margin: 4.5svh 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem clamp(1.4rem, 3vw, 3rem); }
+.exit__sign { position: relative; display: block; padding: 1.05rem 3.4rem 1.15rem 1.25rem; background: var(--y2); color: #16130F; clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 50%, calc(100% - 34px) 100%, 0 100%); transform-origin: 50% 0; }
+.exit__sign b { display: block; font: 700 .78rem/1 var(--pop); letter-spacing: .16em; }
+.exit__sign h3 { margin: .45rem 0 0; font: italic 900 clamp(1.7rem, 1rem + 1.8vw, 2.6rem)/1 var(--pop); text-transform: uppercase; letter-spacing: -.01em; color: #16130F; }
+.exit__body { padding: 1.2rem .2rem 0; }
+.exit__body p { margin: 0 0 1.1rem; color: var(--text); }
+.exit__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.exit__list li { padding: .45rem 0; border-bottom: 1px solid var(--line); color: #FBF4EA; font-weight: 500; font-size: .98rem; }
+
+/* ================= 3 RESULTS: numbers painted on the road ================= */
+.results { --wu: calc(100svh / 900); --hz: 54svh; --eye: 46svh; --pp: calc(900 * var(--wu)); --rw: 1700; --S: calc(3200 * var(--wu)); --nb: calc(170 * var(--wu)); --Ln: calc(940 * var(--wu)); }
+.results__stage { background: #16130F; }
+.rworld { position: absolute; inset: 0; perspective: var(--pp); perspective-origin: 50% var(--hz); overflow: hidden; }
+.ground--res { --L: 5200; width: calc(var(--rw) * var(--wu)); height: calc(var(--L) * var(--wu)); margin-left: calc(var(--rw) * var(--wu) / -2); top: calc(var(--hz) + var(--eye) - var(--L) * var(--wu)); background: linear-gradient(90deg, rgba(241, 233, 220, .55) 0 1.1%, #231E18 1.1% 98.9%, rgba(241, 233, 220, .55) 98.9% 100%); }
+.rdash { position: absolute; left: 50%; bottom: 0; width: calc(26 * var(--wu)); margin-left: calc(-13 * var(--wu)); height: calc(100% + 9 * var(--S)); background: repeating-linear-gradient(180deg, transparent 0 calc(240 * var(--wu)), var(--y2) calc(240 * var(--wu)) calc(400 * var(--wu))); }
+.rdash { -webkit-mask-image: linear-gradient(0deg, #000 0, #000 calc(var(--nb) + var(--S) * 1 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 1 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 1 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 1 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 2 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 2 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 2 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 2 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 3 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 3 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 3 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 3 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 4 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 4 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 4 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 4 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 5 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 5 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 5 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 5 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 6 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 6 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 6 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 6 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 7 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 7 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 7 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 7 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 8 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 8 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 8 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 8 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 9 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 9 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 9 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 9 + var(--Ln))); mask-image: linear-gradient(0deg, #000 0, #000 calc(var(--nb) + var(--S) * 1 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 1 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 1 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 1 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 2 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 2 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 2 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 2 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 3 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 3 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 3 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 3 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 4 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 4 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 4 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 4 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 5 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 5 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 5 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 5 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 6 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 6 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 6 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 6 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 7 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 7 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 7 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 7 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 8 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 8 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 8 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 8 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 9 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 9 - 60 * var(--wu)), transparent calc(var(--nb) + var(--S) * 9 + var(--Ln)), #000 calc(var(--nb) + var(--S) * 9 + var(--Ln))); }
+.rpool { position: absolute; left: 50%; bottom: calc(var(--nb) - 300 * var(--wu)); width: calc(1700 * var(--wu)); height: calc(1500 * var(--wu)); margin-left: calc(-850 * var(--wu)); background: radial-gradient(closest-side, rgba(242, 160, 101, .2), rgba(242, 160, 101, .07) 55%, rgba(242, 160, 101, 0)); }
+.rtrack { position: absolute; left: 0; right: 0; bottom: 0; height: 100%; transform: translateY(calc(var(--S) * var(--i, 0))); }
+.rdash { transform: translateY(var(--S)); }
+.mark { position: absolute; left: 0; right: 0; bottom: calc(var(--nb) + var(--S) * var(--k)); display: flex; justify-content: center; }
+.mark span { display: block; font: italic 900 calc(var(--fs) * var(--fsm, 1) * var(--wu))/.74 var(--pop); color: var(--y2); white-space: nowrap; letter-spacing: -.01em; transform: scaleY(3.55); transform-origin: 50% 100%; padding-top: .1em; }
+.rfog { position: absolute; left: 0; right: 0; top: 0; height: 73svh; background: linear-gradient(180deg, #16130F 0%, #16130F calc(100% - 7svh), rgba(22, 19, 15, 0) 100%); pointer-events: none; }
+.results__head { position: absolute; z-index: 3; left: var(--g); top: calc(var(--bar) + 4svh); max-width: 36rem; }
+.results__head .h2 { font-size: clamp(1.7rem, 1rem + 2.2vw, 3.1rem); }
+.results__head p { margin: .7rem 0 0; color: var(--soft); max-width: 30rem; font-size: .95rem; }
+.plates { list-style: none; margin: 0; padding: 0; position: absolute; z-index: 3; left: var(--g); right: var(--g); top: 27svh; height: 26svh; }
+.plate { position: absolute; inset: 0; display: grid; justify-items: center; align-content: start; text-align: center; }
+.plate__sector { margin: 0; font: 600 .74rem/1.4 var(--pop); letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+.plate h3 { margin: .45rem 0 0; font: italic 900 clamp(2.1rem, 1rem + 3.3vw, 4.1rem)/1 var(--pop); text-transform: uppercase; color: #FBF4EA; letter-spacing: -.012em; }
+.plate__what { margin: .55rem 0 0; font: 600 clamp(1.05rem, .95rem + .4vw, 1.3rem)/1.3 var(--pop); color: var(--y2); }
+.plate__more { margin: .5rem 0 0; max-width: 40rem; color: var(--text); font-size: .98rem; line-height: 1.55; }
+.plate__more a { color: #FBF4EA; text-decoration-color: var(--y2); text-underline-offset: .25em; }
+.plate__num { display: none; }
+/* the step strip: nine lane dashes, one per case, filling continuously with the scroll (a short scroll is never dead) */
+.rprog { position: absolute; z-index: 3; left: 50%; bottom: 30px; width: min(420px, 50vw); height: 4px; transform: translateX(-50%); background: rgba(241, 233, 220, .2);
+  -webkit-mask-image: repeating-linear-gradient(90deg, #000 0 calc(100% / 9 - 6px), transparent calc(100% / 9 - 6px) calc(100% / 9)); mask-image: repeating-linear-gradient(90deg, #000 0 calc(100% / 9 - 6px), transparent calc(100% / 9 - 6px) calc(100% / 9)); }
+.rprog__fill { position: absolute; inset: 0; background: var(--y); transform-origin: 0 50%; transform: scaleX(var(--results-progress, 0)); }
+html:not(.fx) .rprog { display: none; }
+
+/* ================= 4 FILMS ================= */
+.films { padding: 7.5svh 0 2svh; }
+.films__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem 3rem; }
+.films__head p { margin: 0; max-width: 28rem; color: var(--soft); }
+.reel { list-style: none; margin: 4.5svh auto 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem clamp(1rem, 1.8vw, 1.6rem); }
+.film { transform-origin: 50% 100%; }
+.film__btn { display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit; text-align: left; cursor: pointer; font: inherit; }
+.film__pic { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 4px; background: #0E0B08; }
+.film__pic img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.play { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; background: var(--y); display: grid; place-items: center; transition: transform .3s var(--ease); }
+.play svg { width: 22px; height: 22px; margin-left: 4px; }
+.film__btn:hover .play { transform: scale(1.07); }
+.film__cap { display: block; padding: 1rem .1rem 0; }
+.film__cap b { display: block; font: 600 1.02rem/1.35 var(--pop); color: #FBF4EA; }
+.film__cap span { display: block; margin-top: .2rem; color: var(--soft); font-size: .92rem; }
+.screen { width: min(1100px, 94vw); max-width: none; padding: 0; border: 0; border-radius: 6px; background: #0E0B08; color: #FBF4EA; overflow: hidden; }
+.screen::backdrop { background: rgba(10, 8, 6, .86); }
+.screen__frame { aspect-ratio: 16 / 9; background: #0E0B08; }
+.screen__frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.screen__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; }
+.screen__title { margin: 0; font-size: .95rem; }
+.screen__close { min-height: 44px; min-width: 44px; font: 600 .9rem/1 var(--pop); color: #16130F; background: var(--y); border: 0; border-radius: 3px; padding: .7rem 1rem; cursor: pointer; }
+
+/* ================= 5 WORK: a fold-out route map that opens flat ================= */
+.work { padding: 7.5svh 0 2svh; }
+.work__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem 3rem; }
+.work__head p { margin: 0; max-width: 28rem; color: var(--soft); }
+.fold { list-style: none; margin: 4.5svh 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; }
+.fold + .fold { margin-top: 2.2rem; }
+.panel { --k: 0; --s: 1; }
+.panel figure { margin: 0; }
+.panel img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.panel figcaption { padding: .85rem 1rem 0 .1rem; }
+.panel figcaption b { display: block; color: #FBF4EA; font: 600 1rem/1.35 var(--pop); }
+.panel figcaption span { display: block; margin-top: .15rem; color: var(--soft); font-size: .88rem; line-height: 1.45; }
+
+/* ================= 6 CLIENTS ================= */
+.clients { padding: 7.5svh 0 2svh; }
+.lanes { margin: 4.5svh 0 0; }
+.lane { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; transform-origin: 50% 0; }
+.lane + .lane { margin-top: 10px; }
+.lane li { display: grid; place-items: center; aspect-ratio: 16 / 7; background: #F1E9DC; border-radius: 3px; padding: 8px 10px; }
+.lane img { display: block; width: auto; height: auto; max-width: 100%; max-height: 54px; }
+.clients__note { margin: 1.4rem 0 0; color: var(--soft); font-size: .9rem; }
+
+/* ================= 7 VOICES: each under its own lamp ================= */
+.voices { padding: 7svh 0 1svh; }
+.vlist { list-style: none; margin: 1svh 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 5vw, 5rem); }
+.voice { position: relative; padding: 86px 0 3.5svh; }
+.voice .lamp { --hx: 40px; }
+.voice .lamp__arm { width: 70px; }
+.voice .lamp__cone { --cone: 440px; }
+.voice blockquote { margin: 0; }
+.voice blockquote p { margin: 0; font: 500 clamp(1.05rem, .95rem + .35vw, 1.24rem)/1.5 var(--pop); color: #FBF4EA; text-wrap: pretty; }
+.voice figcaption { margin-top: 1.1rem; color: var(--soft); font-size: .95rem; }
+.voice figcaption b { display: block; color: var(--y2); font: 600 1.02rem/1.35 var(--pop); }
+
+/* ================= 8 PEOPLE ================= */
+.people { padding: 7.5svh 0 2svh; }
+.people__grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 2rem clamp(2rem, 5vw, 5rem); align-items: end; margin-top: 3svh; }
+.duo { position: relative; margin: 0; }
+.duo__pair { display: flex; justify-content: center; align-items: flex-end; }
+.duo__pair img { display: block; width: 46%; height: auto; }
+.duo__pair img + img { margin-left: -3%; }
+.duo__floor { position: absolute; left: 6%; right: 6%; bottom: 0; height: 1px; background: rgba(241, 233, 220, .22); }
+.bios { display: grid; gap: 2rem; padding-bottom: 1rem; }
+.bio h3 { margin: 0; font: italic 900 clamp(1.6rem, 1.1rem + 1.4vw, 2.4rem)/1 var(--pop); text-transform: uppercase; color: #FBF4EA; }
+.bio p { margin: .35rem 0 0; color: var(--text); }
+.bio .role { margin-top: .35rem; color: var(--y2); font-weight: 600; }
+.team { margin: 5svh 0 0; display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 2rem clamp(2rem, 5vw, 5rem); align-items: center; }
+.team__frame { position: relative; overflow: hidden; border-radius: 4px; aspect-ratio: 16 / 9; }
+.team__frame img { position: absolute; left: 0; top: -9%; width: 100%; height: 118%; object-fit: cover; }
+.team__copy .big { display: block; font: italic 900 clamp(4rem, 2rem + 6vw, 7.5rem)/.9 var(--pop); color: var(--y2); }
+.team__copy p { margin: 1rem 0 0; color: var(--text); max-width: 26rem; }
+.credo { margin: 1.4rem 0 0; font: 600 .78rem/1.8 var(--pop); letter-spacing: .14em; text-transform: uppercase; color: #FBF4EA; }
+
+/* ================= 9 QUESTIONS ================= */
+.faq { padding: 7.5svh 0 2svh; }
+.qa { margin: 3.5svh 0 0; transform-origin: 50% 0; perspective: 1100px; }
+.qa details { border-top: 1px solid var(--line); transition: transform .4s var(--ease); }
+.qa details:last-child { border-bottom: 1px solid var(--line); }
+.qa summary { list-style: none; display: grid; grid-template-columns: minmax(0, 1fr) 36px; gap: 1.5rem; align-items: center; padding: 1.05rem 0; cursor: pointer; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary h3 { margin: 0; font: 600 clamp(1.08rem, .98rem + .45vw, 1.4rem)/1.35 var(--pop); color: #FBF4EA; }
+.qa summary i { position: relative; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(241, 233, 220, .3); }
+.qa summary i::before, .qa summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 2px; margin: -1px 0 0 -7px; background: var(--y2); transition: transform .3s var(--ease); }
+.qa summary i::after { transform: rotate(90deg); }
+.qa details[open] summary i::after { transform: rotate(0); }
+.qa__a { padding: 0 3.6rem 1.6rem 0; max-width: 54rem; }
+.qa__a p { margin: 0 0 .8rem; color: var(--text); }
+.qa details:not([open]) > .qa__a { display: none; }
+.qa:has(details[open]) details:not([open]) { transform: translateZ(-40px); }
+.qa summary h3 { transition: color .3s var(--ease); }
+.qa:has(details[open]) details:not([open]) summary h3 { color: var(--soft); }
+.qa details[open] { transform: translateZ(18px); }
+
+/* ================= 10 THE EXIT ================= */
+.close { padding: 6svh 0 0; }
+.exitbox { margin: 2svh 0 0; overflow: clip; }
+.exitscene { position: relative; aspect-ratio: 1200 / 560; max-height: 46svh; margin: 0 auto; container-type: inline-size; transform-origin: 50% 8%; -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 72%, transparent 100%); }
+.exit__svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.exitsign { position: absolute; left: 15.5cqw; right: 15.5cqw; top: 6.4cqw; display: flex; justify-content: center; align-items: flex-start; gap: 2.4cqw; transform-origin: 50% 0; }
+.exitsign__mark { flex: none; width: 19cqw; margin-top: 1.4cqw; box-sizing: border-box; padding: 1.3cqw 1.6cqw 1cqw; background: #100D0A; border: max(4px, .5cqw) dotted #F3B58A; border-radius: .8cqw; }
+.exitsign__mark img { display: block; width: 100%; height: auto; }
+.exitsign__hang { position: relative; padding-top: 1.4cqw; }
+.exitsign__hang::before, .exitsign__mark::before { content: ""; position: absolute; top: 0; left: 2.6cqw; width: .7cqw; height: 1.5cqw; background: #332B24; }
+.exitsign__mark { position: relative; }
+.exitsign__mark::before { top: -1.6cqw; }
+.cta--sign .cta__plate { flex-direction: column; align-items: flex-start; gap: .5cqw; min-height: 0; padding: 1.5cqw 5.4cqw 1.7cqw 2cqw; clip-path: polygon(0 0, calc(100% - 3.8cqw) 0, 100% 50%, calc(100% - 3.8cqw) 100%, 0 100%); }
+.cta--sign .cta__exit { font: 700 max(.7rem, 1.05cqw)/1 var(--pop); letter-spacing: .18em; }
+.cta--sign .cta__l { display: flex; align-items: center; gap: 1.2cqw; font: italic 900 max(1.4rem, 3.7cqw)/1 var(--pop); text-transform: uppercase; letter-spacing: -.01em; }
+.cta--sign .cta__arw { width: 4.4cqw; height: 1.8cqw; min-width: 34px; min-height: 14px; }
+.close__card { position: relative; z-index: 3; margin-top: -7svh; padding-bottom: 3svh; }
+.close__line { margin: 0; text-align: center; font-size: clamp(1.9rem, 1rem + 3vw, 3.8rem); text-wrap: balance; }
+.close__sub { margin: 1rem auto 0; max-width: 36rem; text-align: center; color: var(--text); }
+.rows { margin: 4svh 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(1.5rem, 4vw, 4rem); }
+.rows > div { padding: 1rem 0; border-top: 1px solid var(--line); }
+.rows dt { font: 600 .72rem/1.9 var(--pop); letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+.rows dd { margin: 0; color: #FBF4EA; line-height: 1.55; overflow-wrap: anywhere; }
+.rows a { display: inline-block; padding: .55rem 0; color: #FBF4EA; text-decoration-color: rgba(224, 118, 60, .7); text-underline-offset: .22em; }
+.rows .soc a { margin-right: 1.1rem; }
+.legal { margin: 3svh 0 0; padding: 1.4rem 0 1.6rem; border-top: 1px solid var(--line); color: var(--soft); font-size: .84rem; }
+.legal span { display: block; margin-top: .3rem; }
+
+/* ================= motion layer: only with JS and motion allowed ================= */
+/* hero reveal on load: lamps come on down the road, dashes draw toward you, the marquee bulbs chase, the line rises, the action lands */
+html.fx .lamp3d { transition: --lampc .3s linear calc(.12s + var(--k) * 95ms), --lampo .5s linear calc(.18s + var(--k) * 95ms); }
+html.fx .pool { transition: opacity .5s var(--ease) calc(.16s + var(--k) * 95ms); }
+html.fx .dashes { transition: clip-path .9s cubic-bezier(.4, 0, .2, 1) .35s; }
+html.fx .hl > span { transition: transform .8s var(--ease); }
+html.fx .hl:nth-child(1) > span { transition-delay: .7s; }
+html.fx .hl:nth-child(2) > span { transition-delay: .82s; }
+html.fx .hero__eyebrow, html.fx .hero__act { transition: opacity .55s var(--ease), transform .55s var(--ease); }
+html.fx .hero__eyebrow { transition-delay: .55s; }
+html.fx .hero__act { transition-delay: 1.15s; }
+html.pre-reveal .lamp3d { --lampc: #3A2F26; --lampo: 0; }
+html.pre-reveal .pool { opacity: 0; }
+html.pre-reveal .dashes { clip-path: inset(0 0 100% 0); }
+html.pre-reveal .lg-s { fill: #5C3218; }
+html.pre-reveal .lg-b { fill: #3A2F26; }
+html.pre-reveal .hl > span { transform: translateY(112%); }
+html.pre-reveal .hero__eyebrow { opacity: 0; transform: translateY(10px); }
+html.pre-reveal .hero__act { opacity: 0; transform: translateY(16px) scale(.96); }
+
+/* signature: the lamp's bulbs warm up in a chase, its cone opens, the act's content comes forward out of the dark */
+html.fx .act:not(.is-lit) .lamp__head i, html.fx .voice:not(.is-lit) .lamp__head i { background: #3A2F26; }
+html.fx .lamp__head i { transition: background-color .1s linear calc(var(--b) * 36ms); background: #FFE3C8; }
+html.fx .lamp__cone { transition: opacity .4s var(--ease) .14s, transform .45s var(--ease) .14s; }
+html.fx .act:not(.is-lit) .lamp__cone, html.fx .voice:not(.is-lit) .lamp__cone { opacity: 0; transform: scaleY(.55); }
+html.fx .lz { transition: transform .45s var(--ease) calc(.06s + min(var(--k, 0), 3) * 35ms), opacity .32s var(--ease) calc(.06s + min(var(--k, 0), 3) * 35ms); }
+html.fx .act:not(.is-lit) .lz, html.fx .voice:not(.is-lit) .lz { transform: perspective(900px) translate3d(0, 2.2rem, -240px); opacity: .1; }
+
+/* every scroll-linked move: CSS scroll-driven where supported (page-pixel ranges set by JS), paused negative-delay fallback otherwise */
+html.fx .sdx { animation-duration: 1s; animation-timing-function: linear; animation-fill-mode: both; }
+html.fx.sd .sdx { animation-duration: auto; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.fx:not(.sd) .sdx { animation-play-state: paused; animation-delay: calc(var(--p, 0) * -1s); }
+
+/* hero (decoration only): as the hero scrolls away the camera rolls on down the road; the copy is never moved */
+html.fx .cam.sdx { animation-name: drive; }
+@keyframes drive { 0% { transform: translateZ(0); } 100% { transform: translateZ(calc(var(--D) * var(--wu) * .8)); } }
+html.fx .hstrip.sdx { animation-name: drive-road; }
+html.fx.sd .rprog__fill.sdx { animation-name: rprog; }
+@keyframes rprog { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+@keyframes drive-road { 0% { transform: translateY(0); } 100% { transform: translateY(calc(var(--D) * var(--wu) * .8)); } }
+
+
+/* ---- every content move below is TRIGGERED, not scrubbed (hard rule 6): crossing a line plays it through on its own
+   clock (about half a second) and it then holds, so any resting place shows the finished state. JS adds .is-in once. ---- */
+/* route: each EXIT sign comes up the road out of the dark and stops face-on */
+html.fx .exit__sign { transform: perspective(1100px) translate3d(0, 0, 0); transition: transform .5s var(--ease) calc(var(--d, 0) * 60ms); }
+html.fx .exit:not(.is-in) .exit__sign { transform: perspective(1100px) translate3d(0, 1.2rem, -560px); }
+
+/* results: the scroll position only PICKS the case. When it changes, the road (dashes and painted numbers on one track)
+   glides one case on its own clock and holds; the plate swaps on its own clock too: the old one leaves, then the new one
+   arrives (never both). Any resting place shows one finished case: the number fully on the road, the plate readable. */
+html.fx .mark { visibility: hidden; }
+html.fx .mark.is-on, html.fx .mark.is-out { visibility: visible; }
+html.fx .rtrack { transition: transform .56s var(--io); }
+html.fx .rtrack.is-cut { transition: none; }
+html.fx .plate { visibility: hidden; opacity: 0; transform: translateY(-10px); transition: opacity .16s linear, transform .16s var(--ease), visibility 0s linear .16s; }
+html.fx .plate.is-on { visibility: visible; opacity: 1; transform: none; transition: opacity .3s var(--ease) .18s, transform .36s var(--ease) .18s, visibility 0s linear .18s; }
+html.fx .plates.is-cut .plate { transition: none; }
+html.fx .plate.is-next { transform: translateY(14px); transition: none; }
+
+/* films stand up off the road as their row arrives */
+html.fx .film { transform: perspective(1300px) rotateX(0deg); transition: transform .5s var(--ease) calc(var(--d, 0) * 60ms); }
+html.fx .reel:not(.is-in) .film { transform: perspective(1300px) rotateX(58deg); }
+
+/* work: the fold-out map opens flat, row by row (panels folded in a zig-zag) */
+html.fx .panel { transform-origin: 50% 50%; transform: perspective(1400px) translateX(0) translateZ(0) rotateY(0deg); transition: transform .5s var(--ease) calc(var(--d, 0) * 50ms); }
+html.fx .fold:not(.is-in) .panel { transform: perspective(1400px) translateX(calc(var(--k) * -34%)) translateZ(calc(var(--z0) * 1px)) rotateY(calc(var(--s) * 58deg)); }
+
+/* clients: each lane of logos arrives from the vanishing point */
+html.fx .lane { transform: perspective(1000px) translate3d(0, 0, 0) rotateX(0deg); transition: transform .5s var(--ease) calc(var(--d, 0) * 70ms), opacity .35s linear calc(var(--d, 0) * 70ms); }
+html.fx .lanes:not(.is-in) .lane { transform: perspective(1000px) translate3d(0, -12svh, -900px) rotateX(38deg); opacity: 0; }
+
+/* people: the pair comes forward out of the dark; the team photo drifts inside its frame (decoration, follows the scroll) */
+html.fx .duo__img { transform-origin: 50% 100%; transform: perspective(1200px) translate3d(0, 0, 0); transition: transform .55s var(--ease), opacity .4s linear; }
+html.fx .duo:not(.is-in) .duo__img { transform: perspective(1200px) translate3d(0, 8%, -260px); opacity: 0; }
+html.fx .team__img.sdx { animation-name: drift; }
+@keyframes drift { 0% { transform: translateY(7%) scale(1.06); } 100% { transform: translateY(-7%) scale(1); } }
+
+/* questions: the list stands up from lying on the road */
+html.fx .qa { transform: perspective(1100px) rotateX(0deg) translateZ(0); transition: transform .5s var(--ease); }
+html.fx .qa:not(.is-in) { transform: perspective(1100px) rotateX(48deg) translateZ(-120px); }
+
+/* the exit: the last gantry comes up the road to you and holds */
+html.fx .exitscene { transform: perspective(1100px) translate3d(0, 0, 0); transition: transform .55s var(--ease); }
+html.fx .exitbox:not(.is-in) .exitscene { transform: perspective(1100px) translate3d(0, 6svh, -260px); }
+html.fx .exitsign { transform: perspective(1100px) translate3d(0, 0, 0); transition: transform .5s var(--ease) .06s; }
+html.fx .exitbox:not(.is-in) .exitsign { transform: perspective(1100px) translate3d(0, 4cqw, -420px); }
+
+/* ---------------- phones ---------------- */
+@media (max-width: 899px) {
+  :root { --bar: 56px; --g: 18px; --lab: 18px; --dock: calc(70px + var(--lab) + env(safe-area-inset-bottom)); }
+  .bar__mark img { height: 21px; }
+  .bar .cta { display: none; }
+  .dock { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; box-sizing: border-box; height: var(--dock); padding: var(--lab) var(--g) calc(12px + env(safe-area-inset-bottom)); background: #0E0B08; border-top: 1px solid rgba(241, 233, 220, .12); }
+  .dock .cta, .dock .cta__plate { display: flex; width: 100%; }
+  .dock .cta__plate { justify-content: center; min-height: 50px; font-size: 1.02rem; }
+  body { padding-bottom: var(--dock); }
+
+  .lamp { --hx: auto; }
+  .lamp__head { left: auto; right: 22px; width: 118px; }
+  .lamp__arm { left: auto; right: 0; width: 60px; }
+  .lamp__arm::before { left: auto; right: 0; }
+  .lamp__cone { left: auto; right: -84px; width: 370px; }
+
+  .hero { --wu: calc(100svh / 874); --hz: 60svh; --eye: 40.5svh; --pp: calc(640 * var(--wu)); --rw: 780; --gz: 700; --gh: 1250; --fz: 1500; --fw: 680; --fp: 300; --D: 900; --lift: -10svh; }
+  .gantry { width: calc((var(--rw) + 40) * var(--wu)); margin-left: calc((var(--rw) + 40) * var(--wu) / -2); }
+  .gantry__signs { gap: calc(10 * var(--wu)); padding: 0 calc(18 * var(--wu)); }
+  .gsign { width: calc(244 * var(--wu)); height: calc(140 * var(--wu)); padding: calc(22 * var(--wu)) calc(24 * var(--wu)) 0 calc(14 * var(--wu)); clip-path: polygon(0 0, calc(100% - 34 * var(--wu)) 0, 100% 50%, calc(100% - 34 * var(--wu)) 100%, 0 100%); }
+  .gsign b { font-size: calc(24 * var(--wu)); }
+  .gsign strong { font-size: calc(34 * var(--wu)); margin-top: calc(14 * var(--wu)); }
+  .gsign::before { left: calc(24 * var(--wu)); }
+  .lamp3d--far { display: none; }
+  .hero__copy { top: 25svh; }
+  .hero__h1 { font-size: clamp(2.05rem, 9.4vw, 2.6rem); }
+  .hero__eyebrow { font-size: 11px; letter-spacing: .12em; margin-bottom: .8rem; text-wrap: balance; }
+  .hero__act { top: 79svh; }
+  .hero__act .cta__plate { min-height: 54px; }
+
+  .route { padding: 9svh 0 2svh; }
+  .route__head { grid-template-columns: minmax(0, 1fr); }
+  .exits { grid-template-columns: minmax(0, 1fr); margin-top: 3.5svh; gap: 2rem; }
+  .lede { font-size: 15.5px; line-height: 1.62; }
+  .exit__body { padding-top: 1rem; }
+  .exit__body p { margin-bottom: .8rem; }
+  .exit__list li { padding: .38rem 0; font-size: 15px; line-height: 1.45; }
+
+  .results { --wu: calc(100svh / 874); --hz: 50svh; --eye: 50svh; --pp: calc(600 * var(--wu)); --rw: 860; --S: calc(2600 * var(--wu)); --nb: calc(250 * var(--wu)); --fsm: .52; --Ln: calc(600 * var(--wu)); }
+  .results__stage { --rb: var(--dock); }
+  .rprog { bottom: calc(var(--dock) + 14px); width: calc(100% - 2 * var(--g)); max-width: 420px; }
+  .mark span { transform: scaleY(4.1); }
+  .rfog { height: 70svh; background: linear-gradient(180deg, #16130F 0%, #16130F calc(100% - 6svh), rgba(22, 19, 15, 0) 100%); }
+  .results__head { top: calc(var(--bar) + 2.4svh); right: 150px; }
+  .results__head p { display: none; }
+  .plates { top: 24svh; height: 26svh; }
+  .plate h3 { font-size: clamp(1.9rem, 9vw, 2.4rem); }
+  .plate__what { font-size: 1.02rem; }
+  .plate__more { line-height: 1.5; }
+
+  .films, .work, .clients, .faq, .people { padding-top: 6svh; }
+  .voices { padding-top: 4svh; }
+  .reel { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 3svh; gap: 1.4rem 14px; }
+  .play { width: 44px; height: 44px; margin: -22px 0 0 -22px; }
+  .play svg { width: 17px; height: 17px; margin-left: 3px; }
+  .film__cap { padding-top: .6rem; }
+  .film__cap b { font-size: 16px; line-height: 1.3; }
+  .film__cap span { font-size: 15px; line-height: 1.4; }
+  .fold { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 22px; column-gap: 0; margin-top: 3svh; }
+  .fold + .fold { margin-top: 22px; }
+  .panel figcaption { padding-right: .6rem; }
+  .panel figcaption b { font-size: 16px; }
+  .panel figcaption span, .plate__more, .clients__note { font-size: 15px; }
+  .plate__more a { display: block; width: fit-content; margin-inline: auto; min-height: 44px; padding-block: 11px; box-sizing: border-box; }
+  .rows a { min-height: 44px; box-sizing: border-box; }
+  .lane { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .lane + .lane { margin-top: 8px; }
+  .lane li { padding: 6px; }
+  .lane img { max-height: 38px; }
+  .vlist { grid-template-columns: minmax(0, 1fr); }
+  .voice { padding: 68px 0 3svh; }
+  .voice blockquote p { font-size: 1rem; line-height: 1.5; }
+  .voice figcaption { margin-top: .8rem; }
+  .voice .lamp__head { right: auto; left: 40px; }
+  .voice .lamp__arm { right: auto; left: 0; width: 60px; }
+  .voice .lamp__arm::before { right: auto; left: 0; }
+  .voice .lamp__cone { right: auto; left: -110px; }
+  .people__grid, .team { grid-template-columns: minmax(0, 1fr); }
+  .team { margin-top: 4svh; }
+  .team__frame { aspect-ratio: 3 / 2; }
+  .qa__a { padding-right: 0; }
+  .qa summary { gap: 1rem; padding: .9rem 0; }
+  .close { padding-top: 5svh; }
+  .exitscene { aspect-ratio: 1 / 1; max-height: none; }
+  .exitsign { left: 0; right: 0; top: 13cqw; flex-direction: column; align-items: center; gap: 5cqw; }
+  .exitsign__mark { width: 52cqw; margin-top: 3cqw; padding: 3cqw 4cqw 2.4cqw; border-width: 4px; border-radius: 2cqw; }
+  .exitsign__mark::before { display: none; }
+  .exitsign__hang { padding-top: 0; }
+  .exitsign__hang::before { display: none; }
+  .cta--sign .cta__plate { padding: 3.6cqw 12cqw 4cqw 4.6cqw; gap: 1.4cqw; clip-path: polygon(0 0, calc(100% - 9cqw) 0, 100% 50%, calc(100% - 9cqw) 100%, 0 100%); }
+  .cta--sign .cta__exit { font-size: .7rem; }
+  .cta--sign .cta__l { font-size: 7.6cqw; gap: 2.6cqw; }
+  .close__card { margin-top: -9svh; }
+  .bios { gap: 1.4rem; }
+  .rows { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 14px; }
+  .rows > div:nth-child(n+3) { grid-column: 1 / -1; }
+  .rows > div:nth-child(5), .rows > div:nth-child(6) { grid-column: auto; }
+}
+@media (min-width: 900px) and (max-width: 1180px) {
+  .exits { gap: 2rem 1.2rem; }
+  .reel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lane { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+
+/* reduced motion and no JS: everything static, complete and lit; nothing pinned */
+html:not(.fx) [data-sc-act="pin"] { height: auto !important; }
+html:not(.fx) .lamp__head i { background: #FFE3C8; }
+html:not(.fx) [data-sc-stage] { position: static !important; height: auto !important; overflow: visible !important; }
+html:not(.fx) .results__stage { padding: calc(var(--bar) + 6svh) 0 8svh; }
+html:not(.fx) .rworld, html:not(.fx) .rfog { display: none; }
+html:not(.fx) .results__head { position: static; padding: 0 var(--g); max-width: 1240px; margin: 0 auto; }
+html:not(.fx) .plates { position: static; height: auto; margin: 4rem auto 0; max-width: 1240px; padding: 0 var(--g); display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 2.4rem 2rem; }
+html:not(.fx) .plate { position: static; justify-items: start; text-align: left; border-top: 1px solid var(--line); padding-top: 1.2rem; }
+html:not(.fx) .plate__num { display: block; margin: .3rem 0 0; font: italic 900 3rem/1 var(--pop); color: var(--y2); }
+html:not(.fx) .plate__what { margin-top: .3rem; }
+</style>
+</head>
+<body>
+<a class="skip" href="#route">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs><linearGradient id="lampgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2A065" stop-opacity=".42"/><stop offset=".55" stop-color="#F2A065" stop-opacity=".1"/><stop offset="1" stop-color="#F2A065" stop-opacity="0"/></linearGradient></defs>
+  <symbol id="lmp" viewBox="0 0 480 470" overflow="visible">
+    <rect x="234" y="30" width="12" height="440" fill="#332B24"/>
+    <path d="M240 40 H372" stroke="#332B24" stroke-width="9" fill="none"/>
+    <rect x="344" y="26" width="128" height="22" rx="7" fill="#2D261F"/>
+    <polygon points="356,50 460,50 530,300 286,300" style="fill: url(#lampgrad); fill-opacity: var(--lampo)"/>
+    <rect x="352" y="42" width="112" height="9" rx="4" style="fill: var(--lampc)"/>
+  </symbol>
+  <symbol id="arw" viewBox="0 0 40 16"><path class="cta__trail" d="M1 8h12"/><path d="M16 8h21M31 2.5l6 5.5-6 5.5"/></symbol>
+</svg>
+
+<header class="bar" id="bar">
+  <a class="bar__mark" href="#top" aria-label="Mosswick Studio, back to top"><img src="assets/wordmark.svg" alt="Mosswick Studio" width="137" height="24"></a>
+  <a class="cta" href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener" data-cta><span class="cta__plate"><span class="cta__l">Start a project</span><svg class="cta__arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></span></a>
+</header>
+
+<main>
+<!-- ===================== 1 HERO ===================== -->
+<section id="top" class="hero" data-sc-act="flow" aria-labelledby="hero-h1">
+  <div class="hero__stage">
+    <div class="scene" aria-hidden="true">
+      <div class="world">
+        <div class="ground ground--hero">
+          <div class="hstrip sdx">
+            <i class="pool" style="--side:-1;--z:420;--k:0"></i>
+            <i class="pool" style="--side:1;--z:1020;--k:1"></i>
+            <i class="pool" style="--side:-1;--z:1620;--k:2"></i>
+            <i class="pool" style="--side:1;--z:2220;--k:3"></i>
+            <i class="pool" style="--side:-1;--z:2820;--k:4"></i>
+            <i class="pool" style="--side:1;--z:3420;--k:5"></i>
+            <i class="pool" style="--side:-1;--z:4020;--k:6"></i>
+            <i class="dashes"></i>
+          </div>
+          <i class="gfog"></i>
+        </div>
+        <div class="cam sdx">
+          <div class="obj lamp3d" style="--side:-1;--z:420;--k:0"><svg><use href="#lmp"/></svg></div>
+          <div class="obj lamp3d" style="--side:1;--z:1020;--k:1"><svg><use href="#lmp"/></svg></div>
+          <div class="obj lamp3d" style="--side:-1;--z:1620;--k:2"><svg><use href="#lmp"/></svg></div>
+          <div class="obj lamp3d" style="--side:1;--z:2220;--k:3"><svg><use href="#lmp"/></svg></div>
+          <div class="obj lamp3d" style="--side:-1;--z:2820;--k:4"><svg><use href="#lmp"/></svg></div>
+          <div class="obj lamp3d lamp3d--far" style="--side:1;--z:3420;--k:5"><svg><use href="#lmp"/></svg></div>
+          <div class="obj lamp3d lamp3d--far" style="--side:-1;--z:4020;--k:6"><svg><use href="#lmp"/></svg></div>
+          <div class="obj farsign">
+            <div class="farsign__board"><svg viewBox="0 0 400 133" focusable="false">
+<path class="lg-s" fill="#E0763C" fill-rule="evenodd" transform="translate(14.0 14.0) scale(0.8750)" d="M60 0A60 60 0 1 1 60 120A60 60 0 1 1 60 0Z M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/>
+<path class="lg-w" fill="#FBF4EA" transform="translate(142 45.6) scale(.5695)" d="M0 71.4V21.8H12.4V27.2H14.2Q15.5 24.7 18.5 22.9Q21.5 21 26.4 21Q31.7 21 34.9 23.1Q38.1 25.1 39.8 28.4H41.6Q43.3 25.2 46.4 23.1Q49.5 21 55.2 21Q59.8 21 63.5 23Q67.3 24.9 69.6 28.9Q71.8 32.8 71.8 38.8V71.4H59.2V39.7Q59.2 35.6 57.1 33.5Q55 31.5 51.2 31.5Q46.9 31.5 44.6 34.2Q42.2 37 42.2 42.1V71.4H29.6V39.7Q29.6 35.6 27.5 33.5Q25.4 31.5 21.6 31.5Q17.3 31.5 15 34.2Q12.6 37 12.6 42.1V71.4ZM105 72.8Q97.6 72.8 91.7 69.8Q85.8 66.8 82.4 61.1Q79 55.4 79 47.4V45.8Q79 37.8 82.4 32.1Q85.8 26.4 91.7 23.4Q97.6 20.4 105 20.4Q112.4 20.4 118.3 23.4Q124.2 26.4 127.6 32.1Q131 37.8 131 45.8V47.4Q131 55.4 127.6 61.1Q124.2 66.8 118.3 69.8Q112.4 72.8 105 72.8ZM105 61.6Q110.8 61.6 114.6 57.9Q118.4 54.1 118.4 47.1V46.1Q118.4 39.1 114.7 35.4Q110.9 31.6 105 31.6Q99.2 31.6 95.4 35.4Q91.6 39.1 91.6 46.1V47.1Q91.6 54.1 95.4 57.9Q99.2 61.6 105 61.6ZM159.2 72.8Q149.5 72.8 143.3 68.6Q137.1 64.4 135.8 56.6L147.4 53.6Q148.1 57.1 149.8 59.1Q151.4 61.1 153.9 62Q156.3 62.8 159.2 62.8Q163.6 62.8 165.7 61.2Q167.8 59.7 167.8 57.4Q167.8 55.1 165.8 53.9Q163.8 52.6 159.4 51.8L156.6 51.3Q151.4 50.3 147.1 48.6Q142.8 46.8 140.2 43.7Q137.6 40.6 137.6 35.7Q137.6 28.3 143 24.4Q148.4 20.4 157.2 20.4Q165.5 20.4 171 24.1Q176.5 27.8 178.2 33.8L166.5 37.4Q165.7 33.6 163.2 32Q160.8 30.4 157.2 30.4Q153.6 30.4 151.7 31.7Q149.8 32.9 149.8 35.1Q149.8 37.5 151.8 38.7Q153.8 39.8 157.2 40.4L160 40.9Q165.6 41.9 170.1 43.6Q174.7 45.2 177.3 48.2Q180 51.3 180 56.5Q180 64.3 174.3 68.6Q168.7 72.8 159.2 72.8ZM207.6 72.8Q197.9 72.8 191.7 68.6Q185.5 64.4 184.2 56.6L195.8 53.6Q196.5 57.1 198.2 59.1Q199.8 61.1 202.2 62Q204.7 62.8 207.6 62.8Q212 62.8 214.1 61.2Q216.2 59.7 216.2 57.4Q216.2 55.1 214.2 53.9Q212.2 52.6 207.8 51.8L205 51.3Q199.8 50.3 195.5 48.6Q191.2 46.8 188.6 43.7Q186 40.6 186 35.7Q186 28.3 191.4 24.4Q196.8 20.4 205.6 20.4Q213.9 20.4 219.4 24.1Q224.9 27.8 226.6 33.8L214.9 37.4Q214.1 33.6 211.6 32Q209.2 30.4 205.6 30.4Q202 30.4 200.1 31.7Q198.2 32.9 198.2 35.1Q198.2 37.5 200.2 38.7Q202.2 39.8 205.6 40.4L208.4 40.9Q214 41.9 218.6 43.6Q223.1 45.2 225.8 48.2Q228.4 51.3 228.4 56.5Q228.4 64.3 222.8 68.6Q217.1 72.8 207.6 72.8ZM239.4 71.4 232.4 21.8H244.9L249.3 62.9H251.1L257.5 21.8H277.7L284.1 62.9H285.9L290.3 21.8H302.8L295.8 71.4H274.9L268.5 30.3H266.7L260.3 71.4ZM309.8 71.4V21.8H322.4V71.4ZM316.1 16Q312.7 16 310.4 13.8Q308 11.6 308 8Q308 4.4 310.4 2.2Q312.7 0 316.1 0Q319.6 0 321.9 2.2Q324.2 4.4 324.2 8Q324.2 11.6 321.9 13.8Q319.6 16 316.1 16ZM355.7 72.8Q348.5 72.8 342.7 69.8Q336.8 66.8 333.4 61.1Q330 55.4 330 47.3V45.9Q330 37.8 333.4 32.1Q336.8 26.4 342.7 23.4Q348.5 20.4 355.7 20.4Q362.8 20.4 367.9 22.9Q373 25.4 376.2 29.8Q379.3 34.1 380.3 39.6L368.1 42.2Q367.7 39.2 366.3 36.8Q364.9 34.4 362.4 33Q359.8 31.6 356 31.6Q352.2 31.6 349.2 33.2Q346.1 34.9 344.4 38.2Q342.6 41.4 342.6 46.1V47.1Q342.6 51.8 344.4 55.1Q346.1 58.3 349.2 60Q352.2 61.6 356 61.6Q361.7 61.6 364.7 58.7Q367.6 55.7 368.4 50.9L380.6 53.8Q379.3 59.1 376.2 63.5Q373 67.8 367.9 70.3Q362.8 72.8 355.7 72.8ZM387 71.4V1.4H399.6V40.1H401.4L417.8 21.8H434.2L411.3 45.8L435 71.4H418.8L401.4 51.7H399.6V71.4Z"/>
+<rect class="lg-b" style="--i:0" x="63.9" y="3.9" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:1" x="78.3" y="5.6" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:2" x="91.8" y="10.8" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:3" x="103.7" y="19.0" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:4" x="113.3" y="29.8" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:5" x="120.0" y="42.6" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:6" x="123.5" y="56.7" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:7" x="123.5" y="71.1" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:8" x="120.0" y="85.2" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:9" x="113.3" y="98.0" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:10" x="103.7" y="108.8" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:11" x="91.8" y="117.0" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:12" x="78.3" y="122.2" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:13" x="63.9" y="123.9" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:14" x="49.5" y="122.2" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:15" x="36.0" y="117.0" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:16" x="24.1" y="108.8" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:17" x="14.5" y="98.0" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:18" x="7.8" y="85.2" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:19" x="4.3" y="71.1" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:20" x="4.3" y="56.7" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:21" x="7.8" y="42.6" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:22" x="14.5" y="29.8" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:23" x="24.1" y="19.0" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:24" x="36.0" y="10.8" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+<rect class="lg-b" style="--i:25" x="49.5" y="5.6" width="5.2" height="5.2" rx="1.5" fill="#FFEBD6"/>
+</svg></div>
+            <div class="farsign__posts"><i></i><i></i></div>
+          </div>
+          <div class="obj gantry">
+            <span class="gantry__leg gantry__leg--l"></span><span class="gantry__leg gantry__leg--r"></span>
+            <span class="gantry__beam"></span>
+            <div class="gantry__signs">
+              <div class="gsign"><b>EXIT 01</b><strong>Brand</strong></div>
+              <div class="gsign"><b>EXIT 02</b><strong>Content</strong></div>
+              <div class="gsign"><b>EXIT 03</b><strong>Media</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__copy">
+      <p class="hero__eyebrow">Mosswick · Creative and marketing · Lowmere</p>
+      <h1 class="hero__h1 disp" id="hero-h1"><span class="hl"><span>Brands worth remembering.</span></span><span class="hl"><span class="y">Marketing that pays back.</span></span></h1>
+    </div>
+    <div class="hero__act"><a class="cta cta--big" href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener" data-cta><span class="cta__plate"><span class="cta__l">Start a project</span><svg class="cta__arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></span></a></div>
+  </div>
+</section>
+
+<!-- ===================== 2 SERVICES ===================== -->
+<section id="route" class="route act" data-sc-act="flow" aria-labelledby="route-h">
+  <div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div>
+  <div class="wrap">
+    <div class="route__head">
+      <h2 class="h2 disp lz" id="route-h">One team, <span class="y">one roof</span></h2>
+      <p class="lede lz" style="--k:1">Mosswick is a creative and marketing studio in Lowmere: thirty-two strategists, designers, writers, filmmakers and media buyers making brands that look good and marketing that earns its keep. We work with founders and marketing teams who want work bold enough to notice and sound enough to grow with, planned together and measured honestly from the very first week.</p>
+    </div>
+    <ol class="exits">
+      <li class="exit" style="--d:0">
+        <div class="exit__sign"><b>EXIT 01</b><h3>Brand</h3></div>
+        <div class="exit__body">
+          <p>We find what makes you worth choosing, write it down plainly and give it a look people know at a glance.</p>
+          <ul class="exit__list">
+            <li>Positioning and audience research</li>
+            <li>Brand voice and messaging</li>
+            <li>Naming</li>
+            <li>Logo and wordmark design</li>
+            <li>Colour, type and brand guidelines</li>
+            <li>Packs, labels and print finish</li>
+          </ul>
+        </div>
+      </li>
+      <li class="exit" style="--d:1">
+        <div class="exit__sign"><b>EXIT 02</b><h3>Content</h3></div>
+        <div class="exit__body">
+          <p>Fast, clear websites, monthly social and brand films, all written, shot, edited and built in house.</p>
+          <ul class="exit__list">
+            <li>Site maps, UX and UI design</li>
+            <li>Copywriting and CMS builds</li>
+            <li>Monthly social calendars</li>
+            <li>Short-form video and photography</li>
+            <li>Brand films, motion and cutdowns</li>
+          </ul>
+        </div>
+      </li>
+      <li class="exit" style="--d:2">
+        <div class="exit__sign"><b>EXIT 03</b><h3>Media</h3></div>
+        <div class="exit__body">
+          <p>One big idea carried across outdoor, social and screen, then paid ads tested every week against real numbers.</p>
+          <ul class="exit__list">
+            <li>Campaign concepts and key visuals</li>
+            <li>Out-of-home and launch assets</li>
+            <li>Paid social and paid search</li>
+            <li>Tracking and a live dashboard</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== 3 RESULTS (the peak) ===================== -->
+<section id="results" class="results act" data-sc-act="pin" data-sc-span="5.3" aria-labelledby="results-h">
+  <div class="results__stage" data-sc-stage>
+    <div class="rworld" aria-hidden="true">
+      <div class="ground ground--res">
+        <i class="rpool"></i>
+        <div class="rtrack">
+          <i class="rdash"></i>
+          <span class="mark" style="--fs:330;--k:0"><span>+64%</span></span>
+          <span class="mark" style="--fs:330;--k:1"><span>+38%</span></span>
+          <span class="mark" style="--fs:184;--k:2"><span>22% → 58%</span></span>
+          <span class="mark" style="--fs:330;--k:3"><span>+70%</span></span>
+          <span class="mark" style="--fs:330;--k:4"><span>2.4x</span></span>
+          <span class="mark" style="--fs:390;--k:5"><span>640</span></span>
+          <span class="mark" style="--fs:222;--k:6"><span>80 → 310</span></span>
+          <span class="mark" style="--fs:330;--k:7"><span>+46%</span></span>
+          <span class="mark" style="--fs:330;--k:8"><span>+52%</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="rfog" aria-hidden="true"></div>
+    <div class="rprog" aria-hidden="true"><i class="rprog__fill sdx"></i></div>
+    <div class="lamp lamp--r" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div>
+    <div class="results__head lz">
+      <h2 class="h2 disp" id="results-h">Proof <span class="y">in numbers</span></h2>
+      <p>Nine projects, each with the one number the client cared about most.</p>
+    </div>
+    <ol class="plates">
+      <li class="plate"><p class="plate__sector">Insurance · 2023</p><h3>Shelterly</h3><p class="plate__num">+64%</p><p class="plate__what"><span class="sr-only">+64% </span>Quote completions</p><p class="plate__more">The new site cut the quote form from 22 questions to 9, and paid search now sends people to clear, honest landing pages. <a href="#">Read the case study</a></p></li>
+      <li class="plate"><p class="plate__sector">Fashion · 2024</p><h3>Velloway</h3><p class="plate__num">+38%</p><p class="plate__what"><span class="sr-only">+38% </span>Online sales in launch month</p><p class="plate__more">A brand film shot in real drizzle at dusk, cut into a 60 second spot and twenty short versions for social and paid media. <a href="#">Read the case study</a></p></li>
+      <li class="plate"><p class="plate__sector">Hospitality · 2022</p><h3>The Larchway</h3><p class="plate__num">22% → 58%</p><p class="plate__what"><span class="sr-only">22% → 58% </span>Direct bookings</p><p class="plate__more">A brand drawn from a converted timber warehouse by the canal, and a site that sells rooms by mood. Direct bookings now beat the big travel sites. <a href="#">Read the case study</a></p></li>
+      <li class="plate"><p class="plate__sector">Health · 2024</p><h3>Mendhaven</h3><p class="plate__num">+70%</p><p class="plate__what"><span class="sr-only">+70% </span>Online bookings</p><p class="plate__more">A softer brand, a website rewritten around what people actually search for and local campaigns built on simple exercises. <a href="#">Read the case study</a></p></li>
+      <li class="plate"><p class="plate__sector">Pet food · 2024</p><h3>Houndsbury</h3><p class="plate__num">2.4x</p><p class="plate__what"><span class="sr-only">2.4x </span>Subscriptions in a year</p><p class="plate__more">Pouches with a clear window onto the real ingredients, and paid social built on dogs at dinner time, tested every week. <a href="#">Read the case study</a></p></li>
+      <li class="plate"><p class="plate__sector">Mobility · 2026</p><h3>Gearfinch</h3><p class="plate__num">640</p><p class="plate__what"><span class="sr-only">640 </span>Test rides in the launch quarter</p><p class="plate__more">Real families on real school runs, a website that books free test rides at home and paid social near schools. <a href="#">Read the case study</a></p></li>
+      <li class="plate"><p class="plate__sector">Drinks · 2026</p><h3>Fizzwold</h3><p class="plate__num">80 → 310</p><p class="plate__what"><span class="sr-only">80 → 310 </span>Stockists</p><p class="plate__more">A bubbly custom wordmark, a bold pattern for each flavour and a run of short, odd social films about fermentation. <a href="#">Read the case study</a></p></li>
+      <li class="plate"><p class="plate__sector">Education · 2024</p><h3>Owlhour</h3><p class="plate__num">+46%</p><p class="plate__what"><span class="sr-only">+46% </span>Autumn enrolment</p><p class="plate__more">A brand built around a lit window at night, with a campaign written from honest lines that real students told us. <a href="#">Read the case study</a></p></li>
+      <li class="plate"><p class="plate__sector">Sport · 2026</p><h3>Fernstride</h3><p class="plate__num">+52%</p><p class="plate__what"><span class="sr-only">+52% </span>Brand searches</p><p class="plate__more">Slow Sunday miles with local run clubs, lines about getting out the door and twelve weeks on social and bus shelters. <a href="#">Read the case study</a></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== 4 FILMS ===================== -->
+<section id="films" class="films act" data-sc-act="flow" aria-labelledby="films-h">
+  <div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div>
+  <div class="wrap">
+    <div class="films__head">
+      <h2 class="h2 disp lz" id="films-h">Film <span class="y">&amp; motion</span></h2>
+      <p class="lz" style="--k:1">Brand films, product videos and animation, from first script to final grade. Tap any film to watch it.</p>
+    </div>
+    <ol class="reel">
+      <li class="film" style="--d:0"><a class="film__btn" href="https://example.com" data-film="VIDEO-ID" data-title="The quiet launch"><span class="film__pic"><img src="assets/work/film-01.webp" width="960" height="540" fetchpriority="low" decoding="async" alt="Sand-coloured over-ear headphones resting on the tiled edge of an empty indoor swimming pool."><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#16130F"/></svg></span></span><span class="film__cap"><b>The quiet launch</b><span>Stillreed · product film, 2025 · watch the film</span></span></a></li>
+      <li class="film" style="--d:1"><a class="film__btn" href="https://example.com" data-film="VIDEO-ID" data-title="The long way round"><span class="film__pic"><img src="assets/work/film-02.webp" width="960" height="540" loading="lazy" decoding="async" alt="A rust orange hiking rucksack against a stone cairn on a misty ridge at sunrise."><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#16130F"/></svg></span></span><span class="film__cap"><b>The long way round</b><span>Cairnstone · brand film, 2024 · watch the film</span></span></a></li>
+      <li class="film" style="--d:2"><a class="film__btn" href="https://example.com" data-film="VIDEO-ID" data-title="Winter, slowly"><span class="film__pic"><img src="assets/work/film-03.webp" width="960" height="540" loading="lazy" decoding="async" alt="A cream wool sweater folded over a wooden fence post in a misty field."><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#16130F"/></svg></span></span><span class="film__cap"><b>Winter, slowly</b><span>Marlo Rue · lookbook film, 2025 · watch the film</span></span></a></li>
+      <li class="film" style="--d:3"><a class="film__btn" href="https://example.com" data-film="VIDEO-ID" data-title="The 2026 studio reel"><span class="film__pic"><img src="assets/work/film-04.webp" width="960" height="540" loading="lazy" decoding="async" alt="A two-colour festival poster of reeds and lanterns pasted on a brick wall at dusk."><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#16130F"/></svg></span></span><span class="film__cap"><b>The 2026 studio reel</b><span>Mosswick · studio reel, 2026 · watch the film</span></span></a></li>
+    </ol>
+  </div>
+</section>
+<dialog class="screen" id="screen" aria-labelledby="screen-title">
+  <div class="screen__frame" id="screen-frame"></div>
+  <div class="screen__bar"><p class="screen__title" id="screen-title"></p><button class="screen__close" id="screen-close" type="button">Close</button></div>
+</dialog>
+
+<!-- ===================== 5 WORK ===================== -->
+<section id="work" class="work act" data-sc-act="flow" aria-labelledby="work-h">
+  <div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div>
+  <div class="wrap">
+    <div class="work__head">
+      <h2 class="h2 disp lz" id="work-h">Loud ideas, <span class="y">careful craft.</span></h2>
+      <p class="lz" style="--k:1">Identities, packs, websites and covers from recent studio projects.</p>
+    </div>
+    <ul class="fold">
+      <li class="panel" style="--k:-1.5;--s:1;--z0:-120;--d:0"><figure><img src="assets/work/work-01.webp" width="900" height="600" loading="lazy" decoding="async" alt="Stacked handmade plates and bowls in oatmeal, teal and rust glazes on raw linen."><figcaption><b>Kilnmark</b><span>Quiet branding for loud glazes</span></figcaption></figure></li>
+      <li class="panel" style="--k:-0.5;--s:-1;--z0:40;--d:1"><figure><img src="assets/work/work-02.webp" width="900" height="600" loading="lazy" decoding="async" alt="Five cordial bottles in fruit colours on a limestone ledge in morning sun."><figcaption><b>Plumtide</b><span>A cordial brand with sunshine in it</span></figcaption></figure></li>
+      <li class="panel" style="--k:0.5;--s:1;--z0:-120;--d:2"><figure><img src="assets/work/work-03.webp" width="900" height="600" loading="lazy" decoding="async" alt="A phone showing a coral and cream invoice screen beside a notebook and a cup of tea."><figcaption><b>Paywren</b><span>Invoicing that feels friendly</span></figcaption></figure></li>
+      <li class="panel" style="--k:1.5;--s:-1;--z0:40;--d:3"><figure><img src="assets/work/work-04.webp" width="900" height="600" loading="lazy" decoding="async" alt="A white gallery room with three large abstract canvases and a wooden bench."><figcaption><b>Hollin Gallery</b><span>A gallery that reads like a magazine</span></figcaption></figure></li>
+    </ul>
+    <ul class="fold">
+      <li class="panel" style="--k:-1.5;--s:1;--z0:-120;--d:0"><figure><img src="assets/work/work-05.webp" width="900" height="600" loading="lazy" decoding="async" alt="Four wave-printed snack bags on wet sand at the waterline."><figcaption><b>Saltmarrow</b><span>Seaweed snacks for the crisp aisle</span></figcaption></figure></li>
+      <li class="panel" style="--k:-0.5;--s:-1;--z0:40;--d:1"><figure><img src="assets/work/work-06.webp" width="900" height="600" loading="lazy" decoding="async" alt="Bright wooden toys next to their open cardboard boxes on a mint green floor."><figcaption><b>Tumblewick</b><span>Wooden toys, bright new look</span></figcaption></figure></li>
+      <li class="panel" style="--k:0.5;--s:1;--z0:-120;--d:2"><figure><img src="assets/work/work-07.webp" width="900" height="600" loading="lazy" decoding="async" alt="An embossed gin bottle with a gold-foiled label beside a tumbler of ice on a walnut bar."><figcaption><b>Gilded Hare</b><span>A gin bottle worth keeping</span></figcaption></figure></li>
+      <li class="panel" style="--k:1.5;--s:-1;--z0:40;--d:3"><figure><img src="assets/work/work-08.webp" width="900" height="600" loading="lazy" decoding="async" alt="A fan of six single-colour paperback novels on dark green velvet."><figcaption><b>Quillmoor Press</b><span>Book covers that sell on a phone</span></figcaption></figure></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 6 CLIENTS ===================== -->
+<section id="clients" class="clients act" data-sc-act="flow" aria-labelledby="clients-h">
+  <div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div>
+  <div class="wrap">
+    <h2 class="h2 disp lz" id="clients-h">Brands that <span class="y">stay with us</span></h2>
+    <div class="lanes">
+      <ul class="lane" style="--d:0">
+        <li><img src="assets/logos/client-01.svg" width="360" height="104" loading="lazy" decoding="async" alt="Periwink logo"></li>
+        <li><img src="assets/logos/client-02.svg" width="389" height="99" loading="lazy" decoding="async" alt="Plumtide logo"></li>
+        <li><img src="assets/logos/client-03.svg" width="538" height="125" loading="lazy" decoding="async" alt="Halvane Watch Co. logo"></li>
+        <li><img src="assets/logos/client-04.svg" width="421" height="87" loading="lazy" decoding="async" alt="Paywren logo"></li>
+        <li><img src="assets/logos/client-05.svg" width="388" height="79" loading="lazy" decoding="async" alt="Okra &amp; Ash logo"></li>
+        <li><img src="assets/logos/client-06.svg" width="383" height="76" loading="lazy" decoding="async" alt="Kilnmark logo"></li>
+        <li><img src="assets/logos/client-07.svg" width="551" height="101" loading="lazy" decoding="async" alt="Hollin Gallery logo"></li>
+        <li><img src="assets/logos/client-08.svg" width="736" height="125" loading="lazy" decoding="async" alt="Marshlight Festival logo"></li>
+      </ul>
+      <ul class="lane" style="--d:1">
+        <li><img src="assets/logos/client-09.svg" width="360" height="96" loading="lazy" decoding="async" alt="Shelterly logo"></li>
+        <li><img src="assets/logos/client-10.svg" width="419" height="100" loading="lazy" decoding="async" alt="Glimmerfold logo"></li>
+        <li><img src="assets/logos/client-11.svg" width="362" height="79" loading="lazy" decoding="async" alt="Fizzwold logo"></li>
+        <li><img src="assets/logos/client-12.svg" width="396" height="82" loading="lazy" decoding="async" alt="Softwatt logo"></li>
+        <li><img src="assets/logos/client-13.svg" width="406" height="79" loading="lazy" decoding="async" alt="Owlhour logo"></li>
+        <li><img src="assets/logos/client-14.svg" width="482" height="93" loading="lazy" decoding="async" alt="Sumwright logo"></li>
+        <li><img src="assets/logos/client-15.svg" width="735" height="130" loading="lazy" decoding="async" alt="River Commons Trust logo"></li>
+        <li><img src="assets/logos/client-16.svg" width="542" height="89" loading="lazy" decoding="async" alt="Houndsbury logo"></li>
+      </ul>
+      <ul class="lane" style="--d:2">
+        <li><img src="assets/logos/client-17.svg" width="514" height="145" loading="lazy" decoding="async" alt="Puddlejump Swim School logo"></li>
+        <li><img src="assets/logos/client-18.svg" width="403" height="75" loading="lazy" decoding="async" alt="Sorrelbox logo"></li>
+        <li><img src="assets/logos/client-19.svg" width="798" height="146" loading="lazy" decoding="async" alt="Copperbell Theatre logo"></li>
+        <li><img src="assets/logos/client-20.svg" width="442" height="78" loading="lazy" decoding="async" alt="Marlo Rue logo"></li>
+        <li><img src="assets/logos/client-21.svg" width="574" height="101" loading="lazy" decoding="async" alt="Ferrylight logo"></li>
+        <li><img src="assets/logos/client-22.svg" width="599" height="102" loading="lazy" decoding="async" alt="Quillmoor Press logo"></li>
+        <li><img src="assets/logos/client-23.svg" width="508" height="84" loading="lazy" decoding="async" alt="Tumblewick logo"></li>
+        <li><img src="assets/logos/client-24.svg" width="513" height="78" loading="lazy" decoding="async" alt="Saltmarrow logo"></li>
+      </ul>
+    </div>
+    <p class="clients__note lz">24 of the 140+ brands we have launched. Nine in ten stay past year one.</p>
+  </div>
+</section>
+
+<!-- ===================== 7 VOICES ===================== -->
+<section id="voices" class="voices act" data-sc-act="flow" aria-labelledby="voices-h">
+  <div class="wrap">
+    <h2 class="h2 disp" id="voices-h">In their <span class="y">own words</span></h2>
+    <ul class="vlist">
+      <li class="voice"><div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div><figure class="lz"><blockquote><p>Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us exactly what every bit of spend brought back.</p></blockquote><figcaption><b>Owen Haddad</b>Head of Growth, Paywren</figcaption></figure></li>
+      <li class="voice"><div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div><figure class="lz"><blockquote><p>The new website cut our quote form in half and far more people now finish it. Our board finally stopped asking about marketing spend.</p></blockquote><figcaption><b>Marcus Tilley</b>Chief Operating Officer, Shelterly</figcaption></figure></li>
+      <li class="voice"><div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div><figure class="lz"><blockquote><p>They treated our small charity like their biggest client. Volunteers now find us on their own, and the river looks better every spring.</p></blockquote><figcaption><b>Beatrix Oyelaran</b>Director, River Commons Trust</figcaption></figure></li>
+      <li class="voice"><div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div><figure class="lz"><blockquote><p>Honest about what would work and what would not. That honesty saved us a lot of money in our first quarter of selling bikes.</p></blockquote><figcaption><b>Felix Andersen-Ruiz</b>Co-founder, Gearfinch</figcaption></figure></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 8 PEOPLE ===================== -->
+<section id="people" class="people act" data-sc-act="flow" aria-labelledby="people-h">
+  <div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div>
+  <div class="wrap">
+    <h2 class="h2 disp lz" id="people-h">Led by <span class="y">the founders</span></h2>
+    <div class="people__grid">
+      <figure class="duo">
+        <span class="duo__img duo__pair"><img src="assets/team-1.webp" width="460" height="688" loading="lazy" decoding="async" alt="Ines Calloway, smiling, in a rust linen shirt."><img src="assets/team-2.webp" width="460" height="688" loading="lazy" decoding="async" alt="Tobias Okonjo-Hale in round glasses and a navy jumper."></span>
+        <span class="duo__floor" aria-hidden="true"></span>
+      </figure>
+      <div class="bios">
+        <div class="bio lz" style="--k:1">
+          <h3>Ines Calloway</h3>
+          <p class="role">Founder and Creative Director</p>
+          <p>Ines started Mosswick in 2014 with two friends and one shared desk above a bike shop. She reads every brief twice, then asks the question nobody wanted to answer.</p>
+        </div>
+        <div class="bio lz" style="--k:2">
+          <h3>Tobias Okonjo-Hale</h3>
+          <p class="role">Co-founder and Strategy Director</p>
+          <p>Tobias runs the first week of listening on every new project, then turns messy workshops into one clear page the whole client team signs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="team">
+      <div class="team__frame"><img class="team__img sdx" src="assets/team-wide.webp" width="1400" height="1050" loading="lazy" decoding="async" alt="The studio team together on a rooftop terrace in golden evening light."></div>
+      <div class="team__copy">
+        <span class="big">32</span>
+        <p>People in one studio in Lowmere, from strategists and designers to filmmakers and media buyers.</p>
+        <p class="credo">Listen · Decide · Make · Launch · Grow</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 9 QUESTIONS ===================== -->
+<section id="questions" class="faq act" data-sc-act="flow" aria-labelledby="faq-h">
+  <div class="lamp" aria-hidden="true"><span class="lamp__arm"></span><span class="lamp__cone"></span><span class="lamp__head"><i style="--b:0"></i><i style="--b:1"></i><i style="--b:2"></i><i style="--b:3"></i><i style="--b:4"></i><i style="--b:5"></i><i style="--b:6"></i></span></div>
+  <div class="wrap">
+    <h2 class="h2 disp lz" id="faq-h">Questions <span class="y">we get asked</span></h2>
+    <div class="qa">
+      <details class="lz" style="--k:0"><summary><h3>What kind of companies do you work with?</h3><i aria-hidden="true"></i></summary><div class="qa__a"><p>Mostly growing companies with 10 to 500 people: food and drink brands, shops, clinics, charities, tech start-ups and the odd festival. What they share is a founder or marketing lead who wants bold work and honest numbers.</p></div></details>
+      <details class="lz" style="--k:1"><summary><h3>How much does a project cost?</h3><i aria-hidden="true"></i></summary><div class="qa__a"><p>Brand identities usually start around $18,000, websites around $15,000 and monthly marketing retainers around $5,000. We send a fixed quote after our first call, so you know the full cost before any work starts.</p></div></details>
+      <details class="lz" style="--k:2"><summary><h3>How long does a brand identity take?</h3><i aria-hidden="true"></i></summary><div class="qa__a"><p>Most identity projects take eight to twelve weeks from the first workshop to final files. A full rebrand with a website and launch campaign usually runs four to six months. We agree the timeline in writing before we start.</p></div></details>
+      <details class="lz" style="--k:3"><summary><h3>Do you only take on big projects?</h3><i aria-hidden="true"></i></summary><div class="qa__a"><p>No. Some clients start with a single campaign, a product film or three months of social content. If it goes well, the work tends to grow from there. We just need a clear goal and someone who can make decisions.</p></div></details>
+      <details class="lz" style="--k:4"><summary><h3>Who will actually work on my project?</h3><i aria-hidden="true"></i></summary><div class="qa__a"><p>The people you meet in the first meeting. Every client gets a senior lead, a strategist and the makers the job needs. We never hand the work to a different team once the contract is signed.</p></div></details>
+      <details class="lz" style="--k:4"><summary><h3>Can you work alongside our in-house team?</h3><i aria-hidden="true"></i></summary><div class="qa__a"><p>Yes, and we often do. We can lead the creative and hand over files and guidelines, or join your team&#x27;s weekly rhythm for campaigns and content. Either way, you own everything we make for you.</p></div></details>
+      <details class="lz" style="--k:4"><summary><h3>Do you run ads as well as make them?</h3><i aria-hidden="true"></i></summary><div class="qa__a"><p>Yes. Our performance team plans, buys and tests paid search and social, and sits in the same room as the people who make the ads. You see spend and results in a live dashboard, updated daily.</p></div></details>
+      <details class="lz" style="--k:4"><summary><h3>How do you measure success?</h3><i aria-hidden="true"></i></summary><div class="qa__a"><p>We agree two or three numbers at the start, such as enquiries, sales or sign-ups, and report on them every month in plain language. If something is not working, we say so early and change course.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10 THE EXIT ===================== -->
+<section id="contact" class="close act" data-sc-act="flow" aria-labelledby="close-h">
+  <div class="exitbox">
+    <div class="exitscene">
+      <svg class="exit__svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false"><defs><linearGradient id="exfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16130F"/><stop offset="1" stop-color="#16130F" stop-opacity="0"/></linearGradient></defs><rect x="0" y="0" width="1200" height="560" fill="#16130F"/><polygon points="585,40 615,40 1097,560 103,560" fill="#231E18"/><polygon points="736,170 1200,320 1200,460 898,345" fill="#231E18"/><polygon points="736,170 1200,320 1200,328 738,173" fill="rgba(241,233,220,.55)"/><polygon points="773,210 833,224 833,232 773,220" fill="rgba(241,233,220,.32)"/><polygon points="802,242 880,258 880,267 802,254" fill="rgba(241,233,220,.32)"/><polygon points="832,274 928,292 928,302 832,288" fill="rgba(241,233,220,.32)"/><polygon points="862,306 976,326 976,337 862,322" fill="rgba(241,233,220,.32)"/><polygon points="583,40 587,40 119,560 99,560" fill="rgba(241,233,220,.6)"/><polygon points="613,40 617,40 1101,560 1081,560" fill="rgba(241,233,220,.6)"/><polygon points="590.1,436.9 609.9,436.9 613.0,560.0 587.0,560.0" fill="#E8854F"/><polygon points="593.1,315.9 606.9,315.9 608.3,370.2 591.7,370.2" fill="#E8854F"/><polygon points="594.7,251.4 605.3,251.4 606.0,281.9 594.0,281.9" fill="#E8854F"/><polygon points="595.7,211.3 604.3,211.3 604.8,230.8 595.2,230.8" fill="#E8854F"/><polygon points="596.4,184.0 603.6,184.0 603.9,197.6 596.1,197.6" fill="#E8854F"/><polygon points="596.9,164.3 603.1,164.3 603.4,174.2 596.6,174.2" fill="#E8854F"/><polygon points="597.3,149.2 602.7,149.2 602.9,156.9 597.1,156.9" fill="#E8854F"/><polygon points="597.6,137.5 602.4,137.5 602.6,143.5 597.4,143.5" fill="#E8854F"/><polygon points="597.8,128.0 602.2,128.0 602.3,132.9 597.7,132.9" fill="#E8854F"/><polygon points="598.0,120.2 602.0,120.2 602.1,124.2 597.9,124.2" fill="#E8854F"/><polygon points="598.2,113.7 601.8,113.7 601.9,117.0 598.1,117.0" fill="#E8854F"/><polygon points="598.3,108.1 601.7,108.1 601.8,111.0 598.2,111.0" fill="#E8854F"/><polygon points="598.4,103.3 601.6,103.3 601.6,105.8 598.4,105.8" fill="#E8854F"/><polygon points="598.5,99.2 601.5,99.2 601.5,101.4 598.5,101.4" fill="#E8854F"/><polygon points="598.6,95.6 601.4,95.6 601.4,97.5 598.6,97.5" fill="#E8854F"/><polygon points="598.7,92.3 601.3,92.3 601.4,94.0 598.6,94.0" fill="#E8854F"/><rect x="0" y="38" width="1200" height="120" fill="url(#exfade)"/><rect x="186" y="58" width="16" height="300" fill="#332B24"/><rect x="998" y="58" width="16" height="300" fill="#332B24"/><rect x="186" y="52" width="828" height="26" fill="#221C17" stroke="#3B322A" stroke-width="5"/><rect x="196" y="55" width="5" height="20" fill="#332B24"/><rect x="230" y="55" width="5" height="20" fill="#332B24"/><rect x="264" y="55" width="5" height="20" fill="#332B24"/><rect x="298" y="55" width="5" height="20" fill="#332B24"/><rect x="332" y="55" width="5" height="20" fill="#332B24"/><rect x="366" y="55" width="5" height="20" fill="#332B24"/><rect x="400" y="55" width="5" height="20" fill="#332B24"/><rect x="434" y="55" width="5" height="20" fill="#332B24"/><rect x="468" y="55" width="5" height="20" fill="#332B24"/><rect x="502" y="55" width="5" height="20" fill="#332B24"/><rect x="536" y="55" width="5" height="20" fill="#332B24"/><rect x="570" y="55" width="5" height="20" fill="#332B24"/><rect x="604" y="55" width="5" height="20" fill="#332B24"/><rect x="638" y="55" width="5" height="20" fill="#332B24"/><rect x="672" y="55" width="5" height="20" fill="#332B24"/><rect x="706" y="55" width="5" height="20" fill="#332B24"/><rect x="740" y="55" width="5" height="20" fill="#332B24"/><rect x="774" y="55" width="5" height="20" fill="#332B24"/><rect x="808" y="55" width="5" height="20" fill="#332B24"/><rect x="842" y="55" width="5" height="20" fill="#332B24"/><rect x="876" y="55" width="5" height="20" fill="#332B24"/><rect x="910" y="55" width="5" height="20" fill="#332B24"/><rect x="944" y="55" width="5" height="20" fill="#332B24"/><rect x="978" y="55" width="5" height="20" fill="#332B24"/></svg>
+      <div class="exitsign">
+        <div class="exitsign__mark"><img src="assets/marquee.svg" width="400" height="133" loading="lazy" alt="The Mosswick Studio marquee with every bulb lit"></div>
+        <div class="exitsign__hang"><a class="cta cta--sign cta--big" href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener" data-cta><span class="cta__plate"><span class="cta__exit">EXIT 04 · WHATSAPP</span><span class="cta__l">Start a project<svg class="cta__arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></span></span></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="close__card wrap">
+    <h2 class="close__line disp" id="close-h">Tell us what you are <span class="y">building next</span></h2>
+    <p class="close__sub">Send us a short brief and we will reply within two working days. Then a free 30 minute call with a strategist, with no pitch deck and no pressure.</p>
+    <dl class="rows">
+      <div><dt>Call</dt><dd><a href="tel:+15550142">+1 555 0142</a></dd></div>
+      <div><dt>WhatsApp</dt><dd><a href="https://wa.me/15550100" target="_blank" rel="noopener">+1 555 0100</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+      <div><dt>New business</dt><dd><a href="mailto:projects@example.com">projects@example.com</a></dd></div>
+      <div><dt>Studio</dt><dd>1 Example Street, Lowmere</dd></div>
+      <div><dt>Hours</dt><dd>Monday to Friday, 9am to 6pm</dd></div>
+      <div><dt>Follow</dt><dd class="soc"><a href="https://example.com" target="_blank" rel="noopener">Instagram</a><a href="https://example.com" target="_blank" rel="noopener">LinkedIn</a><a href="https://example.com" target="_blank" rel="noopener">Behance</a><a href="https://example.com" target="_blank" rel="noopener">YouTube</a></dd></div>
+    </dl>
+    <p class="legal">© 2026 Mosswick Studio · Brands, websites, films and campaigns, made in Lowmere since 2014<span>Example content. Swap in your own.</span></p>
+  </div>
+</section>
+</main>
+
+<div class="dock" id="dock"><a class="cta" href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener" data-cta><span class="cta__plate"><span class="cta__l">Start a project</span><svg class="cta__arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></span></a></div>
+
+<script src="scrollcraft.js"></script>
+<script>
+(function () {
+  var root = document.documentElement;
+  var fx = root.classList.contains('fx');
+  var sd = root.classList.contains('sd');
+  ScrollCraft.mount(document.body);
+
+  var hero = document.getElementById('top');
+  var results = document.getElementById('results');
+
+  /* ---- hero reveal once the type is ready ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () { if (done) return; done = true; requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.remove('pre-reveal'); }); }); };
+    var waits = [];
+    if (document.fonts && document.fonts.load) { waits.push(document.fonts.load('italic 900 60px Poppins').catch(function () {})); }
+    Promise.all(waits).then(go);
+    setTimeout(go, 1200);
+  }
+
+  /* ---- the signature: each lamp lights as its act arrives (once) ---- */
+  var lits = [].slice.call(document.querySelectorAll('.act, .voice'));
+  if (fx && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-lit'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -2% 0px', threshold: 0 });
+    lits.forEach(function (el) { io.observe(el); });
+  } else { lits.forEach(function (el) { el.classList.add('is-lit'); }); }
+
+  /* ---- films play on tap: the iframe exists only after the tap ---- */
+  var dlg = document.getElementById('screen'), frame = document.getElementById('screen-frame'), ttl = document.getElementById('screen-title');
+  function shut() { frame.innerHTML = ''; if (dlg.open) dlg.close(); }
+  if (dlg && dlg.showModal) {
+    [].forEach.call(document.querySelectorAll('[data-film]'), function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + a.getAttribute('data-film') + '?autoplay=1&rel=0&playsinline=1';
+        f.title = a.getAttribute('data-title');
+        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        f.allowFullscreen = true;
+        frame.innerHTML = ''; frame.appendChild(f);
+        ttl.textContent = a.getAttribute('data-title');
+        dlg.showModal();
+      });
+    });
+    document.getElementById('screen-close').addEventListener('click', shut);
+    dlg.addEventListener('close', function () { frame.innerHTML = ''; });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) shut(); });
+  }
+
+  /* ---- the only scroll-linked moves left are decoration: the hero road rolling on, the team photo drift ---- */
+  var ranged = [];
+  function docTop(el) { var y = 0; for (var e = el; e; e = e.offsetParent) y += e.offsetTop; return y; }
+  function setR(el, a, b) {
+    if (!el) return;
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px');
+    el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    ranged.push([el, a, b]);
+  }
+  var teamImg = document.querySelector('.team__img'), teamFrame = document.querySelector('.team__frame');
+
+  /* ---- triggered entrances: crossing the line plays the move through on its own clock, once ---- */
+  var tg = [].slice.call(document.querySelectorAll('.exit, .reel, .fold, .lanes, .duo, .qa, .exitbox'));
+  var tgTop = [];
+
+  /* ---- results: the scroll position only picks the case; the swap runs on its own clock ---- */
+  var marks = [].slice.call(results.querySelectorAll('.mark'));
+  var plates = [].slice.call(results.querySelectorAll('.plate'));
+  var track = results.querySelector('.rtrack'), plateList = results.querySelector('.plates');
+  /* nine equal steps across the pin's travel (5.3 - 1 = 4.3 screens, so about 0.48 screen a case): case k is exactly dash k of the strip */
+  var N = plates.length;
+  var rT = 0, cur = -1, outT = 0, fillEl = results.querySelector('.rprog__fill');
+  function caseAt(p) { return Math.max(0, Math.min(N - 1, Math.floor(p * N))); }
+  function setCase(i, instant) {
+    if (i === cur) return;
+    var prev = cur; cur = i;
+    if (instant) { track.classList.add('is-cut'); plateList.classList.add('is-cut'); }
+    marks.forEach(function (m, k) { m.classList.toggle('is-on', k === i); m.classList.toggle('is-out', !instant && k === prev); });
+    track.style.setProperty('--i', i);
+    var nx = plates[i];
+    plates.forEach(function (pl, k) { if (k !== i) pl.classList.remove('is-on'); });
+    if (!instant) { nx.classList.add('is-next'); void nx.offsetWidth; nx.classList.remove('is-next'); }
+    nx.classList.add('is-on');
+    clearTimeout(outT);
+    if (instant) { void track.offsetWidth; track.classList.remove('is-cut'); plateList.classList.remove('is-cut'); }
+    else outT = setTimeout(function () { marks.forEach(function (m) { m.classList.remove('is-out'); }); }, 600);
+  }
+
+  function measure() {
+    ranged = [];
+    var vh = innerHeight;
+    rT = docTop(results);
+    tgTop = tg.map(function (el) { return docTop(el); });
+    if (!fx) return;
+    // hero: the road rolls on while the hero scrolls away (decoration only)
+    setR(hero.querySelector('.cam'), 0, hero.offsetHeight);
+    setR(hero.querySelector('.hstrip'), 0, hero.offsetHeight);
+    if (teamImg) { var tT = docTop(teamFrame); setR(teamImg, tT - vh, tT + teamFrame.offsetHeight); }
+    setR(fillEl, rT, rT + Math.max(1, results.offsetHeight - vh));
+  }
+
+  /* ---- per-frame: triggers, the results case, fallback progress, and the state the verifier reads ---- */
+  var ticking = false;
+  function frameTick() {
+    ticking = false;
+    var y = scrollY, vh = innerHeight;
+    if (fx && !sd) ranged.forEach(function (r) { r[0].style.setProperty('--p', Math.max(0, Math.min(1, (y - r[1]) / (r[2] - r[1]))).toFixed(4)); });
+    var line = y + vh * 0.94;
+    for (var j = 0; j < tg.length; j++) if (!tg[j].classList.contains('is-in') && tgTop[j] < line) tg[j].classList.add('is-in');
+    var tr = results.offsetHeight - vh;
+    var p = tr > 0 ? Math.max(0, Math.min(1, (y - rT) / tr)) : 0;
+    var st = results.querySelector('[data-sc-stage]');
+    st.style.setProperty('--results-progress', p.toFixed(4));
+    if (fx) setCase(caseAt(p), cur < 0);
+    var v = fx ? String(cur) : 'still';
+    if (st.getAttribute('data-sc-verify-state') !== v) st.setAttribute('data-sc-verify-state', v);
+    if (st.getAttribute('data-sc-verify-hold') !== 'true') st.setAttribute('data-sc-verify-hold', 'true');
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frameTick); } }
+  measure(); frameTick();
+  addEventListener('scroll', onScroll, { passive: true });
+  var lastW = innerWidth;
+  addEventListener('resize', function () { lastW = innerWidth; measure(); onScroll(); });
+  addEventListener('load', function () { measure(); onScroll(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measure(); onScroll(); });
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); onScroll(); } }).observe(document.body); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio, Lowmere</title>
+<meta name="description" content="Mosswick Studio is a creative and marketing studio in Lowmere: brand strategy, identity, websites, social content, film, campaigns and paid media.">
+<meta name="theme-color" content="#E6EEF2">
+<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta property="og:description" content="Brands worth remembering. Marketing that pays back. Identity, websites, social, film, campaigns and paid media from Lowmere, since 2014.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta name="twitter:description" content="Identity, websites, social content, film, campaigns and paid media from Lowmere, since 2014.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/unbounded-var-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/dm-sans-var-latin.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/post-08.webp">
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Unbounded"; src: url("assets/fonts/unbounded-var-latin.woff2") format("woff2"); font-weight: 200 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("assets/fonts/dm-sans-var-latin.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
+
+/* Palette 10, Ice Blue: a pale blue page, white sheets, deep ink type and hairlines, and one colour, the teal accent.
+   Unbounded for display, DM Sans for text (both OFL). */
+:root {
+  --accent: #0e5e6f;
+  --accent-lt: #5bb4c5;
+  --ink: #0e1f2b;
+  --ink2: #2a3b47;
+  --soft: #475a67;
+  --ground: #e6eef2;
+  --card: #ffffff;
+  --line: #d3dfe6;
+  --line2: #b9cad4;
+  --night: #102331;
+  --night2: #1a2f3f;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --glide: cubic-bezier(.65, 0, .35, 1);
+  --display: "Unbounded", "Archivo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --text: "DM Sans", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --gut: clamp(1rem, 3.2vw, 3rem);
+  --maxw: 1200px;
+  --bar: 68px;
+  --dock: 0px;
+  --sc-canvas: #e6eef2; --sc-surface: #ffffff;
+  --sc-ink: #0e1f2b; --sc-ink-soft: #475a67;
+  --sc-accent: #0e5e6f; --sc-accent-ink: #ffffff;
+  --sc-font-display: var(--display); --sc-font-text: var(--text);
+  --sc-gutter: var(--gut);
+}
+html { background: var(--ground); }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--text); font-size: 16px; line-height: 1.6; letter-spacing: 0; }
+img { max-width: 100%; height: auto; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 90; background: #fff; color: var(--ink); padding: 10px 14px; font: 600 14px/1 var(--text); }
+.skip:focus { top: 12px; }
+main > section { overflow-x: clip; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: #fff; }
+h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; letter-spacing: -.02em; color: var(--ink); }
+p { margin: 0; }
+a { color: inherit; }
+
+/* ---------- the one CTA: "Start a project", always to WhatsApp; a dotted arrow runs on hover ---------- */
+.cta {
+  --h: 46px;
+  display: inline-flex; align-items: center; justify-content: space-between; gap: 14px; height: var(--h); padding: 0 18px 0 22px; border-radius: 10px;
+  background: var(--accent); color: #fff; text-decoration: none; white-space: nowrap;
+  font: 600 15px/1 var(--text); letter-spacing: .01em;
+}
+.cta__ar { display: block; width: 22px; height: 12px; overflow: visible; }
+.cta__ar circle { fill: currentColor; transition: transform .45s var(--ease), opacity .3s var(--ease); }
+.cta__ar circle:nth-child(1) { opacity: .45; }
+.cta__ar circle:nth-child(2) { opacity: .7; }
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover .cta__ar circle { transform: translateX(4px); opacity: 1; }
+  .cta:hover .cta__ar circle:nth-child(2) { transition-delay: .04s; }
+  .cta:hover .cta__ar circle:nth-child(3), .cta:hover .cta__ar circle:nth-child(4), .cta:hover .cta__ar circle:nth-child(5) { transition-delay: .08s; }
+}
+.cta:active { transform: translateY(1px); }
+.cta--big { --h: 56px; font-size: 17px; padding: 0 22px 0 26px; border-radius: 12px; }
+
+/* ---------- the planner header (the nav): the wordmark, Today, previous and next view, today's date, the view you are in, the CTA.
+   On the page tone, with the wordmark at a size that reads ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar); box-sizing: border-box;
+  display: grid; grid-template-columns: minmax(330px, auto) minmax(0, 1fr) auto; align-items: center; gap: 28px;
+  padding: env(safe-area-inset-top) var(--gut) 0; background: var(--ground); border-bottom: 1px solid var(--line);
+}
+.bar__brand { display: inline-flex; align-items: center; height: 44px; }
+.bar__brand img { display: block; height: 28px; width: auto; }
+.pl { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.pl__today { height: 36px; padding: 0 14px; border: 1px solid var(--line2); border-radius: 999px; background: #fff; color: var(--ink); font: 600 14px/1 var(--text); cursor: pointer; }
+.pl__step { width: 36px; height: 36px; border: 0; border-radius: 50%; background: transparent; color: var(--ink); display: grid; place-items: center; cursor: pointer; padding: 0; }
+.pl__step svg { width: 18px; height: 18px; }
+.pl__step:hover, .pl__today:hover { background: #dce7ed; }
+.pl__date { font: 600 15px/1.2 var(--text); color: var(--ink); white-space: nowrap; margin-left: 4px; }
+.pl__view { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px 0 10px; border-radius: 999px; background: #fff; box-shadow: inset 0 0 0 1px var(--line); font: 500 14px/1 var(--text); color: var(--ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.dot { display: inline-block; flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+.pl__view .dot { transition: transform .4s var(--ease); }
+.pl__view.is-new .dot { animation: dotpulse .5s var(--ease); }
+@keyframes dotpulse { 0% { transform: scale(.3); } 60% { transform: scale(1.35); } 100% { transform: none; } }
+.dock { display: none; }
+
+/* ---------- view header: every act opens with its view name and the dot, as the planner shows a view ---------- */
+.vh { display: flex; align-items: center; gap: 10px; font: 600 13px/1.3 var(--text); letter-spacing: .02em; color: var(--ink2); }
+.vh .dot { width: 11px; height: 11px; position: relative; }
+.vh .dot::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--accent); opacity: 0; }
+.vh__range { font-weight: 400; color: var(--soft); }
+html.fx .act.is-on .vh .dot { animation: dotland .55s var(--ease) both; }
+html.fx .act.is-on .vh .dot::after { animation: dotring .9s var(--ease) .2s both; }
+@keyframes dotland { from { transform: scale(0); } 70% { transform: scale(1.3); } to { transform: none; } }
+@keyframes dotring { from { opacity: .9; transform: scale(.4); } to { opacity: 0; transform: scale(2.2); } }
+
+/* ---------- act 1: the planner, already running (hero) ---------- */
+.hero { position: relative; background: var(--ground); }
+.hero__stage { min-height: 100vh; min-height: 100svh; box-sizing: border-box; padding-top: var(--bar); display: grid; place-items: end center; overflow: clip; }
+.scene { --sw: min(94vw, 1380px, calc((100svh - var(--bar) - 10px) / .61)); position: relative; width: var(--sw); aspect-ratio: 100 / 61; container-type: inline-size; }
+.hp-copy { position: absolute; left: 0; right: 0; top: 1.6cqw; z-index: 3; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 3cqw; }
+/* the wordmark, large, as the planner's letterhead */
+.hp-brand { margin: 0; display: flex; align-items: center; gap: 1.4cqw; }
+.hp-brand img { display: block; height: 3cqw; width: auto; }
+.hp-brand span { font: 600 max(13px, .98cqw)/1.35 var(--text); color: var(--ink2); letter-spacing: .01em; padding-left: 1.4cqw; border-left: 1px solid var(--line2); }
+.hero h1 { margin-top: 1.3cqw; font-size: 3.15cqw; line-height: 1.08; max-width: 72cqw; }
+.hero h1 .ln { display: block; overflow: clip; overflow-clip-margin: .12em; padding-bottom: .04em; }
+.hero h1 .ln > span { display: block; text-wrap: balance; }
+.hp-copy .cta { margin-bottom: .3cqw; }
+
+.hp-board { position: absolute; left: 0; right: 0; bottom: 0; height: 56cqw; perspective: 1500px; perspective-origin: 50% 0%; z-index: 1; }
+.board { position: absolute; left: 2cqw; right: 2cqw; bottom: 0; height: 54cqw; transform-origin: 50% 100%; transform: rotateX(38deg); transform-style: preserve-3d; }
+.board__sheet { position: absolute; inset: 0; background: #fff; border: 1px solid var(--line); border-radius: 1.2cqw; box-shadow: 0 2cqw 4cqw -2cqw rgba(14, 31, 43, .2); }
+.board__head { position: absolute; left: 0; right: 0; top: 0; height: 4.6cqw; display: flex; align-items: center; justify-content: space-between; gap: 2cqw; padding: 0 1.6cqw; box-sizing: border-box; border-bottom: 1px solid var(--line); }
+.board__month { font: 600 1.7cqw/1 var(--display); letter-spacing: -.01em; color: var(--ink); display: inline-flex; align-items: center; gap: .9cqw; }
+.board__mark { display: block; height: 2.3cqw; width: auto; }
+.board__wkhead { display: none; }
+.board__note { font: 500 max(20px, 1.5cqw)/1.3 var(--text); color: var(--soft); text-align: right; }
+.board__dow { position: absolute; left: 0; right: 0; top: 4.6cqw; height: 2.6cqw; display: grid; grid-template-columns: repeat(7, 1fr); border-bottom: 1px solid var(--line); }
+.board__dow span { font: 600 max(20px, 1.4cqw)/2.6cqw var(--text); letter-spacing: .08em; text-transform: uppercase; color: var(--soft); padding-left: 1cqw; }
+.board__grid { position: absolute; left: 0; right: 0; top: 7.2cqw; bottom: 0; display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(5, 1fr); margin: 0; padding: 0; list-style: none; }
+.board__grid li { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; }
+.board__grid li:nth-child(7n) { border-right: 0; }
+.board__grid li:nth-last-child(-n + 7) { border-bottom: 0; }
+.board__grid b { position: absolute; left: .9cqw; top: .6cqw; font: 600 1.15cqw/1 var(--text); color: var(--ink); }
+.board__grid li.out b { color: #9fb0bb; font-weight: 500; }
+.board__grid li.is-today b { color: #fff; background: var(--accent); border-radius: .4cqw; padding: .35cqw .55cqw; margin: -.35cqw 0 0 -.55cqw; }
+.board__grid li.is-today::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 .22cqw var(--accent); border-radius: 2px; pointer-events: none; }
+.board__week { display: none; }
+/* a pinned post: a piece of work on a day */
+/* translateZ(2px): the posts sit a hair above the sheet, so the 3D board hit-tests them first */
+.pin { position: absolute; margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); align-items: end; gap: .55cqw; background: #fff; transform: translateZ(2px); }
+.pin img { display: block; height: 100%; width: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: .5cqw; background: #dde7ec; }
+.pin figcaption { font: 600 max(14px, 1.1cqw)/1.2 var(--text); color: var(--ink); padding-bottom: .1cqw; min-width: 0; }
+.pin figcaption span:not(.pin__day) { display: none; }
+.pin figcaption span { display: block; font-weight: 400; color: var(--soft); }
+.pin .pin__day { display: none; }
+.board__dotmark { position: absolute; width: 1.5cqw; height: 1.5cqw; border-radius: 50%; background: var(--accent); transform: translateZ(4px); }
+.cal-posts { margin: 0; padding: 0; list-style: none; }
+
+/* no JS: the posts sit as a plain strip under the h1 */
+html:not(.js) .board { transform: none; position: relative; height: auto; }
+html:not(.js) .hp-board { position: relative; height: auto; }
+html:not(.js) .pin { position: relative; display: inline-grid; width: 30%; height: 160px; }
+
+/* hero load reveal: the board's grid draws from the near edge back, posts drop onto their days from depth 140 ms apart,
+   the dot lands on today, the h1 rises from behind its baseline, the CTA lands */
+@media (prefers-reduced-motion: no-preference) {
+  html.pre-reveal .board__sheet, html.pre-reveal .pin, html.pre-reveal .board__dotmark, html.pre-reveal .hero h1 .ln > span, html.pre-reveal .hp-copy .cta, html.pre-reveal .hp-brand { opacity: 0; }
+  html.reveal .board__sheet { animation: h-draw .75s var(--ease) both; }
+  html.reveal .pin { animation: h-drop .7s var(--ease) both; animation-delay: calc(.42s + var(--k) * .14s); }
+  html.reveal .board__dotmark { animation: h-dot .5s var(--ease) both; animation-delay: var(--dd, 1.2s); }
+  html.reveal .hp-brand { animation: h-land .5s var(--ease) .05s both; }
+  html.reveal .hero h1 .ln > span { animation: h-rise .8s var(--ease) both; animation-delay: calc(.12s + var(--l) * .09s); }
+  html.reveal .hp-copy .cta { animation: h-land .55s var(--ease) both; animation-delay: var(--cd, 1.5s); }
+}
+@keyframes h-draw { from { clip-path: inset(100% 0 0 0 round 1.2cqw); } to { clip-path: inset(0 0 0 0 round 1.2cqw); } }
+@keyframes h-drop { from { opacity: 0; transform: translate3d(0, -1.5cqw, 9cqw); } 40% { opacity: 1; } to { opacity: 1; transform: translate3d(0, 0, 2px); } }
+@keyframes h-dot { from { opacity: 0; transform: translateZ(6cqw) scale(.2); } 60% { opacity: 1; transform: translateZ(4px) scale(1.4); } to { opacity: 1; transform: translateZ(4px); } }
+@keyframes h-rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes h-land { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* ---------- every scroll-linked move: CSS scroll-driven animations on page-pixel ranges set by JS ---------- */
+html.anim .sdx { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.anim .sdx2 { animation-duration: auto, auto; animation-timing-function: linear, linear; animation-fill-mode: both, forwards; animation-timeline: scroll(root block), scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px), var(--f0, 0px) var(--f1, 1px); }
+
+/* hero scroll (desktop only): the camera pushes onto today's cell; the copy plane, nearer, leaves faster */
+html.anim .hp-board.sdx { animation-name: hs-board; transform-origin: var(--ox, 50%) var(--oy, 60%); }
+html.anim .hp-copy.sdx { animation-name: hs-copy; }
+@keyframes hs-board { from { transform: translate3d(0, 0, 0) scale(1); animation-timing-function: cubic-bezier(.65, 0, .35, 1); } to { transform: translate3d(0, -4cqw, 0) scale(1.22); } }
+@keyframes hs-copy { from { transform: translate3d(0, 0, 0); animation-timing-function: cubic-bezier(.65, 0, .35, 1); } to { transform: translate3d(0, -9cqw, 0); } }
+
+/* ---------- the signature: the dot pulls each act's items off the board (lying back, pushed away)
+   toward the camera, past flat by a hair, and they settle. Triggered, not scrubbed: the moment an item's
+   top edge enters the screen it plays the whole pull on its own clock (0.56 s), so any resting place shows it finished.
+   Items still below the screen wait lying back; once pulled up they stay up, forwards and back. ---------- */
+.mg { transform-origin: 50% 0%; }
+html.mgjs .mg:not(.mg-on) { transform: perspective(1100px) translate3d(0, 0, calc(var(--tz, 0px) - 140px)) rotateY(var(--ry, 0deg)) rotateX(-58deg); }
+html.mgjs .mg.mg-on { animation: mg-in .56s var(--md, 0ms) both; }
+@keyframes mg-in {
+  0% { transform: perspective(1100px) translate3d(0, 0, calc(var(--tz, 0px) - 140px)) rotateY(var(--ry, 0deg)) rotateX(-58deg); animation-timing-function: cubic-bezier(.33, 0, .2, 1); }
+  80% { transform: perspective(1100px) translate3d(0, 0, calc(var(--tz, 0px) + 16px)) rotateY(var(--ry, 0deg)) rotateX(3deg); }
+  100% { transform: perspective(1100px) translate3d(0, 0, var(--tz, 0px)) rotateY(var(--ry, 0deg)) rotateX(0deg); }
+}
+/* team (desktop): the accent disc and the founder move at two rates */
+html.anim .fd-far.sdx { animation-name: fd-far; }
+html.anim .fd-near.sdx { animation-name: fd-near; }
+@keyframes fd-far { from { transform: translate3d(0, 10%, 0) scale(.9); } to { transform: translate3d(0, -6%, 0) scale(1.04); } }
+@keyframes fd-near { from { transform: translate3d(0, 4%, 0); } to { transform: translate3d(0, -2%, 0); } }
+
+/* ---------- shared act furniture ---------- */
+.act { position: relative; padding: clamp(3.4rem, 7.5vh, 5.2rem) 0; }
+.wrap { width: min(var(--maxw), 100% - 2 * var(--gut)); margin: 0 auto; }
+.act__head { display: grid; gap: 14px; margin-bottom: clamp(1.8rem, 4vh, 2.8rem); max-width: 860px; }
+.act h2 { font-size: clamp(1.55rem, 1.05rem + 1.7vw, 2.45rem); line-height: 1.12; text-wrap: balance; }
+.lede { font-size: clamp(1.02rem, .98rem + .25vw, 1.15rem); line-height: 1.65; color: var(--ink2); max-width: 64ch; }
+.src { font: 500 13px/1.4 var(--text); color: var(--soft); }
+.src a { color: inherit; }
+
+/* ---------- act 2: services as lanes of the planner ---------- */
+.svc { background: #fff; }
+.aeo { max-width: 780px; font-size: clamp(1.05rem, 1rem + .3vw, 1.2rem); line-height: 1.65; color: var(--ink); border-left: 3px solid var(--accent); padding: 2px 0 2px 18px; }
+.gantt { margin-top: clamp(2rem, 5vh, 3rem); border: 1px solid var(--line); border-radius: 16px; background: #fff; position: relative; }
+.gantt__head { display: grid; grid-template-columns: 300px repeat(7, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+.gantt__head > span { font: 600 12px/1 var(--text); letter-spacing: .08em; text-transform: uppercase; color: var(--soft); padding: 14px 12px; }
+.gantt__head > span.is-today { color: var(--accent); }
+.lanes { list-style: none; margin: 0; padding: 0; }
+.lane { display: grid; grid-template-columns: 300px minmax(0, 1fr); border-bottom: 1px solid var(--line); background: #fff; }
+.lane:last-child { border-bottom: 0; border-radius: 0 0 16px 16px; }
+.lane__name { padding: 18px 20px 18px 18px; border-right: 1px solid var(--line); }
+.lane__name h3 { font-size: 16px; line-height: 1.25; letter-spacing: -.01em; }
+.lane__name p { margin-top: 6px; font-size: 14.5px; line-height: 1.5; color: var(--soft); }
+.lane__bars { position: relative; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); grid-auto-flow: row dense; gap: 8px 6px; padding: 14px 10px; align-content: center; list-style: none; margin: 0; }
+.lane__bars::before { content: ""; position: absolute; top: 0; bottom: 0; left: var(--tc, -10px); width: 2px; background: var(--accent); }
+.lane__bars li { position: relative; grid-column: span var(--s, 2); background: var(--ground); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font: 500 13.5px/1.3 var(--text); color: var(--ink); min-width: 0; }
+.lane__bars li.k { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.gantt__today { position: absolute; top: 0; height: 43px; width: 2px; background: var(--accent); left: var(--tl, 50%); pointer-events: none; z-index: 2; }
+.gantt__today::before { content: ""; position: absolute; top: 15px; left: -5px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+
+/* ---------- act 3: the launch, the peak (pinned): each part of the launch lifts out of its day toward you, one at a time ---------- */
+.peak { background: var(--night); color: #fff; padding: 0; }
+.peak h2, .peak h3 { color: #fff; }
+.peak__stage { height: 100vh; height: 100svh; }
+.peak__frame { height: 100%; box-sizing: border-box; padding: calc(var(--bar) + 20px) 0 22px; display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 18px; }
+.peak .vh { color: #e3ecf1; }
+.peak .vh__range { color: #a9bac5; }
+.peak .vh .dot { background: var(--accent-lt); }
+.peak .vh .dot::after { border-color: var(--accent-lt); }
+.peak__top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px 40px; align-items: end; }
+.peak__top h2 { margin-top: 10px; font-size: clamp(1.45rem, 1rem + 1.6vw, 2.3rem); }
+.peak__meta { margin-top: 8px; font-size: 14.5px; color: #b4c4ce; line-height: 1.5; }
+.nums { display: flex; gap: 0; margin: 0; }
+.nums div { padding: 0 22px; border-left: 1px solid #2a4052; }
+.nums div:first-child { border-left: 0; padding-left: 0; }
+.nums dt { font: 500 12px/1.3 var(--text); letter-spacing: .08em; text-transform: uppercase; color: #a9bac5; }
+.nums dd { font-variant-numeric: tabular-nums; margin: 4px 0 0; font: 600 clamp(1.3rem, 1rem + 1vw, 1.9rem)/1 var(--display); letter-spacing: -.02em; color: #fff; }
+.peak__view { position: relative; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 340px; grid-template-rows: minmax(0, 1fr) auto; grid-template-areas: "media list" "strip list"; gap: 14px 32px; }
+.peak__media { grid-area: media; position: relative; min-height: 0; }
+.peak__list { grid-area: list; }
+.peak__week { grid-area: strip; }
+/* each part is a card of the same size; the next one lands on top of it, so the stage is never empty */
+.part { position: absolute; inset: 0; z-index: var(--z); border-radius: 16px; overflow: hidden; background: var(--night2); transform-origin: 50% 50%; }
+.part > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.part--reels { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 18px; box-sizing: border-box; }
+.reel { position: relative; height: 100%; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background: #000; flex: 0 1 auto; max-width: 48%; }
+.reel img, .reel video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; border: 0; background: var(--accent); color: #fff; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.play svg { width: 22px; height: 22px; margin-left: 3px; }
+.peak__list { list-style: none; margin: 0; padding: 0; display: grid; align-content: center; gap: 4px; }
+.peak__list li { padding: 14px 0 14px 22px; border-top: 1px solid #233849; position: relative; }
+.peak__list li:first-child { border-top: 0; }
+.peak__list li::before { content: ""; position: absolute; left: 0; top: 21px; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #627786; box-sizing: border-box; }
+.peak__list h3 { font-size: 17px; line-height: 1.25; color: #9db0bc; letter-spacing: -.01em; }
+.peak__list p { margin-top: 6px; font-size: 15px; line-height: 1.55; color: #91a5b1; }
+.peak__list li.is-on::before { background: var(--accent-lt); border-color: var(--accent-lt); }
+.peak__list li.is-on h3 { color: #fff; }
+.peak__list li.is-on p { color: #d9e4ea; }
+.peak__week { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+/* the week fills as you scroll: an accent line over Mon to Fri follows the scroll continuously (decoration, so it may), and each
+   day's piece lifts out as the line crosses into that day, so a short scroll inside the pin always visibly moves something */
+.peak__prog { display: none; }
+html.anim .peak__prog { display: block; grid-area: strip; align-self: start; position: relative; z-index: 1; height: 3px; margin-top: -9px; border-radius: 2px; background: #233849; overflow: hidden; pointer-events: none; }
+html.anim .peak__prog i { position: absolute; inset: 0; background: var(--accent-lt); transform-origin: 0 50%; transform: scaleX(0); }
+html.anim .peak__prog i.sdx { animation-name: pk-fill; }
+@keyframes pk-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.peak__week li { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 6px; padding: 7px 7px 6px; border: 1px solid #233849; border-radius: 12px; background: var(--night2); transition: border-color .3s var(--ease), background .3s var(--ease); }
+.peak__week li img { width: 100%; max-width: 64px; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 8px; display: block; }
+.peak__week li b { display: block; font: 600 13px/1.2 var(--text); color: #fff; }
+.peak__week li.is-on { border-color: var(--accent-lt); background: #123a46; }
+/* triggered, not scrubbed: crossing each fifth of the pin plays that part's lift out of its day cell on its own
+   clock (0.6 s); scrolling back sends it home the same way. Parts not yet out are hidden, so nothing waits over the strip. */
+html.anim .part {
+  opacity: 0; visibility: hidden;
+  transform: perspective(1200px) translate3d(var(--cx, 0px), var(--cy, 0px), -60px) scale(var(--cs, .2)) rotateX(48deg);
+  transition: transform .6s var(--ease), opacity .22s linear, visibility 0s linear .6s;
+}
+html.anim .part.is-in {
+  opacity: 1; visibility: visible;
+  transform: perspective(1200px) translate3d(0, 0, 0) scale(1) rotateX(0deg);
+  transition: transform .6s var(--ease), opacity .16s linear, visibility 0s;
+}
+
+/* ---------- act 4: one case, text only ---------- */
+.case__card { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; align-items: start; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 3vw, 40px); }
+.case__logo { width: 100%; height: auto; aspect-ratio: 400 / 375; object-fit: contain; border-radius: 12px; border: 1px solid var(--line); background: #fff; padding: 24px; box-sizing: border-box; }
+.case h2 { margin-top: 12px; }
+.case__meta { margin-top: 8px; font-size: 14.5px; color: var(--soft); }
+.case__copy { margin-top: 18px; display: grid; gap: 10px; max-width: 62ch; color: var(--ink2); line-height: 1.6; }
+.outs { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.outs li { border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 20px; background: var(--ground); }
+.outs b { font-variant-numeric: tabular-nums; display: block; font: 600 clamp(1.5rem, 1.1rem + 1.2vw, 2.1rem)/1 var(--display); letter-spacing: -.02em; color: var(--accent); }
+.outs span { display: block; margin-top: 10px; font-size: 15px; line-height: 1.45; color: var(--ink); }
+
+/* ---------- act 5: work by industry, a board of columns ---------- */
+.work { background: #fff; }
+.kb { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.kb__col { background: var(--ground); border-radius: 16px; padding: 12px; }
+.kb__col h3 { font: 600 14px/1.3 var(--text); letter-spacing: 0; display: flex; justify-content: space-between; gap: 8px; padding: 4px 4px 12px; color: var(--ink); }
+.kb__col h3 span { color: var(--accent); font-weight: 600; }
+.kb__cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.kc { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 6px 6px 10px; }
+.kc img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; background: #eee; }
+.kc figcaption { padding: 8px 4px 0; font: 600 14px/1.3 var(--text); color: var(--ink); }
+.kc figcaption span { display: block; font-weight: 400; color: var(--soft); font-size: 13.5px; margin-top: 2px; }
+
+/* ---------- act 6: reels on a curved shelf ---------- */
+.reels { background: var(--ground); }
+.shelf { list-style: none; margin: 0 auto; padding: 0; display: flex; justify-content: center; gap: 18px; perspective: 1600px; }
+.shelf > li { flex: 0 0 auto; width: clamp(150px, 16vw, 210px); transform: perspective(1100px) translate3d(0, 0, var(--tz, 0px)) rotateY(var(--ry, 0deg)); }
+.rc { margin: 0; }
+.rc__box { position: relative; aspect-ratio: 9 / 16; border-radius: 14px; overflow: hidden; background: #000; }
+.rc__box img, .rc__box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+.rc figcaption { margin-top: 10px; font: 600 14.5px/1.3 var(--text); color: var(--ink); text-align: center; }
+.rc figcaption span { display: block; font-weight: 400; color: var(--soft); font-size: 13.5px; }
+
+/* ---------- act 7: clients as booked days ---------- */
+.clients { background: #fff; }
+.cl { display: grid; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.cl__row { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 1px; background: var(--line); border-top: 1px solid var(--line); }
+.cl__row:first-child { border-top: 0; }
+.cl__row li { background: #fff; aspect-ratio: 4 / 3; display: block; position: relative; }
+.cl__row li::before { content: ""; position: absolute; z-index: 1; left: 8px; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: .85; }
+.cl__row img { position: absolute; left: 14%; top: 14%; width: 72%; height: 72%; object-fit: contain; display: block; }
+
+/* ---------- act 8: reviews as a stack of notes that opens ---------- */
+.notes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.note { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px 22px 18px; display: grid; gap: 14px; align-content: space-between; box-shadow: 0 10px 24px -18px rgba(14, 31, 43, .35); }
+.note--wide { grid-column: span 2; }
+.note--wide blockquote { max-width: 52ch; }
+.note blockquote { margin: 0; font-size: 17px; line-height: 1.6; color: var(--ink); }
+.note figcaption { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; font: 600 14.5px/1.35 var(--text); color: var(--ink); flex-wrap: wrap; }
+.note figcaption span { font-weight: 400; color: var(--soft); font-size: 13.5px; }
+
+/* ---------- act 9: team ---------- */
+.team { background: var(--ground); }
+.fd { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+.fd__pic { position: relative; aspect-ratio: 640 / 813; }
+.fd__disc { position: absolute; left: 14%; right: 14%; top: 0; aspect-ratio: 1; border-radius: 50%; background: var(--accent); }
+.fd__img { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: auto; }
+.fd blockquote { margin: 18px 0 0; font: 600 clamp(1.25rem, 1rem + 1vw, 1.75rem)/1.3 var(--display); letter-spacing: -.02em; color: var(--ink); }
+.fd blockquote + p { margin-top: 12px; font: 600 15px/1.4 var(--text); color: var(--ink2); }
+.fd__story { margin-top: 18px; color: var(--ink2); line-height: 1.65; max-width: 58ch; }
+.tl { margin-top: 26px; border-top: 1px solid var(--line2); padding-top: 16px; }
+.tl__years { display: flex; gap: 8px; flex-wrap: wrap; }
+.tl__years button { height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid var(--line2); background: #fff; font: 600 15px/1 var(--text); color: var(--ink); cursor: pointer; }
+.tl__years button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tl__panel { margin-top: 14px; font-size: 17px; line-height: 1.5; color: var(--ink); min-height: 1.5em; }
+html.fx .tl__panel:not([hidden]) { animation: h-land .4s var(--ease) both; }
+.crew { margin-top: clamp(2.2rem, 5vh, 3.4rem); display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 3fr); gap: 16px; align-items: end; }
+.crew figure { margin: 0; }
+.crew__img img { display: block; width: 100%; height: auto; border-radius: 16px; aspect-ratio: 1400 / 788; object-fit: cover; }
+.crew figcaption { margin-top: 10px; font-size: 14.5px; color: var(--soft); }
+.coo { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px 16px 14px; }
+.coo img { display: block; width: 100%; height: auto; aspect-ratio: 310 / 400; object-fit: cover; object-position: 50% 0; border-radius: 10px; background: var(--ground); }
+.coo figcaption b { display: block; font-size: 15.5px; color: var(--ink); }
+
+/* ---------- act 10: questions ---------- */
+.faq { background: #fff; }
+.qa { border-top: 1px solid var(--line); max-width: 900px; }
+.qa details { border-bottom: 1px solid var(--line); background: #fff; }
+.qa summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) 28px; gap: 16px; align-items: center; padding: 20px 2px; font: 600 clamp(1rem, .95rem + .3vw, 1.15rem)/1.4 var(--text); color: var(--ink); min-height: 44px; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary i { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line2); position: relative; }
+.qa summary i::before, .qa summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 11px; height: 2px; margin: -1px 0 0 -5.5px; background: var(--ink); transition: transform .35s var(--ease); }
+.qa summary i::after { transform: rotate(90deg); }
+.qa details[open] summary i { background: var(--accent); border-color: var(--accent); }
+.qa details[open] summary i::before, .qa details[open] summary i::after { background: #fff; }
+.qa details[open] summary i::after { transform: rotate(0deg); }
+.qa details p { padding: 0 2px 22px; color: var(--ink2); line-height: 1.65; max-width: 52ch; }
+.qa details:not([open]) > p { display: none; }
+
+/* ---------- act 11: the close, a real input on the accent ---------- */
+.close { background: var(--accent); color: #fff; }
+.close h2 { color: #fff; }
+.close .vh { color: #fff; }
+.close .vh .dot { background: #fff; }
+.close .vh .dot::after { border-color: #fff; }
+.close .vh__range { color: #cbe3e8; }
+.close .lede { color: #e4f1f3; }
+.add { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 0; background: #fff; color: var(--ink); border-radius: 20px; overflow: hidden; margin-top: clamp(1.6rem, 4vh, 2.6rem); }
+.add__cal { padding: 22px 22px 18px; border-right: 1px solid var(--line); }
+.add__month { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.add__month b { font: 600 18px/1.2 var(--display); letter-spacing: -.01em; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
+.add__mark { display: block; height: 22px; width: auto; }
+.add__month > span { font-size: 13.5px; color: var(--soft); }
+.mini { margin: 14px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.mini li { position: relative; aspect-ratio: 1.15; border-radius: 8px; background: var(--ground); font: 500 13px/1 var(--text); color: var(--ink); padding: 6px; box-sizing: border-box; overflow: hidden; }
+.mini li.h { background: transparent; color: var(--soft); font-weight: 600; font-size: 11.5px; letter-spacing: .06em; aspect-ratio: auto; padding: 4px 6px; }
+.mini li.out { background: transparent; color: #9fb0bb; }
+.mini li.post::after { content: ""; position: absolute; right: 6px; bottom: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--ink); }
+.mini li.is-today { box-shadow: inset 0 0 0 2px var(--accent); }
+.mini li.mine { background: var(--accent); color: #fff; }
+.mini li.mine em { position: absolute; left: 6px; right: 6px; bottom: 6px; font: 600 11px/1.15 var(--text); font-style: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+html.fx .mini li.mine.new { animation: h-drop2 .55s var(--ease) both; }
+@keyframes h-drop2 { from { transform: perspective(600px) translate3d(0, -6px, 80px); opacity: 0; } to { transform: none; opacity: 1; } }
+.add__form { padding: 22px; display: grid; align-content: start; gap: 12px; }
+.add__form label { font: 600 14.5px/1.3 var(--text); }
+.add__row { display: flex; gap: 8px; }
+.add__row input { flex: 1 1 auto; min-width: 0; height: 50px; border: 1.5px solid var(--line2); border-radius: 12px; padding: 0 14px; font: 500 16px/1 var(--text); color: var(--ink); background: #fff; }
+.add__row input:focus { border-color: var(--accent); outline: 0; box-shadow: 0 0 0 3px rgba(14, 94, 111, .18); }
+.add__row button { flex: 0 0 auto; height: 50px; padding: 0 16px; border-radius: 12px; border: 1.5px solid var(--ink); background: #fff; color: var(--ink); font: 600 15px/1 var(--text); cursor: pointer; }
+.add__status { font-size: 14.5px; color: var(--soft); min-height: 1.5em; line-height: 1.5; }
+.add__form .cta { margin-top: 6px; }
+.reach { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: clamp(2rem, 5vh, 3rem) 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255, 255, 255, .3); }
+.reach li { padding: 16px 18px 16px 0; border-bottom: 1px solid rgba(255, 255, 255, .3); }
+.reach .k { display: block; font: 600 12px/1.3 var(--text); color: #cbe3e8; letter-spacing: .08em; text-transform: uppercase; }
+.reach a, .reach .v { display: inline-block; margin-top: 5px; font: 500 16px/1.45 var(--text); color: #fff; text-decoration: none; }
+.reach a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 0; }
+.reach a:hover { text-decoration: underline; text-underline-offset: .2em; }
+/* footer: the ink ground, with the light wordmark large */
+.foot { background: var(--ink); color: #fff; padding: clamp(2.4rem, 6vh, 3.6rem) 0 clamp(1.6rem, 4vh, 2.4rem); }
+.foot__in { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px 32px; }
+.foot__logo { display: block; height: 44px; width: auto; }
+.soc { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0; padding: 0; list-style: none; }
+.soc a { color: #fff; font: 500 15px/44px var(--text); display: inline-block; min-height: 44px; min-width: 44px; text-align: center; text-decoration: none; }
+.soc a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.foot__copy { margin-top: 22px; padding-top: 16px; border-top: 1px solid #22384a; font-size: 13.5px; color: #a9bac5; }
+.foot__note { display: block; margin-top: 4px; }
+
+/* ---------- reduced motion, or no scroll timelines: no pin, everything in its final place ---------- */
+html:not(.anim) .peak { height: auto !important; padding: clamp(4rem, 9vh, 6rem) 0; }
+html:not(.anim) .peak__stage { position: static !important; height: auto; }
+html:not(.anim) .peak__frame { height: auto; padding: 0; }
+html:not(.anim) .peak__view { display: block; }
+html:not(.anim) .peak__media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+html:not(.anim) .part { position: relative; inset: auto; aspect-ratio: 3 / 2; }
+html:not(.anim) .peak__list { margin-top: 28px; }
+html:not(.anim) .peak__list li::before { display: none; }
+html:not(.anim) .peak__list li { padding-left: 0; }
+html:not(.anim) .peak__list h3, html:not(.anim) .peak__list p { color: #fff; }
+html:not(.anim) .peak__week { display: none; }
+
+/* ---------- phones: wordmark and the view on top, the CTA in a bottom bar ---------- */
+@media (max-width: 860px) {
+  :root { --bar: 58px; --gut: 16px; --lab: 0px; --dock: calc(66px + var(--lab) + env(safe-area-inset-bottom)); }
+  body { padding-bottom: var(--dock); }
+  .bar { grid-template-columns: auto minmax(0, 1fr); gap: 8px; }
+  .bar > .cta, .pl__today, .pl__date { display: none; }
+  .bar__brand { height: 44px; }
+  .bar__brand img { height: 21px; }
+  .pl { justify-content: flex-end; gap: 2px; }
+  .pl__step { width: 44px; height: 44px; }
+  .pl__view { height: 32px; padding: 0 10px 0 9px; font-size: 14px; max-width: 46vw; }
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock); box-sizing: border-box;
+    padding: var(--lab) var(--gut) env(safe-area-inset-bottom); align-items: center; justify-content: center;
+    background: var(--ground); border-top: 1px solid var(--line);
+  }
+  .dock .cta { width: 100%; --h: 50px; font-size: 16px; }
+
+  /* hero: a week strip instead of the month; no hero parallax */
+  .hero__stage { min-height: 0; display: block; padding-top: var(--bar); }
+  .scene { --sw: 100vw; width: 100vw; aspect-ratio: auto; padding: 18px var(--gut) 26px; box-sizing: border-box; }
+  .hp-copy { position: relative; top: auto; display: block; }
+  .hp-brand { gap: 12px; }
+  .hp-brand img { height: 26px; }
+  .hp-brand span { font-size: 12.5px; padding-left: 12px; }
+  .hero h1 { margin-top: 16px; font-size: clamp(25px, 6.6vw, 29px); max-width: none; }
+  .hp-copy .cta { margin-top: 18px; width: 100%; }
+  .hp-board { position: relative; height: auto; margin-top: 22px; perspective: 900px; perspective-origin: 50% 0%; }
+  .board { position: relative; left: auto; right: auto; bottom: auto; height: auto; transform: rotateX(16deg); transform-style: flat; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; box-sizing: border-box; }
+  .board__sheet { border-radius: 16px; }
+  .board__head, .board__dow, .board__grid { display: none; }
+  .board__wkhead { display: flex; position: relative; z-index: 1; grid-column: 1 / -1; align-items: center; gap: 10px; margin: 2px 4px 0; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  .board__wkhead img { display: block; height: 20px; width: auto; }
+  .board__wkhead b { font: 600 15px/1.2 var(--display); letter-spacing: -.01em; color: var(--ink); }
+  .board__wkhead em { margin-left: auto; font: 500 14px/1.2 var(--text); font-style: normal; color: var(--soft); }
+  .board__week { display: grid; position: relative; grid-column: 1 / -1; grid-template-columns: repeat(7, minmax(0, 1fr)); margin: 0 0 2px; padding: 0; list-style: none; text-align: center; }
+  .board__week li { font: 600 14px/1.2 var(--text); letter-spacing: .04em; color: var(--soft); text-transform: uppercase; padding: 4px 0 6px; }
+  .board__week li b { display: block; margin: 5px auto 0; width: 30px; height: 30px; line-height: 30px; border-radius: 8px; font-size: 15px; letter-spacing: 0; color: var(--ink); }
+  .board__week li.is-today b { background: var(--accent); color: #fff; }
+  .board__week li.has b::after { content: ""; display: block; width: 5px; height: 5px; margin: 3px auto 0; border-radius: 50%; background: var(--ink); }
+  .board__week li.is-today.has b::after { background: var(--accent); }
+  .pin { position: relative; z-index: 1; display: none; grid-template-columns: 1fr; gap: 6px; padding: 0; left: auto !important; top: auto !important; width: auto !important; height: auto !important; background: transparent; }
+  .board__week { z-index: 1; }
+  .pin.on-week { display: grid; }
+  .pin img { width: 100%; height: auto; border-radius: 10px; }
+  .pin figcaption { font-size: 13px; }
+  .pin figcaption span:not(.pin__day) { display: block; font-size: 12.5px; }
+  .pin .pin__day { display: inline; color: var(--accent); font-weight: 600; }
+  .board__dotmark { display: none; }
+
+  .act { padding: 3.6rem 0; }
+  .aeo { padding-left: 14px; }
+  .gantt__head { display: none; }
+  .lane { grid-template-columns: minmax(0, 1fr); }
+  .lane__name { border-right: 0; padding: 16px 14px 4px; }
+  .lane__bars { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 10px 12px 16px; }
+  .lane__bars li { grid-column: span 1; font-size: 15px; }
+  .lane__bars > li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .lane__name p { font-size: 15px; }
+  .lane__bars::before { display: none; }
+  .gantt__today { display: none; }
+
+  .peak__frame { padding: calc(var(--bar) + 12px) 0 calc(var(--dock) + 10px); gap: 12px; }
+  .peak__top { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .peak__top h2 { margin-top: 6px; font-size: 22px; }
+  .peak__meta { font-size: 13.5px; margin-top: 6px; }
+  .nums div { padding: 0 12px; }
+  .nums dt { font-size: 11px; letter-spacing: .06em; }
+  .nums dd { font-size: 19px; }
+  .act.peak { padding: 0; }
+  .peak__view { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr) auto; grid-template-areas: "list" "media" "strip"; gap: 10px; }
+  .part { border-radius: 14px; }
+  .part--reels { gap: 10px; padding: 10px; }
+  .play { width: 56px; height: 56px; margin: -28px 0 0 -28px; }
+  .peak__list { display: block; min-height: 4.6em; }
+  html.anim .peak__list li { display: none; }
+  html.anim .peak__list li.is-on { display: block; }
+  .peak__list li { padding: 0; border: 0; }
+  .peak__list li::before { display: none; }
+  .peak__list h3 { font-size: 17px; }
+  .peak__list p { font-size: 15px; margin-top: 3px; line-height: 1.45; }
+  .peak__week { gap: 6px; }
+  html.anim .peak__prog { margin-top: -7px; }
+  .peak__week li { grid-template-columns: 1fr; padding: 4px; gap: 4px; border-radius: 10px; }
+  .peak__week li img { width: 100%; height: auto; aspect-ratio: 1; }
+  .peak__week li b { font-size: 11px; text-align: center; }
+  html:not(.anim) .peak__media { grid-template-columns: minmax(0, 1fr); }
+
+  .case__card { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 18px; }
+  .case__logo { width: 120px; padding: 14px; }
+  .outs { grid-template-columns: minmax(0, 1fr); }
+
+  .kb { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .kb__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kb__cards li:first-child { grid-column: 1 / -1; }
+
+  .shelf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; perspective: none; }
+  .shelf > li { width: auto; }
+  .shelf > li:last-child { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
+  .shelf > li { --ry: 0deg !important; --tz: 0px !important; }
+
+  .cl__row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cl__row img { left: 10%; top: 12%; width: 80%; height: 76%; }
+
+  .notes { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .note--wide { grid-column: auto; }
+  .note { padding: 18px 16px 16px; }
+  .note blockquote { font-size: 16px; }
+
+  .fd { grid-template-columns: minmax(0, 1fr); }
+  .fd__pic { width: min(320px, 82vw); margin: 0 auto; }
+  .crew { grid-template-columns: minmax(0, 1fr); }
+  .coo { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 14px; align-items: center; }
+
+  .add { grid-template-columns: minmax(0, 1fr); }
+  .add__cal { border-right: 0; border-bottom: 1px solid var(--line); padding: 16px 14px 14px; }
+  .add__month { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .mini li { font-size: 12px; padding: 5px; }
+  .mini li.h { font-size: 11px; }
+  .mini li.post::after { right: 4px; bottom: 4px; width: 6px; height: 6px; }
+  .mini li.mine em { display: none; }
+  .add__form { padding: 16px 14px 18px; }
+  .add__form .cta { width: 100%; }
+  .reach { grid-template-columns: minmax(0, 1fr); }
+  .foot__logo { height: 30px; }
+  .soc { column-gap: 12px; }
+}
+
+/* phones: the hero reveal finishes in about a second, so the first screen is never caught half-built */
+@media (max-width: 860px) and (prefers-reduced-motion: no-preference) {
+  html.reveal .pin { animation-duration: .5s; animation-delay: calc(.2s + var(--k) * .06s); }
+  html.reveal .hp-copy .cta { animation-delay: .55s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta__ar circle, .qa summary i::before, .qa summary i::after, .peak__week li { transition: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="ar" viewBox="0 0 22 12"><circle cx="2" cy="6" r="1.6"/><circle cx="7" cy="6" r="1.6"/><circle cx="12" cy="6" r="1.6"/><circle cx="16.5" cy="2.2" r="1.6"/><circle cx="16.5" cy="9.8" r="1.6"/><circle cx="20" cy="6" r="1.6"/></symbol>
+  <symbol id="prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M6 4.5v15l13-7.5z" fill="currentColor"/></symbol>
+</svg>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#calendar" aria-label="Mosswick Studio, back to the calendar"><img src="assets/img/wordmark.svg" alt="Mosswick Studio" width="439" height="77"></a>
+  <nav class="pl" aria-label="Planner views">
+    <button class="pl__today" type="button" id="pl-today">Today</button>
+    <button class="pl__step" type="button" id="pl-prev" aria-label="Previous view"><svg aria-hidden="true"><use href="#prev"/></svg></button>
+    <button class="pl__step" type="button" id="pl-next" aria-label="Next view"><svg aria-hidden="true"><use href="#next"/></svg></button>
+    <span class="pl__date" id="pl-date">Thu, 19 Nov 2026</span>
+    <span class="pl__view" id="pl-view" aria-live="polite"><i class="dot" aria-hidden="true"></i><span id="pl-view-name">Calendar</span></span>
+  </nav>
+  <a class="cta js-wa" href="https://wa.me/15550100?text=Hi%20Mosswick!%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Start a project <svg class="cta__ar" aria-hidden="true"><use href="#ar"/></svg></a>
+</header>
+
+<main id="main">
+
+  <!-- 1. Calendar -->
+  <section class="hero" id="calendar" data-sc-act="flow" data-view="Calendar" aria-labelledby="h1">
+    <div class="hero__stage">
+      <div class="scene" id="scene">
+        <div class="hp-copy">
+          <div>
+            <p class="hp-brand"><img src="assets/img/wordmark.svg" alt="Mosswick Studio" width="439" height="77"><span>A creative studio<br>Lowmere, since 2014</span></p>
+            <h1 id="h1"><span class="ln"><span style="--l:0">Brands worth remembering.</span></span><span class="ln"><span style="--l:1">Marketing that pays back.</span></span></h1>
+          </div>
+          <a class="cta cta--big js-wa" href="https://wa.me/15550100?text=Hi%20Mosswick!%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Start a project <svg class="cta__ar" aria-hidden="true"><use href="#ar"/></svg></a>
+        </div>
+
+        <div class="hp-board" id="hp-board">
+          <div class="board" id="board">
+            <div class="board__sheet" aria-hidden="true">
+              <div class="board__head"><span class="board__month"><img class="board__mark" src="assets/img/mark.svg" alt="" width="120" height="120"><span id="board-month">November 2026</span></span><span class="board__note">Our work, laid out as a month of posts. The dates are only an example.</span></div>
+              <div class="board__dow"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+              <ol class="board__grid" id="board-grid"></ol>
+            </div>
+            <p class="board__wkhead" aria-hidden="true"><img src="assets/img/mark.svg" alt="" width="120" height="120"><b id="board-wkmonth">November 2026</b><em>This week</em></p>
+            <ol class="board__week" id="board-week" aria-hidden="true"></ol>
+            <!-- the planner's data: the studio's posts; JS lays them on days of the visitor's current month (the dates are an example) -->
+            <figure class="pin" data-day="2" style="--k:0"><img src="assets/img/post-01.webp" alt="A Velloway post: a cyclist in a green rain jacket on a wet street at dusk" width="400" height="500"><figcaption><span class="pin__day"></span>Velloway<span>Reel cover</span></figcaption></figure>
+            <figure class="pin" data-day="5" style="--k:1"><img src="assets/img/post-02.webp" alt="A Paywren ad: a simple invoice screen in coral and cream on a phone" width="400" height="500"><figcaption><span class="pin__day"></span>Paywren<span>Ad creative</span></figcaption></figure>
+            <figure class="pin" data-day="7" style="--k:2"><img src="assets/img/post-03.webp" alt="A Houndsbury post: a terrier beside an open meal box on a tiled floor" width="400" height="500"><figcaption><span class="pin__day"></span>Houndsbury<span>Instagram post</span></figcaption></figure>
+            <figure class="pin" data-day="10" style="--k:3"><img src="assets/img/post-04.webp" alt="A Stillreed ad: sand-coloured headphones on the edge of an empty pool" width="400" height="500"><figcaption><span class="pin__day"></span>Stillreed<span>Ad creative</span></figcaption></figure>
+            <figure class="pin" data-day="12" style="--k:4"><img src="assets/img/post-05.webp" alt="A Tumblewick post: bright wooden toys beside their open boxes" width="400" height="500"><figcaption><span class="pin__day"></span>Tumblewick<span>Carousel post</span></figcaption></figure>
+            <figure class="pin" data-day="14" style="--k:5"><img src="assets/img/post-06.webp" alt="A Gilded Hare story: an embossed gin bottle and a glass on a walnut bar" width="400" height="500"><figcaption><span class="pin__day"></span>Gilded Hare<span>Instagram story</span></figcaption></figure>
+            <figure class="pin" data-day="17" style="--k:6" data-week="3"><img src="assets/img/post-07.webp" alt="A Fernstride post: green running shoes mid-stride on a leafy park path" width="400" height="500"><figcaption><span class="pin__day"></span>Fernstride<span>Instagram post</span></figcaption></figure>
+            <figure class="pin" data-day="19" style="--k:7" data-week="1"><img src="assets/img/post-08.webp" alt="A Fizzwold post: four patterned drink cans in a tub of ice" width="400" height="500"><figcaption><span class="pin__day"></span>Fizzwold<span>Instagram post</span></figcaption></figure>
+            <figure class="pin" data-day="20" style="--k:8"><img src="assets/img/post-09.webp" alt="A River Commons Trust post: a heron in the shallows of a misty city river" width="400" height="500"><figcaption><span class="pin__day"></span>River Commons Trust<span>Campaign post</span></figcaption></figure>
+            <figure class="pin" data-day="22" style="--k:9" data-week="2"><img src="assets/img/post-10.webp" alt="A Gearfinch post: a green cargo e-bike parked on a leafy hill street" width="400" height="500"><figcaption><span class="pin__day"></span>Gearfinch<span>Instagram post</span></figcaption></figure>
+            <figure class="pin" data-day="25" style="--k:10" data-week="4"><img src="assets/img/post-11.webp" alt="A Voltmere ad: solar panels on a slate roof in late afternoon sun" width="400" height="500"><figcaption><span class="pin__day"></span>Voltmere<span>Ad creative</span></figcaption></figure>
+            <figure class="pin" data-day="27" style="--k:11"><img src="assets/img/post-12.webp" alt="A Cairnstone post: an orange rucksack against a stone cairn at sunrise" width="400" height="500"><figcaption><span class="pin__day"></span>Cairnstone<span>Instagram post</span></figcaption></figure>
+            <i class="board__dotmark" id="board-dot" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Services -->
+  <section class="act svc" id="services" data-sc-act="flow" data-view="Services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="act__head">
+        <p class="vh"><i class="dot" aria-hidden="true"></i>Services <span class="vh__range">· six lanes, one team</span></p>
+        <h2 id="svc-h">Brand, web, film, social and ads</h2>
+        <p class="aeo">Mosswick Studio is a creative and marketing studio in Lowmere, working since 2014. Thirty-two strategists, designers, writers, filmmakers and media buyers make brands, websites, social content, films, campaigns and packaging, and run the paid media that gets them seen.</p>
+      </div>
+      <div class="gantt" id="gantt">
+        <div class="gantt__head" id="gantt-head" aria-hidden="true"><span>Service</span><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <ol class="lanes">
+          <li class="lane mg" id="svc-brand">
+            <div class="lane__name"><h3>Brand and identity</h3><p>We find what makes you worth choosing, then make it recognisable at a glance.</p></div>
+            <ul class="lane__bars"><li class="k" style="--s:3">Positioning and audience research</li><li style="--s:4">Brand voice guide and messaging framework</li><li style="--s:2">Naming</li><li style="--s:2">Logo and wordmark</li><li style="--s:3">Colour and type system</li><li style="--s:3">Brand guidelines and templates</li><li style="--s:2">Icons and patterns</li></ul>
+          </li>
+          <li class="lane mg" id="svc-social">
+            <div class="lane__name"><h3>Social content</h3><p>Posts, reels and series people stop scrolling for, every month.</p></div>
+            <ul class="lane__bars"><li class="k" style="--s:3">Content strategy</li><li style="--s:2">Short-form video</li><li style="--s:2">Monthly calendar</li><li style="--s:4">Photography, shot and edited in house every month</li><li style="--s:3">Community management</li></ul>
+          </li>
+          <li class="lane mg" id="svc-paid">
+            <div class="lane__name"><h3>Performance marketing</h3><p>Paid search and social, run by people who know your brand.</p></div>
+            <ul class="lane__bars"><li class="k" style="--s:4">Paid social and paid search, with weekly creative tests</li><li style="--s:3">Tracking setup and a live dashboard</li></ul>
+          </li>
+          <li class="lane mg" id="svc-web">
+            <div class="lane__name"><h3>Websites</h3><p>Fast, clear websites that explain what you do and turn visits into enquiries. Built for you to edit.</p></div>
+            <ul class="lane__bars"><li class="k" style="--s:3">Site map and wireframes</li><li style="--s:2">UX and UI design</li><li style="--s:2">Copywriting</li><li style="--s:3">Development</li><li style="--s:4">CMS setup and launch testing on real phones</li></ul>
+          </li>
+          <li class="lane mg" id="svc-film">
+            <div class="lane__name"><h3>Film and motion</h3><p>Brand films and product videos, from script to grade.</p></div>
+            <ul class="lane__bars"><li class="k" style="--s:2">Brand films</li><li style="--s:2">Storyboards</li><li style="--s:1">Reels</li><li style="--s:2">Motion graphics</li><li style="--s:3">Editing and grade, done in house</li></ul>
+          </li>
+          <li class="lane mg" id="svc-campaigns">
+            <div class="lane__name"><h3>Campaigns</h3><p>Big ideas built to run across outdoor, social, print, screen and the shelf.</p></div>
+            <ul class="lane__bars"><li class="k" style="--s:3">Campaign concept and key visuals</li><li style="--s:2">Out-of-home design</li><li style="--s:2">Media plan</li><li style="--s:2">Packs and labels</li></ul>
+          </li>
+        </ol>
+        <i class="gantt__today" id="gantt-today" aria-hidden="true"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. The launch (the peak) -->
+  <section class="act peak" id="launch" data-sc-act="pin" data-sc-span="3.4" data-view="Okra &amp; Ash" aria-labelledby="launch-h">
+    <div class="peak__stage" data-sc-stage>
+      <div class="peak__frame wrap">
+        <div class="peak__top">
+          <div>
+            <p class="vh"><i class="dot" aria-hidden="true"></i>Okra &amp; Ash <span class="vh__range">· Wood-fired restaurant, 2025</span></p>
+            <h2 id="launch-h">Okra &amp; Ash: opening night</h2>
+            <p class="peak__meta">Brand Identity | Photography | Websites | Social Content | Menus and Print | Launch</p>
+          </div>
+          <dl class="nums" aria-label="The Okra &amp; Ash launch in numbers">
+            <div><dt>Weeks to open</dt><dd>8</dd></div>
+            <div><dt>Weeks of posts</dt><dd>6</dd></div>
+            <div><dt>Booked out</dt><dd>5 wks</dd></div>
+          </dl>
+        </div>
+        <div class="peak__view" id="peak-view">
+          <div class="peak__media">
+            <div class="part" id="part-0" style="--z:1"><img src="assets/img/launch-01.webp" alt="The Okra &amp; Ash wood-fired oven glowing in a dim kitchen, a pan of charred vegetables in front" width="1200" height="880" loading="lazy"></div>
+            <div class="part" id="part-1" style="--z:2"><img src="assets/img/launch-02.webp" alt="The team around a big table of printed post layouts and swatches, planning the launch series" width="1200" height="675" loading="lazy"></div>
+            <div class="part" id="part-2" style="--z:3"><img src="assets/img/launch-03.webp" alt="A desk seen from above with sketches, swatches and a laptop showing the website layout" width="1200" height="840" loading="lazy"></div>
+            <div class="part" id="part-3" style="--z:4"><img src="assets/img/launch-04.webp" alt="A round rubber stamp with a wooden handle, used for the ember mark on the menus" width="1200" height="800" loading="lazy"></div>
+            <div class="part part--reels" id="part-4" style="--z:5">
+              <div class="reel"><img src="assets/img/launch-reel-01.webp" alt="Behind-the-scenes film: a phone on a rig filming a dish for social" width="540" height="960" loading="lazy"><button class="play js-vid" type="button" data-src="https://example.com/reel-01.mp4" aria-label="Play the first Okra &amp; Ash behind-the-scenes film"><svg aria-hidden="true"><use href="#play"/></svg></button></div>
+              <div class="reel"><img src="assets/img/launch-reel-02.webp" alt="Behind-the-scenes film: a camera on a tripod under soft lights" width="540" height="960" loading="lazy"><button class="play js-vid" type="button" data-src="https://example.com/reel-02.mp4" aria-label="Play the second Okra &amp; Ash behind-the-scenes film"><svg aria-hidden="true"><use href="#play"/></svg></button></div>
+            </div>
+          </div>
+          <div class="peak__prog" aria-hidden="true"><i id="peak-prog"></i></div>
+          <ol class="peak__week" id="peak-week" aria-hidden="true">
+            <li><img src="assets/img/launch-01.webp" alt="" width="1200" height="880" loading="lazy"><b>Mon</b></li>
+            <li><img src="assets/img/launch-02.webp" alt="" width="1200" height="675" loading="lazy"><b>Tue</b></li>
+            <li><img src="assets/img/launch-03.webp" alt="" width="1200" height="840" loading="lazy"><b>Wed</b></li>
+            <li><img src="assets/img/launch-04.webp" alt="" width="1200" height="800" loading="lazy"><b>Thu</b></li>
+            <li><img src="assets/img/launch-reel-01.webp" alt="" width="540" height="960" loading="lazy"><b>Fri</b></li>
+          </ol>
+          <ol class="peak__list" id="peak-list">
+            <li class="is-on"><h3>The fire</h3><p>The identity is built around the oven: charcoal tones, warm light and real flame.</p></li>
+            <li><h3>The posts</h3><p>A behind-the-scenes series, planned at the table, ran for six weeks before opening.</p></li>
+            <li><h3>The website</h3><p>Menus, hours and bookings in one place, live the night the doors opened.</p></li>
+            <li><h3>The menu</h3><p>A hand-drawn ember mark, stamped on menus printed on heavy card.</p></li>
+            <li><h3>The reels</h3><p>Two of the behind-the-scenes films. Tap to play.</p></li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. One case -->
+  <section class="act case" id="case" data-sc-act="flow" data-view="Paywren" aria-labelledby="case-h">
+    <div class="wrap">
+      <article class="case__card mg">
+        <img class="case__logo" src="assets/img/logos/client-06.svg" alt="Paywren logo" width="260" height="244" loading="lazy">
+        <div>
+          <p class="vh"><i class="dot" aria-hidden="true"></i>Paywren <span class="vh__range">· Fintech, invoicing app</span></p>
+          <h2 id="case-h">Paywren: invoicing that feels friendly</h2>
+          <p class="case__meta">Brand Identity | Performance Marketing</p>
+          <div class="case__copy">
+            <p>The goal: an invoicing app freelancers actually like, and a paid launch that finds them without wasting spend.</p>
+            <p>The work: a small bird mark, a warm colour range, plain copy that sounds like a helpful friend, and forty ad versions tested in month one.</p>
+          </div>
+          <ul class="outs">
+            <li><b>41%</b><span>lower cost per sign-up</span></li>
+            <li><b>40</b><span>ad versions tested in month one</span></li>
+            <li><b>6</b><span>kept because they clearly worked</span></li>
+          </ul>
+          <p class="src" style="margin-top:16px">From the Paywren launch, 2024.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. Work by industry -->
+  <section class="act work" id="work" data-sc-act="flow" data-view="Work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="act__head">
+        <p class="vh"><i class="dot" aria-hidden="true"></i>Work <span class="vh__range">· by industry</span></p>
+        <h2 id="work-h">Work for food brands, shops, festivals, venues, clinics and homeware</h2>
+      </div>
+      <div class="kb">
+        <div class="kb__col">
+          <h3>Food and drink <span>3</span></h3>
+          <ul class="kb__cards">
+            <li class="mg"><figure class="kc"><img src="assets/img/work-01.webp" alt="Plumtide cordial bottles in five colours on a limestone ledge in morning sun" width="720" height="480" loading="lazy"><figcaption>Plumtide<span>Labels and packaging</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-02.webp" alt="Tallow Lane Coffee bags with wide colour bands on a roastery workbench" width="720" height="480" loading="lazy"><figcaption>Tallow Lane Coffee<span>Coffee bags</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-03.webp" alt="Saltmarrow snack bags printed with wave patterns on wet sand" width="720" height="480" loading="lazy"><figcaption>Saltmarrow<span>Snack packs</span></figcaption></figure></li>
+          </ul>
+        </div>
+        <div class="kb__col">
+          <h3>Fashion and retail <span>3</span></h3>
+          <ul class="kb__cards">
+            <li class="mg"><figure class="kc"><img src="assets/img/work-04.webp" alt="A Marlo Rue cream wool sweater folded over a fence post in a misty field" width="720" height="480" loading="lazy"><figcaption>Marlo Rue<span>Winter lookbook</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-05.webp" alt="A Periwink wall of eyeglass frames sorted by colour on wooden shelves" width="720" height="480" loading="lazy"><figcaption>Periwink<span>Shop interiors</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-06.webp" alt="A Halvane watch with a cream dial lying on dark green leather" width="720" height="480" loading="lazy"><figcaption>Halvane Watch Co.<span>Product photography</span></figcaption></figure></li>
+          </ul>
+        </div>
+        <div class="kb__col">
+          <h3>Culture <span>3</span></h3>
+          <ul class="kb__cards">
+            <li class="mg"><figure class="kc"><img src="assets/img/work-07.webp" alt="A two-colour Marshlight Festival poster pasted on a brick wall at dusk" width="720" height="480" loading="lazy"><figcaption>Marshlight Festival<span>Screen-printed posters</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-08.webp" alt="A bright Hollin Gallery room with three large abstract canvases" width="720" height="480" loading="lazy"><figcaption>Hollin Gallery<span>Website</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-09.webp" alt="A fan of Quillmoor Press paperbacks with single-colour covers on green velvet" width="720" height="480" loading="lazy"><figcaption>Quillmoor Press<span>Cover system</span></figcaption></figure></li>
+          </ul>
+        </div>
+        <div class="kb__col">
+          <h3>Venues <span>3</span></h3>
+          <ul class="kb__cards">
+            <li class="mg"><figure class="kc"><img src="assets/img/work-10.webp" alt="A larch-panelled bedroom at The Larchway with a canal view at golden hour" width="720" height="480" loading="lazy"><figcaption>The Larchway<span>Hotel website</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-11.webp" alt="A Cragloft climbing wall with bright holds and chalk dust in the light" width="720" height="480" loading="lazy"><figcaption>Cragloft<span>Wall signs</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-12.webp" alt="The lit Owlhour classroom window at night with pottery wheels inside" width="720" height="480" loading="lazy"><figcaption>Owlhour<span>Enrolment campaign</span></figcaption></figure></li>
+          </ul>
+        </div>
+        <div class="kb__col">
+          <h3>Health and home <span>3</span></h3>
+          <ul class="kb__cards">
+            <li class="mg"><figure class="kc"><img src="assets/img/work-13.webp" alt="A calm Mendhaven treatment room with a sage table and a foam roller" width="720" height="480" loading="lazy"><figcaption>Mendhaven<span>Clinic website</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-14.webp" alt="A small blue model house under a folded paper umbrella for Shelterly" width="720" height="480" loading="lazy"><figcaption>Shelterly<span>Brand and website</span></figcaption></figure></li>
+            <li class="mg"><figure class="kc"><img src="assets/img/work-15.webp" alt="A stack of Kilnmark plates and bowls in speckled glazes on linen" width="720" height="480" loading="lazy"><figcaption>Kilnmark<span>Online shop</span></figcaption></figure></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Reels -->
+  <section class="act reels" id="reels" data-sc-act="flow" data-view="Reels" aria-labelledby="reels-h">
+    <div class="wrap">
+      <div class="act__head">
+        <p class="vh"><i class="dot" aria-hidden="true"></i>Reels <span class="vh__range">· from our film team</span></p>
+        <h2 id="reels-h">Client films, shot and cut in house</h2>
+      </div>
+      <ul class="shelf">
+        <li class="mg" style="--ry:16deg;--tz:40px"><figure class="rc"><div class="rc__box"><img src="assets/img/reel-01.webp" alt="Velloway film still: a cyclist riding down a wet street at blue hour" width="360" height="640" loading="lazy"><button class="play js-yt" type="button" data-video="https://example.com/" aria-label="Play the Velloway film"><svg aria-hidden="true"><use href="#play"/></svg></button></div><figcaption>Velloway<span>Fashion</span></figcaption></figure></li>
+        <li class="mg" style="--ry:8deg;--tz:10px"><figure class="rc"><div class="rc__box"><img src="assets/img/reel-02.webp" alt="Fernstride film still: running shoes mid-stride on a park path" width="360" height="640" loading="lazy"><button class="play js-yt" type="button" data-video="https://example.com/" aria-label="Play the Fernstride film"><svg aria-hidden="true"><use href="#play"/></svg></button></div><figcaption>Fernstride<span>Sport</span></figcaption></figure></li>
+        <li class="mg"><figure class="rc"><div class="rc__box"><img src="assets/img/reel-03.webp" alt="Stillreed film still: headphones on the edge of an empty pool" width="360" height="640" loading="lazy"><button class="play js-yt" type="button" data-video="https://example.com/" aria-label="Play the Stillreed film"><svg aria-hidden="true"><use href="#play"/></svg></button></div><figcaption>Stillreed<span>Consumer tech</span></figcaption></figure></li>
+        <li class="mg" style="--ry:-8deg;--tz:10px"><figure class="rc"><div class="rc__box"><img src="assets/img/reel-04.webp" alt="Cairnstone film still: a rucksack against a stone cairn on a misty ridge" width="360" height="640" loading="lazy"><button class="play js-yt" type="button" data-video="https://example.com/" aria-label="Play the Cairnstone film"><svg aria-hidden="true"><use href="#play"/></svg></button></div><figcaption>Cairnstone<span>Outdoor</span></figcaption></figure></li>
+        <li class="mg" style="--ry:-16deg;--tz:40px"><figure class="rc"><div class="rc__box"><img src="assets/img/reel-05.webp" alt="Gearfinch film still: a cargo e-bike on a leafy hill street" width="360" height="640" loading="lazy"><button class="play js-yt" type="button" data-video="https://example.com/" aria-label="Play the Gearfinch film"><svg aria-hidden="true"><use href="#play"/></svg></button></div><figcaption>Gearfinch<span>Mobility</span></figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. Clients -->
+  <section class="act clients" id="clients" data-sc-act="flow" data-view="Clients" aria-labelledby="cl-h">
+    <div class="wrap">
+      <div class="act__head">
+        <p class="vh"><i class="dot" aria-hidden="true"></i>Clients <span class="vh__range">· every booked day is a brand</span></p>
+        <h2 id="cl-h">Brands we've worked with</h2>
+      </div>
+      <div class="cl" id="cl"></div>
+    </div>
+  </section>
+
+  <!-- 8. Reviews -->
+  <section class="act reviews" id="reviews" data-sc-act="flow" data-view="Reviews" aria-labelledby="rv-h">
+    <div class="wrap">
+      <div class="act__head">
+        <p class="vh"><i class="dot" aria-hidden="true"></i>Reviews <span class="vh__range">· in their words</span></p>
+        <h2 id="rv-h">What clients say about us</h2>
+        <p class="lede">Five clients in their own words: an app, a restaurant, a cordial maker, a jacket label and a gallery.</p>
+      </div>
+      <ul class="notes">
+        <li class="mg note--wide"><figure class="note"><blockquote>Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us exactly what every bit of spend brought back.</blockquote><figcaption>Owen Haddad <span>Head of Growth, Paywren</span></figcaption></figure></li>
+        <li class="mg"><figure class="note"><blockquote>We had eight weeks to open a restaurant with no name. They gave us a name on the door, a full booking diary and a lot less stress.</blockquote><figcaption>Cora Mbeki-Lane <span>Owner, Okra &amp; Ash</span></figcaption></figure></li>
+        <li class="mg"><figure class="note"><blockquote>They asked better questions in the first week than our last agency did in a year. The new brand finally sounds like us.</blockquote><figcaption>Nadia Ferrante <span>Founder, Plumtide</span></figcaption></figure></li>
+        <li class="mg"><figure class="note"><blockquote>The film crew turned up in the pouring rain, smiling. Months later, people still stop us at trade shows to talk about that campaign.</blockquote><figcaption>Jonas Pell <span>Marketing Director, Velloway</span></figcaption></figure></li>
+        <li class="mg"><figure class="note"><blockquote>Plain words, quick replies and work we are proud to put our name on. We have renewed with them every year since our first project.</blockquote><figcaption>Ilse Varga <span>Director, Hollin Gallery</span></figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9. Team -->
+  <section class="act team" id="team" data-sc-act="flow" data-view="Team" aria-labelledby="team-h">
+    <div class="wrap">
+      <div class="fd">
+        <div class="fd__pic">
+          <i class="fd__disc fd-far" aria-hidden="true"></i>
+          <img class="fd__img fd-near" src="assets/img/founder.webp" alt="Ines Calloway, founder and creative director of Mosswick Studio" width="640" height="813" loading="lazy">
+        </div>
+        <div>
+          <p class="vh"><i class="dot" aria-hidden="true"></i>Team <span class="vh__range">· Lowmere</span></p>
+          <h2 id="team-h" style="margin-top:12px">Ines Calloway, Founder &amp; Creative Director</h2>
+          <blockquote>"Every brand needs one idea it can say in a single breath. A clear sentence beats a clever one."</blockquote>
+          <p>Ines Calloway</p>
+          <p class="fd__story">Ines started Mosswick in 2014 as one of three people sharing a desk above a bike shop. It grew into strategy, design, film and media buying, and today it is 32 people in one studio.</p>
+          <div class="tl">
+            <div class="tl__years" role="tablist" aria-label="Our timeline">
+              <button type="button" role="tab" id="tl-t0" aria-controls="tl-p0" aria-selected="true">2014</button>
+              <button type="button" role="tab" id="tl-t1" aria-controls="tl-p1" aria-selected="false" tabindex="-1">2018</button>
+              <button type="button" role="tab" id="tl-t2" aria-controls="tl-p2" aria-selected="false" tabindex="-1">2022</button>
+              <button type="button" role="tab" id="tl-t3" aria-controls="tl-p3" aria-selected="false" tabindex="-1">2026</button>
+            </div>
+            <p class="tl__panel" role="tabpanel" id="tl-p0" aria-labelledby="tl-t0">Three people, one desk, above a bike shop.</p>
+            <p class="tl__panel" role="tabpanel" id="tl-p1" aria-labelledby="tl-t1" hidden>Film and media buying joined the studio.</p>
+            <p class="tl__panel" role="tabpanel" id="tl-p2" aria-labelledby="tl-t2" hidden>Moved into the old print works.</p>
+            <p class="tl__panel" role="tabpanel" id="tl-p3" aria-labelledby="tl-t3" hidden>32 people and more than 140 brands.</p>
+          </div>
+        </div>
+      </div>
+      <div class="crew">
+        <figure class="crew__img mg"><img src="assets/img/team-photo.webp" alt="The Mosswick team standing together in their bright studio" width="1400" height="788" loading="lazy"><figcaption>The team at the Lowmere studio.</figcaption></figure>
+        <figure class="coo mg"><img src="assets/img/person-02.webp" alt="Tobias Okonjo-Hale, co-founder and strategy director, in a navy jumper" width="620" height="800" loading="lazy"><figcaption><b>Tobias Okonjo-Hale</b>Co-founder and Strategy Director</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Questions -->
+  <section class="act faq" id="questions" data-sc-act="flow" data-view="Questions" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="act__head">
+        <p class="vh"><i class="dot" aria-hidden="true"></i>Questions <span class="vh__range">· before you ask</span></p>
+        <h2 id="faq-h">Frequently asked questions</h2>
+      </div>
+      <div class="qa">
+        <details class="mg" name="faq" open><summary>What kind of companies do you work with?<i aria-hidden="true"></i></summary><p>Mostly growing companies with 10 to 500 people: food and drink brands, shops, clinics, charities, tech start-ups and the odd festival. What they share is a founder or marketing lead who wants bold work and honest numbers.</p></details>
+        <details class="mg" name="faq"><summary>How much does a project cost?<i aria-hidden="true"></i></summary><p>Brand identities usually start around $18,000, websites around $15,000 and monthly marketing retainers around $5,000. We send a fixed quote after our first call, so you know the full cost before any work starts.</p></details>
+        <details class="mg" name="faq"><summary>How long does a brand identity take?<i aria-hidden="true"></i></summary><p>Most identity projects take eight to twelve weeks from the first workshop to final files. A full rebrand with a website and launch campaign usually runs four to six months. We agree the timeline in writing before we start.</p></details>
+        <details class="mg" name="faq"><summary>Do you only take on big projects?<i aria-hidden="true"></i></summary><p>No. Some clients start with a single campaign, a product film or three months of social content. If it goes well, the work tends to grow from there. We just need a clear goal and someone who can make decisions.</p></details>
+        <details class="mg" name="faq"><summary>Who will actually work on my project?<i aria-hidden="true"></i></summary><p>The people you meet in the first meeting. Every client gets a senior lead, a strategist and the makers the job needs. We never hand the work to a different team once the contract is signed.</p></details>
+        <details class="mg" name="faq"><summary>Can you work alongside our in-house team?<i aria-hidden="true"></i></summary><p>Yes, and we often do. We can lead the creative and hand over files and guidelines, or join your team's weekly rhythm for campaigns and content. Either way, you own everything we make for you.</p></details>
+        <details class="mg" name="faq"><summary>Do you run ads as well as make them?<i aria-hidden="true"></i></summary><p>Yes. Our performance team plans, buys and tests paid search and social, and sits in the same room as the people who make the ads. You see spend and results in a live dashboard, updated daily.</p></details>
+        <details class="mg" name="faq"><summary>How do you measure success?<i aria-hidden="true"></i></summary><p>We agree two or three numbers at the start, such as enquiries, sales or sign-ups, and report on them every month in plain language. If something is not working, we say so early and change course.</p></details>
+        <details class="mg" name="faq"><summary>Can we work together if you are not in Lowmere?<i aria-hidden="true"></i></summary><p>Yes. About half of our clients are in other cities and a few are overseas. We run most meetings on video and travel for workshops and shoots whenever being in the room helps the work.</p></details>
+        <details class="mg" name="faq"><summary>How do we get started?<i aria-hidden="true"></i></summary><p>Send a short note about what you are building and what is getting in the way. We reply within two working days and set up a free 30 minute call, with no pitch deck and no pressure.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Close -->
+  <section class="act close" id="contact" data-sc-act="flow" data-view="Add your brand" aria-labelledby="close-h">
+    <div class="wrap">
+      <div class="act__head">
+        <p class="vh"><i class="dot" aria-hidden="true"></i>Add your brand <span class="vh__range">· the next free day</span></p>
+        <h2 id="close-h">Have a launch coming up?</h2>
+        <p class="lede">Tell us the problem in plain words. We will come back with a plan, a budget and a first idea, and we reply to every brief within two working days.</p>
+      </div>
+      <div class="add mg" id="add">
+        <div class="add__cal">
+          <div class="add__month"><b><img class="add__mark" src="assets/img/mark.svg" alt="" width="120" height="120" loading="lazy"><span id="mini-month">November 2026</span></b><span>Dots are the posts above. Yours is filled in.</span></div>
+          <ol class="mini" id="mini" aria-label="This month in the planner"></ol>
+        </div>
+        <form class="add__form" id="add-form" autocomplete="off">
+          <label for="add-in">Your brand</label>
+          <div class="add__row"><input id="add-in" name="brand" type="text" maxlength="40" placeholder="Your brand name" enterkeyhint="done"><button type="submit">Add</button></div>
+          <p class="add__status" id="add-status" role="status">Type your brand and it lands on the next free day.</p>
+          <a class="cta cta--big" id="close-cta" href="https://wa.me/15550100?text=Hi%20Mosswick!%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Start a project <svg class="cta__ar" aria-hidden="true"><use href="#ar"/></svg></a>
+        </form>
+      </div>
+      <ul class="reach">
+        <li><span class="k">Call</span><a href="tel:+15550142">+1 555 0142</a></li>
+        <li><span class="k">WhatsApp</span><a href="https://wa.me/15550100" target="_blank" rel="noopener">+1 555 0100</a></li>
+        <li><span class="k">Email</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li><span class="k">New projects</span><a href="mailto:projects@example.com">projects@example.com</a></li>
+        <li><span class="k">Studio</span><span class="v">1 Example Street, Lowmere</span></li>
+        <li><span class="k">Hours</span><span class="v">Monday to Friday, 9am to 6pm</span></li>
+        <li><span class="k">Careers</span><a href="mailto:jobs@example.com">jobs@example.com</a></li>
+        <li><span class="k">Replies</span><span class="v">Every brief, within two working days</span></li>
+        <li><span class="k">Intro call</span><span class="v">Free, 30 minutes, no pitch deck</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+        <img class="foot__logo" src="assets/img/wordmark-light.svg" alt="Mosswick Studio" width="439" height="77" loading="lazy">
+        <ul class="soc">
+          <li><a href="https://example.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://example.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://example.com" target="_blank" rel="noopener">Behance</a></li>
+          <li><a href="https://example.com" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+    </div>
+    <p class="foot__copy">© 2026 Mosswick Studio. Brands, websites, films and campaigns, made in Lowmere since 2014.<span class="foot__note">Example content. Swap in your own.</span></p>
+  </div>
+</footer>
+
+<div class="dock" id="dock"><a class="cta js-wa" href="https://wa.me/15550100?text=Hi%20Mosswick!%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Start a project <svg class="cta__ar" aria-hidden="true"><use href="#ar"/></svg></a></div>
+
+<script>
+/* clients: the studio's 40 brands, built before the engine mounts so the page height is final */
+(function () {
+  var N = ['Plumtide', 'Velloway', 'Kilnmark', 'Tallow Lane Coffee', 'Okra & Ash', 'Paywren', 'Marshlight Festival', 'Fernstride',
+    'Hollin Gallery', 'Houndsbury', 'Stillreed', 'Tumblewick', 'Halvane Watch Co.', 'Cairnstone', 'Shelterly', 'Gilded Hare',
+    'Periwink', 'River Commons Trust', 'Owlhour', 'Marlo Rue', 'Saltmarrow', 'The Larchway', 'Gearfinch', 'Cragloft',
+    'Quillmoor Press', 'Voltmere', 'Mendhaven', 'Fizzwold', 'Fernery Lane', 'Copperbell Theatre', 'Oakhold', 'Ferrylight',
+    'Glimmerfold', 'Puddlejump Swim School', 'Driftmill Paper Co.', 'Embergate Pizza', 'Softwatt', 'Sorrelbox', 'Stemhouse Flowers', 'Sumwright'];
+  var host = document.getElementById('cl'), html = '';
+  for (var r = 0; r < N.length / 8; r++) {
+    html += '<ul class="cl__row mg">';
+    for (var c = 0; c < 8; c++) {
+      var i = r * 8 + c, n = String(i + 1).padStart(2, '0');
+      html += '<li><img src="assets/img/logos/client-' + n + '.svg" alt="' + N[i].replace(/"/g, '&quot;') + ' logo" loading="lazy" width="260" height="170"></li>';
+    }
+    html += '</ul>';
+  }
+  host.innerHTML = html;
+  /* no scroll timelines or reduced motion: the peak is not pinned */
+  if (!document.documentElement.classList.contains('anim')) { var pk = document.getElementById('launch'); pk.setAttribute('data-sc-act', 'flow'); pk.removeAttribute('data-sc-span'); }
+})();
+</script>
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var fx = root.classList.contains('fx');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  var WA = 'https://wa.me/15550100?text=';
+  var HELLO = "Hi Mosswick! I'd like to start a project.";
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  /* ================= the planner's real logic: today, this month, this week ================= */
+  var now = new Date();
+  var Y = now.getFullYear(), M = now.getMonth(), T = now.getDate();
+  var first = new Date(Y, M, 1).getDay();
+  var dim = new Date(Y, M + 1, 0).getDate();
+  var rowsNeeded = Math.ceil((first + dim) / 7);
+  var todayRow = Math.floor((first + T - 1) / 7);
+  var startRow = rowsNeeded > 5 && todayRow >= 5 ? 1 : 0;   /* five weeks on the board: keep the one with today */
+  var startDay = 1 - first + startRow * 7;                   /* day-of-month number in the first cell (may be <= 0) */
+  function dateOf(d) { return new Date(Y, M, d); }
+  function label(d) { var x = dateOf(d); return DOW[x.getDay()] + ' ' + x.getDate(); }
+  document.getElementById('pl-date').textContent = DOW[now.getDay()] + ', ' + T + ' ' + MONTHS[M].slice(0, 3) + ' ' + Y;
+  document.getElementById('board-month').textContent = MONTHS[M] + ' ' + Y;
+  document.getElementById('board-wkmonth').textContent = MONTHS[M] + ' ' + Y;
+  document.getElementById('mini-month').textContent = MONTHS[M] + ' ' + Y;
+
+  var pins = [].slice.call(document.querySelectorAll('.pin'));
+  var postDays = pins.map(function (p) { return +p.getAttribute('data-day'); });
+
+  /* month board */
+  var grid = document.getElementById('board-grid'), cells = {};
+  var gh = '';
+  for (var i = 0; i < 35; i++) {
+    var d = startDay + i, x = dateOf(d), inM = x.getMonth() === M;
+    gh += '<li class="' + (inM ? '' : 'out') + (inM && d === T ? ' is-today' : '') + '" data-d="' + d + '">' + (inM ? '<b><span>' + x.getDate() + '</span></b>' : '') + '</li>';
+  }
+  grid.innerHTML = gh;
+  [].forEach.call(grid.children, function (li) { cells[li.getAttribute('data-d')] = li; });
+
+  /* week strip (phones): the week with today; four posts on four of its days */
+  var wk = document.getElementById('board-week'), ws = T - now.getDay(), wh = '';
+  var weekPins = pins.filter(function (p) { return p.hasAttribute('data-week'); }).sort(function (a, b) { return a.getAttribute('data-week') - b.getAttribute('data-week'); });
+  var weekSlots = [1, 3, 4, 6];
+  if (weekSlots.indexOf(now.getDay()) < 0) weekSlots[2] = now.getDay();
+  weekSlots.sort(function (a, b) { return a - b; });
+  for (var j = 0; j < 7; j++) {
+    var wd = new Date(Y, M, ws + j);
+    wh += '<li class="' + (j === now.getDay() ? 'is-today' : '') + (weekSlots.indexOf(j) >= 0 ? ' has' : '') + '"><span>' + DOW[j] + '</span><b><span>' + wd.getDate() + '</span></b></li>';
+  }
+  wk.innerHTML = wh;
+  weekPins.forEach(function (p, k) {
+    var wd = new Date(Y, M, ws + weekSlots[k]);
+    p.classList.add('on-week');
+    p.querySelector('.pin__day').textContent = DOW[wd.getDay()] + ' ' + wd.getDate() + ' · ';
+    p.style.order = weekSlots[k];
+  });
+
+  /* lay the posts on their days (desktop board), in board pixels, so the board stays one 3D layer */
+  var board = document.getElementById('board'), dotEl = document.getElementById('board-dot');
+  function layPins() {
+    if (phoneQ.matches) { pins.forEach(function (p) { p.style.cssText = p.style.cssText.replace(/(left|top|width|height):[^;]+;?/g, ''); }); return; }
+    var gTop = grid.offsetTop;
+    pins.forEach(function (p) {
+      var li = cells[p.getAttribute('data-day')];
+      if (!li || li.classList.contains('out')) { p.style.display = 'none'; return; }
+      p.style.display = '';
+      var cw = li.offsetWidth, ch = li.offsetHeight, pad = Math.round(cw * .07);
+      var top = gTop + li.offsetTop + Math.round(ch * .22);
+      var h = ch - Math.round(ch * .22) - Math.round(pad * .7);
+      p.style.left = (li.offsetLeft + pad) + 'px'; p.style.top = top + 'px';
+      p.style.width = (cw - pad * 2) + 'px'; p.style.height = h + 'px';
+    });
+    var t = cells[String(T)];
+    if (t) { var sz = dotEl.offsetWidth; dotEl.style.left = (t.offsetLeft + t.offsetWidth - sz * 1.6) + 'px'; dotEl.style.top = (gTop + t.offsetTop + sz * .6) + 'px'; }
+    var tp = pins.filter(function (p) { return +p.getAttribute('data-day') === T; })[0];
+    root.style.setProperty('--dd', (.42 + 12 * .14 + .1).toFixed(2) + 's');
+    root.style.setProperty('--cd', (.42 + 12 * .14 + .35).toFixed(2) + 's');
+  }
+  layPins();
+
+  /* ================= the planner header: Today, previous and next view, the view you are in ================= */
+  var views = [].slice.call(document.querySelectorAll('main > section[data-view]'));
+  var viewName = document.getElementById('pl-view-name'), viewLink = document.getElementById('pl-view'), cur = -1;
+  function go(i) {
+    i = Math.max(0, Math.min(views.length - 1, i));
+    var el = views[i], y = i === 0 ? 0 : el.getBoundingClientRect().top + scrollY - (el.id === 'launch' ? 0 : (phoneQ.matches ? 58 : 68) - 2);
+    scrollTo({ top: Math.max(0, y), behavior: fx ? 'smooth' : 'auto' });
+  }
+  function which() {
+    var y = innerHeight * .4, c = 0;
+    for (var k = 0; k < views.length; k++) if (views[k].getBoundingClientRect().top <= y) c = k;
+    return c;
+  }
+  function setView(i) {
+    if (i === cur) return; cur = i;
+    viewName.textContent = views[i].getAttribute('data-view');
+    viewLink.classList.remove('is-new'); void viewLink.offsetWidth; viewLink.classList.add('is-new');
+  }
+  document.getElementById('pl-prev').addEventListener('click', function () { go(which() - 1); });
+  document.getElementById('pl-next').addEventListener('click', function () { go(which() + 1); });
+  document.getElementById('pl-today').addEventListener('click', function () { go(0); });
+
+  /* the act's dot lands as the act arrives */
+  if ('IntersectionObserver' in window) {
+    var aio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-on'); aio.unobserve(e.target); } }); }, { rootMargin: '0px 0px -30% 0px' });
+    [].forEach.call(document.querySelectorAll('main > .act'), function (s) { aio.observe(s); });
+  } else [].forEach.call(document.querySelectorAll('main > .act'), function (s) { s.classList.add('is-on'); });
+
+  /* ================= hero reveal on load ================= */
+  if (root.classList.contains('pre-reveal')) {
+    var started = false;
+    var start = function () {
+      if (started) return; started = true;
+      layPins();
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+    };
+    var waits = [];
+    if (document.fonts && document.fonts.ready) waits.push(document.fonts.ready);
+    pins.forEach(function (p) { var im = p.querySelector('img'); if (im.decode) waits.push(im.decode().catch(function () {})); });
+    Promise.all(waits).then(start, start);
+    setTimeout(start, 1600);
+  }
+
+  /* ================= scroll-linked ranges, in page pixels, for the CSS scroll timelines ================= */
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b, fa, fb, cls) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    el.classList.remove('sdx', 'sdx2');
+    if (fa !== undefined) { if (fb <= fa) fb = fa + 1; el.style.setProperty('--f0', fa.toFixed(1) + 'px'); el.style.setProperty('--f1', fb.toFixed(1) + 'px'); el.classList.add('sdx2'); }
+    else el.classList.add(cls || 'sdx');
+  }
+  var peak = document.getElementById('launch'), peakRange = null;
+  var parts = [].slice.call(document.querySelectorAll('.part')), weekCells = [].slice.call(document.querySelectorAll('#peak-week li')), listItems = [].slice.call(document.querySelectorAll('#peak-list li'));
+  /* the strip is this week, Monday to Friday */
+  weekCells.forEach(function (li, k) { var d = new Date(Y, M, T - ((now.getDay() + 6) % 7) + k); li.querySelector('b').textContent = DOW[d.getDay()] + ' ' + d.getDate(); });
+  /* .mg items and their page tops, from offsetTop (transforms don't move it) */
+  var mgs = [];
+  if (fx) { root.classList.add('mgjs'); mgs = [].map.call(document.querySelectorAll('.mg'), function (el) { return { el: el, t: 0, on: false }; }); }
+  function pageTop(el) { var y = 0; for (var a = el; a; a = a.offsetParent) y += a.offsetTop; return y; }
+  function measure() {
+    layPins();
+    mgs.forEach(function (m) { m.t = pageTop(m.el); });
+    /* today's column in the services view */
+    var gt = document.getElementById('gantt-today'), gHead = document.getElementById('gantt-head');
+    var hs = gHead.children, dcol = hs[now.getDay() + 1];
+    [].forEach.call(hs, function (s, k) { s.classList.toggle('is-today', k === now.getDay() + 1); });
+    if (dcol && !phoneQ.matches) {
+      var cx = dcol.offsetLeft + dcol.offsetWidth / 2, bars = document.querySelector('.lane__bars');
+      gt.style.setProperty('--tl', (cx - 1) + 'px');
+      document.getElementById('gantt').style.setProperty('--tc', (cx - 1 - bars.offsetLeft) + 'px');
+    }
+    if (!anim) return;
+    var vh = innerHeight, phone = phoneQ.matches;
+
+    /* hero (desktop only): the camera pushes onto today's cell, the copy plane leaves faster */
+    var hero = document.getElementById('calendar'), hb = document.getElementById('hp-board'), hc = document.querySelector('.hp-copy');
+    if (phone) { hb.classList.remove('sdx'); hc.classList.remove('sdx'); }
+    else {
+      hb.classList.remove('sdx'); hc.classList.remove('sdx');
+      var tc = cells[String(T)], hbr = hb.getBoundingClientRect();
+      if (tc) { var r = tc.getBoundingClientRect(); hb.style.setProperty('--ox', (r.left + r.width / 2 - hbr.left).toFixed(0) + 'px'); hb.style.setProperty('--oy', (r.top + r.height / 2 - hbr.top).toFixed(0) + 'px'); }
+      setR(hb, 0, hero.offsetHeight * .9); setR(hc, 0, hero.offsetHeight * .7);
+    }
+
+    /* team (desktop): two planes, two rates */
+    [].forEach.call(document.querySelectorAll('.fd-far, .fd-near'), function (el) { if (phone) { el.classList.remove('sdx'); return; } var T0 = top(el.parentNode); setR(el, T0 - vh, T0 + el.parentNode.offsetHeight); });
+
+    /* the peak: each part leaves its day cell and lands on top of the last one, one at a time; the stage is never empty.
+       Triggered in tick(): part 0 as soon as the stage enters the screen, part k when the pin crosses its k-th fifth */
+    var pT = top(peak), pTr = Math.max(1, peak.offsetHeight - vh), media = document.querySelector('.peak__media');
+    var pr = media.getBoundingClientRect();   /* every part fills this box; measured here, untransformed */
+    var stageTop = peak.querySelector('.peak__stage').getBoundingClientRect().top;
+    peakRange = [pT, pTr, pT + (pr.top - stageTop)];   /* [section top, pinned run, where the media box starts in the page] */
+    /* the week line fills across the whole pin, so it enters day k exactly when part k is triggered (at k fifths) */
+    setR(document.getElementById('peak-prog'), pT, pT + pTr);
+    parts.forEach(function (p, k) {
+      var c = weekCells[k].querySelector('img').getBoundingClientRect();
+      p.style.setProperty('--cx', (c.left + c.width / 2 - (pr.left + pr.width / 2)).toFixed(0) + 'px');
+      p.style.setProperty('--cy', (c.top + c.height / 2 - (pr.top + pr.height / 2)).toFixed(0) + 'px');
+      p.style.setProperty('--cs', Math.max(.06, Math.min(.5, c.width / Math.max(1, pr.width))).toFixed(3));
+    });
+  }
+
+  function tick() {
+    ticking = false;
+    setView(which());
+    if (peakRange) {
+      var q = (scrollY - peakRange[0]) / peakRange[1], on = Math.max(0, Math.min(parts.length - 1, Math.floor(q * parts.length)));
+      weekCells.forEach(function (li, k) { li.classList.toggle('is-on', k === on); });
+      listItems.forEach(function (li, k) { li.classList.toggle('is-on', k === on); });
+      /* triggered lifts: part 0 the moment the stage shows, then one per fifth of the pin */
+      var shown = scrollY + innerHeight > peakRange[2] + 1 ? on : -1;
+      parts.forEach(function (p, k) { p.classList.toggle('is-in', k <= shown); });
+    }
+    /* the signature, triggered: an item plays its pull as soon as its top edge (untransformed) is above the screen's bottom,
+       which also covers items a jump carried past; once pulled up it stays up */
+    if (mgs.length) {
+      var lim = scrollY + innerHeight, n = 0;
+      mgs.forEach(function (m) {
+        if (m.on || m.t >= lim) return;
+        m.on = true; m.el.style.setProperty('--md', (Math.min(n++, 3) * 50) + 'ms'); m.el.classList.add('mg-on');
+      });
+    }
+  }
+  var ticking = false;
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(tick); } }, { passive: true });
+  var lastW = -1;
+  function all() { measure(); lastW = innerWidth; tick(); }
+  addEventListener('resize', function () { if (innerWidth !== lastW || !phoneQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); } }).observe(document.body); }
+  all();
+
+  /* ================= video plays on tap: the player exists only after the tap (data-video: your embed URL) ================= */
+  [].forEach.call(document.querySelectorAll('.js-yt'), function (b) {
+    b.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = b.getAttribute('data-video');
+      f.title = b.getAttribute('aria-label').replace(/^Play /, '');
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true;
+      b.parentNode.replaceChild(f, b);
+    });
+  });
+  [].forEach.call(document.querySelectorAll('.js-vid'), function (b) {
+    b.addEventListener('click', function () {
+      var v = document.createElement('video');
+      v.src = b.getAttribute('data-src'); v.controls = true; v.playsInline = true; v.autoplay = true;
+      v.setAttribute('aria-label', b.getAttribute('aria-label').replace(/^Play /, ''));
+      b.parentNode.replaceChild(v, b);
+      var p = v.play && v.play(); if (p && p.catch) p.catch(function () {});
+    });
+  });
+
+  /* ================= team: the timeline, one year at a time ================= */
+  var tabs = [].slice.call(document.querySelectorAll('.tl__years [role="tab"]'));
+  function pickYear(i) {
+    tabs.forEach(function (t, k) {
+      t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = k !== i;
+    });
+  }
+  tabs.forEach(function (t, k) {
+    t.addEventListener('click', function () { pickYear(k); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); var n = (k + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length; pickYear(n); tabs[n].focus(); }
+    });
+  });
+
+  /* ================= close: "Add your brand" lands on the next free day; the CTA carries it to WhatsApp ================= */
+  var mini = document.getElementById('mini'), mh = '';
+  DOW.forEach(function (d) { mh += '<li class="h" aria-hidden="true">' + d + '</li>'; });
+  for (var m = 0; m < 35; m++) {
+    var dd = startDay + m, xx = dateOf(dd), inMo = xx.getMonth() === M;
+    mh += '<li class="' + (inMo ? '' : 'out') + (inMo && dd === T ? ' is-today' : '') + (inMo && postDays.indexOf(dd) >= 0 ? ' post' : '') + '" data-d="' + dd + '"' + (inMo ? '' : ' aria-hidden="true"') + '>' + (inMo ? '<span>' + xx.getDate() + '</span>' : '') + '</li>';
+  }
+  mini.innerHTML = mh;
+  var taken = postDays.slice(), form = document.getElementById('add-form'), input = document.getElementById('add-in');
+  var status = document.getElementById('add-status'), closeCta = document.getElementById('close-cta'), brand = '';
+  function href() { return WA + encodeURIComponent(HELLO + (brand ? ' My brand: ' + brand + '.' : '')); }
+  function nextFree() {
+    for (var d = T + 1; d <= startDay + 34; d++) { var li = mini.querySelector('[data-d="' + d + '"]'); if (li && !li.classList.contains('out') && taken.indexOf(d) < 0) return d; }
+    return 0;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = input.value.trim().replace(/\s+/g, ' ');
+    if (!v) { status.textContent = 'Type your brand first.'; input.focus(); return; }
+    var d = nextFree();
+    brand = v; closeCta.href = href();
+    [].forEach.call(document.querySelectorAll('.js-wa'), function (a) { a.href = href(); });
+    if (!d) { status.textContent = 'This month is full. Send it anyway and we will find a day.'; return; }
+    taken.push(d);
+    var li = mini.querySelector('[data-d="' + d + '"]');
+    li.classList.add('mine', 'new'); li.classList.remove('post');
+    var em = document.createElement('em'); em.textContent = v; li.appendChild(em);
+    li.setAttribute('aria-label', label(d) + ': ' + v);
+    status.textContent = v + ' is pencilled in for ' + label(d) + ' ' + MONTHS[M].slice(0, 3) + '. Send it, and start a project.';
+    input.value = '';
+  });
+})();
+</script>
+</body>
+</html>

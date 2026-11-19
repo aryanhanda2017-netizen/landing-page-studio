@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Brands, Films and Campaigns, Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio of 32 people in Lowmere, making brands, websites, films and campaigns people notice.">
+<meta name="theme-color" content="#08140F">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Brands, Films and Campaigns, Lowmere">
+<meta property="og:description" content="Brands worth remembering. Marketing that pays back. Brands, websites, films and campaigns from a studio of 32 in Lowmere.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Brands, Films and Campaigns, Lowmere">
+<meta name="twitter:description" content="Brands, websites, films and campaigns from a studio of 32 people in Lowmere.">
+<script>
+(function (d) {
+  var c = d.classList; c.add('js');
+  var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (/[?&]still\b/.test(location.search)) fx = false;
+  if (fx) c.add('fx', 'pre');
+})(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/ttf" href="assets/fonts/geist-semibold.ttf" crossorigin>
+<link rel="preload" as="image" href="assets/wordmark.svg">
+<style>
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-semibold.ttf") format("truetype"); font-weight: 600 800; font-display: swap; }
+:root {
+  --n0: #08140F; --n1: #0C1C15; --b1: #FF6B4A; --b2: #FF8A6E; --b3: #6FBF98; --b4: #FF6B4A; --b5: #9EDCBF;
+  --ink: #EAF6EF; --soft: #A9C7B8; --line: rgba(111, 191, 152, .26); --plate: #10251C;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, "Geist", Arial, sans-serif;
+  --bar: 64px; --lab: 0px; --dock: 0px; --gut: 4.5vw;
+}
+* { box-sizing: border-box; }
+html { background: var(--n0); color: var(--ink); font-family: var(--sans); -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--n0); overflow-x: clip; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p, ol, ul, dl, dd, figure, blockquote { margin: 0; }
+ol, ul { padding: 0; list-style: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 50; background: var(--b1); color: #10251C; padding: 10px 14px; border-radius: 8px; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--b4); outline-offset: 3px; }
+
+/* the world: one fixed canvas behind the page, and a scrim that dims it behind the reading sections */
+.world { position: fixed; inset: 0; z-index: 1; background: var(--n0); }
+.world canvas { display: block; width: 100%; height: 100%; }
+html:not(.js) .world { background: var(--n0) url("assets/city-poster-d.jpg") 50% 50% / cover no-repeat; }
+.dim { position: fixed; inset: 0; z-index: 2; background: var(--n0); opacity: 0; pointer-events: none; transition: opacity .7s var(--ease); }
+html.dimmed .dim { opacity: .5; }
+
+/* bar: the map */
+.bar { position: fixed; left: 0; right: 0; top: 0; z-index: 20; height: var(--bar); display: flex; align-items: center; gap: 22px; padding: 0 28px; background: rgba(8, 20, 15, .92); border-bottom: 1px solid rgba(111, 191, 152, .18); }
+.bar__brand { flex: none; display: flex; align-items: center; min-height: 44px; }
+.bar__brand img { height: 22px; width: auto; }
+.route { flex: 1; display: flex; align-items: center; gap: 18px; min-width: 0; }
+.route__dots { display: flex; align-items: center; position: relative; }
+.route__dots::before { content: ""; position: absolute; left: 11px; right: 11px; top: 50%; height: 1px; background: rgba(111, 191, 152, .4); }
+.route__dots li { position: relative; }
+.route__dots button { width: 24px; height: 28px; display: grid; place-items: center; }
+.route__dots button::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--n0); border: 1px solid var(--b3); transition: transform .35s var(--ease), background-color .35s var(--ease); }
+.route__dots button[aria-current="true"]::before { background: var(--b4); border-color: var(--b4); transform: scale(1.6); }
+.route__dots button.past::before { background: var(--b3); }
+.route__now { display: inline-flex; align-items: center; gap: 10px; height: 38px; padding: 0 14px; border: 1px solid rgba(111, 191, 152, .35); border-radius: 999px; font-size: 14px; color: var(--ink); white-space: nowrap; min-width: 0; max-width: 280px; }
+.route__now small { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--b5); flex: none; }
+.route__now span { overflow: hidden; text-overflow: ellipsis; }
+.route__now i { flex: none; width: 7px; height: 7px; border-right: 1.5px solid var(--b5); border-bottom: 1.5px solid var(--b5); transform: rotate(45deg) translate(-2px, -2px); transition: transform .3s var(--ease); }
+.route__now[aria-expanded="true"] i { transform: rotate(225deg) translate(-2px, -2px); }
+.map { position: fixed; z-index: 19; top: calc(var(--bar) + 8px); width: 320px; max-height: calc(100svh - var(--bar) - 24px); overflow: auto; padding: 8px; background: #0C1C15; border: 1px solid rgba(111, 191, 152, .3); border-radius: 16px; }
+.map[hidden] { display: none; }
+.map ol { position: relative; }
+.map ol::before { content: ""; position: absolute; left: 20px; top: 22px; bottom: 22px; width: 1px; background: rgba(111, 191, 152, .35); }
+.map a { position: relative; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 4px 12px; border-radius: 10px; text-decoration: none; font-size: 15px; color: var(--ink); }
+.map a::before { content: ""; flex: none; width: 15px; height: 15px; border-radius: 50%; background: #0C1C15; border: 1px solid var(--b3); position: relative; z-index: 1; }
+.map a small { margin-left: auto; font-size: 12px; color: var(--soft); white-space: nowrap; }
+.map a[aria-current="true"] { background: rgba(255, 107, 74, .22); }
+.map a[aria-current="true"]::before { background: var(--b4); border-color: var(--b4); }
+.map a:hover { background: rgba(255, 107, 74, .14); }
+
+/* the one CTA */
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 44px; padding: 0 20px; border-radius: 999px; background: var(--b1); color: #10251C; font-size: 15px; font-weight: 600; text-decoration: none; white-space: nowrap; flex: none; transition: background-color .3s var(--ease); }
+.cta svg { width: 16px; height: 16px; transition: transform .35s var(--ease); }
+.cta:hover { background: var(--b2); }
+.cta:hover svg { transform: translateX(4px); }
+.cta--big { height: 56px; padding: 0 28px; font-size: 18px; }
+.dock { display: none; }
+
+/* type */
+.copy { position: relative; z-index: 5; }
+.pl { background: var(--plate); border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+.ey { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--b5); }
+h2 { font-size: clamp(28px, 2.6vw, 38px); line-height: 1.08; letter-spacing: -.022em; font-weight: 700; }
+h3 { font-size: 17px; line-height: 1.25; font-weight: 650; }
+p { font-size: 16px; line-height: 1.55; color: var(--soft); }
+.ey + h2 { margin-top: 10px; }
+
+/* hero: one screen, the h1 low on the left over the city */
+.hero { min-height: 100svh; overflow: hidden; display: flex; align-items: flex-end; padding: calc(var(--bar) + 24px) 5vw 10vh; }
+.hero__in { position: relative; width: min(760px, 58vw); }
+.hero h1 { font-size: clamp(46px, 5.6vw, 88px); line-height: .98; letter-spacing: -.03em; font-weight: 750; margin-top: 16px; }
+.ln { display: block; overflow: clip; padding-bottom: .06em; margin-bottom: -.06em; }
+.ln > span { display: block; }
+.hero .accent { color: var(--b4); }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; font-size: 14px; color: var(--soft); }
+.hero .meta b { color: var(--ink); font-weight: 600; }
+.hero .cta--big { margin-top: 28px; }
+.hero__scrim { position: absolute; inset: -60px -80px; z-index: -1; background: radial-gradient(closest-side, rgba(8, 20, 15, .88), rgba(8, 20, 15, .6) 60%, rgba(8, 20, 15, 0)); pointer-events: none; }
+
+/* the walk: one step per stop, each card on the side away from its tower. The page scrolls; the camera flies. */
+.step { min-height: 68svh; display: flex; align-items: center; padding: 2vh var(--gut); }
+.step--trail { justify-content: flex-end; }
+.step--what { min-height: 74svh; }
+.card { width: min(560px, 44vw); }
+.card--wide { width: min(640px, 50vw); }
+.caps { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
+.caps li { padding: 12px 16px; border: 1px solid rgba(111, 191, 152, .22); border-radius: 12px; }
+.caps p { font-size: 14px; line-height: 1.45; margin-top: 4px; }
+.loc { margin-top: 4px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--b5); }
+.p h3 { font-size: 26px; letter-spacing: -.018em; font-weight: 700; }
+.p h2 + h3 { margin-top: 16px; }
+.intro { font-size: 18px; line-height: 1.3; font-weight: 600; letter-spacing: -.01em; color: var(--soft); }
+.m { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 18px; border-top: 1px solid var(--line); }
+.m > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 4px; padding: 12px 8px 12px 0; border-bottom: 1px solid var(--line); }
+.m dd { font-size: 26px; font-weight: 700; letter-spacing: -.02em; color: #fff; font-variant-numeric: tabular-nums; }
+.m dt { font-size: 12.5px; line-height: 1.3; color: var(--soft); }
+
+/* reading sections: full size, in normal flow, over the dimmed city */
+.sec { padding: 72px var(--gut) 48px; scroll-margin-top: var(--bar); }
+.sec__in { max-width: 1180px; margin: 0 auto; }
+/* the reading sections carry a light ground of their own, so whatever the camera still shows as they come in stays quiet */
+.sec { background: rgba(8, 20, 15, .55); }
+#creatives { padding-top: 32px; background: linear-gradient(rgba(8, 20, 15, 0) 72px, rgba(8, 20, 15, .55) 112px); }
+#questions { background: linear-gradient(rgba(8, 20, 15, .55) calc(100% - 140px), rgba(8, 20, 15, 0)); }
+.sec h2 { font-size: clamp(30px, 3.2vw, 46px); }
+.lede { max-width: 660px; margin-top: 12px; font-size: 17px; }
+.sub { margin-top: 44px; font-size: 22px; letter-spacing: -.012em; }
+.grid-cr { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
+.grid-cr li { width: calc((100% - 72px) / 7); }
+.grid-cr img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 10px; border: 1px solid rgba(111, 191, 152, .25); background: var(--n1); }
+.reels { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 18px; }
+.reels li { width: calc((100% - 72px) / 7); }
+.reel { display: block; width: 100%; text-align: left; }
+.reel__img { position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; border: 1px solid rgba(111, 191, 152, .5); background: #000; }
+.reel__img img { width: 100%; height: 100%; object-fit: cover; }
+.reel__play { position: absolute; left: 50%; top: 50%; width: 48px; height: 48px; margin: -24px 0 0 -24px; border-radius: 50%; background: rgba(8, 20, 15, .8); border: 1.5px solid #fff; transition: transform .35s var(--ease); }
+.reel__play::before { content: ""; position: absolute; left: 50%; top: 50%; margin: -8px 0 0 -4px; border-left: 14px solid #fff; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+.reel:hover .reel__play { transform: scale(1.08); }
+.reel__cap { display: block; margin-top: 8px; font-size: 13px; line-height: 1.35; color: var(--soft); }
+.quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
+.q { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; background: var(--plate); border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+.q blockquote { font-size: 16.5px; line-height: 1.55; color: var(--ink); }
+.q figcaption { font-size: 13px; color: var(--soft); }
+.q figcaption b { display: block; color: #fff; font-weight: 600; font-size: 15px; }
+.logos { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; margin-top: 28px; }
+.logos span { display: grid; place-items: center; height: 76px; padding: 10px; background: #CFEBDD; border-radius: 10px; }
+.logos img { max-height: 46px; width: auto; }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 18px; }
+.steps li { border-top: 1px solid var(--b3); padding-top: 14px; }
+.steps h3 span { color: var(--b5); margin-right: 6px; }
+.steps p { font-size: 15px; line-height: 1.5; margin-top: 6px; }
+.badges { display: flex; align-items: center; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+.badges a, .badges span { display: block; background: #CFEBDD; border-radius: 10px; padding: 8px 14px; }
+.badges img { height: 44px; width: auto; }
+.badges .wm { height: 24px; margin: 10px 0; }
+.badges p { font-size: 14px; margin-right: 6px; }
+.faq { max-width: 860px; margin-top: 22px; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 12px 0; font-size: 18px; font-weight: 600; color: var(--ink); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: 12px; height: 12px; background: linear-gradient(var(--b4), var(--b4)) 50% 50% / 12px 1.5px no-repeat, linear-gradient(var(--b4), var(--b4)) 50% 50% / 1.5px 12px no-repeat; transition: transform .35s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details:not([open]) .a { display: none; }
+.faq .a p { padding: 0 0 18px; max-width: 760px; }
+
+/* close: the camera lands at the studio; the card is the arrival */
+.close { min-height: 100svh; display: flex; align-items: center; padding: calc(var(--bar) + 24px) var(--gut) 6vh; scroll-margin-top: 0; }
+.close .card { width: min(600px, 46vw); }
+.close__rows { margin-top: 20px; border-top: 1px solid var(--line); }
+.close__rows li { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.close__rows li span { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--b5); padding-top: 2px; }
+.close__rows a { color: #fff; text-decoration: none; }
+.close__rows a:hover { text-decoration: underline; }
+.close__rows address { font-style: normal; color: var(--ink); }
+.team { display: flex; gap: 8px; margin-top: 16px; }
+.team figure { flex: 1; }
+.team img { width: 100%; height: 96px; object-fit: cover; border-radius: 8px; }
+.social { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 12px; font-size: 14px; }
+.social a { color: var(--soft); text-decoration: none; display: inline-block; padding: 8px 0; }
+.social a:hover { color: #fff; }
+.fine { margin-top: 8px; font-size: 12px; color: rgba(169, 199, 184, .8); }
+.step > section, .hero { scroll-margin-top: var(--bar); }
+
+/* lightbox */
+.lb { border: 0; padding: 0; background: transparent; max-width: none; max-height: none; width: 100vw; height: 100svh; margin: 0; }
+.lb::backdrop { background: rgba(8, 20, 15, .92); }
+.lb__in { position: relative; height: 100%; display: grid; place-items: center; padding: 64px 16px 40px; }
+.lb img { height: min(80svh, 820px); width: auto; max-width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #000; border-radius: 12px; }
+.lb__cap { margin-top: 10px; text-align: center; color: var(--ink); font-size: 14px; }
+.lb__x { position: absolute; top: 14px; right: 14px; height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .4); color: #fff; font-size: 15px; }
+
+/* load reveal (pre-reveal gate; final state without JS and under reduced motion) */
+html.fx .hero .ln > span { transition: transform .8s var(--ease) calc(.55s + var(--i, 0) * .09s); }
+html.fx .hero .ey, html.fx .hero .meta, html.fx .hero .cta--big { transition: opacity .7s var(--ease) var(--dl2, .9s), transform .7s var(--ease) var(--dl2, .9s); }
+html.pre .hero .ln > span { transform: translateY(108%); }
+html.pre .hero .ey, html.pre .hero .meta, html.pre .hero .cta--big { opacity: 0; transform: translateY(16px); }
+/* without JS the scrim never comes on, so the reading sections carry their own dark ground */
+html:not(.js) .sec { background: rgba(8, 20, 15, .84); }
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .route__dots { display: none; }
+  .grid-cr li, .reels li { width: calc((100% - 36px) / 4); }
+  .logos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  :root { --bar: 56px; --lab: 10px; --dock: calc(68px + var(--lab) + env(safe-area-inset-bottom)); --gut: 16px; }
+  html:not(.js) .world { background-image: url("assets/city-poster-m.jpg"); }
+  .bar { padding: 0 12px 0 16px; gap: 10px; justify-content: space-between; }
+  .bar__brand img { height: 18px; }
+  .route { flex: none; }
+  .route__dots { display: none; }
+  .route__now { height: 44px; padding: 0 12px; font-size: 13px; max-width: 220px; gap: 8px; }
+  .bar > .cta { display: none; }
+  .map { left: 12px; right: 12px; width: auto; top: calc(var(--bar) + 6px); max-height: calc(100svh - var(--bar) - var(--dock) - 16px); }
+  .dock { display: block; position: fixed; z-index: 20; left: 0; right: 0; bottom: 0; padding: var(--lab) 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(8, 20, 15, .94); border-top: 1px solid rgba(111, 191, 152, .2); transition: transform .45s var(--ease); }
+  .dock .cta { width: 100%; height: 48px; font-size: 16px; }
+  html.dock-away .dock { transform: translateY(105%); }
+  .pl { padding: 20px 16px; border-radius: 16px; }
+  h2 { font-size: 24px; }
+  p { font-size: 15px; }
+  .hero { padding: calc(var(--bar) + 16px) 16px calc(var(--lab) + 28px + env(safe-area-inset-bottom)); }
+  .hero__in { width: 100%; }
+  .hero h1 { font-size: 44px; margin-top: 12px; }
+  .hero .meta { margin-top: 16px; font-size: 13px; gap: 4px 14px; }
+  .hero .cta--big { margin-top: 20px; height: 52px; width: 100%; }
+  .step { min-height: 48svh; padding: 12px 16px; }
+  .step--what { min-height: 80svh; }
+  .card, .card--wide, .close .card { width: 100%; }
+  .caps { grid-template-columns: 1fr; gap: 6px; margin-top: 12px; }
+  .caps li { padding: 8px 12px; }
+  .caps p { font-size: 15px; margin-top: 2px; line-height: 1.4; }
+  .p h3 { font-size: 22px; }
+  .m { margin-top: 12px; }
+  .m > div { padding: 8px 8px 8px 0; }
+  .m dd { font-size: 20px; }
+  .m dt { font-size: 11.5px; }
+  .sec { padding: 44px 16px 28px; }
+  .sec h2 { font-size: 28px; }
+  .lede { font-size: 15px; }
+  .sub { margin-top: 28px; font-size: 19px; }
+  .grid-cr { gap: 8px; margin-top: 20px; }
+  .grid-cr li { width: calc((100% - 16px) / 3); }
+  .grid-cr img { border-radius: 8px; }
+  .reels { gap: 8px; }
+  .reels li { width: calc((100% - 24px) / 4); }
+  .reel__play { width: 36px; height: 36px; margin: -18px 0 0 -18px; }
+  .reel__play::before { margin: -6px 0 0 -3px; border-left-width: 10px; border-top-width: 6px; border-bottom-width: 6px; }
+  .reel__cap { display: none; }
+  .quotes { grid-template-columns: 1fr; gap: 8px; margin-top: 18px; }
+  .q { padding: 16px; gap: 10px; }
+  .q blockquote { font-size: 15px; line-height: 1.5; }
+  .q figcaption b { font-size: 14px; }
+  .logos { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 20px; }
+  .logos span { height: 56px; padding: 7px; }
+  .logos img { max-height: 36px; }
+  .steps { grid-template-columns: 1fr 1fr; gap: 18px 12px; }
+  .steps h3 { font-size: 16px; }
+  .badges { margin-top: 24px; }
+  .badges img { height: 36px; }
+  .badges .wm { height: 20px; margin: 8px 0; }
+  .faq summary { font-size: 16px; min-height: 52px; }
+  .faq .a p { font-size: 15px; }
+  .close { align-items: flex-end; padding: calc(var(--bar) + 16px) 16px calc(var(--lab) + 18px + env(safe-area-inset-bottom)); }
+  .close__rows li { grid-template-columns: 92px 1fr; font-size: 15px; padding: 0; align-items: center; }
+  .close__rows li span { padding: 0; font-size: 11px; }
+  .close__rows a, .social a { min-height: 44px; display: flex; align-items: center; }
+  .close__rows address { padding: 8px 0; }
+  .team img { height: 60px; }
+  .cta--big { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#what">Skip to content</a>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#city" data-go="0" aria-label="Mosswick Studio, back to the start"><img src="assets/wordmark.svg" alt="Mosswick Studio" width="126" height="22"></a>
+  <nav class="route" aria-label="Map of the page">
+    <ol class="route__dots" id="dots"><li><button type="button" data-go="0" aria-label="Lowmere" title="Lowmere"></button></li><li><button type="button" data-go="1" aria-label="What we make" title="What we make"></button></li><li><button type="button" data-go="2" aria-label="Tallow Lane Coffee, Food and drink" title="Tallow Lane Coffee, Food and drink"></button></li><li><button type="button" data-go="3" aria-label="Shelterly, Insurance" title="Shelterly, Insurance"></button></li><li><button type="button" data-go="4" aria-label="The Larchway, Hospitality" title="The Larchway, Hospitality"></button></li><li><button type="button" data-go="5" aria-label="Fizzwold, Drinks" title="Fizzwold, Drinks"></button></li><li><button type="button" data-go="6" aria-label="Paywren, Fintech" title="Paywren, Fintech"></button></li><li><button type="button" data-go="7" aria-label="Velloway, Fashion" title="Velloway, Fashion"></button></li><li><button type="button" data-go="8" aria-label="Work and films" title="Work and films"></button></li><li><button type="button" data-go="9" aria-label="In their words" title="In their words"></button></li><li><button type="button" data-go="10" aria-label="Clients and process" title="Clients and process"></button></li><li><button type="button" data-go="11" aria-label="Questions" title="Questions"></button></li><li><button type="button" data-go="12" aria-label="The studio, Lowmere" title="The studio, Lowmere"></button></li></ol>
+    <button class="route__now" id="now" type="button" aria-expanded="false" aria-controls="map"><small>Map</small><span id="nowName">Lowmere</span><i aria-hidden="true"></i></button>
+  </nav>
+  <a class="cta" href="https://wa.me/15550100" target="_blank" rel="noopener">Book an intro call<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</header>
+<div class="map" id="map" hidden><ol><li><a href="#city" data-go="0">Lowmere</a></li><li><a href="#what" data-go="1">What we make</a></li><li><a href="#c1" data-go="2">Tallow Lane Coffee<small>Food and drink</small></a></li><li><a href="#c2" data-go="3">Shelterly<small>Insurance</small></a></li><li><a href="#c3" data-go="4">The Larchway<small>Hospitality</small></a></li><li><a href="#c4" data-go="5">Fizzwold<small>Drinks</small></a></li><li><a href="#c5" data-go="6">Paywren<small>Fintech</small></a></li><li><a href="#c6" data-go="7">Velloway<small>Fashion</small></a></li><li><a href="#creatives" data-go="8">Work and films</a></li><li><a href="#voices" data-go="9">In their words</a></li><li><a href="#clients" data-go="10">Clients and process</a></li><li><a href="#questions" data-go="11">Questions</a></li><li><a href="#studio" data-go="12">The studio<small>Lowmere</small></a></li></ol></div>
+
+<div class="world"><canvas id="city-canvas" aria-hidden="true"></canvas></div>
+<div class="dim" aria-hidden="true"></div>
+
+<main class="copy" id="copy">
+  <section class="hero" id="city" aria-labelledby="h1">
+    <div class="hero__in">
+      <div class="hero__scrim" aria-hidden="true"></div>
+      <p class="ey">Creative and marketing studio</p>
+      <h1 id="h1"><span class="ln" style="--i:0"><span>We make brands</span></span><span class="ln" style="--i:1"><span>people can pick</span></span><span class="ln accent" style="--i:2"><span>out of a crowd.</span></span></h1>
+      <p class="meta" style="--dl2:1.05s"><b>Lowmere, since 2014</b><span>32 people in one studio</span></p>
+      <a class="cta cta--big" style="--dl2:1.2s" href="https://wa.me/15550100" target="_blank" rel="noopener">Book an intro call<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </section>
+
+  <div class="walk">
+    <div class="step step--trail step--what">
+      <section class="pl card card--wide" id="what" aria-labelledby="h-what">
+        <p class="ey">What we make</p>
+        <h2 id="h-what">From the first sketch to the last ad report, one team stays on your brand.</h2>
+        <p style="margin-top:12px">Mosswick is a creative and marketing studio in Lowmere. Thirty-two strategists, designers, writers, filmmakers and media buyers in one studio, making brands that look good and marketing that earns its keep. We take on a small number of new clients each year, from food brands to city charities, and most of them stay for years.</p>
+        <ul class="caps">
+          <li><h3>Brand Identity</h3><p>Logo, colour and type system, guidelines</p></li>
+          <li><h3>Campaigns</h3><p>Concepts, key visuals, out-of-home, media plans</p></li>
+          <li><h3>Film &amp; Motion</h3><p>Scripts, production, editing and grade</p></li>
+          <li><h3>Performance Marketing</h3><p>Paid social, paid search, creative testing</p></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="step">
+      <section class="pl p card" id="c1" aria-labelledby="h-c1">
+        <h2 class="intro">Work that shows up in the numbers</h2>
+        <h3 id="h-c1">Tallow Lane Coffee</h3>
+        <p class="loc">One roaster, twelve bags, one system</p>
+        <dl class="m"><div><dt>Wholesale, Before</dt><dd>19</dd></div><div><dt>Wholesale, After</dt><dd>47</dd></div><div><dt>Cafes Rebranded</dt><dd>4</dd></div><div><dt>Bag Designs Replaced</dt><dd>12</dd></div><div><dt>Services Used</dt><dd>2</dd></div><div><dt>Year</dt><dd>2022</dd></div></dl>
+      </section>
+    </div>
+    <div class="step step--trail">
+      <section class="pl p card" id="c2" aria-labelledby="h-c2">
+        <h3 id="h-c2">Shelterly</h3>
+        <p class="loc">Home insurance without the small print</p>
+        <dl class="m"><div><dt>Quote Completions</dt><dd>+64%</dd></div><div><dt>Form Questions Before</dt><dd>22</dd></div><div><dt>Form Questions After</dt><dd>9</dd></div><div><dt>Services Used</dt><dd>3</dd></div><div><dt>Sector</dt><dd>Insurance</dd></div><div><dt>Year</dt><dd>2023</dd></div></dl>
+      </section>
+    </div>
+    <div class="step">
+      <section class="pl p card" id="c3" aria-labelledby="h-c3">
+        <h3 id="h-c3">The Larchway</h3>
+        <p class="loc">Boutique hotel by the canal</p>
+        <dl class="m"><div><dt>Direct Bookings Before</dt><dd>22%</dd></div><div><dt>Direct Bookings After</dt><dd>58%</dd></div><div><dt>Rooms</dt><dd>30</dd></div></dl>
+      </section>
+    </div>
+    <div class="step step--trail">
+      <section class="pl p card" id="c4" aria-labelledby="h-c4">
+        <h3 id="h-c4">Fizzwold</h3>
+        <p class="loc">Kombucha with a louder voice</p>
+        <dl class="m"><div><dt>Stockists Before</dt><dd>80</dd></div><div><dt>Stockists After</dt><dd>310</dd></div><div><dt>Cities</dt><dd>3</dd></div><div><dt>Services Used</dt><dd>3</dd></div><div><dt>Sector</dt><dd>Drinks</dd></div><div><dt>Year</dt><dd>2026</dd></div></dl>
+      </section>
+    </div>
+    <div class="step">
+      <section class="pl p card" id="c5" aria-labelledby="h-c5">
+        <h3 id="h-c5">Paywren</h3>
+        <p class="loc">Invoicing that feels friendly</p>
+        <dl class="m"><div><dt>Cost Per Sign-up</dt><dd>&minus;41%</dd></div><div><dt>Ad Versions Tested</dt><dd>40</dd></div><div><dt>Versions Kept</dt><dd>6</dd></div><div><dt>Services Used</dt><dd>2</dd></div><div><dt>Sector</dt><dd>Fintech</dd></div><div><dt>Year</dt><dd>2024</dd></div></dl>
+      </section>
+    </div>
+    <div class="step step--trail">
+      <section class="pl p card" id="c6" aria-labelledby="h-c6">
+        <h3 id="h-c6">Velloway</h3>
+        <p class="loc">Outerwear built for wet commutes</p>
+        <dl class="m"><div><dt>Online Sales, Month 1</dt><dd>+38%</dd></div><div><dt>Spot Length</dt><dd>60 s</dd></div><div><dt>Social Cutdowns</dt><dd>20</dd></div><div><dt>Services Used</dt><dd>3</dd></div><div><dt>Sector</dt><dd>Fashion</dd></div><div><dt>Year</dt><dd>2024</dd></div></dl>
+      </section>
+    </div>
+  </div>
+
+  <section class="sec" id="creatives" aria-labelledby="h-creatives">
+    <div class="sec__in">
+      <p class="ey">Selected work</p>
+      <h2 id="h-creatives">Loud ideas, careful craft.</h2>
+      <p class="lede">Packs, posters, websites and campaigns from the last few years. Every piece was made to be noticed first and remembered long after.</p>
+      <ul class="grid-cr" aria-label="Selected work">
+        <li><img src="assets/work/work-01.webp" alt="Work for Tallow Lane Coffee: one roaster, twelve bags, one system" width="520" height="520" fetchpriority="low" decoding="async"></li>
+        <li><img src="assets/work/work-02.webp" alt="Work for Shelterly: home insurance without the small print" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-03.webp" alt="Work for The Larchway: a hotel that feels like a weekend" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-04.webp" alt="Work for Fizzwold: kombucha with a louder voice" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-05.webp" alt="Work for Paywren: invoicing that feels friendly" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-06.webp" alt="Work for Velloway: outerwear built for wet commutes" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-07.webp" alt="Work for Plumtide: a cordial brand with sunshine in it" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-08.webp" alt="Work for Marshlight Festival: festival posters people want to keep" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-09.webp" alt="Work for Saltmarrow: seaweed snacks for the crisp aisle" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-10.webp" alt="Work for Gilded Hare: a gin bottle worth keeping" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-11.webp" alt="Work for Periwink: glasses shopping made fun again" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-12.webp" alt="Work for Owlhour: night classes people talk about" width="520" height="520" loading="lazy" decoding="async"></li>
+        <li><img src="assets/work/work-13.webp" alt="Work for Tumblewick: wooden toys, bright new look" width="520" height="520" loading="lazy" decoding="async"></li>
+      </ul>
+      <h3 class="sub">Films made to be watched.</h3>
+      <ul class="reels" aria-label="Films, tap to open">
+        <li><button class="reel" type="button" data-src="assets/film/film-01.webp" data-label="Stillreed, Consumer tech" aria-label="Open film still: Stillreed, Consumer tech"><span class="reel__img"><img src="assets/film/film-01.webp" alt="Film still for Stillreed, Consumer tech" width="540" height="960" loading="lazy" decoding="async"><span class="reel__play" aria-hidden="true"></span></span><span class="reel__cap">Stillreed, Consumer tech</span></button></li>
+        <li><button class="reel" type="button" data-src="assets/film/film-02.webp" data-label="Cairnstone, Outdoor" aria-label="Open film still: Cairnstone, Outdoor"><span class="reel__img"><img src="assets/film/film-02.webp" alt="Film still for Cairnstone, Outdoor" width="540" height="960" loading="lazy" decoding="async"><span class="reel__play" aria-hidden="true"></span></span><span class="reel__cap">Cairnstone, Outdoor</span></button></li>
+        <li><button class="reel" type="button" data-src="assets/film/film-03.webp" data-label="Marlo Rue, Fashion" aria-label="Open film still: Marlo Rue, Fashion"><span class="reel__img"><img src="assets/film/film-03.webp" alt="Film still for Marlo Rue, Fashion" width="540" height="960" loading="lazy" decoding="async"><span class="reel__play" aria-hidden="true"></span></span><span class="reel__cap">Marlo Rue, Fashion</span></button></li>
+        <li><button class="reel" type="button" data-src="assets/film/film-04.webp" data-label="Fernstride, Sport" aria-label="Open film still: Fernstride, Sport"><span class="reel__img"><img src="assets/film/film-04.webp" alt="Film still for Fernstride, Sport" width="540" height="960" loading="lazy" decoding="async"><span class="reel__play" aria-hidden="true"></span></span><span class="reel__cap">Fernstride, Sport</span></button></li>
+        <li><button class="reel" type="button" data-src="assets/film/film-05.webp" data-label="Gearfinch, Mobility" aria-label="Open film still: Gearfinch, Mobility"><span class="reel__img"><img src="assets/film/film-05.webp" alt="Film still for Gearfinch, Mobility" width="540" height="960" loading="lazy" decoding="async"><span class="reel__play" aria-hidden="true"></span></span><span class="reel__cap">Gearfinch, Mobility</span></button></li>
+        <li><button class="reel" type="button" data-src="assets/film/film-06.webp" data-label="Okra &amp; Ash, Hospitality" aria-label="Open film still: Okra &amp; Ash, Hospitality"><span class="reel__img"><img src="assets/film/film-06.webp" alt="Film still for Okra &amp; Ash, Hospitality" width="540" height="960" loading="lazy" decoding="async"><span class="reel__play" aria-hidden="true"></span></span><span class="reel__cap">Okra &amp; Ash, Hospitality</span></button></li>
+        <li><button class="reel" type="button" data-src="assets/film/film-07.webp" data-label="Houndsbury, Pet food" aria-label="Open film still: Houndsbury, Pet food"><span class="reel__img"><img src="assets/film/film-07.webp" alt="Film still for Houndsbury, Pet food" width="540" height="960" loading="lazy" decoding="async"><span class="reel__play" aria-hidden="true"></span></span><span class="reel__cap">Houndsbury, Pet food</span></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="voices" aria-labelledby="h-voices">
+    <div class="sec__in">
+      <p class="ey">Clients</p>
+      <h2 id="h-voices">In their words</h2>
+      <div class="quotes">
+        <figure class="q"><blockquote>Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us exactly what every bit of spend brought back.</blockquote><figcaption><b>Owen Haddad</b>Head of Growth, Paywren</figcaption></figure>
+        <figure class="q"><blockquote>The film crew turned up in the pouring rain, smiling. Months later, people still stop us at trade shows to talk about that campaign.</blockquote><figcaption><b>Jonas Pell</b>Marketing Director, Velloway</figcaption></figure>
+        <figure class="q"><blockquote>The new website cut our quote form in half and far more people now finish it. Our board finally stopped asking about marketing spend.</blockquote><figcaption><b>Marcus Tilley</b>Chief Operating Officer, Shelterly</figcaption></figure>
+        <figure class="q"><blockquote>They asked better questions in the first week than our last agency did in a year. The new brand finally sounds like us.</blockquote><figcaption><b>Nadia Ferrante</b>Founder, Plumtide</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="clients" aria-labelledby="h-clients">
+    <div class="sec__in">
+      <p class="ey">Brands</p>
+      <h2 id="h-clients">Some of the brands we have launched and grown</h2>
+      <div class="logos"><span><img src="assets/logo/client-01.svg" alt="Periwink logo" width="200" height="57" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-02.svg" alt="Puddlejump Swim School logo" width="200" height="56" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-03.svg" alt="Tallow Lane Coffee logo" width="200" height="56" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-04.svg" alt="Shelterly logo" width="200" height="53" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-05.svg" alt="Plumtide logo" width="200" height="51" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-06.svg" alt="Glimmerfold logo" width="200" height="48" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-07.svg" alt="Halvane Watch Co. logo" width="200" height="47" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-08.svg" alt="Fizzwold logo" width="200" height="43" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-09.svg" alt="Fernery Lane logo" width="200" height="42" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-10.svg" alt="Okra &amp; Ash logo" width="200" height="41" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-11.svg" alt="Paywren logo" width="200" height="41" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-12.svg" alt="Softwatt logo" width="200" height="41" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-13.svg" alt="Kilnmark logo" width="200" height="39" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-14.svg" alt="Owlhour logo" width="200" height="39" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-15.svg" alt="Sumwright logo" width="200" height="38" loading="lazy" decoding="async"></span><span><img src="assets/logo/client-16.svg" alt="Hollin Gallery logo" width="200" height="37" loading="lazy" decoding="async"></span></div>
+      <h3 class="sub">How we run every project</h3>
+      <ol class="steps">
+        <li><h3><span>01</span>Listen</h3><p>We meet your team, read your numbers and talk to your customers.</p></li>
+        <li><h3><span>02</span>Decide</h3><p>We agree the one problem worth solving and how to measure it.</p></li>
+        <li><h3><span>03</span>Make</h3><p>Design, writing, film and build, with a check-in every week.</p></li>
+        <li><h3><span>04</span>Launch</h3><p>We ship it, watch it closely and fix things fast.</p></li>
+      </ol>
+      <div class="badges">
+        <p>Since 2014</p>
+        <a href="https://example.com" target="_blank" rel="noopener" aria-label="Mosswick Studio profile"><img src="assets/mark.svg" alt="Mosswick Studio mark" width="44" height="44" loading="lazy"></a>
+        <span><img class="wm" src="assets/wordmark-ink.svg" alt="Mosswick Studio" width="137" height="24" loading="lazy"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="questions" aria-labelledby="h-faq">
+    <div class="sec__in">
+      <p class="ey">FAQ</p>
+      <h2 id="h-faq">Questions</h2>
+      <div class="faq">
+        <details open><summary>What kind of companies do you work with?</summary><div class="a"><p>Mostly growing companies with 10 to 500 people: food and drink brands, shops, clinics, charities, tech start-ups and the odd festival. What they share is a founder or marketing lead who wants bold work and honest numbers.</p></div></details>
+        <details><summary>How long does a brand identity take?</summary><div class="a"><p>Most identity projects take eight to twelve weeks from the first workshop to final files. A full rebrand with a website and launch campaign usually runs four to six months. We agree the timeline in writing before we start.</p></div></details>
+        <details><summary>Do you run ads as well as make them?</summary><div class="a"><p>Yes. Our performance team plans, buys and tests paid search and social, and sits in the same room as the people who make the ads. You see spend and results in a live dashboard, updated daily.</p></div></details>
+        <details><summary>How do we get started?</summary><div class="a"><p>Send a short note about what you are building and what is getting in the way. We reply within two working days and set up a free 30 minute call, with no pitch deck and no pressure.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" id="studio" aria-labelledby="h-close">
+    <div class="pl card">
+      <p class="ey">1 Example Street, Lowmere</p>
+      <h2 id="h-close">Your next campaign should be the one people quote.</h2>
+      <a class="cta cta--big" style="margin-top:20px" href="https://wa.me/15550100" target="_blank" rel="noopener">Book an intro call<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <ul class="close__rows">
+        <li><span>Call</span><a href="tel:+15550142">+1 555 0142</a></li>
+        <li><span>WhatsApp</span><a href="https://wa.me/15550100" target="_blank" rel="noopener">wa.me/15550100</a></li>
+        <li><span>New projects</span><a href="mailto:projects@example.com">projects@example.com</a></li>
+        <li><span>Studio</span><address>1 Example Street, Lowmere. Monday to Friday, 9am to 6pm</address></li>
+      </ul>
+      <div class="team">
+        <figure><img src="assets/team/group-01.webp" alt="The whole Mosswick team together in the studio" width="600" height="400" loading="lazy" decoding="async"></figure>
+        <figure><img src="assets/team/group-02.webp" alt="Part of the team around the big table, mid-review" width="600" height="400" loading="lazy" decoding="async"></figure>
+        <figure><img src="assets/team/group-03.webp" alt="The team on the roof terrace at golden hour" width="600" height="400" loading="lazy" decoding="async"></figure>
+      </div>
+      <p class="social"><a href="https://example.com" target="_blank" rel="noopener">Instagram</a><a href="https://example.com" target="_blank" rel="noopener">LinkedIn</a><a href="https://example.com" target="_blank" rel="noopener">Behance</a><a href="https://example.com" target="_blank" rel="noopener">YouTube</a></p>
+      <p class="fine">Example content. Swap in your own.</p>
+    </div>
+  </section>
+</main>
+
+<div class="dock" id="dock"><a class="cta" href="https://wa.me/15550100" target="_blank" rel="noopener">Book an intro call<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+
+<dialog class="lb" id="lb" aria-label="Film viewer">
+  <div class="lb__in">
+    <button class="lb__x" id="lbx" type="button">Close</button>
+    <div><img id="lbv" alt="" width="540" height="960"><p class="lb__cap" id="lbc"></p></div>
+  </div>
+</dialog>
+<script src="assets/city.js"></script>
+</body>
+</html>

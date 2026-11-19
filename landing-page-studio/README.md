@@ -54,8 +54,15 @@ You don't need to check these by hand. When the skill starts, Claude runs its pr
 Ask in plain words, for example "design a landing page for my studio", "rebuild acme.com's homepage as a concept" or "make this homepage feel less flat". The skill triggers on its own. There are also three commands:
 
 - `/landing-page-studio:build <business or URL> [own|concept]` runs the full workflow up to the review point.
+- `/landing-page-studio:build <business or URL> own from poster-1` does the same, starting from one of the templates below.
 - `/landing-page-studio:verify <url>` runs every check and fixes what fails.
 - `/landing-page-studio:ship <build folder> [concept <slug>]` deploys and re-checks the live page.
+
+## Templates
+
+`templates/` holds 14 finished homepage templates in seven kinds of page: gallery, chaptered editorial, filmic one-shot, live surface (a form or planner that really works), typographic poster, rhythmic cutlist and continuous world. All of them are filled with one made-up studio's example content, so you can compare the designs side by side, and every one works at any scroll length. They're plain HTML, CSS and JS with no build step.
+
+They arrive with the marketplace install (in `~/.claude/plugins/marketplaces/landing-page-studio/templates/`; the preflight prints the exact folder), or clone this repo. The full list, and how to preview one or make it yours, is in [`templates/README.md`](templates/README.md).
 
 ## The check scripts
 
@@ -80,4 +87,4 @@ All of them take a URL, run headless Chrome, and exit non-zero on failure.
 
 ## Credits
 
-The scroll engine, page grammars and brief method are ScrollCraft by Nate Herk ([nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft), MIT). The polish pass is unslop by Damir Sokolovsky ([@heydamir](https://x.com/heydamir), CC BY 4.0). Search checks come from claude-seo by AgriciDaniel and geo-optimizer, and section patterns from 21st.dev. Nate Herk's "build it before you ask" idea shapes the concept-sample flow. This plugin is MIT; see `LICENSE`.
+The scroll engine, page grammars and brief method are ScrollCraft by Nate Herk ([nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft), MIT). The templates ship its runtime (`scrollcraft.js`, `scrollcraft.css`) under that MIT licence. The polish pass is unslop by Damir Sokolovsky ([@heydamir](https://x.com/heydamir), CC BY 4.0). Search checks come from claude-seo by AgriciDaniel and geo-optimizer, and section patterns from 21st.dev. Nate Herk's "build it before you ask" idea shapes the concept-sample flow. This plugin is MIT; see `LICENSE`.

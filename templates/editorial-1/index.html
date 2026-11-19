@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio in Lowmere</title>
+<meta name="description" content="Mosswick Studio is a creative and marketing studio in Lowmere: brand strategy and identity, websites, social content, film, campaigns and paid media.">
+<meta name="theme-color" content="#F1E9DC">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta property="og:description" content="Brands worth remembering. Marketing that pays back. A Lowmere studio of 32 people for brands such as Plumtide, Kilnmark and Gearfinch.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta name="twitter:description" content="Brands worth remembering. Marketing that pays back. A Lowmere studio of 32 people for brands such as Plumtide, Kilnmark and Gearfinch.">
+
+<script>
+(function () {
+  var d = document.documentElement;
+  d.classList.add('js');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    d.classList.add('pre-reveal');
+    setTimeout(function () { d.classList.remove('pre-reveal'); }, 2600);
+  }
+})();
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/geist-semibold.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-serif-italic.woff2" crossorigin>
+<link rel="stylesheet" href="scrollcraft.css">
+
+
+<style>
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-semibold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("assets/fonts/instrument-serif-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+
+/* Colour tokens: one palette, six chapter grounds. */
+:root {
+  /* palette: Night Kiln (bg #16130F, surface #231E18, ink #F1E9DC, muted #A89D8C, accent #E0763C, accent ink #16130F) */
+  --mark-dark: #4A4038;      /* the dark half of the mark, the bar, the dim chapter */
+  --mark: #E0763C;           /* the accent half of the mark, full stops, links on dark */
+  --accent-ground: #E0763C;  /* chapter 1 ground */
+  --warm: #F2B48A;           /* chapter 3 ground, a light tint of the accent */
+  --dark: #16130F;           /* colophon ground */
+  --paper: #F1E9DC;          /* title page ground */
+  --ink: #16130F;
+  --ink-soft: #5A4F44;
+
+  --sc-canvas: #F1E9DC;
+  --sc-surface: #FBF7F0;
+  --sc-ink: #16130F;
+  --sc-ink-soft: #5A4F44;
+  --sc-accent: #E0763C;
+  --sc-accent-ink: #16130F;
+
+  --sys: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --sc-font-display: var(--sys);
+  --sc-font-text: var(--sys);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --gut: clamp(16px, 5vw, 88px);
+  --ear-max: clamp(104px, 11vw, 168px);
+  color-scheme: light;
+}
+html { scroll-padding-top: 12px; }
+body { background: var(--paper); color: var(--sc-ink); font-family: var(--sys); }
+h1, h2, h3 { font-family: var(--sys); }
+a { color: inherit; }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 100; background: #FBF7F0; color: #16130F; padding: 10px 14px; border-radius: 6px; }
+.skip:focus { top: 12px; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.caps { font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; }
+
+/* ---------- chapters: one ground each, hard cuts ---------- */
+.ch {
+  position: relative; background: var(--bg); color: var(--fg); overflow-x: clip;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--gut) calc(var(--ear-max) + 1rem);
+  --focus: var(--fg);
+}
+.ch :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.g-paper  { --bg: var(--paper); --fg: #16130F; --soft: #5A4F44; --display: #16130F; --rule: rgba(22,19,15,.2); --stop: var(--mark); --block: var(--accent-ground); --focus: #A3461A; --flap-a: #DDD3C3; --flap-b: #EAE1D2; }
+.g-accent { --bg: var(--accent-ground); --fg: #16130F; --soft: #16130F; --display: #16130F; --rule: rgba(22,19,15,.28); --stop: var(--mark-dark); --block: #16130F; --focus: #16130F; --flap-a: #B85A28; --flap-b: #CC6731; }
+.g-light  { --bg: #E6DCCB; --fg: #16130F; --soft: #5A4F44; --display: #16130F; --rule: rgba(22,19,15,.16); --stop: var(--mark); --block: var(--accent-ground); --focus: #A3461A; --flap-a: #CFC4B1; --flap-b: #DDD2C0; }
+.g-warm   { --bg: var(--warm); --fg: #16130F; --soft: #3B3027; --display: #16130F; --rule: rgba(22,19,15,.26); --stop: var(--mark-dark); --block: #16130F; --focus: #16130F; --flap-a: #D4946A; --flap-b: #E5A47A; }
+.g-dim    { --bg: var(--mark-dark); --fg: #F1E9DC; --soft: #DDD3C4; --display: #F1E9DC; --rule: rgba(241,233,220,.3); --stop: var(--mark); --block: var(--mark); --focus: #F1E9DC; --flap-a: #352D27; --flap-b: #423931; }
+.g-dark   { --bg: var(--dark); --fg: #F1E9DC; --soft: #A89D8C; --display: #F1E9DC; --rule: rgba(241,233,220,.22); --stop: var(--mark); --block: var(--mark); --focus: var(--mark); }
+
+.ch__head { margin: 0 0 clamp(2.5rem, 6vw, 5rem); max-width: 82rem; position: relative; z-index: 2; }
+.ch__kicker { margin: 0 0 1rem; color: var(--fg); }
+.ch__title {
+  margin: 0 0 0 -.05em; font-size: clamp(3.6rem, 10.4vw, 10rem); line-height: .92; letter-spacing: -.045em; font-weight: 600;
+  color: var(--display); text-wrap: balance;
+}
+.stop { display: inline-block; width: .19em; height: .19em; margin-left: .04em; border-radius: 50%; background: var(--stop); color: transparent; overflow: hidden; vertical-align: baseline; line-height: 0; }
+.ch__deck {
+  margin: 1.25rem 0 0; max-width: 34ch; text-wrap: balance; font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: clamp(1.45rem, 1rem + 1.3vw, 2.2rem); line-height: 1.12; letter-spacing: -.005em; color: var(--fg);
+}
+@media (min-width: 900px) { .ch__deck { margin-left: auto; margin-right: 6vw; text-align: left; } }
+
+/* the intertitle sweep: a block crosses the line, the type is there when it lifts */
+.sweep { position: relative; display: inline-block; }
+@media (prefers-reduced-motion: no-preference) {
+  html.js .sweep__text { opacity: 0; }
+  html.js .sweep::after {
+    content: ""; position: absolute; left: -.03em; right: -.03em; top: .08em; bottom: .04em; background: var(--block);
+    clip-path: inset(0 100% 0 0);
+  }
+  html.js .sweep.on::after { animation: sweep 1s var(--ease) forwards; }
+  html.js .sweep.on .sweep__text { animation: sweep-text .01s linear .42s forwards; }
+}
+@keyframes sweep { 0% { clip-path: inset(0 100% 0 0); } 42% { clip-path: inset(0 0 0 0); } 58% { clip-path: inset(0 0 0 0); } 100% { clip-path: inset(0 0 0 100%); } }
+@keyframes sweep-text { to { opacity: 1; } }
+
+/* ---------- the folio: chapter number and title in the margin ---------- */
+.folio {
+  position: fixed; z-index: 60; left: 0; top: 50%; transform: translateY(-50%);
+  font: 600 .7rem/1 var(--sys); letter-spacing: .15em; text-transform: uppercase;
+  --f-bg: var(--paper); --f-fg: #16130F; --f-rule: rgba(22,19,15,.24);
+  color: var(--f-fg);
+}
+.folio[data-ground="accent"] { --f-bg: var(--accent-ground); --f-fg: #16130F; --f-rule: rgba(22,19,15,.3); }
+.folio[data-ground="light"]  { --f-bg: #E6DCCB; --f-fg: #16130F; }
+.folio[data-ground="warm"]   { --f-bg: var(--warm); --f-fg: #16130F; }
+.folio[data-ground="dim"]    { --f-bg: var(--mark-dark); --f-fg: #F1E9DC; --f-rule: rgba(241,233,220,.34); }
+.folio[data-ground="dark"]   { --f-bg: var(--dark); --f-fg: #F1E9DC; --f-rule: rgba(241,233,220,.3); }
+.folio summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 1rem;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  padding: 1rem .75rem; min-width: 44px; color: var(--f-fg); background: var(--f-bg); transition: color .25s var(--ease), background-color .25s var(--ease);
+}
+.folio summary::-webkit-details-marker { display: none; }
+.folio summary:focus-visible { outline: 2px solid var(--f-fg); outline-offset: -2px; }
+.folio__brand { opacity: 1; }
+.folio__sep { display: inline-block; width: 1px; height: 1.6rem; background: var(--f-rule); }
+.folio__num { font-variant-numeric: tabular-nums; }
+.folio__list {
+  position: absolute; left: 100%; top: 50%; transform: translateY(-50%); margin: 0; padding: .5rem 0; list-style: none; min-width: 15rem;
+  background: var(--f-bg); color: var(--f-fg); border: 1px solid var(--f-rule); border-radius: 4px;
+  box-shadow: 0 12px 28px -14px rgba(0,0,0,.45), 0 2px 6px rgba(0,0,0,.08);
+  letter-spacing: .08em;
+}
+.folio:not([open]) .folio__list { display: none; }
+.folio__list a { display: flex; gap: .75rem; padding: .75rem 1rem; text-decoration: none; color: inherit; }
+.folio__list a span { width: 1rem; font-variant-numeric: tabular-nums; }
+.folio__list a[aria-current="true"] { text-decoration: underline; text-underline-offset: .35em; }
+@media (hover: hover) and (pointer: fine) { .folio__list a:hover { text-decoration: underline; text-underline-offset: .35em; } }
+
+/* ---------- title page ---------- */
+.ch--title {
+  min-height: 100svh; display: flex; flex-direction: column; justify-content: center;
+  padding-top: clamp(1.5rem, 4vh, 3rem); padding-bottom: calc(var(--ear-max) * .92);
+}
+.scene {
+  position: relative; container-type: inline-size; margin: 0 auto; width: var(--scene-w, min(100%, 1360px));
+  aspect-ratio: 284 / 130;
+  --u: calc(100cqw / 284);
+}
+.eyebrow {
+  margin: 0; position: absolute; z-index: 4; left: calc(130 * var(--u)); top: calc(6.5 * var(--u));
+  font-size: max(.7rem, calc(3.1 * var(--u))); line-height: 1.5; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: #16130F;
+}
+.eyebrow span { display: block; }
+.eyebrow span + span { color: #5A4F44; }
+
+/* the mark as a 3D object: the two glyphs and the bar are stacked slices along the depth axis. The front slice keeps
+   the mark's two colours; the slices behind are darker shades of the same two colours, so the sides read as shading.
+   Every box is placed in a 284 x 130 unit grid. */
+.logo-plane {
+  position: absolute; inset: 0; z-index: 1;
+  perspective: calc(var(--u) * 330); perspective-origin: 20% 60%;
+  --rx: 14deg; --ry: 26deg; --dz: calc(var(--u) * .62);
+}
+.b3 { position: absolute; inset: 0; transform-style: preserve-3d; transform-origin: 0% 100%; }
+.block-swing { transform: rotateX(var(--rx)) rotateY(var(--ry)); }
+.block-grow { transform: scaleZ(1); }
+.lp { position: absolute; display: block; transform-style: preserve-3d; }
+.lp svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.clip-a { left: calc(4.5 * var(--u)); top: calc(6.5 * var(--u)); width: calc(57.25 * var(--u)); height: calc(107 * var(--u)); }
+.clip-b { left: calc(62.75 * var(--u)); top: calc(6.5 * var(--u)); width: calc(57.25 * var(--u)); height: calc(107 * var(--u)); }
+.ga, .gb { position: absolute; inset: 0; transform-style: preserve-3d; }
+.ga, .bar { --c: var(--mark-dark); }
+.gb { --c: var(--mark); transform: translateZ(.3px); }
+.ly { position: absolute; inset: 0; background: color-mix(in srgb, var(--c), #000 calc(14% + var(--i) * 1.2%)); transform: translateZ(calc(var(--i) * var(--dz) * -1)); }
+.ly0 { background: var(--c); }
+.ga .ly { -webkit-mask: url("assets/glyph-a.svg") 0 0 / 100% 100% no-repeat; mask: url("assets/glyph-a.svg") 0 0 / 100% 100% no-repeat; }
+.gb .ly { -webkit-mask: url("assets/glyph-b.svg") 0 0 / 100% 100% no-repeat; mask: url("assets/glyph-b.svg") 0 0 / 100% 100% no-repeat; }
+.bar { left: calc(48 * var(--u)); top: calc(71.5 * var(--u)); width: calc(228 * var(--u)); height: calc(18 * var(--u)); transform-origin: 0 50%; }
+.word { left: calc(126 * var(--u)); top: calc(89.5 * var(--u)); width: calc(154 * var(--u)); height: calc(34 * var(--u)); }
+.rule { left: calc(4 * var(--u)); top: calc(126.1 * var(--u)); width: calc(276 * var(--u)); height: calc(2 * var(--u)); background: var(--mark); transform-origin: 0 50%; }
+
+/* the headline sits on its own plane facing the reader; its two full stops are dots on a true diagonal,
+   lifted off the page at three depths with soft shadows under them */
+.hl {
+  position: absolute; z-index: 3; margin: 0; right: calc(8 * var(--u));
+  top: calc(69.75 * var(--u) - var(--bl) - 1.5675em);
+  font-size: calc(12.6 * var(--u)); line-height: 1.1282; letter-spacing: -.028em; font-weight: 600; color: #16130F;
+  width: max-content; --bl: .92em;
+}
+.hl__line { display: block; text-align: right; white-space: nowrap; }
+.hl__line--1 { padding-right: 1.32em; }
+.hl__line--2 { padding-right: 2.35em; }
+.dots { position: absolute; left: calc(100% - 6.6495em); top: calc(var(--bl) - .7352em); width: 0; height: 0; z-index: 2; perspective: 9em; perspective-origin: 5.2em 1.1em; transform-style: preserve-3d; }
+.dot { position: absolute; width: .72em; height: .72em; transform-style: preserve-3d; --dc: var(--mark-dark); }
+.dot span { position: absolute; inset: 0; display: block; border-radius: 50%; }
+.dot__ds, .dot__dl { transform-style: preserve-3d; }
+.dot__dl { transform: translateZ(var(--z)); }
+.dot__face { background: var(--dc); }
+.dot__shi { background: radial-gradient(closest-side, rgba(22,19,15,.28), rgba(22,19,15,0)); transform: translate(calc(var(--z) * .5), calc(var(--z) * .8)) scale(1.3); }
+.dot--1 { left: 5.9293em; top: .0152em; --z: .5em; }
+.dot--2 { left: 5.3652em; top: .5793em; --dc: var(--mark); --z: .14em; }
+.dot--3 { left: 4.8011em; top: 1.1434em; --z: .32em; }
+.dot--5 { left: 5.9293em; top: 1.1434em; --z: .5em; }
+.dot--4 { left: 4.3618em; top: 1.7291em; width: .5736em; height: .5736em; --dc: var(--mark); --z: .14em; }
+
+.hero-foot { width: var(--scene-w, min(100%, 1360px)); margin: clamp(.75rem, 2vh, 1.5rem) auto 0; display: flex; justify-content: flex-start; position: relative; z-index: 2; }
+.hero-link {
+  display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; font-weight: 600; font-size: 1.05rem;
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .3em; color: #16130F;
+}
+.hero-link::after { content: ""; width: .5em; height: .5em; border-radius: 50%; background: var(--mark); }
+@media (hover: hover) and (pointer: fine) { .hero-link:hover { text-decoration-thickness: 2px; } }
+
+/* the reveal: the bar draws, the two glyphs rise from behind it, the dots climb the diagonal, the line settles,
+   then the block swings from face-on into a three-quarter view and the dots lift off the page.
+   On scroll the camera turns the block back face-on and flattens it as chapter 1 arrives; the dots land as full stops.
+   Every scroll move is a CSS scroll-driven animation; no script writes a transform on scroll. */
+@media (prefers-reduced-motion: no-preference) {
+  .bar, .rule { transition: transform .46s var(--ease); }
+  .bar { transition-delay: .04s; }
+  .rule { transition-delay: .16s; }
+  .ga, .gb { transition: transform .56s var(--ease); }
+  .ga { transition-delay: .18s; }
+  .gb { transition-delay: .25s; }
+  html.rising .clip-a, html.rising .clip-b { clip-path: inset(-3% -3% -3% -3%); transition: clip-path .24s var(--ease) .66s; }
+  .word { transition: opacity .5s var(--ease) .78s, transform .5s var(--ease) .78s; }
+  .eyebrow { transition: opacity .5s var(--ease) .12s, transform .5s var(--ease) .12s; }
+  .hl__line { transition: opacity .54s var(--ease), transform .54s var(--ease); }
+  .hl__line--1 { transition-delay: .36s; }
+  .hl__line--2 { transition-delay: .44s; }
+  .block-swing, .block-grow { transition: transform .8s var(--ease) .95s; }
+  .dot__face { transition: opacity .3s var(--ease), transform .4s var(--ease); }
+  .dot--4 .dot__face { transition-delay: .6s; }
+  .dot--3 .dot__face { transition-delay: .68s; }
+  .dot--2 .dot__face { transition-delay: .76s; }
+  .dot--1 .dot__face { transition-delay: .84s; }
+  .dot--5 .dot__face { transition-delay: .92s; }
+  .dot__dl { transition: transform .8s var(--ease) 1s; }
+  .dot__shi { transition: opacity .6s var(--ease) 1s, transform .8s var(--ease) 1s; }
+  .hero-link { transition: opacity .5s var(--ease) .9s; }
+  html.pre-reveal .bar, html.pre-reveal .rule { transform: scaleX(0); }
+  html.pre-reveal .ga { transform: translateY(61%); }
+  html.pre-reveal .gb { transform: translateY(61%) translateZ(.3px); }
+  html.pre-reveal .clip-a { clip-path: inset(-3% -3% 39.25% -3%); }
+  html.pre-reveal .clip-b { clip-path: inset(-3% -3% 39.25% -3%); }
+  html.pre-reveal .block-swing { transform: rotateX(0deg) rotateY(0deg); }
+  html.pre-reveal .block-grow { transform: scaleZ(.001); }
+  html.pre-reveal .word, html.pre-reveal .eyebrow { opacity: 0; transform: translateY(.4em); }
+  html.pre-reveal .hl__line { opacity: 0; transform: translateY(.28em); }
+  html.pre-reveal .dot__face { opacity: 0; transform: translate(-.56em, .56em) scale(.6); }
+  html.pre-reveal .dot--5 .dot__face { transform: translate(-1.128em, 0); }
+  html.pre-reveal .dot__dl { transform: translateZ(0); }
+  html.pre-reveal .dot__shi { opacity: 0; transform: translate(0, 0) scale(1.3); }
+  html.pre-reveal .hero-link { opacity: 0; }
+
+  html.sda .block-scroll { animation: hero-turn linear both; animation-timeline: scroll(root block); animation-range: var(--hero-a, 0px) var(--hero-b, 1px); }
+  html.sda .block-flat { animation: hero-flat linear both; animation-timeline: scroll(root block); animation-range: var(--hero-a, 0px) var(--hero-b, 1px); }
+  html.sda .dot__ds { animation: dot-land linear both; animation-timeline: scroll(root block); animation-range: var(--hero-a, 0px) var(--hero-b, 1px); }
+  html.sda .dot__sh { animation: shadow-land linear both; animation-timeline: scroll(root block); animation-range: var(--hero-a, 0px) var(--hero-b, 1px); }
+}
+@keyframes hero-turn { from { transform: rotateY(0deg) rotateX(0deg); } to { transform: rotateY(calc(var(--ry) * -1)) rotateX(calc(var(--rx) * -1)); } }
+@keyframes hero-flat { from { transform: scaleZ(1); } to { transform: scaleZ(.001); } }
+@keyframes dot-land { from { transform: translateZ(0); } to { transform: translateZ(calc(var(--z) * -1)); } }
+@keyframes shadow-land { from { transform: translate(0, 0); opacity: 1; } to { transform: translate(calc(var(--z) * -.5), calc(var(--z) * -.8)); opacity: 0; } }
+
+/* ---------- the signature: each chapter's page lifts from its corner on a diagonal hinge ---------- */
+.ear { position: absolute; right: 0; bottom: 0; z-index: 5; width: var(--ear-max); height: var(--ear-max); display: block; text-decoration: none; }
+.ear__grow, .ear__lift, .ear__under, .ear__drop, .ear__hinge, .ear__front, .ear__back { position: absolute; inset: 0; display: block; }
+.ear__grow { transform-origin: 100% 100%; }
+.ear__lift { transform-origin: 100% 100%; perspective: calc(var(--ear-max) * 2.4); perspective-origin: 50% 50%; transition: transform .32s var(--ease); }
+.ear__under { background: var(--next-bg); color: var(--next-fg); clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.ear__under::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,.42) 50%, rgba(0,0,0,0) 76%); opacity: .2; }
+.ear__label {
+  position: absolute; right: 10%; bottom: 9%; text-align: right; width: 58%;
+  font: 600 clamp(.625rem, .5rem + .35vw, .8rem)/1.15 var(--sys); letter-spacing: 0;
+}
+.ear__label small { display: block; margin-bottom: .2em; font-size: .78em; letter-spacing: .14em; text-transform: uppercase; }
+/* the soft physical shadow the turned page throws on the page under it */
+.ear__drop { background: linear-gradient(135deg, rgba(0,0,0,.34) 49%, rgba(0,0,0,0) 51%); filter: blur(6px); transform: translate(-4px, 6px); opacity: .5; }
+.ear__hinge { transform-style: preserve-3d; transform-origin: 50% 50%; transform: rotate3d(1, -1, 0, 168deg); }
+.ear__front { clip-path: polygon(100% 0, 100% 100%, 0 100%); background: var(--bg); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.ear__front::after { content: ""; position: absolute; inset: 0; background: linear-gradient(315deg, rgba(0,0,0,.3), rgba(0,0,0,0) 62%); opacity: 1; }
+.ear__back {
+  clip-path: polygon(0 0, 100% 0, 0 100%); backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  background: linear-gradient(135deg, var(--flap-a) 0%, var(--flap-b) 46%, var(--flap-b) 50%);
+  transform: rotate3d(1, -1, 0, 180deg);
+}
+.ear:focus-visible { outline: 2px solid var(--focus); outline-offset: -6px; }
+@media (hover: hover) and (pointer: fine) { .ear:hover .ear__lift { transform: scale(1.04); } }
+@media (prefers-reduced-motion: no-preference) {
+  html.sda .ear__grow { animation: ear-grow linear both; animation-timeline: scroll(root block); animation-range: var(--ear-a, 0px) var(--ear-b, 1px); }
+  html.sda .ear__hinge { animation: ear-turn linear both; animation-timeline: scroll(root block); animation-range: var(--ear-a, 0px) var(--ear-b, 1px); }
+  html.sda .ear__under { animation: ear-show linear both; animation-timeline: scroll(root block); animation-range: var(--ear-a, 0px) var(--ear-b, 1px); }
+  html.sda .ear__under::after { animation: ear-crease linear both; animation-timeline: scroll(root block); animation-range: var(--ear-a, 0px) var(--ear-b, 1px); }
+  html.sda .ear__drop { animation: ear-drop linear both; animation-timeline: scroll(root block); animation-range: var(--ear-a, 0px) var(--ear-b, 1px); }
+  html.sda .ear__front::after { animation: ear-shade linear both; animation-timeline: scroll(root block); animation-range: var(--ear-a, 0px) var(--ear-b, 1px); }
+}
+/* the label under the corner is text, so it is not scrubbed: it fades in once the flap has turned past edge-on */
+@media (prefers-reduced-motion: no-preference) {
+  html.sda .ear__label { transition: opacity .25s var(--ease); }
+  html.sda .ear:not(.read) .ear__label { opacity: 0; }
+}
+@keyframes ear-grow { from { transform: scale(.42); } to { transform: scale(1); } }
+@keyframes ear-show { 0% { opacity: 0; } 5% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ear-turn { from { transform: rotate3d(1, -1, 0, 0deg); } to { transform: rotate3d(1, -1, 0, 168deg); } }
+@keyframes ear-crease { 0% { opacity: 0; } 45% { opacity: .9; } 100% { opacity: .2; } }
+@keyframes ear-drop { 0%, 55% { opacity: 0; } 100% { opacity: .5; } }
+@keyframes ear-shade { 0% { opacity: 0; } 55% { opacity: 1; } 100% { opacity: 1; } }
+@media (max-width: 700px) { .ear__label small { display: none; } }
+
+/* ---------- chapter 1: we make ---------- */
+.spread { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 5.5rem); max-width: 82rem; }
+.lede p { margin: 0 0 1rem; font-size: clamp(1.02rem, .95rem + .3vw, 1.18rem); line-height: 1.6; max-width: 42ch; text-wrap: pretty; }
+.lede .answer { font-size: clamp(1.25rem, 1.05rem + .7vw, 1.6rem); line-height: 1.4; letter-spacing: -.012em; font-weight: 500; max-width: 30ch; }
+.motto { margin: 2rem 0 0; padding: 1.25rem 0 0; border-top: 1px solid var(--rule); max-width: 34ch; }
+.motto p { margin: 0; font-size: 1.05rem; line-height: 1.5; font-weight: 600; }
+.motto cite { display: block; margin-top: .5rem; font-style: normal; font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; }
+.svc { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule); }
+.svc li { display: grid; grid-template-columns: minmax(0, 12rem) minmax(0, 1fr); gap: .5rem 2rem; padding: 1.5rem 0; border-top: 1px solid var(--rule); }
+.svc h3 { margin: 0; font-size: clamp(1.2rem, 1rem + .6vw, 1.55rem); line-height: 1.15; letter-spacing: -.018em; font-weight: 600; color: var(--display); }
+.svc p { margin: 0; font-size: 1rem; line-height: 1.58; text-wrap: pretty; }
+.svc .subs { grid-column: 2; margin-top: .25rem; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; line-height: 1.7; }
+.count { display: inline-block; min-width: 3ch; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* ---------- chapter 2: the client index on a tilted plane that turns face-on ---------- */
+.wall { position: relative; z-index: 1; --wall-drop: clamp(80px, 16vw, 220px); perspective: 1600px; perspective-origin: 50% 10%; overflow-x: clip; margin-inline: calc(-1 * var(--gut)); padding: 1rem var(--gut) 2rem; }
+.wall__tilt { transform-origin: 50% 0%; }
+.index { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(8px, 1vw, 16px); max-width: 92rem; }
+.cell, .index__note {
+  background: #FBF7F0; border-radius: 6px; min-height: clamp(9rem, 13vw, 12.5rem);
+  box-shadow: 0 1px 2px rgba(22,19,15,.08), 0 16px 30px -18px rgba(22,19,15,.42);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; padding: 1rem .75rem 1rem; text-align: center;
+}
+.cell img { display: block; width: min(100%, 150px); height: auto; aspect-ratio: 225 / 120; object-fit: contain; }
+.cell__name { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: #5A4F44; line-height: 1.35; max-width: 16ch; }
+.cell__link { font-size: .72rem; font-weight: 600; color: #16130F; text-decoration: underline; text-underline-offset: .25em; }
+.index__note { grid-column: span 4; align-items: flex-start; text-align: left; padding: 1.25rem 1.5rem; }
+.index__note p { margin: 0; font-size: clamp(1rem, .9rem + .3vw, 1.15rem); line-height: 1.5; color: #16130F; max-width: 30ch; }
+.index__note p + p { margin-top: .5rem; color: #5A4F44; font-size: .9rem; }
+@media (prefers-reduced-motion: no-preference) {
+  html.sda .wall__tilt { animation: wall-flat linear both; animation-timeline: scroll(root block); animation-range: var(--wall-a, 0px) var(--wall-b, 1px); }
+  html.sda .cell { animation: drift-a linear both; animation-timeline: scroll(root block); animation-range: var(--wall-a, 0px) var(--wall-b, 1px); }
+  html.sda .cell.oc { animation-name: drift-b; }
+}
+@keyframes wall-flat { from { transform: translateY(var(--wall-drop, 140px)) rotateX(48deg) rotateZ(-45deg) scale(.8); } to { transform: translateY(0px) rotateX(0deg) rotateZ(0deg) scale(1); } }
+@keyframes drift-a { from { transform: translateY(90px); } to { transform: translateY(0); } }
+@keyframes drift-b { from { transform: translateY(-90px); } to { transform: translateY(0); } }
+
+/* ---------- chapter 3: they stay ---------- */
+.pull { margin: 0 0 clamp(3rem, 6vw, 5rem); max-width: 64rem; }
+.pull blockquote { margin: 0; position: relative; }
+.pull blockquote::before { content: "\201C"; position: absolute; left: -.46em; top: 0; font-size: clamp(1.9rem, 1.2rem + 2.9vw, 4.1rem); line-height: 1.08; font-weight: 600; color: #16130F; }
+.pull p { margin: 0; font-size: clamp(1.9rem, 1.2rem + 2.9vw, 4.1rem); line-height: 1.08; letter-spacing: -.03em; font-weight: 600; text-wrap: balance; }
+.pull figcaption { margin-top: 1.25rem; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; }
+.kl { display: block; overflow: hidden; padding-bottom: .12em; margin-bottom: -.12em; }
+.kl > span { display: block; }
+@media (prefers-reduced-motion: no-preference) {
+  html.js .pull.split .kl > span { transform: translateY(105%); }
+  html.js .pull.split.on .kl > span { transform: none; transition: transform .8s var(--ease) var(--d, 0ms); }
+}
+.quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); max-width: 82rem; align-items: start; perspective: 1400px; perspective-origin: 50% 0%; transform-style: preserve-3d; }
+/* three sheets of paper set back in depth along a diagonal; each flies forward to the page once it comes into view (triggered, not scrubbed) */
+.q {
+  background: #FBF7F0; color: #16130F; border-radius: 4px; padding: clamp(1.25rem, 2.4vw, 2rem); transform-origin: 50% 100%;
+  box-shadow: 0 2px 4px rgba(22,19,15,.10), 0 28px 46px -24px rgba(22,19,15,.48);
+}
+@media (min-width: 1101px) { .q:nth-child(2) { margin-top: 4.5rem; } .q:nth-child(3) { margin-top: 9rem; } }
+@media (prefers-reduced-motion: no-preference) {
+  html.js .q { transform: translate3d(0, 70px, -380px) rotateX(24deg) rotateY(-14deg); }
+  html.js .q.on { transform: none; transition: transform .6s var(--ease) var(--qd, 0ms); }
+}
+.q h3 { margin: 0 0 1rem; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; line-height: 1.5; }
+.q blockquote { margin: 0; }
+.q blockquote p { margin: 0; font-size: 1.02rem; line-height: 1.62; text-wrap: pretty; }
+.q__by { margin: 1rem 0 0; font-size: .9rem; line-height: 1.45; }
+.q__by b { display: block; font-weight: 600; }
+.q__by span { color: #4A4038; }
+
+/* ---------- chapter 4: who makes it ---------- */
+.people { list-style: none; margin: 0; padding: 0; max-width: 82rem; display: grid; gap: clamp(2.5rem, 5vw, 4rem); }
+.person { display: grid; grid-template-columns: minmax(0, 9rem) minmax(0, 1fr); gap: clamp(1.25rem, 3.5vw, 3.5rem); align-items: start; border-top: 1px solid var(--rule); padding-top: clamp(1.5rem, 3vw, 2.25rem); }
+@media (min-width: 900px) { .person { grid-template-columns: minmax(0, 9rem) minmax(0, 16rem) minmax(0, 1fr); } }
+/* tablets (701 to 899 px): the bio sits beside the portrait, under the name, not in the narrow first column */
+@media (min-width: 701px) and (max-width: 899px) { .person figure { grid-row: 1 / span 2; } .person__name, .person__bio { grid-column: 2; } }
+.person figure { margin: 0; }
+.frame { width: 140px; aspect-ratio: 7 / 10; overflow: hidden; background: #2A231D; box-shadow: 0 10px 22px -14px rgba(0,0,0,.6); }
+.frame img { width: 100%; height: 100%; object-fit: cover; }
+.person figcaption { margin-top: .5rem; font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--soft); line-height: 1.45; max-width: 140px; }
+.person h3 { margin: 0; font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.3rem); line-height: 1.05; letter-spacing: -.025em; font-weight: 600; }
+.person__role { margin: .5rem 0 0; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--soft); }
+.person__bio p { margin: 0 0 1rem; font-size: 1.02rem; line-height: 1.62; max-width: 58ch; text-wrap: pretty; }
+.person__bio a { font-size: .9rem; font-weight: 600; text-underline-offset: .25em; }
+.person--lead .person__bio p:first-child { font-size: clamp(1.15rem, 1rem + .45vw, 1.35rem); line-height: 1.45; }
+/* portraits and names on separate planes: on desktop the portrait drifts slower and turns in its frame, the name faster; the bio holds still */
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .person figure { perspective: 700px; }
+  html.sda .person figure { animation: plane-back linear both; animation-timeline: scroll(root block); animation-range: var(--p-a, 0px) var(--p-b, 1px); }
+  html.sda .person__name { animation: plane-front linear both; animation-timeline: scroll(root block); animation-range: var(--p-a, 0px) var(--p-b, 1px); }
+  html.sda .frame { animation: frame-turn linear both; animation-timeline: scroll(root block); animation-range: var(--p-a, 0px) var(--p-b, 1px); }
+}
+@keyframes plane-back { from { transform: translateY(44px); } to { transform: translateY(-44px); } }
+@keyframes plane-front { from { transform: translateY(-18px); } to { transform: translateY(18px); } }
+@keyframes frame-turn { from { transform: rotateY(18deg) rotateX(6deg); } 50% { transform: rotateY(0deg) rotateX(0deg); } to { transform: rotateY(-18deg) rotateX(-6deg); } }
+
+/* ---------- colophon ---------- */
+.ch--colophon { padding-bottom: clamp(5rem, 9vw, 7rem); }
+.colo { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(2rem, 5vw, 5rem); max-width: 82rem; }
+.colo__mark .wm { display: block; width: min(100%, 280px); aspect-ratio: 439 / 76.8; background: var(--fg); -webkit-mask: url("assets/wordmark.svg") left center / contain no-repeat; mask: url("assets/wordmark.svg") left center / contain no-repeat; }
+.colo__label { margin: 0 0 1rem; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--soft); }
+.colo__cta { margin: 0; font-size: clamp(1.35rem, 1.05rem + 1vw, 2rem); line-height: 1.35; letter-spacing: -.015em; font-weight: 500; max-width: 34ch; }
+.colo__cta a { color: var(--mark); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; white-space: nowrap; }
+.colo__rows { margin: clamp(2rem, 4vw, 3rem) 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 2.5rem; }
+.colo__rows div { border-top: 1px solid var(--rule); padding-top: .75rem; }
+.colo__rows dt { font-size: .66rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--soft); margin-bottom: .5rem; }
+.colo__rows dd { margin: 0; font-size: .9rem; line-height: 1.55; }
+.colo__rows dd a { text-underline-offset: .22em; }
+.colo__rows .links a + a::before { content: " \00B7  "; display: inline-block; white-space: pre; text-decoration: none; }
+.colo__foot { max-width: 82rem; margin: clamp(3rem, 6vw, 4.5rem) 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .66rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--soft); }
+
+
+/* ---------- tablet and phone ---------- */
+@media (max-width: 1100px) {
+  .index { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .index__note { grid-column: span 2; }
+  .quotes { grid-template-columns: 1fr 1fr; }
+  .quotes .q:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 1000px) {
+  .folio { top: max(10px, env(safe-area-inset-top)); left: auto; right: 10px; transform: none; }
+  .folio summary { writing-mode: horizontal-tb; transform: none; padding: .5rem .75rem; min-height: 40px; background: var(--f-bg); border: 1px solid var(--f-rule); border-radius: 4px; gap: .5rem; font-size: .62rem; }
+  .folio__sep { width: 1px; height: .9rem; }
+  .folio__list { top: calc(100% + 6px); left: auto; right: 0; transform: none; }
+  .folio__brand { display: none; }
+  .folio { transition: transform .32s var(--ease); }
+  .folio.away:not([open]) { transform: translateY(calc(-100% - 16px)); }
+}
+@media (max-width: 860px) {
+  .spread { grid-template-columns: 1fr; }
+  .colo { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .ch { padding-top: 4.25rem; }
+  .ch__title { font-size: clamp(3.2rem, 15.5vw, 5rem); line-height: .95; }
+  .ch__deck { font-size: 1.45rem; }
+  .svc li { grid-template-columns: 1fr; }
+  .svc .subs { grid-column: 1; }
+  .index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cell img { width: min(100%, 140px); }
+  .quotes { grid-template-columns: 1fr; }
+  .person { grid-template-columns: 1fr; }
+  .person figure { display: grid; grid-template-columns: 112px 1fr; gap: 1rem; align-items: end; }
+  .frame { width: 112px; }
+  .person figcaption { margin: 0; }
+  .colo__rows { grid-template-columns: 1fr; }
+}
+/* phones and portrait tablets: the headline sits above the mark; same em geometry, so the dots cross the type by the same amount */
+@media (max-width: 700px), (orientation: portrait) and (max-width: 1100px) {
+  .ch--title { min-height: 0; justify-content: flex-start; padding-top: 4rem; }
+  .scene { aspect-ratio: auto; width: 100%; }
+  .eyebrow { position: static; font-size: .66rem; margin-bottom: 1rem; }
+  .hl { position: relative; right: auto; top: auto; margin: 0 0 0 auto; font-size: calc(24 * var(--u)); }
+  .logo-plane { position: relative; inset: auto; aspect-ratio: 284 / 130; container-type: inline-size; width: 100vw; margin: calc(12 * var(--u)) 0 0 calc(-1 * var(--gut)); }
+  .hero-foot { width: 100%; margin-top: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ear__lift, .hero-link { transition: none !important; }
+}
+/* the one call to action, visible on every screen; hides over the colophon, where it leads */
+.cta-fix { position: fixed; z-index: 61; top: 18px; right: 18px; display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; padding: 0 1.05rem; border-radius: 4px; background: #16130F; color: #F1E9DC; font: 600 .84rem/1 var(--sys); letter-spacing: .01em; text-decoration: none; transition: opacity .3s var(--ease), transform .3s var(--ease), background-color .2s var(--ease); }
+.cta-fix::before, .dock__main::before { content: ""; flex: none; width: .5em; height: .5em; border-radius: 50%; background: var(--mark); }
+@media (hover: hover) and (pointer: fine) { .cta-fix:hover { background: #2E2721; } }
+.cta-fix:focus-visible, .dock a:focus-visible { outline: 2px solid #A3461A; outline-offset: 2px; }
+body.at-contact .cta-fix { opacity: 0; transform: translateY(-10px); pointer-events: none; }
+.dock { display: none; }
+@media (max-width: 1000px) {
+  .cta-fix { display: none; }
+  .dock { display: flex; gap: 8px; position: fixed; z-index: 61; left: 0; right: 0; bottom: 0; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: #F1E9DC; border-top: 1px solid rgba(22,19,15,.16); transition: transform .32s var(--ease); }
+  .dock a { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; text-decoration: none; }
+  .dock__main { flex: 1; gap: .6rem; background: #16130F; color: #F1E9DC; font: 600 1rem/1 var(--sys); }
+  .dock__call { flex: none; width: 48px; border: 1px solid rgba(22,19,15,.32); color: #16130F; }
+  .dock__call svg { width: 20px; height: 20px; }
+  body.at-contact .dock { transform: translateY(110%); }
+}
+@media (prefers-reduced-motion: reduce) { .cta-fix, .dock { transition: none !important; } }
+</style>
+<noscript><style>[data-sc-in], [data-sc-stagger] > * { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body>
+<a class="skip" href="#ch1">Skip to chapter 1</a>
+
+<details class="folio" data-ground="paper">
+  <summary aria-label="Chapters of this page">
+    <span class="folio__brand">Mosswick Studio</span><span class="folio__sep" aria-hidden="true"></span><span class="folio__now"><span class="folio__num">M</span> <span class="folio__name">Title page</span></span>
+  </summary>
+  <ol class="folio__list">
+    <li><a href="#top"><span>&nbsp;</span>Title page</a></li>
+    <li><a href="#ch1"><span>1</span>We make</a></li>
+    <li><a href="#ch2"><span>2</span>We launch</a></li>
+    <li><a href="#ch3"><span>3</span>They stay</a></li>
+    <li><a href="#ch4"><span>4</span>Who makes it</a></li>
+    <li><a href="#contact"><span>&nbsp;</span>Colophon: start a project</a></li>
+  </ol>
+</details>
+
+<main>
+
+  <!-- TITLE PAGE: the mark opened up, the line set inside it -->
+  <section class="ch ch--title g-paper" id="top" data-sc-act="flow" data-folio="M|Title page" aria-labelledby="hl">
+    <div class="scene">
+      <p class="eyebrow"><span>Mosswick Studio</span><span>Creative and marketing studio, Lowmere</span></p>
+      <h1 class="hl" id="hl">
+        <span class="hl__line hl__line--1">Loud ideas, careful craft<span class="vh">.</span></span>
+        <span class="hl__line hl__line--2">Brands with a pulse<span class="vh">.</span></span>
+        <span class="dots" aria-hidden="true"><span class="dot dot--4"><span class="dot__sh"><span class="dot__shi"></span></span><span class="dot__ds"><span class="dot__dl"><span class="dot__face"></span></span></span></span><span class="dot dot--3"><span class="dot__sh"><span class="dot__shi"></span></span><span class="dot__ds"><span class="dot__dl"><span class="dot__face"></span></span></span></span><span class="dot dot--2"><span class="dot__sh"><span class="dot__shi"></span></span><span class="dot__ds"><span class="dot__dl"><span class="dot__face"></span></span></span></span><span class="dot dot--1"><span class="dot__sh"><span class="dot__shi"></span></span><span class="dot__ds"><span class="dot__dl"><span class="dot__face"></span></span></span></span><span class="dot dot--5"><span class="dot__sh"><span class="dot__shi"></span></span><span class="dot__ds"><span class="dot__dl"><span class="dot__face"></span></span></span></span></span>
+      </h1>
+      <div class="logo-plane" role="img" aria-label="The Mosswick mark as a solid object: the M split into a dark half and an orange half, a bar, and the mosswick wordmark">
+        <div class="b3 block-scroll"><div class="b3 block-swing"><div class="b3 block-flat"><div class="b3 block-grow">
+          <span class="lp bar" aria-hidden="true"><i class="ly" style="--i:15"></i><i class="ly" style="--i:14"></i><i class="ly" style="--i:13"></i><i class="ly" style="--i:12"></i><i class="ly" style="--i:11"></i><i class="ly" style="--i:10"></i><i class="ly" style="--i:9"></i><i class="ly" style="--i:8"></i><i class="ly" style="--i:7"></i><i class="ly" style="--i:6"></i><i class="ly" style="--i:5"></i><i class="ly" style="--i:4"></i><i class="ly" style="--i:3"></i><i class="ly" style="--i:2"></i><i class="ly" style="--i:1"></i><i class="ly ly0" style="--i:0"></i></span>
+          <span class="lp clip-a" aria-hidden="true"><span class="ga"><i class="ly" style="--i:15"></i><i class="ly" style="--i:14"></i><i class="ly" style="--i:13"></i><i class="ly" style="--i:12"></i><i class="ly" style="--i:11"></i><i class="ly" style="--i:10"></i><i class="ly" style="--i:9"></i><i class="ly" style="--i:8"></i><i class="ly" style="--i:7"></i><i class="ly" style="--i:6"></i><i class="ly" style="--i:5"></i><i class="ly" style="--i:4"></i><i class="ly" style="--i:3"></i><i class="ly" style="--i:2"></i><i class="ly" style="--i:1"></i><i class="ly ly0" style="--i:0"></i></span></span>
+          <span class="lp clip-b" aria-hidden="true"><span class="gb"><i class="ly" style="--i:15"></i><i class="ly" style="--i:14"></i><i class="ly" style="--i:13"></i><i class="ly" style="--i:12"></i><i class="ly" style="--i:11"></i><i class="ly" style="--i:10"></i><i class="ly" style="--i:9"></i><i class="ly" style="--i:8"></i><i class="ly" style="--i:7"></i><i class="ly" style="--i:6"></i><i class="ly" style="--i:5"></i><i class="ly" style="--i:4"></i><i class="ly" style="--i:3"></i><i class="ly" style="--i:2"></i><i class="ly" style="--i:1"></i><i class="ly ly0" style="--i:0"></i></span></span>
+          <span class="lp word" aria-hidden="true"><svg viewBox="0 0 435 72.8" preserveAspectRatio="xMinYMax meet"><path fill="#E0763C" d="M0 71.4V21.8H12.4V27.2H14.2Q15.5 24.7 18.5 22.9Q21.5 21 26.4 21Q31.7 21 34.9 23.1Q38.1 25.1 39.8 28.4H41.6Q43.3 25.2 46.4 23.1Q49.5 21 55.2 21Q59.8 21 63.5 23Q67.3 24.9 69.6 28.9Q71.8 32.8 71.8 38.8V71.4H59.2V39.7Q59.2 35.6 57.1 33.5Q55 31.5 51.2 31.5Q46.9 31.5 44.6 34.2Q42.2 37 42.2 42.1V71.4H29.6V39.7Q29.6 35.6 27.5 33.5Q25.4 31.5 21.6 31.5Q17.3 31.5 15 34.2Q12.6 37 12.6 42.1V71.4ZM105 72.8Q97.6 72.8 91.7 69.8Q85.8 66.8 82.4 61.1Q79 55.4 79 47.4V45.8Q79 37.8 82.4 32.1Q85.8 26.4 91.7 23.4Q97.6 20.4 105 20.4Q112.4 20.4 118.3 23.4Q124.2 26.4 127.6 32.1Q131 37.8 131 45.8V47.4Q131 55.4 127.6 61.1Q124.2 66.8 118.3 69.8Q112.4 72.8 105 72.8ZM105 61.6Q110.8 61.6 114.6 57.9Q118.4 54.1 118.4 47.1V46.1Q118.4 39.1 114.7 35.4Q110.9 31.6 105 31.6Q99.2 31.6 95.4 35.4Q91.6 39.1 91.6 46.1V47.1Q91.6 54.1 95.4 57.9Q99.2 61.6 105 61.6ZM159.2 72.8Q149.5 72.8 143.3 68.6Q137.1 64.4 135.8 56.6L147.4 53.6Q148.1 57.1 149.8 59.1Q151.4 61.1 153.9 62Q156.3 62.8 159.2 62.8Q163.6 62.8 165.7 61.2Q167.8 59.7 167.8 57.4Q167.8 55.1 165.8 53.9Q163.8 52.6 159.4 51.8L156.6 51.3Q151.4 50.3 147.1 48.6Q142.8 46.8 140.2 43.7Q137.6 40.6 137.6 35.7Q137.6 28.3 143 24.4Q148.4 20.4 157.2 20.4Q165.5 20.4 171 24.1Q176.5 27.8 178.2 33.8L166.5 37.4Q165.7 33.6 163.2 32Q160.8 30.4 157.2 30.4Q153.6 30.4 151.7 31.7Q149.8 32.9 149.8 35.1Q149.8 37.5 151.8 38.7Q153.8 39.8 157.2 40.4L160 40.9Q165.6 41.9 170.1 43.6Q174.7 45.2 177.3 48.2Q180 51.3 180 56.5Q180 64.3 174.3 68.6Q168.7 72.8 159.2 72.8ZM207.6 72.8Q197.9 72.8 191.7 68.6Q185.5 64.4 184.2 56.6L195.8 53.6Q196.5 57.1 198.2 59.1Q199.8 61.1 202.2 62Q204.7 62.8 207.6 62.8Q212 62.8 214.1 61.2Q216.2 59.7 216.2 57.4Q216.2 55.1 214.2 53.9Q212.2 52.6 207.8 51.8L205 51.3Q199.8 50.3 195.5 48.6Q191.2 46.8 188.6 43.7Q186 40.6 186 35.7Q186 28.3 191.4 24.4Q196.8 20.4 205.6 20.4Q213.9 20.4 219.4 24.1Q224.9 27.8 226.6 33.8L214.9 37.4Q214.1 33.6 211.6 32Q209.2 30.4 205.6 30.4Q202 30.4 200.1 31.7Q198.2 32.9 198.2 35.1Q198.2 37.5 200.2 38.7Q202.2 39.8 205.6 40.4L208.4 40.9Q214 41.9 218.6 43.6Q223.1 45.2 225.8 48.2Q228.4 51.3 228.4 56.5Q228.4 64.3 222.8 68.6Q217.1 72.8 207.6 72.8ZM239.4 71.4 232.4 21.8H244.9L249.3 62.9H251.1L257.5 21.8H277.7L284.1 62.9H285.9L290.3 21.8H302.8L295.8 71.4H274.9L268.5 30.3H266.7L260.3 71.4ZM309.8 71.4V21.8H322.4V71.4ZM316.1 16Q312.7 16 310.4 13.8Q308 11.6 308 8Q308 4.4 310.4 2.2Q312.7 0 316.1 0Q319.6 0 321.9 2.2Q324.2 4.4 324.2 8Q324.2 11.6 321.9 13.8Q319.6 16 316.1 16ZM355.7 72.8Q348.5 72.8 342.7 69.8Q336.8 66.8 333.4 61.1Q330 55.4 330 47.3V45.9Q330 37.8 333.4 32.1Q336.8 26.4 342.7 23.4Q348.5 20.4 355.7 20.4Q362.8 20.4 367.9 22.9Q373 25.4 376.2 29.8Q379.3 34.1 380.3 39.6L368.1 42.2Q367.7 39.2 366.3 36.8Q364.9 34.4 362.4 33Q359.8 31.6 356 31.6Q352.2 31.6 349.2 33.2Q346.1 34.9 344.4 38.2Q342.6 41.4 342.6 46.1V47.1Q342.6 51.8 344.4 55.1Q346.1 58.3 349.2 60Q352.2 61.6 356 61.6Q361.7 61.6 364.7 58.7Q367.6 55.7 368.4 50.9L380.6 53.8Q379.3 59.1 376.2 63.5Q373 67.8 367.9 70.3Q362.8 72.8 355.7 72.8ZM387 71.4V1.4H399.6V40.1H401.4L417.8 21.8H434.2L411.3 45.8L435 71.4H418.8L401.4 51.7H399.6V71.4Z"/></svg></span>
+          <span class="lp rule" aria-hidden="true"></span>
+        </div></div></div></div>
+      </div>
+    </div>
+    <div class="hero-foot"><a class="hero-link" href="#contact">Start a project</a></div>
+    <a class="ear" href="#ch1" aria-label="Turn the page to chapter 1, We make" style="--next-bg: #E0763C; --next-fg: #16130F;">
+      <span class="ear__grow" aria-hidden="true"><span class="ear__lift">
+        <span class="ear__under"><span class="ear__label"><small>Chapter 1</small>We make.</span></span>
+        <span class="ear__drop"></span>
+        <span class="ear__hinge"><span class="ear__front"></span><span class="ear__back"></span></span>
+      </span></span>
+    </a>
+  </section>
+
+  <!-- CHAPTER 1: WE MAKE -->
+  <section class="ch g-accent" id="ch1" data-sc-act="flow" data-folio="1|We make" aria-labelledby="ch1-title">
+    <header class="ch__head">
+      <p class="ch__kicker caps">Chapter 1</p>
+      <h2 class="ch__title" id="ch1-title"><span class="sweep"><span class="sweep__text">We make<span class="stop">.</span></span></span></h2>
+      <p class="ch__deck" data-sc-in>What Mosswick makes, and how it gets made.</p>
+    </header>
+    <div class="spread">
+      <div class="lede" data-sc-in>
+        <p class="answer">Mosswick Studio is a creative and marketing studio of 32 people in Lowmere, founded in 2014. It shapes brands, builds websites, shoots films, makes social content and runs campaigns and paid media for brands such as Plumtide, Kilnmark, Paywren and Okra &amp; Ash.</p>
+        <p>Strategists, designers, writers, filmmakers, developers and media buyers sit together and work on the same briefs, so a brand looks the same in a shop window and a feed.</p>
+        <p>The studio takes on a small number of new clients each year, from food brands to city charities, and most of them stay for years.</p>
+        <blockquote class="motto"><p>Every brand needs one idea it can say in a single breath.</p><cite>Mosswick, what we believe</cite></blockquote>
+      </div>
+      <ol class="svc" data-sc-in>
+        <li>
+          <h3>Brand strategy</h3>
+          <p>Workshops, customer interviews and a hard look at your market. Then a positioning and a voice your whole team can repeat.</p>
+        </li>
+        <li>
+          <h3>Brand identity</h3>
+          <p>Logos, type, colour and rules that work at every size, from a favicon to a building wrap. Since 2014 the studio has launched more than <span class="count" data-count="140">140</span> brands.</p>
+          <p class="subs">Logo and wordmark · Brand guidelines · Templates</p>
+        </li>
+        <li>
+          <h3>Websites</h3>
+          <p>Fast, clear websites planned around what visitors need to decide, then written, built on a platform you can edit and tested on real phones.</p>
+          <p class="subs">Wireframes · UX and UI design · Copywriting · Development · CMS setup</p>
+        </li>
+        <li>
+          <h3>Social content</h3>
+          <p>Monthly content built around a few strong ideas, shot and edited in house and posted on a schedule. Each month we cut what did not work.</p>
+          <p class="subs">Short-form video · Photography · Monthly report</p>
+        </li>
+        <li>
+          <h3>Film and motion</h3>
+          <p>Brand films, product videos and animation, written, shot, edited and cut in house for every place they will run.</p>
+        </li>
+        <li>
+          <h3>Campaigns</h3>
+          <p>One idea carried well across outdoor, social, print and screen: the concept, the key visuals, the copy and the media plan, then adapted as we learn what people respond to.</p>
+        </li>
+      </ol>
+    </div>
+    <a class="ear" href="#ch2" aria-label="Turn the page to chapter 2, We launch" style="--next-bg: #E6DCCB; --next-fg: #16130F;">
+      <span class="ear__grow" aria-hidden="true"><span class="ear__lift">
+        <span class="ear__under"><span class="ear__label"><small>Chapter 2</small>We launch.</span></span>
+        <span class="ear__drop"></span>
+        <span class="ear__hinge"><span class="ear__front"></span><span class="ear__back"></span></span>
+      </span></span>
+    </a>
+  </section>
+
+  <!-- CHAPTER 2: WE LAUNCH (the peak) -->
+  <section class="ch g-light" id="ch2" data-sc-act="flow" data-folio="2|We launch" aria-labelledby="ch2-title">
+    <header class="ch__head">
+      <p class="ch__kicker caps">Chapter 2</p>
+      <h2 class="ch__title" id="ch2-title"><span class="sweep"><span class="sweep__text">We launch<span class="stop">.</span></span></span></h2>
+      <p class="ch__deck" data-sc-in>Twenty-six brands we have launched and looked after.</p>
+    </header>
+    <div class="wall"><div class="wall__tilt">
+    <ul class="index" aria-label="Clients of Mosswick Studio">
+      <li class="cell"><img src="assets/clients/client-01.svg" width="225" height="120" decoding="async" alt="Cairnstone logo"><span class="cell__name" aria-hidden="true">Cairnstone</span></li>
+      <li class="cell"><img src="assets/clients/client-02.svg" width="225" height="120" decoding="async" alt="Cragloft logo"><span class="cell__name" aria-hidden="true">Cragloft</span></li>
+      <li class="cell"><img src="assets/clients/client-03.svg" width="225" height="120" decoding="async" alt="Fernstride logo"><span class="cell__name" aria-hidden="true">Fernstride</span></li>
+      <li class="cell"><img src="assets/clients/client-04.svg" width="225" height="120" decoding="async" alt="Gearfinch logo"><span class="cell__name" aria-hidden="true">Gearfinch</span> <a class="cell__link" href="#quote-1">Quoted in chapter 3</a></li>
+      <li class="cell"><img src="assets/clients/client-05.svg" width="225" height="120" decoding="async" alt="Gilded Hare logo"><span class="cell__name" aria-hidden="true">Gilded Hare</span></li>
+      <li class="cell"><img src="assets/clients/client-06.svg" width="225" height="120" decoding="async" alt="Halvane Watch Co. logo"><span class="cell__name" aria-hidden="true">Halvane Watch Co.</span></li>
+      <li class="cell"><img src="assets/clients/client-07.svg" width="225" height="120" decoding="async" alt="Hollin Gallery logo"><span class="cell__name" aria-hidden="true">Hollin Gallery</span></li>
+      <li class="cell"><img src="assets/clients/client-08.svg" width="225" height="120" decoding="async" alt="Houndsbury logo"><span class="cell__name" aria-hidden="true">Houndsbury</span></li>
+      <li class="cell"><img src="assets/clients/client-09.svg" width="225" height="120" decoding="async" alt="Kilnmark logo"><span class="cell__name" aria-hidden="true">Kilnmark</span></li>
+      <li class="cell"><img src="assets/clients/client-10.svg" width="225" height="120" decoding="async" alt="Marlo Rue logo"><span class="cell__name" aria-hidden="true">Marlo Rue</span></li>
+      <li class="cell"><img src="assets/clients/client-11.svg" width="225" height="120" decoding="async" alt="Marshlight Festival logo"><span class="cell__name" aria-hidden="true">Marshlight Festival</span></li>
+      <li class="cell"><img src="assets/clients/client-12.svg" width="225" height="120" decoding="async" alt="Okra &amp; Ash logo"><span class="cell__name" aria-hidden="true">Okra &amp; Ash</span></li>
+      <li class="cell"><img src="assets/clients/client-13.svg" width="225" height="120" decoding="async" alt="Owlhour logo"><span class="cell__name" aria-hidden="true">Owlhour</span></li>
+      <li class="cell"><img src="assets/clients/client-14.svg" width="225" height="120" decoding="async" alt="Paywren logo"><span class="cell__name" aria-hidden="true">Paywren</span></li>
+      <li class="cell"><img src="assets/clients/client-15.svg" width="225" height="120" decoding="async" alt="Periwink logo"><span class="cell__name" aria-hidden="true">Periwink</span></li>
+      <li class="cell"><img src="assets/clients/client-16.svg" width="225" height="120" decoding="async" alt="Plumtide logo"><span class="cell__name" aria-hidden="true">Plumtide</span></li>
+      <li class="cell"><img src="assets/clients/client-17.svg" width="225" height="120" decoding="async" alt="Quillmoor Press logo"><span class="cell__name" aria-hidden="true">Quillmoor Press</span></li>
+      <li class="cell"><img src="assets/clients/client-18.svg" width="225" height="120" decoding="async" alt="River Commons Trust logo"><span class="cell__name" aria-hidden="true">River Commons Trust</span></li>
+      <li class="cell"><img src="assets/clients/client-19.svg" width="225" height="120" decoding="async" alt="Saltmarrow logo"><span class="cell__name" aria-hidden="true">Saltmarrow</span></li>
+      <li class="cell"><img src="assets/clients/client-20.svg" width="225" height="120" decoding="async" alt="Shelterly logo"><span class="cell__name" aria-hidden="true">Shelterly</span></li>
+      <li class="cell"><img src="assets/clients/client-21.svg" width="225" height="120" decoding="async" alt="Stillreed logo"><span class="cell__name" aria-hidden="true">Stillreed</span></li>
+      <li class="cell"><img src="assets/clients/client-22.svg" width="225" height="120" decoding="async" alt="Tallow Lane Coffee logo"><span class="cell__name" aria-hidden="true">Tallow Lane Coffee</span></li>
+      <li class="cell"><img src="assets/clients/client-23.svg" width="225" height="120" decoding="async" alt="The Larchway logo"><span class="cell__name" aria-hidden="true">The Larchway</span></li>
+      <li class="cell"><img src="assets/clients/client-24.svg" width="225" height="120" decoding="async" alt="Tumblewick logo"><span class="cell__name" aria-hidden="true">Tumblewick</span></li>
+      <li class="cell"><img src="assets/clients/client-25.svg" width="225" height="120" decoding="async" alt="Velloway logo"><span class="cell__name" aria-hidden="true">Velloway</span></li>
+      <li class="cell"><img src="assets/clients/client-26.svg" width="225" height="120" decoding="async" alt="Voltmere logo"><span class="cell__name" aria-hidden="true">Voltmere</span></li>
+      <li class="index__note"><p>26 brands from the studio's client list, from Cairnstone to Voltmere.</p><p>Mosswick has 18 clients on monthly retainers today.</p></li>
+    </ul>
+    </div></div>
+    <a class="ear" href="#ch3" aria-label="Turn the page to chapter 3, They stay" style="--next-bg: #F2B48A; --next-fg: #16130F;">
+      <span class="ear__grow" aria-hidden="true"><span class="ear__lift">
+        <span class="ear__under"><span class="ear__label"><small>Chapter 3</small>They stay.</span></span>
+        <span class="ear__drop"></span>
+        <span class="ear__hinge"><span class="ear__front"></span><span class="ear__back"></span></span>
+      </span></span>
+    </a>
+  </section>
+
+  <!-- CHAPTER 3: THEY STAY -->
+  <section class="ch g-warm" id="ch3" data-sc-act="flow" data-folio="3|They stay" aria-labelledby="ch3-title">
+    <header class="ch__head">
+      <p class="ch__kicker caps">Chapter 3</p>
+      <h2 class="ch__title" id="ch3-title"><span class="sweep"><span class="sweep__text">They stay<span class="stop">.</span></span></span></h2>
+      <p class="ch__deck" data-sc-in>Three clients, on why they stayed.</p>
+    </header>
+    <figure class="pull">
+      <blockquote><p>That honesty saved us a lot of money in our first quarter of selling bikes.</p></blockquote>
+      <figcaption>Felix Andersen-Ruiz, Co-founder (Gearfinch)</figcaption>
+    </figure>
+    <div class="quotes" data-sc-in>
+      <article class="q" id="quote-1">
+        <h3>Honest about what would work</h3>
+        <blockquote><p>Honest about what would work and what would not. That honesty saved us a lot of money in our first quarter of selling bikes.</p></blockquote>
+        <p class="q__by"><b>Felix Andersen-Ruiz</b><span>Co-founder (Gearfinch)</span></p>
+      </article>
+      <article class="q">
+        <h3>A campaign people still bring up</h3>
+        <blockquote><p>The film crew turned up in the pouring rain, smiling. Months later, people still stop us at trade shows to talk about that campaign.</p></blockquote>
+        <p class="q__by"><b>Jonas Pell</b><span>Marketing Director (Velloway)</span></p>
+      </article>
+      <article class="q">
+        <h3>A name on the door in eight weeks</h3>
+        <blockquote><p>We had eight weeks to open a restaurant with no name. They gave us a name on the door, a full booking diary and a lot less stress.</p></blockquote>
+        <p class="q__by"><b>Cora Mbeki-Lane</b><span>Owner (Okra &amp; Ash)</span></p>
+      </article>
+    </div>
+    <a class="ear" href="#ch4" aria-label="Turn the page to chapter 4, Who makes it" style="--next-bg: #4A4038; --next-fg: #F1E9DC;">
+      <span class="ear__grow" aria-hidden="true"><span class="ear__lift">
+        <span class="ear__under"><span class="ear__label"><small>Chapter 4</small>Who makes it.</span></span>
+        <span class="ear__drop"></span>
+        <span class="ear__hinge"><span class="ear__front"></span><span class="ear__back"></span></span>
+      </span></span>
+    </a>
+  </section>
+
+  <!-- CHAPTER 4: WHO MAKES IT -->
+  <section class="ch g-dim" id="ch4" data-sc-act="flow" data-folio="4|Who makes it" aria-labelledby="ch4-title">
+    <header class="ch__head">
+      <p class="ch__kicker caps">Chapter 4</p>
+      <h2 class="ch__title" id="ch4-title"><span class="sweep"><span class="sweep__text">Who makes it<span class="stop">.</span></span></span></h2>
+      <p class="ch__deck" data-sc-in>Three of the 32 people who make the work.</p>
+    </header>
+    <ul class="people">
+      <li class="person person--lead">
+        <figure>
+          <div class="frame"><img src="assets/team/team-01.webp" width="280" height="400" decoding="async" alt="Ines Calloway, Founder and Creative Director at Mosswick, smiling, in a rust linen shirt against a warm grey backdrop."></div>
+          <figcaption>Ines Calloway, in the studio</figcaption>
+        </figure>
+        <div class="person__name"><h3>Ines Calloway</h3><p class="person__role">Founder and Creative Director</p></div>
+        <div class="person__bio" data-sc-in>
+          <p>Ines reads every brief twice, then asks the question nobody wanted to answer. She started Mosswick in 2014 with two friends, at a desk above a bike shop.</p>
+          <p>Today she leads a studio of 32 and still runs the Thursday afternoon review, where work in progress goes up on the wall, rough edges and all.</p>
+          <a href="https://example.com">Ines Calloway on LinkedIn</a>
+        </div>
+      </li>
+      <li class="person">
+        <figure>
+          <div class="frame"><img src="assets/team/team-02.webp" width="280" height="400" decoding="async" alt="Tobias Okonjo-Hale, Co-founder and Strategy Director at Mosswick, in round glasses and a navy jumper."></div>
+          <figcaption>Tobias Okonjo-Hale, in the studio</figcaption>
+        </figure>
+        <div class="person__name"><h3>Tobias Okonjo-Hale</h3><p class="person__role">Co-founder and Strategy Director</p></div>
+        <div class="person__bio" data-sc-in>
+          <p>Tobias turns messy workshops into one clear page that the whole client team signs. Every project starts with his week of listening.</p>
+          <p>He sits with sales teams, reads the complaints inbox and calls customers who almost did not buy.</p>
+          <a href="https://example.com">Tobias Okonjo-Hale on LinkedIn</a>
+        </div>
+      </li>
+      <li class="person">
+        <figure>
+          <div class="frame"><img src="assets/team/team-03.webp" width="280" height="400" decoding="async" alt="Mei Lin Draper, Design Director at Mosswick, in a black turtleneck with small gold hoop earrings."></div>
+          <figcaption>Mei Lin Draper, in the studio</figcaption>
+        </figure>
+        <div class="person__name"><h3>Mei Lin Draper</h3><p class="person__role">Design Director</p></div>
+        <div class="person__bio" data-sc-in>
+          <p>Mei Lin sketches fifty ideas on paper before she opens a laptop, and leads the studio's identity and packaging work.</p>
+          <p>She cares about the space between letters on a pack and the weight of a business card.</p>
+          <a href="https://example.com">Mei Lin Draper on LinkedIn</a>
+        </div>
+      </li>
+    </ul>
+    <a class="ear" href="#contact" aria-label="Turn the page to the colophon, Start a project" style="--next-bg: #16130F; --next-fg: #F1E9DC;">
+      <span class="ear__grow" aria-hidden="true"><span class="ear__lift">
+        <span class="ear__under"><span class="ear__label"><small>Colophon</small>Start a project.</span></span>
+        <span class="ear__drop"></span>
+        <span class="ear__hinge"><span class="ear__front"></span><span class="ear__back"></span></span>
+      </span></span>
+    </a>
+  </section>
+
+  <!-- COLOPHON -->
+  <section class="ch ch--colophon g-dark" id="contact" data-sc-act="flow" data-folio="M|Colophon" aria-labelledby="contact-title">
+    <div class="colo">
+      <div class="colo__mark"><span class="wm" role="img" aria-label="Mosswick Studio wordmark"></span></div>
+      <div class="colo__body" data-sc-in>
+        <h2 class="colo__label" id="contact-title">Start a project</h2>
+        <p class="colo__cta">To start a project with Mosswick, call <a href="tel:+15550142">+1 555 0142</a> or write to <a href="mailto:projects@example.com">projects@example.com</a>.</p>
+        <dl class="colo__rows">
+          <div><dt>Studio</dt><dd>1 Example Street, Lowmere</dd></div>
+          <div><dt>Hours</dt><dd>Monday to Friday, 9am to 6pm</dd></div>
+          <div><dt>Studio leads</dt><dd>Ines Calloway, Founder and Creative Director. Tobias Okonjo-Hale, Co-founder and Strategy Director. Mei Lin Draper, Design Director.</dd></div>
+          <div><dt>Follow</dt><dd class="links"><a href="https://example.com">Instagram</a><a href="https://example.com">LinkedIn</a><a href="https://example.com">Behance</a><a href="https://example.com">YouTube</a></dd></div>
+          <div><dt>Work with us</dt><dd class="links"><a href="mailto:jobs@example.com">Open roles</a><a href="#">Newsletter</a></dd></div>
+          <div><dt>Write</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="colo__foot"><span>Mosswick Studio</span><span>Brands worth remembering. Marketing that pays back.</span><span>Example content. Swap in your own.</span></p>
+  </section>
+
+</main>
+
+<a class="cta-fix" href="#contact">Start a project</a>
+<nav class="dock" aria-label="Start a project with Mosswick">
+  <a class="dock__main" href="#contact">Start a project</a>
+  <a class="dock__call" href="tel:+15550142" aria-label="Call Mosswick on +1 555 0142"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+</nav>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* every scroll move on this page is a CSS scroll-driven animation; script only measures where each one starts and ends */
+  var sda = !reduce && window.CSS && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px');
+  if (sda) root.classList.add('sda');
+  var title = document.getElementById('top');
+  var hl = document.getElementById('hl');
+  var stackedQ = '(max-width: 700px), (orientation: portrait) and (max-width: 1100px)';
+
+  /* ---- title page: measure the real baseline so the dots sit on it in any font ---- */
+  function measureBaseline() {
+    var line = hl.querySelector('.hl__line--1');
+    var probe = document.createElement('span');
+    probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+    line.insertBefore(probe, line.firstChild);
+    var fs = parseFloat(getComputedStyle(hl).fontSize) || 16;
+    var bl = probe.getBoundingClientRect().bottom - line.getBoundingClientRect().top;
+    line.removeChild(probe);
+    if (bl > 0) hl.style.setProperty('--bl', (bl / fs).toFixed(4) + 'em');
+  }
+
+  /* ---- title page: the scene fills the height left on desktop ---- */
+  var lastW = -1, lastH = -1;
+  function fitScene() {
+    if (matchMedia(stackedQ).matches) { title.style.removeProperty('--scene-w'); measureBaseline(); return; }
+    if (innerWidth === lastW && innerHeight === lastH) return;
+    lastW = innerWidth; lastH = innerHeight;
+    var cs = getComputedStyle(title);
+    var padX = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+    var padY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+    var foot = title.querySelector('.hero-foot');
+    var avail = Math.max(innerHeight, 560) - padY - foot.offsetHeight - 24;
+    var w = Math.min(innerWidth - padX, 1360, Math.max(520, avail * 284 / 130));
+    title.style.setProperty('--scene-w', w.toFixed(0) + 'px');
+    measureBaseline();
+  }
+
+  /* ---- page-pixel ranges for every scroll-driven move (layout positions, not transformed ones) ---- */
+  function pageTop(el) { var y = 0; while (el) { y += el.offsetTop; el = el.offsetParent; } return y; }
+  function px(n) { return Math.max(0, n).toFixed(1) + 'px'; }
+  var ch1 = document.getElementById('ch1');
+  var ears = [].slice.call(document.querySelectorAll('.ear'));
+  var wall = document.querySelector('.wall');
+  var sheets = [].slice.call(document.querySelectorAll('.q'));
+  var people = [].slice.call(document.querySelectorAll('.person'));
+  var cells = [].slice.call(document.querySelectorAll('.cell'));
+  var rangeW = -1;
+  function setRanges() {
+    var vh = innerHeight;
+    /* the block turns back face-on and flattens as chapter 1 reaches the top quarter of the screen */
+    title.style.setProperty('--hero-a', '0px');
+    title.style.setProperty('--hero-b', px(Math.max(vh * 0.2, pageTop(ch1) - vh * 0.25)));
+    /* each page turns over the last half screen of its chapter */
+    ears.forEach(function (ear) {
+      var s = ear.parentElement;
+      var a = Math.max(0, pageTop(s) + s.offsetHeight - vh);
+      ear.style.setProperty('--ear-a', px(a));
+      ear.style.setProperty('--ear-b', px(a + vh * 0.5));
+      ear._read = a + vh * 0.5 * 0.55;
+    });
+    /* the client index comes face-on by the time its top is near the top of the screen */
+    var wt = pageTop(wall);
+    wall.style.setProperty('--wall-a', px(wt - vh));
+    wall.style.setProperty('--wall-b', px(wt - vh * 0.1));
+    /* side by side on wide screens, so the three sheets come forward one after another */
+    var row = sheets.length > 1 && Math.abs(pageTop(sheets[1]) - pageTop(sheets[0])) < vh * 0.3;
+    sheets.forEach(function (q, i) { q.style.setProperty('--qd', (row ? i * 90 : 0) + 'ms'); });
+    people.forEach(function (p) { var t = pageTop(p); p.style.setProperty('--p-a', px(t - vh)); p.style.setProperty('--p-b', px(t + p.offsetHeight)); });
+    rangeW = innerWidth;
+  }
+  /* columns of the tilted wall drift in opposite directions */
+  function colParity() {
+    var n = getComputedStyle(document.querySelector('.index')).gridTemplateColumns.split(' ').length || 1;
+    cells.forEach(function (c, i) { c.classList.toggle('oc', (i % n) % 2 === 1); });
+  }
+  function remeasure() { fitScene(); colParity(); setRanges(); }
+  remeasure();
+  var coarse = matchMedia('(hover: none) and (pointer: coarse)');
+  /* phones change height when the address bar hides; only a width change re-measures there */
+  addEventListener('resize', function () { if (innerWidth !== rangeW || !coarse.matches) remeasure(); });
+  addEventListener('load', remeasure);
+  if (window.ResizeObserver) { var lastBH = 0; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastBH) > 2) { lastBH = h; setRanges(); } }).observe(document.body); }
+
+  /* ---- the reveal: lift the gate once fonts are in, then let the two glyphs rise from behind the bar ---- */
+  var ready = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  ready.then(function () {
+    lastW = -1; remeasure();
+    if (root.classList.contains('pre-reveal')) {
+      root.classList.add('rising');
+      requestAnimationFrame(function () { requestAnimationFrame(function () {
+        root.classList.remove('pre-reveal');
+        setTimeout(function () { root.classList.remove('rising'); }, 920);
+      }); });
+    }
+    splitPull();
+  });
+  setTimeout(function () { if (root.classList.contains('pre-reveal')) { root.classList.remove('pre-reveal'); root.classList.remove('rising'); } }, 1500);
+
+  /* ---- folio: chapter number and title of the page you are on ---- */
+  var folio = document.querySelector('.folio');
+  var fNum = folio.querySelector('.folio__num'), fName = folio.querySelector('.folio__name');
+  var chapters = [].slice.call(document.querySelectorAll('main > .ch'));
+  var links = [].slice.call(folio.querySelectorAll('.folio__list a'));
+  var grounds = { 'g-paper': 'paper', 'g-accent': 'accent', 'g-light': 'light', 'g-warm': 'warm', 'g-dim': 'dim', 'g-dark': 'dark' };
+  var current = null;
+  function groundOf(el) { for (var k in grounds) if (el.classList.contains(k)) return grounds[k]; return 'paper'; }
+  function folioFrame() {
+    var probeY = Math.min(innerHeight * 0.5, 420);
+    var hit = chapters[0];
+    chapters.forEach(function (c) { if (c.getBoundingClientRect().top <= probeY) hit = c; });
+    if (hit === current) return;
+    current = hit;
+    var parts = (hit.getAttribute('data-folio') || '|').split('|');
+    fNum.textContent = parts[0]; fName.textContent = parts[1];
+    links.forEach(function (a) { if (a.getAttribute('href') === '#' + hit.id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+  }
+  function groundUnderFolio() {
+    var r = folio.getBoundingClientRect();
+    var y = r.top + r.height / 2;
+    for (var i = 0; i < chapters.length; i++) { var b = chapters[i].getBoundingClientRect(); if (b.top <= y && b.bottom > y) { folio.setAttribute('data-ground', groundOf(chapters[i])); return; } }
+  }
+  var lastY = scrollY, narrow = matchMedia('(max-width: 1000px)');
+  function awayFrame() {
+    var y = scrollY, dy = y - lastY;
+    if (Math.abs(dy) < 6) return;
+    folio.classList.toggle('away', narrow.matches && dy > 0 && y > 240);
+    lastY = y;
+  }
+  var fTick = false;
+  /* each corner's label appears once its flap has turned past edge-on (a switch, not a scrub) */
+  function earFrame() { var y = scrollY; ears.forEach(function (e) { e.classList.toggle('read', y >= (e._read || 0)); }); }
+  addEventListener('scroll', function () { if (!fTick) { fTick = true; requestAnimationFrame(function () { fTick = false; folioFrame(); groundUnderFolio(); awayFrame(); ctaFrame(); earFrame(); }); } }, { passive: true });
+  var contactEl = document.getElementById('contact');
+  function ctaFrame() { if (contactEl) document.body.classList.toggle('at-contact', contactEl.getBoundingClientRect().top < innerHeight * 0.55); }
+  folioFrame(); groundUnderFolio(); ctaFrame(); earFrame();
+  folio.addEventListener('click', function (e) { if (e.target.closest('.folio__list a')) folio.removeAttribute('open'); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') folio.removeAttribute('open'); });
+  document.addEventListener('click', function (e) { if (!folio.contains(e.target)) folio.removeAttribute('open'); });
+
+  var pull = document.querySelector('.pull');
+  var pullP = pull.querySelector('p');
+  var pullText = pullP.textContent;
+  var pullW = -1;
+  if (reduce || !('IntersectionObserver' in window)) {
+    document.querySelectorAll('.sweep, .pull, .q').forEach(function (el) { el.classList.add('on'); });
+    return;
+  }
+
+  var once = function (els, opts, fn) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { fn(e.target); io.unobserve(e.target); } }); }, opts);
+    els.forEach(function (el) { io.observe(el); });
+  };
+  /* ---- quote sheets: each flies forward once it comes into view ---- */
+  once(sheets, { threshold: 0 }, function (el) { el.classList.add('on'); });
+
+  /* ---- intertitles: a block crosses the line once, the type is there when it lifts ---- */
+  once([].slice.call(document.querySelectorAll('.sweep')), { rootMargin: '0px 0px -12% 0px' }, function (el) { el.classList.add('on'); });
+
+  /* ---- the one figure in the prose counts up ---- */
+  once([].slice.call(document.querySelectorAll('[data-count]')), { threshold: 0.6 }, function (el) {
+    var to = parseInt(el.getAttribute('data-count'), 10), t0 = null;
+    function f(now) { if (t0 === null) t0 = now; var t = Math.min(1, (now - t0) / 1400); el.textContent = Math.round(to * (1 - Math.pow(1 - t, 3))); if (t < 1) requestAnimationFrame(f); }
+    el.textContent = '0'; requestAnimationFrame(f);
+  });
+
+  /* ---- the pull quote assembles line by line, each line rising from behind its own mask ---- */
+  function splitPull() {
+    if (reduce || !('IntersectionObserver' in window)) return;
+    if (pull.classList.contains('on') && pullW === pullP.offsetWidth) return;
+    pullW = pullP.offsetWidth;
+    pullP.textContent = pullText;
+    var words = pullText.split(' ');
+    pullP.innerHTML = words.map(function (w) { return '<span class="kw">' + w + '</span>'; }).join(' ');
+    var lines = [], top = null;
+    [].forEach.call(pullP.querySelectorAll('.kw'), function (s) { var t = s.offsetTop; if (top === null || Math.abs(t - top) > 4) { lines.push([]); top = t; } lines[lines.length - 1].push(s.textContent); });
+    pullP.innerHTML = '<span class="vh">' + pullText + '</span><span aria-hidden="true">' + lines.map(function (l, i) { return '<span class="kl"><span style="--d:' + (i * 90) + 'ms">' + l.join(' ') + '</span></span>'; }).join('') + '</span>';
+    pull.classList.add('split');
+  }
+  once([pull], { rootMargin: '0px 0px -15% 0px' }, function (el) { el.classList.add('on'); });
+  var rsT; addEventListener('resize', function () { clearTimeout(rsT); rsT = setTimeout(function () { if (pullP.offsetWidth !== pullW) { pull.classList.add('on'); splitPull(); } }, 200); });
+})();
+</script>
+</body>
+</html>

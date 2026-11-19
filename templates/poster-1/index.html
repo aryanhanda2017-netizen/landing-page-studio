@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio, Lowmere</title>
+<meta name="description" content="Mosswick Studio is a creative and marketing studio in Lowmere: brand strategy, identity, websites, social content, film and performance marketing.">
+<meta name="theme-color" content="#101826">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="apple-touch-icon" href="assets/touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta property="og:description" content="Make them look twice. A creative and marketing studio in Lowmere. Brands worth remembering, marketing that pays back.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta name="twitter:description" content="Make them look twice. A creative and marketing studio in Lowmere.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && Element.prototype.animate) c.add('anim');
+    /* the sphere is where the camera lands */
+    d.setAttribute('data-orb', 'landing');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/urbanist-var.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/arapey-italic.woff2" crossorigin>
+<link rel="stylesheet" href="scrollcraft.css">
+
+
+<style>
+@font-face { font-family: "Urbanist"; src: url("assets/fonts/urbanist-var.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Arapey"; src: url("assets/fonts/arapey-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+
+/* Palette "Midnight Brass": navy ground, warm paper ink and one brass accent (the close turns the page brass). */
+:root {
+  --pt-accent: #C9A45C;
+  --pt-ink: #F2EDE3;
+  --pt-ground: #101826;
+  --pt-soft: rgba(242, 237, 227, .64);
+  --pt-faint: rgba(242, 237, 227, .5);
+  --pt-line: rgba(242, 237, 227, .12);
+  --pt-dim: color-mix(in srgb, var(--pt-ink) 52%, var(--pt-ground));
+  --pt-ease: cubic-bezier(.16, 1, .3, 1);
+  --pt-sans: "Urbanist", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --pt-serif: "Arapey", Georgia, "Times New Roman", serif;
+  --pt-sys: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bar: 60px;
+  --dock: 0px;
+
+  --sc-canvas: #101826; --sc-surface: #182336;
+  --sc-ink: #F2EDE3; --sc-ink-soft: rgba(242, 237, 227, .64);
+  --sc-accent: #C9A45C; --sc-accent-ink: #101826;
+  --sc-font-display: var(--pt-sans);
+  --sc-font-text: var(--pt-sys);
+  --sc-gutter: clamp(1rem, 4vw, 4rem);
+}
+html { background: #101826; }
+body { background: #101826; color: #F2EDE3; font-family: var(--pt-sys); }
+html:not(.js) [data-sc-in], html:not(.js) [data-sc-stagger] > * { opacity: 1; transform: none; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 90; background: var(--pt-accent); color: #101826; padding: 10px 14px; border-radius: 4px; font: 600 14px/1 var(--pt-sys); }
+.skip:focus { top: 12px; }
+section, footer { overflow-x: clip; }
+
+/* ---------- the one CTA: a plain underlined link, letters roll on hover ---------- */
+.cta {
+  display: inline-flex; align-items: center; gap: .32em; color: inherit; text-decoration: none;
+  font-family: var(--pt-sans); font-weight: 600; letter-spacing: -.01em; white-space: nowrap;
+  background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat;
+  background-size: 100% max(1px, .06em); background-position: 0 100%; padding-bottom: .1em;
+}
+.cta svg { width: .72em; height: .72em; flex: none; transition: transform .32s var(--pt-ease); }
+.cta__t { display: inline-flex; overflow: hidden; line-height: 1.15; }
+.cta__t > span:not(.sr-only) { display: inline-block; white-space: pre; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .cta__t > span:not(.sr-only) { transition: transform .42s var(--pt-ease); transition-delay: calc(var(--i, 0) * 18ms); text-shadow: 0 1.15em 0 currentColor; }
+  .cta:hover .cta__t > span:not(.sr-only), .cta:focus-visible .cta__t > span:not(.sr-only) { transform: translateY(-1.15em); }
+  .cta:hover svg, .cta:focus-visible svg { transform: translate(.12em, -.12em); }
+}
+.cta:active { opacity: .7; }
+
+/* ---------- fixed bar (all screens): mark, name, the CTA ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar);
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0 var(--sc-gutter); padding-top: env(safe-area-inset-top);
+  background: #101826; border-bottom: 1px solid var(--pt-line);
+}
+.bar__brand { display: inline-flex; align-items: center; gap: 0.5rem; color: #F2EDE3; text-decoration: none; font: 600 15px/1 var(--pt-sans); letter-spacing: .01em; }
+.bar__brand svg { width: 26px; height: auto; }
+.bar .cta { font-size: 17px; }
+
+/* phones: the CTA lives in a bottom bar under the thumb */
+.dock { display: none; }
+
+/* ---------- act 1: the hero ---------- */
+.hero__stage { background: #101826; }
+.hero__frame {
+  position: absolute; inset: var(--bar) 0 var(--dock) 0;
+  display: grid; grid-template-rows: auto minmax(0, 1fr) auto; justify-items: center;
+  padding: clamp(.75rem, 2.4vh, 1.75rem) var(--sc-gutter) clamp(2.75rem, 6vh, 3.5rem);
+}
+.hero__eyebrow {
+  justify-self: stretch; position: relative; z-index: 2; background: #101826; padding-bottom: 8px; margin: 0; font: 600 clamp(11px, .64rem + .2vw, 13px)/1.4 var(--pt-sans);
+  letter-spacing: .16em; text-transform: uppercase; color: var(--pt-soft);
+}
+.hero__eyebrow b { color: #F2EDE3; font-weight: 700; }
+.hero__foot { justify-self: stretch; display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+.hero__foot .cta { font-size: clamp(1.5rem, 1rem + 1.6vw, 2.4rem); }
+.hero__where { margin: 0; font: 500 13px/1.5 var(--pt-sans); color: var(--pt-soft); text-align: right; }
+
+.scene-box { align-self: stretch; width: 100%; height: 100%; display: grid; place-items: center; min-height: 0; container-type: size; padding-top: 8px; }
+.scene {
+  --sw: min(100cqw, 200cqh, 1400px);
+  position: relative; width: var(--sw); aspect-ratio: 100 / 50;
+  container-type: inline-size; perspective: var(--sw); --po: 50% 50%; perspective-origin: var(--po);
+}
+.plane {
+  position: absolute; inset: 0; --z: 0; --k: calc(1 - var(--z) / 100);
+  transform: translate3d(0, 0, calc(var(--z) * 1cqw)) scale(var(--k));
+  transform-origin: var(--po); pointer-events: none; backface-visibility: hidden;
+}
+.plane--head { pointer-events: auto; transform-style: preserve-3d; }
+
+/* the far plane: the studio name, every letter at its own depth, locked up from this viewpoint */
+.kline { position: absolute; left: 4cqw; top: 21cqw; margin: 0; font: italic 400 24.07cqw/1 var(--pt-serif); color: rgba(201, 164, 92, .5); letter-spacing: -.01em; white-space: nowrap; }
+.kclip { display: inline-block; overflow: clip; overflow-clip-margin: 0; padding: .02em .14em .06em .04em; }
+.kword { display: inline-block; }
+.kword i { font-style: inherit; }
+.pl-k1 .kword i:not(:nth-child(1)), .pl-k2 .kword i:not(:nth-child(2)), .pl-k3 .kword i:not(:nth-child(3)), .pl-k4 .kword i:not(:nth-child(4)),
+.pl-k5 .kword i:not(:nth-child(5)), .pl-k6 .kword i:not(:nth-child(6)), .pl-k7 .kword i:not(:nth-child(7)), .pl-k8 .kword i:not(:nth-child(8)) { color: transparent; }
+.pl-k1 { --z: -42; } .pl-k2 { --z: -64; } .pl-k3 { --z: -36; } .pl-k4 { --z: -72; } .pl-k5 { --z: -50; } .pl-k6 { --z: -58; } .pl-k7 { --z: -46; } .pl-k8 { --z: -68; }
+
+/* the middle plane: the headline, each word at its own weight */
+.h1 {
+  position: absolute; left: 3cqw; top: 0; margin: 0; color: #F2EDE3;
+  font-family: var(--pt-sans); font-size: 8.4cqw; line-height: .95; letter-spacing: -.035em; font-weight: 400;
+  transform-style: preserve-3d;
+}
+.h1 .w { display: inline-block; }
+.h1 .w1 { font-weight: 300; } .h1 .w2 { font-weight: 200; } .h1 .w3 { font-weight: 800; } .h1 .w4 { font-weight: 300; } .h1 .w5 { font-weight: 800; }
+
+/* the near plane: the studio mark and a full stop, crossing the top of the name */
+.plane--mark { --z: 16; }
+.mark-hero { position: absolute; right: 4.5cqw; top: 0cqw; width: 31.2cqw; height: auto; overflow: visible; }
+.mark-hero .m-disc { transform-box: fill-box; transform-origin: 50% 50%; }
+.mark-hero .m-fill, .mark-hero .m-dot { transform-box: fill-box; transform-origin: 50% 100%; }
+
+/* the hero object: a chrome glass sphere drawn in CSS, screened onto the dark ground; a slow sheen turns round it */
+.plane--orb { --z: -20; mix-blend-mode: screen; }
+.orb { position: absolute; left: 54cqw; top: -1cqw; width: 48cqw; aspect-ratio: 1; opacity: 0; transform: scale(.72); }
+.orb__s {
+  position: relative; display: block; width: 100%; height: 100%; border-radius: 50%; overflow: hidden;
+  background:
+    radial-gradient(circle at 29% 19%, rgb(255 255 255 / .95) 0, rgb(255 255 255 / .5) 2.2%, rgb(255 255 255 / 0) 8%),
+    radial-gradient(ellipse 30% 20% at 32% 22%, color-mix(in srgb, var(--pt-ink) 20%, transparent), transparent 70%),
+    radial-gradient(ellipse 64% 22% at 50% 90%, color-mix(in srgb, var(--pt-accent) 50%, transparent), transparent 72%),
+    radial-gradient(closest-side, rgb(0 0 0) 0 60%, color-mix(in srgb, var(--pt-ink) 7%, rgb(0 0 0)) 79%, color-mix(in srgb, var(--pt-accent) 40%, rgb(0 0 0)) 93%, color-mix(in srgb, var(--pt-ink) 72%, rgb(0 0 0)) 99%, transparent 100%);
+}
+.orb__s::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0 8%, color-mix(in srgb, var(--pt-ink) 18%, transparent) 12%, transparent 18% 50%, color-mix(in srgb, var(--pt-accent) 26%, transparent) 56%, transparent 63%);
+  -webkit-mask-image: radial-gradient(closest-side, transparent 56%, rgb(0 0 0) 86%, transparent 100%); mask-image: radial-gradient(closest-side, transparent 56%, rgb(0 0 0) 86%, transparent 100%);
+  animation: pt-orb-turn 18s linear infinite;
+}
+.orb__s::after {
+  content: ""; position: absolute; left: 8%; right: 8%; top: 68%; height: 26%; border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--pt-ink) 18%, transparent), transparent 62%);
+}
+@keyframes pt-orb-turn { to { transform: rotate(1turn); } }
+.plane--orb.is-live .orb { animation: pt-orb-in 1s var(--pt-ease) var(--orb-delay, 0s) both; }
+@keyframes pt-orb-in { from { opacity: 0; transform: scale(.72); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .plane--orb { display: none; } }
+/* landing: the camera's flight ends on the sphere, the second line set inside the glass */
+html[data-orb="landing"] .plane--orb { --k: 1; opacity: 0; }
+html[data-orb="landing"] .orb { left: 15cqw; top: -10cqw; width: 70cqw; }
+html[data-orb="landing"] .land { font-size: 7.4cqw; max-width: 46cqw; }
+html[data-orb="landing"] .hero__eyebrow { background: transparent; }
+
+/* five services, met on the way through (only while the camera moves) */
+.plane--w span { position: absolute; left: var(--x); top: var(--y); font: 500 4.2cqw/1 var(--pt-sans); letter-spacing: -.02em; color: rgba(242, 237, 227, .74); white-space: nowrap; }
+.plane--w { opacity: 0; visibility: hidden; }
+.pw1 { --z: -100; --x: 8cqw; --y: 2cqw; } .pw2 { --z: -120; --x: 6cqw; --y: 44cqw; } .pw3 { --z: -160; --x: 52cqw; --y: 45cqw; }
+.pw4 { --z: -140; --x: 62cqw; --y: 3cqw; } .pw5 { --z: -180; --x: 30cqw; --y: 47cqw; }
+html:not(.anim) .plane--w { display: none; }
+
+/* the second beat, standing far behind everything */
+.plane--land { --z: 0; --k: 1; display: grid; place-items: center; }
+.land { margin: 0; text-align: center; color: #F2EDE3; font: 300 10.6cqw/1.0 var(--pt-sans); letter-spacing: -.035em; max-width: 84cqw; text-wrap: balance; }
+.land em { font: italic 400 1.12em/1 var(--pt-serif); color: var(--pt-accent); letter-spacing: 0; }
+
+/* static composition (reduced motion, no JS): the second beat sits under the scene */
+html:not(.anim) .plane--land { display: none; }
+.land-static { display: none; }
+html:not(.anim) .land-static { display: block; margin: 0 auto; padding: 2rem var(--sc-gutter) 0; text-align: center; font: 300 clamp(1.6rem, 1rem + 2.6vw, 3.2rem)/1.08 var(--pt-sans); letter-spacing: -.03em; color: #F2EDE3; }
+html:not(.anim) .land-static em { font: italic 400 1.1em/1 var(--pt-serif); color: var(--pt-accent); }
+
+/* the reveal on load (time-based, gated so no-JS and reduced motion get the final state) */
+@media (prefers-reduced-motion: no-preference) {
+  html.pre-reveal .kword, html.pre-reveal .h1 .w, html.pre-reveal .mark-hero > *, html.pre-reveal .hero__eyebrow > .rv, html.pre-reveal .hero__foot > * { opacity: 0; }
+  html.reveal .kword { animation: pt-rise .95s var(--pt-ease) both; }
+  html.reveal .pl-k1 .kword { animation-delay: .02s; } html.reveal .pl-k2 .kword { animation-delay: .09s; } html.reveal .pl-k3 .kword { animation-delay: .16s; }
+  html.reveal .pl-k4 .kword { animation-delay: .23s; } html.reveal .pl-k5 .kword { animation-delay: .30s; } html.reveal .pl-k6 .kword { animation-delay: .37s; }
+  html.reveal .pl-k7 .kword { animation-delay: .44s; } html.reveal .pl-k8 .kword { animation-delay: .51s; }
+  html.reveal .h1 .w { animation: pt-forward .9s var(--pt-ease) both; }
+  html.reveal .h1 .w1 { --from: -46cqw; animation-delay: .22s; } html.reveal .h1 .w2 { --from: -80cqw; animation-delay: .30s; }
+  html.reveal .h1 .w3 { --from: -30cqw; animation-delay: .38s; } html.reveal .h1 .w4 { --from: -70cqw; animation-delay: .46s; }
+  html.reveal .h1 .w5 { --from: -38cqw; animation-delay: .54s; }
+  html.reveal .mark-hero .m-disc { animation: pt-roll 1.05s var(--pt-ease) .34s both; }
+  html.reveal .mark-hero .m-fill { animation: pt-drop .62s .98s both; }
+  html.reveal .mark-hero .m-dot { animation: pt-land .7s 1.34s both; }
+  html.reveal .hero__eyebrow > .rv { display: inline-block; animation: pt-up .6s var(--pt-ease) .1s both; }
+  html.reveal .hero__foot > * { animation: pt-up .6s var(--pt-ease) 1.2s both; }
+}
+@keyframes pt-rise { from { transform: translateY(104%); } to { transform: none; } }
+@keyframes pt-forward { from { opacity: 0; transform: translateZ(var(--from, -40cqw)); } 40% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes pt-roll { from { opacity: 1; transform: translateX(-188px) rotate(-180deg); } to { opacity: 1; transform: none; } }
+@keyframes pt-drop {
+  0% { opacity: 1; transform: translateY(-151px); animation-timing-function: cubic-bezier(.55, 0, .85, .3); }
+  72% { opacity: 1; transform: translateY(3%) scaleY(.96); animation-timing-function: cubic-bezier(.16, 1, .3, 1); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes pt-land {
+  0% { opacity: 1; transform: translateY(-153px); animation-timing-function: cubic-bezier(.55, 0, .85, .3); }
+  62% { opacity: 1; transform: translateY(0) scale(1.18, .78); animation-timing-function: cubic-bezier(.16, 1, .3, 1); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes pt-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* ---------- the timing model: nothing is scrubbed. Crossing a point starts a short timed move that plays through on its own,
+   so wherever the scroll rests the screen is finished. The hero flight is one Web Animations timeline (see the script). ---------- */
+/* no will-change on the planes: a layer kept promoted after flying through the lens can come back with stale, clipped tiles */
+
+/* ---------- act 2: the origin story ---------- */
+.story { padding: clamp(3rem, 8vh, 6rem) var(--sc-gutter) 0; }
+.story__in { max-width: 82rem; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 2rem; }
+.label { margin: 0; font: 600 12px/1.4 var(--pt-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--pt-soft); }
+.label::before { content: ""; display: inline-block; width: .55em; height: .55em; margin-right: .6em; border-radius: 50%; background: var(--pt-accent); vertical-align: .05em; }
+.story__text { perspective: 900px; perspective-origin: 50% 40%; }
+.story__p { margin: 0; font: 300 clamp(1.7rem, 1.05rem + 2.7vw, 3.6rem)/1.14 var(--pt-sans); letter-spacing: -.028em; color: #F2EDE3; transform-style: preserve-3d; text-wrap: pretty; }
+.story__p + .story__p { margin-top: 1.1em; font-size: clamp(1.15rem, .95rem + .9vw, 1.7rem); line-height: 1.4; letter-spacing: -.012em; color: var(--pt-soft); max-width: 40em; }
+.story__p + .story__p b { color: #F2EDE3; font-weight: 600; }
+.lift {
+  display: inline-block; position: relative; transform-origin: 50% 60%;
+  font: italic 400 1.08em/1 var(--pt-serif); color: var(--pt-accent); letter-spacing: 0; white-space: nowrap;
+  padding: 0 .08em; margin: 0 .16em; background: #101826;
+}
+/* once the phrase reaches the upper part of the screen it lifts toward you and the rest of the sentence steps back to a quieter ink */
+html.anim .story__p { transition: color .6s var(--pt-ease); }
+html.anim .story__p.is-lifted { color: var(--pt-dim); }
+html.anim .lift { transition: transform .6s var(--pt-ease); }
+html.anim .story__p.is-lifted .lift { transform: translate3d(0, -.03em, 48px); }
+
+/* ---------- act 3: the flip ---------- */
+.flip__stage { display: grid; place-items: center; background: #101826; }
+.flip__in { width: 100%; height: 100%; padding: calc(var(--bar) + 1rem) var(--sc-gutter) calc(var(--dock) + 1rem); display: grid; grid-template-rows: auto auto auto; align-content: center; gap: clamp(2rem, 12vh, 7rem); justify-items: center; text-align: center; }
+.flip__lead { margin: 0; max-width: 34em; font: 400 clamp(1.05rem, .9rem + .7vw, 1.6rem)/1.45 var(--pt-sans); color: var(--pt-soft); letter-spacing: -.01em; text-wrap: balance; }
+.flip__lead b { color: #F2EDE3; font-weight: 600; }
+.flip__faces { position: relative; display: grid; perspective: 1200px; }
+.face { grid-area: 1 / 1; margin: 0; white-space: nowrap; line-height: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; backface-visibility: hidden; transform-origin: 50% 50% calc(var(--fh, 1em) * -.5); }
+.face br.fm { display: none; }
+.face--a { font: italic 400 clamp(3.4rem, 1rem + 15vw, 16rem)/1 var(--pt-serif); color: var(--pt-accent); letter-spacing: -.005em; }
+.face--b { font: 800 clamp(3rem, .6rem + 9vw, 10.5rem)/1 var(--pt-sans); color: #F2EDE3; letter-spacing: -.045em; }
+.face--b { transform: perspective(1400px) rotateX(-90deg); }
+html:not(.anim) .face--b { transform: none; }
+/* the cube turns a quarter turn once, when the pin passes its middle; the face turned away is hidden when the turn is done */
+html.anim .face { transition: transform .6s var(--pt-ease), visibility 0s linear .6s; }
+html.anim .face--b { visibility: hidden; }
+html.anim .flip.is-turned .face--a { transform: perspective(1400px) rotateX(90deg); visibility: hidden; }
+html.anim .flip.is-turned .face--b { transform: perspective(1400px) rotateX(0deg); visibility: visible; transition: transform .6s var(--pt-ease), visibility 0s; }
+html.anim .flip:not(.is-turned) .face--a { transition: transform .6s var(--pt-ease), visibility 0s; }
+html:not(.anim) .flip__faces { display: block; }
+html:not(.anim) .face { white-space: normal; }
+.flip__in { grid-template-columns: minmax(0, 1fr); }
+html:not(.anim) .face { display: block; }
+.flip__sign { margin: 0; font: 400 clamp(1.05rem, .9rem + .6vw, 1.4rem)/1.5 var(--pt-sans); color: var(--pt-soft); }
+.flip__sign b { color: #F2EDE3; font-weight: 700; }
+.flip__by { display: block; margin-top: 0.25rem; font-size: .82em; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
+
+/* ---------- act 4: services on a drum ---------- */
+.svcs { padding: clamp(1.5rem, 4vh, 3rem) var(--sc-gutter) 1rem; }
+.svcs__head { max-width: 82rem; margin: 0 auto clamp(1.5rem, 3vh, 2rem); display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 2rem; }
+.svcs__answer { margin: 0; font: 400 clamp(1.1rem, .95rem + .55vw, 1.45rem)/1.5 var(--pt-sans); color: #F2EDE3; max-width: 38em; letter-spacing: -.008em; }
+.svcs__aside { margin: 1.5rem 0 0; font: italic 400 clamp(1.4rem, 1rem + 1.4vw, 2.3rem)/1.2 var(--pt-serif); color: var(--pt-accent); max-width: 30em; }
+.drum { list-style: none; margin: 0 auto; padding: 0; max-width: 82rem; }
+.svc {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(12rem, 22rem); align-items: end; gap: .5rem 2.5rem;
+  padding: clamp(1.25rem, 3.4vh, 2.5rem) 0; border-top: 1px solid var(--pt-line); --R: 160px;
+}
+.svc:last-child { border-bottom: 1px solid var(--pt-line); }
+.svc h3 { margin: 0; font: 700 clamp(2.4rem, .9rem + 5.6vw, 6.6rem)/.96 var(--pt-sans); letter-spacing: -.045em; color: #F2EDE3; text-wrap: balance; }
+.svc h3 em { font: italic 400 1.04em/1 var(--pt-serif); letter-spacing: -.01em; color: var(--pt-accent); }
+.svc ul { list-style: none; margin: 0; padding: 0 0 .5rem; display: grid; gap: 0.25rem; font: 500 clamp(.95rem, .9rem + .2vw, 1.1rem)/1.35 var(--pt-sans); color: var(--pt-soft); }
+.svc li::before { content: attr(data-n) "  "; white-space: pre; font: italic 400 1.05em/1 var(--pt-serif); color: var(--pt-accent); }
+/* each row turns flat on the drum as it comes on screen, tipping in from the side it enters by */
+html.anim .svc { transform: perspective(1100px) translateZ(calc(var(--R) * -1)) rotateX(var(--tilt, -40deg)) translateZ(var(--R)); transition: transform .6s var(--pt-ease); }
+html.anim .svc.from-top { --tilt: 34deg; }
+html.anim .svc.is-in { --tilt: 0deg; }
+
+/* ---------- act 5: the projects, figures drawn to scale (the peak) ---------- */
+.proj__stage { background: #101826; }
+.proj__frame { position: absolute; inset: var(--bar) 0 var(--dock) 0; padding: clamp(.75rem, 2vh, 1.5rem) var(--sc-gutter) clamp(1rem, 3vh, 2rem); display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.proj__head { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr); align-items: end; gap: .75rem 3rem; max-width: 82rem; width: 100%; margin: 0 auto; padding-bottom: clamp(.75rem, 2vh, 1.25rem); border-bottom: 1px solid var(--pt-line); }
+.proj__index { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; font: 600 15px/1.3 var(--pt-sans); }
+.proj__index a { color: #F2EDE3; text-decoration: none; }
+.proj__index a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.proj__index span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(242, 237, 227, .82); margin-top: 0.25rem; }
+/* the index lights the project on screen; the others sit in a quieter ink (a colour, so they stay readable) */
+.pi a, .pi span { transition: color .4s var(--pt-ease); }
+html.anim .pi:not(.is-on) a { color: color-mix(in srgb, var(--pt-ink) 62%, var(--pt-ground)); }
+html.anim .pi:not(.is-on) span { color: color-mix(in srgb, var(--pt-ink) 52%, var(--pt-ground)); }
+.proj__head h2 { margin: 0; font: 400 clamp(1.5rem, 1rem + 1.8vw, 2.8rem)/1.05 var(--pt-sans); letter-spacing: -.03em; color: #F2EDE3; }
+.proj__head h2 em { font: italic 400 1.08em/1 var(--pt-serif); color: var(--pt-accent); letter-spacing: 0; }
+.proj__note { margin: 0; font: 500 13px/1.45 var(--pt-sans); color: var(--pt-soft); max-width: 22em; justify-self: end; }
+.slides { position: relative; max-width: 82rem; width: 100%; margin: 0 auto; min-height: 0; }
+.slide { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); grid-template-rows: auto 1fr; gap: 1rem 3rem; padding-top: clamp(1rem, 4vh, 3rem); }
+.slide__id { grid-column: 1; grid-row: 1 / 3; align-self: start; }
+.slide__name { margin: 0; font: italic 400 clamp(3rem, 1.6rem + 4.6vw, 7rem)/.92 var(--pt-serif); color: #F2EDE3; }
+.slide__name a { color: inherit; text-decoration: none; }
+.slide__name a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .12em; }
+.slide__ind { margin: 0.75rem 0 0; font: 600 12px/1.4 var(--pt-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--pt-accent); }
+.slide__lines { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.75rem; font: 400 clamp(1rem, .92rem + .3vw, 1.2rem)/1.42 var(--pt-sans); color: var(--pt-soft); max-width: 24em; }
+.slide__lines li { padding-top: 0.75rem; border-top: 1px solid var(--pt-line); }
+.slide__lines b { color: #F2EDE3; font-weight: 600; }
+.figs { grid-column: 2; grid-row: 1 / 3; align-self: center; display: flex; align-items: flex-end; gap: 2vw; padding-bottom: 1rem; }
+.fig { margin: 0; display: grid; gap: .5rem; width: min-content; }
+.fig__n { display: inline-block; font: 700 var(--fs, 6rem) / .8 var(--pt-sans); letter-spacing: -.055em; color: #F2EDE3; white-space: nowrap; }
+.fig__l { font: 600 11px/1.3 var(--pt-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--pt-soft); }
+.fig--small .fig__n { color: rgba(242, 237, 227, .78); }
+.fig--big .fig__n { color: var(--pt-accent); }
+/* the grower: one perspective per figure, anchored at its bottom-left corner, so it comes forward and grows from where it stands */
+.fig__z { display: inline-block; justify-self: start; position: relative; perspective: 800px; perspective-origin: 0% 100%; }
+/* the frame the result grows into: its true size, drawn before the figure reaches it */
+.fig__guide { position: absolute; inset: 0; border: 1px solid rgba(201, 164, 92, .22); pointer-events: none; opacity: 0; }
+.fig__z > .fig__n { transform-origin: 0% 100%; }
+/* each result starts at its budget's size and, once its point is crossed, comes forward in z to its true scale */
+html.anim .fig__z > .fig__n { transform: translate3d(0, 0, var(--zf, 0px)); transition: transform .6s var(--pt-ease); }
+html.anim .slide.is-grown .fig__z > .fig__n { transform: translate3d(0, 0, 0); }
+html.anim .fig__guide { opacity: 1; transition: opacity .2s linear .4s; }
+html.anim .slide.is-grown .fig__guide { opacity: 0; }
+/* the second project wipes in from the top while the first sinks back in z; the one off screen is hidden */
+html.anim .slide { transition: transform .5s var(--pt-ease), opacity .5s var(--pt-ease), clip-path .5s var(--pt-ease), visibility 0s; }
+html.anim .slide--last { clip-path: inset(0 0 100% 0); transform: translateY(6vh); visibility: hidden; transition: transform .5s var(--pt-ease), clip-path .5s var(--pt-ease), visibility 0s linear .5s; }
+html.anim .proj.is-second .slide--last { clip-path: inset(0 0 0 0); transform: none; visibility: visible; transition: transform .5s var(--pt-ease), clip-path .5s var(--pt-ease), visibility 0s; }
+html.anim .proj.is-second .slide--first { transform: perspective(900px) translate3d(0, -2vh, -380px); opacity: 0; visibility: hidden; transition: transform .5s var(--pt-ease), opacity .5s var(--pt-ease), visibility 0s linear .5s; }
+/* as the close comes up, the stage tips back and sinks */
+html.anim .proj__frame { transform-origin: 50% 0%; transition: transform .55s var(--pt-ease); }
+html.anim .proj.is-tipped .proj__frame { transform: perspective(1000px) rotateX(18deg) translate3d(0, 2vh, -240px); }
+
+/* without pins (reduced motion): the projects simply stack, figures at their true scale */
+html:not(.anim) .proj, html:not(.anim) .hero, html:not(.anim) .flip { height: auto !important; }
+html:not(.anim) .proj__stage, html:not(.anim) .hero__stage, html:not(.anim) .flip__stage { position: static !important; height: auto !important; overflow: visible; }
+html:not(.anim) .proj__frame { position: static; padding-top: calc(var(--bar) + 2rem); }
+html:not(.anim) .slides { display: grid; gap: 4rem; }
+html:not(.anim) .slide { position: static; }
+html:not(.anim) .hero__frame { position: relative; inset: auto; min-height: 100svh; padding-top: calc(var(--bar) + 1rem); padding-bottom: calc(var(--dock) + 3.25rem); }
+html:not(.anim) .flip__in { padding-block: 5rem; height: auto; grid-template-rows: auto; gap: 2.5rem; }
+html:not(.anim) .contact { margin-top: 0; }
+
+/* ---------- act 6: the close, the page inverted ---------- */
+.contact {
+  position: relative; z-index: 3; background: var(--pt-accent); color: #101826;
+  min-height: 100vh; min-height: 100svh;
+  padding: calc(var(--bar) + clamp(2rem, 7vh, 5rem)) var(--sc-gutter) calc(var(--dock) + clamp(3rem, 6vh, 3.75rem));
+  display: grid; grid-template-rows: auto 1fr auto; gap: clamp(1.5rem, 4vh, 3rem);
+}
+.contact__in { max-width: 82rem; width: 100%; margin: 0 auto; }
+.contact .label { color: rgba(16, 24, 38, .86); }
+.contact .label::before { background: #101826; }
+.contact__p { margin: 1rem 0 0; max-width: 26em; font: 500 15px/1.55 var(--pt-sans); color: rgba(16, 24, 38, .9); }
+.contact__cta { align-self: center; }
+.contact__cta .cta { font-size: clamp(3rem, 1rem + 9.6vw, 10.5rem); font-weight: 700; letter-spacing: -.05em; line-height: 1; color: #101826; background-size: 100% max(2px, .045em); }
+.contact__mail { display: inline-block; margin-top: 1rem; font: 600 15px/1.4 var(--pt-sans); color: #101826; text-underline-offset: .2em; }
+.contact__foot { display: grid; grid-template-columns: auto 1fr; gap: 1rem 1.5rem; align-items: end; border-top: 1px solid rgba(16, 24, 38, .2); padding-top: 1rem; }
+.logo-tile { width: 56px; height: 56px; background: #101826; display: grid; place-items: center; border-radius: 2px; }
+.logo-tile svg { width: 34px; height: auto; }
+.contact__meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; font: 500 12px/1.5 var(--pt-sans); color: rgba(16, 24, 38, .9); }
+.contact__meta a { color: #101826; }
+.contact__meta ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+
+
+/* ---------- desktop pointer: no dock ---------- */
+@media (min-width: 861px) and (min-aspect-ratio: 4 / 5) {
+  .h1 br.m { display: none; }
+}
+@media (min-width: 861px) {
+  .figs { align-self: end; padding-bottom: clamp(1rem, 4vh, 2.5rem); }
+}
+
+/* ---------- tall screens and phones: a tall scene, the CTA in a bottom bar ---------- */
+@media (max-width: 860px), (max-aspect-ratio: 4 / 5) {
+  .scene { aspect-ratio: 100 / 128; --sw: min(100cqw, 78.125cqh); }
+  .h1 { left: 4cqw; top: 0; font-size: 16.4cqw; line-height: .93; }
+  .h1 br.d { display: none; }
+  .scene { --po: 50% 70%; }
+  .kline { left: 2cqw; top: 94.9cqw; font-size: 25.53cqw; }
+  .mark-hero { right: 6cqw; top: 61.8cqw; width: 46.1cqw; }
+  .land { font-size: 21cqw; max-width: 98cqw; }
+  .pw3, .pw4 { display: none; }
+  .orb { left: 36cqw; top: 50cqw; width: 64cqw; }
+  html[data-orb="landing"] .orb { left: -16cqw; top: 1cqw; width: 132cqw; }
+  html[data-orb="landing"] .land { font-size: 13.6cqw; max-width: 76cqw; }
+  .plane--w span { font-size: 7.4cqw; }
+  .pw1 { --x: 50cqw; --y: 4cqw; } .pw2 { --x: 6cqw; --y: 14cqw; } .pw3 { --x: 8cqw; --y: 114cqw; } .pw4 { --x: 52cqw; --y: 104cqw; } .pw5 { --x: 26cqw; --y: 24cqw; }
+}
+@media (max-width: 860px) {
+  :root { --bar: 52px; --dock: calc(62px + env(safe-area-inset-bottom)); }
+  .bar .cta { display: none; }
+  .bar__brand svg { width: 23px; }
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock);
+    padding: 0 var(--sc-gutter) env(safe-area-inset-bottom); align-items: center; justify-content: center;
+    background: #101826; border-top: 1px solid var(--pt-line); transition: transform .4s var(--pt-ease);
+  }
+  .dock .cta { font-size: 20px; color: #F2EDE3; min-height: 48px; }
+  .dock.is-away { transform: translateY(100%); }
+  .hero__frame { padding-top: 1rem; padding-bottom: 2.5rem; }
+  .hero__where { display: none; }
+  .hero__foot .cta { font-size: 1.75rem; }
+  .story__in, .svcs__head { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .story { padding-top: 3rem; }
+  .story__p { font-size: clamp(1.6rem, 1.1rem + 2.4vw, 2.2rem); }
+  .face--a { font-size: 28vw; line-height: .98; } .face--b { font-size: 20vw; line-height: .96; }
+  .flip__lead { font-size: 1.05rem; text-align: left; justify-self: start; }
+  .face br.fm { display: inline; }
+  .face { white-space: normal; }
+  .svc { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; --R: 110px; }
+  .svc h3 { font-size: clamp(2.2rem, 1rem + 7.4vw, 3.6rem); }
+  .svc ul { padding-bottom: 0; display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+  .slide { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; gap: .5rem; padding-top: 1rem; }
+  .slide__id { grid-row: 1; }
+  .slide__lines { margin-top: 1rem; gap: .5rem; font-size: .98rem; }
+  .slide__lines li { padding-top: .5rem; }
+  .figs { grid-column: 1; grid-row: 2; }
+  .proj__head { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+  .proj__head h2 { font-size: 1.55rem; }
+  .proj__note { justify-self: start; }
+  .proj__index { gap: 0.25rem 1.25rem; font-size: 14px; }
+  .slide__name { font-size: clamp(2.8rem, 1.6rem + 6vw, 4rem); }
+  .proj__note { font-size: 12px; }
+  .contact__cta .cta { font-size: clamp(2.6rem, .5rem + 10vw, 5.4rem); }
+  .contact__foot { grid-template-columns: minmax(0, 1fr); }
+  .contact__meta { flex-direction: column; }
+  .contact { padding-bottom: calc(env(safe-area-inset-bottom) + 3.5rem); }
+}
+@media (max-width: 860px) and (max-height: 700px) {
+  .slide__lines li:nth-child(n+3) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta svg, .dock { transition: none; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio, back to top">
+    <svg viewBox="0 0 120 120" width="26" height="26" aria-hidden="true" focusable="false"><path fill="#F2EDE3" fill-rule="evenodd" d="M60 0A60 60 0 1 1 60 120A60 60 0 1 1 60 0Z M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/><path fill="#C9A45C" stroke="#C9A45C" stroke-width="1" stroke-linejoin="round" d="M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/></svg>
+    <span>Mosswick Studio</span>
+  </a>
+  <a class="cta" href="mailto:hello@example.com?subject=Start%20a%20project" data-cta><span class="cta__t">Start a project</span><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+</header>
+
+<main>
+  <!-- act 1: the hero, a dolly through the type -->
+  <section class="hero" id="hero" data-sc-act="pin" data-sc-span="2.6" aria-labelledby="h1">
+    <div class="hero__stage" data-sc-stage>
+      <div class="hero__frame">
+        <p class="hero__eyebrow"><span class="rv"><b>Mosswick Studio</b> &middot; creative and marketing studio &middot; Lowmere</span></p>
+        <div class="scene-box">
+          <div class="scene" id="scene">
+            <div class="plane plane--k pl-k1" aria-hidden="true"><p class="kline"><span class="kclip"><span class="kword"><i>m</i><i>o</i><i>s</i><i>s</i><i>w</i><i>i</i><i>c</i><i>k</i></span></span></p></div>
+            <div class="plane plane--k pl-k2" aria-hidden="true"><p class="kline"><span class="kclip"><span class="kword"><i>m</i><i>o</i><i>s</i><i>s</i><i>w</i><i>i</i><i>c</i><i>k</i></span></span></p></div>
+            <div class="plane plane--k pl-k3" aria-hidden="true"><p class="kline"><span class="kclip"><span class="kword"><i>m</i><i>o</i><i>s</i><i>s</i><i>w</i><i>i</i><i>c</i><i>k</i></span></span></p></div>
+            <div class="plane plane--k pl-k4" aria-hidden="true"><p class="kline"><span class="kclip"><span class="kword"><i>m</i><i>o</i><i>s</i><i>s</i><i>w</i><i>i</i><i>c</i><i>k</i></span></span></p></div>
+            <div class="plane plane--k pl-k5" aria-hidden="true"><p class="kline"><span class="kclip"><span class="kword"><i>m</i><i>o</i><i>s</i><i>s</i><i>w</i><i>i</i><i>c</i><i>k</i></span></span></p></div>
+            <div class="plane plane--k pl-k6" aria-hidden="true"><p class="kline"><span class="kclip"><span class="kword"><i>m</i><i>o</i><i>s</i><i>s</i><i>w</i><i>i</i><i>c</i><i>k</i></span></span></p></div>
+            <div class="plane plane--k pl-k7" aria-hidden="true"><p class="kline"><span class="kclip"><span class="kword"><i>m</i><i>o</i><i>s</i><i>s</i><i>w</i><i>i</i><i>c</i><i>k</i></span></span></p></div>
+            <div class="plane plane--k pl-k8" aria-hidden="true"><p class="kline"><span class="kclip"><span class="kword"><i>m</i><i>o</i><i>s</i><i>s</i><i>w</i><i>i</i><i>c</i><i>k</i></span></span></p></div>
+            <div class="plane plane--orb" id="orb" aria-hidden="true"><div class="orb"><span class="orb__s"></span></div></div>
+            <div class="plane plane--w pw1" aria-hidden="true"><span>Websites</span></div>
+            <div class="plane plane--w pw2" aria-hidden="true"><span>Social content</span></div>
+            <div class="plane plane--w pw3" aria-hidden="true"><span>Performance marketing</span></div>
+            <div class="plane plane--w pw4" aria-hidden="true"><span>Film &amp; motion</span></div>
+            <div class="plane plane--w pw5" aria-hidden="true"><span>Brand identity</span></div>
+            <div class="plane plane--land" aria-hidden="true"><p class="land">We make brands people can pick out of a <em>crowd.</em></p></div>
+            <div class="plane plane--head">
+              <h1 class="h1" id="h1"><span class="w w1">Make</span> <span class="w w2">them</span> <br class="d"><br class="m"><span class="w w3">look</span> <br class="m"><span class="w w5">twice.</span></h1>
+            </div>
+            <div class="plane plane--mark" aria-hidden="true">
+              <svg class="mark-hero" viewBox="0 0 152 120" width="152" height="120" focusable="false"><path class="m-disc" fill="#F2EDE3" fill-rule="evenodd" d="M60 0A60 60 0 1 1 60 120A60 60 0 1 1 60 0Z M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/><path class="m-fill" fill="#C9A45C" stroke="#C9A45C" stroke-width="1" stroke-linejoin="round" d="M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/><circle class="m-dot" fill="#C9A45C" cx="141" cy="109" r="11"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="hero__foot">
+          <a class="cta cta--big" href="mailto:hello@example.com?subject=Start%20a%20project" data-cta data-big><span class="cta__t">Start a project</span><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+          <p class="hero__where">Brands worth remembering.<br>Made in Lowmere since 2014.</p>
+        </div>
+      </div>
+    </div>
+    <p class="land-static">We make brands people can pick out of a <em>crowd.</em></p>
+  </section>
+
+  <!-- act 2: how it started -->
+  <section class="story" id="about" data-sc-act="flow" aria-labelledby="about-h">
+    <div class="story__in">
+      <h2 class="label" id="about-h">Meet Mosswick Studio</h2>
+      <div class="story__text">
+        <p class="story__p" id="origin">Mosswick started in 2014 when three people sharing <em class="lift">a desk above a bike shop</em> got tired of watching good companies hide behind forgettable logos and dull campaigns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 3: a two-sided line, turned on a cube -->
+  <section class="flip" id="impact" data-sc-act="pin" data-sc-span="2" aria-label="Loud ideas, careful craft">
+    <div class="flip__stage" data-sc-stage>
+      <div class="flip__in">
+        <p class="flip__lead">We're thirty-two strategists, designers, writers, filmmakers and media buyers in one studio. <b>The person shooting your film hears the strategy first hand</b>, and the person buying your ads knows why the brand looks the way it does.</p>
+        <div class="flip__faces">
+          <p class="face face--a">Loud <br class="fm">ideas,</p>
+          <p class="face face--b">careful <br class="fm">craft.</p>
+        </div>
+        <p class="flip__sign"><b>That's Mosswick Studio.</b><span class="flip__by">Ines Calloway, Creative Director</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 4: the services -->
+  <section class="svcs" id="services" data-sc-act="flow" aria-labelledby="svc-h">
+    <div class="svcs__head">
+      <h2 class="label" id="svc-h">What we make</h2>
+      <div>
+        <p class="svcs__answer" data-sc-in>Mosswick Studio is a creative and marketing studio in Lowmere, led by founder and creative director Ines Calloway. Its 32 people make brands, websites, films and campaigns: brand strategy and identity, websites, monthly social content, film and motion, and paid search and social, for clients in food and drink, hospitality, culture and retail.</p>
+        <p class="svcs__aside" data-sc-in>Pretty work that sells nothing is just expensive decoration. Every brand needs one idea it can say in a single breath.</p>
+      </div>
+    </div>
+    <ul class="drum">
+      <li class="svc"><h3>Strategy <em>&amp;</em> Identity</h3><ul><li data-n="i.">Positioning</li><li data-n="ii.">Brand voice guide</li><li data-n="iii.">Logo and wordmark</li></ul></li>
+      <li class="svc"><h3>Social Content</h3><ul><li data-n="i.">Short-form video</li><li data-n="ii.">Community management</li></ul></li>
+      <li class="svc"><h3>Performance Marketing</h3><ul><li data-n="i.">Paid search</li><li data-n="ii.">Paid social</li><li data-n="iii.">Creative testing</li><li data-n="iv.">Live dashboard</li></ul></li>
+      <li class="svc"><h3>Websites</h3><ul><li data-n="i.">UX and UI design</li><li data-n="ii.">Development</li></ul></li>
+      <li class="svc"><h3>Film, Motion <em>&amp;</em> Campaigns</h3><ul><li data-n="i.">Scripts and storyboards</li><li data-n="ii.">Campaign concept and key visuals</li></ul></li>
+    </ul>
+  </section>
+
+  <!-- act 5: the work, every result drawn to scale against where it started (the peak) -->
+  <section class="proj" id="projects" data-sc-act="pin" data-sc-span="4.2" aria-labelledby="proj-h">
+    <div class="proj__stage" data-sc-stage>
+      <div class="proj__frame">
+        <div class="proj__head">
+          <h2 id="proj-h">Work that shows up in the <em>numbers.</em></h2>
+          <ol class="proj__index">
+            <li class="pi pi--1"><a href="#work-1">Fizzwold</a> <span>Drinks</span></li>
+            <li class="pi pi--2"><a href="#work-2">The Larchway</a> <span>Hospitality</span></li>
+            <li class="pi pi--3"><a href="#">Kilnmark</a> <span>Homeware</span></li>
+          </ol>
+          <p class="proj__note">Figures drawn to scale: a number twice as big stands twice as tall.</p>
+        </div>
+        <div class="slides">
+          <article class="slide slide--first" id="work-1" aria-labelledby="w1-h">
+            <div class="slide__id">
+              <h3 class="slide__name" id="w1-h"><a href="#">Fizzwold</a></h3>
+              <p class="slide__ind">Drinks &middot; 2026</p>
+              <ul class="slide__lines">
+                <li>Rebrand, can design and a social launch for <b>a craft kombucha brewer</b>.</li>
+                <li>Moved from glass to cans, with <b>a bold pattern</b> for each flavour.</li>
+                <li>Stockists up from <b>80</b> to <b>310</b> across three cities.</li>
+              </ul>
+            </div>
+            <div class="figs" data-ratio="3.875" aria-hidden="true">
+              <p class="fig fig--small"><span class="fig__n">80</span><span class="fig__l">Stockists, before</span></p>
+              <p class="fig fig--big"><span class="fig__z"><span class="fig__guide"></span><span class="fig__n">310</span></span><span class="fig__l">Stockists, after</span></p>
+            </div>
+          </article>
+          <article class="slide slide--last" id="work-2" aria-labelledby="w2-h">
+            <div class="slide__id">
+              <h3 class="slide__name" id="w2-h"><a href="#">The Larchway</a></h3>
+              <p class="slide__ind">Hospitality &middot; 2022</p>
+              <ul class="slide__lines">
+                <li>Identity, website and booking campaign for <b>a 30-room hotel</b>.</li>
+                <li>The new site sells <b>rooms by mood</b>.</li>
+                <li>Direct bookings up from <b>22%</b> to <b>58%</b>.</li>
+              </ul>
+            </div>
+            <div class="figs" data-ratio="2.6364" aria-hidden="true">
+              <p class="fig fig--small"><span class="fig__n">22%</span><span class="fig__l">Booked direct, before</span></p>
+              <p class="fig fig--big"><span class="fig__z"><span class="fig__guide"></span><span class="fig__n">58%</span></span><span class="fig__l">Booked direct, after</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 6: the close, the page inverted -->
+  <section class="contact" id="contact" data-sc-act="flow" aria-labelledby="contact-h">
+    <div class="contact__in">
+      <h2 class="label" id="contact-h">Contact</h2>
+      <p class="contact__p">Tell us the problem in plain words. We will come back with a plan, a budget and a first idea. Send a short brief and we reply within two working days.</p>
+    </div>
+    <div class="contact__in contact__cta">
+      <a class="cta cta--big" href="mailto:hello@example.com?subject=Start%20a%20project" data-cta data-big><span class="cta__t">Start a project</span><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+      <br><a class="contact__mail" href="mailto:hello@example.com">hello@example.com</a>
+    </div>
+    <footer class="contact__in contact__foot">
+      <div class="logo-tile"><svg viewBox="0 0 120 120" width="34" height="34" role="img" aria-label="Mosswick Studio logo"><path fill="#F2EDE3" fill-rule="evenodd" d="M60 0A60 60 0 1 1 60 120A60 60 0 1 1 60 0Z M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/><path fill="#C9A45C" stroke="#C9A45C" stroke-width="1" stroke-linejoin="round" d="M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/></svg></div>
+      <div class="contact__meta">
+        <p style="margin:0">Mosswick Studio. 1 Example Street, Lowmere.<span style="display:block">Example content. Swap in your own.</span></p>
+        <ul>
+          <li><a href="https://example.com" rel="noopener">Instagram</a></li>
+          <li><a href="https://example.com" rel="noopener">LinkedIn</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </footer>
+  </section>
+</main>
+
+<div class="dock" id="dock">
+  <a class="cta" href="mailto:hello@example.com?subject=Start%20a%20project" data-cta><span class="cta__t">Start a project</span><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+</div>
+
+<script src="scrollcraft.js"></script>
+<script>
+(function () {
+  var root = document.documentElement;
+  var phoneQ = matchMedia('(max-width: 860px)');
+  /* phones: a shorter hero pin and a shorter projects pin */
+  if (phoneQ.matches) {
+    document.getElementById('hero').setAttribute('data-sc-span', '2.4');
+    document.getElementById('projects').setAttribute('data-sc-span', '4');
+  }
+  /* split the CTA labels into letters for the hover roll */
+  [].forEach.call(document.querySelectorAll('.cta__t'), function (t) {
+    var s = t.textContent; t.textContent = '';
+    var sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = s; t.appendChild(sr);
+    s.split('').forEach(function (c, i) { var e = document.createElement('span'); e.textContent = c; e.style.setProperty('--i', i); e.setAttribute('aria-hidden', 'true'); t.appendChild(e); });
+  });
+})();
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  var hero = document.getElementById('hero'), scene = document.getElementById('scene');
+  var flip = document.getElementById('impact'), proj = document.getElementById('projects');
+  var dock = document.getElementById('dock');
+
+  /* ---- fit the scene to the room under the eyebrow (the scene box keeps its proportions, so every overlap is the same at every size) ---- */
+  function fitScene() { /* the scene is sized in CSS against its box (container size units) */ }
+
+  var revealAt = 0;
+  /* ---- the hero reveal, once the type has loaded ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true; revealAt = performance.now();
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+      showOrb();
+    };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
+    setTimeout(go, 1400);
+  }
+
+  /* ---- the sphere: drawn in CSS, it scales in 1.15 s into the reveal (after the half turn, before the last dot lands) ---- */
+  function showOrb() {
+    var orb = document.getElementById('orb');
+    if (!orb || !root.classList.contains('fx')) return;
+    var now = performance.now(), wait = Math.max(0, (revealAt || now) + 1150 - now);
+    orb.style.setProperty('--orb-delay', (wait / 1000).toFixed(2) + 's');
+    orb.classList.add('is-live');
+  }
+
+  /* ---- the timing model: nothing follows the scroll position. Each stage has a point; crossing it starts a short timed move
+     that plays through on its own (and plays back when the point is crossed going up), so every resting place is a finished screen.
+     Words settle within about half a second; only the sphere and the far letters keep drifting a moment longer. ---- */
+  var EASE = 'cubic-bezier(.16, 1, .3, 1)';
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function offs(el) { var x = 0, y = 0; for (; el; el = el.offsetParent) { x += el.offsetLeft; y += el.offsetTop; } return { x: x, y: y }; }
+
+  /* hero: the camera flight through the type is one timeline of Web Animations, all the same length so they stay in step.
+     Forward at normal speed when the trigger is crossed; backward at three times the speed when it is crossed going up. */
+  var FLIGHT = 1000, V = 80 / 300;           /* timeline length (ms); camera speed in cqw per ms: the headline reaches the lens at 300 ms */
+  var flight = [], flown = false, flightW = -1;
+  function buildFlight() {
+    var cw = scene.getBoundingClientRect().width / 100;   /* px per cqw */
+    if (!cw || cw === flightW) return;
+    flightW = cw;
+    flight.forEach(function (a) { a.cancel(); }); flight = [];
+    function tf(z, k) { return 'translate3d(0, 0, ' + (z * cw).toFixed(1) + 'px) scale(' + k + ')'; }
+    function add(el, frames, delay, dur, easing) {
+      delay = Math.max(0, Math.round(delay)); dur = Math.max(1, Math.round(Math.min(dur, FLIGHT - delay)));
+      var an = el.animate(frames, { delay: delay, duration: dur, endDelay: FLIGHT - delay - dur, easing: easing || 'linear', fill: 'both' });
+      an.pause(); an.currentTime = flown ? FLIGHT : 0; flight.push(an);
+    }
+    [].forEach.call(scene.querySelectorAll('.plane'), function (pl) {
+      var z = parseFloat(getComputedStyle(pl).getPropertyValue('--z')) || 0, k = 1 - z / 100;
+      if (pl.classList.contains('plane--land')) {          /* the second line comes forward from behind and settles in the glass */
+        add(pl, [{ transform: tf(-40, 1) }, { transform: tf(0, 1) }], 0, 380, EASE);
+        add(pl, [{ opacity: 0 }, { opacity: 1 }], 120, 180);
+        return;
+      }
+      if (pl.classList.contains('plane--orb')) {           /* the sphere drifts in from far behind and keeps settling a little longer */
+        add(pl, [{ transform: tf(-70, 1) }, { transform: tf(0, 1) }], 0, FLIGHT, EASE);
+        add(pl, [{ opacity: .001 }, { opacity: 1 }], 200, 400);   /* .001, not 0: the glass is painted from the start, so the first flight never waits on it */
+        return;
+      }
+      if (pl.classList.contains('plane--w')) {             /* five services streak past on the way */
+        var gw = Math.min(80 - z, 236);
+        add(pl, [{ transform: tf(z, k) }, { transform: tf(z + gw, k) }], 20, 320);
+        add(pl, [{ opacity: 0, visibility: 'visible', offset: 0 }, { opacity: 1, offset: .2 }, { opacity: 1, offset: .7 }, { opacity: 0, visibility: 'hidden', offset: 1 }], 20, 320);
+        return;
+      }
+      /* the name's letters, the headline and the mark ride the camera until they are close to the lens, then they are gone */
+      var gone = 80 - z, fadeFrom = Math.max(0, (pl.classList.contains('plane--k') ? 40 : 30) - z);
+      add(pl, [{ transform: tf(z, k) }, { transform: tf(z + gone, k) }], 0, gone / V);
+      add(pl, [{ opacity: 1, visibility: 'visible' }, { opacity: 0, visibility: 'hidden' }], fadeFrom / V, (gone - fadeFrom) / V);
+    });
+    [].forEach.call(hero.querySelectorAll('.kline'), function (el) {   /* the far letters brighten as the camera moves */
+      add(el, [{ color: 'rgba(201, 164, 92, .5)' }, { color: 'rgba(201, 164, 92, 1)' }], 0, 60 / V);
+    });
+    /* the eyebrow and the CTA step out of the way while the type flies past, and are back before the landing */
+    [].forEach.call(hero.querySelectorAll('.hero__eyebrow, .hero__foot'), function (el) {
+      add(el, [{ opacity: 1, offset: 0 }, { opacity: 1, offset: .09 }, { opacity: 0, visibility: 'hidden', offset: .18 }, { opacity: 0, visibility: 'hidden', offset: .48 }, { opacity: 1, visibility: 'visible', offset: .62 }, { opacity: 1, offset: 1 }], 0, 360);
+    });
+  }
+  function setFlown(on) {
+    if (on === flown) return;
+    flown = on;
+    flight.forEach(function (an) { an.playbackRate = on ? 1 : -3; an.play(); });
+  }
+
+  /* services: each row turns flat on the drum as it comes on screen, from the side it enters by */
+  if (anim && window.IntersectionObserver) {
+    var drum = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var row = e.target;
+        if (e.isIntersecting) { row.classList.add('is-in'); return; }
+        row.classList.remove('is-in');
+        row.classList.toggle('from-top', e.boundingClientRect.top < 0);
+      });
+    }, { threshold: 0 });
+    [].forEach.call(document.querySelectorAll('.svc'), function (row) { drum.observe(row); });
+  }
+
+  /* the points, in page pixels */
+  var P = null;
+  function measure() {
+    fitScene();
+    if (!anim) return;
+    var vh = innerHeight;
+    buildFlight();
+    /* the lift's perspective origin is its own centre, from layout boxes (the lifted box is transformed) */
+    var lift = document.querySelector('.lift'), st = lift.closest('.story__text');
+    var lo = offs(lift), so = offs(st);
+    st.style.perspectiveOrigin = ((lo.x + lift.offsetWidth / 2 - so.x) / st.offsetWidth * 100).toFixed(1) + '% ' + ((lo.y + lift.offsetHeight / 2 - so.y) / st.offsetHeight * 100).toFixed(1) + '%';
+    var faces = flip.querySelector('.flip__faces');
+    faces.style.setProperty('--fh', faces.offsetHeight + 'px');   /* the cube is as deep as the faces are tall */
+    [].forEach.call(proj.querySelectorAll('.figs'), function (figs) {
+      var ratio = parseFloat(figs.getAttribute('data-ratio')) || 1;
+      figs.querySelector('.fig__z > .fig__n').style.setProperty('--zf', (-(ratio - 1) * 800).toFixed(1) + 'px');
+    });
+    var hT = top(hero), hTr = Math.max(1, hero.offsetHeight - vh);
+    var fT = top(flip), fTr = Math.max(1, flip.offsetHeight - vh);
+    var pT = top(proj), pTr = Math.max(1, proj.offsetHeight - vh);
+    P = {
+      fly: hT + hTr * 0.3,                       /* the camera flies once the hero pin is a third of the way through */
+      lift: lo.y - vh * 0.6,                     /* the phrase lifts once it is in the upper 60% of the screen */
+      turn: fT + fTr * 0.45,                     /* the cube turns at the middle of its pin */
+      grow1: pT - vh * 0.2,                      /* the first result grows once the stage is mostly on screen */
+      second: pT + pTr * 0.5,                    /* the second project takes over halfway through the pin */
+      grow2: pT + pTr * 0.62,
+      tip: pT + pTr                              /* the stage tips back as the close comes on screen */
+    };
+    state();
+  }
+  function state() {
+    if (!P) return;
+    var y = scrollY;
+    setFlown(y >= P.fly);
+    document.querySelector('.story__p').classList.toggle('is-lifted', y >= P.lift);
+    flip.classList.toggle('is-turned', y >= P.turn);
+    var slides = proj.querySelectorAll('.slide'), second = y >= P.second;
+    slides[0].classList.toggle('is-grown', y >= P.grow1);
+    slides[1].classList.toggle('is-grown', y >= P.grow2);
+    proj.classList.toggle('is-second', second);
+    proj.classList.toggle('is-tipped', y >= P.tip);
+    proj.querySelector('.pi--1').classList.toggle('is-on', !second);
+    proj.querySelector('.pi--2').classList.toggle('is-on', second);
+  }
+  var sTick = false;
+  addEventListener('scroll', function () { if (!sTick) { sTick = true; requestAnimationFrame(function () { sTick = false; state(); }); } }, { passive: true });
+
+  /* ---- figure sizes: the small figure is the big one divided by the real ratio ---- */
+  function sizeFigs() {
+    var root = document.documentElement;
+    [].forEach.call(document.querySelectorAll('.figs'), function (figs) {
+      var ratio = parseFloat(figs.getAttribute('data-ratio')) || 1;
+      var big = figs.querySelector('.fig--big .fig__n'), small = figs.querySelector('.fig--small .fig__n');
+      var wide = !phoneQ.matches;
+      var slide = figs.closest('.slide');
+      var availW = figs.clientWidth;
+      var availH = root.classList.contains('anim') ? Math.max(120, slide.clientHeight - (wide ? 60 : figs.offsetTop + 30)) : innerHeight * 0.4;
+      /* the big figure's em width, measured at 100px */
+      big.style.setProperty('--fs', '100px'); small.style.setProperty('--fs', '100px');
+      var bw = big.offsetWidth / 100, sw = small.offsetWidth / 100;   /* em widths; offsetWidth ignores the depth transform */
+      var gap = parseFloat(getComputedStyle(figs).columnGap) || 16;
+      availW -= 6;
+      var byW = (availW - gap) / (bw + sw / ratio);
+      var byH = availH / 0.86;
+      var fs = Math.max(48, Math.min(byW, byH, 420));
+      big.style.setProperty('--fs', fs.toFixed(1) + 'px');
+      small.style.setProperty('--fs', (fs / ratio).toFixed(2) + 'px');
+    });
+  }
+
+  var lastW = -1;
+  function all() { sizeFigs(); measure(); lastW = innerWidth; }
+  all();
+  addEventListener('resize', function () { if (innerWidth !== lastW || !phoneQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); } }).observe(document.body); }
+
+  /* ---- the phone bar steps away while a big CTA is on screen ---- */
+  var bigs = [].slice.call(document.querySelectorAll('[data-big]'));
+  var tick = false;
+  function dockState() {
+    tick = false;
+    var away = bigs.some(function (b) {
+      var r = b.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return false;
+      var cs = getComputedStyle(b.closest('.hero__foot') || b);
+      return cs.visibility !== 'hidden' && parseFloat(cs.opacity) > 0.5;
+    });
+    dock.classList.toggle('is-away', away);
+    root.classList.toggle('dock-away', away && phoneQ.matches);
+  }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(dockState); } }, { passive: true });
+  dockState();
+  setTimeout(dockState, 1800);
+})();
+</script>
+</body>
+</html>

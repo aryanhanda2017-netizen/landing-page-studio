@@ -1,0 +1,2 @@
+Archivo (Expanded instance, wdth 125, variable weight, Latin subset): SIL Open Font License 1.1, Omnibus-Type, via Google Fonts. Used for the wide headline caps.
+Urbanist (variable, Latin subset): SIL Open Font License 1.1, via Google Fonts. Used for body text.

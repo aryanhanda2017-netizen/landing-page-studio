@@ -1,0 +1,2 @@
+Outfit (variable, Latin subset): SIL Open Font License 1.1 (OFL-Outfit.txt), via Google Fonts. Headings.
+Geist regular and semibold: SIL Open Font License 1.1 (Geist-OFL.txt). Body fallback for non-Apple devices.

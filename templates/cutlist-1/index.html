@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio, Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio in Lowmere: brand strategy, identity, websites, social content, film and campaigns. Call +1 555 0142.">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="icon" type="image/svg+xml" href="assets/brand/mark.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta property="og:description" content="Loud ideas, careful craft. Brand strategy, identity, websites, social content, film and campaigns from a studio of 32 in Lowmere.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta name="twitter:description" content="Loud ideas, careful craft. A creative and marketing studio in Lowmere.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-expanded.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/urbanist-var.woff2" crossorigin>
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Wide Display"; src: url("assets/fonts/archivo-expanded.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Urbanist"; src: url("assets/fonts/urbanist-var.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+
+/* Palette: Newsprint. Red accent #C8281E on ink #1A1A1A and paper #E9E7E1, a lighter red (--acc-hi) for red text on ink. */
+:root {
+  --acc: #C8281E; --acc-ink: #FFFFFF; --acc-hi: #EE5546; --k: #1A1A1A; --w: #E9E7E1; --muted: #53514C; --line: #C9C5BC;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --pop: cubic-bezier(.34, 1.56, .64, 1);
+  --wide: "Wide Display", "Archivo Black", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --body: "Urbanist", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bar: 76px; --dock: 0px; --peek: 56px; --tray-h: 0px; --lap: 9vh;
+  --g: clamp(1rem, 4vw, 4rem);
+  --stamp: 108px;
+
+  --sc-canvas: #1A1A1A; --sc-surface: #242424;
+  --sc-ink: #FFFFFF; --sc-ink-soft: rgba(255, 255, 255, .72);
+  --sc-accent: #C8281E; --sc-accent-ink: #FFFFFF;
+  --sc-font-display: var(--wide);
+  --sc-font-text: var(--body);
+  --sc-gutter: var(--g);
+}
+html { background: var(--k); }
+body { background: var(--k); color: #fff; font-family: var(--body); margin: 0; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 95; background: var(--acc); color: var(--acc-ink); padding: 10px 14px; font: 700 14px/1 var(--body); }
+.skip:focus { top: 12px; }
+svg.sym { position: absolute; width: 0; height: 0; overflow: hidden; }
+img { max-width: 100%; }
+
+/* every cut: its own ground, a hard edge, nothing wider than the screen */
+.cut { position: relative; overflow-x: clip; }
+.cut--w { background: var(--w); color: var(--k); }
+.cut--k { background: var(--k); color: #fff; }
+.cut--acc { background: var(--acc); color: var(--acc-ink); }
+.wide { font-family: var(--wide); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; }
+
+/* ---------- the one CTA: "Call us", the phone glyph rolls on hover ---------- */
+.call {
+  display: inline-flex; align-items: center; gap: .62em; text-decoration: none; white-space: nowrap;
+  font: 800 1rem/1 var(--wide); text-transform: uppercase; letter-spacing: .01em;
+  background: var(--acc); color: var(--acc-ink); border-radius: 999px; padding: .5em 1.1em .5em .5em; min-height: 44px;
+  transition: transform .32s var(--ease);
+}
+.call__ico { position: relative; width: 2.1em; height: 2.1em; border-radius: 50%; background: var(--k); color: var(--acc-hi); overflow: hidden; flex: none; }
+.call__ico svg { position: absolute; left: 50%; top: 50%; width: 1em; height: 1em; transform: translate(-50%, -50%); transition: transform .42s var(--ease); }
+.call__ico svg + svg { transform: translate(-50%, 150%); }
+.call__n { font-family: var(--body); font-weight: 700; letter-spacing: .02em; text-transform: none; color: color-mix(in srgb, currentColor 86%, transparent); padding-left: .7em; border-left: 1px solid currentColor; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .call:hover .call__ico svg:first-child, .call:focus-visible .call__ico svg:first-child { transform: translate(-50%, -250%); }
+  .call:hover .call__ico svg + svg, .call:focus-visible .call__ico svg + svg { transform: translate(-50%, -50%); }
+}
+.call:active { transform: scale(.97); }
+.call:focus-visible { outline: 3px solid var(--acc); outline-offset: 3px; }
+.cut--acc .call:focus-visible, .dock .call:focus-visible, .cut--w .call:focus-visible { outline-color: var(--k); }
+.cut a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.call--ink { background: var(--k); color: #fff; }
+.call--ink .call__ico { background: var(--acc); color: var(--acc-ink); }
+
+/* ---------- the loud bar: the studio lockup, its services running, the call at the same weight ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar);
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: clamp(1rem, 2.2vw, 2rem);
+  padding: 0 var(--g); padding-top: env(safe-area-inset-top);
+  background: var(--k); border-bottom: 4px solid var(--acc);
+}
+.bar__brand { display: flex; align-items: center; gap: 12px; line-height: 0; text-decoration: none; }
+.bar__mark { width: 44px; height: 44px; }
+.bar__word { height: 24px; width: auto; }
+.bar .call { font-size: 15px; min-height: 52px; }
+.marq { overflow: hidden; height: 52px; display: flex; align-items: center; border-left: 1px solid rgba(238, 85, 70, .35); border-right: 1px solid rgba(238, 85, 70, .35); }
+.marq__track { display: flex; flex: none; gap: 0; white-space: nowrap; animation: cl-marq 70s linear infinite; }
+.marq__track span { font: 800 14px/1 var(--wide); text-transform: uppercase; color: var(--acc-hi); letter-spacing: .04em; padding: 0 1.1em; position: relative; }
+.marq__track span::after { content: ""; position: absolute; right: -4px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; background: #fff; border-radius: 50%; }
+.marq:hover .marq__track { animation-play-state: paused; }
+@keyframes cl-marq { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marq__track { animation: none; } }
+
+/* phones: the call lives in an accent bar under the thumb */
+.dock { display: none; }
+
+/* ---------- the stamp (signature): the studio badge comes from the camera side onto each cut, squashes, leaves its ring ---------- */
+.stamp { position: absolute; z-index: 4; top: calc(var(--stamp) * -.5); left: var(--sx, 80%); width: var(--stamp); height: var(--stamp); margin-left: calc(var(--stamp) * -.5); perspective: 760px; pointer-events: none; }
+.stamp svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.stamp__print { --b-ink: var(--print, var(--acc)); --m-ink: var(--print, var(--acc)); --b-fill: none; --b-core: none; --b-sw: 2.6; transform: rotate(var(--rot, -12deg)); }
+.stamp__body { --b-fill: var(--acc); --b-core: var(--acc); --b-ink: var(--k); --m-ink: var(--k); --b-sw: 2.4; opacity: 0; visibility: hidden; }
+.cut--acc .stamp { --print: var(--k); }
+.cut--w .stamp__print { mix-blend-mode: multiply; }
+html.anim .stamp__print.sdx { animation-name: cl-print; }
+html.anim .stamp__body.sdx { animation-name: cl-stamp; }
+@keyframes cl-stamp {
+  0% { opacity: 0; visibility: visible; transform: translate3d(0, 0, 170px) rotate(calc(var(--rot, -12deg) - 30deg)); }
+  30% { opacity: 1; }
+  68% { opacity: 1; transform: translate3d(0, 0, 0) rotate(var(--rot, -12deg)) scale(1); animation-timing-function: ease-out; }
+  74% { transform: translate3d(0, 0, 0) rotate(var(--rot, -12deg)) scale(1.12, .88); }
+  81% { transform: translate3d(0, 0, 0) rotate(var(--rot, -12deg)) scale(.97, 1.03); }
+  86% { opacity: 1; transform: translate3d(0, 0, 0) rotate(var(--rot, -12deg)) scale(1); }
+  100% { opacity: 0; visibility: hidden; transform: translate3d(0, 0, 90px) rotate(calc(var(--rot, -12deg) + 8deg)); }
+}
+@keyframes cl-print {
+  0%, 68% { opacity: 0; transform: rotate(var(--rot, -12deg)) scale(1.1); }
+  69% { opacity: 1; transform: rotate(var(--rot, -12deg)) scale(1.12); }
+  80%, 100% { opacity: 1; transform: rotate(var(--rot, -12deg)) scale(1); }
+}
+
+/* ---------- act 1: the hero (paper ground) ---------- */
+.hero { height: calc(100vh - var(--peek) + var(--lap)); height: calc(100svh - var(--peek) + var(--lap)); min-height: 520px; padding-top: var(--bar); padding-bottom: var(--lap); box-sizing: border-box;
+  display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.hero__eyebrow { margin: 0; padding: clamp(.9rem, 2.4vh, 1.6rem) var(--g) 0; font: 700 13px/1.4 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.hero__eyebrow b { color: var(--k); font-weight: 800; }
+.hero__box { container-type: size; display: grid; place-items: center; padding: .5rem var(--g) clamp(1rem, 3vh, 2rem); min-height: 0; }
+.scene { --ar: 1.7241; position: relative; width: min(100cqw, calc(100cqh * var(--ar))); aspect-ratio: 100 / 58; container-type: inline-size; }
+.pl { position: absolute; inset: 0; pointer-events: none; transform-style: preserve-3d; }
+.pl--h1, .pl--cta { pointer-events: auto; }
+/* far: the outlined monogram */
+.mono { position: absolute; left: 52cqw; top: 36.2cqw; width: 46cqw; height: auto; aspect-ratio: 601 / 244; --mono: #C6C1B6; }
+/* mid: the badge as one 3D object: the M sits in the ring, a little in front of it, and every move (reveal, tilt, float, scroll) is applied to the whole badge */
+.pl--badge { perspective: 110cqw; perspective-origin: 75cqw 22cqw; }
+.badge { position: absolute; left: 56cqw; top: 3cqw; width: 38cqw; aspect-ratio: 1; transform-style: preserve-3d; }
+.badge__in, .badge__float, .badge__tilt { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; }
+.badge__float { animation: cl-float 5.2s ease-in-out infinite; }
+.badge__tilt { transform: rotateY(-24deg) rotateX(10deg); }
+.badge__ring { position: absolute; inset: 0; }
+.badge__ring svg { width: 100%; height: 100%; display: block; overflow: visible; --b-fill: var(--acc); --b-core: transparent; --b-ink: var(--k); --b-sw: 1.6; --b-mo: 0; }
+.badge__mark { position: absolute; left: 31%; top: 32.3%; width: 38%; aspect-ratio: 48 / 44.8; transform: translateZ(3.5cqw); }
+.badge__mark svg { width: 100%; height: 100%; display: block; --m-ink: var(--k); }
+@keyframes cl-float { 50% { transform: translateY(-.9cqw); } }
+@media (prefers-reduced-motion: reduce) { .badge__float { animation: none; } }
+/* the line, on its own near plane */
+.h1 { position: absolute; left: 0; top: 7.4cqw; margin: 0; width: 52cqw; font: 900 6.4cqw/.93 var(--wide); letter-spacing: -.015em; text-transform: uppercase; color: var(--k); perspective: 900px; perspective-origin: 20% 50%; }
+.h1 .w { display: inline-block; }
+.hero__cta { position: absolute; left: 0; top: 38cqw; }
+.hero__cta .call { font-size: clamp(15px, 1.35cqw, 19px); }
+.hero__where { position: absolute; left: 0; top: 47cqw; margin: 0; font: 600 14px/1.45 var(--body); color: var(--muted); max-width: 40cqw; }
+
+/* hero reveal on load (time-based, gated: no JS and reduced motion get the final state) */
+@media (prefers-reduced-motion: no-preference) {
+  html.pre-reveal .h1 .w, html.pre-reveal .mono__in, html.pre-reveal .badge__in, html.pre-reveal .hero__eyebrow, html.pre-reveal .hero__cta, html.pre-reveal .hero__where, html.pre-reveal .hero__foot { opacity: 0; }
+  html.reveal .mono__in { animation: cl-mono-in .9s var(--ease) both; }
+  html.reveal .badge__in { animation: cl-badge-in 1.2s var(--ease) .08s both; }
+  html.reveal .h1 .w { animation: cl-punch .72s both; animation-delay: calc(.34s + var(--i) * 95ms); }
+  html.reveal .hero__eyebrow { animation: cl-up .5s var(--ease) both; }
+  html.reveal .hero__cta, html.reveal .hero__where, html.reveal .hero__foot { animation: cl-up .55s var(--ease) 1.12s both; }
+}
+.mono__in { width: 100%; height: 100%; transform-style: preserve-3d; }
+@keyframes cl-mono-in { from { opacity: 0; transform: translateZ(-260px); } to { opacity: 1; transform: none; } }
+@keyframes cl-badge-in { 0% { opacity: 0; transform: rotateX(84deg) rotate(-200deg) scale(.6); } 18% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+@keyframes cl-punch {
+  0% { opacity: 0; transform: translateZ(-720px); animation-timing-function: cubic-bezier(.2, .7, .3, 1); }
+  45% { opacity: 1; }
+  72% { opacity: 1; transform: translateZ(70px); animation-timing-function: cubic-bezier(.16, 1, .3, 1); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes cl-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* ---------- scroll-linked moves: CSS scroll-driven animations on page-pixel ranges set by JS ---------- */
+html.anim .sdx { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.anim .sdx2 { animation-duration: auto, auto; animation-timing-function: linear, linear; animation-fill-mode: both, forwards; animation-timeline: scroll(root block), scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px), var(--f0, 0px) var(--f1, 1px); }
+html.anim .sdxf { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--f0, 0px) var(--f1, 1px); }
+
+/* hero, desktop only: as the board slides over the hero, the whole badge turns to face you and comes forward; the monogram recedes */
+html.anim .pl--mono.sdx { animation-name: cl-h-mono; }
+html.anim .badge.sdx { animation-name: cl-h-badge; }
+@keyframes cl-h-mono { to { transform: translateZ(-240px); } }
+@keyframes cl-h-badge { to { transform: translateZ(90px) rotateY(24deg) rotateX(-6deg); } }
+
+/* ---------- act 2: the board. What the studio does, then each service shown with its own work (one pinned stage) ---------- */
+.board { position: relative; z-index: 2; margin-top: calc(var(--lap) * -1); background: var(--k); }
+.board::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--acc); z-index: 6; }
+.board__stage { background: var(--k); overflow: hidden; }
+.spill { position: absolute; z-index: 7; top: 0; left: var(--g); display: flex; gap: clamp(.6rem, 1.2vw, 1.2rem); list-style: none; margin: 0; padding: 0; transform: translateY(-42%); pointer-events: none; }
+.spill li { width: clamp(64px, 6.2vw, 96px); aspect-ratio: 1; transform: rotate(var(--sr)) translateY(var(--sy, 0)); border: 2px solid #fff; box-shadow: 0 10px 20px rgba(0, 0, 0, .3); background: #1A1A1A; }
+.spill img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.board__cam { position: absolute; inset: var(--bar) 0 5.5rem 0; display: grid; place-items: center; perspective: 1300px; perspective-origin: 62% 30%; }
+.wall { --tile: min(calc((100vh - var(--bar) - 7.5rem) / 4.25), calc((100vw - 2 * var(--g)) / 8)); list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, var(--tile)); gap: calc(var(--tile) * .07); transform-style: preserve-3d; transform-origin: 50% 60%; translate: 11vw 0; }
+.tile { position: relative; transform-style: preserve-3d; transform-origin: 50% 100%; }
+.tile img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; box-shadow: 0 8px 18px rgba(0, 0, 0, .45); }
+.tag { position: absolute; left: 6%; bottom: 6%; font: 800 10px/1 var(--body); letter-spacing: .1em; text-transform: uppercase; background: var(--k); color: #fff; padding: .45em .6em; }
+.board__caps { position: absolute; z-index: 5; left: var(--g); bottom: clamp(1.5rem, 5vh, 3rem); width: min(34vw, 32rem); }
+.bcap { position: absolute; left: 0; bottom: 0; width: 100%; box-sizing: border-box; background: var(--k); color: #fff; padding: 1.4rem 1.5rem 1.5rem; border-top: 4px solid var(--acc); box-shadow: 0 18px 40px rgba(0, 0, 0, .55); transform-origin: 50% 100%; }
+.bcap h2 { margin: 0 0 .9rem; font: 900 clamp(1.5rem, .6rem + 1.9vw, 2.6rem)/.95 var(--wide); text-transform: uppercase; letter-spacing: -.015em; }
+.bcap h2 em { font-style: normal; color: var(--acc-hi); }
+.bcap h3 { margin: 0 0 .9rem; font: 900 clamp(1.35rem, .5rem + 1.75vw, 2.4rem)/.95 var(--wide); text-transform: uppercase; letter-spacing: -.015em; }
+.bcap__p { margin: 0; font: 500 clamp(1rem, .9rem + .35vw, 1.2rem)/1.45 var(--body); color: #fff; text-wrap: pretty; }
+.bcap__p b { color: var(--acc-hi); font-weight: 700; }
+.chips { list-style: none; margin: 0 0 .9rem; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.chips li { font: 700 13px/1 var(--body); padding: .5em .85em; border: 1.5px solid currentColor; border-radius: 999px; color: var(--acc-hi); }
+.bcap__done { margin: 0; font: 500 15px/1.45 var(--body); color: rgba(255, 255, 255, .84); }
+.bcap__done b { color: #fff; font-weight: 800; }
+html.anim .bcap { opacity: 0; visibility: hidden; transform: perspective(900px) rotateX(-30deg) translateY(16px); transition: opacity .16s linear, transform .3s var(--ease), visibility 0s linear .16s; }
+html.anim .bcap.past { transform: perspective(900px) rotateX(26deg) translateY(-10px); }
+html.anim .bcap.on { opacity: 1; visibility: visible; transform: none; transition: opacity .2s linear .06s, transform .4s var(--ease) .06s, visibility 0s; }
+html.anim .wall.sdx2 { animation-name: cl-unfurl, cl-push; }
+@keyframes cl-unfurl { from { transform: translateY(-24%) translateZ(-420px) rotateX(56deg) rotateZ(-8deg); } to { transform: translateZ(-70px) rotateX(7deg) rotateZ(-2deg); } }
+@keyframes cl-push { from { transform: translateZ(-70px) rotateX(7deg) rotateZ(-2deg); } to { transform: translateZ(-20px) rotateX(3deg) rotateZ(0deg); } }
+html.anim .tile.sdxf[data-g="0"] { animation-name: cl-g0; }
+html.anim .tile.sdxf[data-g="1"] { animation-name: cl-g1; }
+html.anim .tile.sdxf[data-g="2"] { animation-name: cl-g2; }
+html.anim .tile.sdxf[data-g="3"] { animation-name: cl-g3; }
+html.anim .tile.sdxf img { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--f0, 0px) var(--f1, 1px); }
+html.anim .tile[data-g="0"] img { animation-name: cl-go0; }
+html.anim .tile[data-g="1"] img { animation-name: cl-go1; }
+html.anim .tile[data-g="2"] img { animation-name: cl-go2; }
+html.anim .tile[data-g="3"] img { animation-name: cl-go3; }
+@keyframes cl-g0 { 0% { transform: translateZ(0) rotateX(0deg) scale(1); } 2.5% { transform: translateZ(120px) rotateX(-6deg) scale(1.04); } 4% { transform: translateZ(110px) rotateX(0deg) scale(1.04); } 18% { transform: translateZ(110px) rotateX(0deg) scale(1.04); } 22.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 38% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 42.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 58% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 62.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 78% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 80.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 83.5% { transform: translateZ(0) rotateX(0deg) scale(1); } 100% { transform: translateZ(0) rotateX(0deg) scale(1); } }
+@keyframes cl-g1 { 0% { transform: translateZ(0) rotateX(0deg) scale(1); } 2.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 18% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 22.5% { transform: translateZ(120px) rotateX(-6deg) scale(1.04); } 24% { transform: translateZ(110px) rotateX(0deg) scale(1.04); } 38% { transform: translateZ(110px) rotateX(0deg) scale(1.04); } 42.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 58% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 62.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 78% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 80.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 83.5% { transform: translateZ(0) rotateX(0deg) scale(1); } 100% { transform: translateZ(0) rotateX(0deg) scale(1); } }
+@keyframes cl-g2 { 0% { transform: translateZ(0) rotateX(0deg) scale(1); } 2.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 18% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 22.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 38% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 42.5% { transform: translateZ(120px) rotateX(-6deg) scale(1.04); } 44% { transform: translateZ(110px) rotateX(0deg) scale(1.04); } 58% { transform: translateZ(110px) rotateX(0deg) scale(1.04); } 62.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 78% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 80.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 83.5% { transform: translateZ(0) rotateX(0deg) scale(1); } 100% { transform: translateZ(0) rotateX(0deg) scale(1); } }
+@keyframes cl-g3 { 0% { transform: translateZ(0) rotateX(0deg) scale(1); } 2.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 18% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 22.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 38% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 42.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 58% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 62.5% { transform: translateZ(120px) rotateX(-6deg) scale(1.04); } 64% { transform: translateZ(110px) rotateX(0deg) scale(1.04); } 78% { transform: translateZ(110px) rotateX(0deg) scale(1.04); } 80.5% { transform: translateZ(-50px) rotateX(26deg) scale(.96); } 83.5% { transform: translateZ(0) rotateX(0deg) scale(1); } 100% { transform: translateZ(0) rotateX(0deg) scale(1); } }
+@keyframes cl-go0 { 0% { opacity: 1; } 2.5% { opacity: 1; } 4% { opacity: 1; } 18% { opacity: 1; } 22.5% { opacity: .3; } 38% { opacity: .3; } 42.5% { opacity: .3; } 58% { opacity: .3; } 62.5% { opacity: .3; } 78% { opacity: .3; } 80.5% { opacity: .3; } 83.5% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes cl-go1 { 0% { opacity: 1; } 2.5% { opacity: .3; } 18% { opacity: .3; } 22.5% { opacity: 1; } 24% { opacity: 1; } 38% { opacity: 1; } 42.5% { opacity: .3; } 58% { opacity: .3; } 62.5% { opacity: .3; } 78% { opacity: .3; } 80.5% { opacity: .3; } 83.5% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes cl-go2 { 0% { opacity: 1; } 2.5% { opacity: .3; } 18% { opacity: .3; } 22.5% { opacity: .3; } 38% { opacity: .3; } 42.5% { opacity: 1; } 44% { opacity: 1; } 58% { opacity: 1; } 62.5% { opacity: .3; } 78% { opacity: .3; } 80.5% { opacity: .3; } 83.5% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes cl-go3 { 0% { opacity: 1; } 2.5% { opacity: .3; } 18% { opacity: .3; } 22.5% { opacity: .3; } 38% { opacity: .3; } 42.5% { opacity: .3; } 58% { opacity: .3; } 62.5% { opacity: 1; } 64% { opacity: 1; } 78% { opacity: 1; } 80.5% { opacity: .3; } 83.5% { opacity: 1; } 100% { opacity: 1; } }
+
+/* ---------- acts 9 to 14: the case cuts (the peak runs above them in the bar) ---------- */
+.case { padding: clamp(4.6rem, 10vh, 6rem) var(--g) clamp(3.6rem, 7vh, 4.6rem); }
+#case-1 { padding-top: clamp(6.2rem, 12vh, 7.5rem); }
+#case-6 { padding-bottom: clamp(5.4rem, 9vh, 6rem); }
+.case__in { max-width: 82rem; margin: 0 auto; }
+.case__body { max-width: min(58rem, 58vw); }
+.case h3 { margin: 0; font: 900 clamp(2.6rem, 6vw, 7rem)/.88 var(--wide); text-transform: uppercase; letter-spacing: -.025em; }
+.case__meta { margin: .9rem 0 0; font: 700 13px/1.4 var(--body); letter-spacing: .12em; text-transform: uppercase; color: color-mix(in srgb, currentColor 82%, transparent); }
+.cut--acc .case__meta { color: var(--acc-ink); }
+.case__story { margin: 1.2rem 0 0; font: 500 clamp(1.05rem, .95rem + .45vw, 1.35rem)/1.48 var(--body); max-width: 36em; text-wrap: pretty; }
+.nums { display: flex; flex-wrap: wrap; gap: 1.25rem clamp(1.5rem, 4vw, 3.5rem); margin: clamp(1.4rem, 4vh, 2.4rem) 0 0; padding: 0; list-style: none; perspective: 800px; perspective-origin: 30% 50%; }
+.num { display: grid; gap: .45rem; transform-style: preserve-3d; }
+.num b { display: block; font: 900 clamp(2.6rem, 1.2rem + 4.2vw, 5.4rem)/.9 var(--wide); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.num span { font: 700 12px/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; max-width: 15em; }
+.cut--k .num b { color: var(--acc-hi); }
+.case__link { display: inline-block; margin-top: 1.6rem; font: 700 15px/1.3 var(--body); color: inherit; text-underline-offset: .22em; text-decoration-thickness: 1.5px; }
+.case__img { display: none; }
+html.anim .num, html.anim .close__cta .call { opacity: 0; }
+html.anim .nums.on .num, html.anim .close__cta .call.on { animation: cl-num .42s linear both; animation-delay: calc(var(--n, 0) * 50ms); }
+.num:nth-child(2) { --n: 1; } .num:nth-child(3) { --n: 2; }
+@keyframes cl-num { 0% { transform: translateZ(-560px); opacity: 0; } 40% { opacity: 1; } 74% { transform: translateZ(40px); opacity: 1; } 100% { transform: none; opacity: 1; } }
+
+/* the peak: on desktop a sticky tray rides beside the case cuts, lined up with the first case name; each case's image slams onto its pile */
+.cases { display: grid; grid-template-columns: minmax(0, 1fr); overflow-x: clip; } /* clip, not hidden: the tray stays sticky, a thrown card never widens the page */
+.cases > .case { grid-column: 1; }
+#case-1 { grid-row: 1; } #case-2 { grid-row: 2; } #case-3 { grid-row: 3; } #case-4 { grid-row: 4; } #case-5 { grid-row: 5; } #case-6 { grid-row: 6; }
+.rail { display: none; }
+html.anim .rail {
+  display: block; grid-column: 1; grid-row: 1 / 7; align-self: start; justify-self: end; position: sticky; z-index: 6;
+  top: calc(var(--bar) + clamp(1.25rem, 4vh, 2.5rem)); width: min(31vw, 30rem, calc(100vh - var(--bar) - 12rem));
+  margin: clamp(6.2rem, 12vh, 7.5rem) var(--g) clamp(5.4rem, 9vh, 6rem) 0; pointer-events: none;
+}
+.tray { background: var(--k); border: 4px solid var(--acc); padding: 1rem 1rem 1.1rem; box-sizing: border-box; box-shadow: 0 24px 50px rgba(0, 0, 0, .35); pointer-events: auto; }
+.tray__label { margin: 0 0 .9rem; font: 700 11px/1.3 var(--body); letter-spacing: .16em; text-transform: uppercase; color: rgba(255, 255, 255, .8); }
+.pile { position: relative; width: 100%; aspect-ratio: 1; perspective: 900px; perspective-origin: 50% 40%; list-style: none; margin: 0; padding: 0; }
+.card { position: absolute; inset: 4%; transform-style: preserve-3d; opacity: 0; visibility: hidden; }
+.card img { display: block; width: 100%; height: 100%; object-fit: cover; border: 3px solid #fff; box-sizing: border-box; box-shadow: 0 10px 24px rgba(0, 0, 0, .45); }
+.card__dim { position: absolute; inset: 0; background: #000; opacity: 0; }
+.caps { position: relative; height: 2.6rem; margin-top: .9rem; }
+.cap { position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden; display: flex; align-items: baseline; gap: .6rem; }
+.cap b { font: 900 clamp(1.1rem, .6rem + 1vw, 1.6rem)/1 var(--wide); text-transform: uppercase; color: var(--acc-hi); letter-spacing: -.01em; }
+.cap span { font: 600 12px/1.3 var(--body); color: rgba(255, 255, 255, .8); }
+html.anim .card.sdx2 { animation-name: cl-slam, cl-sink; }
+html.anim .card.sdx { animation-name: cl-slam; }
+html.anim .card__dim.sdxf { animation-name: cl-dim; }
+@keyframes cl-slam {
+  0% { opacity: 0; visibility: visible; transform: translate3d(6%, -10%, 220px) rotate(calc(var(--cr) - 16deg)); }
+  25% { opacity: 1; }
+  70% { opacity: 1; visibility: visible; transform: translate3d(var(--cx), var(--cy), 0) rotate(var(--cr)); animation-timing-function: ease-out; }
+  80% { transform: translate3d(var(--cx), var(--cy), 0) rotate(var(--cr)) scale(1.07, .9); }
+  90% { transform: translate3d(var(--cx), var(--cy), 0) rotate(var(--cr)) scale(.98, 1.02); }
+  100% { opacity: 1; visibility: visible; transform: translate3d(var(--cx), var(--cy), 0) rotate(var(--cr)); }
+}
+@keyframes cl-sink { from { opacity: 1; visibility: visible; transform: translate3d(var(--cx), var(--cy), 0) rotate(var(--cr)); } to { opacity: 1; visibility: visible; transform: translate3d(calc(var(--cx) * 1.6), calc(var(--cy) + 2%), -90px) rotate(calc(var(--cr) * 1.5)); } }
+@keyframes cl-dim { to { opacity: .45; } }
+@keyframes cl-post {
+  0% { opacity: 0; transform: perspective(700px) translate3d(4%, 14%, 150px) rotate(calc(var(--pr, -3deg) - 14deg)); } /* starts below its spot, so the throw never covers the stats above it */
+  25% { opacity: 1; }
+  70% { opacity: 1; transform: perspective(700px) translate3d(0, 0, 0) rotate(var(--pr, -3deg)); animation-timing-function: ease-out; }
+  80% { transform: perspective(700px) translate3d(0, 0, 0) rotate(var(--pr, -3deg)) scale(1.06, .92); }
+  90% { transform: perspective(700px) translate3d(0, 0, 0) rotate(var(--pr, -3deg)) scale(.98, 1.02); }
+  100% { opacity: 1; transform: perspective(700px) translate3d(0, 0, 0) rotate(var(--pr, -3deg)); }
+}
+html.anim .cap { transform: translateY(40%); transition: opacity .14s linear, transform .25s var(--ease), visibility 0s linear .14s; }
+html.anim .cap.past { transform: translateY(-40%); }
+html.anim .cap.on { opacity: 1; visibility: visible; transform: none; transition: opacity .18s linear .05s, transform .3s var(--ease) .05s, visibility 0s; }
+
+/* ---------- act 16: the logo wall, a checker of accent blocks flies at the camera ---------- */
+.logos { padding: clamp(6.2rem, 12vh, 7.5rem) var(--g) clamp(3.6rem, 7vh, 4.6rem); }
+.logos__in { max-width: 82rem; margin: 0 auto; }
+.logos h2 { margin: 0 0 .6rem; font: 900 clamp(2rem, .8rem + 3.6vw, 4.6rem)/.92 var(--wide); text-transform: uppercase; letter-spacing: -.02em; }
+.logos__note { margin: 0 0 clamp(1.5rem, 4vh, 2.5rem); font: 500 clamp(1rem, .92rem + .3vw, 1.2rem)/1.45 var(--body); color: var(--muted); max-width: 40em; }
+.lgrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); perspective: 900px; }
+.lg { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 10; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transform-style: preserve-3d; }
+.lg img { max-width: 64%; max-height: 52%; width: auto; height: auto; object-fit: contain; }
+.blk { position: absolute; inset: -1px; background: var(--acc); opacity: 0; visibility: hidden; }
+html.anim .blk { opacity: 1; visibility: visible; }
+html.anim .lgrid.on .blk { animation: cl-blk .5s cubic-bezier(.5, 0, .9, .6) both; animation-delay: var(--bd, 0s); }
+@keyframes cl-blk { 0% { transform: none; opacity: 1; visibility: visible; } 80% { opacity: 1; } 100% { transform: translateZ(520px); opacity: 0; visibility: hidden; } }
+
+/* ---------- act 17: starting prices, a staircase in depth ---------- */
+.cost { padding: clamp(4.6rem, 10vh, 6rem) var(--g) clamp(5.4rem, 9vh, 6rem); }
+.cost__in { max-width: 82rem; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2rem 4rem; align-items: center; }
+.cost h2 { margin: 0; font: 900 clamp(2rem, .9rem + 3.2vw, 4.2rem)/.94 var(--wide); text-transform: uppercase; letter-spacing: -.02em; }
+.cost h2 em { font-style: normal; color: var(--acc-hi); }
+.cost__p { margin: 1.2rem 0 0; font: 500 clamp(1rem, .92rem + .3vw, 1.2rem)/1.5 var(--body); color: rgba(255, 255, 255, .8); max-width: 30em; }
+.cost__p a { color: #fff; text-underline-offset: .2em; }
+.stairs-wrap { perspective: 1100px; perspective-origin: 30% 20%; }
+.stairs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; align-items: end; transform-style: preserve-3d; transform: rotateX(10deg) rotateY(-16deg); height: clamp(17rem, 40vh, 24rem); container-type: inline-size; position: relative; }
+.step { position: relative; height: var(--h); transform-style: preserve-3d; transform-origin: 50% 100%; }
+.step__front { position: absolute; inset: 0; background: var(--c); color: var(--t); padding: 1rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; gap: .35rem; border-right: 1px solid rgba(0, 0, 0, .25); }
+.step__top { position: absolute; left: 0; right: 0; top: 0; height: 60px; background: var(--ct); transform-origin: 50% 0%; transform: rotateX(90deg); }
+.step b { font: 900 clamp(1rem, .7rem + .9vw, 1.6rem)/1 var(--wide); text-transform: uppercase; letter-spacing: -.01em; }
+.step span { font: 700 13px/1.3 var(--body); }
+.s1 { --h: 100%; --c: var(--acc); --ct: #E0574B; --t: var(--acc-ink); }
+.s2 { --h: 66%; --c: #8A1C15; --ct: #A8261D; --t: #fff; }
+.s3 { --h: 34%; --c: #3A3A3A; --ct: #555; --t: #fff; }
+.token { position: absolute; left: 0; bottom: 100%; width: 13cqw; aspect-ratio: 1; transform: translate(10cqw, 0); pointer-events: none; z-index: 2; }
+.token svg { width: 100%; height: 100%; display: block; color: #fff; }
+html.anim .step { opacity: 0; }
+html.anim .stairs.on .step { animation: cl-rise .42s var(--ease) both; animation-delay: calc(var(--si, 0) * 60ms); }
+.s2 { --si: 1; } .s3 { --si: 2; }
+@keyframes cl-rise { from { transform: translateZ(-220px) scaleY(.2); opacity: 0; } 40% { opacity: 1; } to { transform: none; opacity: 1; } }
+html.anim .stairs.on { animation: cl-swing .55s var(--ease) both; }
+@keyframes cl-swing { from { transform: rotateX(26deg) rotateY(-38deg); } to { transform: rotateX(10deg) rotateY(-16deg); } }
+html.anim .token.sdx { animation-name: cl-hop; }
+@keyframes cl-hop {
+  0% { transform: translate(10cqw, 0); }
+  14% { transform: translate(10cqw, 0); }
+  30% { transform: translate(27cqw, -6cqw); }
+  46% { transform: translate(43cqw, calc(var(--d1) * 1px)); }
+  58% { transform: translate(43cqw, calc(var(--d1) * 1px)); }
+  74% { transform: translate(60cqw, calc(var(--d1) * 1px - 6cqw)); }
+  90%, 100% { transform: translate(77cqw, calc(var(--d2) * 1px)); }
+}
+.once { margin: 1.4rem 0 0; padding: 1rem 0 0; border-top: 1px solid rgba(255, 255, 255, .2); font: 500 clamp(1rem, .92rem + .3vw, 1.15rem)/1.5 var(--body); color: rgba(255, 255, 255, .86); }
+.once b { color: #fff; }
+
+/* ---------- act 18: the close, abrupt, full-bleed accent ---------- */
+.close { min-height: 100vh; min-height: 100svh; padding: calc(var(--bar) + clamp(2.5rem, 8vh, 5rem)) var(--g) calc(var(--dock) + clamp(3.5rem, 8vh, 5rem)); box-sizing: border-box; display: grid; align-content: center; }
+.close__in { max-width: 82rem; width: 100%; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 2rem 3rem; align-items: center; }
+.close h2 { margin: 0; font: 900 clamp(2.6rem, .8rem + 5.4vw, 7rem)/.9 var(--wide); text-transform: uppercase; letter-spacing: -.025em; }
+.close__sub { margin: 1rem 0 0; font: 800 clamp(1.1rem, .8rem + 1vw, 1.7rem)/1.2 var(--wide); text-transform: uppercase; letter-spacing: -.01em; }
+.close__cta { margin-top: clamp(1.6rem, 5vh, 3rem); perspective: 800px; }
+.close__cta .call { font-size: clamp(1.15rem, .7rem + 1.6vw, 2rem); padding: .55em 1.3em .55em .55em; }
+.close__rows { list-style: none; margin: clamp(1.8rem, 5vh, 3rem) 0 0; padding: 1.1rem 0 0; border-top: 2px solid var(--k); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem 2rem; font: 600 15px/1.5 var(--body); }
+.close__rows span { display: block; font: 800 11px/1.3 var(--body); letter-spacing: .16em; text-transform: uppercase; margin-bottom: .3rem; }
+.close__rows a { color: inherit; text-underline-offset: .2em; }
+.close__legal { margin: 1.4rem 0 0; font: 600 12px/1.5 var(--body); color: var(--acc-ink); }
+.close__legal a { color: inherit; text-underline-offset: .2em; }
+.close__obj { justify-self: center; width: min(100%, 22rem); aspect-ratio: 1; }
+.close__obj img { width: 100%; height: 100%; display: block; object-fit: contain; transform: scale(1.4); } /* the cut-out stamp fills about 60% of its frame; scaled so it fills the box like the original figure */
+html.anim .close__obj.sdx { animation-name: cl-calm; }
+@keyframes cl-calm { from { transform: translateY(18%) scale(.86); opacity: 0; } 50% { opacity: 1; } to { transform: none; opacity: 1; } }
+
+/* static composition (reduced motion, no scroll timelines, no JS): the tray is not drawn, each case shows its image */
+html:not(.anim) .case__img { display: block; width: min(16rem, 60vw); height: auto; aspect-ratio: 1; object-fit: cover; margin-top: 1.6rem; border: 3px solid currentColor; }
+html:not(.anim) .stamp__body { display: none; }
+html:not(.anim) .token { transform: translate(77cqw, calc(var(--d2) * 1px)); }
+/* the board without scroll timelines or with reduced motion: no pin, the wall flat, every caption in the flow */
+html:not(.anim) .board { margin-top: 0; }
+html:not(.anim) .board, html:not(.anim) .board__stage { height: auto !important; }
+html:not(.anim) .board__stage { position: static !important; overflow: visible; padding: calc(var(--bar) + 2.5rem) var(--g) 3rem; }
+html:not(.anim) .board__cam { position: static; display: block; perspective: none; }
+html:not(.anim) .wall { translate: none; margin: 0 auto; }
+html:not(.anim) .board__caps { position: static; width: auto; max-width: 82rem; margin: 2.5rem auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; }
+html:not(.anim) .bcap { position: static; box-shadow: none; }
+
+
+/* ---------- phones and tall screens ---------- */
+@media (max-width: 860px), (max-aspect-ratio: 4 / 5) {
+  .scene { --ar: .7092; aspect-ratio: 100 / 141; }
+  .h1 { left: 0; top: 0; width: 100cqw; font-size: 12.1cqw; line-height: .94; perspective-origin: 50% 40%; }
+  .pl--badge { perspective-origin: 50% 84cqw; }
+  .badge { left: 17cqw; top: 51cqw; width: 66cqw; }
+  .mono { left: 12cqw; top: 109.2cqw; width: 76cqw; }
+  .hero__cta, .hero__where { display: none; }
+}
+@media (max-width: 860px) {
+  :root { --bar: 60px; --dock: calc(64px + env(safe-area-inset-bottom)); --peek: calc(var(--dock) + 34px); --stamp: 80px; }
+  .bar { grid-template-columns: auto minmax(0, 1fr); gap: .9rem; border-bottom-width: 3px; }
+  .bar__brand { gap: 8px; }
+  .bar__mark { width: 34px; height: 34px; }
+  .bar__word { height: 17px; }
+  .bar .call { display: none; }
+  .marq { height: 40px; border-right: 0; }
+  .marq__track span { font-size: 12px; }
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock);
+    padding: 0 var(--g) env(safe-area-inset-bottom); align-items: center; justify-content: center; box-sizing: border-box;
+    background: var(--acc); border-top: 3px solid var(--k); transition: transform .4s var(--ease);
+  }
+  .dock .call { font-size: 18px; background: transparent; padding: 0; min-height: 52px; width: 100%; justify-content: center; }
+  .dock .call__n { display: none; }
+  .dock.is-away { transform: translateY(100%); }
+  .hero { grid-template-rows: auto minmax(0, 1fr) auto; }
+  .hero__eyebrow { font-size: 11px; letter-spacing: .12em; padding-top: .9rem; }
+  .eb-long { display: none; }
+  .hero__box { padding: .6rem var(--g) .4rem; }
+  .hero__foot { display: flex; padding: 0 var(--g) 1rem; }
+  .hero__foot .call { font-size: 16px; }
+  .call__n { display: none; }
+  .cost__in, .close__in { grid-template-columns: minmax(0, 1fr); }
+  :root { --lap: 6vh; }
+  /* the caption card keeps one height (its tallest service, --caph from the script), so the wall sits in the middle of the space between the bar and the card */
+  .board__cam { inset: var(--bar) 0 calc(var(--dock) + .75rem + var(--caph, 10rem)) 0; height: auto; perspective-origin: 50% 45%; }
+  html.anim .bcap { min-height: var(--caph, 0px); }
+  .wall { --tile: min(calc((100vw - 2 * var(--g)) / 4.3), calc((100svh - var(--bar) - var(--dock) - .75rem - var(--caph, 10rem) - 4.5rem) / 5.35)); grid-template-columns: repeat(4, var(--tile)); translate: 0 -.6rem; } /* the lying-back rows read lower than their box, so lift a touch */
+  .board__caps { left: var(--g); right: var(--g); width: auto; bottom: calc(var(--dock) + .75rem); }
+  .bcap { padding: 1rem 1.1rem 1.1rem; }
+  .bcap h2 { font-size: 1.4rem; margin-bottom: .6rem; }
+  .bcap h3 { font-size: 1.3rem; margin-bottom: .6rem; }
+  .bcap__p { font-size: 15px; line-height: 1.42; }
+  .bcap__done { font-size: 13.5px; }
+  .chips { margin-bottom: .6rem; gap: .3rem; }
+  .chips li { font-size: 11.5px; }
+  .tag { font-size: 8px; }
+  .spill { left: auto; right: var(--g); }
+  .spill li { width: 54px; }
+  .spill li:nth-child(4) { display: none; }
+  html:not(.anim) .board__cam { height: auto; }
+  .case { padding: 4.4rem var(--g) 4rem; }
+  .logos, .cost { padding: 4.4rem var(--g) 4rem; }
+  .cost { padding-bottom: 5rem; }
+  .stamp { left: var(--sxm, var(--sx, 80%)); }
+  .case__body { max-width: none; }
+  .case h3 { font-size: min(9.2vw, 3.6rem); }
+  .nums { gap: 1rem 1.6rem; }
+  .num b { font-size: clamp(2.3rem, 1rem + 6vw, 3.2rem); }
+  html.anim .rail { display: none; }
+  html.anim .case__img { display: block; width: min(15rem, 62vw); height: auto; aspect-ratio: 1; object-fit: cover; margin-top: 1.8rem; border: 3px solid currentColor; box-sizing: border-box; box-shadow: 0 14px 30px rgba(0, 0, 0, .3); transform: perspective(700px) translate3d(0, 0, 0) rotate(var(--pr, -3deg)); }
+  .case:nth-of-type(even) .case__img { --pr: 3deg; }
+  html.anim .case__img { opacity: 0; }
+  html.anim .case__img.on { animation: cl-post .45s linear both; }
+  .lgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stairs { height: 15rem; }
+  .stairs-wrap { margin-top: 6.5rem; }
+  .step__front { padding: .6rem; }
+  .step b { font-size: 14px; }
+  .step span { font-size: 11px; }
+  .close__rows { grid-template-columns: minmax(0, 1fr); }
+  .close__obj { width: 6.4rem; justify-self: start; grid-row: 1; }
+}
+@media (min-width: 861px) { .hero__foot { display: none; } }
+@media (prefers-reduced-motion: reduce) { .call, .call__ico svg, .dock { transition: none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#what">Skip to content</a>
+
+<svg class="sym" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="cl-arc" d="M90.12 170.31A71 71 0 1 1 109.88 170.31" fill="none"/>
+    <symbol id="cl-m" viewBox="36 37.6 48 44.8"><path style="fill: var(--m-ink, #1A1A1A)" d="M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/></symbol>
+    <symbol id="cl-mark" viewBox="0 0 120 120"><path style="fill: var(--mk, currentColor)" fill-rule="evenodd" d="M60 0A60 60 0 1 1 60 120A60 60 0 1 1 60 0Z M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/></symbol>
+    <symbol id="cl-mono" viewBox="0 0 601 244"><text x="300.5" y="226" text-anchor="middle" textLength="586" lengthAdjust="spacingAndGlyphs" style="fill: none; stroke: var(--mono, #C6C1B6); stroke-width: 5; stroke-linejoin: round; font-family: 'Wide Display', 'Archivo Black', sans-serif; font-weight: 900; font-size: 300px">MS.</text></symbol>
+    <symbol id="cl-badge" viewBox="0 0 200 200">
+      <path style="fill: var(--b-fill, none)" fill-rule="evenodd" d="M100 3a97 97 0 1 0 .01 0zM100 37a63 63 0 1 0 .01 0z"/>
+      <circle cx="100" cy="100" r="63" style="fill: var(--b-core, none)"/>
+      <circle cx="100" cy="100" r="97" style="fill: none; stroke: var(--b-ink, #1A1A1A); stroke-width: var(--b-sw, 2.4)"/>
+      <circle cx="100" cy="100" r="63" style="fill: none; stroke: var(--b-ink, #1A1A1A); stroke-width: var(--b-sw, 2.4)"/>
+      <path d="M100 163V197" style="stroke: var(--b-ink, #1A1A1A); stroke-width: var(--b-sw, 2.4)"/>
+      <text style="fill: var(--b-ink, #1A1A1A); font-family: 'Wide Display', 'Archivo Black', sans-serif; font-weight: 800; font-size: 16.5px; letter-spacing: .4px"><textPath href="#cl-arc" textLength="412" lengthAdjust="spacing">MOSSWICK STUDIO &#183; EST. 2014</textPath></text>
+      <use href="#cl-m" x="62" y="64.6" width="76" height="70.9" style="opacity: var(--b-mo, 1)"/>
+    </symbol>
+    <symbol id="cl-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+  </defs>
+</svg>
+
+<header class="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio, back to top"><img class="bar__mark" src="assets/brand/mark.svg" width="120" height="120" alt=""><img class="bar__word" src="assets/brand/wordmark.svg" width="439" height="77" alt=""></a>
+  <div class="marq" aria-hidden="true">
+    <div class="marq__track">
+      <span>Brand strategy</span><span>Positioning</span><span>Naming</span><span>Brand voice</span><span>Brand identity</span><span>Logo and wordmark</span><span>Brand guidelines</span><span>Websites</span><span>UX and UI design</span><span>Copywriting</span><span>Social content</span><span>Short-form video</span><span>Photography</span><span>Community management</span><span>Film and motion</span><span>Motion graphics</span><span>Campaigns</span><span>Out-of-home design</span><span>Media planning</span><span>Performance marketing</span><span>Paid search</span><span>Paid social</span><span>Creative testing</span><span>Packaging</span>
+      <span>Brand strategy</span><span>Positioning</span><span>Naming</span><span>Brand voice</span><span>Brand identity</span><span>Logo and wordmark</span><span>Brand guidelines</span><span>Websites</span><span>UX and UI design</span><span>Copywriting</span><span>Social content</span><span>Short-form video</span><span>Photography</span><span>Community management</span><span>Film and motion</span><span>Motion graphics</span><span>Campaigns</span><span>Out-of-home design</span><span>Media planning</span><span>Performance marketing</span><span>Paid search</span><span>Paid social</span><span>Creative testing</span><span>Packaging</span>
+    </div>
+  </div>
+  <a class="call" href="tel:+15550142" aria-label="Call us, +1 555 0142"><span class="call__ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg></span><span class="call__t">Call us</span><span class="call__n">+1 555 0142</span></a>
+</header>
+
+<main id="top">
+  <!-- act 1: the hero -->
+  <section class="cut cut--w hero" id="hero" data-sc-act="flow" aria-labelledby="h1">
+    <p class="hero__eyebrow"><b>Mosswick</b> &middot; creative<span class="eb-long"> and marketing</span> studio &middot; Lowmere<span class="eb-long">, since 2014</span></p>
+    <div class="hero__box">
+      <div class="scene" id="scene">
+        <div class="pl pl--mono" aria-hidden="true"><div class="mono"><div class="mono__in"><svg width="100%" height="100%" focusable="false"><use href="#cl-mono" width="100%" height="100%"/></svg></div></div></div>
+        <div class="pl pl--badge" aria-hidden="true"><div class="badge"><div class="badge__in"><div class="badge__float"><div class="badge__tilt">
+          <div class="badge__ring"><svg viewBox="0 0 200 200" focusable="false"><use href="#cl-badge"/></svg></div>
+          <div class="badge__mark"><svg focusable="false"><use href="#cl-m" width="100%" height="100%"/></svg></div>
+        </div></div></div></div></div>
+        <div class="pl pl--h1">
+          <h1 class="h1" id="h1"><span class="w" style="--i:0">Loud</span><br><span class="w" style="--i:1">ideas,</span><br><span class="w" style="--i:2">careful</span><br><span class="w" style="--i:3">craft.</span></h1>
+          <div class="hero__cta"><a class="call call--ink" href="tel:+15550142" aria-label="Call us, +1 555 0142" data-big><span class="call__ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg></span><span class="call__t">Call us</span><span class="call__n">+1 555 0142</span></a></div>
+          <p class="hero__where">1 Example Street, Lowmere &middot; open weekdays</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero__foot"><a class="call call--ink" href="tel:+15550142" aria-label="Call us, +1 555 0142" data-big><span class="call__ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg></span><span class="call__t">Call us</span><span class="call__n">+1 555 0142</span></a></div>
+  </section>
+
+  <!-- act 2: the board. What we do, then each service lit with our own work (one pinned stage, it slides up over the hero) -->
+  <section class="board" id="what" data-sc-act="pin" data-sc-span="4.6" aria-labelledby="what-h">
+    <ul class="spill" aria-hidden="true">
+      <li style="--sr: -8deg; --sy: 0"><img src="assets/work/work-10.jpg" width="360" height="360" alt=""></li>
+      <li style="--sr: 5deg; --sy: 8%"><img src="assets/work/work-19.jpg" width="360" height="360" alt=""></li>
+      <li style="--sr: -3deg; --sy: -4%"><img src="assets/work/work-11.jpg" width="360" height="360" alt=""></li>
+      <li style="--sr: 9deg; --sy: 6%"><img src="assets/work/work-14.jpg" width="360" height="360" alt=""></li>
+    </ul>
+    <div class="board__stage" data-sc-stage>
+      <div class="board__cam">
+        <ul class="wall" id="wall">
+          <li class="tile" data-g="0"><img src="assets/work/work-04.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Okra &amp; Ash: a wood-fired oven glowing behind a pan of charred vegetables."><span class="tag" aria-hidden="true">Okra &amp; Ash</span></li>
+          <li class="tile" data-g="1"><img src="assets/work/work-01.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Velloway: a cyclist in a green rain jacket on a wet city street at dusk."><span class="tag" aria-hidden="true">Velloway</span></li>
+          <li class="tile" data-g="3"><img src="assets/work/work-03.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Tallow Lane Coffee: kraft coffee bags with bold colour bands on a roastery bench."><span class="tag" aria-hidden="true">Tallow Lane</span></li>
+          <li class="tile" data-g="0"><img src="assets/work/work-02.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Fernstride: moss green running shoes mid-stride on an autumn park path."><span class="tag" aria-hidden="true">Fernstride</span></li>
+          <li class="tile" data-g="1"><img src="assets/work/work-11.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Marshlight Festival: a two-colour screen-printed poster on a brick wall."><span class="tag" aria-hidden="true">Marshlight</span></li>
+          <li class="tile" data-g="1"><img src="assets/work/work-12.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Stillreed: sand-coloured headphones on the tiled edge of an empty pool."><span class="tag" aria-hidden="true">Stillreed</span></li>
+          <li class="tile" data-g="2"><img src="assets/work/work-05.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Shelterly: a small blue model house under a folded paper umbrella."><span class="tag" aria-hidden="true">Shelterly</span></li>
+          <li class="tile" data-g="0"><img src="assets/work/work-07.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Periwink: a wall of glasses frames sorted from lilac to navy."><span class="tag" aria-hidden="true">Periwink</span></li>
+          <li class="tile" data-g="3"><img src="assets/work/work-19.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Plumtide: a row of fruit cordial bottles in hard morning sun."><span class="tag" aria-hidden="true">Plumtide</span></li>
+          <li class="tile" data-g="2"><img src="assets/work/work-17.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Kilnmark: speckled handmade plates and bowls on a linen cloth."><span class="tag" aria-hidden="true">Kilnmark</span></li>
+          <li class="tile" data-g="0"><img src="assets/work/work-08.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Cragloft: a climbing wall of pink, yellow and teal holds."><span class="tag" aria-hidden="true">Cragloft</span></li>
+          <li class="tile" data-g="0"><img src="assets/work/work-10.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Fizzwold: patterned kombucha cans in a tub of crushed ice."><span class="tag" aria-hidden="true">Fizzwold</span></li>
+          <li class="tile" data-g="1"><img src="assets/work/work-13.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Cairnstone: a rust orange rucksack against a stone cairn at sunrise."><span class="tag" aria-hidden="true">Cairnstone</span></li>
+          <li class="tile" data-g="2"><img src="assets/work/work-18.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Hollin Gallery: a white room with large abstract canvases."><span class="tag" aria-hidden="true">Hollin</span></li>
+          <li class="tile" data-g="3"><img src="assets/work/work-20.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Halvane Watch Co.: a cream-dial watch with its caseback open."><span class="tag" aria-hidden="true">Halvane</span></li>
+          <li class="tile" data-g="0"><img src="assets/work/work-09.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Quillmoor Press: a fan of single-colour paperback covers."><span class="tag" aria-hidden="true">Quillmoor</span></li>
+          <li class="tile" data-g="1"><img src="assets/work/work-14.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Saltmarrow: wave-printed snack bags at the waterline."><span class="tag" aria-hidden="true">Saltmarrow</span></li>
+          <li class="tile" data-g="1"><img src="assets/work/work-06.jpg" width="640" height="640" loading="lazy" decoding="async" alt="The Larchway: a larch-panelled hotel room looking onto the canal."><span class="tag" aria-hidden="true">The Larchway</span></li>
+          <li class="tile" data-g="1"><img src="assets/work/work-15.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Voltmere: solar panels on a slate roof in late afternoon sun."><span class="tag" aria-hidden="true">Voltmere</span></li>
+          <li class="tile" data-g="1"><img src="assets/work/work-16.jpg" width="360" height="360" loading="lazy" decoding="async" alt="Mendhaven: a calm treatment room in soft daylight."><span class="tag" aria-hidden="true">Mendhaven</span></li>
+        </ul>
+      </div>
+      <div class="board__caps">
+        <div class="bcap bcap--intro">
+          <h2 id="what-h">What <em>Mosswick</em> does</h2>
+          <p class="bcap__p"><b>Mosswick</b> is a creative and marketing studio in Lowmere. Thirty-two strategists, designers, writers, filmmakers and media buyers make brands, websites, films and campaigns. The work on this board includes a restaurant, a jacket label, a coffee roaster, a hotel, a running brand, an insurer and fourteen more.</p>
+        </div>
+        <div class="bcap">
+          <h3>Social content</h3>
+          <ul class="chips"><li>Content strategy</li><li>Short-form video</li><li>Photography</li><li>Community management</li></ul>
+          <p class="bcap__done">Made monthly for <b>Okra&nbsp;&amp;&nbsp;Ash</b>, <b>Fernstride</b>, <b>Periwink</b>, <b>Cragloft</b> and <b>Fizzwold</b>.</p>
+        </div>
+        <div class="bcap">
+          <h3>Campaigns and paid media</h3>
+          <ul class="chips"><li>Campaign concepts</li><li>Key visuals</li><li>Out-of-home</li><li>Media plans</li><li>Paid social</li><li>Paid search</li></ul>
+          <p class="bcap__done">Campaigns for <b>Velloway</b>, <b>Marshlight</b>, <b>Stillreed</b>, <b>Cairnstone</b> and <b>Saltmarrow</b>. Paid media for <b>Voltmere</b>, <b>Mendhaven</b> and <b>The&nbsp;Larchway</b>.</p>
+        </div>
+        <div class="bcap">
+          <h3>Websites</h3>
+          <ul class="chips"><li>Wireframes</li><li>UX and UI design</li><li>Development</li><li>CMS setup</li></ul>
+          <p class="bcap__done">Built for <b>Shelterly</b>, <b>Kilnmark</b> and <b>Hollin&nbsp;Gallery</b>, tested on real phones.</p>
+        </div>
+        <div class="bcap">
+          <h3>Brand identity</h3>
+          <ul class="chips"><li>Logo and wordmark</li><li>Colour and type</li><li>Guidelines</li><li>Packaging</li><li>Naming</li></ul>
+          <p class="bcap__done">Every system ships with guidelines. Identity and packs for <b>Tallow&nbsp;Lane&nbsp;Coffee</b>, <b>Plumtide</b> and <b>Halvane&nbsp;Watch&nbsp;Co.</b></p>
+        </div>
+        <div class="bcap">
+          <h3>Strategy, film and motion</h3>
+          <ul class="chips"><li>Positioning</li><li>Brand voice</li><li>Scripts and storyboards</li><li>Production</li></ul>
+          <p class="bcap__done">Behind every piece on this wall sits a week of listening and one page everyone signs. Our film team writes, shoots, edits and animates in house, so one shoot gives you a month of footage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- acts 9 to 14: the case cuts, one set of numbers per case -->
+  <div class="cases">
+  <!-- the peak: on desktop a sticky tray of case images rides beside the cases, and each case's image slams onto its pile -->
+  <div class="rail" aria-hidden="true"><div class="tray" id="tray">
+    <p class="tray__label">Work from these six cases</p>
+    <ul class="pile">
+      <li class="card" style="--cr: 3.5deg; --cx: 2%; --cy: -1%"><img src="assets/work/work-01.jpg" width="640" height="640" alt=""><i class="card__dim"></i></li>
+      <li class="card" style="--cr: -2.5deg; --cx: -2%; --cy: -2%"><img src="assets/work/work-02.jpg" width="640" height="640" alt=""><i class="card__dim"></i></li>
+      <li class="card" style="--cr: 5deg; --cx: 3%; --cy: 1%"><img src="assets/work/work-03.jpg" width="640" height="640" alt=""><i class="card__dim"></i></li>
+      <li class="card" style="--cr: -5deg; --cx: -3%; --cy: 0%"><img src="assets/work/work-04.jpg" width="640" height="640" alt=""><i class="card__dim"></i></li>
+      <li class="card" style="--cr: 2deg; --cx: 1%; --cy: -2%"><img src="assets/work/work-05.jpg" width="640" height="640" alt=""><i class="card__dim"></i></li>
+      <li class="card" style="--cr: -3deg; --cx: -1%; --cy: 1%"><img src="assets/work/work-06.jpg" width="640" height="640" alt=""><i class="card__dim"></i></li>
+    </ul>
+    <div class="caps">
+      <p class="cap"><b>Velloway</b><span>Brand film</span></p>
+      <p class="cap"><b>Fernstride</b><span>Campaign still</span></p>
+      <p class="cap"><b>Tallow Lane</b><span>Coffee bags</span></p>
+      <p class="cap"><b>Okra &amp; Ash</b><span>Opening night</span></p>
+      <p class="cap"><b>Shelterly</b><span>Key visual</span></p>
+      <p class="cap"><b>The Larchway</b><span>Hotel rooms</span></p>
+    </div>
+  </div></div>
+  <section class="cut cut--k case" id="case-1" data-sc-act="flow" aria-labelledby="c1-h" style="--sx: 47%; --sxm: 50%; --rot: -10deg">
+    <h2 class="sr-only">Case studies</h2>
+    <span class="stamp" aria-hidden="true"><svg class="stamp__print" viewBox="0 0 200 200" focusable="false"><use href="#cl-badge"/></svg><svg class="stamp__body" viewBox="0 0 200 200" focusable="false"><use href="#cl-badge"/></svg></span>
+    <div class="case__in"><div class="case__body">
+      <h3 id="c1-h">Velloway</h3>
+      <p class="case__meta">Rainproof jackets &middot; film, campaign, paid media</p>
+      <p class="case__story">Velloway makes jackets for people who cycle to work in the rain, but its old ads showed mountain tops. We shot on city streets at dusk in real drizzle, then cut one film into a 60 second spot and twenty short edits.</p>
+      <ul class="nums"><li class="num"><b>38%</b><span>Online sales up, launch month</span></li><li class="num"><b>60s</b><span>Hero spot from one shoot</span></li><li class="num"><b>20</b><span>Short cuts for social and ads</span></li></ul>
+      <img class="case__img" src="assets/work/work-01.jpg" width="640" height="640" decoding="async" alt="Velloway campaign still by Mosswick: a cyclist in a green rain jacket on a wet street at dusk.">
+      <a class="case__link" href="https://example.com" rel="noopener">Read the Velloway case</a>
+    </div></div>
+  </section>
+
+  <section class="cut cut--w case" id="case-2" data-sc-act="flow" aria-labelledby="c2-h" style="--sx: 18%; --rot: 12deg">
+
+    <div class="case__in"><div class="case__body">
+      <h3 id="c2-h">Fernstride</h3>
+      <p class="case__meta">Running shoes for beginners &middot; campaign, social and film</p>
+      <p class="case__story">Most running ads show elite athletes, and Fernstride wanted people who had only just started. We filmed slow Sunday miles with local run clubs and wrote lines about the hardest part: getting out the door.</p>
+      <ul class="nums"><li class="num"><b>52%</b><span>Brand searches up</span></li><li class="num"><b>12 wks</b><span>On social and bus shelters</span></li></ul>
+      <img class="case__img" src="assets/work/work-02.jpg" width="640" height="640" decoding="async" alt="Fernstride campaign still by Mosswick: moss green running shoes mid-stride on a park path.">
+      <a class="case__link" href="https://example.com" rel="noopener">Read the Fernstride case</a>
+    </div></div>
+  </section>
+
+  <section class="cut cut--acc case" id="case-3" data-sc-act="flow" aria-labelledby="c3-h" style="--sx: 44%; --rot: -18deg">
+
+    <div class="case__in"><div class="case__body">
+      <h3 id="c3-h">Tallow Lane</h3>
+      <p class="case__meta">Coffee roaster with four cafes &middot; identity and packaging</p>
+      <p class="case__story">Tallow Lane had great coffee and twelve different bag designs. We built one system: a bold condensed wordmark, a colour for each origin and a tasting scale anyone can read, plus new cups, menus and signs for the cafes.</p>
+      <ul class="nums"><li class="num"><b>47</b><span>Wholesale accounts, up from 19</span></li><li class="num"><b>12 to 1</b><span>Bag designs into one system</span></li></ul>
+      <img class="case__img" src="assets/work/work-03.jpg" width="640" height="640" decoding="async" alt="Tallow Lane Coffee bags by Mosswick, with tomato, mustard and cobalt bands, on a roastery bench.">
+      <a class="case__link" href="https://example.com" rel="noopener">Read the Tallow Lane case</a>
+    </div></div>
+  </section>
+
+  <section class="cut cut--k case" id="case-4" data-sc-act="flow" aria-labelledby="c4-h" style="--sx: 22%; --rot: 8deg">
+
+    <div class="case__in"><div class="case__body">
+      <h3 id="c4-h">Okra &amp; Ash</h3>
+      <p class="case__meta">Wood-fired restaurant &middot; brand, site and social</p>
+      <p class="case__story">Eight weeks to open and no name on the door. We built the brand around the fire and ran a behind-the-scenes series for six weeks before opening night.</p>
+      <ul class="nums"><li class="num"><b>8 wks</b><span>From no name to open doors</span></li><li class="num"><b>5 wks</b><span>Booked out after opening</span></li></ul>
+      <img class="case__img" src="assets/work/work-04.jpg" width="640" height="640" decoding="async" alt="Okra &amp; Ash by Mosswick: a wood-fired oven glowing behind a pan of charred vegetables.">
+      <a class="case__link" href="https://example.com" rel="noopener">Read the Okra &amp; Ash case</a>
+    </div></div>
+  </section>
+
+  <section class="cut cut--w case" id="case-5" data-sc-act="flow" aria-labelledby="c5-h" style="--sx: 46%; --rot: -12deg">
+
+    <div class="case__in"><div class="case__body">
+      <h3 id="c5-h">Shelterly</h3>
+      <p class="case__meta">Home insurance start-up &middot; brand, website and paid search</p>
+      <p class="case__story">Shelterly writes policies in plain English and pays claims fast. We gave it calm colours and short sentences, and the new site cut the quote form from 22 questions to 9.</p>
+      <ul class="nums"><li class="num"><b>64%</b><span>More quotes completed</span></li><li class="num"><b>22 to 9</b><span>Questions on the quote form</span></li></ul>
+      <img class="case__img" src="assets/work/work-05.jpg" width="640" height="640" decoding="async" alt="Shelterly key visual by Mosswick: a small blue model house under a folded paper umbrella.">
+      <a class="case__link" href="https://example.com" rel="noopener">Read the Shelterly case</a>
+    </div></div>
+  </section>
+
+  <section class="cut cut--acc case" id="case-6" data-sc-act="flow" aria-labelledby="c6-h" style="--sx: 20%; --rot: 14deg">
+
+    <div class="case__in"><div class="case__body">
+      <h3 id="c6-h">The Larchway</h3>
+      <p class="case__meta">30-room boutique hotel &middot; identity, website and paid media</p>
+      <p class="case__story">A hotel in a converted timber warehouse by the canal. We built the brand from the building, and the new site sells rooms by mood.</p>
+      <ul class="nums"><li class="num"><b>58%</b><span>Direct bookings, up from 22%</span></li><li class="num"><b>30</b><span>Rooms, sold by mood</span></li></ul>
+      <img class="case__img" src="assets/work/work-06.jpg" width="640" height="640" decoding="async" alt="The Larchway by Mosswick: a larch-panelled hotel room looking onto the canal.">
+      <a class="case__link" href="https://example.com" rel="noopener">Read the Larchway case</a>
+    </div></div>
+  </section>
+  </div>
+
+  <!-- act 16: the logo wall -->
+  <section class="cut cut--w logos" id="clients" data-sc-act="flow" aria-labelledby="logos-h" style="--sx: 78%; --rot: 18deg">
+    <span class="stamp" aria-hidden="true"><svg class="stamp__print" viewBox="0 0 200 200" focusable="false"><use href="#cl-badge"/></svg><svg class="stamp__body" viewBox="0 0 200 200" focusable="false"><use href="#cl-badge"/></svg></span>
+    <div class="logos__in">
+      <h2 id="logos-h">Brands we've worked with</h2>
+      <p class="logos__note">Food and drink, fashion, galleries, hotels, clinics, energy and sport brands.</p>
+      <ul class="lgrid">
+        <li class="lg"><img src="assets/logos/client-01.svg" width="389" height="99" loading="lazy" alt="Plumtide"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-02.svg" width="805" height="82" loading="lazy" alt="Velloway"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-03.svg" width="383" height="76" loading="lazy" alt="Kilnmark"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-04.svg" width="520" height="143" loading="lazy" alt="Tallow Lane Coffee"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-05.svg" width="736" height="125" loading="lazy" alt="Marshlight Festival"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-06.svg" width="388" height="79" loading="lazy" alt="Okra &amp; Ash"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-07.svg" width="603" height="77" loading="lazy" alt="Fernstride"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-08.svg" width="551" height="101" loading="lazy" alt="Hollin Gallery"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-09.svg" width="727" height="77" loading="lazy" alt="Stillreed"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-10.svg" width="538" height="125" loading="lazy" alt="Halvane Watch Co."><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-11.svg" width="650" height="74" loading="lazy" alt="Cairnstone"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-12.svg" width="360" height="96" loading="lazy" alt="Shelterly"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-13.svg" width="360" height="104" loading="lazy" alt="Periwink"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-14.svg" width="513" height="78" loading="lazy" alt="Saltmarrow"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-15.svg" width="545" height="73" loading="lazy" alt="Oakhold"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-16.svg" width="566" height="82" loading="lazy" alt="Cragloft"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-17.svg" width="574" height="77" loading="lazy" alt="Voltmere"><i class="blk"></i></li>
+        <li class="lg"><img src="assets/logos/client-18.svg" width="362" height="79" loading="lazy" alt="Fizzwold"><i class="blk"></i></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- act 17: starting prices -->
+  <section class="cut cut--k cost" id="cost" data-sc-act="flow" aria-labelledby="cost-h" style="--sx: 24%; --rot: -14deg">
+
+    <div class="cost__in">
+      <div>
+        <h2 id="cost-h">Know the full cost <em>before we start.</em></h2>
+        <p class="cost__p">We send a fixed quote after our first call, so you know the full cost before any work starts. No surprise invoices later. <a href="https://example.com" rel="noopener">Read the FAQ</a></p>
+        <p class="once"><b>Smaller jobs:</b> one campaign, a product film or three months of social content is a fine place to start.</p>
+      </div>
+      <div class="stairs-wrap">
+        <ol class="stairs" id="stairs">
+          <li class="step s1"><div class="step__top"></div><div class="step__front"><b>From $18k</b><span>A brand identity, usually</span></div></li>
+          <li class="step s2"><div class="step__top"></div><div class="step__front"><b>From $15k</b><span>A website, design and build</span></div></li>
+          <li class="step s3"><div class="step__top"></div><div class="step__front"><b>From $5k</b><span>A month of marketing support</span></div></li>
+          <li class="token" aria-hidden="true"><svg focusable="false"><use href="#cl-mark" width="100%" height="100%"/></svg></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 18: the close, the last cut -->
+  <section class="cut cut--acc close" id="contact" data-sc-act="flow" aria-labelledby="close-h" style="--sx: 84%; --rot: -10deg">
+    <span class="stamp" aria-hidden="true"><svg class="stamp__print" viewBox="0 0 200 200" focusable="false"><use href="#cl-badge"/></svg><svg class="stamp__body" viewBox="0 0 200 200" focusable="false"><use href="#cl-badge"/></svg></span>
+    <div class="close__in">
+      <div>
+        <h2 id="close-h">Got a brand that deserves more attention?</h2>
+        <p class="close__sub">Let's talk about it at Mosswick.</p>
+        <div class="close__cta"><a class="call call--ink" href="tel:+15550142" aria-label="Call us, +1 555 0142" data-big><span class="call__ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg></span><span class="call__t">Call us</span><span class="call__n">+1 555 0142</span></a></div>
+        <ul class="close__rows">
+          <li><span>Email</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><span>Studio</span>1 Example Street, Lowmere. Monday to Friday, 9am to 6pm</li>
+          <li><span>Follow</span><a href="https://example.com" rel="noopener">Instagram</a> &middot; <a href="https://example.com" rel="noopener">LinkedIn</a> &middot; <a href="https://example.com" rel="noopener">Behance</a></li>
+        </ul>
+        <p class="close__legal">&copy; 2026 Mosswick Studio &middot; <a href="https://example.com" rel="noopener">Privacy</a> &middot; <a href="https://example.com" rel="noopener">Terms</a><br>Example content. Swap in your own.</p>
+      </div>
+      <div class="close__obj" aria-hidden="true"><img src="assets/img/stamp.webp" width="720" height="720" loading="lazy" decoding="async" alt=""></div>
+    </div>
+  </section>
+</main>
+
+<div class="dock" id="dock"><a class="call" href="tel:+15550142" aria-label="Call us, +1 555 0142"><span class="call__ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg><svg viewBox="0 0 24 24" focusable="false"><use href="#cl-phone"/></svg></span><span class="call__t">Call us</span><span class="call__n">+1 555 0142</span></a></div>
+
+<script src="scrollcraft.js"></script>
+<script>
+if (matchMedia('(max-width: 860px)').matches) document.getElementById('what').setAttribute('data-sc-span', '4.2');
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px), (max-aspect-ratio: 4 / 5)');
+  var narrowQ = matchMedia('(max-width: 860px)');
+  var dock = document.getElementById('dock');
+
+  /* ---- the hero reveal, once the type has loaded ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+    };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
+    setTimeout(go, 1400);
+  }
+
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b, fa, fb, cls) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    if (fa !== undefined && fa !== null) { if (fb <= fa) fb = fa + 1; el.style.setProperty('--f0', fa.toFixed(1) + 'px'); el.style.setProperty('--f1', fb.toFixed(1) + 'px'); }
+    el.classList.add(cls || 'sdx');
+  }
+  function sectionTop(el) { var s = el.closest('section'); return top(s); }
+
+  /* triggered reveals: on once the scroll passes t0, reset only when the element is back below the screen */
+  var trigs = [], steps = [];
+  function trig(el, t0, tOff) { trigs.push({ el: el, t0: t0, tOff: tOff }); }
+  function runTrigs() {
+    var y = scrollY;
+    trigs.forEach(function (t) { if (y >= t.t0) t.el.classList.add('on'); else if (y < t.tOff) t.el.classList.remove('on'); });
+    steps.forEach(function (g) {
+      var idx = -1;
+      if (y >= g.start) { idx = 0; g.xs.forEach(function (x) { if (y >= x) idx++; }); }
+      [].forEach.call(g.els, function (el, i) { el.classList.toggle('on', i === idx); el.classList.toggle('past', i < idx); });
+    });
+  }
+  var ttick = false;
+  addEventListener('scroll', function () { if (!ttick) { ttick = true; requestAnimationFrame(function () { ttick = false; runTrigs(); }); } }, { passive: true });
+
+  function measure() {
+    if (!anim) return;
+    trigs = []; steps = [];
+    var vh = innerHeight;
+    var hero = document.getElementById('hero');
+
+    /* hero: desktop only, the camera pushes in as the hero leaves; phones keep the hero still */
+    var heroPlanes = [hero.querySelector('.pl--mono'), hero.querySelector('.badge')];
+    if (!phoneQ.matches) heroPlanes.forEach(function (el) { setR(el, 0, hero.offsetHeight); });
+    else heroPlanes.forEach(function (el) { el.classList.remove('sdx'); });
+
+    /* the stamp: lands when the cut line is at 62% of the screen */
+    [].forEach.call(document.querySelectorAll('.stamp'), function (st) {
+      var y = sectionTop(st), impact = y - vh * 0.62;
+      var a = impact - vh * 0.30, b = impact + vh * 0.14;
+      if (a < 0) { b -= a; a = 0; }
+      setR(st.querySelector('.stamp__print'), a, b);
+      setR(st.querySelector('.stamp__body'), a, b);
+    });
+
+    /* the board: the wall unfurls from lying back to nearly flat as the camera pushes in, then each service's own work swings up toward you while the rest lies back */
+    var board = document.getElementById('what'), bT = top(board), bTr = Math.max(1, board.offsetHeight - vh);
+    board.style.removeProperty('--caph');
+    if (narrowQ.matches) { var capH = 0; [].forEach.call(board.querySelectorAll('.bcap'), function (c) { capH = Math.max(capH, c.offsetHeight); }); board.style.setProperty('--caph', Math.ceil(capH) + 'px'); }
+    var wall = document.getElementById('wall');
+    var S0 = bT + bTr * 0.2, S1 = bT + bTr * 0.97, sw = (S1 - S0) / 5;
+    setR(wall, bT - vh * 0.85, bT + bTr * 0.15, S0, S1, 'sdx2');
+    [].forEach.call(wall.querySelectorAll('.tile'), function (t) { t.classList.add('sdxf'); });
+    /* captions: the intro comes in as the board slides up, then one caption per service; each change plays on time */
+    var bxs = []; for (var k = 1; k < 6; k++) bxs.push(S0 + (k - 1) * sw - bTr * 0.02);
+    steps.push({ els: board.querySelectorAll('.bcap'), start: bT - vh * 0.35, xs: bxs });
+
+    /* case numbers punch forward from depth, staggered */
+    [].forEach.call(document.querySelectorAll('.case'), function (c) {
+      var t = top(c.querySelector('.nums'));
+      trig(c.querySelector('.nums'), t - vh * 0.88, t - vh);
+    });
+
+    /* the peak: on desktop the sticky tray rides beside the cases; each case's image slams onto the pile as that case's name reaches mid screen
+       (the first case's image is already on it when the tray scrolls in). Phones: each image sits in its own case and slams down as it comes up. */
+    var cases = [].slice.call(document.querySelectorAll('.case'));
+    if (narrowQ.matches) {
+      cases.forEach(function (c) { var im = c.querySelector('.case__img'), t = top(c) + im.offsetTop; trig(im, t - vh * 0.9, t - vh); }); /* layout top, not the thrown 3D box */
+    } else {
+      var tray = document.getElementById('tray');
+      var lands = cases.map(function (c, i) { return i ? top(c.querySelector('h3')) - vh * 0.55 : top(c) - vh * 1.3; });
+      var cards = tray.querySelectorAll('.card'), caps = tray.querySelectorAll('.cap');
+      [].forEach.call(cards, function (card, i) {
+        var L = lands[i], next = lands[i + 1];
+        if (next !== undefined) {
+          setR(card, L - vh * 0.12, L + vh * 0.02, next - vh * 0.06, next + vh * 0.04, 'sdx2');
+          card.querySelector('.card__dim').classList.add('sdxf');
+        } else {
+          setR(card, L - vh * 0.12, L + vh * 0.02);
+        }
+      });
+      steps.push({ els: caps, start: lands[0] - vh * 0.05, xs: lands.slice(1).map(function (L) { return L - vh * 0.05; }) });
+    }
+
+    /* logo wall: accent blocks fly at the camera in a checker order */
+    var lg = document.querySelector('.lgrid'), lt = top(lg);
+    var cols = getComputedStyle(lg).gridTemplateColumns.split(' ').length;
+    [].forEach.call(lg.querySelectorAll('.blk'), function (b, i) {
+      var r = Math.floor(i / cols), c = i % cols, k = ((r + c) % 2) * 0.5 + (r / 12);
+      b.style.setProperty('--bd', (k * 0.6).toFixed(2) + 's');
+    });
+    trig(lg, lt - vh * 0.88, lt - vh);
+
+    /* prices: the stairs rise and swing, the token steps down */
+    var stairs = document.getElementById('stairs'), stt = top(stairs);
+    trig(stairs, stt - vh * 0.88, stt - vh);
+    var tok = stairs.querySelector('.token');
+    setR(tok, stt - vh * 0.62, stt - vh * 0.12);
+
+    /* the close: the call comes forward, the stamp settles */
+    var close = document.getElementById('contact'), ct = top(close);
+    var cc = close.querySelector('.close__cta .call'), cct = top(cc); trig(cc, cct - vh * 0.9, cct - vh);
+    setR(close.querySelector('.close__obj'), ct - vh * 0.8, ct - vh * 0.2);
+  }
+
+  /* the token's step heights, in px, for the hop keyframes (static too) */
+  function stepHeights() {
+    var stairs = document.getElementById('stairs'); if (!stairs) return;
+    var s = stairs.querySelectorAll('.step'); var h0 = s[0].offsetHeight;
+    stairs.style.setProperty('--d1', (h0 - s[1].offsetHeight).toFixed(1));
+    stairs.style.setProperty('--d2', (h0 - s[2].offsetHeight).toFixed(1));
+  }
+
+  var lastW = -1;
+  function all() { stepHeights(); measure(); runTrigs(); lastW = innerWidth; }
+  all();
+  addEventListener('resize', function () { if (innerWidth !== lastW || !narrowQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; all(); } }).observe(document.body); }
+
+  /* ---- the phone bar steps away while a big "Call us" is on screen ---- */
+  var bigs = [].slice.call(document.querySelectorAll('[data-big]'));
+  var tick = false;
+  function dockState() {
+    tick = false;
+    var away = bigs.some(function (b) {
+      if (!b.offsetParent) return false;
+      var r = b.getBoundingClientRect();
+      return r.bottom > 0 && r.top < innerHeight - 70;
+    });
+    dock.classList.toggle('is-away', away);
+    root.classList.toggle('dock-away', away && narrowQ.matches);
+  }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(dockState); } }, { passive: true });
+  dockState();
+  setTimeout(dockState, 1800);
+})();
+</script>
+</body>
+</html>

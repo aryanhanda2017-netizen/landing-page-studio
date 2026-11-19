@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio, Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio of 32 people in Lowmere: brands, packaging, websites, social content, films and campaigns people notice.">
+<meta name="theme-color" content="#101811">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta property="og:description" content="Make them look twice. Packaging, identities, social, websites and campaigns from a creative and marketing studio in Lowmere, since 2014.">
+<meta property="og:image" content="https://example.com/og-image.jpg">
+<meta property="og:image:alt" content="Plumtide cordial bottles on a limestone ledge, packaging by Mosswick Studio.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta name="twitter:description" content="Make them look twice. A creative and marketing studio in Lowmere, since 2014.">
+<meta name="twitter:image" content="https://example.com/og-image.jpg">
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) c.add('fx', 'pre-reveal');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-700.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/outfit-var.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/pack-01.webp" fetchpriority="high">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter-700.woff2") format("woff2"); font-weight: 700 800; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter-500.woff2") format("woff2"); font-weight: 500 600; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("assets/fonts/outfit-var.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+
+:root {
+  --sc-canvas: #101811; --sc-surface: #202E21; --sc-ink: #EDEBDD; --sc-ink-soft: #C9CCBA; --sc-accent: #D7C36A; --sc-accent-ink: #1D2A1E;
+  --sc-font-display: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --sc-font-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --accent: #D7C36A; --accent-deep: #8F7F3C; --lamp: #D7C36A;
+  --ink: #EDEBDD; --ink-2: #C9CCBA; --ink-3: #A9B09A;
+  --room: #1D2A1E; --line: rgba(237, 235, 221, .14); --line-2: rgba(237, 235, 221, .24);
+  --bar: 64px; --dockh: 0px; --gut: 28px;
+  --ar: 1.72; --pv: 82; --fy: 58; --fd: 140;
+  --label: "Outfit", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+html { background: #101811; color: var(--ink); }
+body { margin: 0; background: #101811; color: var(--ink); font-family: var(--sc-font-text); -webkit-font-smoothing: antialiased; }
+img { max-width: none; }
+a { color: inherit; }
+.skip { position: absolute; left: -9999px; top: 0; z-index: 100; background: #EDEBDD; color: #101811; padding: 10px 14px; }
+.skip:focus { left: 12px; top: 12px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- labels: one schema for every object (client, kind and sector, one line) ---------- */
+.eyebrow { margin: 0; font: 600 13px/1.3 var(--label); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); display: flex; align-items: center; gap: .7em; }
+.eyebrow b { display: inline-grid; place-items: center; min-width: 1.9em; height: 1.9em; padding: 0 .3em; border: 1px solid var(--lamp); color: #EDEBDD; font-weight: 600; letter-spacing: 0; box-sizing: border-box; }
+.lbl { display: block; margin: 0; font: 400 max(12.5px, .86cqw)/1.35 var(--sc-font-text); color: var(--ink-2); }
+.lbl b { display: block; font: 600 max(13px, .98cqw)/1.25 var(--sc-font-display); color: #EDEBDD; letter-spacing: -.01em; }
+.lbl i { display: block; font-style: normal; font: 600 max(12.5px, .84cqw)/1.4 var(--label); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-top: .15em; }
+.lbl span { display: block; margin-top: .3em; }
+.h2 { margin: .45em 0 0; font: 700 calc(var(--h2, 3.6) * 1cqw)/.98 var(--sc-font-display); letter-spacing: -.035em; color: #EDEBDD; }
+.fact { margin: .8em 0 0; font: 400 max(14px, 1.05cqw)/1.5 var(--sc-font-text); color: var(--ink-2); max-width: 30em; }
+
+/* ---------- the one CTA ---------- */
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: .55em; height: 42px; padding: 0 20px; border-radius: 999px; box-sizing: border-box;
+  background: var(--accent); color: var(--sc-accent-ink); border: 1.5px solid var(--accent); text-decoration: none; white-space: nowrap;
+  font: 600 15px/1 var(--sc-font-display); letter-spacing: -.005em; transition: background-color .32s var(--ease), border-color .32s var(--ease); }
+.cta svg { width: 1.05em; height: 1.05em; flex: none; }
+@media (hover: hover) and (pointer: fine) { .cta:hover { background: transparent; color: var(--ink); border-style: dashed; border-color: var(--lamp); } }
+.cta:focus-visible { outline: 2px solid #EDEBDD; outline-offset: 3px; }
+.cta--big { height: max(52px, 4.2cqw); padding: 0 max(24px, 2.2cqw); font-size: max(17px, 1.45cqw); }
+
+/* ---------- the bar: the lintel above the doors (wordmark, floor display, floor buttons, CTA) ---------- */
+.bar { position: fixed; inset: 0 0 auto 0; z-index: 80; height: var(--bar); box-sizing: border-box; padding: 0 var(--gut);
+  display: flex; align-items: center; gap: 22px; background: #101811; border-bottom: 1px solid #273728; }
+.bar__brand { display: inline-flex; align-items: center; height: 44px; flex: none; }
+.bar__brand img { display: block; width: 136px; height: auto; }
+.disp { display: inline-flex; align-items: center; gap: 9px; height: 34px; padding: 0 12px 0 10px; box-sizing: border-box; flex: none;
+  background: #0C120D; border: 1px solid var(--accent-deep); border-radius: 3px; color: var(--lamp);
+  font: 600 13px/1 var(--label); letter-spacing: .12em; text-transform: uppercase; font-variant-numeric: tabular-nums; }
+.disp__arw { font-size: 9px; display: inline-block; }
+.disp__win { position: relative; display: block; height: 1.25em; overflow: hidden; width: 12.2em; }
+.disp__load, .disp__strip { display: block; }
+.disp__strip { transform: translateY(calc(var(--f, 3) * -1.25em)); }
+html.fx .disp__strip { transition: transform .5s cubic-bezier(.16, 1, .3, 1); }
+.disp__row { display: flex; align-items: center; gap: .65em; height: 1.25em; white-space: nowrap; }
+.disp__row b { display: inline-block; min-width: 1.1em; font-weight: 700; color: #EDEBDD; }
+.panel { margin-left: auto; }
+.panel ol { display: flex; align-items: center; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.panel a { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; box-sizing: border-box; text-decoration: none;
+  border: 1px solid #405442; background: radial-gradient(circle at 50% 40%, #273728, #1E2B1F 70%); color: #D4D6C6;
+  font: 600 13px/1 var(--label); letter-spacing: .02em; transition: border-color .3s var(--ease), color .3s var(--ease); }
+.panel a span { display: none; }
+.panel a[aria-current="true"] { border-color: var(--lamp); color: #EDEBDD; box-shadow: inset 0 0 0 1px var(--accent-deep); background: #26240F; }
+@media (hover: hover) and (pointer: fine) { .panel a:hover { border-color: #84907E; color: #EDEBDD; } }
+.panel a:focus-visible, .bar__floors:focus-visible { outline: 2px solid #EDEBDD; outline-offset: 2px; }
+.bar__floors { display: none; }
+.bar .cta { flex: none; }
+
+/* ---------- the doors: one fixed pair, one transform each, attached to the display in the bar ---------- */
+.lift { display: none; }
+html.fx .lift { display: block; position: fixed; left: 0; right: 0; top: var(--bar); bottom: var(--dockh); z-index: 60; overflow: hidden; pointer-events: none; perspective: 1200px; }
+.lift__cam { position: absolute; inset: 0; transform-origin: 50% 46%; }
+.door { position: absolute; top: 0; bottom: 0; width: 50%; overflow: hidden; backface-visibility: hidden; will-change: transform; }
+.door--l { left: 0; transform: translate3d(-100.5%, 0, 0);
+  background: repeating-linear-gradient(90deg, rgba(237, 235, 221,.05) 0 1px, transparent 1px 3px, rgba(16, 24, 17,.35) 3px 4px, transparent 4px 7px),
+              linear-gradient(90deg, #182319 0%, #223023 45%, #2B3C2C 88%, #334535 99%, #1C281D 100%); }
+.door--r { right: 0; transform: translate3d(100.5%, 0, 0);
+  background: repeating-linear-gradient(90deg, rgba(237, 235, 221,.05) 0 1px, transparent 1px 3px, rgba(16, 24, 17,.35) 3px 4px, transparent 4px 7px),
+              linear-gradient(270deg, #182319 0%, #223023 45%, #2B3C2C 88%, #334535 99%, #1C281D 100%); }
+.ad { position: absolute; top: 47%; width: min(66vw, 620px); transform: translateY(-50%); display: grid; justify-items: center; gap: 22px; }
+.door--l .ad { right: 0; margin-right: calc(min(66vw, 620px) / -2); }
+.door--r .ad { left: 0; margin-left: calc(min(66vw, 620px) / -2); }
+.ad img { display: block; width: 100%; height: auto; }
+.ad__rule { width: 34%; height: 2px; background: var(--accent); }
+.ad__line { font: 600 max(11px, min(1.6vw, 14px))/1 var(--label); letter-spacing: .32em; text-transform: uppercase; color: #BDC1B1; }
+.door__edge { position: absolute; top: 0; bottom: 0; width: 1px; background: #101811; }
+.door--l .door__edge { right: 0; box-shadow: -1px 0 0 rgba(237, 235, 221,.08); }
+.door--r .door__edge { left: 0; box-shadow: 1px 0 0 rgba(237, 235, 221,.08); }
+.door__kick { position: absolute; left: 0; right: 0; bottom: 0; height: 9%; border-top: 1px solid rgba(237, 235, 221,.07); background: rgba(16, 24, 17,.28); }
+
+/* The doors are triggered, never scrubbed (hard rule 6). They open once on load, on time, and they ride with the
+   floor buttons. At any resting scroll position they are open. Shut until the hero is ready; if lift.js never runs,
+   they open on their own at 2.6 s so nothing can stay covered. */
+@keyframes door-load-l { from { transform: none; } to { transform: translate3d(-100.5%, 0, 0); } }
+@keyframes door-load-r { from { transform: none; } to { transform: translate3d(100.5%, 0, 0); } }
+@keyframes cam-load { from { transform: none; } to { transform: translate3d(0, 0, 520px); } }
+@keyframes disp-load { from { transform: translateY(3.75em); } to { transform: none; } }
+@keyframes room-load { from { transform: translate3d(0, 0, calc(var(--zin, 34) * -1cqw)); } to { transform: none; } }
+@keyframes up-load { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+html.pre-reveal .door--l { animation: door-load-l .95s cubic-bezier(.65, 0, .35, 1) 2.6s both; }
+html.pre-reveal .door--r { animation: door-load-r .95s cubic-bezier(.65, 0, .35, 1) 2.6s both; }
+html.pre-reveal .disp__load { animation: disp-load .5s steps(3, end) 2.1s both; }
+html.pre-reveal #f-g .hero-up { animation: up-load .7s var(--ease) 3.1s both; }
+html.reveal .door--l { animation: door-load-l .95s cubic-bezier(.65, 0, .35, 1) .5s backwards; }
+html.reveal .door--r { animation: door-load-r .95s cubic-bezier(.65, 0, .35, 1) .5s backwards; }
+html.reveal .lift__cam { animation: cam-load .95s cubic-bezier(.5, 0, .3, 1) .5s backwards; }
+html.reveal .disp__load { animation: disp-load .5s steps(3, end) 0s backwards; }
+html.reveal #f-g .cam { animation: room-load 1.15s var(--ease) .5s backwards; }
+html.reveal #f-g .hero-up { animation: up-load .7s var(--ease) 1.05s backwards; }
+/* a floor button is a lift ride: the doors shut (0.26 s), the page jumps behind them, they open on the new floor */
+@keyframes door-shut-l { from { transform: translate3d(-100.5%, 0, 0); } to { transform: none; } }
+@keyframes door-shut-r { from { transform: translate3d(100.5%, 0, 0); } to { transform: none; } }
+@keyframes door-open-l { from { transform: none; } to { transform: translate3d(-100.5%, 0, 0); } }
+@keyframes door-open-r { from { transform: none; } to { transform: translate3d(100.5%, 0, 0); } }
+@keyframes cam-open { from { transform: none; } to { transform: translate3d(0, 0, 320px); } }
+html.ride-close .door--l { animation: door-shut-l .26s cubic-bezier(.65, 0, .35, 1) both; }
+html.ride-close .door--r { animation: door-shut-r .26s cubic-bezier(.65, 0, .35, 1) both; }
+html.ride-open .door--l { animation: door-open-l .44s cubic-bezier(.65, 0, .35, 1) both; }
+html.ride-open .door--r { animation: door-open-r .44s cubic-bezier(.65, 0, .35, 1) both; }
+html.ride-open .lift__cam { animation: cam-open .44s cubic-bezier(.5, 0, .3, 1) both; }
+
+/* ---------- floors: every floor is one screen of ordinary page, a room between the bar and the dock ----------
+   No pins, no scroll timelines: the page is as long as its rooms, set by CSS alone, the same in every mode. */
+main { display: block; padding: var(--bar) 0 var(--dockh); }
+main > section { position: relative; scroll-margin-top: var(--bar); }
+.floor { position: relative; background: var(--room); }
+.stage, .studio__room { position: relative; height: calc(100vh - var(--bar) - var(--dockh)); height: calc(100svh - var(--bar) - var(--dockh)); overflow: clip; background: var(--room); }
+.set { position: absolute; inset: 0; container-type: size; display: grid; place-items: center; overflow: clip; }
+/* a floor arrives: its camera glides in from one step back, once, on its own timing (triggered, never scrubbed),
+   then holds. lift.js adds .in when the floor's top crosses 85% of the screen; it is done in 0.6 s. */
+html.fx.lift-on main > section:not(.in) .cam { transform: translate3d(0, -2.5cqw, -16cqw); }
+html.fx.lift-on main > section.in .cam { transition: transform .6s cubic-bezier(.45, 0, .55, 1); }
+.scene { position: relative; width: min(100cqw, calc(100cqh * var(--ar))); aspect-ratio: var(--ar); container-type: inline-size; perspective: calc(var(--pv) * 1cqw); perspective-origin: 50% 46%; }
+.cam { position: absolute; inset: 0; transform-style: preserve-3d; transform-origin: 50% 46%; }
+.ob { position: absolute; margin: 0; left: calc(var(--x) * 1cqw); top: calc(var(--y) * 1cqw); width: calc(var(--w) * 1cqw);
+  transform: translate3d(0, 0, calc(var(--z, 0) * 1cqw)); backface-visibility: hidden; }
+.ob img { display: block; width: 100%; height: auto; }
+.head { position: absolute; left: calc(var(--x, 5) * 1cqw); top: calc(var(--y, 6) * 1cqw); width: calc(var(--w, 34) * 1cqw); margin: 0; }
+/* the room: a back wall and a floor line, painted once */
+.room-bg { position: absolute; inset: 0; background: linear-gradient(180deg, #202E21 0%, #1D2A1E 55%, #1D2A1E 100%); }
+
+/* labels keep their size at any depth: each object's type is scaled by its own perspective factor */
+.ob { --k: calc(1 - var(--z, 0) / var(--pv)); }
+.poster { --k: calc(1 + var(--cd) / var(--pv)); }
+.pl, .beacon { --ls: calc(1 - var(--z, 0) / var(--pv)); }
+.ob .lbl { font-size: calc(max(12.5px, .86cqw) * var(--k)); }
+.ob .lbl b { font-size: calc(max(13px, .98cqw) * var(--k)); }
+.ob .lbl i { font-size: calc(max(12.5px, .84cqw) * var(--k)); }
+/* desktop: place each tile where it should land after the perspective, so gutters stay open at every depth */
+@media (min-width: 861px) {
+  .idw .ob, .so .ob { left: calc((50 + (var(--x) - 50) * var(--k)) * 1cqw); top: calc((26.74 + (var(--y) - 26.74) * var(--k)) * 1cqw); }
+}
+
+/* a real floor in each room, so things stand on something */
+.floor3d { position: absolute; left: -30cqw; width: 160cqw; top: calc((var(--fy) - var(--fd)) * 1cqw); height: calc(var(--fd) * 1cqw); transform-origin: 50% 100%; transform: rotateX(90deg);
+  background: linear-gradient(0deg, rgba(29, 42, 30,0) 0%, rgba(29, 42, 30,.6) 60%, #1D2A1E 96%), repeating-linear-gradient(90deg, rgba(237, 235, 221,.13) 0 1px, transparent 1px 8cqw), repeating-linear-gradient(0deg, rgba(237, 235, 221,.1) 0 1px, transparent 1px 8cqw), #1B271C; }
+
+/* G: the ground floor, the hero */
+#f-g .h1 { margin: .35em 0 0; font: 700 calc(var(--h1, 6.1) * 1cqw)/.95 var(--sc-font-display); letter-spacing: -.045em; color: #EDEBDD; }
+#f-g .hero-ask { margin-top: max(18px, 2.1cqw); display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.hero-with { font: 500 max(13px, .95cqw)/1.4 var(--sc-font-text); color: var(--ink-2); margin: 0; }
+.pl { position: absolute; left: calc(var(--x) * 1cqw); top: calc(var(--y) * 1cqw); width: calc(var(--w) * 1cqw); height: calc((var(--fy) - var(--y)) * 1cqw);
+  display: flex; flex-direction: column; transform: translate3d(0, 0, calc(var(--z, 0) * 1cqw)); backface-visibility: hidden; font-size: calc(var(--ls, 1) * 1em); }
+.pl__top { position: relative; aspect-ratio: 1 / .86; overflow: clip; flex: none; }
+.pl__lid { flex: none; height: calc(var(--w) * .07cqw); background: linear-gradient(180deg, #344635, #2C3D2D); clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%); }
+.pl__body { flex: 1; background: linear-gradient(180deg, #223023, #1F2C20); }
+.pl .lbl { font-size: calc(max(12.5px, .86cqw) * var(--ls, 1)); }
+.pl .lbl b { font-size: calc(max(13px, .98cqw) * var(--ls, 1)); }
+.pl .lbl i { font-size: calc(max(12.5px, .84cqw) * var(--ls, 1)); }
+.pl__top img { position: absolute; left: 4%; right: 4%; bottom: 0; width: 92%; height: 96%; object-fit: contain; object-position: 50% 100%; }
+.pl__face { position: relative; overflow: clip; flex: none; min-height: calc(var(--fh, 7.2) * 1cqw); background: #273728; }
+.pl__face .lbl { padding: .7cqw .9cqw; box-sizing: border-box; }
+
+/* 1: identities */
+.idw .ob { background: #EDEBDD; }
+.idw .ob img { aspect-ratio: 1.6; width: 100%; height: auto; object-fit: contain; padding: 7% 8%; box-sizing: border-box; }
+.idw .lbl { position: absolute; left: 0; right: 0; top: 100%; padding-top: .55cqw; }
+.idw .lbl b { font-size: max(12.5px, .9cqw); }
+
+/* 2: social, 3: web */
+.post img { aspect-ratio: 4 / 5; object-fit: cover; }
+.post .lbl, .site .lbl, .poster .lbl { padding-top: .7cqw; }
+.site img { aspect-ratio: 1.6; object-fit: cover; }
+
+/* 4: the lift car (peak): a box interior, six campaign posters on its back wall */
+.car { position: absolute; inset: 0; transform-style: preserve-3d; }
+.car > * { position: absolute; backface-visibility: hidden; }
+.car__back { left: 0; top: 0; width: 100%; height: 100%; transform: translateZ(calc(var(--cd) * -1cqw)); background: linear-gradient(180deg, #212F22, #1E2B1F); }
+.car__side { top: 0; height: 100%; width: calc(var(--cd) * 1cqw);
+  background: repeating-linear-gradient(90deg, rgba(237, 235, 221,.07) 0 1px, transparent 1px 5px), linear-gradient(90deg, #2D3E2E, #212F22); }
+.car__side--l { left: 0; transform-origin: 0 50%; transform: rotateY(90deg); }
+.car__side--r { right: 0; transform-origin: 100% 50%; transform: rotateY(-90deg); background: repeating-linear-gradient(90deg, rgba(237, 235, 221,.07) 0 1px, transparent 1px 5px), linear-gradient(270deg, #2D3E2E, #212F22); }
+.car__floor { left: 0; bottom: 0; width: 100%; height: calc(var(--cd) * 1cqw); transform-origin: 50% 100%; transform: rotateX(90deg); background: repeating-linear-gradient(0deg, rgba(237, 235, 221,.1) 0 1px, transparent 1px 5cqw), repeating-linear-gradient(90deg, rgba(237, 235, 221,.1) 0 1px, transparent 1px 10cqw), linear-gradient(180deg, #1C281D, #233224); }
+.car__ceil { left: 0; top: 0; width: 100%; height: calc(var(--cd) * 1cqw); transform-origin: 50% 0; transform: rotateX(-90deg); background: linear-gradient(0deg, #1C281D, #233224); }
+.car__ceil::after { content: ""; position: absolute; left: 30%; right: 30%; top: 46%; height: 8%; background: #DFDFD0; }
+.car__rail { position: absolute; left: 6%; right: 6%; height: .3cqw; background: #405442; }
+.car__wall { position: absolute; inset: 0; }
+.poster img { box-shadow: 0 0 0 1px rgba(237, 235, 221,.06); }
+
+/* 5: results */
+.res .ob.plate { background: #273728; border-top: 2px solid var(--accent); padding: 1.3cqw 1.3cqw 1.2cqw; box-sizing: border-box; }
+.fig { display: block; font: 700 calc(var(--fs, 3.6) * 1cqw)/1 var(--sc-font-display); letter-spacing: -.04em; color: #EDEBDD; font-variant-numeric: tabular-nums; }
+.fig small { font-size: .52em; letter-spacing: -.02em; }
+.fig2 { display: block; margin-top: .55cqw; font: 600 max(14px, 1.15cqw)/1.25 var(--sc-font-display); color: #EDEBDD; }
+.res .lbl { margin-top: .9cqw; }
+.shot img { box-shadow: 0 0 0 1px rgba(237, 235, 221,.12); }
+.shot { opacity: .96; }
+
+/* 6: the studio: a room, then a sheet that rides over it */
+.studio { background: var(--room); }
+.svc { background: #273728; border-top: 2px solid var(--accent); padding: 1.6cqw 1.5cqw 1.4cqw; box-sizing: border-box; min-height: calc(var(--mh, 18) * 1cqw); display: flex; flex-direction: column; }
+.svc .svc__line { margin-top: auto; padding-top: 1.2cqw; }
+.svc h3 { margin: 0; font: 700 max(17px, 1.6cqw)/1.1 var(--sc-font-display); letter-spacing: -.02em; color: #EDEBDD; }
+.svc p { margin: .55cqw 0 0; font: 400 max(13px, .95cqw)/1.45 var(--sc-font-text); color: var(--ink-2); }
+.svc p.svc__line { color: #EDEBDD; font-weight: 600; }
+.aeo { margin: 1.3cqw 0 0; font: 400 max(15px, 1.12cqw)/1.55 var(--sc-font-text); color: #DDDDCE; }
+.sheet { position: relative; background: #162017; border-top: 1px solid #2F4030; padding: 72px var(--gut) 96px; box-sizing: border-box; }
+.sheet__in { max-width: 1240px; margin: 0 auto; }
+.sheet h2 { margin: 0; font: 700 clamp(30px, 3.4vw, 50px)/1 var(--sc-font-display); letter-spacing: -.035em; }
+.story { list-style: none; margin: 36px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.story li { padding: 18px 20px 0 0; position: relative; }
+.story li::before { content: ""; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; background: var(--accent); }
+.story time, .story .yr { display: block; font: 700 clamp(26px, 2.4vw, 34px)/1 var(--sc-font-display); letter-spacing: -.03em; color: #EDEBDD; }
+.story p { margin: 10px 0 0; font: 400 15px/1.5 var(--sc-font-text); color: var(--ink-2); }
+.founder { margin: 40px 0 0; max-width: 65ch; font: 400 17px/1.6 var(--sc-font-text); color: #DDDDCE; }
+.logos h2 { margin-top: 84px; }
+.logos__note { margin: 12px 0 0; font: 400 14px/1.5 var(--sc-font-text); color: var(--ink-3); }
+.logos ul { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 1px; background: #263627; border: 1px solid #263627; }
+.logos li { background: #101811; display: grid; place-items: center; aspect-ratio: 369 / 177; }
+.logos img { width: 74%; height: 44%; object-fit: contain; display: block; }
+
+/* 7: questions */
+.faq { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 2.6em 1fr 1.4em; align-items: center; gap: 0 .4em; padding: max(10px, .85cqw) 0; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq .n { font: 600 max(12px, .85cqw)/1 var(--label); letter-spacing: .1em; color: var(--lamp); }
+.faq h3 { margin: 0; font: 600 max(15px, 1.2cqw)/1.3 var(--sc-font-display); letter-spacing: -.01em; color: #EDEBDD; }
+.faq .pm { position: relative; width: 1em; height: 1em; justify-self: end; transition: transform .38s var(--ease); }
+.faq .pm::before, .faq .pm::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; margin-top: -.75px; background: #CED0C0; }
+.faq .pm::after { transform: rotate(90deg); }
+.faq details[open] .pm { transform: rotate(45deg); }
+.faq .a { margin: 0 0 max(12px, 1cqw) 3em; font: 400 max(14px, 1cqw)/1.55 var(--sc-font-text); color: var(--ink-2); max-width: 40em; }
+/* a closed answer is not painted, but Chrome still lays it out under the next question: take it out of layout */
+.faq details:not([open]) > .a { display: none; }
+.faq summary:focus-visible { outline: 2px solid #EDEBDD; outline-offset: 2px; }
+
+/* R: the roof */
+.roof-bg { position: absolute; inset: 0; background: linear-gradient(180deg, #101811 0%, #172218 58%, #1E2B1F 100%); }
+.deck { background: linear-gradient(0deg, rgba(16, 24, 17,0) 0%, rgba(16, 24, 17,.55) 62%, #101811 97%), repeating-linear-gradient(90deg, rgba(237, 235, 221,.16) 0 1px, transparent 1px 6cqw), repeating-linear-gradient(0deg, rgba(237, 235, 221,.12) 0 1px, transparent 1px 6cqw), #1C281D; }
+/* three beacons, standing on the roof at three depths: a lamp, the name, a post down to the deck */
+.beacon { position: absolute; left: calc(var(--x) * 1cqw); top: calc(var(--y) * 1cqw); width: calc(var(--w) * 1cqw); height: calc((var(--fy) - var(--y)) * 1cqw);
+  display: flex; flex-direction: column; transform: translate3d(0, 0, calc(var(--z, 0) * 1cqw)); backface-visibility: hidden; }
+.beacon .lbl { font-size: calc(max(12.5px, .86cqw) * var(--ls, 1)); padding-left: 1.2cqw; }
+.beacon .lbl b { font-size: calc(max(15px, 1.2cqw) * var(--ls, 1)); }
+.beacon .lbl i { font-size: calc(max(12.5px, .84cqw) * var(--ls, 1)); }
+.beacon__dot { display: block; flex: none; width: calc(.9cqw * var(--ls, 1)); min-width: 8px; aspect-ratio: 1; background: var(--lamp); margin: 0 0 .5cqw -.4cqw; }
+.beacon__post { display: block; flex: 1; width: 2px; margin-top: .6cqw; background: linear-gradient(180deg, #9A8A44, #3A3519); }
+.close-line { margin: .3em 0 0; font: 700 calc(var(--cl, 4.6) * 1cqw)/1 var(--sc-font-display); letter-spacing: -.04em; color: #EDEBDD; }
+.close-sub { margin: 1cqw 0 0; font: 400 max(15px, 1.2cqw)/1.4 var(--sc-font-text); color: var(--ink-2); }
+.rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.rows li { display: grid; grid-template-columns: 7.5em 1fr; gap: .8em; align-items: center; min-height: 44px; padding: 0; border-bottom: 1px solid var(--line); font: 400 max(14px, 1.02cqw)/1.35 var(--sc-font-text); color: #EDEBDD; }
+.rows li > span:first-child { font: 600 max(10.5px, .72cqw)/1.3 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+/* every contact link is a 44px tap target; the social links sit 12px apart */
+.rows li > a, .rows .soc a { display: inline-flex; align-items: center; min-height: 44px; }
+.rows .soc { display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; }
+.rows a { text-decoration: underline; text-decoration-color: rgba(237, 235, 221,.35); text-underline-offset: 3px; }
+.rows a:hover { text-decoration-color: #EDEBDD; }
+.legal { margin: 1cqw 0 0; font: 400 max(12px, .8cqw)/1.4 var(--sc-font-text); color: var(--ink-3); }
+
+.dock { display: none; }
+
+/* ---------- desktop layouts (scene 100 x 58 cqw) ---------- */
+#f-g .head { --x: 5; --y: 5.4; --w: 50; }
+.pl--near { --x: 33; --y: 26.5; --w: 21.5; --z: 0; --fh: 7.8; }
+.pl--mid { --x: 57; --y: 19; --w: 20; --z: -18; --fh: 9.2; }
+.pl--far { --x: 81.5; --y: 11; --w: 17.5; --z: -36; --fh: 12; }
+
+.head { --x: 5; --y: 5; --w: 30; }
+/* 1: identity, 8 x 2 */
+.idw .ob { --w: 10.2; }
+.idw .ob:nth-of-type(-n+8) { --y: 24; } .idw .ob:nth-of-type(n+9) { --y: 40.5; }
+.idw .ob:nth-of-type(8n+1) { --x: 5; } .idw .ob:nth-of-type(8n+2) { --x: 16.55; } .idw .ob:nth-of-type(8n+3) { --x: 28.1; } .idw .ob:nth-of-type(8n+4) { --x: 39.65; }
+.idw .ob:nth-of-type(8n+5) { --x: 51.2; } .idw .ob:nth-of-type(8n+6) { --x: 62.75; } .idw .ob:nth-of-type(8n+7) { --x: 74.3; } .idw .ob:nth-of-type(8n+8) { --x: 85.85; }
+.idw .ob:nth-of-type(3n+1) { --z: 0; } .idw .ob:nth-of-type(3n+2) { --z: -5; } .idw .ob:nth-of-type(3n) { --z: -10; }
+#head-1 { --w: 44; }
+/* 2: social, a 3 x 2 hang at three depths */
+.so .ob { --w: 16.5; }
+.so .ob[data-i="0"] { --x: 40; --y: 3.5; --z: 0; } .so .ob[data-i="1"] { --x: 58.5; --y: 2; --z: -9; } .so .ob[data-i="2"] { --x: 77; --y: 4.5; --z: -4; }
+.so .ob[data-i="3"] { --x: 40; --y: 30.5; --z: -6; } .so .ob[data-i="4"] { --x: 58.5; --y: 29; --z: 0; } .so .ob[data-i="5"] { --x: 77; --y: 31.5; --z: -11; }
+/* 3: web, 2 x 2 */
+.web .ob { --w: 27; }
+.web .ob[data-i="0"] { --x: 38; --y: 5; --z: 0; } .web .ob[data-i="1"] { --x: 68; --y: 4; --z: -9; }
+.web .ob[data-i="2"] { --x: 38; --y: 31; --z: -7; } .web .ob[data-i="3"] { --x: 68; --y: 30; --z: -2; }
+/* 4: the car */
+.carf .scene { --cd: 20; }
+.carf .stage, .carf .scene { background: #1D2A1E; }
+#head-4 { --x: 5; --y: 4; --w: 90; }
+#head-4 .h2 { --h2: 3.1; }
+.poster { --w: 13.6; --y: 19.5; }
+.car__back::after { content: ""; position: absolute; left: 3%; right: 3%; top: 84%; height: .55cqw; background: linear-gradient(180deg, #5B6C5A, #364837); }
+.poster img { aspect-ratio: .707; object-fit: contain; object-position: 50% 100%; }
+.poster[data-i="0"] { --x: 5; } .poster[data-i="1"] { --x: 20.4; } .poster[data-i="2"] { --x: 35.8; } .poster[data-i="3"] { --x: 51.2; } .poster[data-i="4"] { --x: 66.6; } .poster[data-i="5"] { --x: 82; }
+/* 5: results, a staircase going back in depth */
+.res .ob { --w: 18.5; }
+.res .shot img { aspect-ratio: 1.6; object-fit: cover; object-position: 0 0; }
+.res .ob { --w: 19; }
+.res .shot[data-i="0"] { --x: 35; --y: 7; --z: -4; } .res .plate[data-i="0"] { --x: 35; --y: 19.6; --z: 0; }
+.res .shot[data-i="1"] { --x: 55.5; --y: 12.5; --z: -8; } .res .plate[data-i="1"] { --x: 55.5; --y: 25.1; --z: -4; }
+.res .shot[data-i="2"] { --x: 76; --y: 18; --z: -12; } .res .plate[data-i="2"] { --x: 76; --y: 30.6; --z: -8; }
+.res .ob.plate { min-height: 19cqw; }
+.res .fig { --fs: 3.5; }
+/* 6: studio room */
+#head-6 { --w: 40; }
+.svc { --w: 21.5; }
+.svc[data-i="0"] { --x: 49; --y: 6; --z: 0; } .svc[data-i="1"] { --x: 72.5; --y: 6; --z: -6; }
+.svc[data-i="2"] { --x: 49; --y: 27; --z: -6; } .svc[data-i="3"] { --x: 72.5; --y: 27; --z: 0; }
+/* 7: questions */
+#head-7 { --w: 28; }
+#head-7 .h2 { --h2: 3.3; }
+.faqbox { --x: 38; --y: 6; --w: 57; --z: 0; }
+/* R: the roof */
+#head-r { --x: 5; --y: 5; --w: 52; }
+.contact { --x: 62; --y: 6.5; --w: 33; --z: 0; }
+.beacon { --w: 18; }
+.beacon[data-i="0"] { --x: 9; --y: 34; --z: 0; } .beacon[data-i="1"] { --x: 39; --y: 37; --z: -30; } .beacon[data-i="2"] { --x: 69; --y: 39; --z: -60; }
+
+/* where each camera rests once its floor has arrived: inside the car (the peak), a step toward the roof's three beacons */
+#f-4 .cam { transform: translate3d(0, 0, 11cqw); }
+#f-r .cam { transform: translate3d(0, 0, 4cqw); }
+html.fx.lift-on #f-4:not(.in) .cam { transform: translate3d(0, -2.5cqw, -6cqw); }
+html.fx.lift-on #f-r:not(.in) .cam { transform: translate3d(0, -2.5cqw, -12cqw); }
+
+/* ---------- tablets and small laptops: the floor buttons fold into a sheet ---------- */
+@media (max-width: 1179px) {
+  .panel { position: fixed; top: var(--bar); right: 0; left: auto; width: min(320px, 100vw); margin: 0; background: #162017; border-left: 1px solid #2B3C2C; border-bottom: 1px solid #2B3C2C;
+    transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .25s var(--ease), transform .3s var(--ease), visibility 0s linear .3s; }
+  .panel.is-open { opacity: 1; transform: none; visibility: visible; transition: opacity .25s var(--ease), transform .3s var(--ease); }
+  .panel ol { display: block; padding: 6px 0; }
+  .panel a { width: auto; height: 46px; border-radius: 0; border: 0; background: none; display: flex; justify-content: flex-start; gap: 14px; padding: 0 20px; font-size: 14px; }
+  .panel a span { display: inline; font: 500 15px/1 var(--sc-font-text); letter-spacing: 0; color: #EDEBDD; }
+  .panel a[aria-current="true"] { box-shadow: inset 3px 0 0 var(--lamp); }
+  .bar__floors { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; margin-left: auto; box-sizing: border-box; border: 1px solid #405442; border-radius: 999px; background: #1E2B1F; color: #EDEBDD;
+    font: 600 12px/1 var(--label); letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
+  .bar__floors i { display: grid; gap: 3px; }
+  .bar__floors i::before, .bar__floors i::after { content: ""; display: block; width: 12px; height: 1.5px; background: #EDEBDD; }
+}
+
+/* ---------- phones: tall scene, CTA in the bottom bar ---------- */
+@media (max-width: 860px) {
+  :root { --bar: 56px; --gut: 16px; --lab: 0px; --dockh: calc(64px + var(--lab) + env(safe-area-inset-bottom)); --ar: .55; --pv: 230; --fy: 182; --fd: 120; }
+  .hero-with { font-size: 15px; }
+  .bar { gap: 10px; }
+  .bar__brand img { width: 104px; }
+  .bar .cta { display: none; }
+  .disp { height: 30px; padding: 0 8px; gap: 6px; font-size: 11.5px; letter-spacing: .1em; }
+  .disp__win { width: 11.4em; }
+  .bar__brand img { width: 98px; }
+  .bar__floors { padding: 0 12px; height: 44px; letter-spacing: .1em; }
+  .bar__floors i { display: none; }
+  .dock { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 85; height: var(--dockh); box-sizing: border-box;
+    padding: var(--lab) var(--gut) env(safe-area-inset-bottom); align-items: center; background: #101811; border-top: 1px solid #2B3C2C; }
+  .dock .cta { width: 100%; height: 48px; font-size: 16px; }
+  .lbl { font-size: 12.5px; }
+  .lbl b { font-size: 13.5px; }
+  .lbl span { display: none; }
+  .eyebrow { font-size: 11.5px; }
+  .fact { font-size: 15px; line-height: 1.5; }
+
+  #f-g .head { --x: 6; --y: 5; --w: 88; }
+  #f-g .h1 { --h1: 11.6; }
+  .pl--far { --x: 50; --y: 61.5; --w: 44; --z: -40; }
+  .pl--mid { --x: 4; --y: 84; --w: 44; --z: -20; }
+  .pl--near { --x: 49; --y: 119; --w: 47; --z: 0; }
+  /* the face grows to fit its caption; the plinth body below takes up the difference */
+  .pl__face { min-height: 13cqw; }
+  .pl__face .lbl { padding: 8px 10px; }
+
+  .head { --x: 6; --y: 5; --w: 88; }
+  .h2 { --h2: 10; }
+  /* 1: identity, 4 x 4 */
+  .idw .ob { --w: 21.2; }
+  .idw .ob:nth-of-type(4n+1) { --x: 5; } .idw .ob:nth-of-type(4n+2) { --x: 27.9; } .idw .ob:nth-of-type(4n+3) { --x: 50.9; } .idw .ob:nth-of-type(4n+4) { --x: 73.8; }
+  .idw .lbl i { letter-spacing: .04em; }
+  /* rows 34.5cqw apart so a two-line label never reaches the plate below; placed where they land after the perspective */
+  .idw .ob:nth-of-type(-n+4) { --y: 42; } .idw .ob:nth-of-type(n+5):nth-of-type(-n+8) { --y: 76.5; } .idw .ob:nth-of-type(n+9):nth-of-type(-n+12) { --y: 111; } .idw .ob:nth-of-type(n+13) { --y: 145.5; }
+  .idw .ob:nth-of-type(3n+1) { --z: 0; } .idw .ob:nth-of-type(3n+2) { --z: -3; } .idw .ob:nth-of-type(3n) { --z: -6; }
+  .idw .ob { left: calc((50 + (var(--x) - 50) * var(--k)) * 1cqw); top: calc((83.64 + (var(--y) - 83.64) * var(--k)) * 1cqw); }
+  .idw .lbl { padding-top: 1.4cqw; }
+  #head-1 { --w: 88; }
+  /* 2: social, 3 x 2 */
+  .so .ob { --w: 28; }
+  .so .ob[data-i="0"] { --x: 6; --y: 44; --z: 0; } .so .ob[data-i="1"] { --x: 36; --y: 42; --z: -5; } .so .ob[data-i="2"] { --x: 66; --y: 45; --z: -2; }
+  .so .ob[data-i="3"] { --x: 6; --y: 100; --z: -4; } .so .ob[data-i="4"] { --x: 36; --y: 98; --z: 0; } .so .ob[data-i="5"] { --x: 66; --y: 101; --z: -6; }
+  .post .lbl, .site .lbl, .poster .lbl { padding-top: 1.8cqw; }
+  /* 3: web, one large and three small */
+  .web .ob[data-i="0"] { --x: 6; --y: 42; --w: 88; --z: 0; }
+  .web .ob[data-i="1"] { --x: 6; --y: 115; --w: 28; --z: -4; } .web .ob[data-i="2"] { --x: 36; --y: 115; --w: 28; --z: -2; } .web .ob[data-i="3"] { --x: 66; --y: 115; --w: 28; --z: -6; }
+  /* 4: the car */
+  .carf .scene { --cd: 24; }
+  #head-4 { --x: 6; --y: 6; --w: 88; }
+  #head-4 .h2 { --h2: 8.6; }
+  .poster { --w: 26; }
+  .poster[data-i="0"] { --x: 6; --y: 46; } .poster[data-i="1"] { --x: 37; --y: 46; } .poster[data-i="2"] { --x: 68; --y: 46; }
+  .car__back::after { top: 92%; }
+  .poster[data-i="3"] { --x: 6; --y: 106; } .poster[data-i="4"] { --x: 37; --y: 106; } .poster[data-i="5"] { --x: 68; --y: 106; }
+  /* 5: results, one row each */
+  .res .shot { --w: 38; } .res .plate { --w: 52; }
+  .res .shot[data-i="0"] { --x: 56; --y: 42; --z: -6; } .res .plate[data-i="0"] { --x: 6; --y: 40; --z: 0; }
+  .res .shot[data-i="1"] { --x: 56; --y: 88; --z: -6; } .res .plate[data-i="1"] { --x: 6; --y: 86; --z: 0; }
+  .res .shot[data-i="2"] { --x: 56; --y: 134; --z: -6; } .res .plate[data-i="2"] { --x: 6; --y: 132; --z: 0; }
+  .res .ob.plate { padding: 3cqw 3cqw 2.6cqw; }
+  .res .fig { --fs: 8.4; }
+  .fig2 { font-size: 15px; line-height: 1.3; margin-top: 1.4cqw; }
+  .res .lbl { margin-top: 2cqw; }
+  /* 6: studio room */
+  #head-6 { --w: 88; }
+  .aeo { font-size: 15px; margin-top: 3cqw; }
+  /* results and studio rooms: their content sets their height (flow grids), so nothing is clipped at any phone width */
+  #f-5 .stage, .studio__room { height: auto; overflow: visible; }
+  #f-5 .set, .studio__room .set { position: relative; inset: auto; container-type: inline-size; display: block; overflow: visible; }
+  #f-5 .scene, .studio__room .scene { width: 100%; aspect-ratio: auto; }
+  #f-5 .cam, .studio__room .cam { position: relative; inset: auto; display: grid; gap: 12px; padding: 7cqw var(--gut) 10cqw; }
+  #f-5 .floor3d, .studio__room .floor3d { top: auto; bottom: 0; }
+  #head-5, #head-6 { position: relative; left: auto; top: auto; width: auto; grid-column: 1 / -1; margin-bottom: 4px; }
+  #f-5 .cam { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 16px 12px; align-items: start; }
+  #f-5 .ob { position: relative; left: auto; top: auto; width: auto; transform: none; }
+  #f-5 .plate { grid-column: 1; min-height: 0; } #f-5 .shot { grid-column: 2; }
+  #f-5 [data-i="0"] { grid-row: 2; } #f-5 [data-i="1"] { grid-row: 3; } #f-5 [data-i="2"] { grid-row: 4; }
+  .studio__room .cam { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .svc { position: relative; left: auto; top: auto; width: auto; transform: none; min-height: 0; padding: 14px 12px 14px; }
+  .svc h3 { font-size: 16px; }
+  .svc p { font-size: 15px; line-height: 1.45; margin-top: 6px; }
+  .svc .svc__line { padding-top: 10px; }
+  /* 7: questions */
+  #head-7 { --w: 88; }
+  #head-7 .h2 { --h2: 7.6; }
+  .faqbox { --x: 6; --y: 31; --w: 88; }
+  .faq summary { padding: 8px 0; min-height: 44px; box-sizing: border-box; }
+  .faq h3 { font-size: 14.5px; }
+  .faq .a { font-size: 15px; line-height: 1.5; margin-bottom: 10px; }
+  .faq .a { margin-left: 2.6em; }
+  /* R: the roof */
+  #head-r { --x: 6; --y: 5; --w: 88; }
+  .close-line { --cl: 10.4; }
+  /* the roof: a little taller than one screen, so the 44px contact rows clear the three beacon posts */
+  #f-r { --ar: .47; --fy: 212.8; }
+  #f-r .stage { height: auto; }
+  #f-r .set { position: relative; inset: auto; container-type: inline-size; display: block; }
+  #f-r .scene { width: 100%; }
+  .contact { --x: 6; --y: 63; --w: 88; }
+  .beacon { --w: 30; }
+  .beacon[data-i="0"] { --x: 5; --y: 162; --z: 0; } .beacon[data-i="1"] { --x: 37; --y: 167; --z: -22; } .beacon[data-i="2"] { --x: 70; --y: 173; --z: -44; }
+  .close-line { --cl: 9.4; margin-top: .15em; }
+  html.fx.lift-on main > section:not(.in) .cam { transform: translate3d(0, -4cqw, -12cqw); }
+  #f-4 .cam { transform: translate3d(0, 0, 9cqw); }
+  html.fx.lift-on #f-4:not(.in) .cam { transform: translate3d(0, -4cqw, -3cqw); }
+  html.fx.lift-on #f-r:not(.in) .cam { transform: translate3d(0, -4cqw, -8cqw); }
+
+  .story { grid-template-columns: minmax(0, 1fr); border-top: 0; border-left: 1px solid var(--line); margin-left: 4px; }
+  .story li { padding: 0 0 22px 20px; }
+  .story li::before { top: 4px; left: -4px; }
+  .logos ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sheet { padding: 48px var(--gut) 72px; }
+  .founder { font-size: 16px; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#f-6">Skip to the studio</a>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio, ground floor"><img src="assets/wordmark.svg" alt="Mosswick Studio" width="439" height="77"></a>
+  <div class="disp" aria-hidden="true">
+    <span class="disp__arw" id="disp-arw">&#9650;</span>
+    <span class="disp__win"><span class="disp__load"><span class="disp__strip" id="disp-strip">
+      <span class="disp__row"><b>3</b></span>
+      <span class="disp__row"><b>2</b></span>
+      <span class="disp__row"><b>1</b></span>
+      <span class="disp__row"><b>G</b> Packaging</span>
+      <span class="disp__row"><b>1</b> Identity</span>
+      <span class="disp__row"><b>2</b> Social</span>
+      <span class="disp__row"><b>3</b> Websites</span>
+      <span class="disp__row"><b>4</b> Campaigns</span>
+      <span class="disp__row"><b>5</b> Results</span>
+      <span class="disp__row"><b>6</b> Studio</span>
+      <span class="disp__row"><b>7</b> Questions</span>
+      <span class="disp__row"><b>R</b> Roof</span>
+    </span></span></span>
+  </div>
+  <button class="bar__floors" id="floors-btn" type="button" aria-expanded="false" aria-controls="panel"><i></i>Floors</button>
+  <nav class="panel" id="panel" aria-label="Floors">
+    <ol>
+      <li><a href="#f-g" data-go="0" aria-label="Ground floor, packaging">G<span>Packaging</span></a></li>
+      <li><a href="#f-1" data-go="1" aria-label="Floor 1, identity">1<span>Identity</span></a></li>
+      <li><a href="#f-2" data-go="2" aria-label="Floor 2, social">2<span>Social</span></a></li>
+      <li><a href="#f-3" data-go="3" aria-label="Floor 3, websites">3<span>Websites</span></a></li>
+      <li><a href="#f-4" data-go="4" aria-label="Floor 4, campaigns">4<span>Campaigns</span></a></li>
+      <li><a href="#f-5" data-go="5" aria-label="Floor 5, results">5<span>Results</span></a></li>
+      <li><a href="#f-6" data-go="6" aria-label="Floor 6, the studio">6<span>Studio</span></a></li>
+      <li><a href="#f-7" data-go="7" aria-label="Floor 7, questions">7<span>Questions</span></a></li>
+      <li><a href="#f-r" data-go="8" aria-label="The roof, contact">R<span>Roof, contact</span></a></li>
+    </ol>
+  </nav>
+  <a class="cta" href="https://wa.me/15550100" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Start a project</a>
+</header>
+
+<div class="lift" aria-hidden="true">
+  <div class="lift__cam" id="lift-cam">
+    <div class="door door--l" id="door-l"><div class="ad"><img src="assets/wordmark.svg" alt="" width="439" height="77"><span class="ad__rule"></span><span class="ad__line">Brands worth remembering</span></div><span class="door__kick"></span><span class="door__edge"></span></div>
+    <div class="door door--r" id="door-r"><div class="ad"><img src="assets/wordmark.svg" alt="" width="439" height="77"><span class="ad__rule"></span><span class="ad__line">Brands worth remembering</span></div><span class="door__kick"></span><span class="door__edge"></span></div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- G: packaging. The hero is object one, already labelled. -->
+<section class="floor in" id="f-g" data-floor="0" aria-labelledby="h1">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="room-bg"></div>
+      <div class="cam">
+        <div class="floor3d"></div>
+        <div class="head hero-up">
+          <p class="eyebrow"><b>G</b>Ground floor · Packaging</p>
+          <h1 class="h1" id="h1">Make them<br> look twice.</h1>
+          <div class="hero-ask"><a class="cta cta--big" href="https://wa.me/15550100" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Start a project</a><p class="hero-with">Mosswick Studio, Lowmere, since 2014</p></div>
+        </div>
+        <div class="pl pl--near">
+          <div class="pl__top"><img src="assets/img/pack-01.webp" alt="Five Plumtide cordial bottles in plum, apricot, rhubarb, blackcurrant and lemon on a limestone ledge" width="720" height="646" fetchpriority="high"></div>
+          <div class="pl__lid"></div><div class="pl__face"><p class="lbl"><b>Plumtide</b><i>Packaging · Cordials</i><span>Labels that change colour by flavour, shot in morning light.</span></p></div><div class="pl__body"></div>
+        </div>
+        <div class="pl pl--mid">
+          <div class="pl__top"><img src="assets/img/pack-02.webp" alt="A Gilded Hare gin bottle with an embossed hare and a gold-foiled label on a walnut bar" width="720" height="646"></div>
+          <div class="pl__lid"></div><div class="pl__face"><p class="lbl"><b>Gilded Hare</b><i>Packaging · Gin</i><span>Embossed glass and gold foil: a bottle bars keep facing out.</span></p></div><div class="pl__body"></div>
+        </div>
+        <div class="pl pl--far">
+          <div class="pl__top"><img src="assets/img/pack-03.webp" alt="Four Fizzwold kombucha cans in pink, lime, tangerine and lilac in crushed ice" width="720" height="646"></div>
+          <div class="pl__lid"></div><div class="pl__face"><p class="lbl"><b>Fizzwold</b><i>Packaging · Kombucha</i><span>Cans with a bold pattern for every single flavour.</span></p></div><div class="pl__body"></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- G, second bay: three more packs on the same plinths -->
+<section class="floor" id="f-g2" data-floor="0" aria-labelledby="h-g2">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="room-bg"></div>
+      <div class="cam">
+        <div class="floor3d"></div>
+        <div class="head" id="head-g2"><p class="eyebrow"><b>G</b>Ground floor · Packaging</p><h2 class="h2" id="h-g2">More on the shelf</h2><p class="fact">Bags for coffee and snacks, boxes for toys.</p></div>
+        <div class="pl pl--near">
+          <div class="pl__top"><img src="assets/img/pack-04.webp" alt="Three Tallow Lane Coffee bags in tomato, mustard and cobalt on a roastery workbench" width="720" height="646" loading="lazy"></div>
+          <div class="pl__lid"></div><div class="pl__face"><p class="lbl"><b>Tallow Lane Coffee</b><i>Packaging · Coffee</i><span>One system for twelve bags, a colour per origin.</span></p></div><div class="pl__body"></div>
+        </div>
+        <div class="pl pl--mid">
+          <div class="pl__top"><img src="assets/img/pack-05.webp" alt="Four Saltmarrow seaweed snack bags with bold wave prints on wet sand" width="720" height="646" loading="lazy"></div>
+          <div class="pl__lid"></div><div class="pl__face"><p class="lbl"><b>Saltmarrow</b><i>Packaging · Snacks</i><span>Loud wave-printed bags that sit right next to the crisps.</span></p></div><div class="pl__body"></div>
+        </div>
+        <div class="pl pl--far">
+          <div class="pl__top"><img src="assets/img/pack-06.webp" alt="Bright Tumblewick wooden toys beside their open boxes on a mint green floor" width="720" height="646" loading="lazy"></div>
+          <div class="pl__lid"></div><div class="pl__face"><p class="lbl"><b>Tumblewick</b><i>Packaging · Toys</i><span>Bright boxes that open out into little play scenes.</span></p></div><div class="pl__body"></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- 1: identities -->
+<section class="floor idw" id="f-1" data-floor="1" aria-labelledby="h-1">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="room-bg"></div>
+      <div class="cam">
+        <div class="floor3d"></div>
+        <div class="head" id="head-1"><p class="eyebrow"><b>1</b>Floor 1 · Identity</p><h2 class="h2" id="h-1">Identity</h2><p class="fact">Sixteen identities, from a cordial maker to a climbing gym.</p></div>
+        <figure class="ob" data-i="0"><img src="assets/marks/mark-01.svg" alt="Plumtide wordmark" width="389" height="99" loading="lazy"><figcaption class="lbl"><b>Plumtide</b><i>Logo · Cordials</i></figcaption></figure>
+        <figure class="ob" data-i="1"><img src="assets/marks/mark-02.svg" alt="Kilnmark wordmark" width="383" height="76" loading="lazy"><figcaption class="lbl"><b>Kilnmark</b><i>Logo · Ceramics</i></figcaption></figure>
+        <figure class="ob" data-i="2"><img src="assets/marks/mark-03.svg" alt="Okra &amp; Ash wordmark" width="388" height="79" loading="lazy"><figcaption class="lbl"><b>Okra &amp; Ash</b><i>Logo · Restaurant</i></figcaption></figure>
+        <figure class="ob" data-i="3"><img src="assets/marks/mark-04.svg" alt="Paywren wordmark" width="421" height="87" loading="lazy"><figcaption class="lbl"><b>Paywren</b><i>Logo · Fintech</i></figcaption></figure>
+        <figure class="ob" data-i="4"><img src="assets/marks/mark-05.svg" alt="Hollin Gallery wordmark" width="551" height="101" loading="lazy"><figcaption class="lbl"><b>Hollin Gallery</b><i>Logo · Art gallery</i></figcaption></figure>
+        <figure class="ob" data-i="5"><img src="assets/marks/mark-06.svg" alt="Tumblewick wordmark" width="508" height="84" loading="lazy"><figcaption class="lbl"><b>Tumblewick</b><i>Logo · Toys</i></figcaption></figure>
+        <figure class="ob" data-i="6"><img src="assets/marks/mark-07.svg" alt="Owlhour wordmark" width="406" height="79" loading="lazy"><figcaption class="lbl"><b>Owlhour</b><i>Logo · Night school</i></figcaption></figure>
+        <figure class="ob" data-i="7"><img src="assets/marks/mark-08.svg" alt="Sumwright wordmark" width="482" height="93" loading="lazy"><figcaption class="lbl"><b>Sumwright</b><i>Logo · Accounting</i></figcaption></figure>
+        <figure class="ob" data-i="8"><img src="assets/marks/mark-09.svg" alt="Cragloft wordmark" width="566" height="82" loading="lazy"><figcaption class="lbl"><b>Cragloft</b><i>Logo · Climbing</i></figcaption></figure>
+        <figure class="ob" data-i="9"><img src="assets/marks/mark-10.svg" alt="Mendhaven wordmark" width="520" height="78" loading="lazy"><figcaption class="lbl"><b>Mendhaven</b><i>Logo · Physio</i></figcaption></figure>
+        <figure class="ob" data-i="10"><img src="assets/marks/mark-11.svg" alt="Fizzwold wordmark" width="362" height="79" loading="lazy"><figcaption class="lbl"><b>Fizzwold</b><i>Logo · Kombucha</i></figcaption></figure>
+        <figure class="ob" data-i="11"><img src="assets/marks/mark-12.svg" alt="Oakhold wordmark" width="545" height="73" loading="lazy"><figcaption class="lbl"><b>Oakhold</b><i>Logo · Furniture</i></figcaption></figure>
+        <figure class="ob" data-i="12"><img src="assets/marks/mark-13.svg" alt="Ferrylight wordmark" width="574" height="101" loading="lazy"><figcaption class="lbl"><b>Ferrylight</b><i>Logo · Podcasts</i></figcaption></figure>
+        <figure class="ob" data-i="13"><img src="assets/marks/mark-14.svg" alt="Glimmerfold wordmark" width="419" height="100" loading="lazy"><figcaption class="lbl"><b>Glimmerfold</b><i>Logo · Jewellery</i></figcaption></figure>
+        <figure class="ob" data-i="14"><img src="assets/marks/mark-15.svg" alt="Softwatt wordmark" width="396" height="82" loading="lazy"><figcaption class="lbl"><b>Softwatt</b><i>Logo · Lighting</i></figcaption></figure>
+        <figure class="ob" data-i="15"><img src="assets/marks/mark-16.svg" alt="Sorrelbox wordmark" width="403" height="75" loading="lazy"><figcaption class="lbl"><b>Sorrelbox</b><i>Logo · Meal kits</i></figcaption></figure>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- 2: social -->
+<section class="floor so" id="f-2" data-floor="2" aria-labelledby="h-2">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="room-bg"></div>
+      <div class="cam">
+        <div class="floor3d"></div>
+        <div class="head" id="head-2"><p class="eyebrow"><b>2</b>Floor 2 · Social</p><h2 class="h2" id="h-2">Social</h2><p class="fact">Posts for trainers, glasses, a restaurant, knitwear, climbing and books.</p></div>
+        <figure class="ob post" data-i="0"><img src="assets/img/post-01.webp" alt="Moss green Fernstride running shoes mid-stride on a leafy park path" width="640" height="800" loading="lazy"><figcaption class="lbl"><b>Fernstride</b><i>Social · Running shoes</i><span>Slow Sunday miles, for runners just starting.</span></figcaption></figure>
+        <figure class="ob post" data-i="1"><img src="assets/img/post-02.webp" alt="A Periwink wall of glasses frames sorted by colour" width="640" height="800" loading="lazy"><figcaption class="lbl"><b>Periwink</b><i>Social · Eyewear</i><span>A monthly try-on series from six shops.</span></figcaption></figure>
+        <figure class="ob post" data-i="2"><img src="assets/img/post-03.webp" alt="The Okra &amp; Ash wood-fired oven glowing in a dim kitchen" width="640" height="800" loading="lazy"><figcaption class="lbl"><b>Okra &amp; Ash</b><i>Social · Restaurant</i><span>The fire, filmed before opening.</span></figcaption></figure>
+        <figure class="ob post" data-i="3"><img src="assets/img/post-04.webp" alt="A Marlo Rue cream wool sweater over a fence post in a misty field" width="640" height="800" loading="lazy"><figcaption class="lbl"><b>Marlo Rue</b><i>Social · Knitwear</i><span>A winter range shot like a slow film.</span></figcaption></figure>
+        <figure class="ob post" data-i="4"><img src="assets/img/post-05.webp" alt="A Cragloft climbing wall with pink, yellow and teal holds" width="640" height="800" loading="lazy"><figcaption class="lbl"><b>Cragloft</b><i>Social · Climbing gyms</i><span>Staff falling off easy routes on purpose.</span></figcaption></figure>
+        <figure class="ob post" data-i="5"><img src="assets/img/post-06.webp" alt="Six Quillmoor Press paperbacks fanned out on green velvet" width="640" height="800" loading="lazy"><figcaption class="lbl"><b>Quillmoor Press</b><i>Social · Publishing</i><span>Each cover cut into a short trailer.</span></figcaption></figure>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- 3: websites -->
+<section class="floor web" id="f-3" data-floor="3" aria-labelledby="h-3">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="room-bg"></div>
+      <div class="cam">
+        <div class="floor3d"></div>
+        <div class="head" id="head-3"><p class="eyebrow"><b>3</b>Floor 3 · Websites</p><h2 class="h2" id="h-3">Websites</h2><p class="fact">Websites for a gallery, a canal hotel, a cargo bike and a solar firm.</p></div>
+        <figure class="ob site" data-i="0"><img src="assets/img/site-01.webp" alt="A bright Hollin Gallery room with three abstract canvases" width="960" height="600" loading="lazy"><figcaption class="lbl"><b>Hollin Gallery</b><i>Website · Art gallery</i><span>A site that reads like a magazine front page.</span></figcaption></figure>
+        <figure class="ob site" data-i="1"><img src="assets/img/site-02.webp" alt="A larch-panelled bedroom at The Larchway looking onto the canal" width="960" height="600" loading="lazy"><figcaption class="lbl"><b>The Larchway</b><i>Website · Hotel</i><span>Rooms sold by mood, booked direct.</span></figcaption></figure>
+        <figure class="ob site" data-i="2"><img src="assets/img/site-03.webp" alt="A sage green Gearfinch cargo e-bike on a leafy hill street" width="960" height="600" loading="lazy"><figcaption class="lbl"><b>Gearfinch</b><i>Website · Cargo e-bikes</i><span>Parents book a free test ride at home.</span></figcaption></figure>
+        <figure class="ob site" data-i="3"><img src="assets/img/site-04.webp" alt="Solar panels on the roof of a red brick terraced house, a Voltmere install" width="960" height="600" loading="lazy"><figcaption class="lbl"><b>Voltmere</b><i>Website · Home solar</i><span>A savings calculator in plain language.</span></figcaption></figure>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- 4: campaigns, inside a lift car (the peak) -->
+<section class="floor carf" id="f-4" data-floor="4" aria-labelledby="h-4">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="cam">
+        <div class="car">
+          <div class="car__ceil"></div>
+          <div class="car__floor"></div>
+          <div class="car__side car__side--l"><span class="car__rail" style="top:58%"></span></div>
+          <div class="car__side car__side--r"><span class="car__rail" style="top:58%"></span></div>
+          <div class="car__back">
+            <div class="head" id="head-4"><p class="eyebrow"><b>4</b>Floor 4 · Campaigns</p><h2 class="h2" id="h-4">Big ideas, built to run everywhere.</h2></div>
+            <figure class="ob poster" data-i="0"><img src="assets/img/poster-01.webp" alt="A two-colour Marshlight Festival poster of reeds and lanterns on a brick wall at dusk" width="560" height="792" loading="lazy"><figcaption class="lbl"><b>Marshlight Festival</b><i>Campaign · Festival</i></figcaption></figure>
+            <figure class="ob poster" data-i="1"><img src="assets/img/poster-02.webp" alt="Sand-coloured Stillreed headphones on the edge of an empty swimming pool" width="560" height="792" loading="lazy"><figcaption class="lbl"><b>Stillreed</b><i>Campaign · Headphones</i></figcaption></figure>
+            <figure class="ob poster" data-i="2"><img src="assets/img/poster-03.webp" alt="A rust orange Cairnstone rucksack against a stone cairn on a misty ridge" width="560" height="792" loading="lazy"><figcaption class="lbl"><b>Cairnstone</b><i>Campaign · Outdoor gear</i></figcaption></figure>
+            <figure class="ob poster" data-i="3"><img src="assets/img/poster-04.webp" alt="The lit Owlhour classroom window at night, pottery wheels inside" width="560" height="792" loading="lazy"><figcaption class="lbl"><b>Owlhour</b><i>Campaign · Night school</i></figcaption></figure>
+            <figure class="ob poster" data-i="4"><img src="assets/img/poster-05.webp" alt="A cyclist in a green Velloway waterproof on a wet city street at dusk" width="560" height="792" loading="lazy"><figcaption class="lbl"><b>Velloway</b><i>Campaign · Outerwear</i></figcaption></figure>
+            <figure class="ob poster" data-i="5"><img src="assets/img/poster-06.webp" alt="A heron in the misty city river cared for by River Commons Trust" width="560" height="792" loading="lazy"><figcaption class="lbl"><b>River Commons Trust</b><i>Campaign · Charity</i></figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- 5: results -->
+<section class="floor res" id="f-5" data-floor="5" aria-labelledby="h-5">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="room-bg"></div>
+      <div class="cam">
+        <div class="floor3d"></div>
+        <div class="head" id="head-5"><p class="eyebrow"><b>5</b>Floor 5 · Results</p><h2 class="h2" id="h-5">Results</h2><p class="fact">Three projects, and the one number each client cared about most.</p></div>
+        <figure class="ob shot" data-i="0"><img src="assets/img/result-01.webp" alt="A phone showing a Paywren invoice screen on a light ash desk" width="960" height="600" loading="lazy"></figure>
+        <div class="ob plate" data-i="0"><span class="fig">41%</span><span class="fig2">lower cost per sign-up, after testing forty ad versions in a month</span><p class="lbl"><b>Paywren</b><i>Result · Fintech</i><span>Identity, design system and launch ads for an invoicing app.</span></p></div>
+        <figure class="ob shot" data-i="1"><img src="assets/img/result-02.webp" alt="A small blue model house under a folded paper umbrella, for Shelterly" width="960" height="600" loading="lazy"></figure>
+        <div class="ob plate" data-i="1"><span class="fig">64%</span><span class="fig2">more quote completions on the new site</span><p class="lbl"><b>Shelterly</b><i>Result · Insurance</i><span>The new site cut the quote form from 22 questions to 9.</span></p></div>
+        <figure class="ob shot" data-i="2"><img src="assets/img/result-03.webp" alt="A wheaten terrier beside an open Houndsbury meal box on a tiled kitchen floor" width="960" height="600" loading="lazy"></figure>
+        <div class="ob plate" data-i="2"><span class="fig">2.4<small>x</small></span><span class="fig2">subscriptions within a year, from paid social tested every week</span><p class="lbl"><b>Houndsbury</b><i>Result · Pet food</i><span>Windowed pouches and short videos of dogs at dinner time.</span></p></div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- 6: the studio. A room, then the story and the client wall in plain flow. -->
+<section class="studio" id="f-6" data-floor="6" aria-labelledby="h-6">
+  <div class="studio__room">
+    <div class="set"><div class="scene">
+      <div class="room-bg"></div>
+      <div class="cam" id="cam-6">
+        <div class="floor3d"></div>
+        <div class="head" id="head-6"><p class="eyebrow"><b>6</b>Floor 6 · Studio</p><h2 class="h2" id="h-6">What we make</h2>
+          <p class="aeo">Mosswick Studio is a creative and marketing studio in Lowmere. Since 2014, thirty-two strategists, designers, writers, filmmakers, developers and media buyers in one studio have made brands, packaging, websites, films and campaigns for food brands, shops, clinics and city charities, with marketing that earns its keep. Most clients stay for years.</p>
+        </div>
+        <article class="ob svc" data-i="0"><h3>Brand Identity</h3><p class="svc__line">Recognisable at a glance, at every size.</p><p>Logo and wordmark, colour and type system, brand guidelines, icons and patterns, templates.</p></article>
+        <article class="ob svc" data-i="1"><h3>Campaigns</h3><p class="svc__line">One idea, carried well across every channel.</p><p>Campaign concept, key visuals, copywriting, out-of-home design, media plan, launch assets.</p></article>
+        <article class="ob svc" data-i="2"><h3>Performance Marketing</h3><p class="svc__line">Ads run by people who know your brand.</p><p>Tracking setup, paid social, paid search, weekly creative testing, live dashboard, monthly review.</p></article>
+        <article class="ob svc" data-i="3"><h3>Websites</h3><p class="svc__line">Fast, clear sites that turn visits into enquiries.</p><p>Site map and wireframes, UX and UI design, copywriting, development, CMS setup, launch testing.</p></article>
+      </div>
+    </div></div>
+  </div>
+  <div class="sheet" id="sheet-6">
+    <div class="sheet__in">
+      <h2 id="story-h">Where we began</h2>
+      <p class="founder">Mosswick started in 2014 as three people sharing a desk above a bike shop. We were tired of watching good companies hide behind forgettable logos and campaigns nobody could recall a week later. Today the person shooting your film hears the strategy first hand, and the person buying your ads knows why the brand looks the way it does.</p>
+      <ol class="story">
+        <li><span class="yr">2014</span><p>Three people at one desk above a bike shop in Lowmere.</p></li>
+        <li><span class="yr">140+</span><p>Brands launched since that first desk.</p></li>
+        <li><span class="yr">600+</span><p>Films and edits delivered by the in-house crew.</p></li>
+        <li><span class="yr">18</span><p>Clients on monthly retainers today.</p></li>
+        <li><span class="yr">32</span><p>People in the studio: strategists, designers, writers, filmmakers, developers and media buyers.</p></li>
+      </ol>
+      <div class="logos">
+        <h2 id="logos-h">Some of the brands we work with</h2>
+        <p class="logos__note">From food brands to city charities, set in one colour on dark.</p>
+        <ul>
+          <li><img src="assets/clients/client-01.svg" alt="Tallow Lane Coffee" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-02.svg" alt="Fernstride" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-03.svg" alt="Plumtide" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-04.svg" alt="Marshlight Festival" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-05.svg" alt="Houndsbury" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-06.svg" alt="Kilnmark" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-07.svg" alt="Halvane Watch Co." width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-08.svg" alt="Cairnstone" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-09.svg" alt="Okra &amp; Ash" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-10.svg" alt="Shelterly" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-11.svg" alt="Paywren" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-12.svg" alt="Periwink" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-13.svg" alt="River Commons Trust" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-14.svg" alt="Hollin Gallery" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-15.svg" alt="Marlo Rue" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-16.svg" alt="Saltmarrow" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-17.svg" alt="Tumblewick" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-18.svg" alt="Gearfinch" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-19.svg" alt="Owlhour" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-20.svg" alt="Quillmoor Press" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-21.svg" alt="Cragloft" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-22.svg" alt="Voltmere" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-23.svg" alt="Mendhaven" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-24.svg" alt="Fernery Lane" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-25.svg" alt="Fizzwold" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-26.svg" alt="Copperbell Theatre" width="369" height="177" loading="lazy"></li>
+          <li><img src="assets/clients/client-27.svg" alt="Puddlejump Swim School" width="369" height="177" loading="lazy"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7: questions -->
+<section class="floor qa" id="f-7" data-floor="7" aria-labelledby="h-7">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="room-bg"></div>
+      <div class="cam">
+        <div class="floor3d"></div>
+        <div class="head" id="head-7"><p class="eyebrow"><b>7</b>Floor 7 · Questions</p><h2 class="h2" id="h-7">Questions people ask us</h2></div>
+        <div class="ob faqbox">
+          <div class="faq">
+            <details name="faq" open><summary><span class="n">01</span><h3>What kind of companies do you work with?</h3><span class="pm"></span></summary><p class="a">Mostly growing companies with 10 to 500 people: food and drink brands, shops, clinics, charities, tech start-ups and the odd festival.</p></details>
+            <details name="faq"><summary><span class="n">02</span><h3>How much does a project cost?</h3><span class="pm"></span></summary><p class="a">Brand identities usually start around $18,000, websites around $15,000 and retainers around $5,000. You get a fixed quote after our first call.</p></details>
+            <details name="faq"><summary><span class="n">03</span><h3>How long does a brand identity take?</h3><span class="pm"></span></summary><p class="a">Most identity projects take eight to twelve weeks from the first workshop to final files. We agree the timeline in writing before we start.</p></details>
+            <details name="faq"><summary><span class="n">04</span><h3>Do you only take on big projects?</h3><span class="pm"></span></summary><p class="a">No. Some clients start with a single campaign, a product film or three months of social content. If it goes well, the work tends to grow.</p></details>
+            <details name="faq"><summary><span class="n">05</span><h3>Who will actually work on my project?</h3><span class="pm"></span></summary><p class="a">The people you meet in the first meeting: a senior lead, a strategist and the makers the job needs. We never hand the work to another team.</p></details>
+            <details name="faq"><summary><span class="n">06</span><h3>Can you work alongside our in-house team?</h3><span class="pm"></span></summary><p class="a">Yes, and we often do. We can lead the creative and hand over files and guidelines, or join your team's weekly rhythm. You own everything we make.</p></details>
+            <details name="faq"><summary><span class="n">07</span><h3>Do you run ads as well as make them?</h3><span class="pm"></span></summary><p class="a">Yes. Our performance team plans, buys and tests paid search and social, and you see spend and results in a live dashboard, updated daily.</p></details>
+            <details name="faq"><summary><span class="n">08</span><h3>How do you measure success?</h3><span class="pm"></span></summary><p class="a">We agree two or three numbers at the start, such as enquiries, sales or sign-ups, and report on them every month in plain language. If something is not working, we say so early.</p></details>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- R: the roof, the close -->
+<section class="floor roof" id="f-r" data-floor="8" aria-labelledby="h-r">
+  <div class="stage">
+    <div class="set"><div class="scene">
+      <div class="roof-bg"></div>
+      <div class="cam">
+        <div class="floor3d deck"></div>
+        <div class="beacon" data-i="0"><span class="beacon__dot"></span><p class="lbl"><b>Listen</b><i>Step 1 · Meet your team</i></p><span class="beacon__post"></span></div>
+        <div class="beacon" data-i="1"><span class="beacon__dot"></span><p class="lbl"><b>Decide</b><i>Step 2 · One problem</i></p><span class="beacon__post"></span></div>
+        <div class="beacon" data-i="2"><span class="beacon__dot"></span><p class="lbl"><b>Make</b><i>Step 3 · Weekly check-ins</i></p><span class="beacon__post"></span></div>
+        <div class="head" id="head-r"><p class="eyebrow"><b>R</b>The roof · Contact</p><h2 class="close-line" id="h-r">Have a launch coming? Tell us about it.</h2><p class="close-sub">We reply within two working days.</p>
+          <div class="hero-ask"><a class="cta cta--big" href="https://wa.me/15550100" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Start a project</a></div>
+        </div>
+        <div class="ob contact" id="contact">
+          <ul class="rows">
+            <li><span>WhatsApp</span><a href="https://wa.me/15550100" target="_blank" rel="noopener">+1 555 0100</a></li>
+            <li><span>Call</span><a href="tel:+15550142">+1 555 0142</a></li>
+            <li><span>Briefs</span><a href="mailto:projects@example.com">projects@example.com</a></li>
+            <li><span>Email</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><span>Studio</span><span>1 Example Street, Lowmere</span></li>
+            <li><span>Follow</span><span class="soc"><a href="https://example.com" target="_blank" rel="noopener">Instagram</a><a href="https://example.com" target="_blank" rel="noopener">LinkedIn</a><a href="https://example.com" target="_blank" rel="noopener">YouTube</a></span></li>
+          </ul>
+          <p class="legal">© 2026 Mosswick Studio. Brands worth remembering.<br>Example content. Swap in your own.</p>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+</main>
+
+<div class="dock" id="dock"><a class="cta" href="https://wa.me/15550100" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Start a project</a></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2a9.7 9.7 0 0 0-8.4 14.6L2.3 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.5-.3Z"/></symbol></svg>
+
+<script src="lift.js"></script>
+</body>
+</html>

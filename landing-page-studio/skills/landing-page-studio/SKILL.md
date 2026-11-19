@@ -23,6 +23,15 @@ Ask which one applies if it isn't obvious.
 - **Own page**: the user's own business. Their brand, their copy approval, deployed normally.
 - **Concept rebuild**: a redesign of someone else's live site, made as a sample to show its owner (an agency pitching a client, a freelancer pitching a prospect). Everything below applies, plus the concept rules: facts only from their own site, their logo untouched, `noindex`, a visible "Concept by <you>. Not affiliated with <them>." line, takedown on request, and nothing public without the user's yes. See `references/deploy.md` and `references/send-the-sample.md`.
 
+## Starting from a template
+
+The repo ships finished homepage templates in `templates/` (the preflight prints where they are on this machine), each filled with one made-up studio's example content. When the user names one ("start from poster-2") or points at a template folder, it works in either mode:
+
+- Copy the template folder into the build folder. Its layout, section order, scroll moves, hero and close stay; that is what the user picked.
+- Run phase 1 as normal, then replace **every** piece of example content with the business's own: name, logo, colours, copy, people, work, client logos, testimonials, contact routes. The example studio, its people, its projects and its images must not survive into a real business's page. Where the business has no real material for a slot (no team photos, no case studies), drop or reshape that section rather than keep an example.
+- Skip phase 2's grammar choice (the template is the grammar) but still write the brief and give the page its own signature moment.
+- Phases 3 to 9 run unchanged. The checks matter more here: real copy is never the same length as example copy.
+
 ## The workflow
 
 Keep a task list with these phases. Show the user the work at the review point in phase 7, not before; it saves rounds.

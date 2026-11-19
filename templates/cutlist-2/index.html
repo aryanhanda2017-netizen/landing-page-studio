@@ -1,0 +1,1043 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and marketing studio, Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio of 32 people making brands, websites, films and campaigns people notice.">
+<meta name="theme-color" content="#0f2e2e">
+<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Creative and marketing studio, Lowmere">
+<meta property="og:description" content="Brands worth remembering. Marketing that pays back. Identity, websites, film, social, packaging and paid media from one studio.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Creative and marketing studio, Lowmere">
+<meta name="twitter:description" content="Brands worth remembering. Marketing that pays back.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/outfit-latin-var.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/work-04-720.jpg" imagesrcset="assets/img/work-04-720.jpg 720w, assets/img/work-04-1280.jpg 1280w" imagesizes="(max-width: 860px) 88vw, 52vw" fetchpriority="high">
+<link rel="stylesheet" href="scrollcraft.css">
+
+
+<style>
+@font-face { font-family: "Outfit"; src: url("assets/fonts/outfit-latin-var.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-semibold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+
+/* Palette: Deep Teal (palettes.json index 5). Change these tokens to recolour the page. */
+:root {
+  --field: #0f2e2e;
+  --accent: #f2b544;
+  --accent-ink: #0f2e2e;
+  --accent-soft: #3d3418;
+  --ink: #142625;
+  --muted: #3b4d4a;
+  --night: #071010;
+  --deep: #163b3b;
+  --tint: #eaf2ee;
+  --tint2: #d9e7e1;
+  --white: #ffffff;
+  --soft-w: rgba(255, 255, 255, .8);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --display: "Outfit", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, "Geist", Arial, sans-serif;
+  --gut: clamp(16px, 3.4vw, 48px);
+  --bar: 64px;
+  --strip: 56px;
+  --dock: 0px;
+  --lab: 0px;
+  --rad: 10px;
+
+  --sc-canvas: #0f2e2e; --sc-surface: #0f2e2e;
+  --sc-ink: #ffffff; --sc-ink-soft: rgba(255, 255, 255, .8);
+  --sc-accent: #f2b544; --sc-accent-ink: #0f2e2e;
+  --sc-font-display: var(--display);
+  --sc-font-text: var(--text);
+}
+html { background: var(--field); }
+body { margin: 0; background: var(--field); color: #fff; font-family: var(--text); font-size: 17px; line-height: 1.55; }
+img { max-width: 100%; height: auto; }
+a { color: inherit; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--accent); color: var(--accent-ink); padding: 10px 14px; border-radius: 6px; font-weight: 600; }
+.skip:focus { top: 12px; }
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+h1, h2, h3 { font-family: var(--display); margin: 0; letter-spacing: -.02em; line-height: 1.02; font-weight: 700; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+.kick { font: 600 12px/1.2 var(--text); letter-spacing: .15em; text-transform: uppercase; margin: 0 0 14px; }
+
+/* ---------- the one CTA (Arrow Fill Button, 21st 26022): accent pill, a field-colour fill sweeps in and the arrow slides ---------- */
+.cta {
+  position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; gap: .55em;
+  min-height: 44px; padding: 0 1.15em; border-radius: 999px; background: var(--accent); color: var(--accent-ink);
+  font: 650 16px/1 var(--display); letter-spacing: -.005em; text-decoration: none; white-space: nowrap;
+  box-shadow: inset 0 0 0 1.5px var(--accent);
+}
+.cta::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 120%; aspect-ratio: 1; border-radius: 50%; background: var(--field); transform: translate(-50%, -50%) scale(0); transition: transform .45s var(--ease); }
+.cta .arw { width: 1em; height: 1em; flex: none; transition: transform .35s var(--ease); }
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover { color: var(--accent); }
+  .cta:hover::before { transform: translate(-50%, -50%) scale(1); }
+  .cta:hover .arw { transform: translateX(3px); }
+}
+.cta:active { opacity: .85; }
+.cta--big { min-height: 60px; font-size: 21px; padding: 0 1.3em; }
+
+/* ---------- the bar: the field colour, loud, full width; logo, the live slate, the CTA (Header 1, 21st 8964) ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar);
+  display: flex; align-items: center; gap: clamp(14px, 2vw, 28px);
+  padding: env(safe-area-inset-top) var(--gut) 0; background: var(--field);
+  border-bottom: 1px solid rgba(255, 255, 255, .16);
+}
+.bar__logo { display: inline-flex; align-items: center; height: 44px; flex: none; text-decoration: none; }
+/* the studio wordmark, tinted by CSS (mask), so any single-colour SVG logo works here */
+.bar__mark { display: block; height: 24px; aspect-ratio: 439 / 77; background: #fff; -webkit-mask: url("assets/img/wordmark.svg") left center / contain no-repeat; mask: url("assets/img/wordmark.svg") left center / contain no-repeat; }
+.slate { flex: 1 1 auto; min-width: 0; height: 40px; display: flex; align-items: center; border-left: 1px solid rgba(255, 255, 255, .28); padding-left: clamp(12px, 1.6vw, 22px); }
+.slate__lab { position: relative; display: grid; width: 100%; height: 100%; overflow: hidden; }
+.slate__h { grid-area: 1 / 1; display: flex; align-items: center; gap: .7em; min-width: 0; white-space: nowrap; transition: transform .26s var(--ease), opacity .26s var(--ease); }
+.slate__k { font: 650 11.5px/1 var(--text); letter-spacing: .15em; text-transform: uppercase; color: var(--accent); }
+.slate__c { font: 500 15px/1.2 var(--display); color: #fff; overflow: hidden; text-overflow: ellipsis; }
+.slate__y { font: 500 13px/1 var(--text); color: rgba(255, 255, 255, .78); font-variant-numeric: tabular-nums; }
+.slate__lab.is-out .slate__h { transform: translateY(-70%); opacity: 0; transition-duration: .15s; }
+.slate__lab.is-pre .slate__h { transform: translateY(70%); opacity: 0; transition: none; }
+.bar .cta { flex: none; }
+
+/* ---------- the peak, held in the bar: an accent strip that unfurls under it during the results (Sliced Text, 21st 19102) ---------- */
+.strip-win { position: absolute; left: 0; right: 0; top: 100%; height: var(--strip); visibility: hidden; pointer-events: none; }
+.strip-fold, .strip { position: absolute; inset: 0; transform-origin: 50% 0; }
+.strip { background: var(--accent); color: var(--accent-ink); border-bottom: 1px solid rgba(15, 46, 46, .25); overflow: hidden; }
+.sf { position: absolute; inset: 0; visibility: hidden; perspective: 600px; }
+.sf__in { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: clamp(14px, 2vw, 26px); padding: 0 var(--gut); white-space: nowrap; transform-origin: 50% 100%; }
+.sf__c { font: 650 15px/1.1 var(--display); }
+.sf__n { font: 800 34px/1 var(--display); letter-spacing: -.02em; display: inline-flex; align-items: center; gap: .18em; }
+.sf__n .to { width: .62em; height: .62em; }
+.sf__l { font: 500 14.5px/1.2 var(--text); color: var(--accent-soft); }
+.to { display: inline-block; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+/* no scroll timelines (and no JS): the strip stays folded away; each result carries its figure in its own cut */
+
+/* ---------- the split (the signature): a frame in two halves that lock on an accent seam (Split Reveal Text, 21st 19330) ---------- */
+.sp { position: relative; margin: 0; aspect-ratio: var(--ar, 16 / 9); perspective: 1200px; border-radius: var(--rad); }
+.sp__h { position: absolute; inset: 0; display: block; overflow: hidden; border-radius: var(--rad); backface-visibility: hidden; }
+.sp__t { clip-path: inset(0 0 calc(50% - 1px) 0); }
+.sp__b { clip-path: inset(50% 0 0 0); }
+.sp__h > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sp__h > picture { display: block; width: 100%; height: 100%; }
+.sp__h > picture > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sp__seam { position: absolute; z-index: 3; left: -1.5%; right: -1.5%; top: calc(50% - 2px); height: 4px; border-radius: 2px; background: var(--accent); opacity: 0; transform: scaleX(0); pointer-events: none; }
+.on-accent .sp__seam { background: var(--field); }
+
+/* ---------- scroll-driven moves: CSS scroll timelines in page pixels, ranges set by JS (LEARNINGS-01 §3.3) ---------- */
+html.anim .sdx { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.anim .sdx2 { animation-duration: auto, auto; animation-timing-function: linear, linear; animation-fill-mode: both, both; animation-timeline: scroll(root block), scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px), var(--f0, 0px) var(--f1, 1px); }
+
+@keyframes sp-in-t { 0% { translate: -44% 0 -420px; rotate: y 12deg; opacity: 0; animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 30% { opacity: 1; } 100% { translate: 0 0 0; rotate: y 0deg; opacity: 1; } }
+@keyframes sp-in-b { 0% { translate: 44% 0 150px; rotate: y -9deg; opacity: 0; animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 30% { opacity: 1; } 100% { translate: 0 0 0; rotate: y 0deg; opacity: 1; } }
+@keyframes sp-out-t { to { transform: translate3d(14%, -3%, -260px); } }
+@keyframes sp-out-b { to { transform: translate3d(-14%, 3%, 90px); } }
+@keyframes sp-seam { 0% { opacity: 0; transform: scaleX(0); } 40% { opacity: 1; transform: scaleX(1); } 100% { opacity: 0; transform: scaleX(1); } }
+html.anim .sp__t.sdx2 { animation-name: sp-in-t, sp-out-t; }
+html.anim .sp__b.sdx2 { animation-name: sp-in-b, sp-out-b; }
+html.anim .sp__seam.sdx { animation-name: sp-seam; }
+
+@keyframes win { 0% { visibility: hidden; } 0.2% { visibility: visible; } 99.8% { visibility: visible; } 100% { visibility: hidden; } }
+@keyframes strip-open { 0% { transform: perspective(700px) rotateX(-90deg); animation-timing-function: cubic-bezier(.2, .9, .3, 1); } 100% { transform: none; } }
+@keyframes strip-close { to { transform: perspective(700px) rotateX(-90deg); } }
+/* a figure swap is a cut: the old line is gone at the exact point the new one lands, and the new one rolls up from just behind the strip (no split, no seam over text) */
+@keyframes sf-in { 0% { transform: translate3d(0, 42%, -110px) rotateX(-34deg); animation-timing-function: cubic-bezier(.2, .9, .3, 1); } 100% { transform: none; } }
+@keyframes slate-off { 0% { opacity: 1; } 0.5% { opacity: 0; } 99.5% { opacity: 0; } 100% { opacity: 1; } }
+html.anim .strip-win.sdx { animation-name: win; }
+html.anim .strip-fold.sdx { animation-name: strip-close; }
+html.anim .strip.sdx { animation-name: strip-open; }
+html.anim .sf.sdx { animation-name: win; }
+html.anim .sf__in.sdx { animation-name: sf-in; }
+
+/* ================= 1. hero: the field colour, four geometric planes, a deck of work at three depths ================= */
+.hero { position: relative; overflow: clip; background: var(--field); padding: calc(var(--bar) + 20px) var(--gut) 22px; min-height: 100svh; box-sizing: border-box; display: flex; align-items: center; justify-content: center; }
+.wedge { position: absolute; inset: 0; pointer-events: none; }
+.w { position: absolute; inset: 0; display: block; }
+ /* four concentric discs on one edge point (a neutral shape; swap for your own mark), smallest and brightest on top */
+.wedge { --wx: 0%; --wy: 72%; }
+.w1 { clip-path: circle(62% at var(--wx) var(--wy)); background: linear-gradient(90deg, #17403e 0%, #123534 60%); }
+.w2 { clip-path: circle(44% at var(--wx) var(--wy)); background: var(--deep); }
+.w3 { clip-path: circle(28% at var(--wx) var(--wy)); background: linear-gradient(90deg, #2d6159 0%, #1f4c48 100%); }
+.w4 { clip-path: circle(13% at var(--wx) var(--wy)); background: var(--accent); }
+/* the shape, turned so its bright core never sits under type: hero core at the upper right behind the far frame, close core at the upper right */
+.hero .wedge { transform: rotate(180deg); }
+.close .wedge { transform: scaleX(-1); --wy: 22%; }
+.hero__scene { position: relative; z-index: 1; container-type: inline-size; width: min(100%, 1360px, calc((100svh - var(--bar) - 46px) / .56)); aspect-ratio: 100 / 56; }
+.hero__head { position: absolute; left: 0; top: 1.4cqw; width: 58cqw; }
+.hero__eye { font: 600 max(12px, 1.02cqw)/1.3 var(--text); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 1.4cqw; }
+.hero h1 { font-size: 5.7cqw; font-weight: 750; line-height: .98; letter-spacing: -.03em; color: #fff; }
+.hero h1 span { display: block; }
+.hero__ask { margin-top: 2.2cqw; display: flex; align-items: center; gap: 1.6cqw; flex-wrap: wrap; }
+.hero .cta--big { font-size: max(17px, 1.5cqw); min-height: max(52px, 4.3cqw); }
+.deck { position: absolute; inset: 0; perspective: 1500px; perspective-origin: 50% 40%; pointer-events: none; }
+.fr { position: absolute; pointer-events: auto; transform-style: preserve-3d; }
+.fr .sp { --rad: 8px; box-shadow: 0 2.2cqw 4.5cqw -1.6cqw rgba(0, 12, 12, .55); }
+.fr--far { left: 61cqw; top: 2.5cqw; width: 37cqw; transform: translateZ(-320px); }
+.fr--l { left: 3cqw; top: 26.5cqw; width: 18.5cqw; transform: translateZ(-160px); }
+.fr--r { left: 64cqw; top: 25.5cqw; width: 33cqw; transform: translateZ(-160px); }
+.fr--front { left: 20.5cqw; top: 24.5cqw; width: 52cqw; transform: translateZ(0); }
+.fr--front .sp { box-shadow: 0 2.6cqw 5cqw -1.4cqw rgba(0, 10, 10, .7); }
+.fr__tag { position: absolute; z-index: 4; left: 1.4cqw; bottom: 1.4cqw; display: inline-flex; align-items: center; gap: .5em; padding: .55em .85em; border-radius: 6px; background: var(--accent); color: var(--accent-ink); font: 650 max(12px, 1.02cqw)/1.15 var(--display); }
+.fr__tag small { font: 500 max(11px, .9cqw)/1 var(--text); color: var(--accent-soft); }
+.play { position: absolute; z-index: 4; left: 50%; top: 50%; width: max(64px, 6.2cqw); height: max(64px, 6.2cqw); margin: 0; transform: translate(-50%, -50%); border: 0; border-radius: 50%; background: var(--accent); color: var(--accent-ink); cursor: pointer; display: grid; place-items: center; box-shadow: 0 10px 30px -8px rgba(0, 0, 0, .55); transition: transform .3s var(--ease); }
+.play svg { width: 34%; height: 34%; margin-left: 7%; fill: currentColor; }
+@media (hover: hover) and (pointer: fine) { .play:hover { transform: translate(-50%, -50%) scale(1.06); } }
+.fr__film { position: absolute; inset: 0; z-index: 5; border: 0; width: 100%; height: 100%; border-radius: 8px; background: #000; }
+.fr--front.is-playing .play, .fr--front.is-playing .fr__tag { display: none; }
+
+/* hero load reveal (pre-reveal gate; the final state shows with no JS and under reduced motion) */
+html.pre-reveal .w { transform: translate3d(-34%, 0, 0); opacity: 0; }
+html.pre-reveal .hero .sp__t { transform: translate3d(0, -70%, 0); opacity: 0; }
+html.pre-reveal .hero .sp__b { transform: translate3d(0, 70%, 0); opacity: 0; }
+html.pre-reveal .hero__eye { opacity: 0; transform: translateY(10px); }
+html.pre-reveal .hero h1 { opacity: 0; transform: perspective(800px) translateZ(-300px); }
+html.pre-reveal .hero__ask, html.pre-reveal .fr__tag, html.pre-reveal .play { opacity: 0; }
+html.pre-reveal .hero__ask { transform: translateY(16px); }
+html.reveal .w { transition: transform .8s var(--ease), opacity .5s var(--ease); }
+html.reveal .w1 { transition-delay: 0s; } html.reveal .w2 { transition-delay: .08s; } html.reveal .w3 { transition-delay: .14s; } html.reveal .w4 { transition-delay: .2s; }
+html.reveal .hero .sp__h { transition: transform .7s var(--ease), opacity .35s var(--ease); }
+html.reveal .fr--far .sp__h { transition-delay: .16s; }
+html.reveal .fr--l .sp__h { transition-delay: .27s; }
+html.reveal .fr--r .sp__h { transition-delay: .38s; }
+html.reveal .fr--front .sp__h { transition-delay: .5s; }
+html.reveal .fr--front .sp__seam { animation: seam-beat .62s var(--ease) 1.02s both; }
+@keyframes seam-beat { 0% { opacity: 0; transform: scaleX(0); } 45% { opacity: 1; transform: scaleX(1); } 100% { opacity: 0; transform: scaleX(1); } }
+html.reveal .hero__eye { transition: opacity .5s var(--ease) .2s, transform .5s var(--ease) .2s; }
+html.reveal .hero h1 { transition: opacity .45s var(--ease) .3s, transform .8s cubic-bezier(.2, 1.25, .3, 1) .3s; }
+html.reveal .hero__ask { transition: opacity .5s var(--ease) .9s, transform .6s var(--ease) .9s; }
+html.reveal .fr__tag, html.reveal .play { transition: opacity .45s var(--ease) 1.15s; }
+
+/* hero scroll, desktop only: the deck parts in z as the hero cuts away */
+@keyframes d-far { to { transform: translate3d(0, -12%, -620px); } }
+@keyframes d-l { to { transform: translate3d(-14%, -2%, -340px); } }
+@keyframes d-r { to { transform: translate3d(12%, -4%, -340px); } }
+@keyframes d-front { to { transform: translate3d(0, -4%, 110px); } }
+html.anim .fr--far.sdx { animation-name: d-far; }
+html.anim .fr--l.sdx { animation-name: d-l; }
+html.anim .fr--r.sdx { animation-name: d-r; }
+html.anim .fr--front.sdx { animation-name: d-front; }
+
+/* ================= the cuts ================= */
+.cut { position: relative; overflow-x: clip; padding: clamp(44px, 6.2vh, 68px) var(--gut); box-sizing: border-box; }
+.cut__in { position: relative; max-width: 1280px; margin: 0 auto; }
+.g-white { background: #fff; color: var(--ink); }
+.g-tint { background: var(--tint); color: var(--ink); }
+.g-tint2 { background: var(--tint2); color: var(--ink); }
+.g-field { background: var(--field); color: #fff; }
+.g-night { background: var(--night); color: #fff; }
+.g-accent { background: var(--accent); color: var(--accent-ink); }
+.g-white .kick, .g-tint .kick, .g-tint2 .kick { color: var(--field); }
+.g-field .kick, .g-night .kick { color: var(--accent); }
+.g-accent .kick { color: var(--field); }
+.h2 { font-size: clamp(34px, 4.4vw, 64px); }
+.lede { font-size: clamp(17px, 1.35vw, 20px); line-height: 1.5; max-width: 46ch; margin-top: 16px; }
+.g-field .lede, .g-night .lede { color: var(--soft-w); }
+.more { display: inline-flex; align-items: center; min-height: 44px; margin-top: 8px; font: 600 15px/1.3 var(--text); text-underline-offset: .25em; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 4vw, 64px); align-items: center; }
+.grid2--r { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+
+/* 2. what we do (ScrollTiltedGrid, 21st 12434) */
+.what__top { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 4vw, 64px); align-items: end; margin-bottom: clamp(32px, 4.5vh, 52px); }
+.what__top .lede { margin-top: 0; max-width: 60ch; color: var(--muted); }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; perspective: 1400px; }
+.tile { background: var(--field); color: #fff; border-radius: 12px; padding: clamp(18px, 1.8vw, 26px); transform-origin: 50% 100%; }
+.tile h3 { font-size: clamp(28px, 2.6vw, 40px); color: var(--accent); }
+.tile p { margin-top: 10px; font-size: 15px; line-height: 1.45; color: var(--soft-w); min-height: 4.35em; }
+.tile ul { list-style: none; margin: 16px 0 0; padding: 0; font-size: 14px; line-height: 1.3; }
+.tile li { padding: 9px 0; border-top: 1px solid rgba(255, 255, 255, .22); }
+@keyframes tilt-in { 0% { transform: translate3d(0, 70px, -240px) rotateX(36deg); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .tile.sdx { animation-name: tilt-in; }
+
+/* 3. films: the lead film (Scroll Reveal Image, 21st 24466) */
+.films__art { position: relative; perspective: 1200px; padding-bottom: 6%; }
+.films__art .sp { --ar: 2 / 1; }
+.clip { position: absolute; right: -2%; bottom: -4%; width: 34%; margin: 0; transform: rotate(-3deg); transform-origin: 50% 100%; box-shadow: 0 18px 40px -12px rgba(0, 0, 0, .75); border-radius: 4px; overflow: hidden; }
+.clip img { display: block; width: 100%; height: auto; }
+@keyframes clip-in { 0% { transform: perspective(900px) translate3d(10%, 24%, 140px) rotateX(26deg) rotate(-8deg); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: rotate(-3deg); } }
+html.anim .clip.sdx { animation-name: clip-in; }
+.award { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 10px 14px; border-radius: 8px; background: var(--accent); color: var(--accent-ink); font: 650 15px/1.25 var(--display); }
+.films__also { margin-top: 18px; font-size: 15px; color: rgba(255, 255, 255, .74); }
+
+/* 4. short films: phones turning to face you (Iphone Mockup, 21st 6475) */
+.phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 28px); perspective: 1300px; align-items: end; }
+.phone { position: relative; margin: 0; }
+.phone__body { display: block; padding: 7px; border-radius: 26px; background: #0a1a1a; box-shadow: 0 0 0 1px rgba(255, 255, 255, .18), 0 24px 40px -18px rgba(0, 12, 12, .8); }
+.phone__body img { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 20px; }
+.phone .sp { --rad: 26px; --ar: 9 / 16.9; }
+.phone .sp__h > .phone__body { height: 100%; box-sizing: border-box; }
+.phone .sp__h > .phone__body img { height: 100%; aspect-ratio: auto; }
+.phone figcaption { margin-top: 12px; font: 500 14px/1.3 var(--text); color: var(--soft-w); text-align: center; }
+@keyframes turn-l { 0% { transform: translate3d(30%, 0, -300px) rotateY(68deg); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+@keyframes turn-r { 0% { transform: translate3d(-30%, 0, -300px) rotateY(-68deg); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .phone--l.sdx { animation-name: turn-l; }
+html.anim .phone--r.sdx { animation-name: turn-r; }
+
+/* 5. campaign: camera push (Parallax Scrolling Effect, 21st 2544) */
+.cgi__art { position: relative; perspective: 1200px; }
+.cgi__art .sp { --ar: 1100 / 626; }
+@keyframes push { 0% { transform: scale(1); } 100% { transform: scale(1.16); } }
+html.anim .cgi__art .sp__h > img.sdx { animation-name: push; }
+.cgi__near { position: absolute; right: -3%; bottom: -10%; width: 34%; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.cgi__near img { display: block; width: 100%; border-radius: 12px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .2), 0 22px 40px -16px rgba(0, 0, 0, .9); }
+.cgi__near img + img { margin-top: 18%; }
+@keyframes near-rise { 0% { transform: perspective(900px) translate3d(0, 40%, 120px); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .cgi__near.sdx { animation-name: near-rise; }
+
+/* 6. print: sheets land and stack (Scroll Stacking Cards, 21st 44650) */
+.stack { position: relative; aspect-ratio: 2 / 1.18; perspective: 1300px; }
+.sheet { position: absolute; width: 84%; margin: 0; }
+.sheet img, .sheet .sp { display: block; width: 100%; border-radius: 8px; box-shadow: 0 20px 40px -18px rgba(4, 24, 24, .5); }
+.sheet--1 { left: 0; top: 0; }
+.sheet--2 { left: 8%; top: 9%; }
+.sheet--3 { left: 16%; top: 18%; }
+.sheet--3 .sp { --ar: 2 / 1; --rad: 8px; }
+@keyframes land { 0% { transform: translate3d(0, 50%, 220px) rotateX(-30deg) rotate(-4deg); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+@keyframes sink { to { transform: translate3d(0, -4%, -150px) rotateX(10deg); filter: brightness(.86); } }
+html.anim .sheet__land.sdx { animation-name: land; }
+html.anim .sheet__sink.sdx { animation-name: sink; }
+
+/* 7. social: posts fly in from depth in a wave (Stagger Reveal Grid, 21st 18357) */
+.feed { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: 16px; perspective: 1300px; align-items: center; }
+.feed__main .sp { --ar: 4 / 5; }
+.feed__side { display: grid; gap: 16px; }
+.feed__side img { display: block; width: 100%; border-radius: 10px; box-shadow: 0 18px 34px -18px rgba(0, 0, 0, .5); }
+@keyframes zfly { 0% { transform: translate3d(0, 18%, -560px); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .zf.sdx { animation-name: zfly; }
+
+/* 8. websites: browser frames turn flat (Safari, 21st 1241) */
+.wins { position: relative; aspect-ratio: 100 / 64; perspective: 1500px; }
+.win { position: absolute; width: 66%; margin: 0; }
+.win--1 { left: 0; top: 0; }
+.win--2 { left: 17%; top: 17%; }
+.win--3 { left: 34%; top: 34%; }
+.win__chrome { display: flex; gap: 6px; align-items: center; height: 26px; padding: 0 12px; background: #e4ece8; border-radius: 8px 8px 0 0; }
+.win__chrome i { width: 9px; height: 9px; border-radius: 50%; background: #bfccc7; }
+.win__chrome b { flex: 1; height: 13px; margin: 0 6% 0 4%; border-radius: 7px; background: #fff; }
+.win__shot { display: block; width: 100%; aspect-ratio: 1100 / 520; object-fit: cover; object-position: 50% 0; border-radius: 0 0 8px 8px; }
+.win__card { border-radius: 8px; box-shadow: 0 0 0 1px rgba(4, 24, 24, .1), 0 26px 50px -22px rgba(4, 24, 24, .55); background: #fff; }
+.win .sp { --ar: 1100 / 520; --rad: 0 0 8px 8px; }
+.win .sp__h { border-radius: 0 0 8px 8px; }
+@keyframes win-turn { 0% { transform: translate3d(-8%, 10%, -280px) rotateY(26deg); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .win.sdx { animation-name: win-turn; }
+
+/* 9. packaging: packs rise off the floor (Animated Feature Spotlight 3D, 21st 8592) */
+.packs { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(8px, 2vw, 28px); perspective: 1200px; padding-bottom: 28px; }
+.packs::after { content: ""; position: absolute; left: -4%; right: -4%; bottom: 0; height: 46%; background: linear-gradient(180deg, rgba(217, 231, 225, 0), var(--tint2)); border-radius: 50% 50% 0 0 / 22% 22% 0 0; z-index: -1; }
+.pack { position: relative; margin: 0; }
+.pack img { display: block; width: 100%; height: auto; position: relative; z-index: 1; }
+.pack .sp { --ar: 700 / 376; --rad: 0; }
+.pack .sp__h { border-radius: 0; }
+.pack .sp__h > img { object-fit: contain; }
+.pack__sh { position: absolute; left: 12%; right: 12%; bottom: -6px; height: 18px; border-radius: 50%; background: radial-gradient(closest-side, rgba(5, 30, 28, .32), rgba(5, 30, 28, 0)); }
+.pack figcaption { margin-top: 16px; text-align: center; font: 600 15px/1.2 var(--display); color: var(--ink); }
+@keyframes pack-rise { 0% { transform: translate3d(0, 34%, -340px) rotateX(16deg); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .pack__lift.sdx { animation-name: pack-rise; }
+
+/* 10 to 17. results: the cuts keep running while the strip holds the figure */
+.res { padding-top: clamp(44px, 6vh, 64px); padding-bottom: clamp(44px, 6vh, 64px); }
+.res__in { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+.res h3 { font-size: clamp(30px, 3.3vw, 50px); }
+.res__meta { margin-top: 12px; font-size: 16px; line-height: 1.45; color: var(--soft-w); max-width: 40ch; }
+.res__fig { margin-top: 14px; font: 700 18px/1.3 var(--display); color: var(--accent); }
+.res .more { color: #fff; }
+.res__art { perspective: 1200px; }
+.res__art .sp { --ar: 1100 / 421; }
+.res__art .sp__h { background: #fff; }
+.res__art--wide .sp { --ar: 1100 / 329; }
+.res__art--tall { width: 100%; max-width: 330px; justify-self: center; }
+.res__art--tall .sp { --ar: 560 / 705; }
+.res__art--tall .sp__h { background: #fff; }
+.res__art--band .sp { --ar: 1200 / 110; }
+.res__kick { grid-column: 1 / -1; }
+html.anim .fig-wrap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+html.anim .fig-wrap .res__fig { margin: 0; }
+
+/* 18. clients: tiles flip up in a wave (Flip Text, 21st 35197) */
+.logos { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 8px; margin-top: clamp(24px, 3.5vh, 40px); perspective: 900px; }
+.logo { position: relative; margin: 0; aspect-ratio: 3 / 2; background: #fff; border-radius: 8px; box-shadow: 0 0 0 1px rgba(15, 46, 46, .12); transform-origin: 50% 0; }
+/* each client wordmark is a single-colour SVG, tinted here through a mask */
+.logo i { position: absolute; inset: 16% 12%; display: block; background: var(--field); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; }
+@keyframes flip-up { 0% { transform: rotateX(-74deg) translateZ(-40px); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .logo.sdx { animation-name: flip-up; }
+
+/* 19. people (Portfolio Hero, 21st 9037) */
+.people { background: linear-gradient(90deg, #0f2e2e 0%, #0f2e2e 36%, rgba(15, 46, 46, .35) 66%, rgba(15, 46, 46, .2) 100%), url("assets/img/texture-01.jpg") 75% 40% / cover no-repeat, #0f2e2e; overflow: clip; padding-bottom: 0; }
+.founder { position: relative; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: end; gap: clamp(20px, 3vw, 48px); min-height: 620px; perspective: 1200px; }
+.founder__name::before { content: attr(data-name); }
+.founder__name { position: absolute; left: 0; right: 0; top: 2%; font: 800 clamp(64px, 12.6vw, 190px)/.86 var(--display); letter-spacing: -.045em; color: rgba(255, 255, 255, .16); white-space: nowrap; pointer-events: none; }
+.founder__txt { position: relative; z-index: 2; padding-bottom: 56px; }
+.founder__txt h2 { font-size: clamp(40px, 4.6vw, 70px); }
+.founder__role { margin-top: 8px; font: 600 18px/1.3 var(--display); color: var(--accent); }
+.founder__txt p.q { margin-top: 18px; font-size: 17px; line-height: 1.55; color: #fff; max-width: 44ch; }
+.founder__cut { position: relative; z-index: 1; justify-self: center; width: min(100%, 470px); margin: 0; }
+.founder__cut img { display: block; width: 100%; height: auto; }
+.team-cut { padding-top: 28px; }
+.team { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 16px; align-items: stretch; }
+.lead { display: flex; align-items: center; gap: 18px; padding: 18px; border-radius: 12px; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2); }
+.lead img { width: 96px; height: 96px; object-fit: cover; object-position: 50% 10%; border-radius: 50%; background: var(--accent); flex: none; }
+.lead h3 { font-size: 26px; }
+.lead p { margin-top: 4px; color: var(--accent); font: 600 15px/1.3 var(--display); }
+.teamph { margin: 0; position: relative; }
+.teamph img { display: block; width: 100%; height: 100%; max-height: 300px; object-fit: cover; border-radius: 12px; }
+.teamph figcaption { position: absolute; left: 12px; bottom: 12px; padding: 6px 10px; border-radius: 6px; background: var(--field); color: #fff; font: 500 13px/1.2 var(--text); }
+@keyframes name-drift { 0% { transform: translate3d(-3%, 0, 0); } 100% { transform: translate3d(3%, -8%, 0); } }
+@keyframes cut-rise { 0% { transform: translate3d(0, 16%, 150px); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+@keyframes come { 0% { transform: perspective(1000px) translate3d(0, 10%, -260px); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .founder__name.sdx { animation-name: name-drift; }
+html.anim .founder__cut.sdx { animation-name: cut-rise; }
+html.anim .teamph.sdx, html.anim .lead.sdx { animation-name: come; }
+
+/* 20. questions (Accordion, 21st 23530) */
+.faq__in { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.faq__intro { margin-top: 14px; color: var(--muted); font-size: 17px; }
+.qs { perspective: 1200px; }
+.qa { border-top: 1px solid rgba(15, 46, 46, .2); transform-origin: 50% 0; }
+.qa:last-child { border-bottom: 1px solid rgba(15, 46, 46, .2); }
+.qa h3 { font-size: inherit; letter-spacing: 0; }
+.qa button { all: unset; box-sizing: border-box; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 60px; padding: 14px 0; cursor: pointer; font: 600 clamp(18px, 1.5vw, 22px)/1.25 var(--display); color: var(--ink); }
+.qa button:focus-visible { outline: 2px solid var(--field); outline-offset: 2px; }
+.qa__x { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--field); position: relative; transition: transform .35s var(--ease); }
+.qa__x::before, .qa__x::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; margin: -1px 0 0 -6px; background: var(--accent); }
+.qa__x::after { transform: rotate(90deg); transition: transform .35s var(--ease); }
+.qa.is-open .qa__x::after { transform: rotate(0deg); }
+.qa__a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s var(--ease); }
+.qa.is-open .qa__a { grid-template-rows: 1fr; }
+.qa__a > div { overflow: hidden; }
+.qa__a p { padding: 0 48px 18px 0; color: var(--muted); font-size: 16.5px; line-height: 1.55; }
+.qa__a a { color: var(--field); }
+html:not(.js) .qa__a { grid-template-rows: 1fr; }
+@keyframes hinge { 0% { transform: rotateX(58deg) translateZ(-40px); animation-timing-function: cubic-bezier(.25, .9, .3, 1); } 100% { transform: none; } }
+html.anim .qa.sdx { animation-name: hinge; }
+
+/* 21. close: abrupt, full bleed, the field colour and the shape turned the other way (CTA Section, 21st 28155) */
+.close { position: relative; overflow: clip; background: var(--field); box-sizing: border-box; padding: clamp(96px, 13vh, 132px) var(--gut) calc(clamp(56px, 8vh, 80px) + var(--dock)); }
+.close .wedge .w1 { opacity: .9; }
+.close__in { position: relative; z-index: 1; width: 100%; max-width: 1280px; margin: 0 auto; perspective: 1100px; }
+.close h2 { font-size: clamp(48px, 8.4vw, 132px); line-height: .92; letter-spacing: -.04em; }
+.close__lede { margin-top: 18px; font-size: clamp(18px, 1.6vw, 22px); color: #fff; max-width: 40ch; }
+.close__ask { margin-top: clamp(26px, 4vh, 44px); transform-origin: 0 50%; }
+.close .cta--big { min-height: clamp(64px, 7vw, 92px); font-size: clamp(22px, 2.6vw, 38px); padding: 0 1.1em; }
+.rows { margin-top: clamp(32px, 5vh, 56px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgba(255, 255, 255, .3); }
+.row { padding: 16px 18px 16px 0; font-size: 16px; line-height: 1.45; }
+.row + .row { padding-left: 18px; border-left: 1px solid rgba(255, 255, 255, .3); }
+.row b { display: block; font: 600 12px/1.2 var(--text); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.row a { display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: .22em; }
+.row address { margin-bottom: 2px; }
+.socials { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.legal { margin-top: 22px; font-size: 13px; color: rgba(255, 255, 255, .78); }
+@keyframes punch { 0% { transform: translate3d(0, 0, -440px); animation-timing-function: cubic-bezier(.2, 1.15, .3, 1); } 100% { transform: none; } }
+@keyframes w-in { 0% { transform: translate3d(-30%, 0, 0); } 100% { transform: none; } }
+html.anim .close__ask.sdx { animation-name: punch; }
+html.anim .close .w.sdx { animation-name: w-in; }
+
+.dock { display: none; }
+
+/* ================= phones ================= */
+@media (max-width: 860px) {
+  :root { --bar: 64px; --lab: 0px; --dock: calc(64px + var(--lab) + env(safe-area-inset-bottom)); --rad: 8px; }
+  body { font-size: 16px; }
+  .bar { gap: 12px; }
+  .bar__mark { height: 33px; aspect-ratio: 1; -webkit-mask-image: url("assets/img/mark.svg"); mask-image: url("assets/img/mark.svg"); }
+  .bar .cta { display: none; }
+  .slate { height: 44px; padding-left: 12px; }
+  .slate__h { flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; }
+  .slate__h .slate__y { display: none; }
+  .slate__k { font-size: 11px; }
+  .slate__c { font-size: 14px; max-width: 100%; }
+  .strip-win { top: 0; left: calc(var(--gut) + 33px + 12px); right: var(--gut); height: var(--bar); }
+  .strip { background: var(--field); color: #fff; border: 0; }
+  .sf__in { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto; align-content: center; justify-content: stretch; column-gap: 8px; row-gap: 3px; padding: 0 0 0 12px; white-space: normal; }
+  .sf__n { grid-column: 1; grid-row: 1; font-size: 21px; color: var(--accent); }
+  .sf__c { grid-column: 2; grid-row: 1; font-size: 12.5px; align-self: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sf__l { grid-column: 1 / -1; grid-row: 2; font-size: 11px; line-height: 1.25; color: rgba(255, 255, 255, .8); max-width: none; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: normal; }
+  html.anim .slate.sdx { animation-name: slate-off; }
+
+  .hero { min-height: 0; padding: calc(var(--bar) + 14px) var(--gut) 26px; display: block; }
+  .hero__scene { width: 100%; aspect-ratio: 100 / 150; }
+  .hero__head { top: 0; width: 100%; }
+  .hero__eye { font-size: 11.5px; margin-bottom: 3.6cqw; }
+  .hero h1 { font-size: 11.4cqw; line-height: 1.04; }
+  .hero__ask { margin-top: 5cqw; }
+  .hero .cta--big { font-size: 18px; min-height: 54px; }
+  .fr--far { left: 34cqw; top: 66cqw; width: 64cqw; transform: translateZ(-300px); }
+  .fr--l { left: 1cqw; top: 79cqw; width: 30cqw; transform: translateZ(-150px); }
+  .fr--r { left: 52cqw; top: 93cqw; width: 47cqw; transform: translateZ(-150px); }
+  .fr--front { left: 4cqw; top: 103cqw; width: 92cqw; }
+  .fr__tag { font-size: 11.5px; left: 8px; bottom: 8px; }
+  .fr__tag small { display: none; }
+  .play { width: 60px; height: 60px; }
+
+  .cut { padding: 52px var(--gut); }
+  .grid2, .grid2--r, .what__top, .res__in, .faq__in { grid-template-columns: minmax(0, 1fr); }
+  .grid2--r .cut__txt { order: -1; }
+  .h2 { font-size: clamp(32px, 9.4vw, 44px); }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tile { padding: 16px 14px; }
+  .tile h3 { font-size: 26px; }
+  .tile p, .tile ul { font-size: 15px; line-height: 1.45; }
+  .tile p { min-height: 0; }
+  .tile ul { margin-top: 10px; }
+  .tile li { padding: 7px 0; }
+  .films__art { margin-top: 6px; padding-bottom: 14%; }
+  .clip { width: 38%; right: 0; bottom: 0; }
+  .phones { gap: 10px; }
+  .phone__body { padding: 4px; border-radius: 16px; }
+  .phone__body img { border-radius: 12px; }
+  .phone .sp { --rad: 16px; }
+  .phone figcaption { font-size: 12px; margin-top: 8px; }
+  .cgi__near { right: 0; bottom: -14%; width: 40%; gap: 6px; }
+  .cgi__art { margin-bottom: 16%; }
+  .feed { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .feed__main { width: 78%; margin: 0 auto; }
+  .feed__side { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .wins { aspect-ratio: 100 / 76; }
+  .win { width: 78%; }
+  .win--2 { left: 11%; top: 19%; }
+  .win--3 { left: 22%; top: 38%; }
+  .win__chrome { height: 18px; padding: 0 8px; gap: 4px; }
+  .win__chrome i { width: 6px; height: 6px; }
+  .win__chrome b { height: 9px; }
+  .pack figcaption { font-size: 13px; margin-top: 10px; }
+  .res { padding-top: 40px; padding-bottom: 44px; }
+  .res__in { gap: 18px; }
+  .res h3 { font-size: 30px; }
+  .res__meta { font-size: 15px; }
+  .res__art--tall { max-width: none; }
+  .res__art .sp { aspect-ratio: var(--arm, var(--ar)); }
+  .res__art .sp__h > picture > img { object-fit: cover; object-position: 50% 50%; }
+  html.anim .fig-wrap { position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; }
+  html.anim .fig-wrap .res__fig, .res__fig { margin-top: 12px; font-size: 19px; line-height: 1.3; }
+  .logos { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .logo { border-radius: 6px; }
+  .logo img { inset: 10%; width: 80%; height: 80%; }
+  .founder { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .founder__name { font-size: 25vw; top: auto; bottom: 4%; white-space: normal; line-height: .82; }
+  .founder__cut { order: 2; width: 80%; margin-top: 4px; }
+  .founder__txt { order: 1; padding: 0; }
+  .people { padding-bottom: 0; background: linear-gradient(0deg, rgba(15, 46, 46, .3) 0%, rgba(15, 46, 46, .3) 34%, #0f2e2e 56%), url("assets/img/texture-01.jpg") 72% 100% / auto 58% no-repeat, #0f2e2e; }
+  .hero .wedge { top: 36%; -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 30%); mask-image: linear-gradient(0deg, transparent 0%, #000 30%); }
+  .close .wedge { bottom: auto; height: 170px; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%); mask-image: linear-gradient(180deg, #000 55%, transparent 100%); }
+  .team { grid-template-columns: minmax(0, 1fr); }
+  .team-cut { padding-top: 20px; }
+  .teamph img { max-height: none; aspect-ratio: 4 / 3; }
+  .qa button { font-size: 18px; min-height: 56px; }
+  .qa__a p { padding-right: 8px; }
+  .close { min-height: 0; padding: calc(150px + 36px) var(--gut) calc(40px + var(--dock)); display: block; }
+  .close h2 { font-size: clamp(46px, 15vw, 64px); }
+  .close .cta--big { font-size: 22px; min-height: 64px; width: 100%; justify-content: center; }
+  .rows { grid-template-columns: minmax(0, 1fr); }
+  .row, .row + .row { padding: 14px 0; border-left: 0; border-bottom: 1px solid rgba(255, 255, 255, .3); }
+
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock); box-sizing: border-box;
+    padding: var(--lab) var(--gut) env(safe-area-inset-bottom); align-items: center; justify-content: center;
+    background: var(--field); border-top: 1px solid rgba(255, 255, 255, .22); transition: transform .4s var(--ease);
+  }
+  .dock .cta { width: 100%; justify-content: center; min-height: 48px; font-size: 18px; }
+  .dock.is-away { transform: translateY(calc(100% - var(--lab) - env(safe-area-inset-bottom) - 1px)); }
+  .dock.is-away .cta { visibility: hidden; }
+}
+@media (max-width: 380px) {
+  .hero h1 { font-size: 11cqw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta::before, .cta .arw, .dock, .qa__a, .qa__x, .qa__x::after, .slate__h, .play { transition: none !important; }
+}
+</style>
+</head>
+<body id="page">
+<a class="skip" href="#what">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="arw" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="to" viewBox="0 0 24 24"><path d="M3 12h17M14 6l6 6-6 6"/></symbol>
+</svg>
+
+<header class="bar" id="bar">
+  <a class="bar__logo" href="#top" aria-label="Mosswick Studio, back to top"><span class="bar__mark" aria-hidden="true"></span></a>
+  <div class="slate" id="slate" aria-hidden="true"><div class="slate__lab" id="slate-lab"><span class="slate__h"><b class="slate__k">Now showing</b><span class="slate__c">Velloway brand film</span><span class="slate__y">2024</span></span></div></div>
+  <a class="cta" href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Start a project<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a>
+  <div class="strip-win" id="strip-win" aria-hidden="true"><div class="strip-fold" id="strip-fold"><div class="strip" id="strip">
+    <div class="sf" data-sf><div class="sf__in"><span class="sf__c">The Larchway</span><span class="sf__n">22%<svg class="to"><use href="#to"/></svg>58%</span><span class="sf__l">of rooms booked direct, before and after the new site</span></div></div>
+    <div class="sf" data-sf><div class="sf__in"><span class="sf__c">Shelterly</span><span class="sf__n">+64%</span><span class="sf__l">quote completions, with the form cut from 22 questions to 9</span></div></div>
+    <div class="sf" data-sf><div class="sf__in"><span class="sf__c">Paywren</span><span class="sf__n">&minus;41%</span><span class="sf__l">cost per sign-up, after testing forty ad versions in month one</span></div></div>
+    <div class="sf" data-sf><div class="sf__in"><span class="sf__c">Houndsbury</span><span class="sf__n">2.4x</span><span class="sf__l">subscriptions in a year, from paid social built on short videos</span></div></div>
+    <div class="sf" data-sf><div class="sf__in"><span class="sf__c">River Commons Trust</span><span class="sf__n">300<svg class="to"><use href="#to"/></svg>1,900</span><span class="sf__l">volunteer sign-ups, with a two-minute form on the new site</span></div></div>
+    <div class="sf" data-sf><div class="sf__in"><span class="sf__c">Fernstride</span><span class="sf__n">+52%</span><span class="sf__l">brand searches during the twelve-week campaign</span></div></div>
+    <div class="sf" data-sf><div class="sf__in"><span class="sf__c">Voltmere</span><span class="sf__n">3x</span><span class="sf__l">qualified leads from the new site and lead campaign</span></div></div>
+    <div class="sf" data-sf><div class="sf__in"><span class="sf__c">Fizzwold</span><span class="sf__n">80<svg class="to"><use href="#to"/></svg>310</span><span class="sf__l">stockists, from gym fridges to corner shops in three cities</span></div></div>
+  </div></div></div>
+</header>
+
+<main>
+<!-- 1. hero -->
+<section class="hero" id="top" data-sc-act="flow" data-slate="Now showing|Velloway brand film|2024" aria-labelledby="h1">
+  <div class="wedge" aria-hidden="true"><i class="w w1"></i><i class="w w2"></i><i class="w w3"></i><i class="w w4"></i></div>
+  <div class="hero__scene">
+    <div class="deck" id="deck">
+      <div class="fr fr--far"><figure class="sp" style="--ar: 1920 / 950"><span class="sp__h sp__t"><img src="assets/img/work-01.jpg" alt="Kilnmark: a stack of handmade plates and bowls in speckled glazes." width="900" height="445" fetchpriority="low"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/work-01.jpg" alt="" width="900" height="445"></span></figure></div>
+      <div class="fr fr--l"><figure class="sp" style="--ar: 4 / 5"><span class="sp__h sp__t"><img src="assets/img/work-02.jpg" alt="Tumblewick: bright wooden toys from the brand refresh." width="640" height="800"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/work-02.jpg" alt="" width="640" height="800"></span></figure></div>
+      <div class="fr fr--r"><figure class="sp" style="--ar: 1920 / 950"><span class="sp__h sp__t"><img src="assets/img/work-03.jpg" alt="Saltmarrow: wave-printed snack bags in four flavours." width="1000" height="495"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/work-03.jpg" alt="" width="1000" height="495"></span></figure></div>
+      <!-- the film plays on tap: put your video's embed URL in data-video -->
+      <div class="fr fr--front" id="film" data-video="https://example.com/">
+        <figure class="sp" style="--ar: 1920 / 950"><span class="sp__h sp__t"><img src="assets/img/work-04-720.jpg" srcset="assets/img/work-04-720.jpg 720w, assets/img/work-04-1280.jpg 1280w" sizes="(max-width: 860px) 88vw, 52vw" alt="Velloway brand film: a cyclist in a rainproof jacket on a wet city street at dusk." width="1280" height="633" fetchpriority="high"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/work-04-720.jpg" srcset="assets/img/work-04-720.jpg 720w, assets/img/work-04-1280.jpg 1280w" sizes="(max-width: 860px) 88vw, 52vw" alt="" width="1280" height="633"></span><i class="sp__seam" aria-hidden="true"></i></figure>
+        <span class="fr__tag">Velloway, a 60 second brand film <small>2024</small></span>
+        <button class="play" type="button" id="play" aria-label="Play the Velloway brand film"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5v17L20 12z"/></svg></button>
+      </div>
+    </div>
+    <div class="hero__head">
+      <p class="hero__eye">A creative and marketing studio of 32 people, Lowmere</p>
+      <h1 id="h1"><span>Loud ideas,</span> <span>careful craft.</span></h1>
+      <div class="hero__ask"><a class="cta cta--big" data-big href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Start a project<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. what we do -->
+<section class="cut g-white" id="what" data-sc-act="flow" data-slate="Practices|Strategy, Branding, Content, Digital|" aria-labelledby="what-h">
+  <div class="cut__in">
+    <div class="what__top">
+      <h2 class="h2" id="what-h">Four practices, one team, one roof</h2>
+      <p class="lede">Mosswick is a creative and marketing studio in Lowmere. Thirty-two strategists, designers, writers, filmmakers and media buyers work in one studio, making brands that look good and marketing that earns its keep, across four practices: Strategy, Branding, Content and Digital.</p>
+    </div>
+    <div class="tiles">
+      <article class="tile" style="--zi: 0"><h3>Strategy</h3><p>We find what makes you worth choosing and write it down plainly.</p><ul><li>Positioning and naming</li><li>Audience research</li><li>Brand voice and messaging</li></ul></article>
+      <article class="tile" style="--zi: 1"><h3>Branding</h3><p>Logos, type, colour and rules that make you recognisable at a glance.</p><ul><li>Logo and wordmark</li><li>Colour and type system</li><li>Packaging and labels</li></ul></article>
+      <article class="tile" style="--zi: 2"><h3>Content</h3><p>Posts, reels and brand films that people stop scrolling for.</p><ul><li>Brand films and product videos</li><li>Short-form video and reels</li><li>A monthly social calendar</li></ul></article>
+      <article class="tile" style="--zi: 3"><h3>Digital</h3><p>Fast, clear websites and paid media run by people who know your brand.</p><ul><li>Websites and online shops</li><li>Paid search and paid social</li><li>A live dashboard and monthly review</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. films: the lead film -->
+<section class="cut g-night" id="films" data-sc-act="flow" data-slate="Brand film|Cairnstone|2024" aria-labelledby="films-h">
+  <div class="cut__in grid2--r grid2">
+    <div class="films__art">
+      <figure class="sp" style="--ar: 2 / 1"><span class="sp__h sp__t"><img src="assets/img/film-01.jpg" alt="Cairnstone brand film: a rust orange rucksack against a stone cairn on a misty ridge." width="1200" height="600" loading="lazy" decoding="async"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/film-01.jpg" alt="" width="1200" height="600" loading="lazy" decoding="async"></span><i class="sp__seam" aria-hidden="true"></i></figure>
+      <figure class="clip" data-z="1 .5"><img src="assets/img/film-02.jpg" alt="Marlo Rue winter film: an undyed wool sweater folded over a fence post." width="700" height="715" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="cut__txt">
+      <p class="kick">Film &amp; motion</p>
+      <h2 class="h2" id="films-h">Cairnstone: gear for the long way round</h2>
+      <p class="lede">For Cairnstone's first rucksack we took a small crew into the hills for four days and filmed the pack doing its job: rain, mud and very early starts. The film anchors a campaign across magazines, feeds and shops.</p>
+      <p class="films__also">We also make product films for Stillreed and a slow knitwear film for Marlo Rue.</p>
+      <a class="more" href="#">Read the case study</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. short films -->
+<section class="cut g-field" id="short" data-sc-act="flow" data-slate="Short films|Fernstride, Cragloft, Houndsbury|" aria-labelledby="short-h">
+  <div class="cut__in grid2">
+    <div class="cut__txt">
+      <p class="kick">Short-form video</p>
+      <h2 class="h2" id="short-h">Films made for the phone</h2>
+      <p class="lede">Social series and short cuts for Fernstride's beginner runners, Cragloft's climbing gyms and Houndsbury's fresh dog food, planned for a phone screen from the first storyboard.</p>
+      <a class="more" href="#">See the work</a>
+    </div>
+    <div class="phones">
+      <figure class="phone phone--l" data-z="1 .45"><span class="phone__body"><img src="assets/img/phone-01.jpg" alt="Cragloft social series: an indoor climbing wall with bright holds." width="392" height="717" loading="lazy" decoding="async"></span><figcaption>Cragloft</figcaption></figure>
+      <figure class="phone phone--c"><div class="sp"><span class="sp__h sp__t"><span class="phone__body"><img src="assets/img/phone-02.jpg" alt="Fernstride social series: moss green running shoes mid-stride on a park path." width="480" height="853" loading="lazy" decoding="async"></span></span><span class="sp__h sp__b" aria-hidden="true"><span class="phone__body"><img src="assets/img/phone-02.jpg" alt="" width="480" height="853" loading="lazy" decoding="async"></span></span><i class="sp__seam" aria-hidden="true"></i></div><figcaption>Fernstride</figcaption></figure>
+      <figure class="phone phone--r" data-z="1 .45"><span class="phone__body"><img src="assets/img/phone-03.jpg" alt="Houndsbury paid social: a terrier beside an open meal box." width="395" height="717" loading="lazy" decoding="async"></span><figcaption>Houndsbury</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5. campaign -->
+<section class="cut g-night" id="cgi" data-sc-act="flow" data-slate="Campaign|Marshlight Festival|2023" aria-labelledby="cgi-h">
+  <div class="cut__in grid2--r grid2">
+    <div class="cgi__art">
+      <figure class="sp"><span class="sp__h sp__t"><img src="assets/img/render-01.jpg" alt="Marshlight Festival poster, screen printed in deep teal and orange, with reeds and lanterns." width="1100" height="626" loading="lazy" decoding="async"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/render-01.jpg" alt="" width="1100" height="626" loading="lazy" decoding="async"></span><i class="sp__seam" aria-hidden="true"></i></figure>
+      <div class="cgi__near" data-z="1 .4"><img src="assets/img/render-02.jpg" alt="River Commons Trust campaign: a heron in the river shallows at dawn." width="480" height="854" loading="lazy" decoding="async"><img src="assets/img/render-03.jpg" alt="Gearfinch launch campaign: a cargo e-bike with a wooden front box." width="480" height="854" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="cut__txt">
+      <p class="kick">Campaigns</p>
+      <h2 class="h2" id="cgi-h">Festival posters people want to keep</h2>
+      <p class="lede">Identity, posters and a ticket campaign for Marshlight Festival, built from reeds, mist and lantern light. The posters sold out at the merch tent, and the tickets sold out nine days early.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. print -->
+<section class="cut g-tint2" id="print" data-sc-act="flow" data-slate="Print|Quillmoor, Owlhour, Stillreed|" aria-labelledby="print-h">
+  <div class="cut__in grid2">
+    <div class="cut__txt">
+      <p class="kick">Print &amp; posters</p>
+      <h2 class="h2" id="print-h">Covers, posters and press ads</h2>
+      <p class="lede">Book covers for Quillmoor Press, laundrette posters for Owlhour's night school and press ads for the Stillreed headphone launch.</p>
+    </div>
+    <div class="stack">
+      <div class="sheet sheet--1 sheet__land" data-z="1 .62"><div class="sheet__sink" data-zsink><img src="assets/img/print-01.jpg" alt="Quillmoor Press: a fan of paperback novels with bold single-colour covers." width="1000" height="495" loading="lazy" decoding="async"></div></div>
+      <div class="sheet sheet--2 sheet__land" data-z="1 .55"><div class="sheet__sink" data-zsink><img src="assets/img/print-02.jpg" alt="Owlhour enrolment campaign: a lit classroom window at night." width="1000" height="495" loading="lazy" decoding="async"></div></div>
+      <div class="sheet sheet--3"><figure class="sp"><span class="sp__h sp__t"><img src="assets/img/print-03.jpg" alt="Stillreed launch: sand-coloured headphones on the tiled edge of an empty pool." width="1000" height="495" loading="lazy" decoding="async"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/print-03.jpg" alt="" width="1000" height="495" loading="lazy" decoding="async"></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. social -->
+<section class="cut g-accent on-accent" id="social" data-sc-act="flow" data-slate="Social|Fizzwold, Periwink, Okra &amp; Ash|" aria-labelledby="social-h">
+  <div class="cut__in grid2--r grid2">
+    <div class="feed">
+      <div class="feed__main"><figure class="sp" style="--ar: 4 / 5"><span class="sp__h sp__t"><img src="assets/img/social-01.jpg" alt="Fizzwold social launch: four slim drink cans with bold wavy patterns." width="640" height="800" loading="lazy" decoding="async"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/social-01.jpg" alt="" width="640" height="800" loading="lazy" decoding="async"></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+      <div class="feed__side">
+        <img class="zf" data-z="1 .5" src="assets/img/social-02.jpg" alt="Periwink try-on series: a wall of glasses frames sorted by colour." width="1000" height="495" loading="lazy" decoding="async">
+        <img class="zf" data-z="1 .42" src="assets/img/social-03.jpg" alt="Okra &amp; Ash opening posts: a wood-fired oven glowing in a dim kitchen." width="1000" height="495" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <div class="cut__txt">
+      <p class="kick">Social content</p>
+      <h2 class="h2" id="social-h">Worth stopping for</h2>
+      <p class="lede">Launch films for Fizzwold's new cans, a monthly try-on series for Periwink's eyewear shops and six weeks of opening posts for Okra &amp; Ash.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. websites -->
+<section class="cut g-white" id="web" data-sc-act="flow" data-slate="Websites|Hollin, Mendhaven, Halvane|" aria-labelledby="web-h">
+  <div class="cut__in grid2">
+    <div class="cut__txt">
+      <p class="kick">Websites and online shops</p>
+      <h2 class="h2" id="web-h">Websites for galleries, clinics and makers</h2>
+      <p class="lede">A magazine-style site for Hollin Gallery, online booking for Mendhaven's four physio clinics and a slow, detailed shop for Halvane Watch Co., an independent watchmaker.</p>
+    </div>
+    <div class="wins">
+      <figure class="win win--1" data-z="1 .6"><div class="win__card"><div class="win__chrome" aria-hidden="true"><i></i><i></i><i></i><b></b></div><img class="win__shot" src="assets/img/web-01.jpg" alt="Hollin Gallery website: a bright gallery room with large abstract canvases." width="1100" height="528" loading="lazy" decoding="async"></div></figure>
+      <figure class="win win--2" data-z="1 .52"><div class="win__card"><div class="win__chrome" aria-hidden="true"><i></i><i></i><i></i><b></b></div><img class="win__shot" src="assets/img/web-02.jpg" alt="Mendhaven website: a calm treatment room in pale sage." width="1100" height="513" loading="lazy" decoding="async"></div></figure>
+      <figure class="win win--3"><div class="win__card"><div class="win__chrome" aria-hidden="true"><i></i><i></i><i></i><b></b></div><div class="sp"><span class="sp__h sp__t"><img src="assets/img/web-03.jpg" alt="Halvane Watch Co. website: a mechanical watch with a cream dial, close up." width="1100" height="521" loading="lazy" decoding="async"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/web-03.jpg" alt="" width="1100" height="521" loading="lazy" decoding="async"></span><i class="sp__seam" aria-hidden="true"></i></div></div></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9. packaging -->
+<section class="cut g-tint" id="pack" data-sc-act="flow" data-slate="Packaging|Plumtide, Tallow Lane, Gilded Hare|" aria-labelledby="pack-h">
+  <div class="cut__in">
+    <div class="what__top">
+      <div><p class="kick">Packaging &amp; labels</p><h2 class="h2" id="pack-h">Packs for cordial, coffee and gin</h2></div>
+      <p class="lede">Bottles and labels for Plumtide cordials, a twelve-bag coffee system for Tallow Lane and an embossed gin bottle for Gilded Hare.</p>
+    </div>
+    <div class="packs">
+      <figure class="pack"><div class="pack__lift" data-z="1 .55"><img src="assets/img/pack-01.webp" alt="Plumtide cordial bottles in five fruit colours." width="700" height="372" loading="lazy" decoding="async"><span class="pack__sh" aria-hidden="true"></span></div><figcaption>Plumtide</figcaption></figure>
+      <figure class="pack"><div class="sp"><span class="sp__h sp__t"><img src="assets/img/pack-02.webp" alt="Tallow Lane Coffee bags with wide colour bands." width="700" height="376" loading="lazy" decoding="async"></span><span class="sp__h sp__b" aria-hidden="true"><img src="assets/img/pack-02.webp" alt="" width="700" height="376" loading="lazy" decoding="async"></span><i class="sp__seam" aria-hidden="true"></i></div><figcaption>Tallow Lane</figcaption></figure>
+      <figure class="pack"><div class="pack__lift" data-z="1 .5"><img src="assets/img/pack-03.webp" alt="Gilded Hare gin bottle with an embossed hare and a gold label." width="700" height="376" loading="lazy" decoding="async"><span class="pack__sh" aria-hidden="true"></span></div><figcaption>Gilded Hare</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 10 to 17. results: the figures ride in the bar's strip; each cut shows the work behind them -->
+<section class="cut g-night res" id="r-1" data-sc-act="flow" data-slate="Result|The Larchway|2022" aria-labelledby="r1-h">
+  <div class="cut__in res__in">
+    <p class="kick res__kick">Results from our client work, in numbers</p>
+    <div><h3 id="r1-h">The Larchway</h3><p class="res__meta">Hospitality. Identity, website and a booking campaign for a 30-room boutique hotel by the canal.</p><div class="fig-wrap"><p class="res__fig">Direct bookings from 22% to 58% of rooms sold, before and after the new site.</p></div><a class="more" href="#">Read the case study</a></div>
+    <div class="res__art"><figure class="sp" style="--arm: 560 / 588"><span class="sp__h sp__t"><picture><source media="(max-width: 860px)" srcset="assets/img/result-1-m.jpg"><img src="assets/img/result-1.jpg" alt="The Larchway: a calm hotel bedroom with larch wood walls." width="1100" height="421" loading="lazy" decoding="async"></picture></span><span class="sp__h sp__b" aria-hidden="true"><picture><source media="(max-width: 860px)" srcset="assets/img/result-1-m.jpg"><img src="assets/img/result-1.jpg" alt="" width="1100" height="421" loading="lazy" decoding="async"></picture></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+  </div>
+</section>
+<section class="cut g-field res" id="r-2" data-sc-act="flow" data-slate="Result|Shelterly|2023" aria-labelledby="r2-h">
+  <div class="cut__in res__in">
+    <div><h3 id="r2-h">Shelterly</h3><p class="res__meta">Insurance. Brand, website and paid search for a home insurance start-up that writes in plain English.</p><div class="fig-wrap"><p class="res__fig">Quote completions up 64% after the quote form went from 22 questions to 9.</p></div><a class="more" href="#">Read the case study</a></div>
+    <div class="res__art"><figure class="sp" style="--arm: 560 / 588"><span class="sp__h sp__t"><picture><source media="(max-width: 860px)" srcset="assets/img/result-2-m.jpg"><img src="assets/img/result-2.jpg" alt="Shelterly: a small model house under a folded paper umbrella." width="1100" height="421" loading="lazy" decoding="async"></picture></span><span class="sp__h sp__b" aria-hidden="true"><picture><source media="(max-width: 860px)" srcset="assets/img/result-2-m.jpg"><img src="assets/img/result-2.jpg" alt="" width="1100" height="421" loading="lazy" decoding="async"></picture></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+  </div>
+</section>
+<section class="cut g-night res" id="r-3" data-sc-act="flow" data-slate="Result|Paywren|2024" aria-labelledby="r3-h">
+  <div class="cut__in res__in">
+    <div><h3 id="r3-h">Paywren</h3><p class="res__meta">Fintech. Identity, a product design system and launch ads for an invoicing app for freelancers.</p><div class="fig-wrap"><p class="res__fig">Cost per sign-up down 41%, after testing forty ad versions in the first month.</p></div><a class="more" href="#">Read the case study</a></div>
+    <div class="res__art res__art--wide"><figure class="sp" style="--arm: 420 / 390"><span class="sp__h sp__t"><picture><source media="(max-width: 860px)" srcset="assets/img/result-3-m.jpg"><img src="assets/img/result-3.jpg" alt="Paywren: a phone on a desk showing a simple invoice screen." width="1100" height="329" loading="lazy" decoding="async"></picture></span><span class="sp__h sp__b" aria-hidden="true"><picture><source media="(max-width: 860px)" srcset="assets/img/result-3-m.jpg"><img src="assets/img/result-3.jpg" alt="" width="1100" height="329" loading="lazy" decoding="async"></picture></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+  </div>
+</section>
+<section class="cut g-field res" id="r-4" data-sc-act="flow" data-slate="Result|Houndsbury|2024" aria-labelledby="r4-h">
+  <div class="cut__in res__in">
+    <div><h3 id="r4-h">Houndsbury</h3><p class="res__meta">Pet food. Packaging with a clear window and paid social for a fresh dog food subscription, tested every week.</p><div class="fig-wrap"><p class="res__fig">Subscriptions up 2.4x in a year.</p></div><a class="more" href="#">Read the case study</a></div>
+    <div class="res__art"><figure class="sp" style="--arm: 560 / 588"><span class="sp__h sp__t"><picture><source media="(max-width: 860px)" srcset="assets/img/result-4-m.jpg"><img src="assets/img/result-4.jpg" alt="A camera and soft lights set up for a product film shoot." width="1100" height="421" loading="lazy" decoding="async"></picture></span><span class="sp__h sp__b" aria-hidden="true"><picture><source media="(max-width: 860px)" srcset="assets/img/result-4-m.jpg"><img src="assets/img/result-4.jpg" alt="" width="1100" height="421" loading="lazy" decoding="async"></picture></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+  </div>
+</section>
+<section class="cut g-night res" id="r-5" data-sc-act="flow" data-slate="Result|River Commons Trust|2023" aria-labelledby="r5-h">
+  <div class="cut__in res__in">
+    <div><h3 id="r5-h">River Commons Trust</h3><p class="res__meta">Nonprofit. Identity, a bus stop campaign and a volunteer website for an urban river charity.</p><div class="fig-wrap"><p class="res__fig">Volunteer sign-ups from 300 to 1,900 after the new site and campaign.</p></div><a class="more" href="#">Read the case study</a></div>
+    <div class="res__art"><figure class="sp" style="--arm: 560 / 588"><span class="sp__h sp__t"><picture><source media="(max-width: 860px)" srcset="assets/img/result-5-m.jpg"><img src="assets/img/result-5.jpg" alt="A studio desk with sketches, paper swatches and a website layout on a laptop." width="1100" height="421" loading="lazy" decoding="async"></picture></span><span class="sp__h sp__b" aria-hidden="true"><picture><source media="(max-width: 860px)" srcset="assets/img/result-5-m.jpg"><img src="assets/img/result-5.jpg" alt="" width="1100" height="421" loading="lazy" decoding="async"></picture></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+  </div>
+</section>
+<section class="cut g-field res" id="r-6" data-sc-act="flow" data-slate="Result|Fernstride|2026" aria-labelledby="r6-h">
+  <div class="cut__in res__in">
+    <div><h3 id="r6-h">Fernstride</h3><p class="res__meta">Sport. A campaign and social series for a running shoe brand made for beginners.</p><div class="fig-wrap"><p class="res__fig">Brand searches up 52% while the campaign ran.</p></div><a class="more" href="#">See the project</a></div>
+    <div class="res__art res__art--tall"><figure class="sp" style="--arm: 760 / 322"><span class="sp__h sp__t"><picture><source media="(max-width: 860px)" srcset="assets/img/result-6-m.jpg"><img src="assets/img/result-6.webp" alt="The studio in daylight, with campaign work pinned up along the long desks." width="560" height="705" loading="lazy" decoding="async"></picture></span><span class="sp__h sp__b" aria-hidden="true"><picture><source media="(max-width: 860px)" srcset="assets/img/result-6-m.jpg"><img src="assets/img/result-6.webp" alt="" width="560" height="705" loading="lazy" decoding="async"></picture></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+  </div>
+</section>
+<section class="cut g-night res" id="r-7" data-sc-act="flow" data-slate="Result|Voltmere|2025" aria-labelledby="r7-h">
+  <div class="cut__in res__in">
+    <div><h3 id="r7-h">Voltmere</h3><p class="res__meta">Energy. A clearer brand, website and lead campaign for a home solar and battery installer.</p><div class="fig-wrap"><p class="res__fig">Three times as many qualified leads.</p></div><a class="more" href="#">See the project</a></div>
+    <div class="res__art res__art--band"><figure class="sp" style="--arm: 560 / 110"><span class="sp__h sp__t"><picture><source media="(max-width: 860px)" srcset="assets/img/result-7-m.jpg"><img src="assets/img/result-7.jpg" alt="Voltmere: dark solar panels on a slate roof." width="1200" height="110" loading="lazy" decoding="async"></picture></span><span class="sp__h sp__b" aria-hidden="true"><picture><source media="(max-width: 860px)" srcset="assets/img/result-7-m.jpg"><img src="assets/img/result-7.jpg" alt="" width="1200" height="110" loading="lazy" decoding="async"></picture></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+  </div>
+</section>
+<section class="cut g-field res" id="r-8" data-sc-act="flow" data-slate="Result|Fizzwold|2026" aria-labelledby="r8-h">
+  <div class="cut__in res__in">
+    <div><h3 id="r8-h">Fizzwold</h3><p class="res__meta">Drinks. A rebrand, can design and a social launch for a craft kombucha brewer moving to cans.</p><div class="fig-wrap"><p class="res__fig">Stockists up from 80 to 310.</p></div><a class="more" href="#">See the project</a></div>
+    <div class="res__art res__art--tall"><figure class="sp" style="--arm: 760 / 322"><span class="sp__h sp__t"><picture><source media="(max-width: 860px)" srcset="assets/img/result-8-m.jpg"><img src="assets/img/result-8.webp" alt="A phone mounted to film a drink on a softly lit product set." width="560" height="705" loading="lazy" decoding="async"></picture></span><span class="sp__h sp__b" aria-hidden="true"><picture><source media="(max-width: 860px)" srcset="assets/img/result-8-m.jpg"><img src="assets/img/result-8.webp" alt="" width="560" height="705" loading="lazy" decoding="async"></picture></span><i class="sp__seam" aria-hidden="true"></i></figure></div>
+  </div>
+</section>
+
+<!-- 18. clients -->
+<section class="cut g-white" id="clients" data-sc-act="flow" data-slate="Clients|Forty brands we work with|" aria-labelledby="clients-h">
+  <div class="cut__in">
+    <div class="what__top" style="margin-bottom:0"><h2 class="h2" id="clients-h">Brands on our client list</h2><p class="lede">From cordial makers and climbing gyms to charities, clinics and a theatre, here are forty brands we work with.</p></div>
+    <div class="logos" id="logos"></div>
+  </div>
+</section>
+
+<!-- 19. people -->
+<section class="cut people" id="people" data-sc-act="flow" data-slate="People|Ines Calloway, Founder|" aria-labelledby="people-h">
+  <div class="cut__in">
+    <div class="founder">
+      <div class="founder__name" aria-hidden="true" data-zsec data-name="Ines Calloway"></div>
+      <div class="founder__txt">
+        <p class="kick">The people</p>
+        <h2 id="people-h">Ines Calloway</h2>
+        <p class="founder__role">Founder and Creative Director</p>
+        <p class="q">Ines started Mosswick in 2014 with two friends, sharing a desk above a bike shop. She reads every brief twice, then asks the question nobody wanted to answer.</p>
+        <p class="q">Today she leads a studio of 32 strategists, designers, writers, filmmakers and media buyers who sit together and work on the same briefs.</p>
+        <a class="more" href="#">Meet the team</a>
+      </div>
+      <figure class="founder__cut" data-z="1 .35"><img src="assets/img/team-1.webp" alt="Ines Calloway, Founder and Creative Director of Mosswick, in a rust linen shirt." width="560" height="726" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 20. the team -->
+<section class="cut g-field team-cut" id="team" data-sc-act="flow" data-slate="People|Tobias Okonjo-Hale and the team|" aria-label="The Mosswick team">
+  <div class="cut__in team">
+    <div class="lead" data-z="1 .7"><img src="assets/img/team-2.webp" alt="Tobias Okonjo-Hale" width="356" height="462" loading="lazy" decoding="async"><div><h3>Tobias Okonjo-Hale</h3><p>Co-founder and Strategy Director</p></div></div>
+    <figure class="teamph" data-z="1 .6"><img src="assets/img/team-3.jpg" alt="The Mosswick team together in the studio." width="1200" height="900" loading="lazy" decoding="async"><figcaption>The team at the Lowmere studio</figcaption></figure>
+  </div>
+</section>
+
+<!-- 21. questions -->
+<section class="cut g-tint" id="faq" data-sc-act="flow" data-slate="Questions|Working with Mosswick|" aria-labelledby="faq-h">
+  <div class="cut__in faq__in">
+    <div><h2 class="h2" id="faq-h">Questions</h2><p class="faq__intro">Short answers to what clients ask us first. Anything else? Send us a note.</p></div>
+    <div class="qs" id="qs">
+      <div class="qa"><h3><button type="button" aria-expanded="false" aria-controls="a1" id="q1">What kind of companies do you work with?<span class="qa__x" aria-hidden="true"></span></button></h3><div class="qa__a" id="a1" role="region" aria-labelledby="q1"><div><p>Mostly growing companies with 10 to 500 people: food and drink brands, shops, clinics, charities, tech start-ups and the odd festival. What they share is a founder or marketing lead who wants bold work and honest numbers.</p></div></div></div>
+      <div class="qa"><h3><button type="button" aria-expanded="false" aria-controls="a2" id="q2">Can we work together if you are not in Lowmere?<span class="qa__x" aria-hidden="true"></span></button></h3><div class="qa__a" id="a2" role="region" aria-labelledby="q2"><div><p>Yes. About half of our clients are in other cities and a few are overseas. We run most meetings on video and travel for workshops and shoots whenever being in the room helps the work.</p></div></div></div>
+      <div class="qa"><h3><button type="button" aria-expanded="false" aria-controls="a3" id="q3">Who will actually work on my project?<span class="qa__x" aria-hidden="true"></span></button></h3><div class="qa__a" id="a3" role="region" aria-labelledby="q3"><div><p>The people you meet in the first meeting. Every client gets a senior lead, a strategist and the makers the job needs. We never hand the work to a different team once the contract is signed.</p></div></div></div>
+      <div class="qa"><h3><button type="button" aria-expanded="false" aria-controls="a4" id="q4">Do you run ads as well as make them?<span class="qa__x" aria-hidden="true"></span></button></h3><div class="qa__a" id="a4" role="region" aria-labelledby="q4"><div><p>Yes. Our performance team plans, buys and tests paid search and social, and sits in the same room as the people who make the ads. You see spend and results in a <a href="#">live dashboard</a>, updated daily.</p></div></div></div>
+      <div class="qa"><h3><button type="button" aria-expanded="false" aria-controls="a5" id="q5">How do you measure success?<span class="qa__x" aria-hidden="true"></span></button></h3><div class="qa__a" id="a5" role="region" aria-labelledby="q5"><div><p>We agree two or three numbers at the start, such as enquiries, sales or sign-ups, and report on them every month in plain language. If something is not working, we say so early and change course.</p></div></div></div>
+      <div class="qa"><h3><button type="button" aria-expanded="false" aria-controls="a6" id="q6">How do we get started?<span class="qa__x" aria-hidden="true"></span></button></h3><div class="qa__a" id="a6" role="region" aria-labelledby="q6"><div><p>Send a short note about what you are building and what is getting in the way, or call us on <a href="tel:+15550142">+1 555 0142</a>. We reply within two working days and set up a free 30 minute call, with no pitch deck and no pressure.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 22. close -->
+<section class="close" id="contact" data-sc-act="flow" data-slate="Contact|1 Example Street, Lowmere|" aria-labelledby="close-h">
+  <div class="wedge" aria-hidden="true"><i class="w w1" data-zw="0"></i><i class="w w2" data-zw="1"></i><i class="w w3" data-zw="2"></i><i class="w w4" data-zw="3"></i></div>
+  <div class="close__in">
+    <h2 id="close-h">Say hello</h2>
+    <p class="close__lede">Have a launch coming up? Tell us about it this week.</p>
+    <div class="close__ask"><a class="cta cta--big" data-big href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Start a project<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a></div>
+    <div class="rows">
+      <div class="row"><b>Call or message</b><a href="tel:+15550142">+1 555 0142</a><br><a href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Message on WhatsApp</a></div>
+      <div class="row"><b>Email</b><a href="mailto:hello@example.com">hello@example.com</a></div>
+      <div class="row"><b>Studio</b><address style="font-style:normal">1 Example Street, Lowmere. Monday to Friday, 9am to 6pm</address><a href="https://example.com" target="_blank" rel="noopener">Get directions</a></div>
+      <div class="row"><b>Follow</b><span class="socials"><a href="https://example.com" target="_blank" rel="noopener">Instagram</a><a href="https://example.com" target="_blank" rel="noopener">LinkedIn</a><a href="https://example.com" target="_blank" rel="noopener">Behance</a><a href="https://example.com" target="_blank" rel="noopener">YouTube</a></span></div>
+    </div>
+    <p class="legal">© 2026 Mosswick Studio. All rights reserved.<br>Example content. Swap in your own.</p>
+  </div>
+</section>
+</main>
+
+<div class="dock" id="dock"><a class="cta" href="https://wa.me/15550100?text=Hi%20Mosswick%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Start a project<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a></div>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px)');
+
+  /* ---- client logos: single-colour SVG wordmarks, tinted by CSS through a mask ---- */
+  var L = [['client-01','Plumtide'],['client-02','Velloway'],['client-03','Kilnmark'],['client-04','Tallow Lane Coffee'],['client-05','Okra &amp; Ash'],['client-06','Paywren'],['client-07','Marshlight Festival'],['client-08','Fernstride'],['client-09','Hollin Gallery'],['client-10','Houndsbury'],['client-11','Stillreed'],['client-12','Tumblewick'],['client-13','Halvane Watch Co.'],['client-14','Cairnstone'],['client-15','Shelterly'],['client-16','Gilded Hare'],['client-17','Periwink'],['client-18','River Commons Trust'],['client-19','Owlhour'],['client-20','Marlo Rue'],['client-21','Saltmarrow'],['client-22','The Larchway'],['client-23','Gearfinch'],['client-24','Cragloft'],['client-25','Quillmoor Press'],['client-26','Voltmere'],['client-27','Mendhaven'],['client-28','Fizzwold'],['client-29','Fernery Lane'],['client-30','Copperbell Theatre'],['client-31','Oakhold'],['client-32','Ferrylight'],['client-33','Glimmerfold'],['client-34','Puddlejump Swim School'],['client-35','Driftmill Paper Co.'],['client-36','Embergate Pizza'],['client-37','Softwatt'],['client-38','Sorrelbox'],['client-39','Stemhouse Flowers'],['client-40','Sumwright']];
+  var wall = document.getElementById('logos');
+  wall.innerHTML = L.map(function (l, i) { return '<figure class="logo" data-z="1 .7" style="--zi:' + i + '" role="img" aria-label="' + l[1] + '"><i style="--m: url(assets/logos/' + l[0] + '.svg)"></i></figure>'; }).join('');
+
+  /* ---- the hero reveal, once the type and the four frames are ready ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+    };
+    var waits = [];
+    if (document.fonts && document.fonts.ready) waits.push(document.fonts.ready);
+    [].forEach.call(document.querySelectorAll('.hero .sp__t img'), function (im) { if (im.decode) waits.push(im.decode().catch(function () {})); });
+    Promise.all(waits).then(go, go);
+    setTimeout(go, 1600);
+  }
+
+  /* ---- the film plays on tap: the player (data-video on #film) is created only now ---- */
+  var play = document.getElementById('play'), film = document.getElementById('film');
+  play.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.className = 'fr__film';
+    f.src = film.getAttribute('data-video') || 'https://example.com/';
+    f.title = 'Velloway brand film, by Mosswick Studio';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    film.querySelector('.sp').appendChild(f);
+    film.classList.add('is-playing');
+  });
+
+  /* ---- questions: one open at a time ---- */
+  [].forEach.call(document.querySelectorAll('.qa button'), function (b) {
+    b.addEventListener('click', function () {
+      var qa = b.closest('.qa'), open = !qa.classList.contains('is-open');
+      [].forEach.call(document.querySelectorAll('.qa.is-open'), function (o) { o.classList.remove('is-open'); o.querySelector('button').setAttribute('aria-expanded', 'false'); });
+      if (open) { qa.classList.add('is-open'); b.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+
+  /* ---- scroll-linked ranges, in page pixels, for the CSS scroll timelines ---- */
+  function pageTop(el) { var y = 0; for (var e = el; e; e = e.offsetParent) y += e.offsetTop; return y; }
+  function setR(el, a, b, fa, fb, cls) {
+    if (!el) return;
+    if (b <= a + 1) b = a + 2;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    if (fa !== undefined) { if (fb <= fa + 1) fb = fa + 2; el.style.setProperty('--f0', fa.toFixed(1) + 'px'); el.style.setProperty('--f1', fb.toFixed(1) + 'px'); }
+    el.classList.add(cls || 'sdx');
+  }
+  function measure() {
+    if (!anim) return;
+    var vh = innerHeight, phone = phoneQ.matches;
+    var maxY = document.documentElement.scrollHeight - vh;
+
+    /* hero, desktop only: the deck parts in z while the hero leaves */
+    var hero = document.getElementById('top');
+    [].forEach.call(hero.querySelectorAll('.fr'), function (f) {
+      if (phone) { f.classList.remove('sdx'); return; }
+      setR(f, 0, hero.offsetHeight * .9);
+    });
+
+    /* the split on every cut's lead frame: in from two sides and two depths, lock, seam; part again on the way out */
+    [].forEach.call(document.querySelectorAll('main .sp'), function (sp) {
+      if (sp.closest('.hero')) return;
+      var t = pageTop(sp), h = sp.offsetHeight;
+      var r0 = t - vh, r1 = Math.max(r0 + vh * .18, t + h * .5 - vh * .76);
+      var f0 = Math.max(r1 + vh * .1, t + h * .5 - vh * .2), f1 = Math.max(f0 + vh * .2, t + h + vh * .04);
+      [].forEach.call(sp.querySelectorAll(':scope > .sp__h'), function (hh) { setR(hh, r0, r1, f0, f1, 'sdx2'); });
+      setR(sp.querySelector(':scope > .sp__seam'), r1 - vh * .02, r1 + vh * .06);
+    });
+
+    /* depth moves on arrival: data-z="a b" = from element top at a*vh to b*vh; --zi staggers */
+    [].forEach.call(document.querySelectorAll('[data-z]'), function (el) {
+      var p = el.getAttribute('data-z').split(' '), a = parseFloat(p[0]), b = parseFloat(p[1]);
+      var zi = parseFloat(getComputedStyle(el).getPropertyValue('--zi')) || 0;
+      var t = pageTop(el), st = 0;
+      if (el.classList.contains('tile')) st = (phone ? zi % 2 : zi) * .05;
+      if (el.classList.contains('logo')) st = (zi % (phone ? 5 : 10)) * .022;
+      setR(el, t - vh * (a - st), t - vh * (b - st));
+    });
+    [].forEach.call(document.querySelectorAll('.tile'), function (el, i) {
+      var t = pageTop(el), st = (phone ? i % 2 : i) * .05;
+      setR(el, t - vh * (1 - st), t - vh * (.5 - st));
+    });
+    [].forEach.call(document.querySelectorAll('.qa'), function (el, i) {
+      var t = pageTop(el); setR(el, t - vh * 1, t - vh * .72);
+    });
+    /* print: the first two sheets sink back as the next ones land */
+    var land2 = document.querySelector('.sheet--2'), land3 = document.querySelector('.sheet--3 .sp');
+    var s1 = document.querySelector('.sheet--1 .sheet__sink'), s2 = document.querySelector('.sheet--2 .sheet__sink');
+    if (land2 && land3) {
+      var t2 = pageTop(land2), t3 = pageTop(land3);
+      setR(s1, t2 - vh * .9, t2 - vh * .5);
+      setR(s2, t3 - vh * .9, t3 - vh * .45);
+    }
+    /* CGI: the camera pushes into the render across the whole cut */
+    var cgi = document.getElementById('cgi');
+    [].forEach.call(cgi.querySelectorAll('.cgi__art .sp__h > img'), function (im) { setR(im, pageTop(cgi) - vh, pageTop(cgi) + cgi.offsetHeight); });
+    /* people: his name on the far plane drifts slower than the page */
+    var ppl = document.getElementById('people'), nm = ppl.querySelector('[data-zsec]');
+    setR(nm, pageTop(ppl) - vh, Math.min(maxY, pageTop(ppl) + ppl.offsetHeight));
+    /* close: wedge planes cut in, the CTA punches forward */
+    var cl = document.getElementById('contact'), cT = pageTop(cl);
+    [].forEach.call(cl.querySelectorAll('.w'), function (w, i) { setR(w, cT - vh * (1 - i * .04), Math.min(maxY, cT - vh * (.45 - i * .04))); });
+    setR(cl.querySelector('.close__ask'), cT - vh * .95, Math.min(maxY - 2, cT - vh * .4));
+
+    /* the peak, held in the bar: the strip unfurls at the first result, holds each figure while its cut is on screen, folds after the last */
+    var R = [].slice.call(document.querySelectorAll('.res'));
+    var P = R.map(function (r) { return pageTop(r) - vh * .5; });
+    var last = R[R.length - 1], END = pageTop(last) + last.offsetHeight - vh * .5;
+    var U0 = P[0] - vh * .14, U1 = P[0], F0 = END, F1 = END + vh * .14;
+    setR(document.getElementById('strip-win'), U0, F1);
+    setR(document.getElementById('strip'), U0, U1);
+    setR(document.getElementById('strip-fold'), F0, F1);
+    setR(document.getElementById('slate'), U0, F1);
+    [].forEach.call(document.querySelectorAll('[data-sf]'), function (sf, i) {
+      var a = i === 0 ? U0 : P[i], b = i === R.length - 1 ? F1 : P[i + 1];
+      setR(sf, a, b);
+      setR(sf.querySelector('.sf__in'), i === 0 ? U0 : P[i], i === 0 ? U1 : P[i] + vh * .08);
+    });
+  }
+  var lastW = -1;
+  function all() { measure(); lastW = innerWidth; }
+  all();
+  addEventListener('resize', function () { if (innerWidth !== lastW || !phoneQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); } }).observe(document.body); }
+
+  /* ---- the slate names the cut on screen; its label swaps by a short vertical roll ---- */
+  var lab = document.getElementById('slate-lab'), cur = '', pend = null, busy = false;
+  function fill(v) {
+    var p = v.split('|');
+    var html = '<b class="slate__k">' + p[0] + '</b><span class="slate__c">' + p[1] + '</span>' + (p[2] ? '<span class="slate__y">' + p[2] + '</span>' : '');
+    [].forEach.call(lab.children, function (h) { h.innerHTML = html; });
+  }
+  function swap(v) {
+    if (v === cur) return;
+    if (busy) { pend = v; return; }
+    cur = v; busy = true;
+    var still = !root.classList.contains('fx');
+    if (still) { fill(v); busy = false; return; }
+    lab.classList.add('is-out');
+    setTimeout(function () {
+      fill(v); lab.classList.remove('is-out'); lab.classList.add('is-pre');
+      void lab.offsetWidth;
+      lab.classList.remove('is-pre');
+      setTimeout(function () { busy = false; if (pend && pend !== cur) { var n = pend; pend = null; swap(n); } else pend = null; }, 240);
+    }, 170);
+  }
+  cur = document.getElementById('top').getAttribute('data-slate');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) swap(e.target.getAttribute('data-slate')); });
+    }, { rootMargin: '-50% 0px -49.9% 0px', threshold: 0 });
+    [].forEach.call(document.querySelectorAll('[data-slate]'), function (s) { io.observe(s); });
+  }
+
+  /* ---- the phone bar steps away while a big CTA is on screen ---- */
+  var dock = document.getElementById('dock');
+  var bigs = [].slice.call(document.querySelectorAll('[data-big]'));
+  var tick = false;
+  function chrome() {
+    tick = false;
+    var away = bigs.some(function (b) { var r = b.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight - 40; });
+    dock.classList.toggle('is-away', away);
+    root.classList.toggle('dock-away', away && phoneQ.matches);
+  }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(chrome); } }, { passive: true });
+  chrome();
+  setTimeout(chrome, 1800);
+})();
+</script>
+</body>
+</html>

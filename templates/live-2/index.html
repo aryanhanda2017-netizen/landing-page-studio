@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio in Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio in Lowmere: brand strategy, identity, websites, social content, film, campaigns and paid media.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta property="og:description" content="Brands, websites, films and campaigns people notice, from a studio of 32 in Lowmere. Strategy, design, film and media in one studio.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta name="twitter:description" content="Brands, websites, films and campaigns people notice, from a studio of 32 in Lowmere.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/poppins-600-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/poppins-400-latin.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/hero-01.webp" fetchpriority="high">
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-400-latin.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-500-latin.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-600-latin.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-700-latin.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+/* Colours: palette 9, Clay Room. Clay #9E4426 for headings, links and the close, deeper clay #8C3A1F for buttons,
+   a lighter clay for the mark (graphics only, never text), cream ground #FBEDE2, white cards, slate ink #1F2B3A. */
+:root {
+  --brand: #9e4426;
+  --brand2: #8c3a1f;
+  --mark: #df8a5f;
+  --ground: #fbede2;
+  --card: #ffffff;
+  --ink: #1f2b3a;
+  --soft: #66534b;
+  --line: #f0dfd3;
+  --line2: #e4cbbc;
+  --tint: #f9e4d8;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --glide: cubic-bezier(.65, 0, .35, 1);
+  --font: "Poppins", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --gut: clamp(1rem, 3.2vw, 3rem);
+  --maxw: 1180px;
+  --bar: 68px;
+  --dock: 0px;
+  --sc-canvas: #fbede2; --sc-surface: #ffffff;
+  --sc-ink: #1f2b3a; --sc-ink-soft: #66534b;
+  --sc-accent: #9e4426; --sc-accent-ink: #ffffff;
+  --sc-font-display: var(--font); --sc-font-text: var(--font);
+  --sc-gutter: var(--gut);
+}
+html { background: var(--ground); }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.6; letter-spacing: 0; }
+img { max-width: 100%; height: auto; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 90; background: #fff; color: var(--brand); padding: 10px 14px; font: 600 14px/1 var(--font); }
+.skip:focus { top: 12px; }
+main > section { overflow-x: clip; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+::selection { background: var(--brand); color: #fff; }
+h1, h2, h3 { font-family: var(--font); color: var(--brand); margin: 0; }
+p { margin: 0; }
+a { color: var(--brand); }
+
+/* the mark: the studio monogram over three loading dots */
+.mk { display: block; overflow: visible; }
+.mk use { fill: var(--mark); }
+
+/* ---------- the one CTA, always to WhatsApp ---------- */
+.cta {
+  --h: 44px;
+  display: inline-flex; align-items: center; gap: 12px; height: var(--h); padding: 0 6px 0 20px; border-radius: 10px;
+  background: var(--brand2); color: #fff; text-decoration: none; white-space: nowrap;
+  font: 600 15px/1 var(--font); letter-spacing: .01em; position: relative; overflow: hidden; isolation: isolate;
+}
+.cta__chip { position: relative; width: calc(var(--h) - 12px); height: calc(var(--h) - 12px); border-radius: 7px; display: grid; place-items: center; }
+.cta__chip::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--mark); transform: scale(.38); opacity: .0; transition: transform .45s var(--ease), opacity .3s var(--ease); z-index: -1; }
+.cta__chip svg { width: 16px; height: 16px; transition: transform .45s var(--ease); }
+.cta:hover .cta__chip::before, .cta:focus-visible .cta__chip::before { transform: none; opacity: 1; }
+.cta:hover .cta__chip svg, .cta:focus-visible .cta__chip svg { transform: translateX(2px); color: var(--brand); }
+.cta:active { transform: translateY(1px); }
+.cta--big { --h: 54px; font-size: 17px; padding-left: 24px; }
+
+/* ---------- the search field (the brand colour and the mark; a rounded rectangle, not a pill) ---------- */
+.q { position: relative; display: flex; align-items: center; gap: 10px; background: #fff; border: 1.5px solid var(--brand); border-radius: 10px; }
+.q__d { flex: 0 0 auto; }
+.q__in { flex: 1 1 auto; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font: 500 16px/1.3 var(--font); padding: 0; margin: 0; resize: none; -webkit-appearance: none; appearance: none; }
+.q__in::placeholder { color: #9b8479; }
+.q__in::-webkit-search-cancel-button { display: none; }
+.q__go { flex: 0 0 auto; border: 0; border-radius: 7px; background: var(--brand); color: #fff; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.q__go svg { width: 18px; height: 18px; }
+.q:focus-within { box-shadow: 0 0 0 3px rgba(158, 68, 38, .16); }
+/* the mark's three dots blink in turn while an answer loads (the signature) */
+.q.is-loading .dt { animation: mk-blink .42s var(--glide) both; }
+.q.is-loading .dt2 { animation-delay: .09s; }
+.q.is-loading .dt3 { animation-delay: .18s; }
+@keyframes mk-blink { 0% { opacity: 1; } 40% { opacity: .15; } 100% { opacity: 1; } }
+
+/* suggestions: the page's own answers */
+.q__list { position: absolute; left: -1.5px; right: -1.5px; top: calc(100% + 6px); margin: 0; padding: 6px; list-style: none; background: #fff; border: 1px solid var(--line2); border-radius: 10px; box-shadow: 0 10px 28px -10px rgba(80, 34, 16, .24); z-index: 5; max-height: min(60vh, 420px); overflow: auto; }
+.q__list[hidden] { display: none; }
+.q__opt { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 7px; cursor: pointer; font: 400 14.5px/1.35 var(--font); color: var(--ink); }
+.q__opt b { font-weight: 600; color: var(--brand); }
+.q__opt small { font-size: 12px; color: var(--soft); letter-spacing: .02em; }
+.q__opt[aria-selected="true"] { background: var(--tint); }
+.q__none { padding: 10px; font: 400 14px/1.4 var(--font); color: var(--soft); }
+
+/* ---------- the bar: logo, the search field (the page's navigation), the CTA ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar);
+  display: grid; grid-template-columns: minmax(310px, auto) minmax(0, 1fr) auto; align-items: center; gap: 24px;
+  padding: env(safe-area-inset-top) var(--gut) 0; background: #fff; border-bottom: 1px solid var(--line);
+}
+.bar__brand { display: inline-flex; align-items: center; height: 44px; }
+.bar__brand img { display: block; height: 30px; width: auto; }
+.q--bar { justify-self: center; width: min(560px, 100%); height: 44px; padding: 0 5px 0 12px; transition: opacity .3s var(--ease); }
+.q--bar .q__d { width: 22px; height: 22px; }
+.q--bar .q__go { width: 34px; height: 34px; }
+html.hero-q .q--bar { opacity: 0; pointer-events: none; }
+html.hero-q .q--bar .q__list { display: none; }
+.dock { display: none; }
+
+/* ---------- act 1: the first result (hero) ---------- */
+.hero { position: relative; background: var(--ground); }
+.hero__stage { min-height: 100vh; min-height: 100svh; box-sizing: border-box; padding-top: calc(var(--bar) + 1.5vh); display: grid; place-items: center; overflow: clip; }
+.scene {
+  --sw: min(94vw, 1360px, calc((100svh - var(--bar) - 36px) / .55));
+  position: relative; width: var(--sw); container-type: inline-size; perspective: 1400px;
+  padding: 2.6cqw 0 2cqw; box-sizing: border-box;
+}
+.pl { position: relative; }
+.pl-d { position: absolute; right: 1.5cqw; top: 1.2cqw; width: 45cqw; z-index: 0; }
+.pl-d .mk { width: 100%; height: auto; }
+.pl-q { z-index: 4; width: 46cqw; }
+.pl-r { z-index: 2; width: 53cqw; margin-top: 2cqw; }
+.pl-i { z-index: 3; margin-top: 2.4cqw; }
+
+.q--hero { height: 5.4cqw; padding: 0 .5cqw 0 1.3cqw; gap: 1cqw; border-width: 2px; }
+.q--hero .q__d { width: 2.7cqw; height: 2.7cqw; }
+.q--hero .q__in { font-size: max(16px, 1.52cqw); line-height: 1.3; height: 1.3em; overflow: hidden; white-space: nowrap; }
+.q--hero .q__go { width: 4.2cqw; height: 4.2cqw; border-radius: .7cqw; }
+.q--hero .q__go svg { width: 1.6cqw; height: 1.6cqw; }
+
+.r1 { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 2.1cqw 2.4cqw 2.3cqw; }
+.r1__src { display: flex; align-items: center; gap: .8cqw; font: 500 max(13px, 1.02cqw)/1.3 var(--font); color: var(--ink); }
+.r1__src .mk { width: max(18px, 1.5cqw); height: auto; }
+.r1__src span + span { color: var(--soft); font-weight: 400; }
+.r1 h1 { margin-top: 1cqw; font-weight: 600; font-size: max(30px, 3cqw); line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; }
+.r1__facts { display: flex; flex-wrap: wrap; gap: .6cqw; margin-top: 1.5cqw; padding: 0; list-style: none; }
+.r1__facts li { font: 500 max(13px, 1.06cqw)/1 var(--font); color: var(--brand); border: 1px solid var(--line2); border-radius: 999px; padding: .55cqw 1cqw; }
+.r1__note { margin-top: 1.1cqw; font: 400 max(12px, .92cqw)/1.45 var(--font); color: var(--soft); max-width: 46cqw; }
+.r1__ask { margin-top: 1.7cqw; }
+
+.imgs { display: flex; gap: 1.2cqw; margin: 0; padding: 0; list-style: none; }
+.imr { margin: 0; }
+.imr figure { margin: 0; }
+.imr img { display: block; height: 14.4cqw; width: auto; aspect-ratio: var(--ar); object-fit: cover; border-radius: 10px; background: #f3dfd2; }
+.imr--w img { --ar: 16 / 9.2; }
+.imr--s img { --ar: 1 / 1; }
+.imr figcaption { margin-top: .6cqw; font: 500 max(12px, .92cqw)/1.3 var(--font); color: var(--ink); }
+.imr figcaption span { color: var(--soft); font-weight: 400; }
+
+/* hero load reveal: the mark settles from far back and its dots light one by one; the field arrives;
+   the query types itself (page JS, under 0.9 s); results come forward from depth 120 ms apart; the CTA lands */
+@media (prefers-reduced-motion: no-preference) {
+  html.pre-reveal .pl-d .mkb, html.pre-reveal .pl-d .dt, html.pre-reveal .pl-q, html.pre-reveal .r1, html.pre-reveal .imr, html.pre-reveal .r1__ask { opacity: 0; }
+  html.reveal .pl-d .mkb { animation: h-far 1s var(--ease) both; }
+  html.reveal .pl-d .dt1 { animation: h-dot .36s var(--ease) .32s both; }
+  html.reveal .pl-d .dt2 { animation: h-dot .36s var(--ease) .44s both; }
+  html.reveal .pl-d .dt3 { animation: h-dot .36s var(--ease) .56s both; }
+  html.reveal .pl-q { animation: h-near .55s var(--ease) .1s both; }
+  html.reveal .r1 { animation: h-res .8s var(--ease) 1.02s both; }
+  html.reveal .imr { animation: h-res .8s var(--ease) both; animation-delay: calc(1.14s + var(--rk) * .12s); }
+  html.reveal .r1__ask { animation: h-land .55s var(--ease) 1.6s both; }
+}
+@keyframes h-far { from { opacity: 0; transform: translate3d(0, 2cqw, -320px); } 30% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes h-dot { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+@keyframes h-near { from { opacity: 0; transform: translate3d(0, -1cqw, 120px); } to { opacity: 1; transform: none; } }
+@keyframes h-res { from { opacity: 0; transform: translate3d(0, 1.5cqw, -380px); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes h-land { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.pl-d .dt { transform-box: fill-box; transform-origin: 50% 50%; }
+
+/* ---------- every scroll-linked move: CSS scroll-driven animations on page-pixel ranges set by JS ---------- */
+html.anim .sdx { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+/* triggered reveals: each one plays through on its own (about 0.6 s) once it crosses its point on the screen,
+   so any scroll length comes to rest on a finished screen; only decoration still follows the scroll */
+html.anim .tr { animation-duration: .6s; animation-timing-function: var(--ease); animation-fill-mode: both; animation-delay: var(--td, 0s); animation-play-state: paused; }
+html.anim .tr.on { animation-play-state: running; }
+html.anim .sdx2 { animation-duration: auto, auto; animation-timing-function: linear, linear; animation-fill-mode: both, both; animation-timeline: scroll(root block), scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px), var(--f0, 0px) var(--f1, 1px); }
+
+/* hero scroll (desktop only): the camera pulls back through the planes; the mark recedes slowest, the results rise, the image row comes forward */
+html.anim .hp-d.sdx { animation-name: hs-d; }
+html.anim .hp-r.sdx { animation-name: hs-r; }
+html.anim .hp-i.sdx { animation-name: hs-i; }
+@keyframes hs-d { to { transform: translate3d(0, 9cqw, -260px); } }
+@keyframes hs-r { to { transform: translate3d(0, -2cqw, -40px); } }
+@keyframes hs-i { to { transform: translate3d(0, -6cqw, 90px); } }
+
+/* ---------- shared act furniture ---------- */
+.act { position: relative; padding: clamp(4rem, 9vh, 7rem) 0; }
+.wrap { width: min(var(--maxw), 100% - 2 * var(--gut)); margin: 0 auto; }
+.act.tight-b { padding-bottom: clamp(1.5rem, 3.5vh, 2.5rem); }
+.act.case, .act.rv { padding: 0; }
+.act.tight-t { padding-top: clamp(2rem, 4.5vh, 3rem); }
+.act__head { display: grid; gap: 6px; margin-bottom: clamp(1.5rem, 3.4vh, 2.4rem); }
+.act__src { display: flex; align-items: center; gap: 8px; font: 500 13px/1.3 var(--font); color: var(--soft); letter-spacing: .02em; }
+.act__src .mk { width: 16px; height: auto; }
+.act h2 { font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem); line-height: 1.12; letter-spacing: -.02em; }
+
+/* results arriving from depth as they load (signature): JS adds .is-in per result as it enters the screen */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .ld:not(.is-in) { opacity: 0; transform: perspective(1000px) translate3d(0, 18px, calc(-200px - var(--rk, 0) * 50px)); }
+  html.js .ld.is-in { transition: opacity .5s var(--ease), transform .75s var(--ease); transition-delay: calc(var(--rk, 0) * 80ms); }
+}
+
+/* ---------- act 2: services ---------- */
+.aeo { max-width: 760px; font: 400 clamp(1.05rem, 1rem + .3vw, 1.2rem)/1.65 var(--font); color: var(--ink); border-left: 3px solid var(--brand); padding: 2px 0 2px 18px; }
+.svc__plane { margin-top: clamp(2rem, 5vh, 3rem); transform-origin: 50% 0; }
+html.anim .svc__plane.tr { animation-name: svc-tilt; }
+@keyframes svc-tilt { from { transform: perspective(1300px) rotateX(26deg) translate3d(0, 40px, -60px); } to { transform: none; } }
+.svc__list { list-style: none; margin: 0; padding: 0; max-width: 860px; display: grid; gap: 12px; }
+.res { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px 18px; transition: border-color .3s var(--ease), box-shadow .3s var(--ease); }
+.res__url { display: flex; align-items: center; gap: 8px; font: 400 13px/1.3 var(--font); color: var(--soft); overflow-wrap: anywhere; }
+.res__url .mk { width: 15px; flex: 0 0 auto; }
+.res h3 { margin-top: 6px; font-weight: 600; font-size: clamp(1.15rem, 1.05rem + .4vw, 1.35rem); line-height: 1.25; }
+.res h3 a { text-decoration: none; }
+.res h3 a:hover { text-decoration: underline; text-underline-offset: .18em; }
+.res p { margin-top: 6px; color: var(--soft); font-size: 15px; line-height: 1.55; max-width: 66ch; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; padding: 0; list-style: none; }
+.tags li { font: 500 12.5px/1 var(--font); color: var(--brand); background: var(--tint); border-radius: 999px; padding: 7px 10px; }
+@media (hover: hover) and (pointer: fine) {
+  /* the dim follows a moving pointer only; a wheel scroll over the list leaves every row at full strength */
+  .svc__list:not(.calm):hover .res { opacity: .62; transition: opacity .3s var(--ease); }
+  .svc__list:not(.calm):hover .res:hover { opacity: 1; border-color: var(--line2); box-shadow: 0 10px 26px -14px rgba(80, 34, 16, .3); }
+}
+
+/* ---------- act 3: work (the mark held far back while the image results stand up over it) ---------- */
+.work { background: #fff; }
+.work__far { position: absolute; inset: 0 0 clamp(4rem, 9vh, 7rem) 0; pointer-events: none; }
+.work__d { position: sticky; top: calc(var(--bar) + 6vh); width: min(56vw, 640px); margin: 0 0 0 auto; padding-right: var(--gut); box-sizing: content-box; }
+.work__d .mk { width: 100%; height: auto; }
+.work .wrap { position: relative; z-index: 1; }
+.work h3 { font: 600 15px/1.3 var(--font); color: var(--ink); margin: 0 0 12px; letter-spacing: .01em; }
+.work h3 + .grid { margin-bottom: clamp(2rem, 5vh, 3.2rem); }
+.grid { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.grid--soc { grid-template-columns: repeat(3, minmax(0, 360px)); }
+.grid--web { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid--web .t--big { grid-column: span 2; }
+.t { margin: 0; transform-origin: 50% 100%; }
+.t figure { margin: 0; height: 100%; box-sizing: border-box; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 8px 8px 10px; }
+.t img { display: block; width: 100%; height: auto; border-radius: 7px; }
+.t--sq img { aspect-ratio: 1; object-fit: cover; }
+.t--mk img { aspect-ratio: 664 / 435; object-fit: cover; }
+.t--big img { aspect-ratio: 1280 / 760; object-fit: cover; }
+.t figcaption { margin-top: 8px; padding: 0 4px; font: 500 13.5px/1.35 var(--font); color: var(--ink); }
+.t figcaption span { display: block; font-weight: 400; font-size: 12.5px; color: var(--soft); }
+html.anim .t.tr { animation-name: t-up; }
+@keyframes t-up { from { transform: perspective(1000px) rotateX(50deg) translate3d(0, 0, -40px); opacity: 0; } 55% { opacity: 1; } to { transform: none; opacity: 1; } }
+
+/* ---------- act 4: films ---------- */
+.films { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; perspective: 1400px; }
+.film { margin: 0; }
+.film__box { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #2b1a12; }
+.film__btn { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; cursor: pointer; background: transparent; color: #fff; display: block; }
+.film__btn img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.film__play { position: absolute; left: 50%; top: 50%; width: 76px; height: 76px; margin: -38px 0 0 -38px; border-radius: 50%; background: rgba(255, 255, 255, .94); display: grid; place-items: center; transition: transform .4s var(--ease); }
+.film__play svg { width: 26px; height: 26px; margin-left: 4px; color: var(--brand); }
+.film__btn:hover .film__play, .film__btn:focus-visible .film__play { transform: scale(1.07); }
+.film__btn::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 44%; background: linear-gradient(to top, rgba(36, 16, 8, .72), rgba(36, 16, 8, 0)); }
+.film__cap { position: absolute; left: 18px; bottom: 14px; right: 18px; z-index: 1; text-align: left; font: 600 16px/1.3 var(--font); }
+.film__cap span { display: block; font: 400 13px/1.3 var(--font); opacity: .92; }
+.film__box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.film figcaption { margin-top: 10px; font: 400 13.5px/1.45 var(--font); color: var(--soft); }
+.film figcaption a { color: var(--brand); padding: 12px 0; }
+html.anim .film.tr { animation-name: f-left; }
+html.anim .film + .film.tr { animation-name: f-right; }
+@keyframes f-left { from { transform: translate3d(3%, 0, -170px) rotateY(20deg); } to { transform: none; } }
+@keyframes f-right { from { transform: translate3d(-3%, 0, -170px) rotateY(-20deg); } to { transform: none; } }
+
+/* ---------- act 5 (peak): one case, one rich result ---------- */
+.case { background: var(--ground); padding: 0; }
+.case__stage { height: 100vh; height: 100svh; overflow: clip; }
+.case__frame { position: absolute; inset: var(--bar) 0 var(--dock) 0; display: flex; flex-direction: column; padding: 14px var(--gut); perspective: 1500px; }
+.case__card { width: min(1120px, 100%); margin: 0 auto; flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px 18px; transform-origin: 50% 0; box-sizing: border-box; }
+html.anim .case__card.tr { animation-name: c-tilt; }
+@keyframes c-tilt { from { transform: rotateX(18deg) translate3d(0, 0, -110px); } to { transform: none; } }
+.case__head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 18px; align-items: center; }
+.case__logo { grid-row: span 3; width: 92px; height: 92px; border: 1px solid var(--line); border-radius: 12px; display: grid; place-items: center; padding: 8px; box-sizing: border-box; }
+.case__logo img { width: 100%; height: auto; }
+.case__head .res__url { margin: 0; }
+.case__head h2 { font-size: clamp(1.4rem, 1.1rem + 1.1vw, 2.05rem); line-height: 1.15; }
+.case__line { color: var(--soft); font-size: 15px; }
+.case__tabs { position: relative; display: flex; gap: 4px; margin: 16px 0 14px; border-bottom: 1px solid var(--line); }
+.case__tab { appearance: none; border: 0; background: none; padding: 10px 14px 12px; font: 600 14.5px/1 var(--font); color: var(--soft); cursor: pointer; transition: color .3s var(--ease); }
+.case__tab[aria-selected="true"] { color: var(--brand); }
+.case__mark { position: absolute; left: 0; bottom: -1px; height: 3px; width: 10px; background: var(--brand); border-radius: 2px; transform-origin: 0 0; transition: transform .45s var(--ease), width .45s var(--ease); }
+.case__body { position: relative; flex: 1 1 auto; min-height: 220px; perspective: 1300px; }
+.fct { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); gap: 28px; align-items: center; }
+.fct__img { height: 100%; min-height: 0; display: grid; align-items: center; }
+.fct__img img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+#fct-0 .fct__img img { object-fit: contain; }
+.fct__img--sq img { width: auto; max-width: 100%; max-height: 370px; aspect-ratio: 1; justify-self: start; }
+.fct__k { font: 600 13px/1.3 var(--font); color: var(--soft); letter-spacing: .1em; text-transform: uppercase; }
+.fct__fig { margin-top: 6px; font: 600 clamp(2.4rem, 1.6rem + 2.6vw, 4.2rem)/1 var(--font); color: var(--brand); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.fct__fig small { display: block; margin-top: 8px; font: 500 clamp(1rem, .95rem + .3vw, 1.2rem)/1.35 var(--font); letter-spacing: 0; color: var(--ink); }
+.fct__fig + .fct__fig { margin-top: 22px; }
+.fct__txt { margin-top: 12px; font-size: 16px; line-height: 1.6; color: var(--ink); }
+.fct--seo { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.fct--seo .fct__img img { height: auto; aspect-ratio: 1280 / 558; }
+.fct--seo .fct__img { align-content: center; }
+.case__src { margin-top: 12px; font: 400 12.5px/1.4 var(--font); color: var(--soft); }
+.case__src a { color: var(--brand); }
+/* facet swaps: the outgoing facet sinks back and is gone before the next comes forward */
+/* each swap is triggered at its point of the pin and then plays through on its own (under 0.7 s) */
+html.anim .fct { opacity: 0; visibility: hidden; transform: translate3d(0, 24px, -280px); transition: opacity .26s var(--glide), transform .26s var(--glide), visibility 0s linear .26s; }
+html.anim .fct.past { transform: translate3d(0, -18px, -220px); }
+html.anim .fct.cur { opacity: 1; visibility: visible; transform: none; transition: opacity .34s var(--glide) .24s, transform .4s var(--glide) .24s, visibility 0s linear 0s; }
+
+/* ---------- act 6: clients ---------- */
+.cl { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 1px; background: var(--line2); border: 1px solid var(--line2); border-radius: 14px; overflow: hidden; margin: 0; padding: 0; list-style: none; }
+.cl li { position: relative; aspect-ratio: 3 / 2; min-width: 0; min-height: 0; background: #fff; padding: 0; box-sizing: border-box; }
+.cl li.nv { background: var(--brand); }
+/* each logo is taken out of the tile's sizing, so every tile is the same size; logos keep their own pixel size (never enlarged) */
+.cl img { position: absolute; left: 50%; top: 50%; max-width: 76%; max-height: 76%; height: auto; object-fit: contain; transform: translate(-50%, -50%); }
+.cl__note { margin-top: 12px; font: 400 13px/1.45 var(--font); color: var(--soft); }
+html.anim .cl li.tr { animation-name: cl-in; animation-duration: .55s; }
+@keyframes cl-in { from { opacity: .08; transform: perspective(900px) translate3d(0, 0, -520px); } to { opacity: 1; transform: none; } }
+
+/* ---------- act 7: reviews (a sideways strip; the centred quote near, the others pushed back) ---------- */
+.rv { background: #fff; padding: 0; }
+.rv__stage { height: 100vh; height: 100svh; overflow: clip; }
+.rv__frame { position: absolute; inset: var(--bar) 0 var(--dock) 0; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr) auto; padding: clamp(14px, 3vh, 28px) 0 14px; }
+.rv__frame .act__head { margin-bottom: clamp(.9rem, 2.4vh, 1.6rem); }
+.rv__view { position: relative; perspective: 1100px; overflow: clip; min-height: 0; display: flex; }
+.rv__strip { --cw: 680px; --gap: 28px; display: flex; align-items: stretch; gap: var(--gap); padding: 0 calc(50vw - var(--cw) / 2); margin: 0; list-style: none; transform-style: preserve-3d; width: max-content; }
+.rv__strip { height: min(100%, 500px); margin-block: auto; }
+.rv__pager { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0 var(--gut); list-style: none; }
+.rv__pager button { appearance: none; border: 1px solid var(--line2); background: #fff; border-radius: 999px; min-height: 44px; padding: 9px 16px; font: 500 13.5px/1 var(--font); color: var(--soft); cursor: pointer; transition: background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease); }
+.rv__pager button[aria-current="true"] { background: var(--brand); border-color: var(--brand); color: #fff; }
+html.anim .rv__strip.sdx { animation-name: rv-pan; }
+@keyframes rv-pan { to { transform: translate3d(calc(var(--travel, 0px) * -1), 0, 0); } }
+.rvc { width: var(--cw); flex: 0 0 auto; background: #fff; border: 1px solid var(--line2); border-radius: 16px; padding: clamp(24px, 4vh, 40px) 36px clamp(22px, 3.4vh, 32px); box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+html.anim .rvc.sdx { animation-name: rv-depth; }
+/* phones: one whole card at a time on a vertical rail; at each point of the pin the old card glides up and back
+   as the next rises into its place, then the rail rests on one whole quote */
+html.anim .rv__strip.rail { transform: translate3d(0, calc(var(--step, 0px) * var(--ri, 0) * -1), 0); transition: transform .6s var(--glide); }
+html.anim .rv__strip.rail .rvc { transform: translate3d(0, 0, -220px); transition: transform .6s var(--glide); }
+html.anim .rv__strip.rail .rvc.cur { transform: none; }
+@keyframes rv-depth { 0% { transform: translate3d(0, 0, -260px); } 50% { transform: none; } 100% { transform: translate3d(0, 0, -260px); } }
+.rvc blockquote { margin: 0; font: 400 clamp(1.2rem, .85rem + 1.1vw, 1.9rem)/1.45 var(--font); color: var(--ink); letter-spacing: -.01em; }
+.rvc blockquote::before { content: "\201C"; display: block; font: 700 46px/.6 var(--font); color: var(--mark); margin-bottom: 10px; }
+.rvc footer { display: flex; align-items: center; gap: 14px; padding-top: 16px; border-top: 1px solid var(--line); }
+.rvc__logo { width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; background: #fff; flex: 0 0 auto; }
+.rvc__logo.nv { background: var(--brand); border-color: var(--brand); }
+.rvc__logo img { width: 74%; height: auto; }
+.rvc cite { font: 600 15px/1.3 var(--font); font-style: normal; color: var(--brand); }
+.rvc cite span { display: block; font: 400 13px/1.35 var(--font); color: var(--soft); }
+.rv__note { width: min(var(--maxw), 100% - 2 * var(--gut)); margin: 14px auto 0; font: 400 13px/1.4 var(--font); color: var(--soft); }
+
+/* ---------- act 8: team ---------- */
+.lead3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); margin: 0; padding: 0; list-style: none; }
+.lead3 li { padding: 22px 22px 20px; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 18px; align-items: center; }
+.lead3 li + li { border-left: 1px solid var(--line2); }
+.lead3 img { width: 112px; height: 112px; object-fit: cover; border-radius: 10px; filter: none; }
+.lead3 h3 { font-size: 1.25rem; font-weight: 600; }
+.lead3 p { font-size: 14px; color: var(--soft); line-height: 1.45; margin-top: 2px; }
+.crew { margin: clamp(1.75rem, 4vh, 2.6rem) 0 0; perspective: 1200px; }
+.crew__img { display: block; width: 100%; max-width: 1125px; height: auto; border-radius: 14px; aspect-ratio: 3 / 2; object-fit: cover; }
+html.anim .crew__img.tr { animation-name: crew-push; }
+@keyframes crew-push { from { transform: translate3d(0, 6%, -200px); opacity: .4; } 50% { opacity: 1; } to { transform: none; opacity: 1; } }
+.crew figcaption { margin-top: 10px; font: 400 13.5px/1.45 var(--font); color: var(--soft); }
+
+/* ---------- act 9: close (a real input) ---------- */
+.close { background: var(--brand); color: #fbede2; padding-bottom: clamp(3rem, 8vh, 5rem); }
+.close .act__src { color: #f7dccd; }
+.close h2 { color: #fbede2; }
+.ask { margin-top: 6px; background: #fff; color: var(--ink); border-radius: 16px; padding: 22px; max-width: 760px; transform-origin: 50% 100%; }
+html.anim .ask.tr { animation-name: ask-up; }
+@keyframes ask-up { from { transform: perspective(1100px) rotateX(18deg) translate3d(0, 40px, -200px); opacity: 0; } 55% { opacity: 1; } to { transform: none; opacity: 1; } }
+.ask label { display: block; font: 600 15px/1.3 var(--font); color: var(--brand); }
+.ask textarea { display: block; width: 100%; box-sizing: border-box; margin-top: 10px; min-height: 104px; resize: vertical; border: 1.5px solid var(--brand); border-radius: 10px; padding: 12px 14px; font: 400 16px/1.5 var(--font); color: var(--ink); background: #fff; }
+.ask textarea:focus { outline: 0; box-shadow: 0 0 0 3px rgba(158, 68, 38, .16); }
+.ask__row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 14px; }
+.ask__hint { font: 400 13px/1.45 var(--font); color: var(--soft); max-width: 34ch; }
+.reach { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: clamp(2rem, 5vh, 3rem) 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255, 255, 255, .22); }
+.reach li { padding: 16px 18px 16px 0; border-bottom: 1px solid rgba(255, 255, 255, .22); }
+.reach dt, .reach .k { font: 500 12.5px/1.3 var(--font); color: #f7dccd; letter-spacing: .06em; text-transform: uppercase; }
+.reach a, .reach .v { display: inline-block; margin-top: 4px; font: 500 16px/1.45 var(--font); color: #fbede2; text-decoration: none; }
+.reach a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.close__foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; margin-top: clamp(2rem, 5vh, 3rem); }
+.close__foot img { height: 30px; width: auto; }
+.soc { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; padding: 0; list-style: none; }
+.soc a { color: #fbede2; font: 500 14px/2 var(--font); text-decoration: none; }
+.soc a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.close .cta { background: var(--brand2); }
+
+/* ---------- reduced motion, or no scroll timelines: no pins, everything in its final place ---------- */
+html:not(.anim) .case, html:not(.anim) .rv { height: auto !important; }
+html:not(.anim) .case__stage, html:not(.anim) .rv__stage { position: static !important; height: auto; }
+html:not(.anim) .case__frame, html:not(.anim) .rv__frame { position: relative; inset: auto; padding-top: clamp(4rem, 9vh, 6rem); padding-bottom: clamp(4rem, 9vh, 6rem); }
+html:not(.anim) .case__tabs { display: none; }
+html:not(.anim) .case__body { height: auto; display: grid; gap: 28px; }
+html:not(.anim) .case__card { flex: none; }
+html:not(.anim) .rv__pager { display: none; }
+html:not(.anim) .rv__frame { display: block; }
+html:not(.anim) .fct { position: relative; inset: auto; }
+html:not(.anim) .fct__img { height: auto; }
+html:not(.anim) .fct__img img { height: auto; aspect-ratio: 1280 / 760; }
+html:not(.anim) .fct__img--sq img { aspect-ratio: 1; max-width: 360px; }
+html:not(.anim) .rv__view { overflow: visible; perspective: none; }
+html:not(.anim) .rv__strip { width: auto; flex-direction: column; padding: 0; margin: 24px auto 0; max-width: min(760px, 100% - 2 * var(--gut)); }
+html:not(.anim) .rvc { width: 100%; height: auto; }
+html:not(.anim) .rv__strip { display: flex; height: auto; transform: none; gap: 16px; }
+html:not(.anim) .rv__view { height: auto; }
+
+/* ---------- phones: the bar keeps logo and a compact field, the CTA moves to a bottom bar ---------- */
+@media (max-width: 860px) {
+  :root { --bar: 58px; --gut: 16px; --lab: 0px; --dock: calc(64px + var(--lab) + env(safe-area-inset-bottom)); }
+  .bar { grid-template-columns: auto minmax(0, 1fr); gap: 10px; }
+  .bar > .cta { display: none; }
+  .bar__brand img { height: 20px; }
+  .q--bar { width: 100%; height: 40px; padding: 0 4px 0 9px; gap: 7px; }
+  .q--bar .q__d { width: 19px; height: 19px; }
+  .q--bar .q__go { display: none; }
+  .q--bar .q__in { font-size: 16px; text-overflow: ellipsis; }
+  .bar.is-open { grid-template-columns: 0 minmax(0, 1fr); gap: 0; }
+  .bar.is-open .bar__brand { visibility: hidden; }
+  .q__list { position: fixed; left: 10px; right: 10px; top: calc(var(--bar) + 6px); max-height: calc(100svh - var(--bar) - var(--dock) - 20px); }
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock); box-sizing: border-box;
+    padding: var(--lab) var(--gut) env(safe-area-inset-bottom); align-items: center; justify-content: center;
+    background: #fff; border-top: 1px solid var(--line);
+  }
+  .dock .cta { width: 100%; justify-content: space-between; --h: 50px; font-size: 16px; }
+  body { padding-bottom: var(--dock); }
+
+  .hero__stage { min-height: 0; display: block; padding-top: var(--bar); }
+  .scene { --sw: 100vw; width: 100vw; perspective: 1000px; padding: 0 var(--gut) 26px; }
+  .pl-d { right: -6vw; top: 2px; width: 64vw; }
+  .pl-q { width: 100%; margin-top: 39vw; }
+  .q--hero { height: auto; min-height: 0; padding: 10px 6px 10px 12px; gap: 10px; align-items: center; border-width: 2px; }
+  .q--hero .q__d { width: 24px; height: 24px; }
+  .q--hero .q__in { font-size: 16px; line-height: 1.35; height: 2.7em; white-space: normal; }
+  .q--hero .q__go { width: 44px; height: 44px; border-radius: 8px; align-self: center; }
+  .q--hero .q__go svg { width: 18px; height: 18px; }
+  .pl-r { width: 100%; margin-top: 12px; }
+  .r1 { padding: 18px 16px 18px; border-radius: 14px; }
+  .r1__src { gap: 8px; font-size: 13px; }
+  .r1__src .mk { width: 18px; }
+  .r1 h1 { margin-top: 8px; font-size: clamp(27px, 7.4vw, 31px); }
+  .r1__facts { gap: 6px; margin-top: 14px; }
+  .r1__facts li { font-size: 12.5px; padding: 7px 10px; }
+  .r1__note { margin-top: 12px; font-size: 12.5px; max-width: none; }
+  .r1__ask { margin-top: 16px; }
+  .r1__ask .cta { width: 100%; justify-content: space-between; }
+  .pl-i { margin-top: 14px; }
+  .imgs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }
+  .imr img { width: 100%; height: auto; --ar: 1 / 1 !important; aspect-ratio: 1; }
+  .imr figcaption { font-size: 12px; margin-top: 6px; }
+
+  .act { padding: 3.5rem 0; }
+  .res { padding: 15px 15px 16px; }
+  .res p { font-size: 15px; }
+  .work__far { display: none; }
+  .grid--soc { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .grid--web { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .t figure { padding: 6px 6px 8px; border-radius: 10px; }
+  .t figcaption { font-size: 12.5px; }
+  .films { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .film__play { width: 64px; height: 64px; margin: -32px 0 0 -32px; }
+  .film__play svg { width: 22px; height: 22px; }
+  .film__cap { font-size: 14.5px; left: 14px; bottom: 11px; }
+  @keyframes f-left { from { transform: translate3d(0, 0, -150px) rotateY(16deg); } to { transform: none; } }
+  @keyframes f-right { from { transform: translate3d(0, 0, -150px) rotateY(-16deg); } to { transform: none; } }
+
+  .case__frame { padding: 10px var(--gut); align-items: center; }
+  .case__card { padding: 16px 14px 12px; border-radius: 14px; }
+  .case__head { grid-template-columns: 58px minmax(0, 1fr); gap: 2px 12px; align-items: start; }
+  .case__logo { grid-row: span 2; width: 58px; height: 58px; padding: 5px; border-radius: 10px; }
+  .case__head .res__url { font-size: 11.5px; }
+  .case__head h2 { font-size: 19px; }
+  .case__line { grid-column: 1 / -1; font-size: 15px; line-height: 1.45; margin-top: 6px; }
+  .case__tabs { margin: 10px 0 10px; gap: 0; justify-content: space-between; }
+  .case__tab { min-height: 46px; padding: 15px 8px 16px; font-size: 13.5px; }
+  .case__body { min-height: 200px; }
+  .fct, .fct--seo { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; gap: 12px; align-items: start; }
+  .fct__img { height: 100%; }
+  .fct__img--sq img { height: 100%; width: auto; }
+  .fct__fig { font-size: 2.3rem; }
+  .fct__fig small { font-size: 14.5px; margin-top: 4px; }
+  .fct__fig + .fct__fig { margin-top: 12px; }
+  .fct__txt { font-size: 15px; margin-top: 6px; line-height: 1.5; }
+  .fct--seo .fct__img img { height: 100%; aspect-ratio: auto; }
+  .case__src { font-size: 11.5px; margin-top: 8px; }
+
+  .cl { grid-template-columns: repeat(3, minmax(0, 1fr)); border-radius: 12px; }
+
+  .rv__view { display: block; align-self: center; height: min(100%, 440px); }
+  .rv__strip { --cw: 100%; display: flex; flex-direction: column; gap: 24px; width: 100%; height: auto; margin: 0; padding: 0 var(--gut); }
+  .rvc { width: 100%; height: var(--rvh, 420px); padding: 22px 18px 16px; gap: 12px; }
+  .pg-x { display: none; }
+  .rvc blockquote { font-size: 19px; line-height: 1.5; letter-spacing: 0; }
+  .rv__pager { gap: 6px; margin-top: 10px; }
+  .rv__pager button { padding: 8px 14px; font-size: 13.5px; }
+  .rvc blockquote::before { font-size: 40px; margin-bottom: 6px; }
+  .rvc__logo { width: 46px; height: 46px; }
+
+  .lead3 { grid-template-columns: minmax(0, 1fr); }
+  .lead3 li { padding: 14px 0; grid-template-columns: 84px minmax(0, 1fr); gap: 14px; }
+  .lead3 li + li { border-left: 0; border-top: 1px solid var(--line2); }
+  .lead3 img { width: 84px; height: 84px; }
+
+  .ask { padding: 16px; }
+  .ask__hint { font-size: 15px; }
+  .reach a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; margin-top: 0; }
+  .soc a { display: inline-flex; align-items: center; min-height: 44px; }
+  .ask__row .cta { width: 100%; justify-content: space-between; }
+  .reach { grid-template-columns: minmax(0, 1fr); }
+  .close__foot img { height: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta__chip::before, .cta__chip svg, .q--bar, .case__mark, .film__play { transition: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- the mark: the studio monogram in a circle, with three dots on its shoulder that light and blink while an answer loads -->
+    <path id="mkb" fill-rule="evenodd" d="M68 16A52 52 0 1 1 68 120A52 52 0 1 1 68 16Z M47.2 87.4 L47.2 48.6 L60.8 48.6 L67.5 82.4 L68.5 82.4 L75.2 48.6 L88.8 48.6 L88.8 87.4 L81.7 87.4 L81.7 54.0 L80.7 54.0 L74.1 87.4 L61.9 87.4 L55.3 54.0 L54.3 54.0 L54.3 87.4Z"/>
+    <path id="mk1" d="M1.4 46.1a6.5 6.5 0 1 0 13 0a6.5 6.5 0 1 0 -13 0Z"/>
+    <path id="mk2" d="M16.2 22.7a6.5 6.5 0 1 0 13 0a6.5 6.5 0 1 0 -13 0Z"/>
+    <path id="mk3" d="M39.6 7.9a6.5 6.5 0 1 0 13 0a6.5 6.5 0 1 0 -13 0Z"/>
+  </defs>
+  <symbol id="ar" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="go" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M6 4.5v15l13-7.5z" fill="currentColor"/></symbol>
+</svg>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio home"><img src="assets/wordmark.svg" alt="Mosswick Studio" width="439" height="77"></a>
+  <form class="q q--bar" id="qbar" role="search" action="#" autocomplete="off">
+    <svg class="q__d mk" viewBox="0 0 120 120" aria-hidden="true"><use class="mkb" href="#mkb"/><use class="dt dt1" href="#mk1"/><use class="dt dt2" href="#mk2"/><use class="dt dt3" href="#mk3"/></svg>
+    <label class="sr-only" for="qbar-in">Search this page</label>
+    <input class="q__in" id="qbar-in" type="search" name="q" enterkeyhint="search" spellcheck="false" placeholder="Search the studio" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="qbar-list">
+    <button class="q__go" type="submit" aria-label="Search"><svg aria-hidden="true"><use href="#go"/></svg></button>
+    <ul class="q__list" id="qbar-list" role="listbox" aria-label="Answers on this page" hidden></ul>
+  </form>
+  <a class="cta" href="https://wa.me/15550100?text=Hi%20Mosswick%20Studio%2C%20I%27d%20like%20to%20send%20you%20a%20short%20brief." target="_blank" rel="noopener" data-cta>Send us a short brief<span class="cta__chip"><svg aria-hidden="true"><use href="#ar"/></svg></span></a>
+</header>
+
+<main id="main">
+
+  <!-- 1. the first result (hero) -->
+  <section class="hero" id="top" data-sc-act="flow" data-q="creative and marketing studio in lowmere" aria-labelledby="h1">
+    <div class="hero__stage">
+      <div class="scene" id="scene">
+        <div class="pl pl-d hp-d" aria-hidden="true">
+          <svg class="mk" viewBox="0 0 120 120"><use class="mkb" href="#mkb"/><use class="dt dt1" href="#mk1"/><use class="dt dt2" href="#mk2"/><use class="dt dt3" href="#mk3"/></svg>
+        </div>
+        <div class="pl pl-q">
+          <form class="q q--hero" id="qhero" role="search" action="#" autocomplete="off">
+            <svg class="q__d mk" viewBox="0 0 120 120" aria-hidden="true"><use class="mkb" href="#mkb"/><use class="dt dt1" href="#mk1"/><use class="dt dt2" href="#mk2"/><use class="dt dt3" href="#mk3"/></svg>
+            <label class="sr-only" for="qhero-in">Search this page</label>
+            <textarea class="q__in" id="qhero-in" name="q" rows="1" enterkeyhint="search" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="qhero-list">creative and marketing studio in lowmere</textarea>
+            <button class="q__go" type="submit" aria-label="Search"><svg aria-hidden="true"><use href="#go"/></svg></button>
+            <ul class="q__list" id="qhero-list" role="listbox" aria-label="Answers on this page" hidden></ul>
+          </form>
+        </div>
+        <div class="pl pl-r hp-r">
+          <article class="r1">
+            <p class="r1__src"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg><span>Mosswick Studio</span><span>example.com</span></p>
+            <h1 id="h1">Mosswick Studio: brands, websites, films and campaigns that people notice</h1>
+            <ul class="r1__facts" aria-label="From example.com">
+              <li>140+ brands launched</li>
+              <li>32 people in one studio</li>
+              <li>Lowmere, since 2014</li>
+            </ul>
+            <p class="r1__note">Strategists, designers, filmmakers and media buyers on one team, so your brand looks the same in a shop window and a feed.</p>
+            <div class="r1__ask"><a class="cta cta--big" href="https://wa.me/15550100?text=Hi%20Mosswick%20Studio%2C%20I%27d%20like%20to%20send%20you%20a%20short%20brief." target="_blank" rel="noopener" data-cta>Send us a short brief<span class="cta__chip"><svg aria-hidden="true"><use href="#ar"/></svg></span></a></div>
+          </article>
+        </div>
+        <div class="pl pl-i hp-i">
+          <ul class="imgs" aria-label="Image results: projects by Mosswick">
+            <li class="imr imr--w" style="--rk:0"><figure><img src="assets/img/hero-01.webp" alt="A rust orange rucksack against a stone cairn on a misty ridge, from the Cairnstone brand film" width="1280" height="547" fetchpriority="high"><figcaption>Cairnstone <span>brand film</span></figcaption></figure></li>
+            <li class="imr imr--w" style="--rk:1"><figure><img src="assets/img/hero-02.webp" alt="A Marshlight Festival screen-printed poster of reeds and lanterns on a brick wall" width="1280" height="558"><figcaption>Marshlight Festival <span>posters</span></figcaption></figure></li>
+            <li class="imr imr--s" style="--rk:2"><figure><img src="assets/img/square-01.webp" alt="Plumtide cordial bottles in five colours on a limestone ledge" width="500" height="500"><figcaption>Plumtide <span>packaging</span></figcaption></figure></li>
+            <li class="imr imr--s" style="--rk:3"><figure><img src="assets/img/square-02.webp" alt="Three Tallow Lane Coffee bags on a roastery workbench" width="500" height="500"><figcaption>Tallow Lane <span>packaging</span></figcaption></figure></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. services -->
+  <section class="act svc" id="services" data-sc-act="flow" data-q="what does mosswick do" aria-labelledby="svc-h">
+    <div class="wrap">
+      <header class="act__head">
+        <p class="act__src"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>Top answer · example.com</p>
+        <h2 id="svc-h">Mosswick at a glance</h2>
+      </header>
+      <p class="aeo">Mosswick is a creative and marketing studio in Lowmere. Its 32 strategists, designers, writers, filmmakers and media buyers work in one studio on brand strategy, identity, websites, social content, film, campaigns and paid media, for food brands, shops, clinics, charities and tech start-ups. It has launched more than 140 brands since 2014.</p>
+      <div class="svc__plane">
+        <ol class="svc__list">
+          <li class="res ld" id="svc-strategy" style="--rk:0">
+            <p class="res__url"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>example.com/services/brand-strategy-and-positioning/</p>
+            <h3><a href="#">Brand strategy, positioning and naming</a></h3>
+            <p>Workshops, customer interviews and a hard look at your market. You get a positioning, a voice and a short set of messages your whole team can repeat.</p>
+            <ul class="tags"><li>Positioning</li><li>Audience research</li><li>Brand voice guide</li><li>Messaging framework</li></ul>
+          </li>
+          <li class="res ld" id="svc-identity" style="--rk:1">
+            <p class="res__url"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>example.com/services/brand-identity-and-guidelines/</p>
+            <h3><a href="#">Brand identity and guidelines</a></h3>
+            <p>Logos, type, colour and rules that make you recognisable at a glance. Every system ships with clear guidelines.</p>
+            <ul class="tags"><li>Logo and wordmark</li><li>Type and colour</li><li>Brand guidelines</li><li>Templates</li></ul>
+          </li>
+          <li class="res ld" id="svc-web" style="--rk:2">
+            <p class="res__url"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>example.com/services/website-design-and-development/</p>
+            <h3><a href="#">Websites, designed and built</a></h3>
+            <p>Fast, clear websites that explain what you do and turn visits into enquiries, tested on real phones.</p>
+            <ul class="tags"><li>Site map and wireframes</li><li>UX and UI design</li><li>Copywriting</li><li>CMS setup</li></ul>
+          </li>
+          <li class="res ld" id="svc-social" style="--rk:3">
+            <p class="res__url"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>example.com/services/social-media-content-monthly/</p>
+            <h3><a href="#">Social content, every month</a></h3>
+            <p>Posts, reels and series that people stop scrolling for, shot and edited in house. Each month we report what worked and cut what did not.</p>
+            <ul class="tags"><li>Content strategy</li><li>Monthly calendar</li><li>Short-form video</li><li>Photography</li><li>Monthly report</li></ul>
+          </li>
+          <li class="res ld" id="svc-film" style="--rk:4">
+            <p class="res__url"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>example.com/services/film-and-motion/</p>
+            <h3><a href="#">Film and motion</a></h3>
+            <p>Brand films, product videos and animation, from first script to final grade.</p>
+            <ul class="tags"><li>Scripts and storyboards</li><li>Production</li><li>Motion graphics</li><li>Social cutdowns</li></ul>
+          </li>
+          <li class="res ld" id="svc-campaigns" style="--rk:5">
+            <p class="res__url"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>example.com/services/campaigns-across-every-channel/</p>
+            <h3><a href="#">Campaigns across every channel</a></h3>
+            <p>Big ideas built to run across outdoor, social, print and screen.</p>
+            <ul class="tags"><li>Campaign concept</li><li>Key visuals</li><li>Out-of-home design</li><li>Media plan</li></ul>
+          </li>
+          <li class="res ld" id="svc-paid" style="--rk:6">
+            <p class="res__url"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>example.com/services/performance-marketing/</p>
+            <h3><a href="#">Performance marketing on search and social</a></h3>
+            <p>Paid search and social with weekly creative tests, run by people who know your brand.</p>
+            <ul class="tags"><li>Tracking setup</li><li>Paid social</li><li>Paid search</li><li>Live dashboard</li></ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. work -->
+  <section class="act work" id="work" data-sc-act="flow" data-q="mosswick work" aria-labelledby="work-h">
+    <div class="work__far" aria-hidden="true">
+      <div class="work__d"><svg class="mk" viewBox="0 0 120 120"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg></div>
+    </div>
+    <div class="wrap">
+      <header class="act__head">
+        <p class="act__src"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>Image results · example.com</p>
+        <h2 id="work-h">Selected work</h2>
+      </header>
+      <h3>Social content</h3>
+      <ul class="grid grid--soc">
+        <li class="t t--sq"><figure><img src="assets/img/social-01.webp" alt="Fernstride social post: moss green running shoes mid-stride on a leafy park path" width="500" height="500" loading="lazy"><figcaption>Fernstride<span>Social post</span></figcaption></figure></li>
+        <li class="t t--sq"><figure><img src="assets/img/social-02.webp" alt="Houndsbury social post: a terrier beside an open meal box on a tiled kitchen floor" width="500" height="500" loading="lazy"><figcaption>Houndsbury<span>Social post</span></figcaption></figure></li>
+        <li class="t t--sq"><figure><img src="assets/img/social-03.webp" alt="Periwink social post: a wall of glasses frames sorted by colour" width="500" height="500" loading="lazy"><figcaption>Periwink<span>Social post</span></figcaption></figure></li>
+        <li class="t t--sq"><figure><img src="assets/img/social-04.webp" alt="Owlhour social post: a lit classroom window at night with pottery wheels inside" width="500" height="500" loading="lazy"><figcaption>Owlhour<span>Social post</span></figcaption></figure></li>
+        <li class="t t--sq"><figure><img src="assets/img/social-05.webp" alt="Cragloft social post: a climbing wall with pink, yellow and teal holds" width="500" height="500" loading="lazy"><figcaption>Cragloft<span>Social post</span></figcaption></figure></li>
+        <li class="t t--sq"><figure><img src="assets/img/social-06.webp" alt="Fizzwold social post: four patterned drink cans in a tub of ice" width="500" height="500" loading="lazy"><figcaption>Fizzwold Kombucha, can launch<span>Social post</span></figcaption></figure></li>
+      </ul>
+      <h3>Websites</h3>
+      <ul class="grid grid--web">
+        <li class="t t--big"><figure><img src="assets/img/web-01.webp" alt="The Kilnmark online shop: handmade plates and bowls in speckled glazes" width="1600" height="950" loading="lazy"><figcaption>Kilnmark<span>Online shop</span></figcaption></figure></li>
+        <li class="t t--big"><figure><img src="assets/img/web-02.webp" alt="The Hollin Gallery website, led by a bright white gallery room" width="1280" height="760" loading="lazy"><figcaption>Hollin Gallery<span>Website</span></figcaption></figure></li>
+        <li class="t t--mk"><figure><img src="assets/img/web-03.webp" alt="The Shelterly website for plain-English home insurance" width="664" height="435" loading="lazy"><figcaption>Shelterly<span>Website</span></figcaption></figure></li>
+        <li class="t t--mk"><figure><img src="assets/img/web-04.webp" alt="The Larchway hotel website, selling rooms by mood" width="664" height="435" loading="lazy"><figcaption>The Larchway, canal-side hotel<span>Website</span></figcaption></figure></li>
+        <li class="t t--mk"><figure><img src="assets/img/web-05.webp" alt="The Voltmere website with its plain-language savings calculator" width="664" height="435" loading="lazy"><figcaption>Voltmere<span>Website</span></figcaption></figure></li>
+        <li class="t t--mk"><figure><img src="assets/img/web-06.webp" alt="The Mendhaven website for four physiotherapy clinics" width="664" height="435" loading="lazy"><figcaption>Mendhaven<span>Website</span></figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. films -->
+  <section class="act vid tight-b" id="videos" data-sc-act="flow" data-q="mosswick films" aria-labelledby="vid-h">
+    <div class="wrap">
+      <header class="act__head">
+        <p class="act__src"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>Video results · YouTube</p>
+        <h2 id="vid-h">Films the studio made</h2>
+      </header>
+      <!-- each film plays on tap: put your video's embed URL in data-video -->
+      <div class="films">
+        <figure class="film">
+          <div class="film__box">
+            <button class="film__btn" type="button" data-video="https://example.com/" aria-label="Play the Velloway brand film, 1 minute">
+              <img src="assets/img/film-01.webp" alt="" width="1280" height="547" loading="lazy">
+              <span class="film__cap">Velloway, rainproof outerwear<span>Brand film · 1:00 · 20 cutdowns</span></span>
+              <span class="film__play"><svg aria-hidden="true"><use href="#play"/></svg></span>
+            </button>
+          </div>
+          <figcaption>Released 2024 · <a href="#">watch on YouTube</a></figcaption>
+        </figure>
+        <figure class="film">
+          <div class="film__box">
+            <button class="film__btn" type="button" data-video="https://example.com/" aria-label="Play the Stillreed launch film">
+              <img src="assets/img/film-02.webp" alt="" width="1280" height="558" loading="lazy">
+              <span class="film__cap">Stillreed, over-ear headphones<span>Launch film · mostly silent</span></span>
+              <span class="film__play"><svg aria-hidden="true"><use href="#play"/></svg></span>
+            </button>
+          </div>
+          <figcaption>Released 2025 · <a href="#">watch on YouTube</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. one case (the peak) -->
+  <section class="act case" id="case" data-sc-act="pin" data-sc-span="4.2" data-q="okra and ash case study" aria-labelledby="case-h">
+    <div data-sc-stage class="case__stage">
+      <div class="case__frame">
+        <article class="case__card">
+          <header class="case__head">
+            <div class="case__logo"><img src="assets/logos/client-01.svg" alt="Okra &amp; Ash logo" width="121" height="25" loading="lazy"></div>
+            <p class="res__url"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>example.com/work/okra-and-ash/</p>
+            <h2 id="case-h">Okra &amp; Ash: eight weeks to open, five weeks booked out</h2>
+            <p class="case__line">Wood-fired restaurant, 2025: brand identity, website and launch social</p>
+          </header>
+          <div class="case__tabs" role="tablist" aria-label="Case study sections">
+            <button class="case__tab" role="tab" type="button" aria-selected="true" aria-controls="fct-0" data-i="0">Identity</button>
+            <button class="case__tab" role="tab" type="button" aria-selected="false" aria-controls="fct-1" data-i="1">Opening</button>
+            <button class="case__tab" role="tab" type="button" aria-selected="false" aria-controls="fct-2" data-i="2">Social</button>
+            <button class="case__tab" role="tab" type="button" aria-selected="false" aria-controls="fct-3" data-i="3">Website</button>
+            <span class="case__mark" aria-hidden="true"></span>
+          </div>
+          <div class="case__body">
+            <section class="fct cur" id="fct-0" role="tabpanel" aria-label="Identity">
+              <div class="fct__img"><img src="assets/img/case-01.webp" alt="A wood-fired oven glowing in the Okra &amp; Ash kitchen" width="1280" height="760" loading="lazy"></div>
+              <div>
+                <p class="fct__k">Identity</p>
+                <p class="fct__txt">An identity built around the fire: charcoal tones, a hand-drawn ember mark and menus on heavy card.</p>
+              </div>
+            </section>
+            <section class="fct fct--seo" id="fct-1" role="tabpanel" aria-label="Opening">
+              <div class="fct__img"><img src="assets/img/case-02.webp" alt="Behind the scenes on the opening-week shoot" width="1280" height="558" loading="lazy"></div>
+              <div>
+                <p class="fct__k">Opening</p>
+                <p class="fct__fig">8 weeks<small>from no name on the door to opening night</small></p>
+                <p class="fct__fig">5 weeks<small>booked out from the first night</small></p>
+              </div>
+            </section>
+            <section class="fct" id="fct-2" role="tabpanel" aria-label="Social">
+              <div class="fct__img fct__img--sq"><img src="assets/img/case-03.webp" alt="Filming the behind-the-scenes series for Okra &amp; Ash" width="500" height="500" loading="lazy"></div>
+              <div>
+                <p class="fct__k">Social</p>
+                <p class="fct__fig">6 weeks<small>of behind-the-scenes posts before opening</small></p>
+              </div>
+            </section>
+            <section class="fct" id="fct-3" role="tabpanel" aria-label="Website">
+              <div class="fct__img"><img src="assets/img/case-04.webp" alt="The studio desk where the Okra &amp; Ash website was built" width="1280" height="558" loading="lazy"></div>
+              <div>
+                <p class="fct__k">Website</p>
+                <p class="fct__txt">A new website and booking page, launched with the brand so the first tables could be booked online.</p>
+              </div>
+            </section>
+          </div>
+          <p class="case__src">Numbers taken from the full <a href="#">Okra &amp; Ash case study</a> on example.com</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. clients -->
+  <section class="act clients tight-t tight-b" id="clients" data-sc-act="flow" data-q="mosswick clients" aria-labelledby="cl-h">
+    <div class="wrap">
+      <header class="act__head">
+        <p class="act__src"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>Client logos · example.com</p>
+        <h2 id="cl-h">Clients who stay for years</h2>
+      </header>
+      <ul class="cl" id="cl-grid">
+        <li><img src="assets/logos/client-01.svg" alt="Okra &amp; Ash" width="121" height="25" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-02.svg" alt="Paywren" width="121" height="25" loading="lazy"></li>
+        <li><img src="assets/logos/client-03.svg" alt="Shelterly" width="106" height="28" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-04.svg" alt="Plumtide" width="109" height="28" loading="lazy"></li>
+        <li><img src="assets/logos/client-05.svg" alt="Hollin Gallery" width="128" height="24" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-06.svg" alt="Halvane Watch Co." width="114" height="26" loading="lazy"></li>
+        <li><img src="assets/logos/client-07.svg" alt="Kilnmark" width="123" height="24" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-08.svg" alt="Tallow Lane Coffee" width="104" height="29" loading="lazy"></li>
+        <li><img src="assets/logos/client-09.svg" alt="Fernstride" width="150" height="19" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-10.svg" alt="Houndsbury" width="135" height="22" loading="lazy"></li>
+        <li><img src="assets/logos/client-11.svg" alt="Tumblewick" width="135" height="22" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-12.svg" alt="Marshlight Festival" width="133" height="23" loading="lazy"></li>
+        <li><img src="assets/logos/client-13.svg" alt="Periwink" width="102" height="29" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-14.svg" alt="Owlhour" width="124" height="24" loading="lazy"></li>
+        <li><img src="assets/logos/client-15.svg" alt="Cragloft" width="144" height="21" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-16.svg" alt="Fizzwold" width="117" height="26" loading="lazy"></li>
+        <li><img src="assets/logos/client-17.svg" alt="Voltmere" width="149" height="20" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-18.svg" alt="Mendhaven" width="142" height="21" loading="lazy"></li>
+        <li><img src="assets/logos/client-19.svg" alt="Marlo Rue" width="131" height="23" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-20.svg" alt="Saltmarrow" width="140" height="21" loading="lazy"></li>
+        <li class="nv"><img src="assets/logos/client-21.svg" alt="Gearfinch" width="150" height="19" loading="lazy"></li>
+      </ul>
+      <p class="cl__note">21 clients from the last twelve years, set in the studio's colours</p>
+    </div>
+  </section>
+
+  <!-- 7. reviews -->
+  <section class="act rv" id="reviews" data-sc-act="pin" data-sc-span="2.8" data-q="mosswick reviews" aria-labelledby="rv-h">
+    <div data-sc-stage class="rv__stage">
+      <div class="rv__frame">
+        <div class="wrap">
+          <header class="act__head">
+            <p class="act__src"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>Client reviews · example.com</p>
+            <h2 id="rv-h">In their clients' words</h2>
+          </header>
+        </div>
+        <div class="rv__view">
+          <ul class="rv__strip" id="rv-strip">
+            <li class="rvc">
+              <blockquote>We had eight weeks to open a restaurant with no name. They gave us a name on the door, a full booking diary and a lot less stress.</blockquote>
+              <footer><span class="rvc__logo"><img src="assets/logos/client-01.svg" alt="" width="121" height="25" loading="lazy"></span><cite>Cora Mbeki-Lane<span>Owner, Okra &amp; Ash</span></cite></footer>
+            </li>
+            <li class="rvc">
+              <blockquote>The new website cut our quote form in half and far more people now finish it. Our board finally stopped asking about marketing spend.</blockquote>
+              <footer><span class="rvc__logo"><img src="assets/logos/client-03.svg" alt="" width="106" height="28" loading="lazy"></span><cite>Marcus Tilley<span>Chief Operating Officer, Shelterly</span></cite></footer>
+            </li>
+            <li class="rvc">
+              <blockquote>Plain words, quick replies and work we are proud to put our name on. We have renewed with them every year since our first project.</blockquote>
+              <footer><span class="rvc__logo"><img src="assets/logos/client-05.svg" alt="" width="128" height="24" loading="lazy"></span><cite>Ilse Varga<span>Director, Hollin Gallery</span></cite></footer>
+            </li>
+            <li class="rvc">
+              <blockquote>Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us exactly what every bit of spend brought back.</blockquote>
+              <footer><span class="rvc__logo nv"><img src="assets/logos/client-02.svg" alt="" width="121" height="25" loading="lazy"></span><cite>Owen Haddad<span>Head of Growth, Paywren</span></cite></footer>
+            </li>
+          </ul>
+        </div>
+        <ul class="rv__pager" aria-label="Reviews">
+          <li><button type="button" data-i="0" aria-current="true">Cora<span class="pg-x">, Okra &amp; Ash</span></button></li>
+          <li><button type="button" data-i="1" aria-current="false">Marcus<span class="pg-x">, Shelterly</span></button></li>
+          <li><button type="button" data-i="2" aria-current="false">Ilse<span class="pg-x">, Hollin</span></button></li>
+          <li><button type="button" data-i="3" aria-current="false">Owen<span class="pg-x">, Paywren</span></button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. team -->
+  <section class="act team tight-t" id="team" data-sc-act="flow" data-q="mosswick team" aria-labelledby="team-h">
+    <div class="wrap">
+      <header class="act__head">
+        <p class="act__src"><svg class="mk" viewBox="0 0 120 120" aria-hidden="true"><use href="#mkb"/><use href="#mk1"/><use href="#mk2"/><use href="#mk3"/></svg>About the studio · example.com</p>
+        <h2 id="team-h">Meet the studio leads</h2>
+      </header>
+      <ul class="lead3">
+        <li class="ld" style="--rk:0"><img src="assets/img/team-01.webp" alt="Ines Calloway" width="400" height="400" loading="lazy"><div><h3>Ines Calloway</h3><p>Founder and Creative Director</p></div></li>
+        <li class="ld" style="--rk:1"><img src="assets/img/team-02.webp" alt="Tobias Okonjo-Hale" width="400" height="400" loading="lazy"><div><h3>Tobias Okonjo-Hale</h3><p>Co-founder and Strategy Director</p></div></li>
+        <li class="ld" style="--rk:2"><img src="assets/img/team-03.webp" alt="Mei Lin Draper" width="400" height="400" loading="lazy"><div><h3>Mei Lin Draper</h3><p>Design Director</p></div></li>
+      </ul>
+      <figure class="crew">
+        <img class="crew__img" src="assets/img/group.webp" alt="The Mosswick team together in the studio" width="1500" height="1000" loading="lazy">
+        <figcaption>Thirty-two of us, in the old print works we call the studio.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 9. close: a real input -->
+  <section class="act close" id="contact" data-sc-act="flow" data-q="talk to mosswick" aria-labelledby="close-h">
+    <div class="wrap">
+      <header class="act__head">
+        <p class="act__src">Replies within two working days</p>
+        <h2 id="close-h">Have a launch coming up? Tell us.</h2>
+      </header>
+      <form class="ask" id="ask" action="https://wa.me/15550100" method="get" target="_blank">
+        <label for="ask-in">Tell us what you're making</label>
+        <textarea id="ask-in" name="text" rows="3" placeholder="For example: a coffee roaster with four cafes that wants more wholesale accounts"></textarea>
+        <div class="ask__row">
+          <a class="cta cta--big" id="ask-go" href="https://wa.me/15550100?text=Hi%20Mosswick%20Studio%2C%20I%27d%20like%20to%20send%20you%20a%20short%20brief." target="_blank" rel="noopener" data-cta>Send us a short brief<span class="cta__chip"><svg aria-hidden="true"><use href="#ar"/></svg></span></a>
+          <p class="ask__hint">WhatsApp opens with your note already in the message. You decide when to send it.</p>
+        </div>
+      </form>
+      <ul class="reach">
+        <li><span class="k">Call us</span><br><a href="tel:+15550142">+1 555 0142</a></li>
+        <li><span class="k">WhatsApp</span><br><a href="https://wa.me/15550100" target="_blank" rel="noopener">+1 555 0100</a></li>
+        <li><span class="k">Email</span><br><a href="mailto:hello@example.com">hello@example.com</a><br><a href="mailto:projects@example.com">projects@example.com</a></li>
+        <li><span class="k">Office</span><br><span class="v">1 Example Street, Lowmere</span></li>
+        <li><span class="k">Hours</span><br><span class="v">Monday to Friday, 9 AM to 6 PM</span></li>
+        <li><span class="k">Follow</span><br>
+          <ul class="soc">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Behance</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="close__foot">
+        <img src="assets/wordmark-light.svg" alt="Mosswick Studio" width="439" height="77" loading="lazy">
+        <p class="act__src">Example content. Swap in your own.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="dock" id="dock">
+  <a class="cta" href="https://wa.me/15550100?text=Hi%20Mosswick%20Studio%2C%20I%27d%20like%20to%20send%20you%20a%20short%20brief." target="_blank" rel="noopener" data-cta>Send us a short brief<span class="cta__chip"><svg aria-hidden="true"><use href="#ar"/></svg></span></a>
+</div>
+
+<script src="scrollcraft.js"></script>
+<script>
+(function () {
+  var phone = matchMedia('(max-width: 860px)').matches;
+  var anim = document.documentElement.classList.contains('anim');
+  /* reviews: the pin lasts as long as the strip's travel needs (one card per screen of scroll, plus a short hold) */
+  var strip = document.getElementById('rv-strip');
+  var cards = strip.children.length;
+  var cw = 680;
+  if (phone) cw = Math.min(330, innerWidth * .82);
+  var gap = phone ? 14 : 28;
+  var travel = (cards - 1) * (cw + gap);
+  var rv = document.getElementById('reviews');
+  rv.setAttribute('data-sc-span', phone ? '3.4' : (1 + travel / innerHeight * 1.05 + 0.25).toFixed(2));
+  if (phone) document.getElementById('case').setAttribute('data-sc-span', '4');
+  if (!anim) { rv.setAttribute('data-sc-act', 'flow'); rv.removeAttribute('data-sc-span'); var cs = document.getElementById('case'); cs.setAttribute('data-sc-act', 'flow'); cs.removeAttribute('data-sc-span'); }
+})();
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var fx = root.classList.contains('fx');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  var WA = 'https://wa.me/15550100?text=';
+  var HELLO = "Hi Mosswick Studio, I'd like to send you a short brief.";
+
+  /* ================= the search: one index of the page's own answers ================= */
+  var IX = [
+    { t: 'Mosswick Studio, creative and marketing studio in Lowmere', g: 'Top', h: '#top', k: 'best creative marketing studio agency lowmere brands websites films campaigns' },
+    { t: 'Mosswick at a glance', g: 'Services', h: '#services', k: 'what does mosswick do services about studio agency' },
+    { t: 'Brand strategy, positioning and naming', g: 'Services', h: '#svc-strategy', k: 'brand strategy positioning audience research voice messaging naming workshops' },
+    { t: 'Brand identity and guidelines', g: 'Services', h: '#svc-identity', k: 'brand identity logo wordmark colour color type guidelines icons patterns templates rebrand' },
+    { t: 'Websites, designed and built', g: 'Services', h: '#svc-web', k: 'website web design development ux ui copywriting cms launch online shop' },
+    { t: 'Social content, every month', g: 'Services', h: '#svc-social', k: 'social media content instagram reels posts calendar community photography' },
+    { t: 'Film and motion', g: 'Services', h: '#svc-film', k: 'film video motion animation production editing scripts storyboards cutdowns' },
+    { t: 'Campaigns across every channel', g: 'Services', h: '#svc-campaigns', k: 'campaigns campaign concept key visuals out-of-home billboards print launch media plan' },
+    { t: 'Performance marketing on search and social', g: 'Services', h: '#svc-paid', k: 'performance marketing paid search social ads ppc tracking creative testing dashboard' },
+    { t: 'Selected work: social posts and websites', g: 'Work', h: '#work', k: 'mosswick work portfolio projects social posts websites fernstride houndsbury periwink owlhour cragloft fizzwold kilnmark hollin shelterly larchway voltmere mendhaven' },
+    { t: 'Films the studio made', g: 'Films', h: '#videos', k: 'mosswick films videos youtube velloway stillreed brand film launch film' },
+    { t: 'Okra & Ash case study', g: 'Case', h: '#case', k: 'okra ash case study restaurant opening identity social website bookings results' },
+    { t: 'Clients who stay for years', g: 'Clients', h: '#clients', k: 'mosswick clients brands logos customers plumtide paywren shelterly hollin halvane kilnmark tallow lane fernstride houndsbury tumblewick marshlight periwink owlhour cragloft fizzwold voltmere mendhaven marlo rue saltmarrow gearfinch' },
+    { t: "In their clients' words", g: 'Reviews', h: '#reviews', k: 'mosswick reviews testimonials quotes cora marcus ilse owen' },
+    { t: 'Meet the studio leads', g: 'Team', h: '#team', k: 'mosswick team people founders ines calloway tobias okonjo-hale mei lin draper creative director strategy design staff' },
+    { t: 'Send us a short brief', g: 'Contact', h: '#contact', k: 'talk to mosswick contact brief call phone whatsapp email address office lowmere hours enquiry quote' }
+  ];
+  var ACTS = [].slice.call(document.querySelectorAll('[data-q]'));
+
+  function score(item, q) {
+    var words = q.toLowerCase().replace(/[^a-z0-9+\s-]/g, ' ').split(/\s+/).filter(function (w) { return w && ['mosswick', 'the', 'in', 'a', 'of', 'and', 'for', 'to', 'do', 'does', 'what', 'is'].indexOf(w) < 0; });
+    if (!words.length) return q.trim() ? (item.h === '#services' ? 1 : 0) : 0;
+    var s = 0, t = item.t.toLowerCase(), k = item.k;
+    words.forEach(function (w) {
+      if (t.indexOf(w) >= 0) s += 3;
+      if ((' ' + k + ' ').indexOf(' ' + w) >= 0) s += 2;
+      else if (k.indexOf(w) >= 0) s += 1;
+    });
+    return s;
+  }
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function mark(t, q) {
+    var out = esc(t);
+    q.toLowerCase().split(/\s+/).filter(function (w) { return w.length > 1; }).forEach(function (w) {
+      out = out.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<b>$1</b>');
+    });
+    return out;
+  }
+  function go(hash) {
+    var el = document.querySelector(hash); if (!el) return;
+    var act = el.closest('[data-q]');
+    var barH = document.getElementById('bar').offsetHeight;
+    var y = el.getBoundingClientRect().top + scrollY - barH - 16;
+    if (el === act) {
+      var head = act.querySelector('.act__head');
+      if (act.id === 'case' || act.id === 'reviews') y = act.getBoundingClientRect().top + scrollY + 2;
+      else if (head) y = head.getBoundingClientRect().top + scrollY - barH - 20;
+    }
+    if (act && act.id === 'top') y = 0;
+    scrollTo({ top: Math.max(0, y), behavior: fx ? 'smooth' : 'auto' });
+  }
+
+  function Search(form) {
+    var input = form.querySelector('.q__in'), list = form.querySelector('.q__list');
+    var hits = [], sel = 0, open = false;
+    function render() {
+      var q = input.value.trim();
+      if (!q || document.activeElement !== input) { close(); return; }
+      hits = IX.map(function (it) { return { it: it, s: score(it, q) }; }).filter(function (h) { return h.s > 0; }).sort(function (a, b) { return b.s - a.s; }).slice(0, 6);
+      sel = 0;
+      if (!hits.length) list.innerHTML = '<li class="q__none" role="option" aria-disabled="true">No answer on this page for “' + esc(q) + '”.</li>';
+      else list.innerHTML = hits.map(function (h, i) { return '<li class="q__opt" role="option" id="' + form.id + '-o' + i + '" aria-selected="' + (i === 0) + '" data-h="' + h.it.h + '"><span>' + mark(h.it.t, q) + '</span><small>' + h.it.g + '</small></li>'; }).join('');
+      list.hidden = false; open = true; input.setAttribute('aria-expanded', 'true');
+      if (hits.length) input.setAttribute('aria-activedescendant', form.id + '-o0');
+      if (form.id === 'qbar') document.getElementById('bar').classList.add('is-open');
+    }
+    function close() { list.hidden = true; open = false; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); if (form.id === 'qbar') document.getElementById('bar').classList.remove('is-open'); }
+    function pick(i) {
+      var h = hits[i]; if (!h) return;
+      var act = document.querySelector(h.it.h).closest('[data-q]');
+      close(); input.blur();
+      userTyped = false;
+      go(h.it.h);
+      if (act) setTimeout(function () { show(act, true); }, 60);
+    }
+    function move(d) {
+      if (!hits.length) return;
+      sel = (sel + d + hits.length) % hits.length;
+      [].forEach.call(list.children, function (li, i) { li.setAttribute('aria-selected', String(i === sel)); });
+      input.setAttribute('aria-activedescendant', form.id + '-o' + sel);
+    }
+    input.addEventListener('focus', function () { userFocus = true; stopType(); if (form.id === 'qbar' && input.value === lastAuto) input.select(); render(); });
+    input.addEventListener('blur', function () { userFocus = false; setTimeout(close, 150); });
+    input.addEventListener('input', function () { userTyped = true; render(); });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+      else if (e.key === 'Escape') { close(); input.blur(); }
+      else if (e.key === 'Enter') { e.preventDefault(); if (open && hits.length) pick(sel); else { render(); if (hits.length) pick(0); } }
+    });
+    form.addEventListener('submit', function (e) { e.preventDefault(); render(); if (hits.length) pick(sel); });
+    list.addEventListener('mousedown', function (e) { var li = e.target.closest('.q__opt'); if (!li) return; e.preventDefault(); pick([].indexOf.call(list.children, li)); });
+    return { input: input, form: form };
+  }
+
+  var userFocus = false, userTyped = false, lastAuto = '';
+  var bar = Search(document.getElementById('qbar'));
+  var hero = Search(document.getElementById('qhero'));
+
+  /* ================= the signature: each act types its own query into the bar; the mark's dots blink while it loads ================= */
+  var typeTimer = 0, current = null;
+  function stopType() { clearInterval(typeTimer); typeTimer = 0; }
+  function typeInto(s, text, done) {
+    stopType();
+    if (!fx) { s.input.value = text; done && done(); return; }
+    var n = 0, dur = Math.min(820, 26 * text.length), step = Math.max(12, dur / Math.max(1, text.length));
+    s.input.value = '';
+    typeTimer = setInterval(function () {
+      n++; s.input.value = text.slice(0, n);
+      if (n >= text.length) { stopType(); done && done(); }
+    }, step);
+  }
+  function blink(form) {
+    if (!fx) return;
+    form.classList.remove('is-loading'); void form.offsetWidth; form.classList.add('is-loading');
+    setTimeout(function () { form.classList.remove('is-loading'); }, 700);
+  }
+  function show(act, force) {
+    if (act === current && !force) return;
+    current = act;
+    var q = act.getAttribute('data-q');
+    if (userFocus || (userTyped && bar.input.value)) return;
+    if (act.id === 'top') { stopType(); bar.input.value = q; lastAuto = q; return; }
+    lastAuto = q;
+    typeInto(bar, q, function () { blink(bar.form); });
+  }
+  function which() {
+    var y = innerHeight * .42, cur = ACTS[0];
+    for (var i = 0; i < ACTS.length; i++) { if (ACTS[i].getBoundingClientRect().top <= y) cur = ACTS[i]; }
+    return cur;
+  }
+
+  /* the hero's own field is the near plane: the bar's field steps back while it is on screen */
+  var heroForm = document.getElementById('qhero');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { es.forEach(function (e) { root.classList.toggle('hero-q', e.isIntersecting); }); }, { rootMargin: '-' + (phoneQ.matches ? 58 : 68) + 'px 0px 0px 0px' }).observe(heroForm);
+  }
+
+  /* ================= results load from depth as they come on screen (ranked: the order they sit in) ================= */
+  var lds = [].slice.call(document.querySelectorAll('.ld'));
+  if (fx && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      var k = 0;
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.style.setProperty('--rk', k++);
+        e.target.classList.add('is-in'); io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
+    lds.forEach(function (el) { io.observe(el); });
+  } else lds.forEach(function (el) { el.classList.add('is-in'); });
+
+  /* ================= hero reveal on load ================= */
+  if (root.classList.contains('pre-reveal')) {
+    var hq = hero.input, text = hq.value;
+    hq.value = '';
+    var started = false;
+    var start = function () {
+      if (started) return; started = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () {
+        root.classList.add('reveal'); root.classList.remove('pre-reveal');
+        setTimeout(function () { typeInto(hero, text, function () { blink(heroForm); }); }, 260);
+      }); });
+    };
+    var waits = [];
+    if (document.fonts && document.fonts.ready) waits.push(document.fonts.ready);
+    [].forEach.call(document.querySelectorAll('.imr img'), function (im) { if (im.decode) waits.push(im.decode().catch(function () {})); });
+    Promise.all(waits).then(start, start);
+    setTimeout(start, 1500);
+  }
+
+  /* ================= scroll-linked ranges, in page pixels, for the CSS scroll timelines ================= */
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b, fa, fb, cls) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    if (fa !== undefined) { if (fb <= fa) fb = fa + 1; el.style.setProperty('--f0', fa.toFixed(1) + 'px'); el.style.setProperty('--f1', fb.toFixed(1) + 'px'); }
+    el.classList.add(cls || 'sdx');
+  }
+  var caseEl = document.getElementById('case'), rvEl = document.getElementById('reviews');
+  var caseRange = null, rvRange = null, rvSwap = false;
+  function measure() {
+    if (!anim) return;
+    var vh = innerHeight, phone = phoneQ.matches;
+
+    /* hero (desktop): planes part at three rates as the hero leaves */
+    var heroSec = document.getElementById('top');
+    [].forEach.call(heroSec.querySelectorAll('.hp-d, .hp-r, .hp-i'), function (el) {
+      if (phone) { el.classList.remove('sdx'); return; }
+      setR(el, 0, heroSec.offsetHeight);
+    });
+
+    /* services, work, films, the case card, clients, the crew photo and the close card are triggered reveals (see below);
+       here each gets its stagger: work tiles by column, client cells in a diagonal wave */
+    [].forEach.call(document.querySelectorAll('.grid'), function (g) {
+      var gl = g.getBoundingClientRect().left;
+      [].forEach.call(g.children, function (t) {
+        var r = t.getBoundingClientRect();
+        var col = Math.round((r.left - gl) / Math.max(1, r.width));
+        t.style.setProperty('--td', (col * .04).toFixed(2) + 's');
+      });
+    });
+    var grid = document.getElementById('cl-grid'), ncol = phone ? 3 : 7;
+    [].forEach.call(grid.children, function (li, i) { li.style.setProperty('--td', ((i % ncol) * .025).toFixed(3) + 's'); });
+
+    /* the peak: each facet hands over to the next at .23, .48 and .73 of the pin (setTab plays the swap) */
+    var cT = top(caseEl), cTr = Math.max(1, caseEl.offsetHeight - vh);
+    caseRange = [cT, cTr];
+
+    /* reviews: the strip travels sideways; each quote is near and lit only while it is centred */
+    var rT = top(rvEl), rTr = Math.max(1, rvEl.offsetHeight - vh);
+    var strip = document.getElementById('rv-strip');
+    var cards = strip.children;
+    if (phone) {
+      /* phones: no sideways travel; one whole quote at a time on a vertical rail, handing over at .25, .5 and .75 of the pin */
+      rvSwap = true; rvRange = [rT, rT + rTr];
+      var view = strip.parentNode, rvh = view.clientHeight;
+      strip.style.setProperty('--rvh', rvh + 'px'); strip.style.setProperty('--step', (rvh + 24) + 'px');
+      strip.classList.remove('sdx'); [].forEach.call(cards, function (c) { c.classList.remove('sdx'); });
+      strip.classList.add('rail'); setRail(pgI, true);
+    } else {
+    rvSwap = false; strip.classList.remove('rail');
+    [].forEach.call(cards, function (c) { c.classList.remove('cur'); });
+    var cw = cards[0].offsetWidth, gap = parseFloat(getComputedStyle(strip).columnGap) || 0;
+    var travel = (cards.length - 1) * (cw + gap);
+    strip.style.setProperty('--travel', travel + 'px');
+    var hold = Math.min(rTr * .12, vh * .12);
+    var a0 = rT + hold, a1 = rT + rTr - hold;
+    setR(strip, a0, a1); rvRange = [a0, a1];
+    var stepPx = (a1 - a0) / Math.max(1, cards.length - 1);
+    [].forEach.call(cards, function (c, i) { var mid = a0 + stepPx * i; setR(c, mid - stepPx, mid + stepPx); });
+    }
+  }
+
+  /* triggered reveals: once an element's resting top (its layout place, not its tilted start) crosses 92% of the screen,
+     it plays its move through on its own; anything already scrolled past is finished at once */
+  var trs = [].slice.call(document.querySelectorAll('.svc__plane, .grid > .t, .film, .case__card, #cl-grid > li, .crew__img, #ask'));
+  var trTop = [];
+  function layoutTop(el) {
+    if (el.classList.contains('case__card')) return top(caseEl);
+    var y = 0; for (var a = el; a; a = a.offsetParent) y += a.offsetTop; return y;
+  }
+  function trMeasure() { trTop = trs.map(layoutTop); }
+  function trig() {
+    var line = scrollY + innerHeight * .92;
+    for (var i = 0; i < trs.length; i++) if (trTop[i] <= line && !trs[i].classList.contains('on')) trs[i].classList.add('on');
+  }
+  if (anim) trs.forEach(function (el) { el.classList.add('tr'); });
+
+  /* services: the hover dim follows a moving pointer only; a scroll leaves every row at full strength */
+  var svcList = document.querySelector('.svc__list'), px = -1, py = -1;
+  addEventListener('scroll', function () { svcList.classList.add('calm'); }, { passive: true });
+  addEventListener('pointermove', function (e) { if (e.clientX !== px || e.clientY !== py) { px = e.clientX; py = e.clientY; svcList.classList.remove('calm'); } }, { passive: true });
+
+  /* peak tabs: the marker follows the facet on screen; a tab jumps to its facet; crossing a point plays the facet swap */
+  var tabs = [].slice.call(caseEl.querySelectorAll('.case__tab')), markEl = caseEl.querySelector('.case__mark');
+  var fcts = [].slice.call(caseEl.querySelectorAll('.fct'));
+  var tabI = -1;
+  function setTab(i) {
+    if (i === tabI) return; tabI = i;
+    fcts.forEach(function (f, j) { f.classList.toggle('cur', j === i); f.classList.toggle('past', j < i); });
+    tabs.forEach(function (t, j) { t.setAttribute('aria-selected', String(j === i)); t.tabIndex = j === i ? 0 : -1; });
+    var t = tabs[i]; markEl.style.width = t.offsetWidth + 'px'; markEl.style.transform = 'translateX(' + t.offsetLeft + 'px)';
+  }
+  tabs.forEach(function (t, j) {
+    t.addEventListener('click', function () {
+      if (!anim || !caseRange) { document.getElementById('fct-' + j).scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+      var k = [0.06, 0.355, 0.605, 0.88][j];
+      scrollTo({ top: caseRange[0] + caseRange[1] * k, behavior: 'smooth' });
+    });
+  });
+
+  /* reviews pager: marks the centred quote; a tap moves the strip to that quote */
+  var pager = [].slice.call(document.querySelectorAll('.rv__pager button')), pgI = 0;
+  function setPg(i) { if (i === pgI) return; pgI = i; pager.forEach(function (b, j) { b.setAttribute('aria-current', String(j === i)); }); }
+  /* phones: crossing .25, .5 or .75 of the pin glides the rail to the next whole quote */
+  var railI = -1;
+  function setRail(i, force) {
+    if (i === railI && !force) return; railI = i;
+    var strip = document.getElementById('rv-strip');
+    strip.style.setProperty('--ri', i);
+    [].forEach.call(strip.children, function (c, j) { c.classList.toggle('cur', j === i); });
+  }
+  pager.forEach(function (b, j) { b.addEventListener('click', function () { if (!rvRange) return; var k = rvSwap ? [0.08, 0.375, 0.625, 0.92][j] : j / (pager.length - 1); scrollTo({ top: rvRange[0] + (rvRange[1] - rvRange[0]) * k, behavior: 'smooth' }); }); });
+
+  var lastW = -1;
+  function all() { measure(); trMeasure(); lastW = innerWidth; setTab(Math.max(0, tabI)); tick(); }
+  addEventListener('resize', function () { if (innerWidth !== lastW || !phoneQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); trMeasure(); } }).observe(document.body); }
+  all();
+
+  var ticking = false;
+  function tick() {
+    ticking = false;
+    show(which());
+    if (anim) trig();
+    if (rvRange) {
+      var q = (scrollY - rvRange[0]) / Math.max(1, rvRange[1] - rvRange[0]);
+      var ri = rvSwap ? (q < .25 ? 0 : q < .5 ? 1 : q < .75 ? 2 : 3) : Math.max(0, Math.min(pager.length - 1, Math.round(q * (pager.length - 1))));
+      setPg(ri); if (rvSwap) setRail(ri);
+    }
+    if (caseRange) {
+      var p = (scrollY - caseRange[0]) / caseRange[1];
+      setTab(p < .23 ? 0 : p < .48 ? 1 : p < .73 ? 2 : 3);
+    }
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(tick); } }, { passive: true });
+
+  /* ================= films play on tap: the player (data-video on each button) exists only after the tap ================= */
+  [].forEach.call(document.querySelectorAll('.film__btn'), function (b) {
+    b.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = b.getAttribute('data-video') || 'https://example.com/';
+      f.title = b.getAttribute('aria-label').replace(/^Play /, '');
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      b.parentNode.replaceChild(f, b);
+    });
+  });
+
+  /* ================= close: the visitor's words go into the WhatsApp message (nothing is sent by this page) ================= */
+  var askIn = document.getElementById('ask-in'), askGo = document.getElementById('ask-go');
+  function askHref() { var v = askIn.value.trim(); return WA + encodeURIComponent(HELLO + (v ? " What we're making: " + v : '')); }
+  askIn.addEventListener('input', function () { askGo.href = askHref(); });
+  document.getElementById('ask').addEventListener('submit', function (e) { e.preventDefault(); window.open(askHref(), '_blank', 'noopener'); });
+})();
+</script>
+</body>
+</html>

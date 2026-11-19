@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Brands, Websites, Film &amp; Campaigns in Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio of 32 people in Lowmere: brand strategy and identity, websites, social content, film and campaigns.">
+<meta name="theme-color" content="#1e2a1f">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="apple-touch-icon" href="assets/mark-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Brands, Websites, Film &amp; Campaigns in Lowmere">
+<meta property="og:description" content="Loud ideas, made to be seen. Design, film and media that make brands with a pulse.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Brands, Websites, Film &amp; Campaigns in Lowmere">
+<meta name="twitter:description" content="Loud ideas, made to be seen. Design, film and media that make brands with a pulse.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/jost-var-latin.woff2" crossorigin>
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Jost"; src: url("assets/fonts/jost-var-latin.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+
+/* Palette: Moss Paper (palettes.json index 0). Dark grounds take its ink, paper grounds its cream, the moss accent
+   prints on paper, and a light moss tint of the accent carries the CTA and quote marks on dark grounds.
+   ScrollCraft sets spacing, rhythm and motion. Jost is open-licence. */
+:root {
+  --b-accent: #2f5d3a;
+  --b-accent-lt: #a3c293;
+  --b-ink: #1e2a1f;
+  --b-dark: #263428;
+  --b-paper: #f3efe6;
+  --b-soft: rgba(243, 239, 230, .72);
+  --b-line: rgba(243, 239, 230, .16);
+  --p-soft: rgba(30, 42, 31, .74);
+  --p-line: rgba(30, 42, 31, .16);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --glide: cubic-bezier(.45, 0, .25, 1);
+  --font: "Jost", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --gut: clamp(1rem, 3.4vw, 3rem);
+  --bar: 64px;
+  --dock: 0px;
+
+  --sc-canvas: #1e2a1f; --sc-surface: #263428;
+  --sc-ink: #f3efe6; --sc-ink-soft: rgba(243, 239, 230, .72);
+  --sc-accent: #a3c293; --sc-accent-ink: #1e2a1f;
+  --sc-font-display: var(--font);
+  --sc-font-text: var(--font);
+  --sc-gutter: var(--gut);
+  --mk-a: var(--b-accent-lt);
+  --mk-b: #f3efe6;
+}
+html { background: var(--b-ink); }
+body { margin: 0; background: var(--b-ink); color: #f3efe6; font-family: var(--font); font-weight: 400; }
+img { max-width: 100%; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 90; background: #f3efe6; color: #1e2a1f; padding: 10px 14px; font: 500 15px/1 var(--font); }
+.skip:focus { top: 12px; }
+main > section { overflow-x: clip; }
+a:focus-visible { outline: 2px solid var(--b-accent-lt); outline-offset: 4px; }
+.press a:focus-visible, .cases a:focus-visible, .close a:focus-visible { outline-color: var(--b-accent); }
+.label { margin: 0; font: 500 13px/1.4 var(--font); letter-spacing: .16em; text-transform: uppercase; }
+.wrap { max-width: 92rem; margin: 0 auto; }
+
+/* ---------- the one CTA: "Book an intro call" ---------- */
+.cta {
+  display: inline-flex; align-items: center; gap: .5em; white-space: nowrap; text-decoration: none;
+  font: 500 16px/1 var(--font); letter-spacing: .005em; color: #1e2a1f; background: var(--b-accent-lt);
+  padding: .78em 1.15em .8em 1.25em; border-radius: 999px; min-height: 44px; box-sizing: border-box;
+}
+.cta__ic { width: 1em; height: 1em; flex: none; transition: transform .45s var(--ease); }
+.cta__t { position: relative; }
+.cta__t::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.18em; height: 1.5px; background: currentColor; transform: scaleX(0); transform-origin: 100% 50%; transition: transform .5s cubic-bezier(.62, .05, .01, .99); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .cta:hover .cta__ic, .cta:focus-visible .cta__ic { transform: rotate(-45deg); }
+  .cta:hover .cta__t::after, .cta:focus-visible .cta__t::after { transform: scaleX(1); transform-origin: 0 50%; }
+}
+.cta:active { opacity: .8; }
+.cta--line { background: none; color: inherit; padding: 0; border-radius: 0; min-height: 0; font-weight: 600; }
+.cta--line .cta__t::after { transform: scaleX(1); transform-origin: 0 50%; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .cta--line:hover .cta__t::after { animation: u-wipe .7s var(--ease); }
+}
+@keyframes u-wipe { 0% { transform: scaleX(1); transform-origin: 100% 50%; } 45% { transform: scaleX(0); transform-origin: 100% 50%; } 46% { transform-origin: 0 50%; } 100% { transform: scaleX(1); transform-origin: 0 50%; } }
+
+/* ---------- the bar: the studio mark, the studio name set in Jost, the CTA ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar); box-sizing: border-box;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: env(safe-area-inset-top) var(--gut) 0; background: var(--b-ink); border-bottom: 1px solid var(--b-line);
+}
+.bar__brand { display: inline-flex; align-items: center; gap: .6rem; height: 44px; color: #f3efe6; text-decoration: none; font: 600 19px/1 var(--font); letter-spacing: -.01em; }
+.bar__brand svg { width: 28px; height: 28px; display: block; }
+.bar .cta { font-size: 15px; }
+.dock { display: none; }
+
+/* ---------- act 1: the hero ---------- */
+.hero__stage { position: relative; height: 100vh; height: 100svh; min-height: 560px; overflow: clip; background: var(--b-ink); }
+.hero__frame { position: absolute; inset: var(--bar) 0 0 0; display: grid; grid-template-rows: auto minmax(0, 1fr); padding: 0 var(--gut) clamp(.75rem, 2.4vh, 1.5rem); }
+.hero__top { padding-top: clamp(.9rem, 2.6vh, 1.6rem); }
+.hero__eyebrow { margin: 0; font: 500 13px/1.5 var(--font); letter-spacing: .16em; text-transform: uppercase; color: #f3efe6; }
+.scene-box { position: relative; min-height: 0; container-type: size; display: flex; align-items: flex-end; justify-content: center; }
+.scene { --sw: min(100cqw, 200cqh, 1500px); position: relative; width: var(--sw); aspect-ratio: 100 / 50; container-type: inline-size; }
+.plane { position: absolute; inset: 0; }
+.plane--back { z-index: 1; }
+.bx { position: absolute; z-index: 2; }
+.plane--front { z-index: 3; pointer-events: none; }
+.plane--front a { pointer-events: auto; }
+
+.h1 { margin: 0; color: #f3efe6; font-weight: 700; }
+.ln1, .ln2 { position: absolute; left: -.04em; display: block; white-space: nowrap; font-size: 11.4cqw; line-height: .86; letter-spacing: -.04em; }
+.ln1 { top: 11.1cqw; }
+.ln2 { top: 22.5cqw; }
+.ln2__in { display: block; }
+.ln2 .w { display: inline; }
+.mask { display: inline-block; overflow: clip; overflow-clip-margin: 0; padding: .04em .1em .22em .04em; margin: -.04em -.1em -.22em -.04em; }
+.mask__in { display: inline-block; }
+
+/* the studio mark (a round monogram) as two SVG halves on one seam */
+.bx { right: 4cqw; top: 0; width: 17.5cqw; aspect-ratio: 163 / 186; }
+.bx__in, .bx__fold { position: absolute; inset: 0; }
+.bx__fold { perspective: 900px; }
+.bx__half { position: absolute; inset: 0; width: 100%; height: 100%; display: block; overflow: visible; transform-origin: 50% 50%; backface-visibility: hidden; }
+
+.fr__lead { position: absolute; left: 0; top: 36.6cqw; margin: 0; font: 400 max(16px, 1.45cqw)/1.3 var(--font); color: #f3efe6; }
+.fr__row { position: absolute; left: 0; top: 39.4cqw; width: 100%; display: flex; align-items: center; }
+.arrow { display: block; width: 50cqw; height: auto; overflow: visible; flex: none; }
+.arrow path { fill: none; stroke: #f3efe6; stroke-width: 1.4; stroke-linecap: round; }
+.fr__to { margin: 0 0 0 3cqw; font: 700 3.3cqw/1.05 var(--font); letter-spacing: -.02em; color: #f3efe6; }
+.fr__to .w { display: inline; }
+.hero__ask { position: absolute; left: 0; top: 45cqw; }
+.hero__ask .cta { font-size: max(17px, 1.42cqw); }
+
+/* the reveal on load (time based; no-JS and reduced motion get the final state) */
+@media (prefers-reduced-motion: no-preference) {
+  html.pre-reveal .mask__in, html.pre-reveal .ln2__in, html.pre-reveal .bx__in, html.pre-reveal .fr__lead,
+  html.pre-reveal .fr__to, html.pre-reveal .hero__ask, html.pre-reveal .hero__eyebrow { opacity: 0; }
+  html.pre-reveal .arrow path { stroke-dashoffset: 1; }
+  html.reveal .arrow path { stroke-dasharray: 1; }
+  html.reveal .bx__in { animation: b-come 1s var(--ease) both; }
+  html.reveal .bx__half--l { animation: b-open-l 1.05s var(--ease) .12s both; }
+  html.reveal .bx__half--r { animation: b-open-r 1.05s var(--ease) .12s both; }
+  html.reveal .mask__in { animation: h-rise .9s var(--ease) .1s both; }
+  html.reveal .ln2__in { animation: h-forward 1s var(--ease) .3s both; }
+  html.reveal .hero__eyebrow { animation: h-up .7s var(--ease) .2s both; }
+  html.reveal .fr__lead { animation: h-up .6s var(--ease) .62s both; }
+  html.reveal .arrow .ar-line { animation: h-draw .5s cubic-bezier(.65, 0, .35, 1) .72s both; }
+  html.reveal .arrow .ar-head { animation: h-draw .26s cubic-bezier(.33, 1, .68, 1) 1.18s both; }
+  html.reveal .fr__to { animation: h-to .6s var(--ease) 1.22s both; }
+  html.reveal .hero__ask { animation: h-up .6s var(--ease) 1.36s both; }
+}
+@keyframes b-come { from { opacity: 0; transform: perspective(900px) translate3d(0, 2cqw, -320px); } 30% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes b-open-l { from { transform: rotateY(-84deg); } to { transform: none; } }
+@keyframes b-open-r { from { transform: rotateY(84deg); } to { transform: none; } }
+@keyframes h-rise { from { transform: translateY(108%); } to { transform: none; } }
+@keyframes h-forward { from { opacity: 0; transform: perspective(900px) translate3d(0, 1.5cqw, -380px); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes h-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes h-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes h-to { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+
+/* ---------- every scroll-linked move: CSS scroll-driven animations on page-pixel ranges set by JS ---------- */
+html.anim .sdx { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.anim .sdx.glide { animation-timing-function: var(--glide); }
+
+/* hero (desktop only): the three planes part in depth as the hero leaves, the box turns toward you as one piece */
+html.anim .plane--back.sdx { animation-name: s-back; }
+html.anim .bx.sdx { animation-name: s-box; }
+html.anim .plane--front.sdx { animation-name: s-front; }
+@keyframes s-back { to { transform: perspective(1200px) translate3d(0, -2cqw, -260px); } }
+@keyframes s-box { to { transform: perspective(1000px) translate3d(-3cqw, -3cqw, 150px) rotateY(-22deg); } }
+@keyframes s-front { to { transform: translate3d(0, -4.5cqw, 0); } }
+
+/* ---------- act 2: what we do ---------- */
+.svc { padding: clamp(2.5rem, 6vh, 4rem) var(--gut) clamp(3rem, 9vh, 6rem); background: var(--b-ink); }
+.svc .label { color: var(--b-soft); }
+.svc__aeo { margin: 1.4rem 0 0; max-width: 65ch; font: 400 clamp(1.15rem, .95rem + .7vw, 1.6rem)/1.5 var(--font); color: #f3efe6; text-wrap: pretty; }
+.fams { list-style: none; margin: clamp(2.5rem, 7vh, 4.5rem) 0 0; padding: 0; perspective: 1400px; }
+.fam { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1rem 3rem; align-items: end; padding: clamp(1.5rem, 4vh, 2.6rem) 0; border-top: 1px solid var(--b-line); transform-origin: 0 60%; }
+.fam:last-child { border-bottom: 1px solid var(--b-line); }
+.fam h3 { margin: 0; font: 700 clamp(4.2rem, 1rem + 13vw, 15rem)/.82 var(--font); letter-spacing: -.05em; color: #f3efe6; }
+.fam--sm h3 { font-size: clamp(3rem, .8rem + 7.6vw, 9.6rem); letter-spacing: -.045em; }
+.fam ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .45rem 1.5rem; font: 400 16px/1.35 var(--font); color: #f3efe6; }
+.fam li a { color: inherit; text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .3s var(--ease); }
+.fam li a:hover { background-size: 100% 1px; }
+.fam__src { margin: 1.1rem 0 0; font: 400 13px/1.4 var(--font); color: var(--b-soft); }
+/* triggered: once a family comes on screen it swings in on its own clock */
+html.tr .fam:not(.in) { opacity: .15; transform: perspective(1400px) translateZ(-160px) rotateY(52deg); }
+html.tr .fam.in { animation: s-swing .6s var(--glide) both; }
+@keyframes s-swing { from { transform: perspective(1400px) translateZ(-160px) rotateY(52deg); opacity: .15; } 55% { opacity: 1; } to { transform: none; opacity: 1; } }
+
+/* ---------- act 3: now printing (the peak, and the signature: set type comes down mirror-reversed and prints the right way round) ---------- */
+.press { background: var(--b-paper); color: #1e2a1f; padding: clamp(4.5rem, 12vh, 8rem) var(--gut) 0; }
+.press__head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem 2rem; padding-bottom: 1rem; border-bottom: 3px solid #1e2a1f; }
+.press__head h2 { margin: 0; font: 700 clamp(2.6rem, 1rem + 5vw, 6.4rem)/.9 var(--font); letter-spacing: -.045em; }
+.press__head p { margin: 0; font: 400 15px/1.45 var(--font); color: var(--p-soft); max-width: 30em; }
+.pl-list { list-style: none; margin: 0; padding: 0; }
+.ph { position: relative; display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); grid-template-rows: auto auto 1fr; gap: 0 4vw; padding: clamp(2.5rem, 9vh, 5.5rem) 0 clamp(2.5rem, 8vh, 5rem); border-bottom: 1px solid var(--p-line); }
+.ph__outlet { grid-column: 1; grid-row: 1; margin: 0 0 1.1rem; font: 600 14px/1.4 var(--font); letter-spacing: .16em; text-transform: uppercase; color: #1e2a1f; }
+.ph__outlet span { font-weight: 400; letter-spacing: .04em; text-transform: none; color: var(--p-soft); }
+.ph__plate { --pz: 120px; --pp: 3000px; grid-column: 1; grid-row: 2; margin: 0; font: 700 clamp(2.3rem, .9rem + 3.9vw, 5.6rem)/.98 var(--font); letter-spacing: -.035em; color: #1e2a1f; text-wrap: balance; transform-origin: 50% 50%; }
+.ph__rule { grid-column: 1; grid-row: 3; align-self: start; display: block; height: 3px; width: 6rem; margin-top: 1.4rem; background: var(--b-accent); transform-origin: 0 50%; }
+.ph__shot { grid-column: 2; grid-row: 1 / 4; align-self: end; margin: 0; }
+.ph__shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.ph:last-child { border-bottom: 0; padding-bottom: clamp(1.5rem, 4vh, 2.5rem); }
+.ph__shot figcaption { margin-top: .6rem; font: 400 13px/1.4 var(--font); color: var(--p-soft); }
+/* triggered: once a plate comes on screen it turns readable and presses down on its own clock, then the rule inks */
+html.tr .ph__plate:not(.in), html.tr .rel__title:not(.in) { transform: perspective(var(--pp)) translateZ(var(--pz)) rotateY(180deg); }
+html.tr .ph__plate.in, html.tr .rel__title.in { animation: s-press .65s var(--glide) both; }
+html.tr .ph__rule:not(.in) { transform: scaleX(0); }
+html.tr .ph__rule.in { animation: s-ink .4s var(--glide) .3s both; }
+html.anim .ph__shot.sdx { animation-name: s-shot; }
+@keyframes s-press { 0% { transform: perspective(var(--pp)) translateZ(var(--pz)) rotateY(180deg); } 82% { transform: perspective(var(--pp)) translateZ(calc(var(--pz) * .18)) rotateY(0deg); } 100% { transform: none; } }
+@keyframes s-ink { from { transform: scaleX(0); } to { transform: none; } }
+@keyframes s-shot { from { transform: perspective(1200px) translate3d(0, 9vh, -260px); } to { transform: perspective(1200px) translate3d(0, -2vh, -40px); } }
+
+/* ---------- act 4: selected work, set like a front page; each picture hangs folded back and drops down on its top hinge ---------- */
+.cases { background: var(--b-paper); color: #1e2a1f; padding: clamp(1rem, 3vh, 2rem) var(--gut) clamp(3rem, 8vh, 5.5rem); }
+.cases__head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem 2rem; padding: .9rem 0 1rem; border-top: 3px solid #1e2a1f; border-bottom: 1px solid #1e2a1f; }
+.cases__head h2 { margin: 0; font: 700 clamp(2.6rem, 1rem + 5vw, 6.4rem)/.9 var(--font); letter-spacing: -.045em; }
+.cases__head p { margin: 0; font: 400 15px/1.45 var(--font); color: var(--p-soft); max-width: 32em; }
+.stories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 4vw, 4rem); }
+.story { padding: clamp(2rem, 5vh, 3rem) 0 clamp(1.5rem, 4vh, 2.5rem); border-bottom: 1px solid var(--p-line); }
+.story__pic { margin: 0 0 1.4rem; perspective: 1400px; }
+.story__pic img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transform-origin: 50% 0; backface-visibility: hidden; }
+.story__pic--wide img { aspect-ratio: 3 / 1; }
+.story__kicker { margin: 0; font: 600 13px/1.4 var(--font); letter-spacing: .16em; text-transform: uppercase; color: var(--p-soft); }
+.story h3 { margin: .8rem 0 .7rem; font: 700 clamp(2.4rem, 1rem + 3.4vw, 4.6rem)/.92 var(--font); letter-spacing: -.04em; }
+.story__lede { margin: 0; font: 400 clamp(1.05rem, .98rem + .25vw, 1.2rem)/1.5 var(--font); max-width: 34em; }
+.story__lede b { font-weight: 600; white-space: nowrap; }
+.story__cov { margin: .9rem 0 0; font: 400 14px/1.5 var(--font); color: var(--p-soft); }
+.story__cov b { font-weight: 600; color: #1e2a1f; }
+.briefs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(1.5rem, 3vw, 3rem); }
+.brief { padding: clamp(1.75rem, 4vh, 2.5rem) 0 0; }
+.brief h3 { margin: .7rem 0 .6rem; font: 700 clamp(1.9rem, 1rem + 1.8vw, 3rem)/.95 var(--font); letter-spacing: -.035em; }
+.brief p { margin: 0; font: 400 15px/1.5 var(--font); }
+.cases__more { margin: clamp(2rem, 5vh, 3rem) 0 0; font: 400 15px/1.5 var(--font); }
+.cases__more a { color: #1e2a1f; text-underline-offset: .2em; }
+html.tr .story__pic img:not(.in) { transform: perspective(1400px) rotateX(-78deg); }
+html.tr .story__pic img.in { animation: s-drop .6s var(--glide) both; }
+@keyframes s-drop { from { transform: perspective(1400px) rotateX(-78deg); } to { transform: none; } }
+
+/* ---------- act 5: clients on round plates (the studio mark's shape), rising out of depth in a wave from the centre ---------- */
+.clients { background: var(--b-ink); padding: clamp(4.5rem, 12vh, 8rem) var(--gut) clamp(3.5rem, 9vh, 6rem); }
+.clients__head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem 2rem; }
+.clients__head h2 { margin: 0; font: 700 clamp(2.6rem, 1rem + 5vw, 6.4rem)/.9 var(--font); letter-spacing: -.045em; color: #f3efe6; }
+.clients__head p { margin: 0; font: 400 15px/1.45 var(--font); color: var(--b-soft); }
+/* a staggered comb: plates on half-columns, every other row offset by half a plate (desktop 5 + 5, phones 3 + 2 + 3 + 2) */
+.comb { --hw: clamp(7rem, 11.5vw, 11.5rem); --hg: clamp(.5rem, 1vw, .9rem); --hc: calc((var(--hw) + var(--hg)) / 2); list-style: none; margin: clamp(2.5rem, 7vh, 4.5rem) auto 0; padding: 0; display: grid; grid-template-columns: repeat(11, var(--hc)); justify-content: center; row-gap: 0; }
+.hx { grid-column: var(--c) / span 2; grid-row: var(--r); width: var(--hw); margin-bottom: calc(var(--hw) * -.27 + var(--hg)); aspect-ratio: 100 / 115.47; }
+.hx:nth-child(1) { --c: 1; --r: 1; } .hx:nth-child(2) { --c: 3; --r: 1; } .hx:nth-child(3) { --c: 5; --r: 1; } .hx:nth-child(4) { --c: 7; --r: 1; } .hx:nth-child(5) { --c: 9; --r: 1; }
+.hx:nth-child(6) { --c: 2; --r: 2; } .hx:nth-child(7) { --c: 4; --r: 2; } .hx:nth-child(8) { --c: 6; --r: 2; } .hx:nth-child(9) { --c: 8; --r: 2; } .hx:nth-child(10) { --c: 10; --r: 2; }
+.hx__plate { width: 100%; height: 100%; background: #f3efe6; clip-path: circle(closest-side at 50% 50%); display: grid; place-items: center; }
+.hx__plate img { display: block; width: 60%; height: auto; max-height: 52%; object-fit: contain; }
+.hx__plate img.is-wide { width: 70%; }
+html.tr .hx:not(.in) { opacity: 0; transform: perspective(1100px) translateZ(-520px); }
+html.tr .hx.in { animation: s-hex .55s var(--glide) var(--d, 0s) both; }
+@keyframes s-hex { from { transform: perspective(1100px) translateZ(-520px); opacity: 0; } 45% { opacity: 1; } to { transform: none; opacity: 1; } }
+
+/* ---------- act 6: voices, as text; each quote mark sits on a far plane and drifts slower than its quote ---------- */
+.voices { background: var(--b-dark); padding: clamp(3.5rem, 9vh, 6rem) var(--gut) clamp(4rem, 10vh, 7rem); border-top: 1px solid var(--b-line); }
+.voices h2 { margin: 0; max-width: 14em; font: 700 clamp(2.4rem, 1rem + 4.2vw, 5.6rem)/.92 var(--font); letter-spacing: -.045em; color: #f3efe6; }
+.vq-list { list-style: none; margin: clamp(2.5rem, 7vh, 4.5rem) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(3rem, 8vh, 5rem) clamp(2rem, 5vw, 5rem); }
+.vq { position: relative; margin: 0; padding-top: 4.6rem; }
+.vq__mark { position: absolute; left: 0; top: 6px; z-index: 0; display: block; width: 68px; height: 50px; color: var(--b-accent-lt); pointer-events: none; }
+.vq__mark svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+.vq blockquote { position: relative; z-index: 1; margin: 0; }
+.vq blockquote p { margin: 0; font: 400 clamp(1.15rem, 1rem + .55vw, 1.5rem)/1.45 var(--font); color: #f3efe6; text-wrap: pretty; }
+.vq figcaption { position: relative; z-index: 1; margin-top: 1rem; font: 400 14px/1.45 var(--font); color: var(--b-soft); }
+.vq figcaption b { display: block; font-weight: 600; color: #f3efe6; font-size: 16px; }
+html.anim .vq__mark.sdx { animation-name: s-far; }
+@keyframes s-far { from { transform: perspective(900px) translate3d(0, 2.5vh, -220px); } to { transform: perspective(900px) translate3d(0, -2.5vh, -220px); } }
+
+/* ---------- act 7: the close, a press release (the smallest type on the page) ---------- */
+.close { --mk-a: var(--b-accent); --mk-b: #1e2a1f; background: var(--b-paper); color: #1e2a1f; padding: clamp(4rem, 11vh, 7rem) var(--gut) calc(1.25rem + var(--dock)); }
+.rel { max-width: 46rem; margin: 0 auto; }
+.rel__top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-bottom: .9rem; border-bottom: 1px solid #1e2a1f; }
+.rel__kicker { margin: 0; font: 600 13px/1.4 var(--font); letter-spacing: .2em; text-transform: uppercase; }
+.rel__top svg { width: 32px; height: 32px; display: block; }
+.rel__date { margin: 1.3rem 0 0; font: 400 15px/1.5 var(--font); color: var(--p-soft); }
+.rel__date b { color: #1e2a1f; font-weight: 600; }
+.rel__title { --pz: 80px; --pp: 2200px; margin: .7rem 0 0; font: 700 clamp(2.1rem, 1.2rem + 2.8vw, 3.6rem)/.98 var(--font); letter-spacing: -.035em; transform-origin: 50% 50%; }
+.rel__body { margin: 1.2rem 0 0; font: 400 16px/1.6 var(--font); max-width: 65ch; }
+.rel__contact { margin: 1.6rem 0 0; font: 400 16px/1.5 var(--font); }
+.rel__contact .cta--line { font-size: clamp(1.25rem, 1rem + .9vw, 1.6rem); color: #1e2a1f; }
+.rel__rows { margin: 1.8rem 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .55rem 1.5rem; font: 400 15px/1.5 var(--font); border-top: 1px solid var(--p-line); padding-top: 1.2rem; }
+.rel__rows dt { color: var(--p-soft); }
+.rel__rows dd { margin: 0; }
+.rel__rows a { color: #1e2a1f; text-underline-offset: .2em; display: inline-flex; align-items: center; min-height: 44px; }
+.rel__rows dt { padding-top: 11px; }
+.rel__rows dd:not(:has(a)) { padding-top: 11px; }
+.rel__rows ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; }
+.rel__end { margin: 1.8rem 0 0; text-align: center; font: 600 15px/1 var(--font); letter-spacing: .3em; }
+.foot { max-width: 46rem; margin: clamp(2rem, 5vh, 3rem) auto 0; padding-top: 1rem; border-top: 1px solid var(--p-line); font: 400 13px/1.5 var(--font); color: var(--p-soft); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1.5rem; }
+.foot a { color: #1e2a1f; text-underline-offset: .2em; }
+
+/* ---------- phones and tall narrow windows: a tall hero scene ---------- */
+@media (max-width: 860px), (max-aspect-ratio: 4 / 5) {
+  .hero__stage { height: auto; min-height: calc(100svh - var(--dock)); display: flex; flex-direction: column; box-sizing: border-box; padding: var(--bar) 0 0; }
+  .hero__frame { position: relative; inset: auto; flex: 1; display: flex; flex-direction: column; padding-bottom: 0; }
+  .scene-box { flex: 1; container-type: inline-size; display: flex; align-items: center; padding-bottom: .5rem; }
+  .scene { --sw: 100%; width: 100%; aspect-ratio: 100 / 142; }
+  .bx { right: 1cqw; top: 0; width: 34cqw; }
+  .ln1 { top: 42cqw; font-size: 16.6cqw; }
+  .ln2 { top: 57.6cqw; font-size: 20.4cqw; line-height: .9; }
+  .ln2 .w { display: block; }
+  .fr__lead { top: 100cqw; font-size: max(15px, 4.3cqw); }
+  .fr__row { top: 108cqw; }
+  .arrow { width: 50cqw; }
+  .arrow path { stroke-width: 4.6; }
+  .fr__to { margin-left: 4cqw; font-size: 6.6cqw; }
+  .fr__to .w { display: block; }
+  .hero__ask { top: 126cqw; }
+  .hero__ask .cta { font-size: 17px; }
+}
+@media (max-width: 860px) {
+  :root { --bar: 56px; --lab: 0px; --dock: calc(68px + var(--lab) + env(safe-area-inset-bottom)); --gut: 16px; }
+  .bar .cta { display: none; }
+  .bar__brand { font-size: 18px; }
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock); box-sizing: border-box;
+    padding: var(--lab) var(--gut) env(safe-area-inset-bottom); align-items: center; justify-content: center;
+    background: var(--b-ink); border-top: 1px solid var(--b-line);
+  }
+  .dock .cta { width: 100%; justify-content: center; font-size: 17px; min-height: 48px; }
+  .svc { padding-top: 2.75rem; }
+  .fam { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1.5rem 0 1.6rem; }
+  .fam h3 { font-size: clamp(5rem, 34vw, 9rem); }
+  .fam--sm h3 { font-size: clamp(2.8rem, 15.4vw, 5rem); }
+  .fam ul { font-size: 15px; gap: 0 1rem; grid-auto-rows: minmax(44px, auto); }
+  .fam li { display: flex; align-items: center; }
+  .fam li a, .story__cov a, .cases__more a, .foot a, .rel__contact .cta--line { display: inline-flex; align-items: center; min-height: 44px; }
+  .ph { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; padding: 2.4rem 0 2.6rem; }
+  .ph__outlet, .ph__plate, .ph__rule, .ph__shot { grid-column: 1; grid-row: auto; }
+  .ph__outlet { margin-bottom: 1.4rem; }
+  .rel__title { --pz: 24px; --pp: 2000px; }
+  .ph__plate { --pz: 30px; --pp: 2000px; font-size: clamp(2rem, 9.4vw, 2.8rem); line-height: 1; }
+  .ph__shot { margin-top: 1.6rem; width: 88%; }
+  .ph__rule { margin-top: 1.1rem; }
+  @keyframes s-shot { from { transform: perspective(900px) translate3d(0, 6vh, -160px); } to { transform: perspective(900px) translate3d(0, -1vh, -20px); } }
+  .stories, .briefs { grid-template-columns: minmax(0, 1fr); }
+  .story h3 { font-size: clamp(2.4rem, 12vw, 3.4rem); }
+  .brief { padding-top: 1.75rem; border-bottom: 1px solid var(--p-line); padding-bottom: 1.5rem; }
+  .comb { --hw: calc((100vw - 2 * var(--gut) - 3 * var(--hg)) / 3.2); grid-template-columns: repeat(6, var(--hc)); }
+  .hx:nth-child(1) { --c: 1; --r: 1; } .hx:nth-child(2) { --c: 3; --r: 1; } .hx:nth-child(3) { --c: 5; --r: 1; }
+  .hx:nth-child(4) { --c: 2; --r: 2; } .hx:nth-child(5) { --c: 4; --r: 2; }
+  .hx:nth-child(6) { --c: 1; --r: 3; } .hx:nth-child(7) { --c: 3; --r: 3; } .hx:nth-child(8) { --c: 5; --r: 3; }
+  .hx:nth-child(9) { --c: 2; --r: 4; } .hx:nth-child(10) { --c: 4; --r: 4; }
+  .vq-list { grid-template-columns: minmax(0, 1fr); }
+  .vq__mark { width: 54px; height: 40px; top: 4px; }
+  .vq { padding-top: 3.9rem; }
+  .rel__rows { grid-template-columns: minmax(0, 1fr); gap: .1rem; }
+  .rel__rows dd { margin-bottom: .7rem; }
+  .foot { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta__ic, .cta__t::after { transition: none; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#services">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mk-l" viewBox="0 0 120 120"><path style="fill:var(--mk-a, #a3c293)" fill-rule="evenodd" d="M60 0A60 60 0 0 0 60 120Z M36 82.4V37.6H51.7L59.4 76.6H60V82.4H53L45.3 43.8H44.2V82.4Z"/></symbol>
+  <symbol id="mk-r" viewBox="0 0 120 120"><path style="fill:var(--mk-b, #f3efe6)" fill-rule="evenodd" d="M60 0A60 60 0 0 1 60 120Z M84 82.4V37.6H68.3L60.6 76.6H60V82.4H67L74.7 43.8H75.8V82.4Z"/></symbol>
+  <symbol id="mk" viewBox="0 0 120 120"><use href="#mk-l"/><use href="#mk-r"/></symbol>
+  <symbol id="qm" viewBox="0 0 60 44"><path d="M15 0h12L12 44H0ZM46 0h12L43 44H31Z"/></symbol>
+  <symbol id="ic" viewBox="0 0 16 16"><path d="M2.5 8h10.5M9 3.8 13.2 8 9 12.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio, back to top"><svg aria-hidden="true" focusable="false"><use href="#mk"/></svg>Mosswick</a>
+  <a class="cta" href="https://example.com" target="_blank" rel="noopener"><span class="cta__t">Book an intro call</span><svg class="cta__ic" aria-hidden="true" focusable="false"><use href="#ic"/></svg></a>
+</header>
+
+<main>
+  <!-- act 1: the studio's line, its mark as two halves on a seam, the arrow -->
+  <section class="hero" id="hero" data-sc-act="flow" aria-labelledby="h1">
+    <div class="hero__stage">
+      <div class="hero__frame">
+        <div class="hero__top">
+          <p class="hero__eyebrow">Creative &amp; Marketing Studio &middot; Lowmere, since 2014</p>
+        </div>
+        <div class="scene-box">
+          <div class="scene" id="scene">
+            <div class="plane plane--back" id="pl-back">
+              <h1 class="h1" id="h1"><span class="ln1"><span class="mask"><span class="mask__in">Loud ideas,</span></span></span> <span class="ln2"><span class="ln2__in"><span class="w">made</span> <span class="w">to be seen.</span></span></span></h1>
+            </div>
+            <div class="bx" id="bx" role="img" aria-label="The Mosswick mark: a round M monogram in two halves">
+              <div class="bx__in">
+                <div class="bx__fold">
+                  <svg class="bx__half bx__half--l" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#mk-l"/></svg>
+                  <svg class="bx__half bx__half--r" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#mk-r"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="plane plane--front" id="pl-front">
+              <p class="fr__lead">Design, film and media that make</p>
+              <div class="fr__row">
+                <svg class="arrow" viewBox="0 0 555 58" aria-hidden="true" focusable="false"><path class="ar-line" pathLength="1" d="M1 29H553"/><path class="ar-head" pathLength="1" d="M503 1C507 17 524 27 554 29C524 31 507 41 503 57"/></svg>
+                <p class="fr__to"><span class="w">Brands with</span> <span class="w">a pulse.</span></p>
+              </div>
+              <div class="hero__ask">
+                <a class="cta" href="https://example.com" target="_blank" rel="noopener"><span class="cta__t">Book an intro call</span><svg class="cta__ic" aria-hidden="true" focusable="false"><use href="#ic"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 2: what we do; three service families at poster scale -->
+  <section class="svc" id="services" data-sc-act="flow" aria-labelledby="svc-h">
+    <div class="wrap">
+      <h2 class="label" id="svc-h">What we do</h2>
+      <p class="svc__aeo">Mosswick is a creative and marketing studio in Lowmere. Thirty-two strategists, designers, writers, filmmakers, developers and media buyers work in one studio for founders and marketing teams: brand strategy and identity, packaging and websites, then social content, film and campaigns, and the paid media that gets it all seen and measured.</p>
+      <ul class="fams">
+        <li class="fam">
+          <h3>Brand</h3>
+          <ul>
+            <li><a href="#">Brand Strategy</a></li>
+            <li><a href="#">Positioning</a></li>
+            <li><a href="#">Naming</a></li>
+            <li><a href="#">Brand Voice</a></li>
+            <li><a href="#">Brand Identity</a></li>
+            <li><a href="#">Logo &amp; Wordmark</a></li>
+            <li><a href="#">Colour &amp; Type System</a></li>
+            <li><a href="#">Brand Guidelines</a></li>
+            <li><a href="#">Packaging</a></li>
+            <li><a href="#">Print Management</a></li>
+          </ul>
+        </li>
+        <li class="fam fam--sm">
+          <h3>Campaigns</h3>
+          <ul>
+            <li>Campaign Concept</li>
+            <li><a href="#">Key Visuals</a></li>
+            <li><a href="#">Copywriting</a></li>
+            <li><a href="#">Out-of-Home</a></li>
+            <li><a href="#">Film &amp; Motion</a></li>
+            <li><a href="#">Social Content</a></li>
+          </ul>
+        </li>
+        <li class="fam fam--sm">
+          <h3>Web &amp; Media</h3>
+          <ul>
+            <li><a href="#">Websites</a></li>
+            <li><a href="#">UX &amp; UI Design</a></li>
+            <li><a href="#">Paid Social</a></li>
+            <li><a href="#">Paid Search</a></li>
+            <li><a href="#">Creative Testing</a></li>
+            <li><a href="#">Live Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+      <p class="fam__src">Grouped the way our teams sit in the studio.</p>
+    </div>
+  </section>
+
+  <!-- act 3: now printing (the peak) -->
+  <section class="press" id="press" data-sc-act="flow" aria-labelledby="press-h">
+    <div class="wrap">
+      <div class="press__head">
+        <h2 id="press-h">Now printing</h2>
+        <p>Four recent projects, each with the result it brought the client.</p>
+      </div>
+      <ol class="pl-list">
+        <li class="ph">
+          <p class="ph__outlet">Culture <span>&middot; for Marshlight Festival, 2023</span></p>
+          <h3 class="ph__plate">Marshlight Festival sells out nine days early with posters people want to keep</h3>
+          <span class="ph__rule" aria-hidden="true"></span>
+          <figure class="ph__shot"><img src="assets/img/work-01.webp" alt="A two-colour screen-printed festival poster of reeds and floating lanterns, pasted on a brick wall at dusk" width="960" height="600" decoding="async"><figcaption>Campaigns, identity and film</figcaption></figure>
+        </li>
+        <li class="ph">
+          <p class="ph__outlet">Fashion <span>&middot; for Velloway, 2024</span></p>
+          <h3 class="ph__plate">Velloway swaps mountain tops for wet city streets, and online sales rise 38% in launch month</h3>
+          <span class="ph__rule" aria-hidden="true"></span>
+          <figure class="ph__shot"><img src="assets/img/work-02.webp" alt="A cyclist in a dark green waterproof jacket riding down a wet city street at blue hour" width="960" height="600" loading="lazy" decoding="async"><figcaption>Film, campaign and paid media</figcaption></figure>
+        </li>
+        <li class="ph">
+          <p class="ph__outlet">Hospitality <span>&middot; for Okra &amp; Ash, 2025</span></p>
+          <h3 class="ph__plate">Opening night, fully booked: how Okra &amp; Ash went from no name on the door to five weeks booked out</h3>
+          <span class="ph__rule" aria-hidden="true"></span>
+          <figure class="ph__shot"><img src="assets/img/work-03.webp" alt="A wood-fired oven glowing in a dim restaurant kitchen, a pan of charred vegetables on the counter in front" width="960" height="600" loading="lazy" decoding="async"><figcaption>Identity, website and launch social</figcaption></figure>
+        </li>
+        <li class="ph">
+          <p class="ph__outlet">Consumer tech <span>&middot; for Stillreed, 2025</span></p>
+          <h3 class="ph__plate">Stillreed: A quiet campaign for headphones</h3>
+          <span class="ph__rule" aria-hidden="true"></span>
+          <figure class="ph__shot"><img src="assets/img/work-04.webp" alt="Sand-coloured headphones resting on the tiled edge of an empty indoor swimming pool" width="960" height="600" loading="lazy" decoding="async"><figcaption>Product films and launch campaign</figcaption></figure>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- act 4: selected work, as a front page -->
+  <section class="cases" id="cases" data-sc-act="flow" aria-labelledby="cases-h">
+    <div class="wrap">
+      <div class="cases__head">
+        <h2 id="cases-h">Selected work</h2>
+        <p>The brief, what we made and what changed, from seven recent projects.</p>
+      </div>
+      <div class="stories">
+        <article class="story">
+          <figure class="story__pic"><img src="assets/img/work-05.webp" alt="Five glass cordial bottles in fruit colours lined up on a limestone ledge in hard morning sun" width="1000" height="563" loading="lazy" decoding="async"></figure>
+          <p class="story__kicker">Food and drink &middot; Identity &amp; Packaging</p>
+          <h3>Plumtide</h3>
+          <p class="story__lede">Plumtide&rsquo;s founder made cordials in her kitchen and sold them at weekend markets. We drew a hand-cut fruit pattern and a warm wordmark, designed <b>labels that change colour</b> by flavour, and the range was <b>stocked in 64 delis</b> within a year.</p>
+          <p class="story__cov"><a href="#" style="color:#1e2a1f">Read the case study</a></p>
+        </article>
+        <article class="story">
+          <figure class="story__pic story__pic--wide"><img src="assets/img/work-06.webp" alt="A sage green cargo e-bike with a wooden front box parked on a leafy residential hill street" width="1080" height="360" loading="lazy" decoding="async"></figure>
+          <p class="story__kicker">Mobility &middot; Film, Web &amp; Paid Media</p>
+          <h3>Gearfinch</h3>
+          <p class="story__lede">A launch campaign and website for a family cargo e-bike that carries two children and the shopping up a steep hill. We filmed real families on real school runs, not models on empty roads.</p>
+          <p class="story__cov"><b>In the launch quarter:</b> 640 test rides booked at home, from paid social on streets near schools and a new booking site.</p>
+        </article>
+        <article class="story">
+          <figure class="story__pic"><img src="assets/img/work-07.webp" alt="A wheaten terrier beside an open meal box and two clear food pouches on a terracotta tiled kitchen floor" width="1000" height="563" loading="lazy" decoding="async"></figure>
+          <p class="story__kicker">Pet food &middot; Packaging &amp; Paid Social</p>
+          <h3>Houndsbury</h3>
+          <p class="story__lede">Packaging and paid social for a fresh dog food subscription. Every pouch got a <b>clear window</b> onto the real ingredients, and weekly tests put short videos of dogs at dinner time against price-led ads. The dogs won: <b>subscriptions up 2.4x</b> in a year.</p>
+        </article>
+        <article class="story">
+          <figure class="story__pic"><img src="assets/img/work-08.webp" alt="Handmade plates and bowls in speckled oatmeal, teal and rust glazes on a raw linen cloth" width="1000" height="563" loading="lazy" decoding="async"></figure>
+          <p class="story__kicker">Homeware &middot; Identity &amp; Websites</p>
+          <h3>Kilnmark</h3>
+          <p class="story__lede">Identity and online shop for a ceramics studio whose glazes are the star. A calm serif, a small stamp for the base of every piece and product pages that show each glaze in daylight: <b>online orders tripled</b> in six months, and the founders <b>update the shop</b> themselves.</p>
+        </article>
+      </div>
+      <div class="briefs">
+        <article class="brief">
+          <p class="story__kicker">Energy &amp; Home</p>
+          <h3>Voltmere</h3>
+          <p>Brand, website and a plain-language savings calculator for a home solar installer. Qualified leads up 3x, and sales calls got shorter.</p>
+        </article>
+        <article class="brief">
+          <p class="story__kicker">Insurance</p>
+          <h3>Shelterly</h3>
+          <p>Brand, site and paid search for home insurance in plain English. The quote form went from 22 questions to 9, and completions rose 64%.</p>
+        </article>
+        <article class="brief">
+          <p class="story__kicker">Drinks</p>
+          <h3>Fizzwold</h3>
+          <p>From glass bottles to cans, with a bubbly wordmark and short, odd films about fermentation. Stockists up from 80 to 310.</p>
+        </article>
+      </div>
+      <p class="cases__more"><a href="#">View all 28 projects, from cordials to kombucha</a></p>
+    </div>
+  </section>
+
+  <!-- act 5: clients -->
+  <section class="clients" id="clients" data-sc-act="flow" aria-labelledby="clients-h">
+    <div class="wrap">
+      <div class="clients__head">
+        <h2 id="clients-h">Clients who stay</h2>
+        <p>Ten of the brands we work with, most of them for years.</p>
+      </div>
+      <ul class="comb" id="comb">
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-01.svg" alt="Plumtide" width="389" height="99" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-02.svg" alt="Velloway" width="805" height="82" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-03.svg" alt="Kilnmark" width="383" height="76" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-04.svg" alt="Paywren" width="421" height="87" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-05.svg" alt="Fernstride" width="603" height="77" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-06.svg" alt="Houndsbury" width="542" height="89" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-07.svg" alt="Stillreed" width="726" height="77" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-08.svg" alt="Cragloft" width="566" height="82" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-09.svg" alt="Voltmere" width="574" height="77" loading="lazy" decoding="async" class="is-wide"></div></li>
+        <li class="hx"><div class="hx__plate"><img src="assets/logos/client-10.svg" alt="Fizzwold" width="362" height="79" loading="lazy" decoding="async" class="is-wide"></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- act 6: voices, as text only -->
+  <section class="voices" id="voices" data-sc-act="flow" aria-labelledby="voices-h">
+    <div class="wrap">
+      <h2 id="voices-h">Kind words from people we work for</h2>
+      <ul class="vq-list">
+        <li><figure class="vq"><span class="vq__mark" aria-hidden="true"><svg viewBox="0 0 60 44" focusable="false"><use href="#qm"/></svg></span><blockquote><p>They asked better questions in the first week than our last agency did in a year. The new brand finally sounds like us.</p></blockquote><figcaption><b>Nadia Ferrante</b>Founder, Plumtide</figcaption></figure></li>
+        <li><figure class="vq"><span class="vq__mark" aria-hidden="true"><svg viewBox="0 0 60 44" focusable="false"><use href="#qm"/></svg></span><blockquote><p>Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us exactly what every bit of spend brought back.</p></blockquote><figcaption><b>Owen Haddad</b>Head of Growth, Paywren</figcaption></figure></li>
+        <li><figure class="vq"><span class="vq__mark" aria-hidden="true"><svg viewBox="0 0 60 44" focusable="false"><use href="#qm"/></svg></span><blockquote><p>The film crew turned up in the pouring rain, smiling. Months later, people still stop us at trade shows to talk about that campaign.</p></blockquote><figcaption><b>Jonas Pell</b>Marketing Director, Velloway</figcaption></figure></li>
+        <li><figure class="vq"><span class="vq__mark" aria-hidden="true"><svg viewBox="0 0 60 44" focusable="false"><use href="#qm"/></svg></span><blockquote><p>We had eight weeks to open a restaurant with no name. They gave us a name on the door, a full booking diary and a lot less stress.</p></blockquote><figcaption><b>Cora Mbeki-Lane</b>Owner, Okra &amp; Ash</figcaption></figure></li>
+        <li><figure class="vq"><span class="vq__mark" aria-hidden="true"><svg viewBox="0 0 60 44" focusable="false"><use href="#qm"/></svg></span><blockquote><p>Plain words, quick replies and work we are proud to put our name on. We have renewed with them every year since our first project.</p></blockquote><figcaption><b>Ilse Varga</b>Director, Hollin Gallery</figcaption></figure></li>
+        <li><figure class="vq"><span class="vq__mark" aria-hidden="true"><svg viewBox="0 0 60 44" focusable="false"><use href="#qm"/></svg></span><blockquote><p>The new website cut our quote form in half and far more people now finish it. Our board finally stopped asking about marketing spend.</p></blockquote><figcaption><b>Marcus Tilley</b>Chief Operating Officer, Shelterly</figcaption></figure></li>
+        <li><figure class="vq"><span class="vq__mark" aria-hidden="true"><svg viewBox="0 0 60 44" focusable="false"><use href="#qm"/></svg></span><blockquote><p>They treated our small charity like their biggest client. Volunteers now find us on their own, and the river looks better every spring.</p></blockquote><figcaption><b>Beatrix Oyelaran</b>Director, River Commons Trust</figcaption></figure></li>
+        <li><figure class="vq"><span class="vq__mark" aria-hidden="true"><svg viewBox="0 0 60 44" focusable="false"><use href="#qm"/></svg></span><blockquote><p>Honest about what would work and what would not. That honesty saved us a lot of money in our first quarter of selling bikes.</p></blockquote><figcaption><b>Felix Andersen-Ruiz</b>Co-founder, Gearfinch</figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- act 7: the close, set as a press release -->
+  <section class="close" id="contact" data-sc-act="flow" aria-labelledby="close-h">
+    <article class="rel">
+      <div class="rel__top">
+        <p class="rel__kicker">For immediate release</p>
+        <svg aria-hidden="true" focusable="false"><use href="#mk"/></svg>
+      </div>
+      <p class="rel__date"><b>Lowmere</b> &middot; Mosswick Studio, 1 Example Street</p>
+      <h2 class="rel__title" id="close-h">Make your next launch the one people quote.</h2>
+      <p class="rel__body">Mosswick plans and makes brands, websites, films and campaigns, then runs the media that gets them seen. Tell us the problem in plain words, and within two working days we will come back with a plan, a budget and a first idea.</p>
+      <p class="rel__contact">Media contact: <a class="cta cta--line" href="https://example.com" target="_blank" rel="noopener"><span class="cta__t">Book an intro call</span><svg class="cta__ic" aria-hidden="true" focusable="false"><use href="#ic"/></svg></a></p>
+      <dl class="rel__rows">
+        <dt>Phone</dt><dd><a href="tel:+15550142">+1 555 0142</a></dd>
+        <dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd>
+        <dt>Office</dt><dd>1 Example Street, Lowmere</dd>
+        <dt>Hours</dt><dd>Monday to Friday, 9am to 6pm. We reply to every brief within two working days.</dd>
+        <dt>Follow</dt><dd><ul><li><a href="https://example.com" rel="noopener">Instagram</a></li><li><a href="https://example.com" rel="noopener">LinkedIn</a></li><li><a href="https://example.com" rel="noopener">Behance</a></li><li><a href="https://example.com" rel="noopener">YouTube</a></li></ul></dd>
+      </dl>
+      <p class="rel__end" aria-hidden="true">###</p>
+    </article>
+    <footer class="foot">
+      <span>&copy; 2026 Mosswick Studio. Made in Lowmere since 2014.</span>
+      <span>Example content. Swap in your own.</span>
+      <span><a href="#">About</a> &middot; <a href="#cases">Work</a> &middot; <a href="#">Journal</a></span>
+    </footer>
+  </section>
+</main>
+
+<div class="dock" id="dock">
+  <a class="cta" href="https://example.com" target="_blank" rel="noopener"><span class="cta__t">Book an intro call</span><svg class="cta__ic" aria-hidden="true" focusable="false"><use href="#ic"/></svg></a>
+</div>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px), (max-aspect-ratio: 4 / 5)');
+  var hero = document.getElementById('hero');
+
+  /* ---- the hero reveal, once Jost is ready (fallback timeout) ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+    };
+    if (document.fonts && document.fonts.load) {
+      Promise.all([document.fonts.load('700 100px Jost'), document.fonts.load('400 16px Jost')]).then(go, go);
+    } else { go(); }
+    setTimeout(go, 1400);
+  }
+
+  /* ---- scroll-linked ranges, in page pixels, for the CSS scroll timelines ---- */
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b, glide) {
+    if (!el) return;
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    el.classList.add('sdx'); if (glide) el.classList.add('glide');
+  }
+  function clear(el) { if (el) { el.classList.remove('sdx', 'glide'); el.style.removeProperty('--r0'); el.style.removeProperty('--r1'); } }
+  function measure() {
+    if (!anim) return;
+    var vh = innerHeight, phone = phoneQ.matches;
+
+    /* hero (desktop): back plane recedes, the box comes forward and turns, the front plane lifts faster */
+    var hT = top(hero), hH = hero.offsetHeight;
+    ['pl-back', 'bx', 'pl-front'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (phone) clear(el); else setR(el, hT, hT + hH * .9, true);
+    });
+
+    /* services: each family swings in from a three-quarter view as it comes up */
+
+    /* the press: the plate turns from mirror-reversed to readable while it comes down onto the paper, then the ink rule prints */
+    [].forEach.call(document.querySelectorAll('.ph'), function (ph) {
+      var shot = ph.querySelector('.ph__shot');
+      var s = top(shot); setR(shot, s - vh, s + shot.offsetHeight * .4);
+    });
+
+
+    /* voices: the quote marks sit on a far plane and drift slower than the quotes */
+    [].forEach.call(document.querySelectorAll('.vq__mark'), function (m) {
+      var q = m.parentNode, t = top(q); setR(m, t - vh, t + q.offsetHeight);
+    });
+  }
+
+  /* ---- triggered reveals: the families, the printed headlines, the folding pictures and the client wave each play
+     through on their own clock once their element comes on screen, so any scroll length rests on a finished screen ---- */
+  var comb = document.getElementById('comb');
+  function wave() {
+    /* the client plates rise in a wave from the centre of the comb: later the further out */
+    var cR = comb.getBoundingClientRect(), cx = cR.left + cR.width / 2, cy = cR.top + cR.height / 2, hx = comb.querySelectorAll('.hx'), maxD = 1;
+    var ds = [].map.call(hx, function (h) { var r = h.getBoundingClientRect(); var d = Math.hypot(r.left + r.width / 2 - cx, (r.top + r.height / 2 - cy) * 1.4); maxD = Math.max(maxD, d); return d; });
+    [].forEach.call(hx, function (h, i) { h.style.setProperty('--d', (ds[i] / maxD * .24).toFixed(3) + 's'); });
+  }
+  if (root.classList.contains('fx') && 'IntersectionObserver' in window) {
+    root.classList.add('tr');
+    wave();
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var t = e.target; io.unobserve(t);
+        if (t === comb) { [].forEach.call(comb.querySelectorAll('.hx'), function (h) { h.classList.add('in'); }); return; }
+        t.classList.add('in');
+        if (t.classList.contains('ph__plate')) t.parentNode.querySelector('.ph__rule').classList.add('in');
+      });
+    });
+    [].forEach.call(document.querySelectorAll('.fam, .ph__plate, .rel__title, .story__pic img, #comb'), function (el) { io.observe(el); });
+  }
+
+  var lastW = -1;
+  function all() { measure(); lastW = innerWidth; }
+  all();
+  addEventListener('resize', function () { if (innerWidth !== lastW || !phoneQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); } }).observe(document.body); }
+})();
+</script>
+</body>
+</html>

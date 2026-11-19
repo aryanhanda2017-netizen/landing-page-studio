@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio in Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio of 32 people in Lowmere: brand strategy, identity, websites, social, film, campaigns and paid media.">
+<meta name="theme-color" content="#F2542D">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="apple-touch-icon" href="assets/mark.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta property="og:description" content="Brands worth remembering. Marketing that pays back. Case studies for Plumtide, Okra &amp; Ash, Paywren and Marshlight Festival.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta name="twitter:description" content="Brands worth remembering. Marketing that pays back. A studio of 32 in Lowmere.">
+
+<script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("pre-reveal");</script>
+<link rel="preload" as="image" href="assets/wordmark.svg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/team-02.webp" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-serif-italic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/geist-regular.woff2" crossorigin>
+<link rel="stylesheet" href="scrollcraft.css">
+
+
+<style>
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-semibold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("assets/fonts/instrument-serif-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+
+/* Palette "Tomato Press": these six values colour the whole page. Spacing, type and motion come from the engine. */
+:root {
+  --p-bg: #F2542D;
+  --p-surface: #F46B47;
+  --p-ink: #1B0E0A;
+  --p-muted: #33140C;
+  --p-accent: #1B0E0A;
+  --p-accent-ink: #FFE8C7;
+
+  --g-accent: var(--p-accent);
+  --g-accent-deep: color-mix(in oklab, var(--p-accent) 80%, #000);
+  --g-accent-deeper: color-mix(in oklab, var(--p-accent) 64%, #000);
+  --g-on-accent: var(--p-accent-ink);
+  --g-paper: var(--p-bg);
+  --g-plate: color-mix(in oklab, var(--p-bg) 16%, #fff);
+  --g-plate-ink: var(--p-ink);
+  --g-plate-soft: var(--p-muted);
+  --g-shade: color-mix(in oklab, var(--p-ink) 70%, #000);
+
+  --sc-canvas: var(--p-bg);
+  --sc-surface: var(--p-surface);
+  --sc-ink: var(--p-ink);
+  --sc-ink-soft: var(--p-muted);
+  --sc-accent: var(--p-accent);
+  --sc-accent-ink: var(--p-accent-ink);
+
+  --g-sys: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sc-font-display: var(--g-sys);
+  --sc-font-text: var(--g-sys);
+  --g-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+
+  --g-ease: cubic-bezier(.16, 1, .3, 1);
+  --g-line: color-mix(in oklab, var(--sc-ink) 20%, transparent);
+  --g-line-plate: color-mix(in oklab, var(--g-plate-ink) 16%, transparent);
+  --g-result: 1.02rem;
+  --g-result-weight: 600;
+  --nav-h: 64px;
+  color-scheme: light;
+}
+/* The signature: one switch turns the whole gallery up. */
+html.is-loud {
+  --sc-canvas: var(--p-accent);
+  --sc-surface: var(--g-accent-deep);
+  --sc-ink: var(--p-accent-ink);
+  --sc-ink-soft: color-mix(in oklab, var(--p-accent-ink) 84%, var(--p-accent));
+  --sc-accent: var(--p-accent-ink);
+  --sc-accent-ink: var(--g-accent-deeper);
+  --g-line: color-mix(in oklab, var(--sc-ink) 40%, transparent);
+  --g-result: clamp(1.45rem, 1.1rem + 1.1vw, 2rem);
+  --g-result-weight: 600;
+}
+
+html { scroll-padding-top: calc(var(--nav-h) + 12px); }
+body {
+  background: var(--sc-canvas);
+  color: var(--sc-ink);
+  font-family: var(--sc-font-text);
+  transition: background-color .42s var(--g-ease), color .42s var(--g-ease);
+}
+h1, h2, h3 { font-family: var(--sc-font-display); color: inherit; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--g-accent); outline-offset: 3px; }
+html.is-loud :focus-visible { outline-color: var(--g-on-accent); }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--g-plate); color: var(--g-plate-ink); padding: 10px 14px; border-radius: 6px; }
+.skip:focus { top: 12px; }
+
+.eyebrow, .caps {
+  font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600;
+}
+.textlink {
+  text-decoration: underline; text-underline-offset: .28em; text-decoration-thickness: 1px;
+  transition: text-decoration-color .16s var(--g-ease), color .16s var(--g-ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .textlink:hover { text-decoration-thickness: 2px; }
+}
+
+/* ---------- index bar (always paper, so the wordmark keeps the accent colour) ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--nav-h);
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 0 clamp(1rem, 3vw, 2.25rem);
+  background: var(--g-paper); color: var(--g-plate-ink);
+  border-bottom: 1px solid var(--g-line-plate);
+}
+.bar__mark { display: block; flex: none; line-height: 0; }
+.bar__mark img { width: 132px; height: auto; }
+.bar__index { position: relative; flex: 1; display: flex; justify-content: center; }
+.bar__index ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.bar__index a {
+  display: block; padding: .5rem 0; font-size: .8rem; text-decoration: none; color: var(--g-plate-soft);
+  transition: color .16s var(--g-ease);
+}
+.bar__index a[aria-current="true"], .bar__index a:hover { color: var(--g-plate-ink); }
+.bar__marker {
+  position: absolute; left: 0; bottom: 2px; height: 2px; width: 100px; background: var(--g-accent);
+  transform-origin: 0 50%; opacity: 0; pointer-events: none;
+  transition: transform .22s var(--g-ease), opacity .12s var(--g-ease);
+}
+.bar__end { display: flex; align-items: center; gap: 1rem; flex: none; }
+.bar__cta {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 1rem; border-radius: 6px;
+  background: var(--g-accent); color: var(--g-on-accent); text-decoration: none; font-size: .82rem; font-weight: 600;
+  transition: transform .14s var(--g-ease), background-color .16s var(--g-ease);
+}
+.bar__cta:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .bar__cta:hover { background: var(--g-accent-deep); } }
+.bar__menu {
+  display: none; min-height: 40px; padding: 0 1rem; border-radius: 6px; border: 1px solid var(--g-line-plate);
+  background: transparent; color: var(--g-plate-ink); font: 600 .8rem var(--g-sys); cursor: pointer;
+}
+
+/* ---------- the fader ---------- */
+.fader {
+  display: inline-flex; align-items: center; gap: .5rem; padding: .25rem 0; border: 0; background: none;
+  color: var(--g-plate-ink); font: 600 .66rem/1 var(--g-sys); letter-spacing: .14em; text-transform: uppercase; cursor: pointer;
+  --cap-x: 0; --travel: 42px;
+}
+/* the idle end is a solid muted tone (80% toward the ground), not a faded one; the live end takes full ink */
+.fader { --fader-ground: var(--g-paper); }
+.fader__end { color: color-mix(in oklab, currentColor 80%, var(--fader-ground)); transition: color .2s var(--g-ease); }
+.fader[aria-checked="false"] .fader__end--quiet,
+.fader[aria-checked="true"] .fader__end--loud { color: inherit; }
+.fader__track {
+  position: relative; width: calc(var(--travel) + 14px); height: 26px; touch-action: none;
+  background:
+    linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc((100% - 1px) / 4)) center / 100% 9px no-repeat;
+  color: color-mix(in oklab, var(--g-plate-ink) 45%, transparent);
+}
+.fader__cap {
+  position: absolute; left: 0; top: 50%; width: 14px; height: 24px; margin-top: -12px; border-radius: 3px;
+  background: var(--g-accent); box-shadow: 0 2px 4px color-mix(in srgb, var(--g-shade) 28%, transparent);
+  transform: translateX(calc(var(--cap-x) * var(--travel)));
+  transition: transform .38s var(--g-ease);
+}
+.fader__cap::after { content: ""; position: absolute; left: 2px; right: 2px; top: 50%; height: 2px; margin-top: -1px; background: var(--g-on-accent); }
+.fader[aria-checked="true"] { --cap-x: 1; }
+.fader.is-dragging .fader__cap { transition: none; }
+.fader--big { --travel: clamp(180px, 40vw, 300px); font-size: .8rem; gap: 1rem; color: var(--sc-ink); --fader-ground: var(--sc-canvas); }
+.fader--big .fader__track { height: 52px; color: color-mix(in oklab, var(--sc-ink) 50%, transparent); background-size: 100% 1px, 100% 18px; width: calc(var(--travel) + 28px); }
+.fader--big .fader__cap { width: 28px; height: 48px; margin-top: -24px; border-radius: 5px; }
+.fader--big .fader__cap::after { height: 3px; margin-top: -1.5px; left: 4px; right: 4px; }
+html.is-loud .fader--big .fader__cap { background: var(--g-on-accent); }
+html.is-loud .fader--big .fader__cap::after { background: var(--g-accent); }
+
+/* ---------- museum label ---------- */
+.label {
+  background: var(--g-plate); color: var(--g-plate-ink);
+  border: 1px solid var(--g-line-plate); border-radius: 4px;
+  padding: clamp(1rem, 1.6vw, 1.5rem);
+  box-shadow: 0 10px 24px -14px color-mix(in srgb, var(--g-shade) 40%, transparent), 0 2px 4px color-mix(in srgb, var(--g-shade) 8%, transparent);
+}
+.label__title {
+  margin: 0; font-family: var(--g-serif); font-style: italic; font-weight: 400;
+  font-size: clamp(1.6rem, 1.2rem + 1.1vw, 2.2rem); line-height: 1.04; letter-spacing: -.01em;
+}
+.label__kind { margin: .25rem 0 0; font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--g-plate-soft); }
+.label__rows { margin: 1rem 0 0; display: grid; gap: .75rem; }
+.label__rows > div { display: grid; grid-template-columns: 4.5rem 1fr; gap: .75rem; padding-top: .75rem; border-top: 1px solid var(--g-line-plate); }
+.label__rows dt { font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--g-plate-soft); padding-top: .25rem; }
+.label__rows dd { margin: 0; font-size: .92rem; line-height: 1.5; text-wrap: pretty; }
+.label__result dd {
+  font-size: var(--g-result); font-weight: var(--g-result-weight); line-height: 1.25; letter-spacing: 0; color: var(--g-plate-ink);
+  transition: font-size .42s var(--g-ease);
+}
+.label__link {
+  display: inline-block; margin-top: 1rem; font-size: .82rem; font-weight: 600; color: var(--g-plate-ink);
+  text-decoration: underline; text-underline-offset: .28em; text-decoration-thickness: 1px;
+}
+
+/* ---------- act 1: the entrance wall (team hero) ---------- */
+.entry {
+  position: relative; overflow: hidden; min-height: 100svh;
+  display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; align-items: end;
+  padding: calc(var(--nav-h) + clamp(1rem, 3vh, 2rem)) var(--sc-gutter) 3.5rem;
+  --g-frame: var(--g-accent); --g-frame-ink: var(--g-on-accent); --g-mark: var(--g-accent);
+  --mx: 0; --my: 0;
+}
+html.is-loud .entry { --g-frame: var(--g-plate); --g-frame-ink: var(--g-accent-deeper); --g-mark: var(--g-on-accent); }
+.entry__head { grid-row: 1; align-self: start; position: relative; z-index: 6; max-width: 48rem; }
+.entry__head .eyebrow { margin: 0 0 .75rem; color: var(--sc-ink-soft); }
+.entry h1 {
+  margin: 0; font-size: clamp(2rem, 1.3rem + 1.6vw, 2.75rem); line-height: 1.04; letter-spacing: -.022em; font-weight: 600;
+  text-wrap: balance;
+}
+.entry__head .textlink { display: inline-block; margin-top: 1rem; font-weight: 600; font-size: 1rem; color: var(--sc-ink); }
+
+/* The scene: one box with fixed proportions holding the wordmark, the frame, the three people and
+   the ledge. Everything inside is placed in units of the scene's own width, so the overlap and the
+   spacing are the same on every screen; only the scene's size changes, fitted to the height left. */
+.scene {
+  grid-row: 2; justify-self: center; position: relative; margin-top: 1.5rem;
+  width: var(--scene-w, min(80vw, 1120px, max(560px, calc((100svh - 23rem) * 1.72))));
+  aspect-ratio: 100 / 58; container-type: inline-size;
+  clip-path: inset(-20% -30% 0 -30%);
+  --mark-w: 118cqw; --mark-left: -9cqw; --mark-top: 8.4cqw;
+}
+.entry__mark { position: absolute; z-index: 1; top: var(--mark-top); left: var(--mark-left); width: var(--mark-w); }
+.entry__mark-in {
+  width: 100%; aspect-ratio: 439 / 76.8; background: var(--g-mark);
+  -webkit-mask: url("assets/wordmark.svg") center / contain no-repeat; mask: url("assets/wordmark.svg") center / contain no-repeat;
+  translate: calc(var(--mx) * -6px) calc(var(--my) * -4px);
+  transition: background-color .42s var(--g-ease);
+}
+.window {
+  position: absolute; z-index: 3; margin: 0; left: 7cqw; right: 7cqw; top: 22cqw; bottom: 0;
+  container-type: inline-size;
+  --pw: 40cqw; --sill: 7cqw; --post: 1.4cqw;
+}
+.person { position: absolute; bottom: -4cqw; width: var(--pw); }
+.person img { display: block; width: 100%; height: auto; translate: calc(var(--mx) * var(--depth, 10px)) calc(var(--my) * 4px); }
+/* three equal portraits, evenly spaced; depth steps left to right so each person hides the crop edge of the one behind.
+   bottoms differ so the three heads cover the same share of the wordmark (15 to 26%) */
+.person--a { left: var(--post); width: var(--pw); bottom: -5.9cqw; z-index: 1; --depth: 6px; }
+.person--b { left: 50%; margin-left: calc(var(--pw) * -.5); width: var(--pw); bottom: -2.3cqw; z-index: 2; --depth: 10px; }
+.person--c { right: var(--post); width: var(--pw); bottom: -5.9cqw; z-index: 3; --depth: 14px; }
+/* soften the front portrait's left crop edge where it crosses the middle one */
+.person--c img {
+  -webkit-mask: linear-gradient(#000 0 0) top / 100% 42% no-repeat, linear-gradient(to right, transparent, #000 6%) bottom / 100% 60% no-repeat;
+  mask: linear-gradient(#000 0 0) top / 100% 42% no-repeat, linear-gradient(to right, transparent, #000 6%) bottom / 100% 60% no-repeat;
+}
+.window__post { position: absolute; bottom: 0; width: var(--post); height: 72%; background: var(--g-frame); z-index: 4; transition: background-color .42s var(--g-ease); }
+.window__post--l { left: 0; }
+.window__post--r { right: 0; }
+.window__sill {
+  position: absolute; left: 0; right: 0; bottom: 0; height: var(--sill); z-index: 5;
+  background: var(--g-frame); color: var(--g-frame-ink);
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; padding: 0 2cqw;
+  box-shadow: 0 -10px 24px -18px color-mix(in srgb, var(--g-shade) 55%, transparent);
+  transition: background-color .42s var(--g-ease), color .42s var(--g-ease);
+}
+.window__sill span { font-size: clamp(.56rem, .3rem + 1.3cqw, .8rem); letter-spacing: .14em; text-transform: uppercase; font-weight: 600; text-align: center; line-height: 1.3; }
+.window__sill span i { display: block; font-family: var(--g-serif); font-style: italic; font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 1.35em; opacity: .9; }
+
+/* the reveal: name rises from behind its own baseline, then the three pop up from behind the ledge */
+@media (prefers-reduced-motion: no-preference) {
+  .entry__mark-in, .person img, .entry__head, .entry__wall, .window__post, .window__sill {
+    transition-property: transform, opacity, clip-path, background-color, color;
+    transition-timing-function: var(--g-ease);
+  }
+  .entry__mark-in { transition-duration: .9s, .9s, .9s, .42s, .42s; }
+  .person img { transition-duration: .85s, .5s; }
+  .entry__head { transition-duration: .55s; }
+  .window__post, .window__sill { transition-duration: .5s, .5s, 0s, .42s, .42s; }
+  html.pre-reveal .entry__mark-in { clip-path: inset(0 0 100% 0); transform: translateY(22%); }
+  html.pre-reveal .entry__head { opacity: 0; transform: translateY(12px); }
+  html.pre-reveal .window__post, html.pre-reveal .window__sill { transform: translateY(100%); }
+  html.pre-reveal .person img { transform: translateY(78%); }
+  .entry__mark-in { clip-path: inset(0 0 0 0); transition-delay: .08s; }
+  .entry__head { transition-delay: .05s; }
+  .window__post, .window__sill { transition-delay: .2s; }
+  .person--a img { transition-delay: .42s; }
+  .person--c img { transition-delay: .56s; }
+  .person--b img { transition-delay: .7s; }
+}
+
+/* ---------- act 2: the walk (peak) ---------- */
+.walk { position: relative; }
+.walk__stage { height: 100vh; height: 100svh; overflow: hidden; display: flex; align-items: center; }
+.rail {
+  display: flex; align-items: center; gap: clamp(2.5rem, 6vw, 6rem);
+  padding: calc(var(--nav-h) + 1rem) var(--sc-gutter) 1rem; width: max-content; will-change: transform;
+}
+.rail__lead, .rail__end { flex: none; width: clamp(16rem, 24vw, 22rem); }
+.rail__lead h2 { margin: 0; font-size: clamp(2rem, 1.4rem + 2vw, 3.2rem); line-height: 1.02; letter-spacing: -.024em; font-weight: 600; }
+.rail__lead p, .rail__end p { margin: 1rem 0 0; color: var(--sc-ink-soft); line-height: 1.6; font-size: 1rem; }
+.rail__end ul { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0; }
+.rail__end li a { display: block; padding: .7rem 0; border-top: 1px solid var(--g-line); text-decoration: none; font-weight: 600; transition: color .16s var(--g-ease); }
+.rail__end li:last-child a { border-bottom: 1px solid var(--g-line); }
+@media (hover: hover) and (pointer: fine) { .rail__end li a:hover { color: var(--sc-ink-soft); } }
+
+.object--wall {
+  flex: none; position: relative; width: clamp(40rem, 64vw, 66rem);
+  display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center;
+  --settle: 1;
+}
+.object--wall .object__wall {
+  grid-column: 1 / 2; grid-row: 1; margin: 0; background: var(--wall); border-radius: 3px; overflow: hidden;
+  height: min(70svh, 44rem); display: grid; place-items: center;
+}
+.object--wall .object__wall img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; scale: 1.08; transform-origin: 50% 100%; translate: var(--art-x, 0) 0; }
+.object--contain .object__wall img { object-fit: contain; }
+.object--wall .label { grid-column: 2 / 3; grid-row: 1; margin: 4rem 0 0 -3rem; z-index: 2; translate: var(--lab-x, 0) 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .object--wall { opacity: calc(.92 + .08 * var(--settle)); transform: translateY(calc((1 - var(--settle)) * 22px)); }
+}
+
+/* The walk's sideways travel is a CSS scroll-driven animation where supported, so it moves
+   with the browser's own scrolling (smooth on phones, through momentum and the URL bar).
+   Elsewhere the engine's data-sc-pan drives it, as before. */
+@keyframes walk-pan { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(calc(var(--rail-travel, 0px) * -1), 0, 0); } }
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    html.sda .rail { animation: walk-pan linear both; animation-timeline: scroll(root block); animation-range: var(--walk-start, 0px) var(--walk-end, 1px); }
+  }
+}
+/* Phones and touch screens: only the row moves. No settle, no separate art and label speeds. */
+@media (max-width: 860px), (hover: none) and (pointer: coarse) {
+  .object--wall { opacity: 1 !important; transform: none !important; }
+  .object--wall .object__wall img, .object--wall .label { translate: none !important; }
+}
+
+/* ---------- act 3: services, an intro then a turning disc ---------- */
+.services-intro { padding-block: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem); }
+.catalogue__head h2, .sec-head h2 { margin: 0; font-size: clamp(1.9rem, 1.3rem + 1.8vw, 2.9rem); line-height: 1.04; letter-spacing: -.022em; font-weight: 600; text-wrap: balance; }
+.catalogue__head p, .sec-head p { margin: 1rem 0 0; color: var(--sc-ink-soft); line-height: 1.6; max-width: 30rem; }
+.services-intro .sec-head { margin-bottom: 0; align-items: start; }
+.services-intro .sec-head p { max-width: 36rem; font-size: clamp(1rem, .96rem + .2vw, 1.12rem); }
+
+.disc-act { position: relative; --g-disc: var(--g-accent); }
+html.is-loud .disc-act { --g-disc: color-mix(in oklab, var(--p-accent) 60%, var(--p-bg)); }
+.disc-stage {
+  height: 100vh; height: 100svh; overflow: hidden;
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center;
+  padding: var(--nav-h) var(--sc-gutter) 0;
+}
+.disc-copy { position: relative; z-index: 2; max-width: 30rem; }
+.disc-copy__stack { display: grid; }
+.svc {
+  grid-area: 1 / 1; opacity: 0; transform: translateY(14px); visibility: hidden;
+  transition: opacity .26s var(--g-ease), transform .26s var(--g-ease), visibility 0s linear .26s;
+}
+.svc.is-active { opacity: 1; transform: none; visibility: visible; transition: opacity .26s var(--g-ease) .05s, transform .26s var(--g-ease) .05s, visibility 0s; }
+.svc__plate { display: none; }
+.svc h3 { margin: 0; font-size: clamp(2rem, 1.3rem + 2.2vw, 3.3rem); line-height: 1.02; letter-spacing: -.024em; font-weight: 600; text-wrap: balance; }
+.svc p { margin: 1rem 0 0; line-height: 1.6; color: var(--sc-ink-soft); max-width: 28rem; }
+.svc .svc__seen { margin-top: .75rem; font-size: .85rem; }
+.svc__seen a { color: var(--sc-ink); font-weight: 600; text-decoration: underline; text-underline-offset: .25em; text-decoration-thickness: 1px; }
+.disc-index { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1.5rem; border-top: 1px solid var(--g-line); }
+.disc-index a {
+  display: block; padding: .5rem 0; border-bottom: 1px solid var(--g-line); font-size: .82rem; text-decoration: none; color: var(--sc-ink-soft);
+  transition: color .16s var(--g-ease);
+}
+.disc-index a[aria-current="true"] { color: var(--sc-ink); font-weight: 600; }
+@media (hover: hover) and (pointer: fine) { .disc-index a:hover { color: var(--sc-ink); } }
+
+.disc {
+  position: absolute; top: 50%; right: 0; z-index: 1;
+  --D: min(118svh, 96vw); --plate: clamp(140px, 22svh, 236px); --R: calc(var(--D) / 2 - var(--plate) / 2 - var(--D) * .035); --base: 180deg;
+  width: var(--D); height: var(--D); translate: 50% -50%;
+}
+.disc__face { position: absolute; inset: 0; border-radius: 50%; background: var(--g-disc); rotate: var(--rot, 0deg); transition: background-color .42s var(--g-ease); }
+.disc__ring { position: absolute; inset: calc(var(--D) / 2 - var(--R)); border-radius: 50%; border: 1px solid color-mix(in srgb, var(--g-on-accent) 30%, transparent); }
+.disc__plate {
+  position: absolute; left: 50%; top: 50%; width: var(--plate); height: var(--plate);
+  margin: calc(var(--plate) / -2) 0 0 calc(var(--plate) / -2);
+  transform: rotate(calc(var(--base) - var(--k) * 45deg)) translateX(var(--R)) rotate(calc(-1 * (var(--base) - var(--k) * 45deg)));
+}
+.disc__plate span {
+  display: block; width: 100%; height: 100%; border-radius: 50%; background: #fff; overflow: hidden;
+  box-shadow: 0 12px 26px -14px color-mix(in srgb, var(--g-shade) 60%, transparent), 0 2px 4px color-mix(in srgb, var(--g-shade) 12%, transparent);
+  transform: rotate(calc(var(--rot, 0deg) * -1)) scale(var(--s, .8));
+}
+.disc__plate img { width: 100%; height: 100%; object-fit: contain; }
+
+/* ---------- act 4: client wall ---------- */
+.clients { padding-block: clamp(3rem, 7vw, 6rem); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: 2rem; align-items: end; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.sec-head p { justify-self: end; }
+.logo-wall ul {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 1px;
+  background: var(--g-line-plate); border: 1px solid var(--g-line-plate); border-radius: 6px; overflow: hidden;
+}
+.logo-wall li { background: var(--g-plate); display: grid; place-items: center; aspect-ratio: 1.35; padding: 1rem; }
+.logo-wall img { max-width: 100%; max-height: 52px; width: auto; height: auto; object-fit: contain; }
+.logo-wall .logo-wall__note { color: var(--g-plate-soft); font-size: .72rem; line-height: 1.4; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; text-align: center; }
+
+/* ---------- act 5: feed ---------- */
+.feed { padding-block: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem); }
+.feed__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.75rem); }
+.tile--wide { grid-column: span 2; }
+.tile figure { margin: 0; border-radius: 4px; overflow: hidden; background: var(--sc-surface); box-shadow: 0 14px 28px -20px color-mix(in srgb, var(--g-shade) 60%, transparent); }
+.tile img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.tile--wide img { aspect-ratio: 2.06; height: 100%; }
+.tile--wide figure { height: calc(100% - 2.25rem); }
+.tile__label { margin: .75rem 0 0; font-size: .8rem; color: var(--sc-ink-soft); }
+.tile__label i { font-family: var(--g-serif); font-size: 1.125rem; color: var(--sc-ink); margin-right: .5rem; }
+
+/* ---------- act 6: guest book ---------- */
+.notes { padding-block: clamp(2rem, 4vw, 3.5rem) clamp(3.5rem, 7vw, 6rem); }
+.notes__grid { list-style: none; margin: 0; padding: 0 16px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.5rem 2rem; }
+.note {
+  position: relative; margin: 0; padding: 1.5rem 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 1.25rem; height: 100%;
+}
+.note::before, .note::after { content: ""; position: absolute; pointer-events: none; }
+.note::before { inset: -1px -14px; border-top: 1px solid var(--g-line); border-bottom: 1px solid var(--g-line); }
+.note::after { inset: -14px -1px; border-left: 1px solid var(--g-line); border-right: 1px solid var(--g-line); }
+.note blockquote { margin: 0; }
+.note blockquote p { margin: 0; font-size: .95rem; line-height: 1.6; text-wrap: pretty; }
+.note figcaption { margin-top: auto; font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--sc-ink-soft); }
+.note cite { font-style: normal; }
+@media (min-width: 1000px) {
+  .notes__grid > li:nth-child(4n+2) .note { transform: translateY(2.5rem); }
+  .notes__grid > li:nth-child(4n+3) .note { transform: translateY(5rem); }
+  .notes__grid > li:nth-child(4n+4) .note { transform: translateY(2.5rem); }
+}
+
+/* ---------- act 7: team ---------- */
+.team { padding-block: clamp(2rem, 5vw, 4rem); }
+.team__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); }
+.member { padding-top: 1.25rem; border-top: 1px solid var(--g-line); }
+.member h3 { margin: 0; font-size: 1.3rem; letter-spacing: -.012em; font-weight: 600; }
+.member__role { margin: 0; font-family: var(--g-serif); font-style: italic; font-size: 1.3rem; color: var(--sc-ink-soft); }
+.member p:last-child { margin: .75rem 0 0; color: var(--sc-ink-soft); line-height: 1.6; font-size: .95rem; max-width: 26rem; }
+
+/* ---------- act 8: close, an inquiry plate ---------- */
+.close { padding: clamp(3rem, 7vw, 6rem) var(--sc-gutter) 0; border-top: 1px solid var(--g-line); }
+.close__plate { max-width: 70rem; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.close__q { margin: 0; font-size: clamp(2.2rem, 1.3rem + 3vw, 4.2rem); line-height: 1; letter-spacing: -.028em; font-weight: 600; text-wrap: balance; }
+.close__fader { margin-top: 2rem; }
+.close__hint { margin: .75rem 0 0; font-size: .85rem; color: var(--sc-ink-soft); }
+.close__rows { margin: 0; display: grid; }
+.close__rows > div { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--g-line); }
+.close__rows > div:last-child { border-bottom: 1px solid var(--g-line); }
+.close__rows dt { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--sc-ink-soft); padding-top: .25rem; }
+.close__rows dd { margin: 0; line-height: 1.5; }
+.close__rows dd a:not(.cta) { text-decoration: underline; text-underline-offset: .25em; text-decoration-thickness: 1px; }
+.close__rows .socials a + a { margin-left: 1rem; }
+.cta {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 1.5rem; border-radius: 6px;
+  background: var(--sc-accent); color: var(--sc-accent-ink); text-decoration: none; font-weight: 600; font-size: 1rem;
+  transition: transform .14s var(--g-ease), background-color .3s var(--g-ease), color .3s var(--g-ease);
+}
+.cta:active { transform: scale(.97); }
+.cta-mail { display: block; margin-top: .5rem; font-size: .95rem; }
+.foot {
+  max-width: 70rem; margin: clamp(3rem, 6vw, 5rem) auto 0; padding: 1rem 0 5rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--sc-ink-soft);
+}
+
+
+/* ---------- tablet and phone ---------- */
+@media (max-width: 1180px) {
+  .bar__menu { display: inline-flex; align-items: center; }
+  .bar__index {
+    position: absolute; top: var(--nav-h); left: 0; right: 0; display: none; justify-content: flex-start;
+    background: var(--g-paper); border-bottom: 1px solid var(--g-line-plate); padding: .5rem clamp(1rem, 3vw, 2.25rem) 1rem;
+  }
+  .bar__index[data-open] { display: block; }
+  .bar__index ul { flex-direction: column; gap: 0; }
+  .bar__index a { padding: .75rem 0; font-size: 1rem; border-top: 1px solid var(--g-line-plate); color: var(--g-plate-ink); }
+  .bar__marker { display: none; }
+  .bar { justify-content: space-between; }
+}
+@media (max-width: 860px) {
+  :root { --nav-h: 58px; }
+  .bar { gap: .75rem; padding: 0 1rem; }
+  .bar__mark img { width: 104px; }
+  .bar__cta { display: none; }
+  .bar__end { gap: .5rem; }
+  .fader { gap: .5rem; font-size: .625rem; --travel: 32px; }
+
+  .entry { min-height: 0; padding-top: calc(var(--nav-h) + 1.25rem); padding-bottom: 1.5rem; }
+  .entry h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+  .scene { width: 100vw; margin-top: 1.25rem; --mark-w: 94cqw; --mark-left: 3cqw; --mark-top: 7.6cqw; }
+  /* the phone hero is shorter than the screen, so scroll depth would start offset; keep the layers still at rest */
+  .entry__mark[data-sc-parallax], .person[data-sc-parallax] { transform: none !important; }
+  .window { left: 2cqw; right: 2cqw; --sill: 12cqw; --post: 2.4cqw; }
+  .person--a, .person--c { bottom: -5.4cqw; }
+  .person--b { bottom: -2.8cqw; }
+  .window__post { height: 66%; }
+  .walk__stage { align-items: flex-start; }
+  .rail { align-items: flex-start; }
+  .window__post { height: 66%; }
+
+  .rail { gap: 1.5rem; align-items: flex-start; padding-top: calc(var(--nav-h) + .5rem); }
+  .rail__lead, .rail__end { width: 74vw; }
+  .object--wall { width: 84vw; grid-template-columns: 1fr; }
+  .object--wall .object__wall { grid-column: 1; height: 41svh; }
+  .object--wall .label { grid-column: 1; grid-row: 2; margin: -1.5rem .5rem 0; padding: 1rem; }
+  .object--wall .label__title { font-size: 1.45rem; }
+  .object--wall .label__rows { margin-top: .5rem; gap: .5rem; }
+  .object--wall .label__rows > div { padding-top: .5rem; grid-template-columns: 3.75rem 1fr; gap: .5rem; }
+  .object--wall .label__rows dd { font-size: .8rem; line-height: 1.42; }
+  .object--wall .label__result dd { font-size: calc(var(--g-result) * .9); }
+  .object--wall .label__link { margin-top: .5rem; font-size: .78rem; }
+
+  .sec-head, .close__plate { grid-template-columns: 1fr; }
+  .disc-stage { grid-template-columns: 1fr; align-items: start; padding-top: calc(var(--nav-h) + 1.5rem); }
+  .disc { top: 100%; right: auto; left: 50%; translate: -50% -50%; --D: 196vw; --plate: 33vw; --base: -90deg; }
+  .disc-index { display: none; }
+  .svc h3 { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+  /* centre the copy in the space above the disc so there is no empty strip between them */
+  .disc-copy { min-height: calc(100svh - var(--nav-h) - 98vw - 1.5rem); display: flex; flex-direction: column; justify-content: center; }
+  .sec-head p { justify-self: start; }
+
+  .logo-wall ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .logo-wall li { padding: .5rem; }
+  .logo-wall img { max-height: 30px; }
+  .logo-wall .logo-wall__note { font-size: .58rem; letter-spacing: .08em; }
+
+  .feed__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile--wide figure { height: auto; }
+  .tile--wide img { height: auto; }
+
+  .notes__grid { grid-template-columns: 1fr; padding: 0 14px; gap: 2.25rem; }
+  .team__grid { grid-template-columns: 1fr; }
+
+  .close__rows > div { grid-template-columns: 1fr; gap: .25rem; }
+  .fader--big { --travel: 58vw; }
+}
+@media (min-width: 861px) and (max-width: 1100px) {
+  .notes__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .logo-wall ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* Reduced motion: the walk becomes a plain stacked collection, no pinned travel. */
+@media (prefers-reduced-motion: reduce) {
+  body, .label__result dd, .fader__cap, .cover, .bar__marker { transition: none !important; }
+  .walk { height: auto !important; }
+  .walk__stage { position: static !important; height: auto !important; overflow: visible !important; display: block; }
+  .rail { transform: none !important; width: auto; flex-direction: column; align-items: stretch; gap: clamp(2.5rem, 6vw, 5rem); padding-block: clamp(3rem, 6vw, 5rem); }
+  .rail__lead, .rail__end { width: auto; max-width: 36rem; }
+  .object--wall { opacity: 1; transform: none; width: 100%; max-width: 66rem; }
+  .disc-act { height: auto !important; }
+  .disc-stage { position: static !important; height: auto !important; overflow: visible; display: block; padding: 1rem var(--sc-gutter) 4rem; }
+  .disc { display: none; }
+  .disc-copy { max-width: 72rem; }
+  .disc-copy__stack { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 2.5rem 3rem; }
+  .svc { grid-area: auto; opacity: 1; transform: none; visibility: visible; }
+  .svc__plate { display: block; width: 96px; height: 96px; margin-bottom: 1rem; border-radius: 50%; background: #fff; object-fit: contain; }
+  .svc h3 { font-size: 1.5rem; }
+  .disc-index { display: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#cases">Skip to the work</a>
+<span data-sc-progress></span>
+
+<header class="bar">
+  <a class="bar__mark" href="#top" aria-label="Mosswick Studio, back to the top">
+    <img src="assets/wordmark.svg" width="439" height="77" alt="Mosswick Studio">
+  </a>
+  <nav class="bar__index" id="index" aria-label="Page index">
+    <ul>
+      <li><a href="#plumtide">Plumtide</a></li>
+      <li><a href="#okra-and-ash">Okra &amp; Ash</a></li>
+      <li><a href="#paywren">Paywren</a></li>
+      <li><a href="#marshlight">Marshlight</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span class="bar__marker" aria-hidden="true"></span>
+  </nav>
+  <div class="bar__end">
+    <button class="fader" type="button" role="switch" aria-checked="false" aria-label="Page volume: quiet or loud" data-fader>
+      <span class="fader__end fader__end--quiet" aria-hidden="true">quiet</span>
+      <span class="fader__track" aria-hidden="true"><span class="fader__cap"></span></span>
+      <span class="fader__end fader__end--loud" aria-hidden="true">loud</span>
+    </button>
+    <a class="bar__cta" href="mailto:hello@example.com">Start a project</a>
+    <button class="bar__menu" type="button" aria-expanded="false" aria-controls="index">Index</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1 ENTRANCE: the name on the back wall, three of the team leaning over the ledge -->
+  <section class="entry" data-sc-act="flow" aria-labelledby="entry-title">
+    <div class="entry__head">
+      <p class="eyebrow">Mosswick Studio · Creative and marketing · Lowmere</p>
+      <h1 id="entry-title">We make brands people can pick out of a crowd</h1>
+      <a class="textlink" href="mailto:hello@example.com">Start a project</a>
+    </div>
+    <div class="scene">
+    <div class="entry__mark" data-sc-parallax="0.8" aria-hidden="true"><div class="entry__mark-in"></div></div>
+    <figure class="window" aria-label="Three of the Mosswick team, standing in front of the studio's name">
+      <div class="person person--b" data-sc-parallax="-0.35"><img src="assets/team-02.webp" width="800" height="960" fetchpriority="high" alt="Tobias Okonjo-Hale, co-founder and strategy director of Mosswick Studio."></div>
+      <div class="person person--a" data-sc-parallax="-0.2"><img src="assets/team-01.webp" width="800" height="960" fetchpriority="high" alt="Ines Calloway, founder and creative director of Mosswick Studio."></div>
+      <div class="person person--c" data-sc-parallax="-0.5"><img src="assets/team-03.webp" width="800" height="960" fetchpriority="high" alt="Mei Lin Draper, design director at Mosswick Studio."></div>
+      <span class="window__post window__post--l" aria-hidden="true"></span>
+      <span class="window__post window__post--r" aria-hidden="true"></span>
+      <figcaption class="window__sill">
+        <span>Ines Calloway <i>creative director</i></span>
+        <span>Tobias Okonjo&#8209;Hale <i>strategy director</i></span>
+        <span>Mei Lin Draper <i>design director</i></span>
+      </figcaption>
+    </figure>
+    </div>
+  </section>
+
+  <!-- 2 THE WALK (peak): the rest of the collection, sideways -->
+  <section class="walk" id="cases" data-sc-act="pan" data-sc-span="5" aria-labelledby="walk-title">
+    <div data-sc-stage class="walk__stage">
+      <div class="rail" data-sc-pan="0.02">
+        <div class="rail__lead">
+          <h2 id="walk-title">Selected work</h2>
+          <p>Four recent projects, hung the way a gallery would hang them: the brief, the work, the result</p>
+        </div>
+
+        <article class="object object--wall" id="plumtide" style="--wall:var(--p-accent-ink)" aria-labelledby="plumtide-title">
+          <figure class="object__wall">
+            <img src="assets/work-01.webp" srcset="assets/work-01-600.webp 600w, assets/work-01.webp 1000w" sizes="(max-width: 860px) 84vw, 40vw"
+                 width="1000" height="1038" loading="lazy" decoding="async"
+                 alt="Five Plumtide cordial bottles in plum, apricot, rhubarb, blackcurrant and lemon on a limestone ledge in hard morning sun.">
+          </figure>
+          <div class="label">
+            <h3 class="label__title" id="plumtide-title">Plumtide</h3>
+            <p class="label__kind">Fruit cordials · 2025</p>
+            <dl class="label__rows">
+              <div><dt>Brief</dt><dd>A kitchen cordial maker selling at weekend markets needed a brand good enough for the deli shelf.</dd></div>
+              <div><dt>Work</dt><dd>A hand-cut fruit pattern, a warm wordmark and labels that change colour by flavour, shot in morning light.</dd></div>
+              <div class="label__result"><dt>Result</dt><dd>Stocked in 64 delis within a year.</dd></div>
+            </dl>
+            <a class="label__link" href="https://example.com">Case study: Plumtide</a>
+          </div>
+        </article>
+
+        <article class="object object--wall" id="okra-and-ash" style="--wall:var(--p-accent)" aria-labelledby="okra-and-ash-title">
+          <figure class="object__wall">
+            <img src="assets/work-02.webp" srcset="assets/work-02-600.webp 600w, assets/work-02.webp 1000w" sizes="(max-width: 860px) 84vw, 40vw"
+                 width="1000" height="1018" loading="lazy" decoding="async"
+                 alt="A wood-fired oven glowing orange in the Okra &amp; Ash kitchen, a cast iron pan of charred vegetables on the oak counter in front.">
+          </figure>
+          <div class="label">
+            <h3 class="label__title" id="okra-and-ash-title">Okra &amp; Ash</h3>
+            <p class="label__kind">Wood-fired restaurant · 2025</p>
+            <dl class="label__rows">
+              <div><dt>Brief</dt><dd>Eight weeks to open a wood-fired neighbourhood restaurant, with no name on the door, no menus and no bookings yet.</dd></div>
+              <div><dt>Work</dt><dd>An identity built around the fire, menus on heavy card and six weeks of behind-the-scenes posts.</dd></div>
+              <div class="label__result"><dt>Result</dt><dd>Booked out for the first five weeks after the doors opened.</dd></div>
+            </dl>
+            <a class="label__link" href="https://example.com">Case study: Okra &amp; Ash</a>
+          </div>
+        </article>
+
+        <article class="object object--wall object--contain" id="paywren" style="--wall:color-mix(in oklab, var(--p-accent-ink) 72%, var(--p-bg))" aria-labelledby="paywren-title">
+          <figure class="object__wall">
+            <img src="assets/work-03.webp" srcset="assets/work-03-600.webp 600w, assets/work-03.webp 680w" sizes="(max-width: 860px) 84vw, 30vw"
+                 width="680" height="1080" loading="lazy" decoding="async"
+                 alt="A phone on a light ash desk showing the Paywren invoice screen in coral and cream, beside a notebook, a pencil and a cup of tea.">
+          </figure>
+          <div class="label">
+            <h3 class="label__title" id="paywren-title">Paywren</h3>
+            <p class="label__kind">Invoicing app for freelancers · 2024</p>
+            <dl class="label__rows">
+              <div><dt>Brief</dt><dd>An invoicing app for freelancers who hate chasing payments, in a market of apps that feel like tax forms.</dd></div>
+              <div><dt>Work</dt><dd>A small bird mark, warm colours, plain friendly copy and forty launch ads tested in month one.</dd></div>
+              <div class="label__result"><dt>Result</dt><dd>Cost per sign-up down 41%, with the six ads that clearly worked kept running.</dd></div>
+            </dl>
+            <a class="label__link" href="https://example.com">Case study: Paywren</a>
+          </div>
+        </article>
+
+        <article class="object object--wall" id="marshlight" style="--wall:color-mix(in oklab, var(--p-accent) 62%, var(--p-bg))" aria-labelledby="marshlight-title">
+          <figure class="object__wall">
+            <img src="assets/work-04.webp" srcset="assets/work-04-600.webp 600w, assets/work-04.webp 1000w" sizes="(max-width: 860px) 84vw, 40vw"
+                 width="1000" height="1000" loading="lazy" decoding="async"
+                 alt="A two-colour Marshlight Festival poster in teal and orange, showing reeds and floating lanterns, pasted on a brick wall at dusk.">
+          </figure>
+          <div class="label">
+            <h3 class="label__title" id="marshlight-title">Marshlight Festival</h3>
+            <p class="label__kind">Music and arts festival · 2023</p>
+            <dl class="label__rows">
+              <div><dt>Brief</dt><dd>Three days of music and art on wetlands at the edge of town, needing a look and a push on tickets.</dd></div>
+              <div><dt>Work</dt><dd>A look made from reeds, mist and lantern light, two-colour screen prints and short films of the site at dawn.</dd></div>
+              <div class="label__result"><dt>Result</dt><dd>Sold out nine days early. The posters sold out at the merch tent as well.</dd></div>
+            </dl>
+            <a class="label__link" href="https://example.com">Case study: Marshlight Festival</a>
+          </div>
+        </article>
+
+        <div class="rail__end">
+          <p>Read how each project came together, start to finish</p>
+          <ul>
+            <li><a href="https://example.com">Plumtide</a></li>
+            <li><a href="https://example.com">Okra &amp; Ash</a></li>
+            <li><a href="https://example.com">Paywren</a></li>
+            <li><a href="https://example.com">Marshlight Festival</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 SERVICES: the plain answer, then the eight services on a turning disc -->
+  <section class="sc-section services-intro" id="services" data-sc-act="flow" aria-labelledby="services-title">
+    <div class="sc-wrap sec-head" data-sc-in>
+      <h2 id="services-title">What Mosswick does</h2>
+      <p>Mosswick Studio is a creative and marketing studio in Lowmere: 32 strategists, designers, writers, filmmakers and media buyers in one studio. We work across brand strategy, identity, websites, social content, film and motion, campaigns, paid media and packaging, for founders and teams who want to be remembered.</p>
+    </div>
+  </section>
+
+  <section class="disc-act" data-sc-act="pin" data-sc-span="4" aria-label="Mosswick's eight services">
+    <div data-sc-stage class="disc-stage">
+      <div class="disc-copy">
+        <div class="disc-copy__stack">
+          <article class="svc is-active" id="svc-strategy" style="--k:0">
+            <img class="svc__plate" src="assets/services/service-01.webp" width="400" height="400" loading="lazy" alt="A Gilded Hare gin bottle with an embossed leaping hare on a dark walnut bar top.">
+            <h3>Brand strategy</h3>
+            <p>We find what makes you worth choosing and write it down plainly, in words your whole team can repeat.</p>
+          </article>
+          <article class="svc" id="svc-identity" style="--k:1">
+            <img class="svc__plate" src="assets/services/service-02.webp" width="400" height="400" loading="lazy" alt="Kilnmark plates and bowls in oatmeal, teal and rust glazes on linen, one bowl turned over to show its stamp.">
+            <h3>Brand identity</h3>
+            <p>Logos, type, colour and rules that make you recognisable at a glance, from a favicon to a van.</p>
+            <p class="svc__seen">Seen in: <a href="#plumtide">Plumtide</a>, <a href="#paywren">Paywren</a></p>
+          </article>
+          <article class="svc" id="svc-websites" style="--k:2">
+            <img class="svc__plate" src="assets/services/service-03.webp" width="400" height="400" loading="lazy" alt="A bright Hollin Gallery room with three large abstract canvases and a single wooden bench.">
+            <h3>Websites</h3>
+            <p>Fast, clear websites that explain what you do and turn visits into enquiries.</p>
+            <p class="svc__seen">Seen in: <a href="#okra-and-ash">Okra &amp; Ash</a></p>
+          </article>
+          <article class="svc" id="svc-social" style="--k:3">
+            <img class="svc__plate" src="assets/services/service-04.webp" width="400" height="400" loading="lazy" alt="Four Fizzwold cans in hot pink, lime, tangerine and lilac standing in a tub of crushed ice.">
+            <h3>Social content</h3>
+            <p>Posts, reels and series people stop scrolling for, like six weeks of kitchen stories before Okra &amp; Ash opened.</p>
+            <p class="svc__seen">Seen in: <a href="#okra-and-ash">Okra &amp; Ash</a></p>
+          </article>
+          <article class="svc" id="svc-film" style="--k:4">
+            <img class="svc__plate" src="assets/services/service-05.webp" width="400" height="400" loading="lazy" alt="Sand-coloured Stillreed headphones on the tiled edge of an empty indoor swimming pool.">
+            <h3>Film and motion</h3>
+            <p>Brand films, product videos and animation, from first script to final grade, cut for every place they run.</p>
+            <p class="svc__seen">Seen in: <a href="#marshlight">Marshlight Festival</a></p>
+          </article>
+          <article class="svc" id="svc-campaigns" style="--k:5">
+            <img class="svc__plate" src="assets/services/service-06.webp" width="400" height="400" loading="lazy" alt="A rust orange Cairnstone rucksack propped against a stone cairn on a misty ridge at sunrise.">
+            <h3>Campaigns</h3>
+            <p>Big ideas built to run across outdoor, social, print and screen.</p>
+            <p class="svc__seen">Seen in: <a href="#marshlight">Marshlight Festival</a></p>
+          </article>
+          <article class="svc" id="svc-performance" style="--k:6">
+            <img class="svc__plate" src="assets/services/service-07.webp" width="400" height="400" loading="lazy" alt="Dark blue solar panels from a Voltmere install on a slate roof in late afternoon sun.">
+            <h3>Performance marketing</h3>
+            <p>Paid search and social, run by people who know your brand well.</p>
+            <p class="svc__seen">Seen in: <a href="#paywren">Paywren</a></p>
+          </article>
+          <article class="svc" id="svc-packaging" style="--k:7">
+            <img class="svc__plate" src="assets/services/service-08.webp" width="400" height="400" loading="lazy" alt="Three Tallow Lane Coffee bags with tomato, mustard and cobalt bands on a steel roastery workbench.">
+            <h3>Packaging</h3>
+            <p>Packs that stand out on a crowded shelf and feel good in the hand.</p>
+            <p class="svc__seen">Seen in: <a href="#plumtide">Plumtide</a></p>
+          </article>
+        </div>
+        <ul class="disc-index" aria-label="Jump to a service">
+          <li><a href="#svc-strategy" data-k="0">Brand strategy</a></li>
+          <li><a href="#svc-identity" data-k="1">Brand identity</a></li>
+          <li><a href="#svc-websites" data-k="2">Websites</a></li>
+          <li><a href="#svc-social" data-k="3">Social content</a></li>
+          <li><a href="#svc-film" data-k="4">Film and motion</a></li>
+          <li><a href="#svc-campaigns" data-k="5">Campaigns</a></li>
+          <li><a href="#svc-performance" data-k="6">Performance marketing</a></li>
+          <li><a href="#svc-packaging" data-k="7">Packaging</a></li>
+        </ul>
+      </div>
+      <div class="disc" aria-hidden="true">
+        <div class="disc__face">
+          <span class="disc__ring"></span>
+          <div class="disc__plate" style="--k:0"><span><img src="assets/services/service-01.webp" width="400" height="400" loading="lazy" alt=""></span></div>
+          <div class="disc__plate" style="--k:1"><span><img src="assets/services/service-02.webp" width="400" height="400" loading="lazy" alt=""></span></div>
+          <div class="disc__plate" style="--k:2"><span><img src="assets/services/service-03.webp" width="400" height="400" loading="lazy" alt=""></span></div>
+          <div class="disc__plate" style="--k:3"><span><img src="assets/services/service-04.webp" width="400" height="400" loading="lazy" alt=""></span></div>
+          <div class="disc__plate" style="--k:4"><span><img src="assets/services/service-05.webp" width="400" height="400" loading="lazy" alt=""></span></div>
+          <div class="disc__plate" style="--k:5"><span><img src="assets/services/service-06.webp" width="400" height="400" loading="lazy" alt=""></span></div>
+          <div class="disc__plate" style="--k:6"><span><img src="assets/services/service-07.webp" width="400" height="400" loading="lazy" alt=""></span></div>
+          <div class="disc__plate" style="--k:7"><span><img src="assets/services/service-08.webp" width="400" height="400" loading="lazy" alt=""></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 CLIENT WALL -->
+  <section class="sc-section clients" id="clients" data-sc-act="flow" aria-labelledby="clients-title">
+    <div class="sc-wrap">
+      <div class="sec-head" data-sc-in>
+        <h2 id="clients-title">Some of the brands we work for</h2>
+        <p>Thirty-two of the 140 or so brands we have worked with since 2014, from a night school and a river charity to a watchmaker and a gin distillery.</p>
+      </div>
+      <div class="logo-wall" data-sc-reveal="up" data-sc-reveal-at="0.06 0.3">
+        <ul>
+          <li><img src="assets/clients/client-01.svg" width="389" height="99" loading="lazy" alt="Plumtide"></li>
+          <li><img src="assets/clients/client-02.svg" width="773" height="82" loading="lazy" alt="Velloway"></li>
+          <li><img src="assets/clients/client-03.svg" width="383" height="76" loading="lazy" alt="Kilnmark"></li>
+          <li><img src="assets/clients/client-04.svg" width="520" height="143" loading="lazy" alt="Tallow Lane Coffee"></li>
+          <li><img src="assets/clients/client-05.svg" width="388" height="79" loading="lazy" alt="Okra &amp; Ash"></li>
+          <li><img src="assets/clients/client-06.svg" width="421" height="87" loading="lazy" alt="Paywren"></li>
+          <li><img src="assets/clients/client-07.svg" width="736" height="125" loading="lazy" alt="Marshlight Festival"></li>
+          <li><img src="assets/clients/client-08.svg" width="603" height="77" loading="lazy" alt="Fernstride"></li>
+          <li><img src="assets/clients/client-09.svg" width="551" height="101" loading="lazy" alt="Hollin Gallery"></li>
+          <li><img src="assets/clients/client-10.svg" width="542" height="89" loading="lazy" alt="Houndsbury"></li>
+          <li><img src="assets/clients/client-11.svg" width="726" height="77" loading="lazy" alt="Stillreed"></li>
+          <li><img src="assets/clients/client-12.svg" width="508" height="84" loading="lazy" alt="Tumblewick"></li>
+          <li><img src="assets/clients/client-13.svg" width="538" height="125" loading="lazy" alt="Halvane Watch Co."></li>
+          <li><img src="assets/clients/client-14.svg" width="650" height="74" loading="lazy" alt="Cairnstone"></li>
+          <li><img src="assets/clients/client-15.svg" width="387" height="98" loading="lazy" alt="Shelterly"></li>
+          <li><img src="assets/clients/client-16.svg" width="804" height="77" loading="lazy" alt="Gilded Hare"></li>
+          <li><img src="assets/clients/client-17.svg" width="360" height="104" loading="lazy" alt="Periwink"></li>
+          <li><img src="assets/clients/client-18.svg" width="735" height="130" loading="lazy" alt="River Commons Trust"></li>
+          <li><img src="assets/clients/client-19.svg" width="406" height="79" loading="lazy" alt="Owlhour"></li>
+          <li><img src="assets/clients/client-20.svg" width="442" height="78" loading="lazy" alt="Marlo Rue"></li>
+          <li><img src="assets/clients/client-21.svg" width="514" height="78" loading="lazy" alt="Saltmarrow"></li>
+          <li><img src="assets/clients/client-22.svg" width="1162" height="80" loading="lazy" alt="The Larchway"></li>
+          <li><img src="assets/clients/client-23.svg" width="574" height="74" loading="lazy" alt="Gearfinch"></li>
+          <li><img src="assets/clients/client-24.svg" width="566" height="82" loading="lazy" alt="Cragloft"></li>
+          <li><img src="assets/clients/client-25.svg" width="599" height="102" loading="lazy" alt="Quillmoor Press"></li>
+          <li><img src="assets/clients/client-26.svg" width="574" height="77" loading="lazy" alt="Voltmere"></li>
+          <li><img src="assets/clients/client-27.svg" width="520" height="78" loading="lazy" alt="Mendhaven"></li>
+          <li><img src="assets/clients/client-28.svg" width="362" height="79" loading="lazy" alt="Fizzwold"></li>
+          <li><img src="assets/clients/client-29.svg" width="459" height="95" loading="lazy" alt="Fernery Lane"></li>
+          <li><img src="assets/clients/client-30.svg" width="798" height="146" loading="lazy" alt="Copperbell Theatre"></li>
+          <li><img src="assets/clients/client-31.svg" width="545" height="73" loading="lazy" alt="Oakhold"></li>
+          <li><img src="assets/clients/client-32.svg" width="574" height="101" loading="lazy" alt="Ferrylight"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 FEED -->
+  <section class="sc-section feed" id="feed" data-sc-act="flow" aria-labelledby="feed-title">
+    <div class="sc-wrap">
+      <div class="sec-head" data-sc-in>
+        <h2 id="feed-title">Recent posts and stills</h2>
+        <p>Frames from recent shoots, posts and launch films for clients</p>
+      </div>
+      <ul class="feed__grid">
+        <li class="tile tile--wide"><figure data-sc-tilt="4"><img src="assets/feed-01.webp" width="1000" height="500" loading="lazy" alt="A cyclist in a bottle green Velloway jacket riding down a wet city street at blue hour."></figure><p class="tile__label"><i>Velloway</i>Film still</p></li>
+        <li class="tile"><figure data-sc-tilt="6"><img src="assets/feed-02.webp" width="720" height="720" loading="lazy" alt="A wheaten terrier beside a Houndsbury meal box and two clear pouches on a terracotta tiled floor."></figure><p class="tile__label"><i>Houndsbury</i>Paid social</p></li>
+        <li class="tile"><figure data-sc-tilt="6"><img src="assets/feed-03.webp" width="720" height="720" loading="lazy" alt="Four wave-printed Saltmarrow snack bags lying on wet sand at the waterline."></figure><p class="tile__label"><i>Saltmarrow</i>Pack shot</p></li>
+        <li class="tile"><figure data-sc-tilt="6"><img src="assets/feed-04.webp" width="720" height="720" loading="lazy" alt="Tumblewick wooden toys in tomato, sunflower and sky blue beside their open boxes on a mint green floor."></figure><p class="tile__label"><i>Tumblewick</i>Shop photo</p></li>
+        <li class="tile"><figure data-sc-tilt="6"><img src="assets/feed-05.webp" width="720" height="720" loading="lazy" alt="A cream Marlo Rue wool sweater folded over a fence post in a misty field, sheep blurred behind."></figure><p class="tile__label"><i>Marlo Rue</i>Lookbook</p></li>
+        <li class="tile"><figure data-sc-tilt="6"><img src="assets/feed-06.webp" width="720" height="720" loading="lazy" alt="A Cragloft climbing wall with pink, yellow and teal holds and chalk dust in a shaft of light."></figure><p class="tile__label"><i>Cragloft</i>Social series</p></li>
+        <li class="tile"><figure data-sc-tilt="6"><img src="assets/feed-07.webp" width="720" height="720" loading="lazy" alt="The lit window of an Owlhour classroom at night, with pottery wheels and drying pots inside."></figure><p class="tile__label"><i>Owlhour</i>Campaign</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6 GUEST BOOK -->
+  <section class="sc-section notes" id="notes" data-sc-act="flow" aria-labelledby="notes-title">
+    <div class="sc-wrap">
+      <div class="sec-head" data-sc-in>
+        <h2 id="notes-title">In our clients' words</h2>
+        <p>Notes from founders and marketing leads we have made work for</p>
+      </div>
+      <ul class="notes__grid" data-sc-stagger="60">
+        <li data-sc-in><figure class="note"><blockquote><p>"They asked better questions in the first week than our last agency did in a year. The new brand finally sounds like us."</p></blockquote><figcaption><cite>Nadia Ferrante, Plumtide</cite></figcaption></figure></li>
+        <li data-sc-in><figure class="note"><blockquote><p>"Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us exactly what every bit of spend brought back."</p></blockquote><figcaption><cite>Owen Haddad, Paywren</cite></figcaption></figure></li>
+        <li data-sc-in><figure class="note"><blockquote><p>"The film crew turned up in the pouring rain, smiling. Months later, people still stop us at trade shows to talk about that campaign."</p></blockquote><figcaption><cite>Jonas Pell, Velloway</cite></figcaption></figure></li>
+        <li data-sc-in><figure class="note"><blockquote><p>"We had eight weeks to open a restaurant with no name. They gave us a name on the door, a full booking diary and a lot less stress."</p></blockquote><figcaption><cite>Cora Mbeki-Lane, Okra &amp; Ash</cite></figcaption></figure></li>
+        <li data-sc-in><figure class="note"><blockquote><p>"Plain words, quick replies and work we are proud to put our name on. We have renewed with them every year since our first project."</p></blockquote><figcaption><cite>Ilse Varga, Hollin Gallery</cite></figcaption></figure></li>
+        <li data-sc-in><figure class="note"><blockquote><p>"The new website cut our quote form in half and far more people now finish it. Our board finally stopped asking about marketing spend."</p></blockquote><figcaption><cite>Marcus Tilley, Shelterly</cite></figcaption></figure></li>
+        <li data-sc-in><figure class="note"><blockquote><p>"They treated our small charity like their biggest client. Volunteers now find us on their own, and the river looks better every spring."</p></blockquote><figcaption><cite>Beatrix Oyelaran, River Commons Trust</cite></figcaption></figure></li>
+        <li data-sc-in><figure class="note"><blockquote><p>"Honest about what would work and what would not. That honesty saved us a lot of money in our first quarter of selling bikes."</p></blockquote><figcaption><cite>Felix Andersen-Ruiz, Gearfinch</cite></figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7 THE TEAM -->
+  <section class="sc-section team" id="team" data-sc-act="flow" aria-labelledby="team-title">
+    <div class="sc-wrap">
+      <div class="sec-head" data-sc-in>
+        <h2 id="team-title">Who you will work with</h2>
+        <p>Started in 2014 at one desk above a bike shop, now 32 people. Three of them:</p>
+      </div>
+      <ul class="team__grid" data-sc-stagger="70">
+        <li class="member" data-sc-in>
+          <h3>Ines Calloway</h3>
+          <p class="member__role">Founder and Creative Director</p>
+          <p>Ines reads every brief twice, then asks the question nobody wanted to answer.</p>
+        </li>
+        <li class="member" data-sc-in>
+          <h3>Tobias Okonjo-Hale</h3>
+          <p class="member__role">Co-founder and Strategy Director</p>
+          <p>Tobias turns messy workshops into one clear page that the whole client team signs.</p>
+        </li>
+        <li class="member" data-sc-in>
+          <h3>Mei Lin Draper</h3>
+          <p class="member__role">Design Director</p>
+          <p>Mei Lin sketches fifty ideas on paper before she opens a laptop.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8 CLOSE: the inquiry plate -->
+  <section class="close" id="contact" data-sc-act="flow" aria-labelledby="close-title">
+    <div class="close__plate">
+      <div>
+        <h2 class="close__q" id="close-title">How loud should your next launch be?</h2>
+        <div class="close__fader">
+          <button class="fader fader--big" type="button" role="switch" aria-checked="false" aria-label="Page volume: quiet or loud" data-fader>
+            <span class="fader__end fader__end--quiet" aria-hidden="true">quiet</span>
+            <span class="fader__track" aria-hidden="true"><span class="fader__cap"></span></span>
+            <span class="fader__end fader__end--loud" aria-hidden="true">loud</span>
+          </button>
+          <p class="close__hint">Slide it and the whole page gets louder</p>
+        </div>
+      </div>
+      <dl class="close__rows">
+        <div><dt>New projects</dt><dd><a class="cta" href="mailto:projects@example.com">Start a project</a><a class="cta-mail" href="mailto:projects@example.com">projects@example.com</a></dd></div>
+        <div><dt>Call</dt><dd><a href="tel:+15550142">+1 555 0142</a></dd></div>
+        <div><dt>Studio</dt><dd><a href="https://example.com">1 Example Street, Lowmere. Open Monday to Friday, 9am to 6pm</a></dd></div>
+        <div><dt>Careers</dt><dd><a href="mailto:jobs@example.com">jobs@example.com</a></dd></div>
+        <div><dt>Follow</dt><dd class="socials"><a href="https://example.com">Instagram</a><a href="https://example.com">Behance</a><a href="https://example.com">LinkedIn</a></dd></div>
+      </dl>
+    </div>
+    <footer class="foot">
+      <span>Mosswick Studio · Lowmere, since 2014</span>
+      <span>Example content. Swap in your own.</span>
+    </footer>
+  </section>
+
+</main>
+
+
+<script src="scrollcraft.js"></script>
+<script>
+(function () {
+  var rail = document.querySelector('.rail');
+  var ok = window.CSS && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px') && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (ok && rail) { rail.removeAttribute('data-sc-pan'); document.documentElement.classList.add('sda'); }
+})();
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(hover: hover) and (pointer: fine)');
+
+  /* ---- signature: the volume fader ---- */
+  var faders = [].slice.call(document.querySelectorAll('[data-fader]'));
+  function setLoud(on) {
+    root.classList.toggle('is-loud', !!on);
+    faders.forEach(function (f) { f.setAttribute('aria-checked', on ? 'true' : 'false'); f.style.removeProperty('--cap-x'); });
+  }
+  faders.forEach(function (f) {
+    var track = f.querySelector('.fader__track');
+    var drag = null;
+    f.addEventListener('click', function () {
+      if (f.__dragged) { f.__dragged = false; return; }
+      setLoud(f.getAttribute('aria-checked') !== 'true');
+    });
+    f.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { setLoud(true); e.preventDefault(); }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { setLoud(false); e.preventDefault(); }
+    });
+    function ratio(x) {
+      var r = track.getBoundingClientRect();
+      return Math.max(0, Math.min(1, (x - r.left - 7) / Math.max(1, r.width - 14)));
+    }
+    track.addEventListener('pointerdown', function (e) {
+      drag = { x0: e.clientX, moved: false };
+      f.classList.add('is-dragging');
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      if (Math.abs(e.clientX - drag.x0) > 3) drag.moved = true;
+      if (!drag.moved) return;
+      var k = ratio(e.clientX);
+      f.style.setProperty('--cap-x', k.toFixed(3));
+      var on = k > 0.5;
+      if (on !== root.classList.contains('is-loud')) {
+        root.classList.toggle('is-loud', on);
+        faders.forEach(function (g) { g.setAttribute('aria-checked', on ? 'true' : 'false'); });
+      }
+    });
+    window.addEventListener('pointerup', function (e) {
+      if (!drag) return;
+      f.classList.remove('is-dragging');
+      if (drag.moved) { f.__dragged = true; setLoud(ratio(e.clientX) > 0.5); setTimeout(function () { f.__dragged = false; }, 0); }
+      drag = null;
+    });
+  });
+
+  /* ---- index: jumps, including into the sideways walk ---- */
+  var walk = document.querySelector('.walk');
+  var stage = walk.querySelector('[data-sc-stage]');
+  var rail = walk.querySelector('.rail');
+  var bar = document.querySelector('.bar');
+  function navH() { return bar.getBoundingClientRect().height; }
+  function walkY(el) {
+    var top = walk.getBoundingClientRect().top + scrollY;
+    var over = rail.scrollWidth - innerWidth;
+    if (over <= 0) return top;
+    var travel = over * 1.02;
+    var gutter = parseFloat(getComputedStyle(rail).paddingLeft) || 0;
+    var x = el.getBoundingClientRect().left - rail.getBoundingClientRect().left - gutter;
+    var p = Math.max(0, Math.min(1, x / travel));
+    return top + p * (walk.offsetHeight - innerHeight);
+  }
+  function go(el) {
+    if (!el) return;
+    if (rail.contains(el) && !reduce) {
+      scrollTo({ top: walkY(el), behavior: 'smooth' });
+    } else {
+      scrollTo({ top: el.getBoundingClientRect().top + scrollY - navH() - 12, behavior: reduce ? 'auto' : 'smooth' });
+    }
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a || a.classList.contains('skip') || a.hasAttribute('data-k')) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = id === 'top' ? null : document.getElementById(id);
+    if (id === 'top') { e.preventDefault(); scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); closeMenu(); return; }
+    if (!el) return;
+    e.preventDefault();
+    go(el);
+    closeMenu();
+    history.replaceState(null, '', '#' + id);
+  });
+  rail.addEventListener('focusin', function (e) {
+    var obj = e.target.closest('.object, .rail__end, .rail__lead');
+    if (!obj) return;
+    var r = obj.getBoundingClientRect();
+    if (r.left < 0 || r.right > innerWidth) { go(obj); }
+  });
+
+  /* ---- phone index sheet ---- */
+  var menuBtn = document.querySelector('.bar__menu');
+  var index = document.getElementById('index');
+  function closeMenu() { index.removeAttribute('data-open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+  menuBtn.addEventListener('click', function () {
+    var open = !index.hasAttribute('data-open');
+    if (open) index.setAttribute('data-open', ''); else index.removeAttribute('data-open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+  var lightQ = matchMedia('(max-width: 860px), (hover: none) and (pointer: coarse)');
+  /* ---- the walk's travel distance, used by the CSS scroll timeline ---- */
+  /* the exact scroll range of the pinned walk, in page pixels, so the row ends where the pin ends */
+  var travelW = -1;
+  function setTravel() {
+    var over = Math.max(0, rail.scrollWidth - innerWidth);
+    var start = walk.getBoundingClientRect().top + scrollY;
+    var end = start + Math.max(1, walk.offsetHeight - innerHeight);
+    rail.style.setProperty('--rail-travel', (over * 1.02).toFixed(1) + 'px');
+    rail.style.setProperty('--walk-start', start.toFixed(1) + 'px');
+    rail.style.setProperty('--walk-end', end.toFixed(1) + 'px');
+    travelW = innerWidth;
+  }
+  setTravel();
+  /* phones change height when the address bar hides; only a width change re-measures, like the engine */
+  addEventListener('resize', function () { if (innerWidth !== travelW || !lightQ.matches) setTravel(); });
+  addEventListener('load', setTravel);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(setTravel);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; setTravel(); } }).observe(document.body); }
+
+  /* ---- active marker + rail settle ---- */
+  var links = [].slice.call(index.querySelectorAll('a'));
+  var marker = index.querySelector('.bar__marker');
+  var objects = [].slice.call(rail.querySelectorAll('.object--wall'));
+  var sections = ['services', 'clients', 'team', 'contact'].map(function (id) { return document.getElementById(id); });
+  var current = undefined;
+  function setActive(id) {
+    if (id === current) return;
+    current = id;
+    links.forEach(function (a) {
+      if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    var a = id && index.querySelector('a[href="#' + id + '"]');
+    if (!a || getComputedStyle(marker).display === 'none') { marker.style.opacity = '0'; return; }
+    var ul = a.closest('ul');
+    var x = a.getBoundingClientRect().left - index.getBoundingClientRect().left;
+    marker.style.opacity = '1';
+    marker.style.transform = 'translateX(' + x.toFixed(1) + 'px) scaleX(' + (a.offsetWidth / 100).toFixed(3) + ')';
+  }
+  var ticking = false;
+  function frame() {
+    ticking = false;
+    var vh = innerHeight, vw = innerWidth;
+    var wr = walk.getBoundingClientRect();
+    var id = null;
+    if (reduce) {
+      objects.forEach(function (o) { if (o.getBoundingClientRect().top < vh * 0.4) id = o.id; });
+    } else if (wr.top <= 1 && wr.bottom > vh * 0.5) {
+      var best = null, bd = 1e9;
+      objects.forEach(function (o) {
+        var r = o.getBoundingClientRect();
+        var d = Math.abs(r.left + r.width / 2 - vw / 2);
+        if (d < bd) { bd = d; best = o; }
+      });
+      id = best && bd < vw * 0.55 ? best.id : 'plumtide';
+    }
+    sections.forEach(function (s) { if (s.getBoundingClientRect().top < vh * 0.4) id = s.id; });
+    setActive(id);
+    if (!reduce && !lightQ.matches) {
+      objects.forEach(function (o) {
+        var r = o.getBoundingClientRect();
+        var d = (r.left + r.width / 2 - vw / 2) / vw;
+        var s = Math.max(0, Math.min(1, 1 - (d - 0.15) / 0.55));
+        o.style.setProperty('--settle', s.toFixed(3));
+        var dd = Math.max(-1.2, Math.min(1.2, d));
+        o.style.setProperty('--art-x', (-dd * 34).toFixed(1) + 'px');
+        o.style.setProperty('--lab-x', (dd * 26).toFixed(1) + 'px');
+      });
+    }
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', function () { current = null; onScroll(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { current = null; onScroll(); });
+  frame();
+
+  /* ---- entrance: the scene fills exactly the height left under the headline (desktop) ---- */
+  var entry = document.querySelector('.entry');
+  var sceneW = -1, sceneH = -1;
+  function fitScene() {
+    if (matchMedia('(max-width: 860px)').matches) { entry.style.removeProperty('--scene-w'); return; }
+    if (innerWidth === sceneW && innerHeight === sceneH) return;
+    sceneW = innerWidth; sceneH = innerHeight;
+    var head = entry.querySelector('.entry__head');
+    var padB = parseFloat(getComputedStyle(entry).paddingBottom) || 0;
+    var avail = Math.max(innerHeight, 640) - (head.offsetTop + head.offsetHeight) - padB - 24;
+    var w = Math.min(innerWidth * 0.84, 1280, Math.max(560, avail / 0.58));
+    entry.style.setProperty('--scene-w', w.toFixed(0) + 'px');
+  }
+  fitScene();
+  addEventListener('resize', fitScene);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { sceneW = -1; fitScene(); });
+
+  /* ---- entrance: reveal once the layers are decoded, then lean with the pointer ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var layers = [].slice.call(entry.querySelectorAll('img'));
+    var go2 = function () { requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.remove('pre-reveal'); }); }); };
+    var done = false, finish = function () { if (!done) { done = true; go2(); } };
+    Promise.all(layers.map(function (im) { return im.decode ? im.decode().catch(function () {}) : Promise.resolve(); })).then(finish);
+    setTimeout(finish, 1600);
+  }
+  if (!reduce && fine.matches) {
+    var tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
+    var step = function () {
+      cx += (tx - cx) * 0.12; cy += (ty - cy) * 0.12;
+      entry.style.setProperty('--mx', cx.toFixed(3)); entry.style.setProperty('--my', cy.toFixed(3));
+      raf = (Math.abs(tx - cx) > 0.002 || Math.abs(ty - cy) > 0.002) ? requestAnimationFrame(step) : 0;
+    };
+    entry.addEventListener('pointermove', function (e) {
+      var r = entry.getBoundingClientRect();
+      tx = ((e.clientX - r.left) / r.width - 0.5) * 2; ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+      if (!raf) raf = requestAnimationFrame(step);
+    });
+    entry.addEventListener('pointerleave', function () { tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(step); });
+  }
+
+  /* ---- services: the disc turns with the scroll, each service holds, then turns on ---- */
+  var discAct = document.querySelector('.disc-act');
+  var disc = discAct.querySelector('.disc');
+  var svcEls = [].slice.call(discAct.querySelectorAll('.svc'));
+  var plateEls = [].slice.call(discAct.querySelectorAll('.disc__plate span'));
+  var idxLinks = [].slice.call(discAct.querySelectorAll('.disc-index a'));
+  var N = svcEls.length, discPos = 0, discRaf = 0, lastActive = -1;
+  function discTarget() {
+    var total = discAct.offsetHeight - innerHeight;
+    if (total <= 0) return 0;
+    var prog = Math.max(0, Math.min(1, -discAct.getBoundingClientRect().top / total));
+    var raw = prog * (N - 1), i = Math.floor(raw), f = raw - i;
+    var t = Math.max(0, Math.min(1, (f - 0.25) / 0.5));
+    return Math.min(N - 1, i + t * t * (3 - 2 * t));
+  }
+  function paintDisc() {
+    disc.style.setProperty('--rot', (discPos * 45).toFixed(2) + 'deg');
+    for (var k = 0; k < N; k++) {
+      var near = Math.max(0, 1 - Math.abs(discPos - k));
+      plateEls[k].style.setProperty('--s', (0.78 + 0.26 * near).toFixed(3));
+    }
+    var active = Math.round(discPos);
+    if (active !== lastActive) {
+      lastActive = active;
+      idxLinks.forEach(function (a, k) { if (k === active) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+      svcEls.forEach(function (el, k) { el.classList.toggle('is-active', k === active); });
+    }
+  }
+  function discStep() {
+    var target = discTarget();
+    discPos += (target - discPos) * 0.2;
+    if (Math.abs(target - discPos) < 0.001) discPos = target;
+    paintDisc();
+    discRaf = discPos !== target ? requestAnimationFrame(discStep) : 0;
+  }
+  if (!reduce) {
+    addEventListener('scroll', function () { if (!discRaf) discRaf = requestAnimationFrame(discStep); }, { passive: true });
+    addEventListener('resize', function () { if (!discRaf) discRaf = requestAnimationFrame(discStep); });
+    discStep();
+  }
+  function discY(k) {
+    var top = discAct.getBoundingClientRect().top + scrollY;
+    return top + (discAct.offsetHeight - innerHeight) * (k / (N - 1));
+  }
+  idxLinks.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (reduce) return;
+      e.preventDefault(); e.stopPropagation();
+      scrollTo({ top: discY(+a.getAttribute('data-k')), behavior: 'smooth' });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Brands, Packaging and Film in Lowmere</title>
+<meta name="description" content="Mosswick Studio is a creative and marketing studio of 32 people in Lowmere: brand strategy, identity, packaging, websites, film and paid media.">
+<meta name="theme-color" content="#EFD4CD">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Brands, Packaging and Film in Lowmere">
+<meta property="og:description" content="Brands, packaging, websites, films and campaigns for companies worth remembering, from one studio in Lowmere.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Brands, Packaging and Film in Lowmere">
+<meta name="twitter:description" content="Brands, packaging, websites, films and campaigns for companies worth remembering, from Lowmere.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="image" href="assets/work-reel.webp" imagesrcset="assets/work-reel-960.webp 960w, assets/work-reel.webp 1600w" imagesizes="(max-width: 860px) 60vw, 42vw" fetchpriority="high">
+<link rel="preload" as="image" href="assets/pack-01.webp">
+<link rel="preload" as="image" href="assets/pack-03.webp">
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-semibold.woff2") format("woff2"); font-weight: 500 700; font-style: normal; font-display: swap; }
+
+/* Palette: Blush Gallery. Blush set #EFD4CD (hero and close), page #F6E3DE, light panels #FCF4F1, ink #2B1418,
+   accent #7A1F3D (the cartons' side panels, crease and cut lines, the CTA chip). Type: the Apple system stack, Geist bundled as the fallback. */
+:root {
+  --y: #EFD4CD; --k: #2B1418; --paper: #F6E3DE; --w: #FCF4F1; --cut: #7A1F3D; --acc: #7A1F3D; --acc-ink: #F6E3DE; --board: #E2CCC5;
+  --hair: rgba(43, 20, 24, .14); --hair-w: rgba(255, 255, 255, .16);
+  --soft: rgba(43, 20, 24, .74); --soft-w: rgba(255, 255, 255, .72);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Geist", Helvetica, Arial, sans-serif;
+  --bar: 64px; --g: clamp(1rem, 4vw, 3.5rem);
+  --sc-canvas: #F6E3DE; --sc-surface: #FCF4F1;
+  --sc-ink: #2B1418; --sc-ink-soft: rgba(43, 20, 24, .74);
+  --sc-accent: #7A1F3D; --sc-accent-ink: #F6E3DE;
+  --sc-font-display: var(--font); --sc-font-text: var(--font);
+  --sc-gutter: var(--g);
+}
+html { background: var(--paper); }
+body { margin: 0; background: var(--paper); color: var(--k); font-family: var(--font); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, dl, dd, ol, ul, figure, blockquote { margin: 0; }
+ol, ul { padding: 0; list-style: none; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 95; background: var(--k); color: #fff; padding: 10px 14px; font: 600 14px/1 var(--font); border-radius: 6px; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--k); outline-offset: 3px; }
+.room { position: relative; overflow-x: clip; }
+.eyebrow, .dt { font: 600 12px/1.2 var(--font); letter-spacing: .14em; text-transform: uppercase; }
+.h2 { font: 600 clamp(2rem, 4.2vw, 3.6rem)/1.02 var(--font); letter-spacing: -.03em; }
+
+/* ---------- the one CTA: "Say hello". The chip carries the studio's M and floods the pill on hover. ---------- */
+.cta {
+  position: relative; display: inline-flex; align-items: center; gap: .7em; isolation: isolate; overflow: hidden;
+  min-height: 44px; padding: .42em 1.2em .42em .42em; border-radius: 999px;
+  background: var(--k); color: #fff; text-decoration: none; white-space: nowrap;
+  font: 600 15px/1 var(--font);
+  transition: transform .3s var(--ease), color .45s var(--ease);
+}
+.cta__chip { position: relative; z-index: 1; display: grid; place-items: center; width: 2.25em; height: 2.25em; border-radius: 50%; background: var(--acc); flex: none; }
+.cta__chip svg { width: .78em; height: auto; fill: var(--acc-ink); transition: transform .45s var(--ease); }
+.cta::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--acc); clip-path: circle(1.12em at 1.54em 50%); transition: clip-path .55s var(--ease); }
+.cta__t { position: relative; z-index: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover, .cta:focus-visible { color: var(--acc-ink); }
+  .cta:hover::before, .cta:focus-visible::before { clip-path: circle(140% at 1.54em 50%); }
+  .cta:hover .cta__chip svg, .cta:focus-visible .cta__chip svg { transform: translateY(1px) rotate(-8deg); }
+}
+.cta:active { transform: scale(.97); }
+.cta--big { font-size: clamp(17px, 1.35vw, 20px); padding-right: 1.4em; }
+@media (prefers-reduced-motion: reduce) { .cta, .cta::before, .cta__chip svg { transition: none; } }
+
+/* ---------- the bar: the wordmark, the work's categories as filter chips that jump into the collection, the CTA ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar); box-sizing: border-box;
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 24px;
+  padding: 0 var(--g); background: var(--paper); border-bottom: 1px solid var(--hair);
+}
+.bar__brand { display: block; line-height: 0; border-radius: 4px; }
+.bar__brand img { height: 26px; width: auto; }
+.cats { display: flex; justify-content: center; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid rgba(43, 20, 24, .22); text-decoration: none; font: 500 13px/1 var(--font); white-space: nowrap;
+  transition: background-color .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease);
+}
+.chip:hover { border-color: var(--k); }
+.chip.is-on { background: var(--k); border-color: var(--k); color: #fff; }
+.idx-btn {
+  display: none; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(43, 20, 24, .22);
+  background: transparent; color: var(--k); font: 500 14px/1 var(--font); cursor: pointer;
+}
+.idx-btn span { display: block; width: 14px; height: 9px; border-block: 1.5px solid currentColor; position: relative; }
+.idx-btn span::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; margin-top: -.75px; background: currentColor; }
+.sheet {
+  position: fixed; z-index: 59; inset: var(--bar) 0 auto 0; background: var(--paper); border-bottom: 1px solid var(--hair);
+  padding: 18px var(--g) 26px; display: grid; gap: 18px;
+  transform: translateY(-8px); opacity: 0; visibility: hidden; transition: transform .45s var(--ease), opacity .3s var(--ease), visibility 0s linear .45s;
+}
+.sheet.is-open { transform: none; opacity: 1; visibility: visible; transition: transform .45s var(--ease), opacity .3s var(--ease); }
+.sheet .cats { justify-content: flex-start; flex-wrap: wrap; }
+.sheet__links { display: flex; flex-wrap: wrap; gap: 6px 22px; font: 500 15px/1.3 var(--font); }
+.sheet__links a { text-decoration: none; padding: 8px 0; }
+.sheet__links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 1179px) {
+  .bar .cats { display: none; }
+  .idx-btn { display: inline-flex; justify-self: end; }
+}
+
+/* phones: wordmark and Index on top, the CTA in a bar under the thumb */
+.dock { display: none; }
+
+/* ================= act 1: the hero, the studio's own work unboxed on a blush set ================= */
+.hero { background: var(--y); height: 100vh; height: 100svh; min-height: 600px; padding-top: var(--bar); box-sizing: border-box; display: flex; align-items: flex-end; justify-content: center; }
+.scene {
+  position: relative; container-type: inline-size; overflow: clip;
+  width: min(100vw, calc((100svh - var(--bar)) * 100 / 56)); aspect-ratio: 100 / 56; flex: none;
+  --bw: 45cqw; --bh: 13cqw; --bd: 20cqw; --rw: 41cqw;
+}
+.exhibit { position: absolute; inset: 0; }
+.set { position: absolute; inset: 0; }
+.set__floor { position: absolute; left: 0; right: 0; top: 42cqw; bottom: 0; background: #E8C6BE; border-top: 1px solid rgba(43, 20, 24, .1); }
+.pl { position: absolute; }
+/* copy: eyebrow, h1, the one CTA */
+.hero__copy { position: absolute; left: 4cqw; top: 5.5cqw; width: 33cqw; z-index: 5; }
+.hero__copy .eyebrow { font-size: max(11px, .9cqw); color: var(--soft); }
+.h1 { margin-top: 1.5cqw; font-weight: 600; }
+.h1__name { display: block; font-size: 5.6cqw; line-height: .9; letter-spacing: -.05em; }
+.h1__sub { display: block; margin-top: 1.7cqw; font-size: max(15px, 1.42cqw); line-height: 1.32; font-weight: 500; color: var(--k); max-width: 23em; }
+.hero__copy .cta { margin-top: 2.3cqw; }
+/* mid plane: the studio's carton, open, with a screen standing up out of it */
+.pl--box { left: 0; top: 0; width: 100cqw; height: 56cqw; z-index: 2; transform-origin: 70% 80%; }
+.bx-shadow { position: absolute; left: 44cqw; top: 46.5cqw; width: 52cqw; height: 6cqw; border-radius: 50%; background: rgba(90, 30, 45, .26); filter: blur(1.4cqw); }
+.bx-wrap { position: absolute; left: 47cqw; top: 33.5cqw; width: var(--bw); height: var(--bh); perspective: 150cqw; perspective-origin: 20% -140%; }
+.bx { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(-15deg) rotateY(-21deg); }
+.bxf { position: absolute; top: 0; height: var(--bh); transform-style: preserve-3d; }
+.bxf--front { left: 0; width: var(--bw); background: var(--k); transform: translateZ(calc(var(--bd) / 2)); display: grid; place-items: center; padding-top: calc(var(--bh) * .34); box-sizing: border-box; }
+.bxf--front img { width: 50%; height: auto; }
+.bxf--back { left: 0; width: var(--bw); background: #432C30; transform: translateZ(calc(var(--bd) / -2)) rotateY(180deg); }
+.bxf--left { left: calc((var(--bw) - var(--bd)) / 2); width: var(--bd); background: #493236; transform: translateX(calc(var(--bw) / -2)) rotateY(-90deg); }
+.bxf--right { left: calc((var(--bw) - var(--bd)) / 2); width: var(--bd); background: #361F23; transform: translateX(calc(var(--bw) / 2)) rotateY(90deg); }
+.bxf--floor { left: 0; width: var(--bw); top: calc((var(--bh) - var(--bd)) / 2); height: var(--bd); background: #513A3E; transform: translateY(calc(var(--bh) / 2)) rotateX(90deg); }
+/* flaps hinge on each wall's top edge; the crease is dashed in blush, as on a dieline */
+.fl { position: absolute; left: 0; bottom: 100%; width: 100%; height: calc(var(--bd) * .5); transform-origin: 50% 100%; transform: rotateX(var(--open)); background: #3F282C; border-bottom: 1px dashed var(--y); box-sizing: border-box; }
+.bxf--front > .fl { --open: -170deg; height: calc(var(--bh) * .3); background: #341D21; }
+.bxf--back > .fl { --open: -28deg; background: #4C3539; }
+.bxf--left > .fl { --open: -56deg; height: calc(var(--bd) * .46); }
+.bxf--right > .fl { --open: -56deg; height: calc(var(--bd) * .46); background: #331C20; }
+.bx__reel { position: absolute; left: calc((var(--bw) - var(--rw)) / 2); width: var(--rw); bottom: calc(var(--bh) * .42); transform-origin: 50% 100%; transform: translateZ(calc(var(--bd) * -.1)) rotateY(21deg) rotateX(13deg); }
+.screen { position: relative; aspect-ratio: 16 / 9; background: var(--k); border-radius: .4cqw; overflow: hidden; }
+.screen__poster, .screen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+.screen iframe { opacity: 0; transition: opacity .8s var(--ease); pointer-events: none; }
+.screen.is-live iframe { opacity: 1; }
+.screen__tag {
+  position: absolute; left: 0; bottom: calc(100% + 1cqw); display: flex; gap: .8cqw; align-items: center;
+  font: 600 max(10.5px, .8cqw)/1 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--k);
+}
+.screen__tag i { width: .55cqw; height: .55cqw; min-width: 6px; min-height: 6px; border-radius: 50%; background: var(--k); }
+/* near plane: three objects from the studio's work on the set floor (cut out of their backgrounds) */
+.pl--packs { inset: 0; z-index: 3; pointer-events: none; transform-origin: 60% 100%; }
+.pk { position: absolute; height: auto; filter: drop-shadow(0 1.1cqw 1cqw rgba(80, 26, 40, .34)); }
+.pk--1 { left: 39.5cqw; bottom: -2.5cqw; width: 17cqw; }
+.pk--2 { right: 2.2cqw; bottom: 9.2cqw; width: 14cqw; }
+.pk--3 { right: 1.5cqw; bottom: -.4cqw; width: 18cqw; }
+
+/* reveal on load: the carton drops onto the set, its flaps swing open, the screen rises out of it, the objects land in front.
+   The final state is the default (no JS, reduced motion). */
+@media (prefers-reduced-motion: no-preference) {
+  html.pre-reveal .bx-wrap, html.pre-reveal .bx-shadow, html.pre-reveal .bx__reel, html.pre-reveal .pk, html.pre-reveal .hero__copy > * { opacity: 0; }
+  html.pre-reveal .fl { transform: rotateX(90deg); }
+  html.reveal .bx-wrap { animation: dl-drop .62s var(--ease) both; }
+  html.reveal .bx-shadow { animation: dl-shadow .62s var(--ease) both; }
+  html.reveal .fl { animation: dl-flap .72s var(--ease) both; }
+  html.reveal .bxf--front > .fl { animation-delay: .4s; }
+  html.reveal .bxf--left > .fl { animation-delay: .5s; }
+  html.reveal .bxf--right > .fl { animation-delay: .56s; }
+  html.reveal .bxf--back > .fl { animation-delay: .62s; }
+  html.reveal .bx__reel { animation: dl-reel .95s var(--ease) .78s both; }
+  html.reveal .pk { animation: dl-pop .75s var(--ease) both; }
+  html.reveal .pk--1 { animation-delay: 1.02s; }
+  html.reveal .pk--2 { animation-delay: 1.12s; }
+  html.reveal .pk--3 { animation-delay: 1.22s; }
+  html.reveal .hero__copy > * { animation: dl-up .65s var(--ease) both; }
+  html.reveal .hero__copy > :nth-child(2) { animation-delay: .1s; }
+  html.reveal .hero__copy > :nth-child(3) { animation-delay: .22s; }
+}
+@keyframes dl-drop { 0% { opacity: 0; transform: translate3d(0, -12cqw, 0); } 30% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+@keyframes dl-shadow { from { opacity: 0; transform: scale(.55); } to { opacity: 1; transform: none; } }
+@keyframes dl-flap { from { transform: rotateX(90deg); } to { transform: rotateX(var(--open)); } }
+@keyframes dl-reel { 0% { opacity: 0; transform: translateZ(calc(var(--bd) * -.1)) rotateY(21deg) rotateX(13deg) translate3d(0, 30%, 0) scale(.94); } 30% { opacity: 1; } 100% { opacity: 1; transform: translateZ(calc(var(--bd) * -.1)) rotateY(21deg) rotateX(13deg); } }
+@keyframes dl-pop { 0% { opacity: 0; transform: translate3d(0, 28%, 0) scale(.92); } 35% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+@keyframes dl-up { from { opacity: 0; transform: translate3d(0, 14px, 0); } to { opacity: 1; transform: none; } }
+
+/* scroll timelines (page pixels set by JS): one rule for every scroll-driven move */
+html.anim .sd { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+/* hero, desktop only: the objects ride with the page, the carton and its screen lag and recede behind them */
+html.anim .pl--box.sd { animation-name: dl-far; }
+html.anim .pl--packs.sd { animation-name: dl-near; }
+/* triggered reveals (any scroll length): an element waits on its first frame; JS adds .on once its point is crossed and the move plays through on its own */
+html.anim .trg { animation-duration: .55s; animation-timing-function: var(--ease); animation-fill-mode: both; animation-play-state: paused; }
+html.anim .trg.on { animation-play-state: running; }
+@keyframes dl-far { to { transform: translate3d(0, 8cqw, 0) scale(.94); } }
+@keyframes dl-near { to { transform: scale(1.04); } }
+
+/* ================= act 2: what the studio makes, the services sheet ================= */
+.svc { background: var(--paper); padding: clamp(4rem, 6.5vw, 6rem) var(--g) clamp(4rem, 6.5vw, 5.5rem); }
+.svc__in { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.svc__intro { position: sticky; top: calc(var(--bar) + 40px); }
+.svc__intro .h2 { max-width: 9ch; }
+.svc__lede { margin-top: 24px; font: 500 clamp(1.05rem, 1.35vw, 1.25rem)/1.5 var(--font); max-width: 34ch; }
+.svc__where { margin-top: 22px; color: var(--soft); font: 400 15px/1.5 var(--font); }
+.desk { perspective: 1400px; perspective-origin: 50% 0%; }
+.svc__sheet { background: var(--w); padding: 10px clamp(1.2rem, 3vw, 2.6rem); transform-origin: 50% 100%; transform-style: preserve-3d; box-shadow: 0 30px 60px -40px rgba(43, 20, 24, .35); }
+.svc__row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--hair); }
+.svc__row:last-child { border-bottom: 0; }
+.svc__row h3 { font: 600 clamp(1.25rem, 1.9vw, 1.7rem)/1.1 var(--font); letter-spacing: -.025em; }
+.svc__row p { color: var(--soft); font: 400 16px/1.5 var(--font); }
+html.anim .svc__sheet.trg { animation-name: dl-sheet; animation-duration: .6s; }
+html.anim .svc__row.trg { animation-name: dl-press; }
+@keyframes dl-sheet { from { transform: rotateX(54deg) translate3d(0, 4%, 0) scale(.94); } to { transform: none; } }
+@keyframes dl-out { from { opacity: 1; visibility: visible; } to { opacity: 0; visibility: hidden; } }
+@keyframes dl-sheet-m { from { transform: rotateX(38deg) translate3d(0, 3%, 0) scale(.96); } to { transform: none; } }
+@keyframes dl-press { 0% { opacity: 0; transform: translate3d(0, -14px, 90px); } 35% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+
+/* ================= act 3: the collection, walked as dieline cartons (peak, pinned) ================= */
+.col { background: var(--k); color: #fff;
+  --W: clamp(230px, min(22.5vw, 36vh), 360px); --H: calc(var(--W) / 1.26); --D: calc(var(--W) * .34);
+  --gl: calc(var(--W) * .08); --tk: calc(var(--W) * .11); --nx: calc((var(--gl) - var(--W)) / 2); --ny: 0px;
+  --side: min(30vw, 360px); --persp: 1700px;
+}
+.col__stage { background: var(--k); }
+.col__side { position: absolute; z-index: 4; left: var(--g); width: var(--side); top: calc(var(--bar) + 34px); bottom: 34px; display: flex; flex-direction: column; justify-content: space-between; pointer-events: none; }
+.col__side a { pointer-events: auto; }
+.col__head .h2 { font-size: clamp(2rem, 3.4vw, 3rem); }
+.col__head p { margin-top: 14px; color: var(--soft-w); font: 400 15px/1.5 var(--font); max-width: 32ch; }
+.col__index { border-top: 1px solid var(--hair-w); }
+.col__index li { border-bottom: 1px solid var(--hair-w); }
+.col__index a { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; text-decoration: none; font: 500 14px/1.2 var(--font); color: rgba(255, 255, 255, .6); transition: color .3s var(--ease); }
+.col__index a span { font-weight: 400; color: rgba(255, 255, 255, .5); }
+.col__index a.is-on, .col__index a:hover { color: #fff; }
+.col__index a.is-on span { color: var(--y); }
+.case { position: absolute; inset: 0; pointer-events: none; }
+.case__label a { pointer-events: auto; }
+.case__obj { position: absolute; left: calc(var(--g) + var(--side) + 24px); right: 0; top: var(--bar); bottom: 0; perspective: var(--persp); perspective-origin: 50% 50%; }
+.case__label { position: absolute; z-index: 5; left: var(--g); width: var(--side); top: calc(50% - 7.5rem); }
+.lbl__client { font: 600 clamp(1.5rem, 2.2vw, 2rem)/1.05 var(--font); letter-spacing: -.03em; }
+.lbl { margin-top: 16px; border-top: 1px solid var(--hair-w); }
+.lbl div { display: grid; grid-template-columns: 6.8rem 1fr; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--hair-w); font: 400 14px/1.35 var(--font); }
+.lbl dt { color: rgba(255, 255, 255, .62); padding-top: .16em; font-size: 11px; }
+.lbl__line { margin-top: 14px; font: 400 15px/1.5 var(--font); color: rgba(255, 255, 255, .86); max-width: 34ch; }
+.lbl__link { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; min-height: 40px; font: 600 14px/1 var(--font); text-decoration: underline; text-decoration-color: rgba(255, 255, 255, .4); text-underline-offset: 5px; }
+.lbl__link:hover { text-decoration-color: var(--y); }
+.lbl__link svg { width: 10px; height: 10px; }
+
+/* the carton: a front panel with every other panel hinged off it. Flat (its dieline) is the default state. */
+.rig { position: absolute; left: 50%; top: 50%; width: var(--W); height: var(--H); margin: calc(var(--H) / -2) 0 0 calc(var(--W) / -2);
+  transform-style: preserve-3d; transform-origin: 50% 50% calc(var(--D) / -2); transform: translate3d(var(--nx), var(--ny), 0); }
+.pn { position: absolute; transform-style: preserve-3d; }
+.pf { position: absolute; inset: 0; overflow: hidden; background: var(--w); outline: 1px dashed var(--cut); outline-offset: -1px; }
+.pf img { width: 100%; height: 100%; object-fit: cover; }
+.pn--f { inset: 0; }
+.pn--l { right: 100%; top: 0; width: var(--D); height: var(--H); transform-origin: 100% 50%; }
+.pn--r { left: 100%; top: 0; width: var(--D); height: var(--H); transform-origin: 0 50%; }
+.pn--bh { left: 100%; top: 0; width: var(--W); height: var(--H); transform-origin: 0 50%; }
+.pn--t { bottom: 100%; left: 0; width: var(--W); height: var(--D); transform-origin: 50% 100%; }
+.pn--u { top: 100%; left: 0; width: var(--W); height: var(--D); transform-origin: 50% 0; }
+.pn--bv { top: 100%; left: 0; width: var(--W); height: var(--H); transform-origin: 50% 0; display: none; }
+.pn--gl { right: 100%; top: 6%; width: var(--gl); height: 88%; transform-origin: 100% 50%; }
+.pn--dt { bottom: 100%; left: 0; width: 100%; height: calc(var(--D) * .58); transform-origin: 50% 100%; }
+.pn--db { top: 100%; left: 0; width: 100%; height: calc(var(--D) * .58); transform-origin: 50% 0; }
+.pn--tt { bottom: 100%; left: 0; width: 100%; height: var(--tk); transform-origin: 50% 100%; }
+.pn--ut { top: 100%; left: 0; width: 100%; height: var(--tk); transform-origin: 50% 0; }
+/* flap shapes are cut on the face, never on a 3D node (clip-path would flatten it) */
+.pn--gl > .pf { clip-path: polygon(100% 0, 100% 100%, 0 88%, 0 12%); outline-style: solid; }
+.pn--dt > .pf { clip-path: polygon(0 100%, 100% 100%, 84% 6%, 22% 0, 4% 30%); outline-style: solid; }
+.pn--db > .pf { clip-path: polygon(0 0, 100% 0, 96% 70%, 78% 100%, 16% 94%); outline-style: solid; }
+.pn--tt > .pf { clip-path: polygon(0 100%, 100% 100%, 96% 30%, 86% 0, 14% 0, 4% 30%); outline-style: solid; }
+.pn--ut > .pf { clip-path: polygon(0 0, 100% 0, 96% 70%, 86% 100%, 14% 100%, 4% 70%); outline-style: solid; }
+.pf--side { background: var(--acc); color: var(--acc-ink); display: grid; place-items: center; }
+.pf--side2 { display: grid; place-items: center; color: var(--k); }
+.pf--side span, .pf--side2 span { writing-mode: vertical-rl; transform: rotate(180deg); font: 600 calc(var(--D) * .17)/1 var(--font); letter-spacing: -.01em; white-space: nowrap; }
+.pf--side2 span { font-weight: 500; letter-spacing: .12em; text-transform: uppercase; font-size: calc(var(--D) * .105); }
+/* the carton's printed labels are part of the object (aria-hidden repeats of the label column), drawn as generated content */
+.pf--side span::before, .pf--side2 span::before, .pf--base::before { content: attr(data-t); }
+.pf--back::before { content: attr(data-a) "\A" attr(data-b); white-space: pre; }
+.pf--lid { display: grid; place-items: center; }
+.pf--lid img { width: 46%; height: auto; object-fit: contain; }
+.pf--base { display: grid; place-items: center; padding: 0 8%; text-align: center; color: var(--k); font: 600 calc(var(--D) * .105)/1.25 var(--font); letter-spacing: .12em; text-transform: uppercase; }
+
+html.anim .case.sd .case__obj { animation-name: dl-obj; }
+html.anim .case.sd .rig { animation-name: dl-rig; }
+html.anim .case.sd .pn--l { animation-name: dl-l; }
+html.anim .case.sd .pn--r { animation-name: dl-r; }
+html.anim .case.sd .pn--bh { animation-name: dl-bh; }
+html.anim .case.sd .pn--t { animation-name: dl-t; }
+html.anim .case.sd .pn--u { animation-name: dl-u; }
+html.anim .case.sd .pn--bv { animation-name: dl-bv; }
+html.anim .case.sd .pn--gl { animation-name: dl-gl; }
+html.anim .case.sd .pn--dt { animation-name: dl-dt; }
+html.anim .case.sd .pn--db { animation-name: dl-db; }
+html.anim .case.sd .pn--tt { animation-name: dl-tt; }
+html.anim .case.sd .pn--ut { animation-name: dl-ut; }
+html.anim .case--last.sd .case__obj { animation-name: dl-obj-last; }
+html.anim .case--last.sd .rig { animation-name: dl-rig-last; }
+/* the label swaps when the object swaps: the old one goes at once, the new one rises in on its own (JS sets .on on the label whose stretch holds the scroll position) */
+html.anim .case.sd .case__label { opacity: 0; visibility: hidden; transform: translate3d(0, 12px, 0); }
+html.anim .case.sd .case__label.on { opacity: 1; visibility: visible; transform: none; transition: opacity .3s var(--ease), transform .45s var(--ease); }
+html.anim .case.sd :is(.case__obj, .rig, .pn) { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+@keyframes dl-obj { 0% { opacity: 0; } 9%, 91% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes dl-obj-last { 0% { opacity: 0; } 9%, 100% { opacity: 1; } }
+/* captions swap at one point (cases are spaced at 78% of a range, so the old one leaves at 89% of its range exactly where the next arrives at 11% of its own), so two captions never sit on top of each other */
+@keyframes dl-lbl-last { 0%, 11% { opacity: 0; visibility: hidden; transform: translate3d(0, 12px, 0); } 11.05% { opacity: 1; visibility: visible; transform: translate3d(0, 12px, 0); } 13.5%, 100% { opacity: 1; visibility: visible; transform: none; } }
+@keyframes dl-rig-last {
+  0% { transform: translate3d(0, 62vh, -900px) rotateX(-24deg) rotateY(-42deg) rotateZ(-4deg); }
+  22% { transform: translate3d(0, 0, 0) rotateX(-17deg) rotateY(-31deg) rotateZ(0deg); animation-timing-function: cubic-bezier(.45, 0, .2, 1); }
+  46%, 70% { transform: translate3d(var(--nx), var(--ny), 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); animation-timing-function: cubic-bezier(.45, 0, .2, 1); }
+  86%, 100% { transform: translate3d(0, 0, 0) rotateX(-17deg) rotateY(30deg) rotateZ(0deg); }
+}
+/* the label swaps when the object swaps: the old one leaves as the new one arrives, so the room always carries one */
+@keyframes dl-lbl { 0%, 11% { opacity: 0; visibility: hidden; transform: translate3d(0, 12px, 0); } 11.05% { opacity: 1; visibility: visible; transform: translate3d(0, 12px, 0); } 13.5%, 88.95% { opacity: 1; visibility: visible; transform: none; } 89%, 100% { opacity: 0; visibility: hidden; transform: translate3d(0, -8px, 0); } }
+@keyframes dl-lbl-first { 0%, 88.95% { opacity: 1; visibility: visible; transform: none; } 89%, 100% { opacity: 0; visibility: hidden; transform: translate3d(0, -8px, 0); } }
+@keyframes dl-rig {
+  0% { transform: translate3d(0, 62vh, -900px) rotateX(-24deg) rotateY(-42deg) rotateZ(-4deg); }
+  22% { transform: translate3d(0, 0, 0) rotateX(-17deg) rotateY(-31deg) rotateZ(0deg); animation-timing-function: cubic-bezier(.45, 0, .2, 1); }
+  46%, 70% { transform: translate3d(var(--nx), var(--ny), 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); animation-timing-function: cubic-bezier(.45, 0, .2, 1); }
+  86% { transform: translate3d(0, 0, 0) rotateX(-17deg) rotateY(30deg) rotateZ(0deg); }
+  100% { transform: translate3d(0, -62vh, -900px) rotateX(-24deg) rotateY(44deg) rotateZ(4deg); }
+}
+/* phones: the cartons come from depth, not up through the label */
+@keyframes dl-rig-m {
+  0% { transform: translate3d(0, 14vh, -260px) rotateX(-24deg) rotateY(-42deg) rotateZ(-4deg); }
+  22% { transform: translate3d(0, -20px, 300px) rotateX(-17deg) rotateY(-31deg) rotateZ(0deg); }
+  34% { transform: translate3d(0, -14px, 220px) rotateX(-7deg) rotateY(-12deg) rotateZ(0deg); }
+  46%, 70% { transform: translate3d(var(--nx), var(--ny), 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  80% { transform: translate3d(0, -14px, 220px) rotateX(-8deg) rotateY(13deg) rotateZ(0deg); }
+  86% { transform: translate3d(0, -20px, 300px) rotateX(-17deg) rotateY(30deg) rotateZ(0deg); }
+  100% { transform: translate3d(0, -24vh, -220px) rotateX(-24deg) rotateY(44deg) rotateZ(4deg); }
+}
+@keyframes dl-rig-last-m {
+  0% { transform: translate3d(0, 14vh, -260px) rotateX(-24deg) rotateY(-42deg) rotateZ(-4deg); }
+  22% { transform: translate3d(0, -20px, 300px) rotateX(-17deg) rotateY(-31deg) rotateZ(0deg); }
+  34% { transform: translate3d(0, -14px, 220px) rotateX(-7deg) rotateY(-12deg) rotateZ(0deg); }
+  46%, 70% { transform: translate3d(var(--nx), var(--ny), 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  80% { transform: translate3d(0, -14px, 220px) rotateX(-8deg) rotateY(13deg) rotateZ(0deg); }
+  86%, 100% { transform: translate3d(0, -20px, 300px) rotateX(-17deg) rotateY(30deg) rotateZ(0deg); }
+}
+@keyframes dl-l { 0%, 26% { transform: rotateY(-90deg); } 42%, 74% { transform: rotateY(0deg); } 86%, 100% { transform: rotateY(-90deg); } }
+@keyframes dl-r { 0%, 26% { transform: rotateY(90deg); } 42%, 74% { transform: rotateY(0deg); } 86%, 100% { transform: rotateY(90deg); } }
+@keyframes dl-bh { 0%, 30% { transform: rotateY(90deg); } 46%, 70% { transform: rotateY(0deg); } 82%, 100% { transform: rotateY(90deg); } }
+@keyframes dl-t { 0%, 24% { transform: rotateX(90deg); } 40%, 74% { transform: rotateX(0deg); } 86%, 100% { transform: rotateX(90deg); } }
+@keyframes dl-u { 0%, 24% { transform: rotateX(-90deg); } 40%, 74% { transform: rotateX(0deg); } 86%, 100% { transform: rotateX(-90deg); } }
+@keyframes dl-bv { 0%, 30% { transform: rotateX(-90deg); } 46%, 70% { transform: rotateX(0deg); } 82%, 100% { transform: rotateX(-90deg); } }
+@keyframes dl-gl { 0%, 32% { transform: rotateY(-88deg); } 46%, 70% { transform: rotateY(0deg); } 78%, 100% { transform: rotateY(-88deg); } }
+@keyframes dl-dt { 0%, 32% { transform: rotateX(86deg); } 46%, 70% { transform: rotateX(0deg); } 78%, 100% { transform: rotateX(86deg); } }
+@keyframes dl-db { 0%, 32% { transform: rotateX(-86deg); } 46%, 70% { transform: rotateX(0deg); } 78%, 100% { transform: rotateX(-86deg); } }
+@keyframes dl-tt { 0%, 32% { transform: rotateX(84deg); } 46%, 70% { transform: rotateX(0deg); } 78%, 100% { transform: rotateX(84deg); } }
+@keyframes dl-ut { 0%, 32% { transform: rotateX(-84deg); } 46%, 70% { transform: rotateX(0deg); } 78%, 100% { transform: rotateX(-84deg); } }
+
+/* no scroll timelines, or reduced motion: the collection is a plain list of flat dielines with their labels (no pinned scroll) */
+html:not(.anim) .col { height: auto !important; }
+html:not(.anim) .col__stage { position: static !important; height: auto !important; overflow: visible; padding: calc(var(--bar) + 4rem) var(--g) 4rem; }
+html:not(.anim) .col__side { position: static; width: auto; max-width: 1240px; margin: 0 auto; display: block; pointer-events: auto; }
+html:not(.anim) .col__index { display: none; }
+html:not(.anim) .case { pointer-events: auto; position: relative; inset: auto; max-width: 1240px; margin: 3.5rem auto 0; display: grid; grid-template-columns: var(--side) minmax(0, 1fr); gap: 24px; align-items: center; }
+html:not(.anim) .case__label { position: static; width: auto; order: -1; }
+html:not(.anim) .col { --W: clamp(220px, min(20vw, 34vh), 300px); }
+html:not(.anim) .case__obj { position: relative; inset: auto; height: calc(var(--H) + var(--D) * 2 + var(--tk) * 2 + 40px); }
+
+/* ================= act 4: what the work did, swing tags on a rail ================= */
+.rec { background: var(--paper); padding: clamp(4.5rem, 8vw, 7rem) var(--g) clamp(3.5rem, 5vw, 4.5rem); }
+.rec__in { max-width: 1240px; margin: 0 auto; }
+.rec__top { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+.rec__top p { color: var(--soft); font: 400 16px/1.5 var(--font); max-width: 40ch; }
+.rail { margin-top: clamp(2.5rem, 5vw, 4rem); height: 3px; background: var(--k); border-radius: 2px; }
+.tags { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1rem, 2.4vw, 2rem); perspective: 1200px; }
+.tag { position: relative; padding-top: var(--len, 40px); transform-origin: 50% 0; }
+.tag::before { content: ""; position: absolute; left: 50%; top: 0; height: calc(var(--len, 40px) + 14px); width: 1px; background: var(--k); }
+.tag__card { position: relative; background: var(--k); color: #fff; border-radius: 12px; padding: 34px 22px 22px; min-height: 196px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 22px 36px -26px rgba(43, 20, 24, .6); }
+.tag__card::before { content: ""; position: absolute; left: 50%; top: 12px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--paper); box-shadow: inset 0 0 0 2px var(--y); }
+.tag__mark { height: 34px; display: flex; align-items: center; }
+.tag__mark img { max-height: 34px; width: auto; max-width: 100%; }
+.tag__name { font: 600 19px/1.15 var(--font); }
+.tag__what { font: 400 14px/1.5 var(--font); color: rgba(255, 255, 255, .82); margin-top: auto; }
+.tag__what b { color: #fff; font-weight: 600; }
+html.anim .tag.trg { animation-name: dl-swing; animation-duration: .6s; animation-timing-function: cubic-bezier(.25, .7, .35, 1); animation-delay: calc(var(--i, 0) * 40ms); }
+@keyframes dl-swing {
+  0% { transform: rotateY(-82deg) rotateZ(9deg); }
+  48% { transform: rotateY(16deg) rotateZ(-4deg); }
+  74% { transform: rotateY(-6deg) rotateZ(1.5deg); }
+  100% { transform: rotateY(0deg) rotateZ(0deg); }
+}
+
+/* ================= act 5: clients, a rack of logo cards turning to face you ================= */
+.cli { background: var(--w); padding: clamp(3.5rem, 5vw, 4.5rem) var(--g) clamp(3rem, 5vw, 4.5rem); border-top: 1px solid var(--hair); }
+.cli__in { max-width: 1240px; margin: 0 auto; }
+.cli__top { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+.cli__top p { color: var(--soft); font: 400 16px/1.5 var(--font); max-width: 44ch; }
+.rack { margin-top: clamp(2.2rem, 4.5vw, 3.5rem); display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; perspective: 1100px; }
+.lg { aspect-ratio: 4 / 3; background: #F4E4DF; border-radius: 10px; display: grid; place-items: center; transform-origin: 0 50%; }
+.lg img { width: 100%; height: 100%; max-width: none; padding: 20.25% 19%; box-sizing: border-box; object-fit: contain; }
+.lg--wide img { padding: 24.75% 13%; }
+.lg--dark { background: var(--k); }
+html.anim .lg.trg { animation-name: dl-rack; animation-duration: .5s; animation-delay: calc(var(--i, 0) * 35ms); }
+@keyframes dl-rack { 0% { transform: rotateY(-80deg) translate3d(0, 0, -40px); opacity: .2; } 30% { opacity: 1; } 100% { transform: none; opacity: 1; } }
+
+/* ================= act 6: the people, the founder's story (its own room, not the hero) ================= */
+.ppl { background: var(--k); color: #fff; padding: clamp(4rem, 7vw, 6rem) var(--g) clamp(3rem, 5vw, 4.5rem); }
+.ppl__in { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 13fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.ppl__scene { position: relative; }
+.ppl__team { position: absolute; right: 0; top: 0; width: 70%; }
+.ppl__team img { width: 100%; aspect-ratio: 1160 / 748; object-fit: cover; border-radius: 6px; }
+.ppl__team figcaption { margin: 10px 0 0 44%; color: var(--soft-w); font: 400 13px/1.4 var(--font); text-align: right; }
+.ppl__founder { position: relative; z-index: 2; width: 60%; margin-top: 26%; }
+.ppl__founder img { width: 100%; aspect-ratio: 778 / 972; object-fit: cover; border-radius: 6px; box-shadow: 0 34px 60px -34px rgba(0, 0, 0, .95); }
+.ppl__founder figcaption { margin-top: 12px; font: 400 14px/1.4 var(--font); color: var(--soft-w); }
+.ppl__founder figcaption b { color: #fff; font-weight: 600; font-size: 16px; margin-right: 6px; }
+.ppl__text .eyebrow { color: var(--y); }
+.ppl__text .h2 { margin-top: 14px; }
+.ppl__q { margin-top: 24px; }
+.ppl__q p { font: 500 clamp(1.3rem, 2vw, 1.7rem)/1.25 var(--font); letter-spacing: -.02em; }
+.ppl__q cite { display: block; margin-top: 10px; font: 400 14px/1.4 var(--font); font-style: normal; color: var(--soft-w); }
+.story { margin-top: 26px; border-top: 1px solid var(--hair-w); perspective: 900px; }
+.story li { display: grid; grid-template-columns: 6.6rem 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--hair-w); font: 400 15px/1.45 var(--font); color: rgba(255, 255, 255, .88); }
+.story .when { font: 600 11px/1.9 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--y); }
+.ppl__second { display: grid; grid-template-columns: 76px 1fr; gap: 16px; align-items: center; margin-top: 24px; }
+.ppl__second img { width: 76px; aspect-ratio: 520 / 620; object-fit: cover; border-radius: 6px; }
+.ppl__second figcaption { font: 400 14px/1.45 var(--font); color: var(--soft-w); }
+.ppl__second figcaption b { display: block; color: #fff; font-weight: 600; font-size: 15px; }
+html.anim .ppl__team.sd { animation-name: dl-team; }
+html.anim .ppl__founder.sd { animation-name: dl-founder; }
+html.anim .story li.trg { animation-name: dl-press; }
+@keyframes dl-team { from { transform: translate3d(0, 60px, 0) scale(1.06); } to { transform: translate3d(0, -36px, 0) scale(1); } }
+@keyframes dl-founder { from { transform: translate3d(0, 140px, 0) rotate(-1.5deg); } to { transform: translate3d(0, -40px, 0) rotate(0deg); } }
+@keyframes dl-founder-m { from { transform: translate3d(0, 18px, 0) rotate(-1.5deg); } to { transform: translate3d(0, -40px, 0) rotate(0deg); } }
+
+/* ================= act 7: the close, the last carton, addressed to the visitor ================= */
+.close { background: var(--y); color: var(--k); min-height: 100vh; min-height: 100svh; box-sizing: border-box; padding: calc(var(--bar) + clamp(1.5rem, 3vw, 2.5rem)) var(--g) 0; display: flex; flex-direction: column;
+  --W: clamp(240px, min(21vw, 34vh), 330px); --H: calc(var(--W) / 1.26); --D: calc(var(--W) * .34); --gl: calc(var(--W) * .08); --tk: calc(var(--W) * .11); --nx: calc((var(--gl) - var(--W)) / 2); --ny: 0px; }
+.close__in { flex: 1; width: 100%; max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(1.5rem, 3vw, 3rem); align-items: start; }
+.close .lbl { border-top-color: var(--hair); }
+.close .lbl div { border-bottom-color: var(--hair); font-size: 15px; }
+.close .lbl dt { color: var(--soft); }
+.close__line { margin-top: 16px; font: 500 17px/1.45 var(--font); }
+.contact { margin-top: 26px; display: grid; gap: 2px; }
+.contact a, .contact p { display: grid; grid-template-columns: 6.8rem 1fr; gap: 12px; padding: 9px 0; text-decoration: none; font: 400 15px/1.4 var(--font); border-bottom: 1px solid var(--hair); }
+.contact a:hover span:last-child { text-decoration: underline; text-underline-offset: 4px; }
+.contact .k { font: 600 11px/1.6 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--soft); }
+.close__stage { position: relative; height: calc(var(--H) + var(--D) * 2 + var(--tk) * 2 + 60px); perspective: 1600px; }
+.rig--close .pf { background: var(--k); color: #fff; outline-color: rgba(239, 212, 205, .7); }
+.rig--close .pf--front { display: grid; place-items: center; align-content: center; gap: 12px; padding: 8%; text-align: center; }
+.rig--close .pf--front small { font: 600 11px/1.3 var(--font); letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .7); }
+.rig--close .pf--front .cta { background: var(--y); color: var(--k); }
+.rig--close .pf--front .cta::before { background: var(--acc); }
+.rig--close .pf--front .cta__chip { background: var(--k); }
+.rig--close .pf--front .cta__chip svg { fill: var(--y); }
+.rig--close .pf--side { background: var(--w); color: var(--k); }
+.rig--close .pf--side2, .rig--close .pf--base { color: #fff; }
+.rig--close .pf--back { display: grid; place-items: center; padding: 10%; text-align: center; font: 600 calc(var(--W) * .055)/1.3 var(--font); letter-spacing: -.01em; }
+html.anim .close.sd .rig { animation-name: dl-rig-close; }
+html.anim .close.sd .pn--l { animation-name: dl-l2; }
+html.anim .close.sd .pn--r, html.anim .close.sd .pn--bh { animation-name: dl-r2; }
+html.anim .close.sd .pn--t { animation-name: dl-t2; }
+html.anim .close.sd .pn--u, html.anim .close.sd .pn--bv { animation-name: dl-u2; }
+html.anim .close.sd .pn--gl { animation-name: dl-gl2; }
+html.anim .close.sd .pn--dt, html.anim .close.sd .pn--tt { animation-name: dl-dt2; }
+html.anim .close.sd .pn--db, html.anim .close.sd .pn--ut { animation-name: dl-db2; }
+html.anim .close.sd :is(.rig, .pn) { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+@keyframes dl-rig-close {
+  0% { transform: translate3d(0, 9vh, -420px) rotateX(-20deg) rotateY(-36deg); }
+  34% { transform: translate3d(0, 0, 0) rotateX(-16deg) rotateY(-28deg); animation-timing-function: cubic-bezier(.45, 0, .2, 1); }
+  78%, 100% { transform: translate3d(var(--nx), var(--ny), 0) rotateX(0deg) rotateY(0deg); }
+}
+@keyframes dl-rig-close-m {
+  0% { transform: translate3d(0, 0, -180px) rotateX(-20deg) rotateY(-36deg); }
+  34% { transform: translate3d(0, 0, 0) rotateX(-16deg) rotateY(-28deg); animation-timing-function: cubic-bezier(.45, 0, .2, 1); }
+  78%, 100% { transform: translate3d(var(--nx), var(--ny), 0) rotateX(0deg) rotateY(0deg); }
+}
+@keyframes dl-l2 { 0%, 38% { transform: rotateY(-90deg); } 70%, 100% { transform: rotateY(0deg); } }
+@keyframes dl-r2 { 0%, 40% { transform: rotateY(90deg); } 74%, 100% { transform: rotateY(0deg); } }
+@keyframes dl-t2 { 0%, 36% { transform: rotateX(90deg); } 68%, 100% { transform: rotateX(0deg); } }
+@keyframes dl-u2 { 0%, 40% { transform: rotateX(-90deg); } 74%, 100% { transform: rotateX(0deg); } }
+@keyframes dl-gl2 { 0%, 50% { transform: rotateY(-88deg); } 78%, 100% { transform: rotateY(0deg); } }
+@keyframes dl-dt2 { 0%, 50% { transform: rotateX(86deg); } 78%, 100% { transform: rotateX(0deg); } }
+@keyframes dl-db2 { 0%, 50% { transform: rotateX(-86deg); } 78%, 100% { transform: rotateX(0deg); } }
+.foot { width: 100%; max-width: 1320px; margin: clamp(2rem, 4vw, 3rem) auto 0; padding: 22px 0 28px; border-top: 1px solid var(--hair); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font: 400 14px/1.4 var(--font); }
+.foot img { height: 22px; width: auto; }
+.foot nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.foot a { text-decoration: none; }
+.foot a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* ============================== phones ============================== */
+@media (max-width: 860px) {
+  :root { --bar: 56px; }
+  .bar { grid-template-columns: auto 1fr; gap: 12px; }
+  .bar__brand img { height: 22px; }
+  .bar > .cta { display: none; }
+  .dock { display: flex; position: fixed; z-index: 58; left: 0; right: 0; bottom: 0; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: var(--paper); border-top: 1px solid var(--hair); transition: transform .45s var(--ease); }
+  .dock .cta { width: 100%; justify-content: center; padding-right: 2.6em; font-size: 16px; min-height: 50px; }
+  .dock .cta__chip { position: absolute; left: .42em; }
+  .dock .cta::before { clip-path: circle(1.12em at 1.54em 50%); }
+  .dock.is-away { transform: translateY(110%); }
+
+  /* hero: the copy first, then the set (carton, reel, packs). No scroll parallax on phones. */
+  .hero { height: auto; min-height: 0; flex-direction: column; align-items: stretch; justify-content: flex-start; }
+  .scene { width: 100vw; aspect-ratio: auto; display: flex; flex-direction: column; --bw: 70cqw; --bh: 19cqw; --bd: 28cqw; --rw: 62cqw; }
+  .hero__copy { position: relative; left: auto; top: auto; width: auto; padding: 22px 16px 10px; }
+  .hero__copy .eyebrow { font-size: 11px; }
+  .h1 { margin-top: 10px; }
+  .h1__name { font-size: clamp(2.5rem, 12.4vw, 3.3rem); }
+  .h1__sub { margin-top: 10px; font-size: 15px; }
+  .hero__copy .cta { margin-top: 16px; font-size: 16px; }
+  .exhibit { position: relative; inset: auto; aspect-ratio: 100 / 86; flex: none; }
+  .set__floor { top: 54cqw; }
+  .pl--box { height: 86cqw; }
+  .bx-shadow { left: 10cqw; top: 70cqw; width: 82cqw; height: 9cqw; filter: blur(2.4cqw); }
+  .bx-wrap { left: 15cqw; top: 51cqw; perspective: 230cqw; }
+  .screen__tag { font-size: 10px; }
+  .pk--1 { left: 1.5cqw; bottom: -4.5cqw; width: 27cqw; }
+  .pk--2 { right: 2cqw; bottom: 16.7cqw; width: 20cqw; }
+  .pk--3 { right: 1cqw; bottom: -1.2cqw; width: 32cqw; }
+
+  .svc { padding: 4rem var(--g) 3.5rem; }
+  .svc__in { grid-template-columns: 1fr; gap: 2rem; }
+  .svc__intro { position: static; }
+  .svc__row { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }
+  .svc__row p { font-size: 15px; }
+  html.anim .svc__sheet.trg { animation-name: dl-sheet-m; }
+
+  .col { --W: min(64vw, calc((100svh - 345px - env(safe-area-inset-bottom)) / 2.14), 300px); --netH: calc(var(--tk) + var(--D) * 2 + var(--H) * 2); --D: calc(var(--W) * .22); --gl: 0px; --nx: 0px; --ny: calc((var(--tk) - var(--H)) / 2); --persp: 1100px; }
+  .pn--bh, .pn--gl, .pn--ut { display: none; }
+  html.anim .case.sd .rig { animation-name: dl-rig-m; }
+  html.anim .case--last.sd .rig { animation-name: dl-rig-last-m; }
+  .pn--bv { display: block; }
+  .col__side { top: calc(var(--bar) + 14px); bottom: auto; width: auto; right: var(--g); }
+  .col__head .h2 { font-size: 1.35rem; letter-spacing: -.02em; }
+  .col__index { display: none; }
+  .col__head p { margin-top: 8px; font-size: 14px; max-width: 30ch; }
+  html.anim .col__head { transition: opacity .3s var(--ease), visibility 0s linear 0s; }
+  html.anim .col__head.off { opacity: 0; visibility: hidden; transition: opacity .3s var(--ease), visibility 0s linear .3s; }
+  .case__obj { left: 0; top: calc(var(--bar) + 10px); bottom: auto; height: var(--netH); }
+  .case__label { left: var(--g); right: var(--g); width: auto; top: calc(var(--bar) + 20px + var(--netH)); bottom: auto; }
+  .lbl__client { font-size: 1.3rem; }
+  .lbl { margin-top: 6px; display: flex; flex-wrap: wrap; border: 0; gap: 0 14px; }
+  .lbl div { display: flex; gap: 6px; padding: 2px 0; border: 0; font-size: 13px; }
+  .lbl__line { margin-top: 6px; font-size: 14px; line-height: 1.42; max-width: none; }
+  .lbl__link { margin-top: 0; min-height: 32px; font-size: 13px; }
+  html:not(.anim) .col__stage { padding-top: calc(var(--bar) + 2.5rem); }
+  html:not(.anim) .col__head p { display: block; }
+  html:not(.anim) .case { grid-template-columns: 1fr; margin-top: 2.5rem; }
+  html:not(.anim) .case__label { order: 2; }
+  html:not(.anim) .case__obj { height: calc(var(--H) * 2 + var(--D) * 2 + var(--tk) + 30px); }
+  html:not(.anim) .rig { transform: translate3d(var(--nx), var(--ny), 0); }
+
+  .rec { padding-top: 2.5rem; }
+  .tags { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 0; }
+  .tag__card { padding: 30px 14px 16px; min-height: 176px; gap: 12px; }
+  .tag__mark { height: 26px; }
+  .tag__mark img { max-height: 26px; }
+  .tag__name { font-size: 16px; }
+  .tag__what { font-size: 13px; }
+  .tag:nth-child(n+3) { margin-top: 26px; }
+  .tag:nth-child(n+3)::after { content: ""; position: absolute; left: -9px; right: -9px; top: 0; height: 3px; background: var(--k); }
+  .tag:nth-child(4)::after { left: -9px; right: 0; }
+  .tag:nth-child(3)::after { left: 0; }
+
+  .rack { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+
+  .ppl { padding-bottom: 2rem; }
+  .ppl__in { grid-template-columns: 1fr; gap: 2.2rem; }
+  .ppl__team { width: 78%; }
+  .ppl__team figcaption { font-size: 12px; margin-left: 48%; }
+  .ppl__founder { width: 58%; margin-top: 30%; }
+  html.anim .ppl__founder.sd { animation-name: dl-founder-m; }
+  .story li { grid-template-columns: 5.6rem 1fr; font-size: 14px; }
+
+  .close { padding-top: calc(var(--bar) + 10px); --W: min(62vw, 27svh, 300px); --D: calc(var(--W) * .22); --gl: 0px; --nx: 0px; --ny: calc((var(--tk) - var(--H)) / 2); padding-bottom: 80px; }
+  .close__in { grid-template-columns: 1fr; }
+  .close__stage { height: calc(var(--H) * 2 + var(--D) * 2 + var(--tk) + 40px); order: -1; }
+  /* the folded box waits where its front panel will lie, so the top of the room is never empty */
+  .close { --ny: 0px; }
+  .rig--close { top: calc(var(--tk) + var(--D) + var(--H) / 2 + 20px); }
+  html.anim .close.sd .rig { animation-name: dl-rig-close-m; }
+  .contact a, .contact p { grid-template-columns: 5.6rem 1fr; font-size: 14px; }
+}
+@media (max-width: 380px) {
+  .h1__name { font-size: 2.15rem; }
+}
+
+/* reduced motion: final states, nothing pinned */
+@media (prefers-reduced-motion: reduce) {
+  .screen iframe { display: none; }
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Skip to content</a>
+<svg class="sr-only" aria-hidden="true" focusable="false"><symbol id="mk" viewBox="34 35.6 52 48.8"><path d="M36 82.4V37.6H51.7L59.4 76.6H60.6L68.3 37.6H84V82.4H75.8V43.8H74.7L67 82.4H53L45.3 43.8H44.2V82.4Z"/></symbol><symbol id="arr" viewBox="0 0 10 10"><path d="M2 8 8 2M3 2h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol></svg>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio, back to the top"><img src="assets/wordmark.svg" width="439" height="77" alt="Mosswick Studio"></a>
+  <nav class="cats" aria-label="Work by category">
+    <a class="chip" href="#case-1" data-jump="case-1" data-cat="food">Food &amp; Drink</a>
+    <a class="chip" href="#case-3" data-jump="case-3" data-cat="fashion">Fashion</a>
+    <a class="chip" href="#case-5" data-jump="case-5" data-cat="home">Homeware</a>
+    <a class="chip" href="#case-6" data-jump="case-6" data-cat="tech">Consumer Tech</a>
+  </nav>
+  <button class="idx-btn" type="button" aria-expanded="false" aria-controls="sheet"><span aria-hidden="true"></span>Index</button>
+  <a class="cta" href="mailto:hello@example.com"><span class="cta__chip" aria-hidden="true"><svg><use href="#mk"/></svg></span><span class="cta__t">Say hello</span></a>
+</header>
+<div class="sheet" id="sheet" aria-label="Index">
+  <nav class="cats" aria-label="Work by category, index">
+    <a class="chip" href="#case-1" data-jump="case-1" data-cat="food">Food &amp; Drink</a>
+    <a class="chip" href="#case-3" data-jump="case-3" data-cat="fashion">Fashion</a>
+    <a class="chip" href="#case-5" data-jump="case-5" data-cat="home">Homeware</a>
+    <a class="chip" href="#case-6" data-jump="case-6" data-cat="tech">Consumer Tech</a>
+  </nav>
+  <nav class="sheet__links" aria-label="Sections">
+    <a href="#services">What we make</a>
+    <a href="#work">Recent work</a>
+    <a href="#featured">What it did</a>
+    <a href="#clients">Clients</a>
+    <a href="#people">The people</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- act 1: the hero. The studio's own work, unboxed: a carton opens on a blush set, a screen rises out of it, three objects from the work land in front. -->
+<section class="room hero" id="top" data-sc-act="flow" aria-labelledby="h1">
+  <div class="scene" id="scene">
+    <div class="hero__copy">
+      <p class="eyebrow">Creative studio in Lowmere</p>
+      <h1 class="h1" id="h1"><span class="h1__name">Mosswick Studio</span><span class="sr-only">. </span><span class="h1__sub">Brands, packaging, websites and films for companies worth remembering.</span></h1>
+      <a class="cta cta--big" href="mailto:hello@example.com" data-big><span class="cta__chip" aria-hidden="true"><svg><use href="#mk"/></svg></span><span class="cta__t">Say hello</span></a>
+    </div>
+    <div class="exhibit">
+      <div class="set" aria-hidden="true"><div class="set__floor"></div></div>
+      <div class="pl pl--box">
+        <div class="bx-shadow" aria-hidden="true"></div>
+        <div class="bx-wrap">
+          <div class="bx">
+            <div class="bxf bxf--floor" aria-hidden="true"></div>
+            <div class="bxf bxf--back" aria-hidden="true"><div class="fl"></div></div>
+            <div class="bxf bxf--left" aria-hidden="true"><div class="fl"></div></div>
+            <div class="bx__reel">
+              <p class="screen__tag" aria-hidden="true"><i></i>Fernstride 2026</p>
+              <div class="screen" id="screen">
+                <img class="screen__poster" src="assets/work-reel.webp" srcset="assets/work-reel-960.webp 960w, assets/work-reel.webp 1600w" sizes="(max-width: 860px) 60vw, 42vw" width="1600" height="900" alt="Moss green running shoes mid-stride on a damp autumn park path: a still from the studio's Fernstride campaign film." fetchpriority="high" decoding="async">
+              </div>
+            </div>
+            <div class="bxf bxf--right" aria-hidden="true"><div class="fl"></div></div>
+            <div class="bxf bxf--front" aria-hidden="true"><img src="assets/wordmark-light.svg" width="439" height="77" alt=""><div class="fl"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="pl pl--packs">
+        <img class="pk pk--2" src="assets/pack-02.webp" width="481" height="640" alt="A small blue wooden house under a teal umbrella, from the studio's Shelterly brand work." decoding="async">
+        <img class="pk pk--1" src="assets/pack-01.webp" width="540" height="899" alt="A clear Gilded Hare gin bottle with an embossed leaping hare, from the studio's bottle and label design." decoding="async">
+        <img class="pk pk--3" src="assets/pack-03.webp" width="820" height="820" alt="A wheaten terrier beside an open Houndsbury meal box and two pouches of fresh dog food, from the studio's packaging." decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- act 2: what the studio makes -->
+<section class="room svc" id="services" data-sc-act="flow" aria-labelledby="svc-h">
+  <div class="svc__in">
+    <div class="svc__intro">
+      <h2 class="h2" id="svc-h">What we make</h2>
+      <p class="svc__lede">Mosswick Studio is a creative and marketing studio of 32 people in Lowmere. Strategists, designers, writers, filmmakers and media buyers work on the same briefs, for food and drink brands, shops, clinics, charities and tech start-ups that would rather be remembered.</p>
+      <p class="svc__where">One studio, in an old print works in Lowmere, since 2014.</p>
+    </div>
+    <div class="desk">
+      <ol class="svc__sheet" aria-label="Services">
+        <li class="svc__row"><h3>Brand strategy</h3><p>Workshops, customer interviews and a hard look at your market, then a positioning and a voice.</p></li>
+        <li class="svc__row"><h3>Brand identity</h3><p>Logo, colour, type and guidelines that work from a favicon to a building wrap.</p></li>
+        <li class="svc__row"><h3>Packaging</h3><p>Pack structure, range design, labels and boxes for the shelf and the doorstep, with your printers in from day one.</p></li>
+        <li class="svc__row"><h3>Campaigns</h3><p>One idea carried across outdoor, social, print and screen: concept, key visuals, copywriting, media plan and launch assets.</p></li>
+        <li class="svc__row"><h3>Websites</h3><p>Fast, clear websites, designed and built in one team.</p></li>
+        <li class="svc__row"><h3>Performance marketing</h3><p>Tracking first, then paid search and social with weekly creative tests and a live dashboard.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- act 3: the collection (peak). Each case is a closed carton that opens into its dieline. -->
+<section class="room col" id="work" data-sc-act="pin" data-sc-span="6.6" aria-labelledby="col-h">
+  <div class="col__stage" data-sc-stage>
+    <div class="col__side">
+      <div class="col__head">
+        <h2 class="h2" id="col-h">Recent work</h2>
+        <p>Six projects from the last five years, each one set out as a carton and its dieline.</p>
+      </div>
+      <ol class="col__index" aria-label="Projects in this room">
+        <li><a href="#case-1" data-jump="case-1">Plumtide <span>2025</span></a></li>
+        <li><a href="#case-2" data-jump="case-2">Tallow Lane Coffee <span>2022</span></a></li>
+        <li><a href="#case-3" data-jump="case-3">Velloway <span>2024</span></a></li>
+        <li><a href="#case-4" data-jump="case-4">Marlo Rue <span>2025</span></a></li>
+        <li><a href="#case-5" data-jump="case-5">Kilnmark <span>2023</span></a></li>
+        <li><a href="#case-6" data-jump="case-6">Stillreed <span>2025</span></a></li>
+      </ol>
+    </div>
+    <article class="case case--first" id="case-1" data-cat="food" aria-labelledby="case-1-h">
+      <div class="case__obj"><div class="rig"><div class="pn pn--f">
+        <div class="pf"><img src="assets/work-01a.webp" width="820" height="651" alt="Five Plumtide cordial bottles in plum, apricot, rhubarb, blackcurrant and lemon on a sunlit stone ledge." loading="lazy" decoding="async"></div>
+        <div class="pn pn--l"><div class="pf pf--side" aria-hidden="true"><span data-t="Plumtide"></span></div>
+          <div class="pn pn--gl"><div class="pf"></div></div><div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div></div>
+        <div class="pn pn--r"><div class="pf pf--side2" aria-hidden="true"><span data-t="Food &amp; Drink, 2025"></span></div>
+          <div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div>
+          <div class="pn pn--bh"><div class="pf"><img src="assets/work-01b.webp" width="820" height="651" alt="The Plumtide cordial range on a limestone ledge with halved fruit, a second crop." loading="lazy" decoding="async"></div></div></div>
+        <div class="pn pn--t"><div class="pf pf--lid"><img src="assets/wordmark.svg" width="439" height="77" alt="" loading="lazy"></div><div class="pn pn--tt"><div class="pf"></div></div></div>
+        <div class="pn pn--u"><div class="pf pf--base" aria-hidden="true" data-t="Identity, packaging"></div><div class="pn pn--ut"><div class="pf"></div></div>
+          <div class="pn pn--bv"><div class="pf"><img src="assets/work-01b.webp" width="820" height="651" alt="The Plumtide cordial range on a limestone ledge with halved fruit, a second crop." loading="lazy" decoding="async"></div></div></div>
+      </div></div></div>
+      <div class="case__label">
+        <h3 class="lbl__client" id="case-1-h">Plumtide</h3>
+        <dl class="lbl"><div><dt class="dt">Category</dt><dd>Food &amp; Drink</dd></div><div><dt class="dt">Year</dt><dd>2025</dd></div><div><dt class="dt">Services</dt><dd>Brand identity, packaging</dd></div></dl>
+        <p class="lbl__line">Name, identity and packaging for a small-batch fruit cordial company.</p>
+        <a class="lbl__link" href="https://example.com" target="_blank" rel="noopener">Read the case study<span class="sr-only">: Plumtide</span><svg aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+    </article>
+    <article class="case" id="case-2" data-cat="food" aria-labelledby="case-2-h">
+      <div class="case__obj"><div class="rig"><div class="pn pn--f">
+        <div class="pf"><img src="assets/work-02a.webp" width="820" height="651" alt="Three kraft Tallow Lane Coffee bags with red, mustard and blue bands on a roastery workbench." loading="lazy" decoding="async"></div>
+        <div class="pn pn--l"><div class="pf pf--side" aria-hidden="true"><span data-t="Tallow Lane Coffee"></span></div>
+          <div class="pn pn--gl"><div class="pf"></div></div><div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div></div>
+        <div class="pn pn--r"><div class="pf pf--side2" aria-hidden="true"><span data-t="Food &amp; Drink, 2022"></span></div>
+          <div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div>
+          <div class="pn pn--bh"><div class="pf"><img src="assets/work-02b.webp" width="820" height="651" alt="Tallow Lane Coffee bags in front of the roasting drum, a second crop." loading="lazy" decoding="async"></div></div></div>
+        <div class="pn pn--t"><div class="pf pf--lid"><img src="assets/wordmark.svg" width="439" height="77" alt="" loading="lazy"></div><div class="pn pn--tt"><div class="pf"></div></div></div>
+        <div class="pn pn--u"><div class="pf pf--base" aria-hidden="true" data-t="Identity, packaging"></div><div class="pn pn--ut"><div class="pf"></div></div>
+          <div class="pn pn--bv"><div class="pf"><img src="assets/work-02b.webp" width="820" height="651" alt="Tallow Lane Coffee bags in front of the roasting drum, a second crop." loading="lazy" decoding="async"></div></div></div>
+      </div></div></div>
+      <div class="case__label">
+        <h3 class="lbl__client" id="case-2-h">Tallow Lane Coffee</h3>
+        <dl class="lbl"><div><dt class="dt">Category</dt><dd>Food &amp; Drink</dd></div><div><dt class="dt">Year</dt><dd>2022</dd></div><div><dt class="dt">Services</dt><dd>Brand identity, packaging</dd></div></dl>
+        <p class="lbl__line">Rebrand and packaging system for a neighbourhood coffee roaster with four cafes.</p>
+        <a class="lbl__link" href="https://example.com" target="_blank" rel="noopener">Read the case study<span class="sr-only">: Tallow Lane Coffee</span><svg aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+    </article>
+    <article class="case" id="case-3" data-cat="fashion" aria-labelledby="case-3-h">
+      <div class="case__obj"><div class="rig"><div class="pn pn--f">
+        <div class="pf"><img src="assets/work-03a.webp" width="820" height="651" alt="A cyclist in a bottle green Velloway jacket riding down a wet city street at blue hour." loading="lazy" decoding="async"></div>
+        <div class="pn pn--l"><div class="pf pf--side" aria-hidden="true"><span data-t="Velloway"></span></div>
+          <div class="pn pn--gl"><div class="pf"></div></div><div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div></div>
+        <div class="pn pn--r"><div class="pf pf--side2" aria-hidden="true"><span data-t="Fashion, 2024"></span></div>
+          <div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div>
+          <div class="pn pn--bh"><div class="pf"><img src="assets/work-03b.webp" width="820" height="651" alt="Shop lights reflecting on the wet street as the Velloway cyclist rides away, a second crop." loading="lazy" decoding="async"></div></div></div>
+        <div class="pn pn--t"><div class="pf pf--lid"><img src="assets/wordmark.svg" width="439" height="77" alt="" loading="lazy"></div><div class="pn pn--tt"><div class="pf"></div></div></div>
+        <div class="pn pn--u"><div class="pf pf--base" aria-hidden="true" data-t="Film, campaigns, paid media"></div><div class="pn pn--ut"><div class="pf"></div></div>
+          <div class="pn pn--bv"><div class="pf"><img src="assets/work-03b.webp" width="820" height="651" alt="Shop lights reflecting on the wet street as the Velloway cyclist rides away, a second crop." loading="lazy" decoding="async"></div></div></div>
+      </div></div></div>
+      <div class="case__label">
+        <h3 class="lbl__client" id="case-3-h">Velloway</h3>
+        <dl class="lbl"><div><dt class="dt">Category</dt><dd>Fashion</dd></div><div><dt class="dt">Year</dt><dd>2024</dd></div><div><dt class="dt">Services</dt><dd>Film and motion, campaigns, performance marketing</dd></div></dl>
+        <p class="lbl__line">Brand film and launch campaign for a rainproof jacket label, made for wet commutes.</p>
+        <a class="lbl__link" href="https://example.com" target="_blank" rel="noopener">Read the case study<span class="sr-only">: Velloway</span><svg aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+    </article>
+    <article class="case" id="case-4" data-cat="fashion" aria-labelledby="case-4-h">
+      <div class="case__obj"><div class="rig"><div class="pn pn--f">
+        <div class="pf"><img src="assets/work-04a.webp" width="820" height="651" alt="A chunky cream Marlo Rue wool sweater folded over a fence post in a misty field." loading="lazy" decoding="async"></div>
+        <div class="pn pn--l"><div class="pf pf--side" aria-hidden="true"><span data-t="Marlo Rue"></span></div>
+          <div class="pn pn--gl"><div class="pf"></div></div><div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div></div>
+        <div class="pn pn--r"><div class="pf pf--side2" aria-hidden="true"><span data-t="Fashion, 2025"></span></div>
+          <div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div>
+          <div class="pn pn--bh"><div class="pf"><img src="assets/work-04b.webp" width="820" height="651" alt="The Marlo Rue sweater against a misty field, a second crop." loading="lazy" decoding="async"></div></div></div>
+        <div class="pn pn--t"><div class="pf pf--lid"><img src="assets/wordmark.svg" width="439" height="77" alt="" loading="lazy"></div><div class="pn pn--tt"><div class="pf"></div></div></div>
+        <div class="pn pn--u"><div class="pf pf--base" aria-hidden="true" data-t="Film, social"></div><div class="pn pn--ut"><div class="pf"></div></div>
+          <div class="pn pn--bv"><div class="pf"><img src="assets/work-04b.webp" width="820" height="651" alt="The Marlo Rue sweater against a misty field, a second crop." loading="lazy" decoding="async"></div></div></div>
+      </div></div></div>
+      <div class="case__label">
+        <h3 class="lbl__client" id="case-4-h">Marlo Rue</h3>
+        <dl class="lbl"><div><dt class="dt">Category</dt><dd>Fashion</dd></div><div><dt class="dt">Year</dt><dd>2025</dd></div><div><dt class="dt">Services</dt><dd>Film and motion, social content</dd></div></dl>
+        <p class="lbl__line">Lookbook, film and social launch for a knitwear label's winter range.</p>
+        <a class="lbl__link" href="https://example.com" target="_blank" rel="noopener">Read the case study<span class="sr-only">: Marlo Rue</span><svg aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+    </article>
+    <article class="case" id="case-5" data-cat="home" aria-labelledby="case-5-h">
+      <div class="case__obj"><div class="rig"><div class="pn pn--f">
+        <div class="pf"><img src="assets/work-05a.webp" width="820" height="651" alt="Handmade Kilnmark plates and bowls in oatmeal, teal and rust glazes on raw linen." loading="lazy" decoding="async"></div>
+        <div class="pn pn--l"><div class="pf pf--side" aria-hidden="true"><span data-t="Kilnmark"></span></div>
+          <div class="pn pn--gl"><div class="pf"></div></div><div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div></div>
+        <div class="pn pn--r"><div class="pf pf--side2" aria-hidden="true"><span data-t="Homeware, 2023"></span></div>
+          <div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div>
+          <div class="pn pn--bh"><div class="pf"><img src="assets/work-05b.webp" width="820" height="651" alt="A small Kilnmark bowl turned over to show its stamped mark, among stacked plates." loading="lazy" decoding="async"></div></div></div>
+        <div class="pn pn--t"><div class="pf pf--lid"><img src="assets/wordmark.svg" width="439" height="77" alt="" loading="lazy"></div><div class="pn pn--tt"><div class="pf"></div></div></div>
+        <div class="pn pn--u"><div class="pf pf--base" aria-hidden="true" data-t="Identity, website"></div><div class="pn pn--ut"><div class="pf"></div></div>
+          <div class="pn pn--bv"><div class="pf"><img src="assets/work-05b.webp" width="820" height="651" alt="A small Kilnmark bowl turned over to show its stamped mark, among stacked plates." loading="lazy" decoding="async"></div></div></div>
+      </div></div></div>
+      <div class="case__label">
+        <h3 class="lbl__client" id="case-5-h">Kilnmark</h3>
+        <dl class="lbl"><div><dt class="dt">Category</dt><dd>Homeware</dd></div><div><dt class="dt">Year</dt><dd>2023</dd></div><div><dt class="dt">Services</dt><dd>Brand identity, websites</dd></div></dl>
+        <p class="lbl__line">Identity and online shop for a ceramics studio selling handmade tableware.</p>
+        <a class="lbl__link" href="https://example.com" target="_blank" rel="noopener">Read the case study<span class="sr-only">: Kilnmark</span><svg aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+    </article>
+    <article class="case case--last" id="case-6" data-cat="tech" aria-labelledby="case-6-h">
+      <div class="case__obj"><div class="rig"><div class="pn pn--f">
+        <div class="pf"><img src="assets/work-06a.webp" width="820" height="651" alt="Sand-coloured Stillreed headphones resting on the tiled edge of an empty indoor pool." loading="lazy" decoding="async"></div>
+        <div class="pn pn--l"><div class="pf pf--side" aria-hidden="true"><span data-t="Stillreed"></span></div>
+          <div class="pn pn--gl"><div class="pf"></div></div><div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div></div>
+        <div class="pn pn--r"><div class="pf pf--side2" aria-hidden="true"><span data-t="Consumer Tech, 2025"></span></div>
+          <div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div>
+          <div class="pn pn--bh"><div class="pf"><img src="assets/work-06b.webp" width="820" height="651" alt="The still blue water of the pool beside the Stillreed headphones, a second crop." loading="lazy" decoding="async"></div></div></div>
+        <div class="pn pn--t"><div class="pf pf--lid"><img src="assets/wordmark.svg" width="439" height="77" alt="" loading="lazy"></div><div class="pn pn--tt"><div class="pf"></div></div></div>
+        <div class="pn pn--u"><div class="pf pf--base" aria-hidden="true" data-t="Film, campaigns"></div><div class="pn pn--ut"><div class="pf"></div></div>
+          <div class="pn pn--bv"><div class="pf"><img src="assets/work-06b.webp" width="820" height="651" alt="The still blue water of the pool beside the Stillreed headphones, a second crop." loading="lazy" decoding="async"></div></div></div>
+      </div></div></div>
+      <div class="case__label">
+        <h3 class="lbl__client" id="case-6-h">Stillreed</h3>
+        <dl class="lbl"><div><dt class="dt">Category</dt><dd>Consumer Tech</dd></div><div><dt class="dt">Year</dt><dd>2025</dd></div><div><dt class="dt">Services</dt><dd>Film and motion, campaigns</dd></div></dl>
+        <p class="lbl__line">Product films and launch campaign for over-ear noise-cancelling headphones.</p>
+        <a class="lbl__link" href="https://example.com" target="_blank" rel="noopener">Read the case study<span class="sr-only">: Stillreed</span><svg aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- act 4: what the work did, as tags on a rail -->
+<section class="room rec" id="featured" data-sc-act="flow" aria-labelledby="rec-h">
+  <div class="rec__in">
+    <div class="rec__top">
+      <h2 class="h2" id="rec-h">What it did</h2>
+      <p>Four packaging projects, each tagged with what it did once it reached the shelf.</p>
+    </div>
+    <div class="rail" aria-hidden="true"></div>
+    <ul class="tags">
+      <li class="tag" style="--len: 34px"><div class="tag__card">
+        <div class="tag__mark"><img src="assets/tags/tag-01.svg" width="542" height="89" alt="Houndsbury" loading="lazy"></div>
+        <p class="tag__what"><b>Subscriptions up 2.4x</b>, packaging and paid social, 2024</p>
+      </div></li>
+      <li class="tag" style="--len: 62px"><div class="tag__card">
+        <div class="tag__mark"><img src="assets/tags/tag-02.svg" width="513" height="78" alt="Saltmarrow" loading="lazy"></div>
+        <p class="tag__what"><b>Listed in two national supermarket chains</b>, packaging and launch campaign, 2025</p>
+      </div></li>
+      <li class="tag" style="--len: 44px"><div class="tag__card">
+        <div class="tag__mark"><img src="assets/tags/tag-03.svg" width="362" height="79" alt="Fizzwold" loading="lazy"></div>
+        <p class="tag__what"><b>Stockists up from 80 to 310</b>, cans and social launch, 2026</p>
+      </div></li>
+      <li class="tag" style="--len: 76px"><div class="tag__card">
+        <div class="tag__mark"><p class="tag__name">Gilded Hare</p></div>
+        <p class="tag__what"><b>Listed in 120 bars</b> in year one, bottle and label, 2022</p>
+      </div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- act 5: clients -->
+<section class="room cli" id="clients" data-sc-act="flow" aria-labelledby="cli-h">
+  <div class="cli__in">
+    <div class="cli__top">
+      <h2 class="h2" id="cli-h">Brands in the studio</h2>
+      <p>A few of the more than 140 brands we have worked with, from cordials to climbing gyms.</p>
+    </div>
+    <ul class="rack">
+      <li class="lg"><img src="assets/clients/client-01.svg" width="389" height="99" alt="Plumtide" loading="lazy"></li>
+      <li class="lg"><img src="assets/clients/client-02.svg" width="360" height="104" alt="Periwink" loading="lazy"></li>
+      <li class="lg"><img src="assets/clients/client-03.svg" width="388" height="79" alt="Okra &amp; Ash" loading="lazy"></li>
+      <li class="lg"><img src="assets/clients/client-04.svg" width="421" height="87" alt="Paywren" loading="lazy"></li>
+      <li class="lg"><img src="assets/clients/client-05.svg" width="406" height="79" alt="Owlhour" loading="lazy"></li>
+      <li class="lg"><img src="assets/clients/client-06.svg" width="360" height="96" alt="Shelterly" loading="lazy"></li>
+      <li class="lg"><img src="assets/clients/client-07.svg" width="566" height="82" alt="Cragloft" loading="lazy"></li>
+      <li class="lg lg--dark"><img src="assets/clients/client-08.svg" width="538" height="125" alt="Halvane Watch Co." loading="lazy"></li>
+      <li class="lg lg--wide"><img src="assets/clients/client-09.svg" width="514" height="145" alt="Puddlejump Swim School" loading="lazy"></li>
+      <li class="lg lg--wide"><img src="assets/clients/client-10.svg" width="735" height="130" alt="River Commons Trust" loading="lazy"></li>
+      <li class="lg lg--wide"><img src="assets/clients/client-11.svg" width="736" height="125" alt="Marshlight Festival" loading="lazy"></li>
+      <li class="lg lg--wide"><img src="assets/clients/client-12.svg" width="798" height="146" alt="Copperbell Theatre" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- act 6: the people. The founder's story has its own room. -->
+<section class="room ppl" id="people" data-sc-act="flow" aria-labelledby="ppl-h">
+  <div class="ppl__in">
+    <div class="ppl__scene">
+      <figure class="ppl__team">
+        <img src="assets/team-group.webp" width="1160" height="748" alt="The Mosswick team standing together in the old print works, with tall windows and work pinned to the wall behind them." loading="lazy" decoding="async">
+        <figcaption>The team in the old print works in Lowmere.</figcaption>
+      </figure>
+      <figure class="ppl__founder">
+        <img src="assets/team-01.webp" width="778" height="972" alt="Ines Calloway, founder of Mosswick Studio, in a rust linen shirt against a warm grey backdrop." loading="lazy" decoding="async">
+        <figcaption><b>Ines Calloway</b>Founder</figcaption>
+      </figure>
+    </div>
+    <div class="ppl__text">
+      <p class="eyebrow">Founded 2014</p>
+      <h2 class="h2" id="ppl-h">The people behind it</h2>
+      <blockquote class="ppl__q">
+        <p>"A clear sentence beats a clever one on most days."</p>
+        <cite>Ines Calloway, on how the studio works</cite>
+      </blockquote>
+      <ol class="story">
+        <li><span class="when">2014</span><span>Three people share one desk above a bike shop and call it Mosswick.</span></li>
+        <li><span class="when">12 years</span><span>More than 140 brands launched and 600 films and edits delivered.</span></li>
+        <li><span class="when">Today</span><span>Thirty-two people work side by side in an old print works in Lowmere.</span></li>
+        <li><span class="when">Thursdays</span><span>Work in progress goes up on the wall, rough edges and all.</span></li>
+        <li><span class="when">Lunch</span><span>The film crew and the accountants share one long kitchen table.</span></li>
+        <li><span class="when">Each year</span><span>A handful of new clients join, and 9 in 10 stay past year one.</span></li>
+      </ol>
+      <figure class="ppl__second">
+        <img src="assets/team-02.webp" width="520" height="620" alt="Tobias Okonjo-Hale in a navy jumper and round tortoiseshell glasses." loading="lazy" decoding="async">
+        <figcaption><b>Tobias Okonjo-Hale</b>Co-founder and strategy director. Turns messy workshops into one clear page.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- act 7: the close. The last carton, labelled like the others, is addressed to the visitor. -->
+<section class="room close" id="contact" data-sc-act="flow" aria-labelledby="close-h">
+  <div class="close__in">
+    <div class="close__label">
+      <h2 class="h2" id="close-h">Your brand is next</h2>
+      <dl class="lbl">
+        <div><dt class="dt">Category</dt><dd>Food, shops, clinics, charities or tech</dd></div>
+        <div><dt class="dt">Year</dt><dd>Next</dd></div>
+        <div><dt class="dt">Services</dt><dd>Strategy, identity, packaging, websites, film and paid media</dd></div>
+      </dl>
+      <p class="close__line">It starts with a 30 minute call with a strategist.</p>
+      <div class="contact">
+        <a href="https://wa.me/15550100"><span class="k">WhatsApp</span><span>+1 555 0100</span></a>
+        <a href="tel:+15550142"><span class="k">Call</span><span>+1 555 0142</span></a>
+        <a href="mailto:projects@example.com"><span class="k">Email</span><span>projects@example.com</span></a>
+        <p><span class="k">Studio</span><span>1 Example Street, Lowmere</span></p>
+        <p><span class="k">Hours</span><span>Monday to Friday, 9am to 6pm</span></p>
+      </div>
+    </div>
+    <div class="close__stage">
+      <div class="rig rig--close"><div class="pn pn--f">
+        <div class="pf pf--front"><small>Addressed to you</small><a class="cta cta--big" href="mailto:hello@example.com" data-big><span class="cta__chip" aria-hidden="true"><svg><use href="#mk"/></svg></span><span class="cta__t">Say hello</span></a></div>
+        <div class="pn pn--l"><div class="pf pf--side" aria-hidden="true"><span data-t="Lowmere"></span></div>
+          <div class="pn pn--gl"><div class="pf"></div></div><div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div></div>
+        <div class="pn pn--r"><div class="pf pf--side2" aria-hidden="true"><span data-t="Since 2014"></span></div>
+          <div class="pn pn--dt"><div class="pf"></div></div><div class="pn pn--db"><div class="pf"></div></div>
+          <div class="pn pn--bh"><div class="pf pf--back" aria-hidden="true" data-a="projects@example.com" data-b="+1 555 0142"></div></div></div>
+        <div class="pn pn--t"><div class="pf pf--lid"><img src="assets/wordmark-light.svg" width="439" height="77" alt="" loading="lazy"></div><div class="pn pn--tt"><div class="pf"></div></div></div>
+        <div class="pn pn--u"><div class="pf pf--base" aria-hidden="true" data-t="Sketch to report"></div><div class="pn pn--ut"><div class="pf"></div></div>
+          <div class="pn pn--bv"><div class="pf pf--back" aria-hidden="true" data-a="projects@example.com" data-b="+1 555 0142"></div></div></div>
+      </div></div>
+    </div>
+  </div>
+  <footer class="foot">
+    <img src="assets/wordmark.svg" width="439" height="77" alt="Mosswick Studio" loading="lazy">
+    <p>Example content. Swap in your own.</p>
+    <nav aria-label="Elsewhere">
+      <a href="https://example.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://example.com" target="_blank" rel="noopener">Behance</a>
+      <a href="https://example.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#work">All work</a>
+    </nav>
+  </footer>
+</section>
+
+</main>
+
+<div class="dock" id="dock"><a class="cta" href="mailto:hello@example.com"><span class="cta__chip" aria-hidden="true"><svg><use href="#mk"/></svg></span><span class="cta__t">Say hello</span></a></div>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var fx = root.classList.contains('fx');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  var dock = document.getElementById('dock');
+  var screen = document.getElementById('screen');
+
+  /* ---- hero reveal: once the poster and the objects have decoded ---- */
+  var revealed = !root.classList.contains('pre-reveal');
+  function reveal() {
+    if (revealed) return; revealed = true;
+    requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+  }
+  if (!revealed) {
+    var imgs = [screen.querySelector('img')].concat([].slice.call(document.querySelectorAll('.pk')));
+    Promise.all(imgs.map(function (im) { return im.decode ? im.decode().catch(function () {}) : Promise.resolve(); })).then(reveal);
+    setTimeout(reveal, 1500);
+  }
+
+  /* ---- scroll timelines in page pixels ---- */
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', Math.max(0, a).toFixed(1) + 'px');
+    el.style.setProperty('--r1', Math.max(1, b).toFixed(1) + 'px');
+    el.classList.add('sd');
+  }
+  var col = document.getElementById('work');
+  var cases = [].slice.call(col.querySelectorAll('.case'));
+  var flatAt = {};
+  var catRanges = [];
+  var trigs = [], headAt = null, headEl = col.querySelector('.col__head');
+  /* a triggered reveal: waits on its first frame until the scroll passes `at`, then plays through once */
+  function trig(el, at, k) { el.classList.remove('sd'); el.classList.add('trg'); if (k) el.style.setProperty('--i', k); trigs.push({ el: el, at: at }); }
+  var wins = [];
+  var stageEl = col.querySelector('.col__stage');
+
+  function measure() {
+    var vh = innerHeight;
+    flatAt = {}; catRanges = []; wins = []; trigs = []; headAt = null;
+    /* the collection: each carton owns a window L; the next starts 0.78 L later, so one folds and leaves as the next arrives */
+    var ct = top(col), ch = col.offsetHeight;
+    var L = vh * 1.25, S = L * 0.78;
+    var start = ct - L * 0.22 - vh * (phoneQ.matches ? 0.5 : 0.3);
+    cases.forEach(function (c, i) {
+      var a = start + i * S;
+      flatAt[c.id] = a + L * 0.58;
+      wins.push({ id: c.id, a: a, L: L });
+      catRanges.push({ id: c.id, cat: c.getAttribute('data-cat'), a: a + L * 0.15, b: a + L * 0.93 });
+      if (anim) setR(c, a, a + L);
+    });
+    var head = col.querySelector('.col__head');
+    if (anim && phoneQ.matches) headAt = ct - vh * 0.305; else head.classList.remove('off');
+    if (!anim) {
+      catRanges = [];
+      cases.forEach(function (c) { var t = top(c); flatAt[c.id] = t - (phoneQ.matches ? 70 : 100); catRanges.push({ id: c.id, cat: c.getAttribute('data-cat'), a: t - vh * 0.5, b: t + c.offsetHeight - vh * 0.5 }); });
+      return;
+    }
+
+    /* hero, desktop only: three rates as the hero leaves; phones keep the hero still */
+    var hero = document.getElementById('top');
+    [].forEach.call(hero.querySelectorAll('.pl'), function (p) {
+      if (phoneQ.matches) { p.classList.remove('sd'); } else { setR(p, 0, hero.offsetHeight); }
+    });
+
+    /* services: the sheet stands up off the desk, each row rises out of it */
+    var sheet = document.querySelector('.svc__sheet'), st = top(sheet);
+    var ph = phoneQ.matches;
+    trig(sheet, st - vh * 0.9);
+    [].forEach.call(sheet.querySelectorAll('.svc__row'), function (r, i) {
+      trig(r, top(r) - vh * 0.92);
+    });
+
+    /* what it did: tags swing in on their strings, left to right */
+    [].forEach.call(document.querySelectorAll('.tag'), function (t, i) {
+      var y = top(t); var k = phoneQ.matches ? (i % 2) : i;
+      trig(t, y - vh * 0.92, k);
+    });
+
+    /* clients: the rack turns to face you, column by column */
+    var rack = document.querySelector('.rack');
+    var cols = getComputedStyle(rack).gridTemplateColumns.split(' ').length;
+    [].forEach.call(rack.querySelectorAll('.lg'), function (l, i) {
+      var y = top(l), c = i % cols;
+      trig(l, y - vh * 0.92, c);
+    });
+
+    /* the people: the far photo slow, the founder near and faster; each beat of the story rises out of the page */
+    var scene = document.querySelector('.ppl__scene'), pt = top(scene), pH = scene.offsetHeight;
+    setR(document.querySelector('.ppl__team'), pt - vh, pt + pH);
+    setR(document.querySelector('.ppl__founder'), pt - vh, pt + pH);
+    [].forEach.call(document.querySelectorAll('.story li'), function (li) { trig(li, top(li) - vh * 0.92); });
+
+    /* the close: the last carton opens as the room arrives */
+    var close = document.getElementById('contact'), cl = top(close);
+    var maxS = document.documentElement.scrollHeight - vh;
+    setR(close, cl - vh * 0.95, Math.min(cl - vh * 0.12, maxS - 2));
+  }
+
+  var chips = [].slice.call(document.querySelectorAll('.chip'));
+  var idxLinks = [].slice.call(document.querySelectorAll('.col__index a'));
+  var bigs = [].slice.call(document.querySelectorAll('[data-big]'));
+  var tick = false;
+  var lastW = -1;
+  function all() { measure(); lastW = innerWidth; spy(); window.__dlFlat = flatAt; }
+  all();
+  addEventListener('resize', function () { if (innerWidth !== lastW || !phoneQ.matches) all(); });
+  addEventListener('load', all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; all(); } }).observe(document.body); }
+
+  /* ---- the category chips and the room index jump to a carton when it lies flat; the chip on screen turns solid ---- */
+  [].forEach.call(document.querySelectorAll('[data-jump]'), function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('data-jump');
+      if (flatAt[id] === undefined) return;
+      e.preventDefault();
+      closeSheet();
+      scrollTo({ top: flatAt[id], behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+  });
+  function spy() {
+    tick = false;
+    var y = scrollY, on = null;
+    trigs.forEach(function (t) { if (y >= t.at && !t.el.classList.contains('on')) t.el.classList.add('on'); });
+    if (headEl) headEl.classList.toggle('off', headAt !== null && y >= headAt);
+    if (anim) {
+      var lbl = null;
+      wins.forEach(function (w, i) { var a0 = i === 0 ? -Infinity : w.a + w.L * 0.11, a1 = i === wins.length - 1 ? Infinity : w.a + w.L * 0.89; if (y >= a0 && y < a1) lbl = w.id; });
+      cases.forEach(function (c) { c.querySelector('.case__label').classList.toggle('on', c.id === lbl); });
+    }
+    catRanges.forEach(function (r) { if (y >= r.a && y < r.b) on = r; });
+    chips.forEach(function (c) { c.classList.toggle('is-on', !!on && c.getAttribute('data-cat') === on.cat); });
+    idxLinks.forEach(function (l) { l.classList.toggle('is-on', !!on && l.getAttribute('data-jump') === on.id); });
+    /* the carton's state, for the verify harness (the CSS timelines are invisible to it) */
+    if (anim) { var st = ''; wins.forEach(function (w) { if (y >= w.a && y < w.a + w.L) st = w.id + ':' + ((y - w.a) / w.L).toFixed(2); }); stageEl.setAttribute('data-sc-verify-state', st); }
+    /* the phone bar steps away while a big CTA is on screen */
+    var away = bigs.some(function (b) { if (!b.offsetParent) return false; var r = b.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight - 80; });
+    dock.classList.toggle('is-away', away);
+    root.classList.toggle('dock-away', away && phoneQ.matches);
+  }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+
+  /* ---- the Index sheet (laptops under 1180 px and phones) ---- */
+  var btn = document.querySelector('.idx-btn'), sheetEl = document.getElementById('sheet');
+  function openSheet() { sheetEl.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true'); var f = sheetEl.querySelector('a'); if (f) f.focus({ preventScroll: true }); }
+  function closeSheet() { if (!sheetEl.classList.contains('is-open')) return; sheetEl.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); }
+  btn.addEventListener('click', function () { if (sheetEl.classList.contains('is-open')) { closeSheet(); btn.focus(); } else openSheet(); });
+  sheetEl.addEventListener('click', function (e) { if (e.target.closest('a')) closeSheet(); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape' && sheetEl.classList.contains('is-open')) { closeSheet(); btn.focus(); } });
+})();
+</script>
+</body>
+</html>
