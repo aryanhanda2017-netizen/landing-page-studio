@@ -1,0 +1,1211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio, Lowmere</title>
+<meta name="description" content="Mosswick Studio is a creative and marketing studio in Lowmere: brand strategy, identity, websites, social content, film, campaigns, paid media and packaging.">
+<meta name="theme-color" content="#0E5E6F">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta property="og:description" content="We make brands worth remembering. A creative and marketing studio of 32 people in Lowmere, since 2014.">
+<meta property="og:image" content="https://example.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Mosswick Studio wordmark on its end card.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta name="twitter:description" content="We make brands worth remembering. A creative and marketing studio of 32 people in Lowmere.">
+<meta name="twitter:image" content="https://example.com/og-image.jpg">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/outfit-latin-var.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-latin-var.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/work-01-460.webp" imagesrcset="assets/img/work-01-460.webp 460w, assets/img/work-01-760.webp 760w" imagesizes="(max-width: 860px) 54vw, 36vw" fetchpriority="high">
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Outfit"; src: url("assets/fonts/outfit-latin-var.woff2") format("woff2"); font-weight: 200 700; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Outfit"; src: url("assets/fonts/outfit-latinext-var.woff2") format("woff2"); font-weight: 200 700; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Manrope"; src: url("assets/fonts/manrope-latin-var.woff2") format("woff2"); font-weight: 400 800; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Manrope"; src: url("assets/fonts/manrope-latinext-var.woff2") format("woff2"); font-weight: 400 800; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* Palette: Ice Blue (palettes.json no. 10). The accent carries the bar, the loupe and the end card; --accent-dk is accent type on the deep rooms. */
+:root {
+  --accent: #0E5E6F;
+  --accent-dk: #5FB8C9;
+  --ground: #E6EEF2;
+  --wm: #E6EEF2;
+  --paper: #F4F8FA;
+  --ink: #0E1F2B;
+  --deep: #0E1F2B;
+  --soft: #475A67;
+  --soft-dark: #9FB2BF;
+  --hair: #C9D6DD;
+  --hair-dark: rgba(230, 238, 242, .16);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --glide: cubic-bezier(.65, 0, .35, 1);
+  --display: "Outfit", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --body: "Manrope", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --gut: clamp(24px, 4vw, 64px);
+  --bar: 64px;
+  --dock: 0px;
+  --pad: clamp(56px, 9vh, 92px);
+  --maxw: 1240px;
+
+  --sc-canvas: #E6EEF2; --sc-surface: #F4F8FA;
+  --sc-ink: #0E1F2B; --sc-ink-soft: #475A67;
+  --sc-accent: #0E5E6F; --sc-accent-ink: #FFFFFF;
+  --sc-font-display: var(--display);
+  --sc-font-text: var(--body);
+  --sc-gutter: var(--gut);
+}
+html { background: var(--ground); }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+p { margin: 0; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 90; background: var(--paper); color: var(--ink); padding: 10px 14px; font: 600 14px/1 var(--body); }
+.skip:focus { top: 12px; }
+main > section { overflow-x: clip; position: relative; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.g-dark :focus-visible, .bar :focus-visible, .frame :focus-visible { outline-color: var(--ground); }
+.r { color: var(--accent); }
+.eb-short { display: none; }
+.g-dark .r { color: var(--accent-dk); }
+.wm { display: block; fill: var(--wm); }
+
+/* ---------- type ---------- */
+.eyebrow { display: inline-block; font: 600 11px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; padding: 8px 12px; border: 1px solid var(--hair); border-radius: 999px; color: var(--soft); }
+.g-dark .eyebrow { border-color: var(--hair-dark); color: var(--soft-dark); }
+.h2 { font: 400 clamp(32px, 3.7vw, 56px)/1.06 var(--display); letter-spacing: -.022em; margin: 0; }
+.lede { font-size: clamp(16px, 1.15vw, 18px); color: var(--soft); max-width: 58ch; margin-top: 16px; }
+.g-dark .lede { color: var(--soft-dark); }
+.sec { padding: var(--pad) var(--gut); }
+.sec__head { max-width: var(--maxw); margin: 0 auto; }
+.g-light { background: var(--ground); color: var(--ink); }
+.g-dark { background-color: var(--deep); color: var(--ground); background-image: radial-gradient(circle, #172C3B 0 5px, transparent 5.6px); background-size: 34px 34px; background-position: 17px 17px; }
+
+/* ---------- the one CTA: a pill with a circled arrow ---------- */
+.cta { display: inline-flex; align-items: center; gap: 14px; height: 52px; padding: 0 7px 0 24px; border-radius: 999px; font: 600 16px/1 var(--body); letter-spacing: -.005em; text-decoration: none; white-space: nowrap; transition: transform .35s var(--ease); }
+.cta__chip { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; flex: none; }
+.cta__chip svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .4s var(--ease); }
+.cta--accent { background: var(--accent); color: #fff; }
+.cta--accent .cta__chip { background: var(--ground); color: var(--accent); }
+.cta--light { background: var(--ground); color: var(--ink); }
+.cta--light .cta__chip { background: var(--accent); color: var(--ground); }
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover .cta__chip svg { transform: rotate(45deg); }
+  .cta:active { transform: scale(.98); }
+}
+
+/* ---------- the bar: wordmark, contact sheet, CTA ---------- */
+.bar { position: fixed; z-index: 60; top: 0; left: 0; right: 0; height: var(--bar); background: var(--accent); display: flex; align-items: center; gap: 24px; padding: 0 var(--gut); box-sizing: border-box; }
+.bar__brand { flex: none; display: block; padding: 7px 0; }
+.bar__brand .wm { height: 22px; width: auto; aspect-ratio: 439 / 76.8; }
+.nav { flex: 1; display: flex; justify-content: center; min-width: 0; }
+.strip { list-style: none; margin: 0; padding: 0; display: flex; gap: 10px; align-items: center; }
+.strip a { position: relative; display: block; width: 30px; height: 30px; }
+.strip img { width: 100%; height: 100%; object-fit: cover; clip-path: circle(71% at 50% 50%); transition: clip-path .5s var(--ease); }
+.strip a::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid var(--ground); opacity: 0; transform: scale(.7); transition: opacity .4s var(--ease), transform .5s var(--ease); }
+.strip a[aria-current="true"] img { clip-path: circle(50% at 50% 50%); }
+.strip a[aria-current="true"]::after { opacity: 1; transform: none; }
+.strip__name { position: absolute; top: calc(100% + 12px); left: 50%; transform: translate(-50%, -4px); background: var(--paper); color: var(--ink); font: 600 11px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; padding: 7px 10px; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .25s var(--ease), transform .3s var(--ease); }
+.strip a:hover .strip__name, .strip a:focus-visible .strip__name { opacity: 1; transform: translate(-50%, 0); }
+.idx { display: none; align-items: center; gap: 10px; height: 38px; padding: 0 14px; border: 1px solid rgba(255, 255, 255, .55); border-radius: 999px; background: transparent; color: #fff; font: 600 12px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; cursor: pointer; }
+.idx__now { letter-spacing: 0; text-transform: none; font-size: 14px; font-weight: 500; }
+.idx__dot { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--ground); flex: none; }
+.bar .cta { height: 42px; font-size: 15px; padding-left: 20px; gap: 12px; flex: none; }
+.bar .cta .cta__chip { width: 32px; height: 32px; }
+.sheet { position: fixed; z-index: 59; top: calc(var(--bar) + 8px); right: var(--gut); width: min(420px, calc(100vw - 2 * var(--gut))); background: var(--paper); color: var(--ink); border: 1px solid var(--hair); border-radius: 14px; padding: 10px; box-sizing: border-box; }
+.sheet[hidden] { display: none; }
+.sheet ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.sheet a { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 8px; text-decoration: none; font: 500 15px/1.2 var(--body); }
+.sheet a span { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+.sheet img { width: 36px; height: 36px; object-fit: cover; flex: none; }
+.sheet a[aria-current="true"] img { clip-path: circle(50% at 50% 50%); }
+.sheet a:hover { background: var(--ground); }
+.dock { display: none; }
+
+/* ---------- hero: object one, already labelled, in front of the archive ---------- */
+.hero { height: 100svh; min-height: 600px; display: flex; flex-direction: column; padding: 0; }
+.hero__head { position: relative; z-index: 3; padding: calc(var(--bar) + clamp(20px, 4.6vh, 52px)) var(--gut) 0; }
+.hero__h1 { position: relative; margin: 16px 0 0; font: 300 clamp(34px, 4.85vw, 78px)/1.04 var(--display); letter-spacing: -.028em; color: var(--ink); max-width: 20ch; }
+@media (min-width: 861px) { .hero__h1 { max-width: none; } }
+.hero__h1 .ln { display: block; overflow: clip; padding-bottom: .14em; margin-bottom: -.14em; }
+.hero__h1 .ln > span { display: block; }
+.hero__h1 .dot { display: inline-block; color: var(--accent); }
+.hero__line { position: absolute; left: 0; top: 100%; width: 0; height: 3px; background: var(--accent); display: none; pointer-events: none; }
+.hero__ask { margin-top: clamp(16px, 2.6vh, 28px); }
+.wall { position: relative; flex: 1; min-height: 0; container-type: size; perspective: 1200px; perspective-origin: 50% 30%; overflow: clip; }
+.lane { position: absolute; left: 0; right: 0; }
+.lane__track { list-style: none; margin: 0; padding: 0; display: flex; width: max-content; }
+.lane__track li { flex: none; }
+.lane__track img { width: 100%; height: 100%; object-fit: cover; }
+.lane--far { top: 1cqh; z-index: 1; }
+.lane--far li { width: 23cqh; height: 23cqh; margin-right: 1.6cqh; }
+.lane--mid { top: 17cqh; z-index: 2; }
+.lane--mid li { width: 36cqh; height: 36cqh; margin-right: 2.2cqh; }
+.one { position: absolute; z-index: 3; top: 38cqh; left: calc(50cqw - 21cqh); width: 56cqh; margin: 0; }
+.one__frame { aspect-ratio: 1; background: #D7E3E9; }
+.one__frame img { width: 100%; height: 100%; object-fit: cover; }
+.lbl { margin: 0; display: grid; gap: 1px; position: relative; padding-bottom: 12px; }
+.lbl__no { font: 700 11px/1.6 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.lbl__client { font: 600 16px/1.35 var(--body); color: var(--ink); }
+.lbl__line { font: 400 14px/1.45 var(--body); color: var(--soft); }
+.lbl__rule { position: absolute; left: 0; bottom: 0; width: 44px; height: 2px; background: var(--accent); transform-origin: 0 50%; }
+.one .lbl { position: absolute; right: calc(100% + 28px); bottom: 0; width: 270px; text-align: right; background: var(--ground); padding: 12px 0 14px 16px; }
+.one .lbl__rule { left: auto; right: 0; transform-origin: 100% 50%; }
+@media (prefers-reduced-motion: no-preference) {
+  html.fx .lane__track { animation: drift 96s linear infinite; }
+  html.fx .lane--mid .lane__track { animation-duration: 74s; animation-direction: reverse; }
+  html.fx .wall.is-off .lane__track { animation-play-state: paused; }
+}
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* reveal on load: a line draws, the wordmark writes, the line becomes the full stop, the archive settles forward */
+html.pre-reveal .hero__h1 .ln > span { transform: translateY(112%); }
+html.pre-reveal .hero__h1 .dot { transform: scale(0); }
+html.pre-reveal .bar__brand .wm { clip-path: inset(0 100% 0 0); }
+html.pre-reveal .lane, html.pre-reveal .one { opacity: 0; transform: translateZ(-320px); }
+html.pre-reveal .hero__ask, html.pre-reveal .hero .eyebrow, html.pre-reveal .one .lbl { opacity: 0; }
+html.reveal .hero__line { display: block; animation: heroLine 1.16s var(--ease) .04s both; }
+html.reveal .bar__brand .wm { animation: wmWrite .46s var(--glide) .04s both; }
+html.reveal .hero__h1 .ln > span { animation: wordsUp .55s var(--ease) .3s both; }
+html.reveal .hero__h1 .dot { animation: dotPop .34s var(--ease) .9s both; }
+html.reveal .hero .eyebrow { animation: fadeUp .5s var(--ease) .12s both; }
+html.reveal .lane--far { animation: settle .95s var(--ease) .5s both; }
+html.reveal .lane--mid { animation: settle .95s var(--ease) .64s both; }
+html.reveal .one { animation: settle .95s var(--ease) .8s both; }
+html.reveal .hero__ask { animation: fadeUp .55s var(--ease) 1.12s both; }
+html.reveal .one .lbl { animation: fadeUp .5s var(--ease) 1.26s both; }
+@keyframes heroLine { 0% { clip-path: inset(0 100% 0 0); opacity: 1; } 38% { clip-path: inset(0 0 0 0); } 70% { clip-path: inset(0 0 0 0); opacity: 1; } 90% { clip-path: inset(0 0 0 calc(100% - 6px)); opacity: 1; } 100% { clip-path: inset(0 0 0 calc(100% - 6px)); opacity: 0; } }
+@keyframes wmWrite { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes wordsUp { from { transform: translateY(112%); } to { transform: none; } }
+@keyframes dotPop { from { transform: scale(0); } to { transform: none; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes settle { from { opacity: 0; transform: translateZ(-320px); } to { opacity: 1; transform: none; } }
+
+/* ---------- studio: the passage and the contact sheet ---------- */
+.studio .sec__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 64px; align-items: end; }
+.studio .aeo { font: 400 clamp(17px, 1.3vw, 20px)/1.6 var(--body); color: var(--ground); max-width: 60ch; }
+.studio .lede { margin-top: 14px; }
+.cs-wrap { max-width: var(--maxw); margin: clamp(32px, 5vh, 56px) auto 0; perspective: 1300px; perspective-origin: 50% 0%; }
+.csheet { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.4vw, 20px); transform-origin: 50% 0%; }
+.csheet a { display: block; text-decoration: none; color: var(--ground); }
+.cs__img { display: block; aspect-ratio: 1; overflow: hidden; background: #1A3142; }
+.cs__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.csheet a:hover .cs__img img { transform: scale(1.04); }
+.cs__no { display: inline-block; margin-top: 12px; font: 700 11px/1 var(--body); letter-spacing: .14em; color: var(--soft-dark); }
+.cs__name { display: inline-block; margin-left: 10px; font: 400 clamp(17px, 1.4vw, 21px)/1.2 var(--display); }
+
+/* ---------- the collection: eight rooms, the loupe ---------- */
+.collection .sec__head { margin-bottom: 0; }
+.room { max-width: var(--maxw); margin: 0 auto; padding-top: clamp(52px, 9vh, 88px); }
+.room__head { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 18px; margin-bottom: 26px; }
+.room__no { grid-row: 1 / span 3; font: 700 12px/1 var(--body); letter-spacing: .14em; color: var(--accent); padding-top: 12px; }
+.room h3 { margin: 0; font: 400 clamp(28px, 2.7vw, 40px)/1.1 var(--display); letter-spacing: -.018em; }
+.room__line { margin-top: 8px; color: var(--soft); max-width: 60ch; }
+.room__more { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; white-space: nowrap; margin-top: 4px; font: 600 12px/1.4 var(--body); letter-spacing: .1em; text-transform: uppercase; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; padding: 6px 0; }
+.hang-wrap { position: relative; --s: clamp(220px, 26vw, 356px); --g: clamp(20px, 2.6vw, 38px); --dx: calc(var(--s) + var(--g)); --dy: 0px; width: calc(3 * var(--s) + 2 * var(--g)); max-width: 100%; margin: 0 auto; }
+.room--rev .hang-wrap { --dx: calc(-1 * (var(--s) + var(--g))); }
+.hang { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, var(--s)); gap: var(--g); }
+.obj { margin: 0; }
+.obj__frame { width: var(--s); aspect-ratio: 1; perspective: 1400px; }
+.obj__img { width: 100%; height: 100%; }
+.obj__lens { width: 100%; height: 100%; overflow: hidden; background: #D7E3E9; border-radius: 0; isolation: isolate; }
+.obj__lens img { width: 100%; height: 100%; object-fit: cover; }
+.obj .lbl { margin-top: 16px; }
+.loupe { position: absolute; left: 0; top: 0; width: var(--s); height: var(--s); box-sizing: border-box; border-radius: 50%; border: 3px solid var(--accent); pointer-events: none; opacity: 0; }
+.room--rev .loupe { left: calc(2 * (var(--s) + var(--g))); }
+.lbl__rule { transform: scaleX(0); }
+html:not(.anim) .lbl__rule { transform: none; }
+
+/* ---------- films ---------- */
+.films .sec__head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+.reel-wrap { max-width: 1180px; margin: clamp(28px, 4vh, 44px) auto 0; perspective: 1400px; }
+.player { position: relative; aspect-ratio: 16 / 9; background: #0A1720; overflow: hidden; }
+.player img, .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+.play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.play__btn { width: 76px; height: 76px; border-radius: 50%; background: var(--ground); display: grid; place-items: center; transition: transform .35s var(--ease); }
+.play__btn svg { width: 22px; height: 22px; fill: var(--accent); margin-left: 4px; }
+.play:hover .play__btn { transform: scale(1.06); }
+.player--sm .play__btn { width: 56px; height: 56px; }
+.player--sm .play__btn svg { width: 17px; height: 17px; margin-left: 3px; }
+.reel-cap { display: flex; justify-content: space-between; gap: 16px; margin-top: 14px; font: 500 14px/1.4 var(--body); color: var(--soft-dark); flex-wrap: wrap; }
+.reel-cap b { color: var(--ground); font-weight: 600; }
+.films-row { list-style: none; margin: clamp(32px, 5vh, 48px) auto 0; padding: 0; max-width: 1180px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); perspective: 1200px; }
+.film__cap { margin-top: 12px; font: 400 14px/1.45 var(--body); color: var(--soft-dark); }
+.film__cap b { display: block; color: var(--ground); font: 400 18px/1.3 var(--display); }
+
+/* ---------- clients ---------- */
+.clients { position: relative; }
+.clients::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-radial-gradient(circle at 50% 62%, transparent 0 21px, rgba(14, 94, 111, .22) 21px 22px); -webkit-mask: radial-gradient(circle at 50% 62%, #000 0 26%, transparent 64%); mask: radial-gradient(circle at 50% 62%, #000 0 26%, transparent 64%); }
+.clients .sec__head, .logos { position: relative; }
+.logos { list-style: none; max-width: 1180px; margin: clamp(28px, 4vh, 44px) auto 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; perspective: 1000px; }
+.logos li { height: clamp(78px, 9.5vh, 96px); background: var(--paper); border: 1px solid var(--hair); border-radius: 10px; display: grid; place-items: center; }
+.logos img { width: 66%; height: 42%; object-fit: contain; }
+
+/* ---------- ways to work ---------- */
+.deck { --g: clamp(16px, 1.8vw, 24px); list-style: none; max-width: 1180px; margin: clamp(28px, 4vh, 44px) auto 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: var(--g); perspective: 1400px; }
+.card { position: relative; background: var(--ground); color: var(--ink); border-radius: 18px; padding: clamp(22px, 2.4vw, 34px); display: flex; flex-direction: column; gap: 14px; }
+.card:nth-child(1) { z-index: 3; } .card:nth-child(2) { z-index: 2; } .card:nth-child(3) { z-index: 1; }
+.card h3 { margin: 0; font: 400 clamp(26px, 2.3vw, 34px)/1.1 var(--display); letter-spacing: -.015em; }
+.card p { color: var(--soft); }
+.pills { list-style: none; margin: auto 0 0; padding: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.pills li { font: 700 11px/1 var(--body); letter-spacing: .1em; text-transform: uppercase; padding: 9px 11px; border-radius: 999px; background: #D7E3E9; color: var(--ink); }
+
+/* ---------- voices ---------- */
+.notes { list-style: none; max-width: 1100px; margin: clamp(28px, 4vh, 44px) auto 0; padding: 0; display: grid; gap: clamp(18px, 2.4vw, 28px); perspective: 1400px; }
+.note { margin: 0; background: var(--paper); border: 1px solid var(--hair); border-radius: 16px; padding: clamp(22px, 3vw, 40px); transform-origin: 0% 50%; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 18px; }
+.note:nth-child(2) { margin-left: 7%; } .note:nth-child(3) { margin-left: 14%; }
+.note__mark { font: 400 64px/0.8 Georgia, "Times New Roman", serif; color: var(--accent); grid-row: span 2; }
+.note blockquote { margin: 0; }
+.note blockquote p { font: 300 clamp(19px, 1.65vw, 24px)/1.42 var(--display); letter-spacing: -.008em; color: var(--ink); }
+.note figcaption { margin-top: 16px; font: 400 14px/1.45 var(--body); color: var(--soft); }
+.note figcaption b { color: var(--ink); font-weight: 600; }
+
+/* ---------- founders ---------- */
+.duo { list-style: none; max-width: var(--maxw); margin: clamp(32px, 5vh, 52px) auto 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 80px); }
+.fd__photo { position: relative; max-width: 440px; perspective: 1200px; margin-right: 9%; }
+.fd__disc { position: absolute; z-index: 0; width: 58%; aspect-ratio: 1; border-radius: 50%; background: var(--accent); top: -8%; right: -9%; }
+.fd__img { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; filter: grayscale(1); }
+.fd h3 { margin: 22px 0 0; font: 400 clamp(26px, 2.4vw, 34px)/1.1 var(--display); letter-spacing: .02em; }
+.fd__role { margin-top: 4px; font: 700 11px/1.5 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--soft-dark); }
+.fd__line { margin-top: 14px; font: 300 clamp(19px, 1.6vw, 23px)/1.4 var(--display); color: var(--ground); }
+.fd__bio { margin-top: 10px; color: var(--soft-dark); max-width: 52ch; }
+.life { max-width: var(--maxw); margin: clamp(56px, 9vh, 96px) auto 0; }
+.life__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 64px; align-items: end; }
+.life h3 { margin: 0; font: 400 clamp(26px, 2.6vw, 38px)/1.1 var(--display); }
+.life__row { list-style: none; margin: clamp(24px, 4vh, 40px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.4vw, 20px); }
+.life__row img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; filter: grayscale(1); }
+
+/* ---------- questions ---------- */
+.faq { max-width: 980px; margin: clamp(24px, 4vh, 40px) auto 0; perspective: 900px; }
+.q { border-top: 1px solid var(--hair); transform-origin: 50% 0%; }
+.q:last-child { border-bottom: 1px solid var(--hair); }
+.q summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; cursor: pointer; font: 400 clamp(19px, 1.7vw, 25px)/1.3 var(--display); }
+.q summary::-webkit-details-marker { display: none; }
+.q__icon { position: relative; flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hair); }
+.q__icon::before, .q__icon::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.5px; background: var(--accent); transform: translate(-50%, -50%); transition: transform .35s var(--ease); }
+.q__icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+.q[open] .q__icon::after { transform: translate(-50%, -50%) rotate(0deg); }
+.q__a { padding: 0 54px 24px 0; color: var(--soft); max-width: 72ch; }
+.q:not([open]) .q__a { display: none; }
+
+/* ---------- close: the film end card, at full screen ---------- */
+.close { padding: 0; background: var(--ground); perspective: 1200px; perspective-origin: 50% 0%; }
+.frame { position: relative; min-height: 100svh; box-sizing: border-box; background: var(--accent); color: var(--ground); padding: calc(var(--bar) + clamp(28px, 7vh, 72px)) var(--gut) 56px; display: grid; grid-template-rows: auto 1fr auto; transform-origin: 50% 0%; }
+.frame .eyebrow { border-color: rgba(255, 255, 255, .6); color: #fff; }
+.frame .close__sub, .frame .rows, .frame .legal, .frame__label small { color: #fff; }
+.close__line { margin: 18px 0 0; font: 300 clamp(38px, 5.6vw, 92px)/1.02 var(--display); letter-spacing: -.03em; max-width: 16ch; }
+.close__line .dot { color: var(--deep); }
+.close__sub { margin-top: 18px; font-size: clamp(16px, 1.2vw, 19px); max-width: 46ch; }
+.rows { list-style: none; margin: clamp(28px, 5vh, 52px) 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr 1.25fr 1.5fr 1.35fr; gap: 0; border-top: 1px solid rgba(230, 238, 242, .35); align-self: start; }
+.rows li { padding: 18px 20px 18px 0; }
+.rows li + li { padding-left: 20px; border-left: 1px solid rgba(230, 238, 242, .35); }
+.rows h3 { margin: 0 0 6px; font: 700 11px/1.5 var(--body); letter-spacing: .14em; text-transform: uppercase; color: #fff; }
+.rows a { display: inline-flex; align-items: center; min-height: 44px; padding: 0; text-decoration: none; font-size: 16px; }
+.rows a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.rows address { font-style: normal; font-size: 15px; line-height: 1.5; }
+.socials { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.frame__foot { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding-top: 32px; }
+.frame__foot .wm { height: 26px; width: auto; aspect-ratio: 439 / 76.8; }
+.frame__label { display: grid; justify-items: end; gap: 10px; }
+.frame__label small { font: 700 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; }
+.frame .cta--light { height: 72px; font-size: clamp(18px, 1.6vw, 22px); padding: 0 10px 0 32px; gap: 18px; }
+.frame .cta--light .cta__chip { width: 54px; height: 54px; }
+.frame .cta--light .cta__chip svg { width: 18px; height: 18px; }
+.frame__rule { display: block; height: 2px; background: var(--ground); margin-top: 22px; transform-origin: 0 50%; }
+.legal { margin-top: 12px; font: 500 12px/1.4 var(--body); display: flex; justify-content: flex-end; gap: 8px 28px; flex-wrap: wrap; }
+
+/* ---------- scroll-driven depth (CSS scroll timelines, ranges in page pixels set by JS) ---------- */
+html.anim .sd { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.anim .sd.tr { animation-timeline: auto; animation-range: normal; animation-duration: .55s; animation-timing-function: var(--ease); animation-play-state: paused; }
+html.anim .sd.tr.on { animation-play-state: running; }
+html.anim .room.sd { animation: none; }
+html.anim .room.sd .obj__img, html.anim .room.sd .obj__lens, html.anim .room.sd .lbl__rule, html.anim .room.sd .loupe { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0) var(--r1); }
+html.anim .room.sd .obj:nth-child(1) .obj__img { animation-name: o1; }
+html.anim .room.sd .obj:nth-child(2) .obj__img { animation-name: o2; }
+html.anim .room.sd .obj:nth-child(3) .obj__img { animation-name: o3; }
+html.anim .room.sd .obj:nth-child(1) .obj__lens { animation-name: k1; }
+html.anim .room.sd .obj:nth-child(2) .obj__lens { animation-name: k2; }
+html.anim .room.sd .obj:nth-child(3) .obj__lens { animation-name: k3; }
+html.anim .room.sd .obj:nth-child(1) .lbl__rule { animation-name: u1; }
+html.anim .room.sd .obj:nth-child(2) .lbl__rule { animation-name: u2; }
+html.anim .room.sd .obj:nth-child(3) .lbl__rule { animation-name: u3; }
+html.anim .room.sd .loupe { animation-name: lp; }
+@media (min-width: 861px) {
+  html.anim .room--rev.sd .obj:nth-child(1) .obj__img { animation-name: o3; }
+  html.anim .room--rev.sd .obj:nth-child(3) .obj__img { animation-name: o1; }
+  html.anim .room--rev.sd .obj:nth-child(1) .obj__lens { animation-name: k3; }
+  html.anim .room--rev.sd .obj:nth-child(3) .obj__lens { animation-name: k1; }
+  html.anim .room--rev.sd .obj:nth-child(1) .lbl__rule { animation-name: u3; }
+  html.anim .room--rev.sd .obj:nth-child(3) .lbl__rule { animation-name: u1; }
+}
+/* states: rest = square, flat; focus = closes into the lens and comes forward; sunk = set back */
+@keyframes o1 {
+  0% { transform: translateZ(0); animation-timing-function: var(--glide); }
+  8%, 25% { transform: translateZ(80px); animation-timing-function: var(--glide); }
+  33.3%, 92% { transform: translateZ(-90px); animation-timing-function: var(--glide); }
+  100% { transform: translateZ(0); }
+}
+@keyframes o2 {
+  0% { transform: translateZ(0); animation-timing-function: var(--glide); }
+  8%, 33.3% { transform: translateZ(-90px); animation-timing-function: var(--glide); }
+  41.3%, 58.3% { transform: translateZ(80px); animation-timing-function: var(--glide); }
+  66.7%, 92% { transform: translateZ(-90px); animation-timing-function: var(--glide); }
+  100% { transform: translateZ(0); }
+}
+@keyframes o3 {
+  0% { transform: translateZ(0); animation-timing-function: var(--glide); }
+  8%, 66.7% { transform: translateZ(-90px); animation-timing-function: var(--glide); }
+  74.7%, 92% { transform: translateZ(80px); animation-timing-function: var(--glide); }
+  100% { transform: translateZ(0); }
+}
+@keyframes k1 { 0% { border-radius: 0; animation-timing-function: var(--glide); } 8%, 25% { border-radius: 50%; animation-timing-function: var(--glide); } 33.3%, 100% { border-radius: 0; } }
+@keyframes k2 { 0%, 33.3% { border-radius: 0; animation-timing-function: var(--glide); } 41.3%, 58.3% { border-radius: 50%; animation-timing-function: var(--glide); } 66.7%, 100% { border-radius: 0; } }
+@keyframes k3 { 0%, 66.7% { border-radius: 0; animation-timing-function: var(--glide); } 74.7%, 92% { border-radius: 50%; animation-timing-function: var(--glide); } 100% { border-radius: 0; } }
+@keyframes u1 { 0% { transform: scaleX(0); animation-timing-function: var(--glide); } 8%, 25% { transform: scaleX(1); animation-timing-function: var(--glide); } 33.3%, 100% { transform: scaleX(0); } }
+@keyframes u2 { 0%, 33.3% { transform: scaleX(0); animation-timing-function: var(--glide); } 41.3%, 58.3% { transform: scaleX(1); animation-timing-function: var(--glide); } 66.7%, 100% { transform: scaleX(0); } }
+@keyframes u3 { 0%, 66.7% { transform: scaleX(0); animation-timing-function: var(--glide); } 74.7%, 92% { transform: scaleX(1); animation-timing-function: var(--glide); } 100% { transform: scaleX(0); } }
+@keyframes lp {
+  0% { opacity: 0; transform: translate(0, 0) scale(.84); animation-timing-function: var(--glide); }
+  8%, 25% { opacity: 1; transform: translate(0, 0) scale(1.061); animation-timing-function: var(--glide); }
+  41.3%, 58.3% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(1.061); animation-timing-function: var(--glide); }
+  74.7%, 92% { opacity: 1; transform: translate(calc(var(--dx) * 2), calc(var(--dy) * 2)) scale(1.061); animation-timing-function: var(--glide); }
+  100% { opacity: 0; transform: translate(calc(var(--dx) * 2), calc(var(--dy) * 2)) scale(1.08); }
+}
+html.anim .par-far.sd { animation-name: parFar; }
+html.anim .par-mid.sd { animation-name: parMid; }
+html.anim .hero__head.sd { animation-name: parHead; }
+@keyframes parFar { from { transform: none; } to { transform: translateY(120px); } }
+@keyframes parMid { from { transform: none; } to { transform: translateY(64px); } }
+@keyframes parHead { from { transform: none; } to { transform: translateY(40px); } }
+html.anim .csheet.sd { animation-name: tableUp; }
+@keyframes tableUp { from { transform: rotateX(54deg); } to { transform: none; } }
+html.anim .reel.sd { animation-name: reelIn; }
+@keyframes reelIn { from { transform: translateZ(-280px); } to { transform: none; } }
+html.anim .film.sd:nth-child(1) { animation-name: filmL; }
+html.anim .film.sd:nth-child(2) { animation-name: filmM; }
+html.anim .film.sd:nth-child(3) { animation-name: filmR; }
+@keyframes filmL { from { transform: rotateY(32deg) translateZ(-60px); } to { transform: none; } }
+@keyframes filmM { from { transform: translateZ(-200px); } to { transform: none; } }
+@keyframes filmR { from { transform: rotateY(-32deg) translateZ(-60px); } to { transform: none; } }
+.film:nth-child(1) { transform-origin: 100% 50%; } .film:nth-child(3) { transform-origin: 0% 50%; }
+html.anim .logos li.sd { animation-name: tileIn; }
+@keyframes tileIn { from { transform: translateZ(-300px); } to { transform: none; } }
+html.anim .card.sd:nth-child(1) { animation-name: deal1; }
+html.anim .card.sd:nth-child(2) { animation-name: deal2; }
+html.anim .card.sd:nth-child(3) { animation-name: deal3; }
+@keyframes deal1 { from { transform: translateX(calc(100% + var(--g))) rotate(-4deg); } to { transform: none; } }
+@keyframes deal2 { from { transform: translateZ(-60px) rotate(1.5deg); } to { transform: none; } }
+@keyframes deal3 { from { transform: translateX(calc(-100% - var(--g))) translateZ(-120px) rotate(4deg); } to { transform: none; } }
+html.anim .note.sd { animation-name: noteIn; }
+@keyframes noteIn { from { transform: rotateY(-24deg) translateZ(-180px); } to { transform: none; } }
+html.anim .fd__img.sd { animation-name: photoIn; }
+@keyframes photoIn { from { transform: translateZ(-170px); } to { transform: none; } }
+html.anim .fd__disc.sd { animation-name: discPar; }
+@keyframes discPar { from { transform: translateY(70px); } to { transform: translateY(-70px); } }
+html.anim .life__row li.sd:nth-child(odd) { animation-name: lifeA; }
+html.anim .life__row li.sd:nth-child(even) { animation-name: lifeB; }
+@keyframes lifeA { from { transform: translateY(30px); } to { transform: translateY(-30px); } }
+@keyframes lifeB { from { transform: translateY(80px); } to { transform: translateY(-80px); } }
+html.anim .q.sd { animation-name: qIn; }
+@keyframes qIn { from { transform: rotateX(-26deg) translateZ(-120px); } to { transform: none; } }
+html.anim .frame.sd { animation-name: frameIn; }
+@keyframes frameIn { from { transform: translateZ(-260px); border-radius: 28px; } to { transform: none; border-radius: 0; } }
+html.anim .frame__rule.sd { animation-name: ruleDraw; }
+@keyframes ruleDraw { from { transform: scaleX(0); } to { transform: none; } }
+
+/* ---------- laptops under 1180: the contact sheet folds into a sheet ---------- */
+@media (max-width: 1179px) {
+  .strip { display: none; }
+  .idx { display: inline-flex; }
+  .nav { justify-content: flex-end; }
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 860px) {
+  :root { --bar: 56px; --gut: 16px; --lab: 0px; --dock: calc(70px + var(--lab) + env(safe-area-inset-bottom)); --pad: clamp(52px, 8vh, 72px); }
+  body { font-size: 15px; }
+  .bar { gap: 12px; }
+  .bar__brand .wm { height: 19px; }
+  .bar .cta { display: none; }
+  .nav { justify-content: flex-end; }
+  .idx { height: 44px; padding: 0 14px; }
+  .sheet { left: var(--gut); right: var(--gut); width: auto; }
+  .sheet ol { grid-template-columns: 1fr; gap: 0; }
+  .sheet a { padding: 7px 8px; }
+  .dock { display: block; position: fixed; z-index: 65; left: 0; right: 0; bottom: 0; height: var(--dock); box-sizing: border-box; padding: var(--lab) 12px env(safe-area-inset-bottom); background: var(--ground); border-top: 1px solid var(--hair); }
+  .dock .cta { display: flex; width: 100%; height: 56px; margin-top: 7px; box-sizing: border-box; justify-content: space-between; font-size: 17px; }
+
+  .hero__head { padding-top: calc(var(--bar) + 18px); }
+  .eb-long { display: none; } .eb-short { display: inline; }
+  .hero__h1 { font-size: clamp(30px, 8.6vw, 40px); margin-top: 12px; }
+  .hero__line { height: 2px; }
+  .hero__ask .cta { height: 50px; font-size: 16px; }
+  .hero { height: calc(100svh - var(--dock)); min-height: 560px; }
+  .wall { perspective-origin: 50% 20%; }
+  .lane--far { top: 5cqh; }
+  .lane--far li { width: 21cqh; height: 21cqh; margin-right: 1.6cqh; }
+  .lane--mid { top: 20cqh; }
+  .lane--mid li { width: 31cqh; height: 31cqh; margin-right: 2cqh; }
+  .one { --one: min(46cqh, 54vw); top: 46cqh; left: var(--gut); width: var(--one); }
+  .one .lbl { right: auto; left: calc(100% + 14px); width: calc(100vw - var(--one) - 2 * var(--gut) - 14px); text-align: left; padding: 0 0 12px; background: transparent; }
+  .one .lbl__rule { left: 0; right: auto; transform-origin: 0 50%; }
+  .lbl__client { font-size: 15px; }
+  .lbl__line { font-size: 15px; line-height: 1.4; }
+
+  .studio .sec__head { grid-template-columns: 1fr; }
+  .csheet { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs__name { font-size: 17px; }
+
+  .room { padding-top: 56px; }
+  .room__head { margin-bottom: 20px; }
+  .hang-wrap, .room--rev .hang-wrap { --s: 44vw; --g: 16px; --dx: 0px; --dy: calc(var(--s) + var(--g)); width: auto; }
+  .hang { grid-template-columns: 1fr; }
+  .obj { display: grid; grid-template-columns: var(--s) minmax(0, 1fr); column-gap: 14px; align-items: center; }
+  .obj .lbl { margin-top: 0; }
+  .room--rev .loupe { left: 0; }
+
+  .films-row { grid-template-columns: 1fr; }
+  .film.sd:nth-child(n) { transform-origin: 50% 50%; }
+  html.anim .film.sd:nth-child(n) { animation-name: filmM; }
+  .reel-cap { font-size: 15px; }
+  .film__cap, .note figcaption { font-size: 15px; }
+
+  .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .logos li { height: 68px; }
+
+  .deck { grid-template-columns: 1fr; }
+  @keyframes deal1p { from { transform: rotate(-2deg); } to { transform: none; } }
+  @keyframes deal2p { from { transform: translateY(calc(-100% - var(--g))) translateZ(-60px) rotate(2deg); } to { transform: none; } }
+  @keyframes deal3p { from { transform: translateY(calc(-200% - 2 * var(--g))) translateZ(-120px) rotate(-3deg); } to { transform: none; } }
+  html.anim .card.sd:nth-child(1) { animation-name: deal1p; }
+  html.anim .card.sd:nth-child(2) { animation-name: deal2p; }
+  html.anim .card.sd:nth-child(3) { animation-name: deal3p; }
+
+  .note, .note:nth-child(2), .note:nth-child(3) { margin-left: 0; grid-template-columns: 1fr; }
+  .note__mark { display: block; font-size: 54px; grid-row: auto; height: 44px; overflow: hidden; margin-bottom: 8px; }
+  .note blockquote p { font-size: 19px; }
+
+  .duo { grid-template-columns: 1fr; gap: 56px; }
+  .fd__photo { max-width: none; margin-right: 12%; }
+  .life__head { grid-template-columns: 1fr; }
+  .life__row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .q summary { font-size: 19px; padding: 20px 0; }
+  .q__a { padding-right: 0; }
+
+  .frame { padding: calc(var(--bar) + 32px) var(--gut) calc(var(--dock) + 20px); }
+  .close__line { font-size: clamp(34px, 9.4vw, 44px); }
+  .rows { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rows li { min-width: 0; }
+  .rows a[href^="mailto"] { display: inline-block; max-width: 100%; padding: 12px 0; line-height: 20px; overflow-wrap: break-word; }
+  .rows li, .rows li + li { padding: 14px 12px 14px 0; border-left: 0; border-bottom: 1px solid rgba(230, 238, 242, .35); }
+  .rows li:nth-child(even) { padding-left: 12px; border-left: 1px solid rgba(230, 238, 242, .35); }
+  .rows li:last-child { grid-column: 1 / -1; padding-left: 0; border-left: 0; }
+  .frame__foot { flex-direction: column-reverse; align-items: stretch; gap: 22px; padding-top: 26px; }
+  .frame__label { justify-items: stretch; }
+  .frame .cta--light { justify-content: space-between; }
+  .frame__foot .wm { height: 22px; }
+}
+
+/* ---------- reduced motion: final state, nothing moves ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .cta, .cta__chip svg, .strip img, .strip a::after, .cs__img img, .play__btn, .q__icon::before, .q__icon::after { transition: none; }
+  .lane__track { animation: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="wm" viewBox="-2 -2 439 76.8"><path d="M0 71.4V21.8H12.4V27.2H14.2Q15.5 24.7 18.5 22.9Q21.5 21 26.4 21Q31.7 21 34.9 23.1Q38.1 25.1 39.8 28.4H41.6Q43.3 25.2 46.4 23.1Q49.5 21 55.2 21Q59.8 21 63.5 23Q67.3 24.9 69.6 28.9Q71.8 32.8 71.8 38.8V71.4H59.2V39.7Q59.2 35.6 57.1 33.5Q55 31.5 51.2 31.5Q46.9 31.5 44.6 34.2Q42.2 37 42.2 42.1V71.4H29.6V39.7Q29.6 35.6 27.5 33.5Q25.4 31.5 21.6 31.5Q17.3 31.5 15 34.2Q12.6 37 12.6 42.1V71.4ZM105 72.8Q97.6 72.8 91.7 69.8Q85.8 66.8 82.4 61.1Q79 55.4 79 47.4V45.8Q79 37.8 82.4 32.1Q85.8 26.4 91.7 23.4Q97.6 20.4 105 20.4Q112.4 20.4 118.3 23.4Q124.2 26.4 127.6 32.1Q131 37.8 131 45.8V47.4Q131 55.4 127.6 61.1Q124.2 66.8 118.3 69.8Q112.4 72.8 105 72.8ZM105 61.6Q110.8 61.6 114.6 57.9Q118.4 54.1 118.4 47.1V46.1Q118.4 39.1 114.7 35.4Q110.9 31.6 105 31.6Q99.2 31.6 95.4 35.4Q91.6 39.1 91.6 46.1V47.1Q91.6 54.1 95.4 57.9Q99.2 61.6 105 61.6ZM159.2 72.8Q149.5 72.8 143.3 68.6Q137.1 64.4 135.8 56.6L147.4 53.6Q148.1 57.1 149.8 59.1Q151.4 61.1 153.9 62Q156.3 62.8 159.2 62.8Q163.6 62.8 165.7 61.2Q167.8 59.7 167.8 57.4Q167.8 55.1 165.8 53.9Q163.8 52.6 159.4 51.8L156.6 51.3Q151.4 50.3 147.1 48.6Q142.8 46.8 140.2 43.7Q137.6 40.6 137.6 35.7Q137.6 28.3 143 24.4Q148.4 20.4 157.2 20.4Q165.5 20.4 171 24.1Q176.5 27.8 178.2 33.8L166.5 37.4Q165.7 33.6 163.2 32Q160.8 30.4 157.2 30.4Q153.6 30.4 151.7 31.7Q149.8 32.9 149.8 35.1Q149.8 37.5 151.8 38.7Q153.8 39.8 157.2 40.4L160 40.9Q165.6 41.9 170.1 43.6Q174.7 45.2 177.3 48.2Q180 51.3 180 56.5Q180 64.3 174.3 68.6Q168.7 72.8 159.2 72.8ZM207.6 72.8Q197.9 72.8 191.7 68.6Q185.5 64.4 184.2 56.6L195.8 53.6Q196.5 57.1 198.2 59.1Q199.8 61.1 202.2 62Q204.7 62.8 207.6 62.8Q212 62.8 214.1 61.2Q216.2 59.7 216.2 57.4Q216.2 55.1 214.2 53.9Q212.2 52.6 207.8 51.8L205 51.3Q199.8 50.3 195.5 48.6Q191.2 46.8 188.6 43.7Q186 40.6 186 35.7Q186 28.3 191.4 24.4Q196.8 20.4 205.6 20.4Q213.9 20.4 219.4 24.1Q224.9 27.8 226.6 33.8L214.9 37.4Q214.1 33.6 211.6 32Q209.2 30.4 205.6 30.4Q202 30.4 200.1 31.7Q198.2 32.9 198.2 35.1Q198.2 37.5 200.2 38.7Q202.2 39.8 205.6 40.4L208.4 40.9Q214 41.9 218.6 43.6Q223.1 45.2 225.8 48.2Q228.4 51.3 228.4 56.5Q228.4 64.3 222.8 68.6Q217.1 72.8 207.6 72.8ZM239.4 71.4 232.4 21.8H244.9L249.3 62.9H251.1L257.5 21.8H277.7L284.1 62.9H285.9L290.3 21.8H302.8L295.8 71.4H274.9L268.5 30.3H266.7L260.3 71.4ZM309.8 71.4V21.8H322.4V71.4ZM316.1 16Q312.7 16 310.4 13.8Q308 11.6 308 8Q308 4.4 310.4 2.2Q312.7 0 316.1 0Q319.6 0 321.9 2.2Q324.2 4.4 324.2 8Q324.2 11.6 321.9 13.8Q319.6 16 316.1 16ZM355.7 72.8Q348.5 72.8 342.7 69.8Q336.8 66.8 333.4 61.1Q330 55.4 330 47.3V45.9Q330 37.8 333.4 32.1Q336.8 26.4 342.7 23.4Q348.5 20.4 355.7 20.4Q362.8 20.4 367.9 22.9Q373 25.4 376.2 29.8Q379.3 34.1 380.3 39.6L368.1 42.2Q367.7 39.2 366.3 36.8Q364.9 34.4 362.4 33Q359.8 31.6 356 31.6Q352.2 31.6 349.2 33.2Q346.1 34.9 344.4 38.2Q342.6 41.4 342.6 46.1V47.1Q342.6 51.8 344.4 55.1Q346.1 58.3 349.2 60Q352.2 61.6 356 61.6Q361.7 61.6 364.7 58.7Q367.6 55.7 368.4 50.9L380.6 53.8Q379.3 59.1 376.2 63.5Q373 67.8 367.9 70.3Q362.8 72.8 355.7 72.8ZM387 71.4V1.4H399.6V40.1H401.4L417.8 21.8H434.2L411.3 45.8L435 71.4H418.8L401.4 51.7H399.6V71.4Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M6 14 14 6M7.5 6H14v6.5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 20 20"><path d="M5 3.2v13.6c0 .7.8 1.2 1.4.8l10.4-6.8c.5-.3.5-1.1 0-1.4L6.4 2.4C5.8 2 5 2.5 5 3.2Z"/></symbol>
+</svg>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio, back to the top"><svg class="wm" role="img" aria-label="Mosswick Studio"><use href="#wm"/></svg></a>
+  <nav class="nav" aria-label="The collection, room by room">
+    <ol class="strip" id="strip">
+          <li><a href="#room-strategy" data-room="strategy" title="Brand Strategy"><img src="assets/img/room-01-72.webp" alt="" width="72" height="72"><span class="strip__name">Brand Strategy</span></a></li>
+          <li><a href="#room-identity" data-room="identity" title="Brand Identity"><img src="assets/img/room-02-72.webp" alt="" width="72" height="72"><span class="strip__name">Brand Identity</span></a></li>
+          <li><a href="#room-websites" data-room="websites" title="Websites"><img src="assets/img/room-03-72.webp" alt="" width="72" height="72"><span class="strip__name">Websites</span></a></li>
+          <li><a href="#room-social" data-room="social" title="Social Content"><img src="assets/img/room-04-72.webp" alt="" width="72" height="72"><span class="strip__name">Social Content</span></a></li>
+          <li><a href="#room-film" data-room="film" title="Film &amp; Motion"><img src="assets/img/room-05-72.webp" alt="" width="72" height="72"><span class="strip__name">Film &amp; Motion</span></a></li>
+          <li><a href="#room-campaigns" data-room="campaigns" title="Campaigns"><img src="assets/img/room-06-72.webp" alt="" width="72" height="72"><span class="strip__name">Campaigns</span></a></li>
+          <li><a href="#room-performance" data-room="performance" title="Performance Marketing"><img src="assets/img/room-07-72.webp" alt="" width="72" height="72"><span class="strip__name">Performance Marketing</span></a></li>
+          <li><a href="#room-packaging" data-room="packaging" title="Packaging"><img src="assets/img/room-08-72.webp" alt="" width="72" height="72"><span class="strip__name">Packaging</span></a></li>
+    </ol>
+    <button class="idx" id="idx" type="button" aria-expanded="false" aria-controls="sheet"><span class="idx__dot" aria-hidden="true"></span><span class="idx__now" id="idxNow">Index</span></button>
+  </nav>
+  <a class="cta cta--light" href="https://wa.me/15550100" rel="noopener"><span class="cta__label">Start a project</span><span class="cta__chip" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+</header>
+<div class="sheet" id="sheet" hidden>
+  <ol>
+            <li><a href="#room-strategy" data-room="strategy"><img src="assets/img/room-01-72.webp" alt="" width="72" height="72"><span>01</span> Brand Strategy</a></li>
+            <li><a href="#room-identity" data-room="identity"><img src="assets/img/room-02-72.webp" alt="" width="72" height="72"><span>02</span> Brand Identity</a></li>
+            <li><a href="#room-websites" data-room="websites"><img src="assets/img/room-03-72.webp" alt="" width="72" height="72"><span>03</span> Websites</a></li>
+            <li><a href="#room-social" data-room="social"><img src="assets/img/room-04-72.webp" alt="" width="72" height="72"><span>04</span> Social Content</a></li>
+            <li><a href="#room-film" data-room="film"><img src="assets/img/room-05-72.webp" alt="" width="72" height="72"><span>05</span> Film &amp; Motion</a></li>
+            <li><a href="#room-campaigns" data-room="campaigns"><img src="assets/img/room-06-72.webp" alt="" width="72" height="72"><span>06</span> Campaigns</a></li>
+            <li><a href="#room-performance" data-room="performance"><img src="assets/img/room-07-72.webp" alt="" width="72" height="72"><span>07</span> Performance Marketing</a></li>
+            <li><a href="#room-packaging" data-room="packaging"><img src="assets/img/room-08-72.webp" alt="" width="72" height="72"><span>08</span> Packaging</a></li>
+  </ol>
+</div>
+
+<main id="main">
+
+  <!-- 1. Object one, in front of the archive -->
+  <section class="hero g-light" id="top" data-sc-act="flow" aria-labelledby="h1">
+    <div class="hero__head">
+      <p class="eyebrow">// <span class="eb-long">Creative and marketing studio, Lowmere</span><span class="eb-short">Creative studio, Lowmere</span> //</p>
+      <h1 class="hero__h1" id="h1"><span class="ln"><span>we make brands worth remembering<span class="dot">.</span></span></span><i class="hero__line" aria-hidden="true"></i></h1>
+      <p class="hero__ask"><a class="cta cta--accent" href="https://wa.me/15550100" rel="noopener"><span class="cta__label">Start a project</span><span class="cta__chip" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></p>
+    </div>
+    <div class="wall" id="wall" role="group" aria-label="From the studio archive">
+      <div class="lane lane--far"><div class="par-far">
+        <ul class="lane__track">
+            <li><img src="assets/img/lane-far-01-320.webp" alt="Three abstract canvases around a bench at Hollin Gallery" width="320" height="320" decoding="async"></li>
+            <li><img src="assets/img/lane-far-02-320.webp" alt="A Periwink wall of frames sorted from lilac to navy" width="320" height="320" decoding="async"></li>
+            <li><img src="assets/img/lane-far-03-320.webp" alt="A Cragloft climbing wall in a shaft of window light" width="320" height="320" decoding="async"></li>
+            <li><img src="assets/img/lane-far-04-320.webp" alt="A frosted glass jar with a cork lid" width="320" height="320" decoding="async"></li>
+            <li><img src="assets/img/lane-far-05-320.webp" alt="Voltmere solar panels on a red brick terrace roof" width="320" height="320" decoding="async"></li>
+            <li><img src="assets/img/lane-far-06-320.webp" alt="A terrier beside a Houndsbury meal box and two clear pouches" width="320" height="320" decoding="async"></li>
+            <li><img src="assets/img/lane-far-07-320.webp" alt="Kilnmark plates and bowls in oatmeal, teal and rust glazes" width="320" height="320" decoding="async"></li>
+            <li><img src="assets/img/lane-far-08-320.webp" alt="A sage green Gearfinch cargo e-bike on a leafy hill street" width="320" height="320" decoding="async"></li>
+            <li><img src="assets/img/lane-far-09-320.webp" alt="A heron in the misty river, for River Commons Trust" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-01-320.webp" alt="" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-02-320.webp" alt="" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-03-320.webp" alt="" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-04-320.webp" alt="" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-05-320.webp" alt="" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-06-320.webp" alt="" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-07-320.webp" alt="" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-08-320.webp" alt="" width="320" height="320" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-far-09-320.webp" alt="" width="320" height="320" decoding="async"></li>
+        </ul>
+      </div></div>
+      <div class="lane lane--mid"><div class="par-mid">
+        <ul class="lane__track">
+            <li><img src="assets/img/lane-mid-01-480.webp" alt="Four Fizzwold cans in crushed ice on a tangerine ground" width="480" height="480" decoding="async"></li>
+            <li><img src="assets/img/lane-mid-02-480.webp" alt="Three Tallow Lane Coffee bags on a steel roastery bench" width="480" height="480" decoding="async"></li>
+            <li><img src="assets/img/lane-mid-03-480.webp" alt="A Gilded Hare gin bottle and a tumbler on a walnut bar" width="480" height="480" decoding="async"></li>
+            <li><img src="assets/img/lane-mid-04-480.webp" alt="Four Saltmarrow snack bags on wet sand at the waterline" width="480" height="480" decoding="async"></li>
+            <li><img src="assets/img/lane-mid-05-480.webp" alt="A cream-dial Halvane watch beside its open brass movement" width="480" height="480" decoding="async"></li>
+            <li><img src="assets/img/lane-mid-06-480.webp" alt="Sand-coloured Stillreed headphones at the edge of a still pool" width="480" height="480" decoding="async"></li>
+            <li><img src="assets/img/lane-mid-07-480.webp" alt="A larch-panelled bedroom at The Larchway at golden hour" width="480" height="480" decoding="async"></li>
+            <li><img src="assets/img/lane-mid-08-480.webp" alt="A teal and orange Marshlight Festival poster on weathered brick" width="480" height="480" decoding="async"></li>
+            <li><img src="assets/img/lane-mid-09-480.webp" alt="Moss green Fernstride running shoes on a damp autumn path" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-01-480.webp" alt="" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-02-480.webp" alt="" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-03-480.webp" alt="" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-04-480.webp" alt="" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-05-480.webp" alt="" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-06-480.webp" alt="" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-07-480.webp" alt="" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-08-480.webp" alt="" width="480" height="480" decoding="async"></li>
+            <li aria-hidden="true"><img src="assets/img/lane-mid-09-480.webp" alt="" width="480" height="480" decoding="async"></li>
+        </ul>
+      </div></div>
+      <figure class="one"><div class="par-one">
+        <div class="one__frame"><img src="assets/img/work-01-460.webp" srcset="assets/img/work-01-460.webp 460w, assets/img/work-01-760.webp 760w" sizes="(max-width: 860px) 54vw, 36vw" alt="Five Plumtide cordial bottles and cut fruit on sunlit limestone" width="760" height="760" fetchpriority="high" decoding="async"></div>
+        <figcaption class="lbl"><span class="lbl__no">No. 01</span><b class="lbl__client">Plumtide</b><span class="lbl__line">Food and drink</span><span class="lbl__line">A cordial brand with sunshine in it</span><i class="lbl__rule" aria-hidden="true"></i></figcaption>
+      </div></figure>
+    </div>
+  </section>
+
+  <!-- 2. What the studio does, and the eight rooms -->
+  <section class="studio sec g-dark" id="studio" data-sc-act="flow" aria-labelledby="studio-h">
+    <div class="sec__head">
+      <h2 class="h2" id="studio-h">Strategy, <span class="r">Design</span>, Film and Media</h2>
+      <div>
+        <p class="aeo">Mosswick Studio is a creative and marketing studio in Lowmere, working since 2014. Thirty-two strategists, designers, writers, filmmakers and media buyers make brand strategy, identities, websites, social content, film and motion, campaigns, performance marketing and packaging in one studio, for single projects or monthly work, for clients in Lowmere and well beyond.</p>
+        <p class="lede">Identity, web, social, film and paid media, planned together and measured honestly from the very first week.</p>
+      </div>
+    </div>
+    <div class="cs-wrap">
+      <ol class="csheet" id="csheet" aria-label="The eight rooms of the collection">
+          <li><a href="#room-strategy"><span class="cs__img"><img src="assets/img/room-01-500.webp" alt="Six people around a table of printed layouts" width="500" height="500" loading="lazy" decoding="async"></span><span class="cs__no">01</span><span class="cs__name">Brand Strategy</span></a></li>
+          <li><a href="#room-identity"><span class="cs__img"><img src="assets/img/room-02-500.webp" alt="A blank rubber stamp with a wooden handle" width="500" height="500" loading="lazy" decoding="async"></span><span class="cs__no">02</span><span class="cs__name">Brand Identity</span></a></li>
+          <li><a href="#room-websites"><span class="cs__img"><img src="assets/img/room-03-500.webp" alt="A laptop layout among sketches and swatches" width="500" height="500" loading="lazy" decoding="async"></span><span class="cs__no">03</span><span class="cs__name">Websites</span></a></li>
+          <li><a href="#room-social"><span class="cs__img"><img src="assets/img/room-04-500.webp" alt="Charred vegetables by a wood-fired oven" width="500" height="500" loading="lazy" decoding="async"></span><span class="cs__no">04</span><span class="cs__name">Social Content</span></a></li>
+          <li><a href="#room-film"><span class="cs__img"><img src="assets/img/room-05-500.webp" alt="An ivory silk band in soft folds" width="500" height="500" loading="lazy" decoding="async"></span><span class="cs__no">05</span><span class="cs__name">Film &amp; Motion</span></a></li>
+          <li><a href="#room-campaigns"><span class="cs__img"><img src="assets/img/room-06-500.webp" alt="A classroom window lit up at night" width="500" height="500" loading="lazy" decoding="async"></span><span class="cs__no">06</span><span class="cs__name">Campaigns</span></a></li>
+          <li><a href="#room-performance"><span class="cs__img"><img src="assets/img/room-07-500.webp" alt="A chrome sphere on a grey ground" width="500" height="500" loading="lazy" decoding="async"></span><span class="cs__no">07</span><span class="cs__name">Performance Marketing</span></a></li>
+          <li><a href="#room-packaging"><span class="cs__img"><img src="assets/img/room-08-500.webp" alt="Wooden toys beside their open boxes" width="500" height="500" loading="lazy" decoding="async"></span><span class="cs__no">08</span><span class="cs__name">Packaging</span></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3. The collection (the peak) -->
+  <section class="collection sec g-light" id="collection" data-sc-act="flow" aria-labelledby="collection-h">
+    <div class="sec__head">
+      <h2 class="h2" id="collection-h"><span class="r">Seen</span>, Remembered, Chosen</h2>
+      <p class="lede">Good work that also shows up in the numbers. Twenty-five projects from our files, hung one room per service.</p>
+    </div>
+        <article class="room" id="room-strategy" data-room="strategy" aria-labelledby="room-strategy-h">
+          <header class="room__head">
+            <span class="room__no" aria-hidden="true">01</span>
+            <h3 id="room-strategy-h">Brand Strategy</h3>
+            <p class="room__line">We find what makes you worth choosing and write it down plainly.</p>
+            <a class="room__more" href="https://example.com">Brand Strategy page&nbsp;<span aria-hidden="true">↗</span></a>
+          </header>
+          <div class="hang-wrap">
+            <ol class="hang">
+            <li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-02-380.webp" srcset="assets/img/work-02-380.webp 380w, assets/img/work-02-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A painted model house under a paper umbrella for Shelterly" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 02</span><b class="lbl__client">Shelterly</b><span class="lbl__line">Insurance</span><span class="lbl__line">Home insurance without the small print</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-03-380.webp" srcset="assets/img/work-03-380.webp 380w, assets/img/work-03-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A Gilded Hare gin bottle and a tumbler on a walnut bar" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 03</span><b class="lbl__client">Gilded Hare</b><span class="lbl__line">Drinks</span><span class="lbl__line">A gin bottle worth keeping</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-04-380.webp" srcset="assets/img/work-04-380.webp 380w, assets/img/work-04-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Voltmere solar panels on a red brick terrace roof" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 04</span><b class="lbl__client">Voltmere</b><span class="lbl__line">Energy</span><span class="lbl__line">Solar that explains itself</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li>
+            </ol>
+            <span class="loupe" aria-hidden="true"></span>
+          </div>
+        </article>
+        <article class="room room--rev" id="room-identity" data-room="identity" aria-labelledby="room-identity-h">
+          <header class="room__head">
+            <span class="room__no" aria-hidden="true">02</span>
+            <h3 id="room-identity-h">Brand Identity</h3>
+            <p class="room__line">Logos, type, colour and rules that make you recognisable at a glance.</p>
+            <a class="room__more" href="https://example.com">Brand Identity page&nbsp;<span aria-hidden="true">↗</span></a>
+          </header>
+          <div class="hang-wrap">
+            <ol class="hang">
+            <li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-05-380.webp" srcset="assets/img/work-05-380.webp 380w, assets/img/work-05-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Kilnmark plates and bowls in oatmeal, teal and rust glazes" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 05</span><b class="lbl__client">Kilnmark</b><span class="lbl__line">Homeware</span><span class="lbl__line">Quiet branding for loud glazes</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-06-380.webp" srcset="assets/img/work-06-380.webp 380w, assets/img/work-06-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Three abstract canvases around a bench at Hollin Gallery" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 06</span><b class="lbl__client">Hollin Gallery</b><span class="lbl__line">Culture</span><span class="lbl__line">A gallery that reads like a magazine</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-07-380.webp" srcset="assets/img/work-07-380.webp 380w, assets/img/work-07-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A cream-dial Halvane watch beside its open brass movement" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 07</span><b class="lbl__client">Halvane Watch Co.</b><span class="lbl__line">Accessories</span><span class="lbl__line">Small watchmaker, big detail</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li>
+            </ol>
+            <span class="loupe" aria-hidden="true"></span>
+          </div>
+        </article>
+        <article class="room" id="room-websites" data-room="websites" aria-labelledby="room-websites-h">
+          <header class="room__head">
+            <span class="room__no" aria-hidden="true">03</span>
+            <h3 id="room-websites-h">Websites</h3>
+            <p class="room__line">Fast, clear websites that explain what you do and turn visits into enquiries.</p>
+            <a class="room__more" href="https://example.com">Websites page&nbsp;<span aria-hidden="true">↗</span></a>
+          </header>
+          <div class="hang-wrap">
+            <ol class="hang">
+            <li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-08-380.webp" srcset="assets/img/work-08-380.webp 380w, assets/img/work-08-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A larch-panelled bedroom at The Larchway at golden hour" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 08</span><b class="lbl__client">The Larchway</b><span class="lbl__line">Hospitality</span><span class="lbl__line">A hotel that feels like a weekend</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-09-380.webp" srcset="assets/img/work-09-380.webp 380w, assets/img/work-09-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A calm Mendhaven treatment room in soft daylight" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 09</span><b class="lbl__client">Mendhaven</b><span class="lbl__line">Health</span><span class="lbl__line">A physio clinic that feels calm</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-10-380.webp" srcset="assets/img/work-10-380.webp 380w, assets/img/work-10-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A heron in the misty river, for River Commons Trust" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 10</span><b class="lbl__client">River Commons Trust</b><span class="lbl__line">Nonprofit</span><span class="lbl__line">Bringing a city back to its river</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li>
+            </ol>
+            <span class="loupe" aria-hidden="true"></span>
+          </div>
+        </article>
+        <article class="room room--rev" id="room-social" data-room="social" aria-labelledby="room-social-h">
+          <header class="room__head">
+            <span class="room__no" aria-hidden="true">04</span>
+            <h3 id="room-social-h">Social Content</h3>
+            <p class="room__line">Posts, reels and series that people stop scrolling for, made every month.</p>
+            <a class="room__more" href="https://example.com">Social Content page&nbsp;<span aria-hidden="true">↗</span></a>
+          </header>
+          <div class="hang-wrap">
+            <ol class="hang">
+            <li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-11-380.webp" srcset="assets/img/work-11-380.webp 380w, assets/img/work-11-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A Cragloft climbing wall in a shaft of window light" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 11</span><b class="lbl__client">Cragloft</b><span class="lbl__line">Sport</span><span class="lbl__line">Climbing gyms with a sense of humour</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-12-380.webp" srcset="assets/img/work-12-380.webp 380w, assets/img/work-12-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Six Quillmoor Press paperbacks fanned on green velvet" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 12</span><b class="lbl__client">Quillmoor Press</b><span class="lbl__line">Publishing</span><span class="lbl__line">Book covers that sell on a phone</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-13-380.webp" srcset="assets/img/work-13-380.webp 380w, assets/img/work-13-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A Periwink wall of frames sorted from lilac to navy" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 13</span><b class="lbl__client">Periwink</b><span class="lbl__line">Retail</span><span class="lbl__line">Glasses shopping made fun again</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li>
+            </ol>
+            <span class="loupe" aria-hidden="true"></span>
+          </div>
+        </article>
+        <article class="room" id="room-film" data-room="film" aria-labelledby="room-film-h">
+          <header class="room__head">
+            <span class="room__no" aria-hidden="true">05</span>
+            <h3 id="room-film-h">Film &amp; Motion</h3>
+            <p class="room__line">Brand films, product videos and animation, from first script to final grade.</p>
+            <a class="room__more" href="https://example.com">Film &amp; Motion page&nbsp;<span aria-hidden="true">↗</span></a>
+          </header>
+          <div class="hang-wrap">
+            <ol class="hang">
+            <li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-14-380.webp" srcset="assets/img/work-14-380.webp 380w, assets/img/work-14-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A rider in a bottle green Velloway jacket on a wet street at dusk" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 14</span><b class="lbl__client">Velloway</b><span class="lbl__line">Fashion</span><span class="lbl__line">Outerwear built for wet commutes</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-15-380.webp" srcset="assets/img/work-15-380.webp 380w, assets/img/work-15-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Sand-coloured Stillreed headphones at the edge of a still pool" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 15</span><b class="lbl__client">Stillreed</b><span class="lbl__line">Consumer tech</span><span class="lbl__line">A quiet campaign for headphones</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-16-380.webp" srcset="assets/img/work-16-380.webp 380w, assets/img/work-16-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A Marlo Rue cream wool sweater over a fence post in mist" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 16</span><b class="lbl__client">Marlo Rue</b><span class="lbl__line">Fashion</span><span class="lbl__line">Knitwear filmed like a slow film</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li>
+            </ol>
+            <span class="loupe" aria-hidden="true"></span>
+          </div>
+        </article>
+        <article class="room room--rev" id="room-campaigns" data-room="campaigns" aria-labelledby="room-campaigns-h">
+          <header class="room__head">
+            <span class="room__no" aria-hidden="true">06</span>
+            <h3 id="room-campaigns-h">Campaigns</h3>
+            <p class="room__line">Big ideas built to run across outdoor, social, print and screen.</p>
+            <a class="room__more" href="https://example.com">Campaigns page&nbsp;<span aria-hidden="true">↗</span></a>
+          </header>
+          <div class="hang-wrap">
+            <ol class="hang">
+            <li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-17-380.webp" srcset="assets/img/work-17-380.webp 380w, assets/img/work-17-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A teal and orange Marshlight Festival poster on weathered brick" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 17</span><b class="lbl__client">Marshlight Festival</b><span class="lbl__line">Culture</span><span class="lbl__line">Festival posters people want to keep</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-18-380.webp" srcset="assets/img/work-18-380.webp 380w, assets/img/work-18-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A rust orange Cairnstone rucksack against a cairn at sunrise" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 18</span><b class="lbl__client">Cairnstone</b><span class="lbl__line">Outdoor</span><span class="lbl__line">Gear for the long way round</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-19-380.webp" srcset="assets/img/work-19-380.webp 380w, assets/img/work-19-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Moss green Fernstride running shoes on a damp autumn path" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 19</span><b class="lbl__client">Fernstride</b><span class="lbl__line">Sport</span><span class="lbl__line">Running shoes for the rest of us</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li>
+            </ol>
+            <span class="loupe" aria-hidden="true"></span>
+          </div>
+        </article>
+        <article class="room" id="room-performance" data-room="performance" aria-labelledby="room-performance-h">
+          <header class="room__head">
+            <span class="room__no" aria-hidden="true">07</span>
+            <h3 id="room-performance-h">Performance Marketing</h3>
+            <p class="room__line">Paid search and social, run by people who know your brand well.</p>
+            <a class="room__more" href="https://example.com">Performance Marketing page&nbsp;<span aria-hidden="true">↗</span></a>
+          </header>
+          <div class="hang-wrap">
+            <ol class="hang">
+            <li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-20-380.webp" srcset="assets/img/work-20-380.webp 380w, assets/img/work-20-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="The Paywren invoice screen on a phone beside a notebook and tea" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 20</span><b class="lbl__client">Paywren</b><span class="lbl__line">Fintech</span><span class="lbl__line">Invoicing that feels friendly</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-21-380.webp" srcset="assets/img/work-21-380.webp 380w, assets/img/work-21-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A sage green Gearfinch cargo e-bike on a leafy hill street" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 21</span><b class="lbl__client">Gearfinch</b><span class="lbl__line">Mobility</span><span class="lbl__line">E-bikes for school runs and hills</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-22-380.webp" srcset="assets/img/work-22-380.webp 380w, assets/img/work-22-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="A terrier beside a Houndsbury meal box and two clear pouches" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 22</span><b class="lbl__client">Houndsbury</b><span class="lbl__line">Pet food</span><span class="lbl__line">Dog food owners can see into</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li>
+            </ol>
+            <span class="loupe" aria-hidden="true"></span>
+          </div>
+        </article>
+        <article class="room room--rev" id="room-packaging" data-room="packaging" aria-labelledby="room-packaging-h">
+          <header class="room__head">
+            <span class="room__no" aria-hidden="true">08</span>
+            <h3 id="room-packaging-h">Packaging</h3>
+            <p class="room__line">Packs that stand out on a crowded shelf and feel good in hand.</p>
+            <a class="room__more" href="https://example.com">Packaging page&nbsp;<span aria-hidden="true">↗</span></a>
+          </header>
+          <div class="hang-wrap">
+            <ol class="hang">
+            <li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-23-380.webp" srcset="assets/img/work-23-380.webp 380w, assets/img/work-23-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Three Tallow Lane Coffee bags on a steel roastery bench" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 23</span><b class="lbl__client">Tallow Lane Coffee</b><span class="lbl__line">Food and drink</span><span class="lbl__line">One roaster, twelve bags, one system</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-24-380.webp" srcset="assets/img/work-24-380.webp 380w, assets/img/work-24-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Four Saltmarrow snack bags on wet sand at the waterline" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 24</span><b class="lbl__client">Saltmarrow</b><span class="lbl__line">Food</span><span class="lbl__line">Seaweed snacks for the crisp aisle</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li><li class="obj">
+              <div class="obj__frame"><div class="obj__img"><div class="obj__lens"><img src="assets/img/work-25-380.webp" srcset="assets/img/work-25-380.webp 380w, assets/img/work-25-760.webp 760w" sizes="(max-width: 860px) 44vw, 26vw" alt="Four Fizzwold cans in crushed ice on a tangerine ground" width="760" height="760" loading="lazy" decoding="async"></div></div></div>
+              <p class="lbl"><span class="lbl__no">No. 25</span><b class="lbl__client">Fizzwold</b><span class="lbl__line">Drinks</span><span class="lbl__line">Kombucha with a louder voice</span><i class="lbl__rule" aria-hidden="true"></i></p>
+            </li>
+            </ol>
+            <span class="loupe" aria-hidden="true"></span>
+          </div>
+        </article>
+  </section>
+
+  <!-- 4. Films -->
+  <section class="films sec g-dark" id="films" data-sc-act="flow" aria-labelledby="films-h">
+    <div class="sec__head">
+      <h2 class="h2" id="films-h"><span class="r">Showreel</span> 2026</h2>
+      <p class="lede">Films shot and cut in house. Tap a frame to play it.</p>
+    </div>
+    <div class="reel-wrap">
+      <div class="reel">
+        <!-- paste your own YouTube ID into data-yt (or a Vimeo ID into data-vimeo) -->
+        <div class="player" data-yt="" data-title="Mosswick Studio Showreel 2026">
+          <img src="assets/img/film-reel-800.webp" srcset="assets/img/film-reel-800.webp 800w, assets/img/film-reel-1600.webp 1600w" sizes="(max-width: 1240px) 92vw, 1180px" alt="A camera and soft lights around an amber bottle on a stone plinth" width="1600" height="900" loading="lazy" decoding="async">
+          <button class="play" type="button" aria-label="Play Showreel 2026"><span class="play__btn"><svg><use href="#i-play"/></svg></span></button>
+        </div>
+        <p class="reel-cap"><span><b>Showreel 2026</b> · We make brands worth remembering.</span><span>1:30 · on our YouTube channel</span></p>
+      </div>
+    </div>
+    <ul class="films-row">
+      <li class="film">
+        <div class="player player--sm" data-vimeo="" data-title="Velloway Brand Film">
+          <img src="assets/img/film-01-480.webp" srcset="assets/img/film-01-480.webp 480w, assets/img/film-01-800.webp 800w" sizes="(max-width: 860px) 92vw, 30vw" alt="A cyclist in a green rain jacket on a wet street at dusk" width="800" height="450" loading="lazy" decoding="async">
+          <button class="play" type="button" aria-label="Play the Velloway brand film"><span class="play__btn"><svg><use href="#i-play"/></svg></span></button>
+        </div>
+        <p class="film__cap"><b>Brand Film</b>Velloway · 1:00</p>
+      </li>
+      <li class="film">
+        <div class="player player--sm" data-vimeo="" data-title="Stillreed Product Film">
+          <img src="assets/img/film-02-480.webp" srcset="assets/img/film-02-480.webp 480w, assets/img/film-02-800.webp 800w" sizes="(max-width: 860px) 92vw, 30vw" alt="Sand-coloured headphones on the tiled edge of a still pool" width="800" height="450" loading="lazy" decoding="async">
+          <button class="play" type="button" aria-label="Play the Stillreed product film"><span class="play__btn"><svg><use href="#i-play"/></svg></span></button>
+        </div>
+        <p class="film__cap"><b>Product Film</b>Stillreed · 0:30</p>
+      </li>
+      <li class="film">
+        <div class="player player--sm" data-vimeo="" data-title="Cairnstone Ridge Film">
+          <img src="assets/img/film-03-480.webp" srcset="assets/img/film-03-480.webp 480w, assets/img/film-03-800.webp 800w" sizes="(max-width: 860px) 92vw, 30vw" alt="A rust orange rucksack against a stone cairn at sunrise" width="800" height="450" loading="lazy" decoding="async">
+          <button class="play" type="button" aria-label="Play the Cairnstone ridge film"><span class="play__btn"><svg><use href="#i-play"/></svg></span></button>
+        </div>
+        <p class="film__cap"><b>Ridge Film</b>Cairnstone · 2:10</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5. Clients -->
+  <section class="clients sec g-light" id="clients" data-sc-act="flow" aria-labelledby="clients-h">
+    <div class="sec__head">
+      <h2 class="h2" id="clients-h"><span class="r">Brands</span> We Work With</h2>
+      <p class="lede">Thirty brands from our client list, each wordmark set in one ink.</p>
+    </div>
+    <ul class="logos" id="logos">
+          <li><img src="assets/logos/client-01.svg" alt="Plumtide" width="389" height="99" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-02.svg" alt="Velloway" width="805" height="82" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-03.svg" alt="Kilnmark" width="383" height="76" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-04.svg" alt="Tallow Lane Coffee" width="520" height="143" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-05.svg" alt="Okra &amp; Ash" width="388" height="79" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-06.svg" alt="Paywren" width="421" height="87" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-07.svg" alt="Marshlight Festival" width="736" height="125" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-08.svg" alt="Fernstride" width="603" height="77" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-09.svg" alt="Hollin Gallery" width="551" height="101" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-10.svg" alt="Houndsbury" width="542" height="89" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-11.svg" alt="Stillreed" width="727" height="77" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-12.svg" alt="Tumblewick" width="508" height="84" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-13.svg" alt="Halvane Watch Co." width="538" height="125" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-14.svg" alt="Cairnstone" width="650" height="74" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-15.svg" alt="Shelterly" width="360" height="96" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-16.svg" alt="Gilded Hare" width="804" height="77" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-17.svg" alt="Periwink" width="360" height="104" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-18.svg" alt="River Commons Trust" width="735" height="130" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-19.svg" alt="Owlhour" width="406" height="79" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-20.svg" alt="Marlo Rue" width="442" height="78" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-21.svg" alt="Saltmarrow" width="513" height="78" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-22.svg" alt="The Larchway" width="1162" height="80" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-23.svg" alt="Gearfinch" width="574" height="74" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-24.svg" alt="Cragloft" width="566" height="82" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-25.svg" alt="Quillmoor Press" width="599" height="102" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-26.svg" alt="Voltmere" width="574" height="77" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-27.svg" alt="Mendhaven" width="520" height="78" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-28.svg" alt="Fizzwold" width="362" height="79" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-29.svg" alt="Fernery Lane" width="459" height="95" loading="lazy" decoding="async"></li>
+          <li><img src="assets/logos/client-30.svg" alt="Copperbell Theatre" width="798" height="146" loading="lazy" decoding="async"></li>
+    </ul>
+  </section>
+
+  <!-- 6. Ways to work -->
+  <section class="ways sec g-dark" id="ways" data-sc-act="flow" aria-labelledby="ways-h">
+    <div class="sec__head">
+      <h2 class="h2" id="ways-h"><span class="r">Choose</span> How We Work Together</h2>
+      <p class="lede">Some clients start with one campaign, others stay for years. Both work.</p>
+    </div>
+    <ul class="deck" id="deck">
+      <li class="card"><h3>Monthly</h3><p>A senior team on your brand every month, with one plain report.</p><ul class="pills"><li>Senior lead</li><li>Weekly check-in</li><li>Live dashboard</li><li>Monthly report</li></ul></li>
+      <li class="card"><h3>Campaign</h3><p>One idea carried across outdoor, social, print and screen.</p><ul class="pills"><li>Campaign concept</li><li>Key visuals</li><li>Media plan</li><li>Launch assets</li></ul></li>
+      <li class="card"><h3>Project</h3><p>A fixed quote after our first call, and a timeline in writing.</p><ul class="pills"><li>Fixed quote</li><li>Agreed timeline</li><li>Clear goal</li><li>Files you own</li></ul></li>
+    </ul>
+  </section>
+
+  <!-- 7. Voices -->
+  <section class="voices sec g-light" id="voices" data-sc-act="flow" aria-labelledby="voices-h">
+    <div class="sec__head">
+      <h2 class="h2" id="voices-h"><span class="r">Client</span> Notes</h2>
+      <p class="lede">Plain words from the founders and marketing leads who sat in the room with us every week.</p>
+    </div>
+    <ul class="notes">
+      <li><figure class="note"><span class="note__mark" aria-hidden="true">“</span><div><blockquote><p>Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us exactly what every bit of spend brought back.</p></blockquote><figcaption><b>Owen Haddad</b>, Head of Growth, Paywren</figcaption></div></figure></li>
+      <li><figure class="note"><span class="note__mark" aria-hidden="true">“</span><div><blockquote><p>The film crew turned up in the pouring rain, smiling. Months later, people still stop us at trade shows to talk about that campaign.</p></blockquote><figcaption><b>Jonas Pell</b>, Marketing Director, Velloway</figcaption></div></figure></li>
+      <li><figure class="note"><span class="note__mark" aria-hidden="true">“</span><div><blockquote><p>They asked better questions in the first week than our last agency did in a year. The new brand finally sounds like us.</p></blockquote><figcaption><b>Nadia Ferrante</b>, Founder, Plumtide</figcaption></div></figure></li>
+    </ul>
+  </section>
+
+  <!-- 8. Founders, and the team -->
+  <section class="founders sec g-dark" id="founders" data-sc-act="flow" aria-labelledby="founders-h">
+    <div class="sec__head">
+      <h2 class="h2" id="founders-h"><span class="r">Two</span> Founders, One Team</h2>
+      <p class="lede">Mosswick started in 2014 as three people sharing a desk above a bike shop. Ines and Tobias still meet every new client and stay close to the work until the final files.</p>
+    </div>
+    <ul class="duo">
+      <li class="fd">
+        <div class="fd__photo"><span class="fd__disc" aria-hidden="true"></span><img class="fd__img" src="assets/img/team-01-480.webp" srcset="assets/img/team-01-480.webp 480w, assets/img/team-01-840.webp 840w" sizes="(max-width: 860px) 80vw, 34vw" alt="Ines Calloway smiling in a linen shirt, black and white" width="840" height="840" loading="lazy" decoding="async"></div>
+        <h3>INES CALLOWAY</h3>
+        <p class="fd__role">Founder and Creative Director</p>
+        <p class="fd__line">Ines reads every brief twice, then asks the question nobody wanted to answer.</p>
+        <p class="fd__bio">Started the studio in 2014 and still runs the first workshop on every new brand, film and campaign.</p>
+      </li>
+      <li class="fd">
+        <div class="fd__photo"><span class="fd__disc" aria-hidden="true"></span><img class="fd__img" src="assets/img/team-02-480.webp" srcset="assets/img/team-02-480.webp 480w, assets/img/team-02-840.webp 840w" sizes="(max-width: 860px) 80vw, 34vw" alt="Tobias Okonjo-Hale in round glasses, black and white" width="840" height="840" loading="lazy" decoding="async"></div>
+        <h3>TOBIAS OKONJO-HALE</h3>
+        <p class="fd__role">Co-founder and Strategy Director</p>
+        <p class="fd__line">Tobias turns messy workshops into one clear page that the whole client team signs.</p>
+        <p class="fd__bio">Co-founded Mosswick in 2014. Leads research, positioning and the plain one-page plan every client team agrees before anyone starts designing.</p>
+      </li>
+    </ul>
+    <div class="life">
+      <div class="life__head">
+        <h3><span class="r">Life</span> At The Print Works</h3>
+        <p class="lede">We eat lunch together most days and show work in progress every Thursday afternoon, rough edges and all.</p>
+      </div>
+      <ul class="life__row">
+        <li><img src="assets/img/life-01-360.webp" srcset="assets/img/life-01-360.webp 360w, assets/img/life-01-640.webp 640w" sizes="(max-width: 860px) 45vw, 22vw" alt="The whole team together in the studio" width="640" height="800" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/life-02-360.webp" srcset="assets/img/life-02-360.webp 360w, assets/img/life-02-640.webp 640w" sizes="(max-width: 860px) 45vw, 22vw" alt="A product shoot set with a phone on a rig" width="640" height="800" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/life-03-360.webp" srcset="assets/img/life-03-360.webp 360w, assets/img/life-03-640.webp 640w" sizes="(max-width: 860px) 45vw, 22vw" alt="The team on the roof terrace at golden hour" width="640" height="800" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/life-04-360.webp" srcset="assets/img/life-04-360.webp 360w, assets/img/life-04-640.webp 640w" sizes="(max-width: 860px) 45vw, 22vw" alt="The studio in daylight, long desks and pinned work" width="640" height="800" loading="lazy" decoding="async"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9. Questions -->
+  <section class="questions sec g-light" id="questions" data-sc-act="flow" aria-labelledby="questions-h">
+    <div class="sec__head">
+      <h2 class="h2" id="questions-h"><span class="r">Questions</span> We Hear</h2>
+      <p class="lede">Five answers, written plainly.</p>
+    </div>
+    <div class="faq">
+      <details class="q" open><summary>What kind of companies do you work with?<span class="q__icon" aria-hidden="true"></span></summary><p class="q__a">Mostly growing companies with 10 to 500 people: food and drink brands, shops, clinics, charities, tech start-ups and the odd festival. What they share is a founder or marketing lead who wants bold work and honest numbers.</p></details>
+      <details class="q"><summary>How much does a project cost?<span class="q__icon" aria-hidden="true"></span></summary><p class="q__a">Brand identities usually start around $18,000, websites around $15,000 and monthly marketing retainers around $5,000. We send a fixed quote after our first call, so you know the full cost before any work starts.</p></details>
+      <details class="q"><summary>Who will actually work on my project?<span class="q__icon" aria-hidden="true"></span></summary><p class="q__a">The people you meet in the first meeting. Every client gets a senior lead, a strategist and the makers the job needs. We never hand the work to a different team once the contract is signed.</p></details>
+      <details class="q"><summary>Do you only take on big projects?<span class="q__icon" aria-hidden="true"></span></summary><p class="q__a">No. Some clients start with a single campaign, a product film or three months of social content. If it goes well, the work tends to grow from there. We just need a clear goal and someone who can make decisions.</p></details>
+      <details class="q"><summary>How do we get started?<span class="q__icon" aria-hidden="true"></span></summary><p class="q__a">Send a short note about what you are building and what is getting in the way. We reply within two working days and set up a free 30 minute call, with no pitch deck and no pressure.</p></details>
+    </div>
+  </section>
+
+  <!-- 10. Close: the end card -->
+  <section class="close" id="contact" data-sc-act="flow" aria-labelledby="close-h">
+    <div class="frame" id="frame">
+      <div>
+        <p class="eyebrow"><span>// Launch coming up? //</span></p>
+        <h2 class="close__line" id="close-h">we make brands worth remembering<span class="dot">.</span></h2>
+        <p class="close__sub">Tell us the problem in plain words. We will come back with a plan, a budget and a first idea.</p>
+      </div>
+      <ul class="rows">
+        <li><h3>WhatsApp</h3><a href="https://wa.me/15550100" rel="noopener">+1 555 0100</a></li>
+        <li><h3>Call</h3><a href="tel:+15550142">+1 555 0142</a></li>
+        <li><h3>Email</h3><a href="mailto:hello@example.com">hello@<wbr>example.com</a></li>
+        <li><h3>Studio</h3><address>1 Example Street,<br>Lowmere</address></li>
+        <li><h3>Follow</h3><span class="socials"><a href="https://example.com" rel="noopener">Instagram</a><a href="https://example.com" rel="noopener">YouTube</a><a href="https://example.com" rel="noopener">Behance</a><a href="https://example.com" rel="noopener">LinkedIn</a></span></li>
+      </ul>
+      <div>
+        <div class="frame__foot">
+          <svg class="wm" role="img" aria-label="Mosswick Studio"><use href="#wm"/></svg>
+          <div class="frame__label"><small>Next step</small><a class="cta cta--light" href="https://wa.me/15550100" rel="noopener"><span class="cta__label">Start a project</span><span class="cta__chip" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></div>
+        </div>
+        <i class="frame__rule" id="rule" aria-hidden="true"></i>
+        <p class="legal"><span>Example content. Swap in your own.</span><span>© 2026 Mosswick Studio, Lowmere</span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="dock" id="dock">
+  <a class="cta cta--accent" href="https://wa.me/15550100" rel="noopener"><span class="cta__label">Start a project</span><span class="cta__chip" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+</div>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  var hero = document.getElementById('top');
+
+  /* ---- the line under the headline: it draws, the words rise from behind it, it becomes the full stop ---- */
+  function placeLine() {
+    var h1 = hero.querySelector('.hero__h1'), ln = h1.querySelector('.ln'), dot = h1.querySelector('.dot'), line = h1.querySelector('.hero__line');
+    var lt = ln.offsetTop + ln.offsetHeight - (phoneQ.matches ? 2 : 3) - parseFloat(getComputedStyle(ln).paddingBottom) * 0.5;
+    line.style.top = lt.toFixed(1) + 'px';
+    line.style.width = (dot.offsetLeft + dot.offsetWidth * 0.7).toFixed(1) + 'px';
+  }
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true;
+      placeLine();
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+    };
+    var waits = [];
+    if (document.fonts && document.fonts.ready) waits.push(document.fonts.ready);
+    [].forEach.call(hero.querySelectorAll('.lane__track li:not([aria-hidden]) img, .one img'), function (im) { if (im.decode) waits.push(im.decode().catch(function () {})); });
+    Promise.all(waits).then(go, go);
+    setTimeout(go, 1500);
+  }
+
+  /* ---- the archive lanes rest while the hero is off screen ---- */
+  var wall = document.getElementById('wall');
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { es.forEach(function (e) { wall.classList.toggle('is-off', !e.isIntersecting); }); }).observe(wall);
+
+  /* ---- films: the player exists only after the tap ---- */
+  [].forEach.call(document.querySelectorAll('.player'), function (p) {
+    var b = p.querySelector('.play');
+    b.addEventListener('click', function () {
+      var yt = p.getAttribute('data-yt'), vm = p.getAttribute('data-vimeo');
+      if (!yt && !vm) return; /* no film ID set yet */
+      var f = document.createElement('iframe');
+      f.src = yt ? 'https://www.youtube-nocookie.com/embed/' + yt + '?autoplay=1&rel=0&playsinline=1' : 'https://player.vimeo.com/video/' + vm + '?autoplay=1&dnt=1&title=0&byline=0&portrait=0';
+      f.title = p.getAttribute('data-title');
+      f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+      f.allowFullscreen = true;
+      p.appendChild(f); b.remove();
+      var img = p.querySelector('img'); if (img) img.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  /* ---- the index sheet (laptops under 1180 and phones) ---- */
+  var idx = document.getElementById('idx'), sheet = document.getElementById('sheet');
+  function setSheet(open) { sheet.hidden = !open; idx.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  idx.addEventListener('click', function (e) { e.stopPropagation(); setSheet(sheet.hidden); });
+  sheet.addEventListener('click', function (e) { if (e.target.closest('a')) setSheet(false); });
+  document.addEventListener('click', function (e) { if (!sheet.hidden && !sheet.contains(e.target)) setSheet(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) { setSheet(false); idx.focus(); } });
+
+  /* ---- the contact sheet marks the room on screen ---- */
+  var rooms = [].slice.call(document.querySelectorAll('.room'));
+  var now = document.getElementById('idxNow');
+  var navLinks = [].slice.call(document.querySelectorAll('.strip a, .sheet a'));
+  var cur = null, tick = false;
+  function spy() {
+    tick = false;
+    var mid = innerHeight * 0.5, pick = null;
+    for (var i = 0; i < rooms.length; i++) { var r = rooms[i].getBoundingClientRect(); if (r.top <= mid && r.bottom > mid) { pick = rooms[i]; break; } }
+    var id = pick ? pick.getAttribute('data-room') : null;
+    if (id === cur) return;
+    cur = id;
+    navLinks.forEach(function (a) { if (a.getAttribute('data-room') === id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    now.textContent = pick ? pick.querySelector('h3').textContent : 'Index';
+  }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true });
+
+  /* ---- scroll-linked ranges, in page pixels, for the CSS scroll timelines ---- */
+  function docTop(el) { var y = 0; for (var e = el; e; e = e.offsetParent) y += e.offsetTop; return y; }
+  function setR(el, a, b, cls) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    el.classList.add(cls || 'sd');
+  }
+  /* text-bearing parts: a triggered reveal that plays through on its own once its point is crossed */
+  var trig = [];
+  function setT(el, at) { el.classList.add('sd', 'tr'); trig.push([el, at]); }
+  function fire() { var y = scrollY; for (var i = 0; i < trig.length; i++) if (y >= trig[i][1]) trig[i][0].classList.add('on'); }
+  addEventListener('scroll', fire, { passive: true });
+  function measure() {
+    if (!anim) return;
+    trig = [];
+    var vh = innerHeight, phone = phoneQ.matches, bar = phone ? 56 : 64;
+    var dock = phone ? document.getElementById('dock').offsetHeight : 0;
+    var midY = bar + (vh - bar - dock) / 2;
+
+    /* hero (desktop only): the far lane lags most, the mid lane less, object one rides with the page */
+    var hp = [hero.querySelector('.par-far'), hero.querySelector('.par-mid'), hero.querySelector('.hero__head')];
+    if (!phone) { var hH = hero.offsetHeight; hp.forEach(function (el) { setR(el, 0, hH); }); }
+    else hp.forEach(function (el) { el.classList.remove('sd'); });
+
+    /* studio: the contact sheet stands up off the light table */
+    var cs = document.getElementById('csheet'), csT = docTop(cs);
+    setT(cs, csT - (vh - dock) * 0.98);
+
+    /* the collection: in each room the loupe visits the three pieces while the room crosses the middle */
+    rooms.forEach(function (room) {
+      var hw = room.querySelector('.hang-wrap'), hT = docTop(hw);
+      var fr = room.querySelector('.obj__frame'), s = fr.offsetWidth;
+      var a, b;
+      if (phone) {
+        var step = room.querySelectorAll('.obj')[1].offsetTop - room.querySelectorAll('.obj')[0].offsetTop;
+        var c1 = hT + room.querySelectorAll('.obj')[0].offsetTop + s / 2;
+        a = c1 - midY - step * 0.5; b = a + step * 3;
+      } else {
+        var c = hT + s / 2;
+        a = c - vh * 0.78; b = c - vh * 0.3;
+      }
+      setR(room, a, b);
+    });
+
+    /* films: the showreel comes forward; the three films turn to face you */
+    var reel = document.querySelector('.reel'), rT = docTop(reel);
+    setT(reel, rT - (vh - dock) * 0.98);
+    [].forEach.call(document.querySelectorAll('.film'), function (f) { setT(f, docTop(f) - (vh - dock) * 0.98); });
+
+    /* clients: a ripple from the centre columns outwards */
+    var lis = [].slice.call(document.querySelectorAll('#logos li'));
+    var cols = phone ? 3 : 6;
+    lis.forEach(function (li, i) {
+      var col = i % cols, d = Math.abs(col - (cols - 1) / 2), t = docTop(li);
+      setR(li, t - vh * 0.98 + d * 34, t - vh * 0.64 + d * 34);
+    });
+
+    /* ways to work: the deck deals */
+    var deck = document.getElementById('deck'), dT = docTop(deck);
+    [].forEach.call(deck.children, function (c) { setT(c, dT - vh); });
+
+    /* voices: each note turns upright */
+    [].forEach.call(document.querySelectorAll('.note'), function (n) { setT(n, docTop(n) - vh - 60); });
+
+    /* founders: the portrait comes forward, the accent circle travels at its own rate; the team photos at two rates */
+    [].forEach.call(document.querySelectorAll('.fd__photo'), function (p) {
+      var t = docTop(p), h = p.offsetHeight;
+      setR(p.querySelector('.fd__img'), t - vh * 0.98, t - vh * 0.45);
+      setR(p.querySelector('.fd__disc'), t - vh, t + h);
+    });
+    [].forEach.call(document.querySelectorAll('.life__row li'), function (li) { var t = docTop(li), h = li.offsetHeight; setR(li, t - vh, t + h); });
+
+    /* questions: rows tilt up out of depth */
+    [].forEach.call(document.querySelectorAll('.q'), function (q) { setT(q, docTop(q) - vh - 60); });
+
+    /* close: the end card grows to full bleed, then the rule draws */
+    var close = document.getElementById('contact'), cT = docTop(close);
+    var maxY = document.documentElement.scrollHeight - vh;
+    var end = Math.min(cT - bar, maxY - 2);
+    setT(document.getElementById('frame'), cT - (vh - dock) * 0.85);
+    setR(document.getElementById('rule'), end - vh * 0.3, end);
+  }
+
+  var lastW = -1;
+  function all() { measure(); fire(); lastW = innerWidth; spy(); }
+  addEventListener('resize', function () { if (innerWidth !== lastW) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); fire(); } }).observe(document.body); }
+  all();
+})();
+</script>
+</body>
+</html>

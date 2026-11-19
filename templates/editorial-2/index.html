@@ -1,0 +1,1350 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Creative and Marketing Studio in Lowmere | Mosswick Studio</title>
+<meta name="description" content="Mosswick Studio is a creative and marketing studio in Lowmere: brand strategy, identity, websites, film, social content, campaigns and paid media.">
+<meta name="theme-color" content="#CFEBDD">
+<link rel="icon" type="image/svg+xml" href="assets/brand/mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:title" content="Mosswick Studio | Brands worth remembering">
+<meta property="og:description" content="A creative and marketing studio of 32 people in Lowmere, run by founders Ines Calloway and Tobias Okonjo-Hale.">
+<meta property="og:image" content="https://example.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Mosswick Studio wordmark on a mint ground.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mosswick Studio | Brands worth remembering">
+<meta name="twitter:description" content="A creative and marketing studio in Lowmere. Brands, websites, films and campaigns.">
+<meta name="twitter:image" content="https://example.com/og-image.png">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-serif-italic.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/people/founder-1.webp" type="image/webp">
+<link rel="preload" as="image" href="assets/people/founder-2.webp" type="image/webp">
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-semibold.woff2") format("woff2"); font-weight: 600 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("assets/fonts/instrument-serif-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+
+/* Palette "Mint Machine": mint paper, a deeper mint band, a deep green dark ground, coral for the CTA, the quill and the flip shadows.
+   The one loud object is the card: 1px ink border, rounded, a hard ink offset shadow. */
+:root {
+  --paper: #CFEBDD;
+  --studio: #BCE1CF;
+  --ink: #10251C;
+  --night: #10251C;
+  --muted: #3B5649;
+  --accent: #FF6B4A;
+  --accent-ink: #10251C;
+  --line: rgba(16, 37, 28, .16);
+  --line-strong: rgba(16, 37, 28, .9);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Geist", Helvetica, Arial, sans-serif;
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --bar: 64px;
+  --dock: 0px;
+  --gut: clamp(1rem, 4vw, 4rem);
+  --measure: 84rem;
+
+  --sc-canvas: #CFEBDD; --sc-surface: #BCE1CF;
+  --sc-ink: #10251C; --sc-ink-soft: #3B5649;
+  --sc-accent: #FF6B4A; --sc-accent-ink: #10251C;
+  --sc-font-display: var(--sans);
+  --sc-font-text: var(--sans);
+}
+html { background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-synthesis-weight: none; }
+section, footer { overflow-x: clip; }
+html:not(.js) [data-sc-in], html:not(.js) [data-sc-stagger] > * { opacity: 1; transform: none; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 90; background: var(--ink); color: var(--paper); padding: 10px 14px; border-radius: 6px; font: 600 14px/1 var(--sans); }
+.skip:focus { top: 12px; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.ch--night :focus-visible { outline-color: var(--paper); }
+em.acc { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -.005em; }
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gut); }
+
+/* ---------- the one CTA, in the card language: coral, 1px ink border, hard offset shadow that grows as it lifts ---------- */
+.cta {
+  --o: 4px;
+  position: relative; display: inline-flex; align-items: center; gap: .55em; white-space: nowrap;
+  padding: .78em 1.15em .8em; border-radius: 12px; border: 1px solid var(--ink); background: var(--accent); color: var(--accent-ink);
+  font: 600 15px/1 var(--sans); letter-spacing: -.005em; text-decoration: none;
+  box-shadow: var(--o) var(--o) 0 var(--ink); transform: translate(0, 0);
+  transition: transform .32s var(--ease), box-shadow .32s var(--ease);
+}
+.cta svg { width: .9em; height: .9em; flex: none; }
+.cta--paper { background: var(--paper); color: var(--ink); }
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover, .cta:focus-visible { --o: 8px; transform: translate(-3px, -3px); }
+}
+.cta:active { --o: 1px; transform: translate(2px, 2px); }
+.on-dark .cta { border-color: var(--paper); box-shadow: var(--o) var(--o) 0 var(--paper); }
+
+/* ---------- fixed bar: wordmark (the quill docks here), running head, the CTA ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar);
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1.5rem;
+  padding: 0 var(--gut); padding-top: env(safe-area-inset-top);
+  background: var(--paper); border-bottom: 1px solid var(--line);
+}
+.brand { display: inline-flex; align-items: flex-end; gap: 0; text-decoration: none; color: var(--ink); height: 40px; }
+.brand__wm { display: block; height: 16px; width: auto; margin-bottom: 4px; }
+.brand__dock { position: relative; display: block; width: 36px; height: 40px; margin-left: 4px; }
+.brand__dock img { position: absolute; left: 0; bottom: 3px; height: 39px; width: auto; transition: opacity .2s linear; }
+.brand__dock.is-away img { opacity: 0; transition: none; }
+.head {
+  min-width: 0; display: flex; align-items: center; gap: .9rem; padding-left: 1.5rem; border-left: 1px solid var(--line);
+  height: 26px; font: 500 13px/1 var(--sans); color: var(--muted); letter-spacing: .01em;
+}
+.head__no:empty { display: none; }
+.head__no { font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: 11px; color: var(--ink); white-space: nowrap; }
+.head__t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.head__t.is-new { animation: pg-head .5s var(--ease) both; }
+@keyframes pg-head { from { clip-path: inset(-20% 100% -20% 0); } to { clip-path: inset(-20% 0 -20% 0); } }
+.bar .cta { font-size: 14px; padding: .7em 1em .72em; }
+.dock { display: none; }
+
+/* ---------- the quill: a pen that rests beside the wordmark and lifts off it ---------- */
+.quill { position: fixed; left: 0; top: 0; z-index: 80; width: 120px; height: 120px; pointer-events: none; visibility: hidden; transform-origin: 0 100%; will-change: transform; }
+.quill.is-live { visibility: visible; }
+.quill img { position: absolute; left: 0; bottom: 0; height: 120px; width: auto; }
+.quill__sh { filter: brightness(0) blur(var(--qb, 2px)); opacity: var(--qa, .22); transform: translate(var(--qs, 5px), var(--qs, 5px)); }
+.quill__pen { transition: filter .35s linear; }
+.quill.is-light .quill__pen { filter: none; }
+.quill.is-light .quill__sh { opacity: 0; }
+html:not(.fx) .quill { display: none; }
+
+/* ink: words are written in by the quill (JS wraps each word; without JS or motion, nothing is hidden) */
+.iw { display: inline-block; }
+html.fx .inking .iw { clip-path: inset(-30% 114% -40% -14%); }
+html.fx .inking .iw.done { clip-path: none; }
+
+/* ---------- 1. title page ---------- */
+.title { position: relative; height: 100vh; height: 100svh; min-height: 560px; background: var(--studio); }
+.title__frame { position: absolute; inset: var(--bar) 0 var(--dock) 0; display: grid; }
+.scene-box { container-type: size; display: grid; align-items: end; justify-items: center; min-height: 0; overflow: hidden; }
+.scene { --sw: min(100cqw, 192cqh, 1680px); position: relative; width: var(--sw); aspect-ratio: 100 / 52; container-type: inline-size; }
+.plane { position: absolute; inset: 0; pointer-events: none; }
+.plane--near { pointer-events: auto; z-index: 3; }
+.plane--mid { z-index: 2; }
+.plane--far { z-index: 1; }
+
+.eyebrow { position: absolute; left: 4cqw; top: 3.2cqw; margin: 0; font: 600 max(11px, .82cqw)/1.4 var(--sans); letter-spacing: .15em; text-transform: uppercase; color: var(--muted); }
+.eyebrow b { color: var(--ink); font-weight: 700; }
+.h1 { position: absolute; left: 4cqw; top: 8.4cqw; margin: 0; max-width: 50cqw; font: 700 6cqw/.98 var(--sans); letter-spacing: -.035em; color: var(--ink); }
+.h1 .acc { font-size: 1.16em; line-height: .9; letter-spacing: -.01em; }
+.h1 .l { display: block; }
+.title__cta { position: absolute; left: 4cqw; top: 33cqw; display: flex; align-items: center; gap: 1.25rem; }
+.title__cta .cta { font-size: max(15px, 1.16cqw); }
+.title__by { margin: 0; font: 500 max(12px, .86cqw)/1.4 var(--sans); color: var(--muted); }
+
+.duo { position: absolute; right: 0; bottom: 0; width: 58cqw; aspect-ratio: 1865 / 1127; overflow: hidden; }
+.duo img { position: absolute; height: auto; display: block; }
+/* the portraits are cut off by their frame at both shoulders, so those edges fade into the ground */
+.duo img, .pc__img { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 10%, #000 90%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 10%, #000 90%, transparent 100%); }
+.duo__a { left: 10.724%; top: 8.438%; width: 43.614%; z-index: 2; }
+.duo__b { left: 48.257%; top: 15.324%; width: 37.534%; z-index: 1; }
+.doodle { position: absolute; height: auto; opacity: .5; }
+.doodle--a { left: 58.5cqw; top: 1.2cqw; width: 24cqw; }
+.doodle--b { left: 83cqw; top: .4cqw; width: 15.5cqw; }
+
+/* reveal on load: pre-reveal gate (only when motion is allowed), final state without JS */
+@media (prefers-reduced-motion: no-preference) {
+  html.pre-reveal .h1, html.pre-reveal .eyebrow > span, html.pre-reveal .title__cta > *, html.pre-reveal .duo img, html.pre-reveal .doodle { opacity: 0; }
+  html.reveal .duo img { animation: pg-rise .9s var(--ease) both; }
+  html.reveal .duo__a { animation-delay: .55s; }
+  html.reveal .duo__b { animation-delay: .69s; }
+  html.reveal .doodle { animation: pg-draw 1.3s cubic-bezier(.45, .05, .25, 1) both; -webkit-mask-size: 100% 300%; mask-size: 100% 300%; }
+  html.reveal .doodle--a { -webkit-mask-image: linear-gradient(160deg, #000 40%, transparent 60%); mask-image: linear-gradient(160deg, #000 40%, transparent 60%); animation-delay: .25s; }
+  html.reveal .doodle--b { -webkit-mask-image: linear-gradient(180deg, #000 40%, transparent 60%); mask-image: linear-gradient(180deg, #000 40%, transparent 60%); animation-delay: .4s; }
+  html.reveal .eyebrow > span { display: inline-block; animation: pg-up .6s var(--ease) .1s both; }
+  html.reveal .title__cta > * { animation: pg-up .6s var(--ease) 1.25s both; }
+}
+@keyframes pg-rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes pg-draw { from { opacity: .5; -webkit-mask-position: 0 100%; mask-position: 0 100%; transform: scale(.94); } to { opacity: .5; -webkit-mask-position: 0 0; mask-position: 0 0; transform: none; } }
+@keyframes pg-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* ---------- scroll-linked moves: CSS scroll-driven animations on page-pixel ranges set by JS ---------- */
+html.anim .sdx { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+/* triggered moves: they wait at their first frame, then play through on their own once their point is crossed */
+html.anim .trg { animation-duration: var(--t, .7s); animation-timing-function: var(--ease); animation-fill-mode: both; animation-delay: var(--d, 0s); animation-play-state: paused; }
+html.anim .trg.go { animation-play-state: running; }
+
+/* title page depth on scroll (desktop only): far plane slowest, people next, type fastest */
+@media (min-width: 861px) {
+  html.anim .plane--far.sdx { animation-name: pg-far; }
+  html.anim .plane--mid.sdx { animation-name: pg-mid; }
+  html.anim .plane--near.sdx { animation-name: pg-near; }
+}
+@keyframes pg-far { to { transform: translate3d(0, 22vh, 0) scale(.96); } }
+@keyframes pg-mid { to { transform: translate3d(0, 12vh, 0); } }
+@keyframes pg-near { to { transform: translate3d(0, -6vh, 0); } }
+
+/* ---------- chapters ---------- */
+.ch { position: relative; padding: clamp(4.5rem, 12vh, 8rem) 0 clamp(4rem, 10vh, 7rem); }
+.ch--paper { background: var(--paper); }
+.ch--studio { background: var(--studio); }
+.ch--night { background: var(--night); color: var(--paper); }
+.ch__open { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 1rem 2rem; align-items: start; margin-bottom: clamp(2.5rem, 7vh, 4.5rem); }
+.ch__no { margin: .55rem 0 0; font: 600 12px/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.ch--night .ch__no { color: rgba(207, 235, 221, .72); }
+.ch__no b { display: block; font-size: 11px; letter-spacing: .16em; color: inherit; font-weight: 600; margin-bottom: .35rem; }
+.ch__title { margin: 0; font: 700 clamp(2.6rem, 1.2rem + 5vw, 6.4rem)/.96 var(--sans); letter-spacing: -.04em; text-wrap: balance; }
+.ch__title .acc { font-size: 1.12em; letter-spacing: -.01em; }
+
+/* the card: a face and a separate hard shadow block, so the shadow offset can grow on the compositor */
+.nb { position: relative; }
+.nb__sh { position: absolute; inset: 0; border-radius: 18px; background: var(--ink); transform: translate(var(--o, 10px), var(--o, 10px)); }
+.nb__face { position: relative; border: 1px solid var(--ink); border-radius: 18px; background: var(--paper); }
+
+/* ---------- 2. what we do ---------- */
+.answer { margin: 0 0 1.5rem; max-width: 38em; font: 400 clamp(1.15rem, .95rem + .7vw, 1.55rem)/1.48 var(--sans); letter-spacing: -.01em; }
+.belief { margin: 0; max-width: 34em; font: 400 clamp(1rem, .95rem + .25vw, 1.15rem)/1.6 var(--sans); color: var(--muted); }
+.belief q { quotes: none; color: var(--ink); }
+.pillars { position: relative; list-style: none; margin: clamp(3rem, 8vh, 5rem) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.4rem; perspective: 1500px; perspective-origin: 30% 0%; }
+.pillar { position: relative; transform-style: preserve-3d; }
+.pillar:nth-child(1) { z-index: 1; } .pillar:nth-child(2) { z-index: 2; } .pillar:nth-child(3) { z-index: 3; }
+.pillar:nth-child(2) { margin-top: 3.5rem; }
+.pillar:nth-child(3) { margin-top: 7rem; }
+.pillar .nb__face { padding: 1.6rem 1.6rem 1.75rem; min-height: 100%; display: flex; flex-direction: column; }
+.pillar .nb { height: 100%; }
+.pillar__art { height: 112px; display: flex; align-items: flex-end; margin-bottom: 1.25rem; }
+.pillar__art img { height: 100%; width: auto; max-width: 70%; object-fit: contain; object-position: left bottom; }
+.pillar__step { margin: 0 0 .5rem; font: 600 11px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.pillar h3 { margin: 0 0 .75rem; font: 700 clamp(1.5rem, 1.2rem + .9vw, 2rem)/1.05 var(--sans); letter-spacing: -.03em; }
+.pillar p { margin: 0; font: 400 1rem/1.55 var(--sans); color: var(--ink); }
+html.anim .pillar.trg { animation-name: pg-spread; }
+@keyframes pg-spread { from { transform: translate3d(var(--dx, 0), var(--dy, 0), var(--dz, -160px)) rotateZ(var(--rz, 0deg)); } to { transform: translate3d(0, 0, var(--z1, 0)); } }
+html.anim .pillar .nb__sh.trg { animation-name: pg-sh; }
+@keyframes pg-sh { from { transform: translate(var(--o0, 2px), var(--o0, 2px)); } to { transform: translate(var(--o1, 10px), var(--o1, 10px)); } }
+
+@media (min-width: 861px) {
+  html.anim .pillars:not(.go) .pillar:not(:last-child) .nb__face > * { opacity: 0; }
+  html.anim .pillars .pillar .nb__face > * { transition: opacity .25s linear .3s; }
+}
+
+.svc { margin-top: clamp(4rem, 10vh, 6.5rem); display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 1rem 2rem; }
+.svc__h { margin: 0; font: 600 12px/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.svc__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.5rem; border-top: 1px solid var(--ink); }
+.svc__list li { border-bottom: 1px solid var(--line); }
+.svc__list a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.05rem 0; text-decoration: none; font: 600 clamp(1.05rem, .95rem + .4vw, 1.3rem)/1.25 var(--sans); letter-spacing: -.015em; }
+.svc__list a svg { width: 14px; height: 14px; flex: none; transition: transform .3s var(--ease); }
+.svc__list a:hover svg { transform: translate(3px, -3px); }
+
+/* ---------- 3. proof: case files standing in a drawer (the peak) ---------- */
+.proof { background: var(--studio); }
+.proof__stage { background: var(--studio); overflow: clip; }
+.proof__frame { position: absolute; inset: var(--bar) 0 var(--dock) 0; padding: clamp(1.25rem, 4vh, 3rem) var(--gut) clamp(1rem, 3vh, 2rem); display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 2rem 3rem; max-width: var(--measure); margin: 0 auto; }
+.proof__side { display: flex; flex-direction: column; justify-content: flex-start; gap: clamp(1.5rem, 5vh, 3rem); min-height: 0; }
+.proof__lede { margin: 0; font: 400 clamp(1.05rem, .95rem + .35vw, 1.3rem)/1.45 var(--sans); max-width: 22em; }
+.proof__lede b { font-weight: 700; }
+.files-idx { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.files-idx li { position: relative; display: flex; justify-content: space-between; gap: 1rem; padding: .62rem 0 .62rem .9rem; border-bottom: 1px solid var(--line); font: 600 15px/1.25 var(--sans); }
+.files-idx li::before { content: ""; position: absolute; left: 0; top: .55rem; bottom: .55rem; width: 3px; background: var(--ink); transform: scaleY(0); }
+.files-idx span { font: 500 12px/1.25 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.files-idx a { text-decoration: none; }
+html.anim .files-idx li::before { transition: transform .4s var(--ease); }
+html.anim .files-idx li.is-on::before { transform: scaleY(1); }
+html:not(.anim) .files-idx li::before { display: none; }
+
+.drawer { position: relative; min-height: 0; perspective: 1600px; perspective-origin: 50% -20%; }
+.file { position: absolute; left: 0; right: 0; bottom: 0; height: var(--fh, min(80%, 520px)); margin: 0 auto; max-width: 700px; transform-style: preserve-3d; }
+.file .nb, .file .nb__face { height: 100%; }
+.file:nth-child(1) { z-index: 6; } .file:nth-child(2) { z-index: 5; } .file:nth-child(3) { z-index: 4; } .file:nth-child(4) { z-index: 3; } .file:nth-child(5) { z-index: 2; } .file:nth-child(6) { z-index: 1; }
+.file .nb__face { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto minmax(0, 1fr); padding: 0 1.75rem 1.5rem; overflow: hidden; }
+.file__tab { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin: 0 -1.75rem 1.1rem; padding: .85rem 1.75rem; border-bottom: 1px solid var(--ink); background: var(--paper); border-radius: 18px 18px 0 0; }
+.file__name { margin: 0; font: 700 1.25rem/1.1 var(--sans); letter-spacing: -.02em; }
+.file__sector i { font-style: normal; }
+.file__sector { font: 600 11px/1.2 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.file__what { margin: 0 0 1rem; font: 400 1.02rem/1.45 var(--sans); color: var(--ink); max-width: 34em; }
+.figs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-content: start; }
+.figs li { border-top: 1px solid var(--ink); padding-top: .7rem; }
+.figs b { display: block; font-variant-numeric: tabular-nums; font: 700 clamp(1.9rem, 1.2rem + 1.9vw, 3.1rem)/1 var(--sans); letter-spacing: -.045em; }
+.figs span { display: block; margin-top: .45rem; font: 400 .9rem/1.35 var(--sans); color: var(--ink); }
+.file__more { align-self: end; margin: 1.1rem 0 0; padding-top: .9rem; border-top: 1px solid var(--line); font: 600 .95rem/1.2 var(--sans); }
+.file__more a { text-underline-offset: .2em; }
+/* each file sits at a depth k behind the front one (k = 0); a file that is done lifts out toward you and goes */
+html.anim .file { transition: transform .62s var(--ease); }
+html.anim .file[data-k="0"] { transform: translate3d(0, 0, 0); }
+html.anim .file[data-k="1"] { transform: translate3d(0, -30px, -90px); }
+html.anim .file[data-k="2"] { transform: translate3d(0, -60px, -180px); }
+html.anim .file[data-k="3"] { transform: translate3d(0, -90px, -270px); }
+html.anim .file[data-k="4"] { transform: translate3d(0, -70px, -360px); }
+html.anim .file[data-k="5"] { transform: translate3d(0, -50px, -450px); }
+html.anim .file[data-k="out"] { transform: translate3d(0, 105vh, 220px) rotateX(-10deg); visibility: hidden; transition: transform .62s var(--ease), visibility 0s linear .62s; }
+html.anim .file .nb__sh { transform: translate(2px, 2px); transition: transform .62s var(--ease); }
+html.anim .file[data-k="1"] .nb__sh { transform: translate(4px, 4px); }
+html.anim .file[data-k="0"] .nb__sh { transform: translate(10px, 10px); }
+html.anim .file[data-k="out"] .nb__sh { transform: translate(34px, 34px); }
+/* only the front file's words show; the files behind it are blank cards in the drawer */
+html.anim .file .nb__face > * { opacity: 0; transition: opacity .2s linear; }
+html.anim .file[data-k="0"] .nb__face > * { opacity: 1; transition: opacity .3s linear .2s; }
+
+/* without scroll timelines (reduced motion, older browsers): the files simply stack in a column */
+html:not(.anim) .proof { height: auto !important; }
+html:not(.anim) .proof__stage { position: static !important; height: auto !important; }
+html:not(.anim) .proof__frame { position: static; padding-top: 0; padding-bottom: clamp(4rem, 10vh, 7rem); }
+html:not(.anim) .drawer { display: grid; gap: 2.2rem; perspective: none; }
+html:not(.anim) .file { position: relative; height: auto; max-width: none; top: auto; }
+html:not(.anim) .proof__side { justify-content: flex-start; gap: 2rem; }
+
+/* ---------- 4. clients and coverage ---------- */
+.sectors { border-top: 1px solid var(--ink); }
+.sector { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 1rem 2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
+.sector h3 { margin: .3rem 0 0; font: 600 12px/1.35 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.logos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 1.1rem 2.2rem; }
+.logos li { display: flex; align-items: center; height: 44px; }
+.logos img { max-height: 40px; max-width: 132px; width: auto; height: auto; }
+.press { margin-top: clamp(3rem, 8vh, 5rem); }
+.press__h { margin: 0 0 .5rem; font: 700 clamp(1.8rem, 1.2rem + 2.2vw, 3.2rem)/1.02 var(--sans); letter-spacing: -.035em; }
+.press__sub { margin: 0; font: 400 1.05rem/1.5 var(--sans); color: var(--muted); }
+.fan { position: relative; list-style: none; margin: 2.5rem auto 0; padding: 0; height: 450px; max-width: 1180px; perspective: 1400px; perspective-origin: 50% 120%; }
+.fan > li { position: absolute; left: 50%; top: 20px; width: 212px; margin-left: -106px; transform-origin: 50% 340%; transform: rotate(var(--a)) translate3d(0, 0, var(--z)); }
+.fan .nb__face { overflow: hidden; display: flex; flex-direction: column; height: 318px; text-decoration: none; color: var(--ink); }
+.fan u { text-underline-offset: .2em; }
+.fan .nb, .fan .nb__sh { border-radius: 14px; }
+.fan .nb__face { border-radius: 14px; }
+.fan img { display: block; width: 100%; height: auto; aspect-ratio: 560 / 387; object-fit: cover; border-bottom: 1px solid var(--ink); }
+.fan h3 { margin: .9rem 1rem .4rem; padding: 0; font: 700 1.08rem/1.22 var(--sans); letter-spacing: -.015em; }
+.fan p { margin: auto 0 0; padding: 0 1rem 1rem; font: 600 .86rem/1.3 var(--sans); }
+.fan p span { display: inline-block; width: 100%; font-weight: 500; color: var(--muted); margin-bottom: .35rem; letter-spacing: .02em; }
+.fan a { text-underline-offset: .2em; }
+.fan > li:nth-child(1) { --a: -27.5deg; --z: 0px; }
+.fan > li:nth-child(2) { --a: -16.5deg; --z: 18px; }
+.fan > li:nth-child(3) { --a: -5.5deg; --z: 36px; }
+.fan > li:nth-child(4) { --a: 5.5deg; --z: 54px; }
+.fan > li:nth-child(5) { --a: 16.5deg; --z: 72px; }
+.fan > li:nth-child(6) { --a: 27.5deg; --z: 90px; }
+html.anim .fan > li.trg { animation-name: pg-fan; --t: .55s; }
+/* desktop: until the hand opens it is one pile with only the top card's words on it */
+@media (min-width: 861px) {
+  html.anim .fan:not(.go) > li:not(:last-child) :is(h3, p) { opacity: 0; }
+  html.anim .fan > li :is(h3, p) { transition: opacity .25s linear .25s; }
+}
+@keyframes pg-fan { from { transform: rotate(0deg) translate3d(0, 60px, -220px); } to { transform: rotate(var(--a)) translate3d(0, 0, var(--z)); } }
+@media (hover: hover) and (pointer: fine) {
+  .fan > li .nb__face { transition: transform .35s var(--ease); }
+  .fan > li .nb__sh { transition: transform .35s var(--ease); }
+  .fan > li:hover .nb__face, .fan > li:focus-within .nb__face { transform: translate(-6px, -10px); }
+  .fan > li:hover .nb__sh, .fan > li:focus-within .nb__sh { transform: translate(14px, 14px); }
+  .fan > li:hover, .fan > li:focus-within { z-index: 5; }
+}
+
+/* ---------- 5. the founders ---------- */
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 5vw, 4.5rem); padding-top: calc(min(100vw, 84rem) * .115 + 1rem); }
+.pc { perspective: 1300px; perspective-origin: 50% 0%; }
+.pc__body { position: relative; transform-style: preserve-3d; transform-origin: 50% 100%; }
+.pc .nb__face { padding: 0 1.75rem 1.75rem; display: grid; }
+.pc__stand { position: relative; aspect-ratio: 100 / 60; border-bottom: 1px solid var(--ink); margin: 0 -1.75rem 1.4rem; overflow: visible; }
+.pc__img { position: absolute; left: 50%; bottom: 0; width: 60%; height: auto; transform: translateX(-50%); transform-origin: 50% 100%; }
+.pc__img.p2 { width: 51.6%; }
+.pc__tag { margin: 0 0 .35rem; font: 400 1.35rem/1 var(--serif); font-style: italic; }
+.pc h3 { margin: 0 0 .25rem; font: 700 clamp(1.6rem, 1.2rem + 1.2vw, 2.4rem)/1.02 var(--sans); letter-spacing: -.035em; }
+.pc__role { margin: 0 0 1rem; font: 600 12px/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.pc__bio { margin: 0 0 .8rem; font: 400 1.02rem/1.55 var(--sans); color: var(--ink); }
+.pc__ln { font: 600 .95rem/1.2 var(--sans); text-underline-offset: .2em; }
+/* the cut-out climbs out of its card: a frame that clips only below the shelf line */
+.pc__clip { position: absolute; inset: -44% 0 0 0; overflow: hidden; border-radius: 18px 18px 0 0; }
+html.anim .pc__body.trg { animation-name: pg-pc; }
+@keyframes pg-pc { from { transform: rotateX(30deg) translate3d(0, 20px, -70px); } to { transform: none; } }
+html.anim .pc__img.trg { animation-name: pg-pc-img; }
+@keyframes pg-pc-img { from { transform: translateX(-50%) translate3d(0, 14%, 0); } to { transform: translateX(-50%) translate3d(0, 0, 0); } }
+html.anim .pc .nb__sh.trg { animation-name: pg-sh; }
+.team { margin: clamp(4rem, 10vh, 6rem) 0 0; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 1rem 2rem; align-items: end; }
+.team img { width: 100%; height: auto; display: block; }
+.team figcaption { font: 400 .98rem/1.5 var(--sans); color: var(--muted); max-width: 22em; }
+.team figcaption b { color: var(--ink); font-weight: 600; }
+.team figcaption a { color: var(--ink); text-underline-offset: .2em; }
+
+/* ---------- 6. how we work (the dark ground) ---------- */
+.ch--night .ch__title { color: var(--paper); }
+.who { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.6rem; }
+.flip { perspective: 1100px; height: 280px; }
+.flip__card { position: relative; height: 100%; transform-style: preserve-3d; }
+.flip__f { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border: 1px solid var(--paper); border-radius: 18px; padding: 1.4rem; display: flex; flex-direction: column; justify-content: space-between; }
+.flip__front { background: var(--paper); color: var(--ink); }
+.flip__back { background: var(--studio); color: var(--ink); transform: rotateY(180deg); }
+.flip__k { font: 600 11px/1.2 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.flip__front h3 { margin: 0; font: 700 clamp(1.7rem, 1.2rem + 1.4vw, 2.5rem)/1 var(--sans); letter-spacing: -.035em; }
+.flip__back p { margin: 0; font: 400 1.02rem/1.5 var(--sans); }
+.flip__back h3 { margin: 0; font: 700 1.1rem/1.1 var(--sans); }
+.flip__sh { position: absolute; inset: 0; border-radius: 18px; background: var(--accent); transform: translate(10px, 10px); }
+html.anim .flip__card.trg { animation-name: pg-flip; --t: .5s; }
+/* the face turned away is hidden outright once the turn is done (not only by its backface) */
+html.anim .flip .flip__back { visibility: hidden; }
+html.anim .flip.go .flip__back { visibility: visible; }
+html.anim .flip.go .flip__front { animation: pg-face-off .5s linear var(--d, 0s) both; }
+@keyframes pg-face-off { 0%, 99% { visibility: visible; } 100% { visibility: hidden; } }
+@keyframes pg-flip { 0% { transform: rotateY(0deg) translateZ(0); } 50% { transform: rotateY(90deg) translateZ(60px); } 100% { transform: rotateY(180deg) translateZ(0); } }
+html.anim .flip__sh.trg { animation-name: pg-flip-sh; --t: .5s; }
+@keyframes pg-flip-sh { 0% { transform: translate(10px, 10px) scaleX(1); } 50% { transform: translate(10px, 10px) scaleX(.02); } 100% { transform: translate(10px, 10px) scaleX(1); } }
+/* without motion both faces show, the line under the name */
+html:not(.anim) .flip { height: auto; }
+html:not(.anim) .flip__card { display: grid; gap: .75rem; }
+html:not(.anim) .flip__f { position: relative; transform: none; backface-visibility: visible; }
+html:not(.anim) .flip__sh { display: none; }
+html:not(.anim) .flip__front { display: none; }
+
+.engage { margin-top: clamp(4rem, 10vh, 6.5rem); display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 1.5rem 2rem; }
+.engage__qs { list-style: none; margin: 0; padding: 0; }
+.engage__qs li { padding: .95rem 0; border-bottom: 1px solid rgba(207, 235, 221, .18); font: 400 clamp(1.15rem, 1rem + .6vw, 1.6rem)/1.3 var(--sans); letter-spacing: -.015em; }
+.engage__qs li:first-child { border-top: 1px solid rgba(207, 235, 221, .9); }
+.engage__ok { margin: 1.4rem 0 1rem; font: 400 1.05rem/1.5 var(--sans); color: rgba(207, 235, 221, .8); }
+.models { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.models li { padding: .5rem .95rem; border: 1px solid var(--paper); border-radius: 999px; font: 600 .95rem/1 var(--sans); }
+.fit { margin-top: clamp(4rem, 10vh, 6.5rem); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; }
+.fit h3 { margin: 0 0 1rem; font: 700 clamp(1.4rem, 1.1rem + .9vw, 2rem)/1.1 var(--sans); letter-spacing: -.03em; }
+.fit h3 .acc { font-size: 1.12em; }
+.fit ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(207, 235, 221, .9); }
+.fit li { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); padding: .85rem 0; border-bottom: 1px solid rgba(207, 235, 221, .18); font: 400 1.04rem/1.45 var(--sans); color: rgba(207, 235, 221, .92); }
+.fit li::before { content: attr(data-m); font-weight: 700; color: var(--paper); }
+
+/* ---------- 7. questions ---------- */
+.qa { border-top: 1px solid var(--ink); perspective: 1200px; }
+.qa details { border-bottom: 1px solid var(--line); transform-origin: 50% 0%; }
+.qa summary { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; padding: 1.25rem 1rem 1.25rem 0; cursor: pointer; list-style: none; font: 600 clamp(1.1rem, 1rem + .5vw, 1.45rem)/1.3 var(--sans); letter-spacing: -.015em; isolation: isolate; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary { margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+.qa details[open] summary { color: var(--paper); background-color: var(--ink); }
+.qa details[open] summary::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--paper); clip-path: inset(0 0 0 100%); }
+@media (prefers-reduced-motion: no-preference) {
+  .qa details[open] summary::before { animation: pg-flood .5s var(--ease) both; }
+}
+@keyframes pg-flood { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 0 100%); } }
+.qa summary i { width: 18px; height: 18px; position: relative; flex: none; }
+.qa summary i::before, .qa summary i::after { content: ""; position: absolute; left: 0; top: 8px; width: 18px; height: 2px; background: currentColor; transition: transform .35s var(--ease); }
+.qa summary i::after { transform: rotate(90deg); }
+.qa details[open] summary i::after { transform: rotate(0deg); }
+.qa__a { padding: 1.1rem 0 1.5rem; max-width: 46em; font: 400 1.06rem/1.6 var(--sans); color: var(--ink); transform-origin: 50% 0%; }
+.qa__a p { margin: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .qa details[open] .qa__a { animation: pg-unfold .55s var(--ease) both; }
+}
+@keyframes pg-unfold { from { transform: perspective(900px) rotateX(-70deg); opacity: 0; } to { transform: none; opacity: 1; } }
+html.anim .qa details.trg { animation-name: pg-row; --t: .6s; }
+.qa details:not([open]) .qa__a { display: none; }
+@keyframes pg-row { from { transform: translate3d(0, 34px, -140px) rotateX(16deg); } to { transform: none; } }
+
+/* ---------- 8. close: an editor's note, signed by both founders ---------- */
+.close { background: var(--studio); padding: clamp(2.5rem, 6vh, 4rem) 0 clamp(3rem, 8vh, 5rem); }
+.note { perspective: 1400px; perspective-origin: 50% 0%; max-width: 62rem; margin: 0 auto; }
+.note__body { transform-style: preserve-3d; transform-origin: 50% 100%; }
+.note .nb__face { padding: clamp(1.75rem, 4vw, 3.5rem); }
+.note__kicker { margin: 0 0 1rem; font: 600 12px/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.note__title { margin: 0 0 1.75rem; font: 700 clamp(2.4rem, 1.2rem + 4.4vw, 5.4rem)/.96 var(--sans); letter-spacing: -.04em; }
+.note__title .acc { font-size: 1.12em; }
+.note__text { max-width: 36em; }
+.note__text p { margin: 0 0 1.05rem; font: 400 clamp(1.05rem, .98rem + .3vw, 1.25rem)/1.6 var(--sans); }
+.note__text .belief-q { font: 400 clamp(1.4rem, 1.1rem + 1vw, 2rem)/1.3 var(--sans); letter-spacing: -.02em; }
+.sign { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 2rem; margin: 2.2rem 0 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.sig { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: .25rem 1rem; align-items: center; }
+.sig__face { grid-row: span 2; width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--ink); background: var(--studio); overflow: hidden; position: relative; }
+.sig__face img { position: absolute; left: 50%; top: -23%; width: 140%; max-width: none; height: auto; transform: translateX(-50%); }
+.sig__face img.p2 { width: 120%; top: -9%; }
+.sig__name { margin: 0; font: italic 400 clamp(1.9rem, 1.4rem + 1.5vw, 2.7rem)/1 var(--serif); }
+.sig__role { margin: 0; font: 600 11px/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.note__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+.note__cta .cta { font-size: clamp(1.05rem, .95rem + .55vw, 1.4rem); padding: .9em 1.3em .92em; --o: 6px; }
+.note__ps { margin: 0; font: 500 .95rem/1.45 var(--sans); color: var(--muted); max-width: 24em; }
+.contact { list-style: none; margin: 2.2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2rem; border-top: 1px solid var(--ink); }
+.contact li { padding: 1rem 0 0; }
+.contact span { display: block; margin-bottom: .35rem; font: 600 11px/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.contact a, .contact address { font: 600 1.05rem/1.4 var(--sans); font-style: normal; text-underline-offset: .2em; }
+html.anim .note__body.trg { animation-name: pg-note; }
+@keyframes pg-note { from { transform: rotateX(28deg) translate3d(0, 24px, -80px); } to { transform: none; } }
+html.anim .note .nb__sh.trg { animation-name: pg-sh; }
+
+.foot { background: var(--night); color: var(--paper); padding: 2.4rem 0 calc(2.4rem + var(--dock)); }
+.foot__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; }
+.foot img { width: 190px; height: auto; display: block; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; font: 500 .92rem/1.4 var(--sans); }
+.foot a { color: var(--paper); text-underline-offset: .2em; }
+.foot p { margin: 0; width: 100%; font: 400 .85rem/1.5 var(--sans); color: rgba(207, 235, 221, .72); }
+
+/* ---------- phones ---------- */
+@media (max-width: 860px) {
+  :root { --bar: 54px; --dock: calc(70px + env(safe-area-inset-bottom)); }
+  .bar { grid-template-columns: auto minmax(0, 1fr); gap: .9rem; }
+  .bar .cta { display: none; }
+  .brand { height: 34px; }
+  .brand__wm { height: 13px; margin-bottom: 3px; }
+  .brand__dock { width: 30px; height: 34px; margin-left: 3px; }
+  .brand__dock img { height: 32px; bottom: 2px; }
+  .head { padding-left: .9rem; gap: .5rem; font-size: 12px; justify-content: flex-end; border-left: 0; }
+  .head__no { font-size: 10px; letter-spacing: .12em; }
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock);
+    padding: 0 var(--gut) env(safe-area-inset-bottom); align-items: center; justify-content: center;
+    background: var(--paper); border-top: 1px solid var(--line); transition: transform .4s var(--ease);
+  }
+  .dock .cta { width: 100%; justify-content: center; font-size: 16px; min-height: 48px; }
+  .dock.is-away { transform: translateY(110%); }
+
+  .title__frame { bottom: 0; }
+  .scene { --sw: min(100cqw, 51cqh); aspect-ratio: 100 / 196; }
+  .eyebrow { left: 5cqw; top: 5cqw; font-size: 3cqw; max-width: 90cqw; }
+  .h1 { left: 5cqw; top: 17cqw; max-width: 92cqw; font-size: 12.4cqw; }
+  .title__cta { left: 5cqw; top: 66cqw; }
+  .title__cta .cta { font-size: 4.1cqw; }
+  .title__by { display: none; }
+  .duo { right: auto; left: -7cqw; width: 114cqw; }
+  .doodle--a { left: 1cqw; top: 97cqw; width: 42cqw; }
+  .doodle--b { left: 60cqw; top: 91cqw; width: 37cqw; }
+
+  .ch__open { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
+  .ch__no b { display: inline; margin: 0 .5rem 0 0; }
+  .pillars { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; perspective-origin: 50% 0%; }
+  .pillar:nth-child(2), .pillar:nth-child(3) { margin-top: 0; }
+  .pillar:nth-child(1) { z-index: 3; } .pillar:nth-child(3) { z-index: 1; }
+  .ch { padding: 3.75rem 0 3.5rem; }
+  .ch__open { margin-bottom: 2rem; }
+  .press { margin-top: 3.5rem; }
+  .team { margin-top: 3.5rem; }
+  .svc { grid-template-columns: minmax(0, 1fr); }
+  .svc__list { grid-template-columns: minmax(0, 1fr); }
+
+  .proof__frame { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; }
+  .proof__lede { font-size: 1.32rem; line-height: 1.38; letter-spacing: -.01em; }
+  .file__sector i { display: none; }
+  .files-idx { display: none; }
+  .file { height: var(--fh, min(80%, 490px)); bottom: auto; top: var(--ft, 96px); }
+
+  .figs { align-content: start; }
+  .file .nb__face { padding: 0 1.15rem 1.15rem; }
+  .file__tab { margin: 0 -1.15rem .9rem; padding: .75rem 1.15rem; }
+  .file__name { font-size: 1.1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .file__sector { letter-spacing: .1em; }
+  .file__what { font-size: .95rem; margin-bottom: .8rem; }
+  .figs { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+  .figs li { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: baseline; gap: .75rem; padding-top: .7rem; }
+  .figs b { font-size: 2.2rem; }
+  .figs span { margin: 0; font-size: .86rem; }
+  .file__more { margin-top: .8rem; font-size: .9rem; }
+  html:not(.anim) .proof__frame { padding-top: 0; }
+
+  .sector { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+  .logos { gap: .9rem 1.6rem; }
+  .logos li { height: 36px; }
+  .logos img { max-height: 32px; max-width: 108px; }
+  .fan { height: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem .9rem; perspective: 1000px; perspective-origin: 50% 50%; }
+  .fan > li { position: relative; left: auto; top: auto; bottom: auto; width: auto; margin: 0; transform: none; transform-origin: 50% 50%; }
+  .fan .nb__face { height: 100%; min-height: 236px; }
+  .fan h3 { font-size: .92rem; margin: .7rem .75rem .3rem; }
+  .fan p { font-size: .78rem; padding: 0 .75rem .8rem; }
+  .fan .nb__sh { transform: translate(6px, 6px); }
+  html.anim .fan > li.trg { animation-name: pg-fan-m; --t: .55s; }
+  .fan > li:nth-child(odd) { --a: -9deg; } .fan > li:nth-child(even) { --a: 9deg; }
+
+  .pair { grid-template-columns: minmax(0, 1fr); gap: calc(23vw + 2rem); padding-top: calc(23vw + 1rem); }
+  .team { grid-template-columns: minmax(0, 1fr); }
+
+  .who { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
+  .flip { height: 200px; }
+  .engage, .fit { grid-template-columns: minmax(0, 1fr); }
+
+  .sign { grid-template-columns: minmax(0, 1fr); }
+  .contact { grid-template-columns: minmax(0, 1fr); }
+  .contact li { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .note__cta .cta { width: 100%; justify-content: center; }
+}
+@keyframes pg-fan-m { from { transform: rotate(var(--a)) translate3d(0, 50px, -180px); } to { transform: none; } }
+@media (max-width: 860px) and (max-height: 700px) {
+  .file__what { display: none; }
+}
+@media (min-width: 861px) and (max-width: 1100px) {
+  .who { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta, .dock, .svc__list a svg { transition: none; }
+}
+
+/* phones: the dock holds only its button; the running head gets a little more room */
+@media (max-width: 860px) {
+  .dock { box-sizing: border-box; }
+  .head { padding-left: .6rem; gap: .45rem; }
+  .head__t { font-size: 11.5px; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#what">Skip to content</a>
+
+<header class="bar" id="bar">
+  <a class="brand" href="#top" aria-label="Mosswick Studio, back to the title page">
+    <img class="brand__wm" src="assets/brand/wordmark.svg" width="91" height="16" alt="">
+    <span class="brand__dock" id="quillDock"><img src="assets/brand/quill.svg" width="35" height="39" alt=""></span>
+  </a>
+  <p class="head" aria-live="off"><span class="head__no" id="headNo"></span><span class="head__t" id="headT">Brands worth remembering.</span></p>
+  <a class="cta" href="https://example.com" rel="noopener" data-cta>Book an intro call <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+</header>
+
+<div class="quill" id="quill" aria-hidden="true"><img class="quill__sh" src="assets/brand/quill.svg" width="109" height="120" alt=""><img class="quill__pen" src="assets/brand/quill.svg" width="109" height="120" alt=""></div>
+
+<main>
+  <!-- 1. title page: the two founders on the studio ground, line drawings behind, the line in front -->
+  <section class="title" id="title" data-sc-act="flow" data-head="Brands worth remembering." data-no="" aria-labelledby="h1">
+    <div class="title__frame">
+      <div class="scene-box">
+        <div class="scene" id="scene">
+          <div class="plane plane--far" aria-hidden="true">
+            <img class="doodle doodle--a" src="assets/art/scene-1.svg" width="1100" height="980" alt="" fetchpriority="low">
+            <img class="doodle doodle--b" src="assets/art/scene-2.svg" width="1000" height="1141" alt="" fetchpriority="low">
+          </div>
+          <div class="plane plane--mid">
+            <div class="duo">
+              <img class="duo__a" src="assets/people/founder-1.webp" width="900" height="1297" alt="Ines Calloway, founder and creative director of Mosswick Studio, in a rust linen shirt, smiling" fetchpriority="high">
+              <img class="duo__b" src="assets/people/founder-2.webp" width="900" height="1227" alt="Tobias Okonjo-Hale, co-founder and strategy director, in a navy jumper and round glasses" fetchpriority="high">
+            </div>
+          </div>
+          <div class="plane plane--near">
+            <p class="eyebrow"><span><b>Mosswick Studio</b> &middot; Brands, websites, films and campaigns &middot; Lowmere</span></p>
+            <h1 class="h1" id="h1" data-ink><span class="l"><em class="acc">We make brands</em></span> <span class="l">people can pick</span> <span class="l">out of a crowd.</span></h1>
+            <div class="title__cta">
+              <a class="cta cta--big" href="https://example.com" rel="noopener" data-cta data-big>Book an intro call <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+              <p class="title__by">With founders<br>Ines Calloway and Tobias Okonjo-Hale</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. chapter one: what we do -->
+  <section class="ch ch--paper" id="what" data-sc-act="flow" data-head="What we do" data-no="Chapter 1" aria-labelledby="what-h">
+    <div class="wrap">
+      <header class="ch__open">
+        <p class="ch__no"><b>Chapter 1</b>What we do</p>
+        <h2 class="ch__title" id="what-h" data-ink>Loud ideas, careful <em class="acc">craft.</em></h2>
+      </header>
+      <div class="ch__open" style="margin-bottom:0">
+        <span></span>
+        <div>
+          <p class="answer">Mosswick is a creative and marketing studio in Lowmere, run by founders Ines Calloway and Tobias Okonjo-Hale. Thirty-two strategists, designers, writers, filmmakers and media buyers work in one studio, making brands that look good and marketing that earns its keep.</p>
+          <p class="belief">A clear sentence beats a clever one on most days. <q>Pretty work that sells nothing is just expensive decoration.</q></p>
+        </div>
+      </div>
+      <ol class="pillars" id="pillars">
+        <li class="pillar"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+          <div class="pillar__art"><img src="assets/art/step-1.svg" width="343" height="291" alt="" loading="lazy"></div>
+          <p class="pillar__step">Step 1</p>
+          <h3>Listen and decide</h3>
+          <p>We meet your team, read your numbers and talk to your customers. Then we agree the one problem worth solving and how we will measure it.</p>
+        </div></div></li>
+        <li class="pillar"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+          <div class="pillar__art"><img src="assets/art/step-2.svg" width="361" height="345" alt="" loading="lazy"></div>
+          <p class="pillar__step">Step 2</p>
+          <h3>Make and launch</h3>
+          <p>Design, writing, film and build happen together, with a check-in every week. Then we ship it, watch it closely and fix things fast.</p>
+        </div></div></li>
+        <li class="pillar"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+          <div class="pillar__art"><img src="assets/art/step-3.svg" width="457" height="255" alt="" loading="lazy"></div>
+          <p class="pillar__step">Step 3</p>
+          <h3>Report and grow</h3>
+          <p>Monthly reports, honest notes and the next round of ideas to test, measured against the two or three numbers we agreed at the start.</p>
+        </div></div></li>
+      </ol>
+      <div class="svc">
+        <h3 class="svc__h">Services</h3>
+        <ul class="svc__list">
+          <li><a href="#">Brand strategy <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+          <li><a href="#">Brand identity <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+          <li><a href="#">Websites <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+          <li><a href="#">Social content <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+          <li><a href="#">Film and motion <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+          <li><a href="#">Campaigns <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+          <li><a href="#">Performance marketing <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+          <li><a href="#">Packaging <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- chapter two opens on its own ground, then the drawer pins -->
+  <section class="ch ch--studio" id="proof-open" data-sc-act="flow" data-head="The proof" data-no="Chapter 2" aria-labelledby="proof-h" style="padding-bottom:0">
+    <div class="wrap">
+      <header class="ch__open" style="margin-bottom:0">
+        <p class="ch__no"><b>Chapter 2</b>The proof</p>
+        <h2 class="ch__title" id="proof-h" data-ink>Good work that also shows up in the <em class="acc">numbers.</em></h2>
+      </header>
+    </div>
+  </section>
+
+  <!-- 3. the case files, standing in a drawer (the peak) -->
+  <section class="proof" id="proof" data-sc-act="pin" data-sc-span="5" data-head="The proof" data-no="Chapter 2" aria-label="Six case files">
+    <div class="proof__stage" data-sc-stage>
+      <div class="proof__frame">
+        <div class="proof__side">
+          <p class="proof__lede">Six of our <b>28 recent projects</b>, each with the numbers from its case study. The other twenty-two are one call away.</p>
+          <ol class="files-idx" id="filesIdx">
+            <li><a href="#f-1">Velloway</a><span>Fashion</span></li>
+            <li><a href="#f-2">Tallow Lane Coffee</a><span>Food</span></li>
+            <li><a href="#f-3">Paywren</a><span>Fintech</span></li>
+            <li><a href="#f-4">Okra &amp; Ash</a><span>Hospitality</span></li>
+            <li><a href="#f-5">Marshlight Festival</a><span>Culture</span></li>
+            <li><a href="#f-6">Marlo Rue</a><span>Fashion</span></li>
+          </ol>
+        </div>
+        <div class="drawer" id="drawer">
+          <article class="file" id="f-1" aria-labelledby="f1-h"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+            <div class="file__tab"><h3 class="file__name" id="f1-h">Velloway</h3><span class="file__sector">Fashion<i> &middot; Film</i></span></div>
+            <p class="file__what">A brand film and launch campaign for a rainproof jacket label, shot on city streets at dusk in real drizzle.</p>
+            <ul class="figs"><li><b>38%</b><span>more online sales in the launch month</span></li><li><b>60 sec</b><span>brand film, run as the main spot</span></li><li><b>20</b><span>short cuts for social and paid media</span></li></ul>
+            <p class="file__more"><a href="#">Read the Velloway case</a></p>
+          </div></div></article>
+          <article class="file" id="f-2" aria-labelledby="f2-h"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+            <div class="file__tab"><h3 class="file__name" id="f2-h">Tallow Lane Coffee</h3><span class="file__sector">Food<i> &middot; Packaging</i></span></div>
+            <p class="file__what">One system for a roaster with four cafes: a bold wordmark, a colour per origin and a tasting scale.</p>
+            <ul class="figs"><li><b>47</b><span>wholesale accounts, up from 19</span></li><li><b>12</b><span>bag designs folded into one system</span></li><li><b>4</b><span>cafes with new cups, menus and signs</span></li></ul>
+            <p class="file__more"><a href="#">Read the Tallow Lane case</a></p>
+          </div></div></article>
+          <article class="file" id="f-3" aria-labelledby="f3-h"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+            <div class="file__tab"><h3 class="file__name" id="f3-h">Paywren</h3><span class="file__sector">Fintech<i> &middot; Paid social</i></span></div>
+            <p class="file__what">Identity, design system and launch ads for a freelancer invoicing app, built on plain, friendly copy.</p>
+            <ul class="figs"><li><b>41%</b><span>lower cost per sign-up</span></li><li><b>40</b><span>ad versions tested in the first month</span></li><li><b>6</b><span>versions kept because they clearly worked</span></li></ul>
+            <p class="file__more"><a href="#">Read the Paywren case</a></p>
+          </div></div></article>
+          <article class="file" id="f-4" aria-labelledby="f4-h"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+            <div class="file__tab"><h3 class="file__name" id="f4-h">Okra &amp; Ash</h3><span class="file__sector">Hospitality<i> &middot; Launch</i></span></div>
+            <p class="file__what">Brand, website and launch social for a wood-fired restaurant with eight weeks to open and no name.</p>
+            <ul class="figs"><li><b>5 weeks</b><span>booked out after opening night</span></li><li><b>8 weeks</b><span>from no name on the door to opening</span></li><li><b>6 weeks</b><span>of behind-the-scenes posts before opening</span></li></ul>
+            <p class="file__more"><a href="#">Read the Okra &amp; Ash case</a></p>
+          </div></div></article>
+          <article class="file" id="f-5" aria-labelledby="f5-h"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+            <div class="file__tab"><h3 class="file__name" id="f5-h">Marshlight Festival</h3><span class="file__sector">Culture<i> &middot; Campaign</i></span></div>
+            <p class="file__what">Identity, posters and the ticket campaign for a three-day music and arts festival on the wetlands.</p>
+            <ul class="figs"><li><b>9 days</b><span>early: every ticket sold</span></li><li><b>3</b><span>days of music and arts</span></li><li><b>2</b><span>colours on every screen-printed poster</span></li></ul>
+            <p class="file__more"><a href="#">Read the Marshlight case</a></p>
+          </div></div></article>
+          <article class="file" id="f-6" aria-labelledby="f6-h"><div class="nb"><div class="nb__sh"></div><div class="nb__face">
+            <div class="file__tab"><h3 class="file__name" id="f6-h">Marlo Rue</h3><span class="file__sector">Fashion<i> &middot; Lookbook</i></span></div>
+            <p class="file__what">A lookbook, film and social launch for a knitwear label's winter range, shot on a working sheep farm.</p>
+            <ul class="figs"><li><b>5 weeks</b><span>to sell through the winter range</span></li><li><b>2</b><span>grey days of shooting on the farm</span></li><li><b>500</b><span>printed lookbooks sent to customers</span></li></ul>
+            <p class="file__more"><a href="#">Read the Marlo Rue case</a></p>
+          </div></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. chapter three: clients and work -->
+  <section class="ch ch--paper" id="clients" data-sc-act="flow" data-head="Clients and work" data-no="Chapter 3" aria-labelledby="clients-h">
+    <div class="wrap">
+      <header class="ch__open">
+        <p class="ch__no"><b>Chapter 3</b>Clients and work</p>
+        <h2 class="ch__title" id="clients-h" data-ink>Seen, remembered, <em class="acc">chosen.</em></h2>
+      </header>
+      <div class="sectors">
+        <div class="sector"><h3>Food &amp; Drink</h3><ul class="logos"><li><img src="assets/clients/client-01.svg" width="389" height="99" alt="Plumtide logo" loading="lazy"></li><li><img src="assets/clients/client-02.svg" width="520" height="143" alt="Tallow Lane Coffee logo" loading="lazy"></li><li><img src="assets/clients/client-03.svg" width="513" height="78" alt="Saltmarrow logo" loading="lazy"></li><li><img src="assets/clients/client-04.svg" width="804" height="77" alt="Gilded Hare logo" loading="lazy"></li><li><img src="assets/clients/client-05.svg" width="362" height="79" alt="Fizzwold logo" loading="lazy"></li><li><img src="assets/clients/client-06.svg" width="542" height="89" alt="Houndsbury logo" loading="lazy"></li><li><img src="assets/clients/client-07.svg" width="403" height="75" alt="Sorrelbox logo" loading="lazy"></li><li><img src="assets/clients/client-08.svg" width="751" height="68" alt="Embergate Pizza logo" loading="lazy"></li></ul></div>
+        <div class="sector"><h3>Retail &amp; Fashion</h3><ul class="logos"><li><img src="assets/clients/client-09.svg" width="805" height="82" alt="Velloway logo" loading="lazy"></li><li><img src="assets/clients/client-10.svg" width="442" height="78" alt="Marlo Rue logo" loading="lazy"></li><li><img src="assets/clients/client-11.svg" width="360" height="104" alt="Periwink logo" loading="lazy"></li><li><img src="assets/clients/client-12.svg" width="419" height="100" alt="Glimmerfold logo" loading="lazy"></li><li><img src="assets/clients/client-13.svg" width="538" height="125" alt="Halvane Watch Co. logo" loading="lazy"></li><li><img src="assets/clients/client-14.svg" width="383" height="76" alt="Kilnmark logo" loading="lazy"></li><li><img src="assets/clients/client-15.svg" width="545" height="73" alt="Oakhold logo" loading="lazy"></li><li><img src="assets/clients/client-16.svg" width="508" height="84" alt="Tumblewick logo" loading="lazy"></li><li><img src="assets/clients/client-17.svg" width="459" height="95" alt="Fernery Lane logo" loading="lazy"></li><li><img src="assets/clients/client-18.svg" width="744" height="71" alt="Stemhouse Flowers logo" loading="lazy"></li><li><img src="assets/clients/client-19.svg" width="995" height="97" alt="Driftmill Paper Co. logo" loading="lazy"></li><li><img src="assets/clients/client-20.svg" width="396" height="82" alt="Softwatt logo" loading="lazy"></li></ul></div>
+        <div class="sector"><h3>Sport &amp; Outdoor</h3><ul class="logos"><li><img src="assets/clients/client-21.svg" width="603" height="77" alt="Fernstride logo" loading="lazy"></li><li><img src="assets/clients/client-22.svg" width="650" height="74" alt="Cairnstone logo" loading="lazy"></li><li><img src="assets/clients/client-23.svg" width="566" height="82" alt="Cragloft logo" loading="lazy"></li><li><img src="assets/clients/client-24.svg" width="574" height="74" alt="Gearfinch logo" loading="lazy"></li><li><img src="assets/clients/client-25.svg" width="514" height="145" alt="Puddlejump Swim School logo" loading="lazy"></li></ul></div>
+        <div class="sector"><h3>Hospitality &amp; Culture</h3><ul class="logos"><li><img src="assets/clients/client-26.svg" width="388" height="79" alt="Okra &amp; Ash logo" loading="lazy"></li><li><img src="assets/clients/client-27.svg" width="1162" height="80" alt="The Larchway logo" loading="lazy"></li><li><img src="assets/clients/client-28.svg" width="736" height="125" alt="Marshlight Festival logo" loading="lazy"></li><li><img src="assets/clients/client-29.svg" width="551" height="101" alt="Hollin Gallery logo" loading="lazy"></li><li><img src="assets/clients/client-30.svg" width="798" height="146" alt="Copperbell Theatre logo" loading="lazy"></li><li><img src="assets/clients/client-31.svg" width="599" height="102" alt="Quillmoor Press logo" loading="lazy"></li><li><img src="assets/clients/client-32.svg" width="574" height="101" alt="Ferrylight logo" loading="lazy"></li></ul></div>
+        <div class="sector"><h3>Services &amp; Tech</h3><ul class="logos"><li><img src="assets/clients/client-33.svg" width="421" height="87" alt="Paywren logo" loading="lazy"></li><li><img src="assets/clients/client-34.svg" width="360" height="96" alt="Shelterly logo" loading="lazy"></li><li><img src="assets/clients/client-35.svg" width="574" height="77" alt="Voltmere logo" loading="lazy"></li><li><img src="assets/clients/client-36.svg" width="520" height="78" alt="Mendhaven logo" loading="lazy"></li><li><img src="assets/clients/client-37.svg" width="727" height="77" alt="Stillreed logo" loading="lazy"></li><li><img src="assets/clients/client-38.svg" width="482" height="93" alt="Sumwright logo" loading="lazy"></li><li><img src="assets/clients/client-39.svg" width="406" height="79" alt="Owlhour logo" loading="lazy"></li><li><img src="assets/clients/client-40.svg" width="735" height="130" alt="River Commons Trust logo" loading="lazy"></li></ul></div>
+      </div>
+      <div class="press">
+        <div class="ch__open" style="margin-bottom:0">
+          <span></span>
+          <div>
+            <h3 class="press__h">Brands with a pulse.</h3>
+            <p class="press__sub">Six more projects from the archive, from handmade plates to a gin bottle worth keeping.</p>
+          </div>
+        </div>
+        <ul class="fan" id="fan">
+          <li><div class="nb"><div class="nb__sh"></div><a class="nb__face" href="#"><img src="assets/work/work-01.webp" width="560" height="387" alt="Handmade plates and bowls in speckled glazes on a linen cloth" loading="lazy"><h3>Quiet branding for loud glazes</h3><p><u><span>Kilnmark, 2023</span>Read the case study</u></p></a></div></li>
+          <li><div class="nb"><div class="nb__sh"></div><a class="nb__face" href="#"><img src="assets/work/work-02.webp" width="560" height="387" alt="A bright gallery room with three large abstract canvases and a wooden bench" loading="lazy"><h3>A gallery that reads like a magazine</h3><p><u><span>Hollin Gallery, 2022</span>Read the case study</u></p></a></div></li>
+          <li><div class="nb"><div class="nb__sh"></div><a class="nb__face" href="#"><img src="assets/work/work-03.webp" width="560" height="387" alt="Sand-coloured headphones resting on the edge of an empty swimming pool" loading="lazy"><h3>A quiet campaign for headphones</h3><p><u><span>Stillreed, 2025</span>Read the case study</u></p></a></div></li>
+          <li><div class="nb"><div class="nb__sh"></div><a class="nb__face" href="#"><img src="assets/work/work-04.webp" width="560" height="387" alt="A mechanical wristwatch with a cream dial on dark green leather" loading="lazy"><h3>Small watchmaker, big detail</h3><p><u><span>Halvane Watch Co., 2021</span>Read the case study</u></p></a></div></li>
+          <li><div class="nb"><div class="nb__sh"></div><a class="nb__face" href="#"><img src="assets/work/work-05.webp" width="560" height="387" alt="An embossed gin bottle with a gold-foiled label on a walnut bar top" loading="lazy"><h3>A gin bottle worth keeping</h3><p><u><span>Gilded Hare, 2022</span>Read the case study</u></p></a></div></li>
+          <li><div class="nb"><div class="nb__sh"></div><a class="nb__face" href="#"><img src="assets/work/work-06.webp" width="560" height="387" alt="Four patterned drink cans standing in a tub of crushed ice" loading="lazy"><h3>Kombucha with a louder voice</h3><p><u><span>Fizzwold, 2026</span>Read the case study</u></p></a></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. chapter four: the founders -->
+  <section class="ch ch--studio" id="partners" data-sc-act="flow" data-head="The founders" data-no="Chapter 4" aria-labelledby="partners-h">
+    <div class="wrap">
+      <header class="ch__open" style="margin-bottom:0">
+        <p class="ch__no"><b>Chapter 4</b>The founders</p>
+        <h2 class="ch__title" id="partners-h" data-ink>Meet the <em class="acc">founders.</em></h2>
+      </header>
+      <div class="pair">
+        <article class="pc" aria-labelledby="p1-h"><div class="pc__body nb"><div class="nb__sh"></div><div class="nb__face">
+          <div class="pc__stand"><div class="pc__clip"><img class="pc__img p1" src="assets/people/founder-1.webp" width="900" height="1297" alt="Ines Calloway, founder and creative director" loading="lazy"></div></div>
+          <h3 id="p1-h">Ines Calloway</h3>
+          <p class="pc__role">Founder and Creative Director</p>
+          <p class="pc__bio">Ines reads every brief twice, then asks the question nobody wanted to answer. She started Mosswick in 2014, when the studio was three people sharing a desk above a bike shop, and today she directs its creative work.</p>
+          <a class="pc__ln" href="#">Ines on LinkedIn</a>
+        </div></div></article>
+        <article class="pc" aria-labelledby="p2-h"><div class="pc__body nb"><div class="nb__sh"></div><div class="nb__face">
+          <div class="pc__stand"><div class="pc__clip"><img class="pc__img p2" src="assets/people/founder-2.webp" width="900" height="1227" alt="Tobias Okonjo-Hale, co-founder and strategy director" loading="lazy"></div></div>
+          <h3 id="p2-h">Tobias Okonjo-Hale</h3>
+          <p class="pc__role">Co-founder and Strategy Director</p>
+          <p class="pc__bio">Tobias turns messy workshops into one clear page that the whole client team signs. He runs the week of listening that starts every project: the sales team, the complaints inbox and five customers who almost did not buy.</p>
+          <a class="pc__ln" href="#">Tobias on LinkedIn</a>
+        </div></div></article>
+      </div>
+      <figure class="team">
+        <figcaption><b>The team behind the work,</b> in our old print works in Lowmere. We hire a few people each year: <a href="#">see open roles</a>.</figcaption>
+        <img src="assets/studio-team.webp" width="1100" height="665" alt="The Mosswick team standing together in a bright workroom with tall windows, plants and pinned-up work" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- 6. chapter five: how we work, on the dark ground -->
+  <section class="ch ch--night on-dark" id="how" data-sc-act="flow" data-head="How we work" data-no="Chapter 5" aria-labelledby="how-h">
+    <div class="wrap">
+      <header class="ch__open">
+        <p class="ch__no"><b>Chapter 5</b>How we work</p>
+        <h2 class="ch__title" id="how-h" data-ink>One team stays on <em class="acc">your brand.</em></h2>
+      </header>
+      <ul class="who" id="who" aria-label="Who we work with">
+        <li class="flip"><div class="flip__sh"></div><div class="flip__card">
+          <div class="flip__f flip__front"><span class="flip__k">Who we work with</span><h3>Founders</h3></div>
+          <div class="flip__f flip__back"><h3>Founders</h3><p>Tell us the problem in plain words. We will come back with a plan, a budget and a first idea.</p></div>
+        </div></li>
+        <li class="flip"><div class="flip__sh"></div><div class="flip__card">
+          <div class="flip__f flip__front"><span class="flip__k">Who we work with</span><h3>Marketing teams</h3></div>
+          <div class="flip__f flip__back"><h3>Marketing teams</h3><p>We can lead the creative and hand over files and guidelines, or join your team's weekly rhythm.</p></div>
+        </div></li>
+        <li class="flip"><div class="flip__sh"></div><div class="flip__card">
+          <div class="flip__f flip__front"><span class="flip__k">Who we work with</span><h3>Shops</h3></div>
+          <div class="flip__f flip__back"><h3>Shops</h3><p>Brand ideas that hold up on a billboard, a phone screen and the side of a delivery van.</p></div>
+        </div></li>
+        <li class="flip"><div class="flip__sh"></div><div class="flip__card">
+          <div class="flip__f flip__front"><span class="flip__k">Who we work with</span><h3>Charities</h3></div>
+          <div class="flip__f flip__back"><h3>Charities</h3><p>From food brands to city charities, every client gets a senior team from the first day.</p></div>
+        </div></li>
+      </ul>
+      <div class="engage">
+        <h3 class="ch__no" style="margin:0">Where to start</h3>
+        <div>
+          <ul class="engage__qs">
+            <li>A single campaign for a launch coming up?</li>
+            <li>A product film, cut for every place it runs?</li>
+            <li>Three months of social content?</li>
+            <li>A full rebrand with a website and a launch?</li>
+          </ul>
+          <p class="engage__ok">Any of these. If it goes well, the work tends to grow from there.</p>
+          <ul class="models" aria-label="Ways to work with us"><li>Brand identity</li><li>Website</li><li>Monthly retainer</li><li>Single campaign</li></ul>
+        </div>
+      </div>
+      <div class="fit">
+        <div>
+          <h3>We're the right studio <em class="acc">if</em></h3>
+          <ul>
+            <li data-m="+">You want work bold enough to notice and sound enough to grow with</li>
+            <li data-m="+">You have a clear goal and someone who can make decisions</li>
+            <li data-m="+">You want two or three numbers agreed at the start and reported every month</li>
+            <li data-m="+">You want the senior people from the first meeting to stay on the work</li>
+          </ul>
+        </div>
+        <div>
+          <h3>We're not the right studio if</h3>
+          <ul>
+            <li data-m="&minus;">You want pretty work that never has to sell anything</li>
+            <li data-m="&minus;">You want vanity charts and padding in every report</li>
+            <li data-m="&minus;">You would rather guess than set up tracking first</li>
+            <li data-m="&minus;">You plan to tear everything up again each spring</li>
+            <li data-m="&minus;">You expect a different team once the contract is signed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. chapter six: questions -->
+  <section class="ch ch--paper" id="questions" style="padding-bottom:clamp(2.5rem, 6vh, 4rem)" data-sc-act="flow" data-head="Questions" data-no="Chapter 6" aria-labelledby="q-h">
+    <div class="wrap">
+      <header class="ch__open">
+        <p class="ch__no"><b>Chapter 6</b>Questions</p>
+        <h2 class="ch__title" id="q-h" data-ink>Plain <em class="acc">answers.</em></h2>
+      </header>
+      <div class="ch__open" style="margin-bottom:0">
+        <span></span>
+        <div class="qa" id="qa">
+          <details open><summary>What kind of companies do you work with?<i aria-hidden="true"></i></summary><div class="qa__a"><p>Mostly growing companies with 10 to 500 people: food and drink brands, shops, clinics, charities, tech start-ups and the odd festival. What they share is a founder or marketing lead who wants bold work and honest numbers.</p></div></details>
+          <details><summary>Can we work together if you are not in Lowmere?<i aria-hidden="true"></i></summary><div class="qa__a"><p>Yes. About half of our clients are in other cities and a few are overseas. We run most meetings on video and travel for workshops and shoots whenever being in the room helps the work.</p></div></details>
+          <details><summary>How do we get started?<i aria-hidden="true"></i></summary><div class="qa__a"><p>Send a short note about what you are building and what is getting in the way. We reply within two working days and set up a free 30 minute call, with no pitch deck and no pressure.</p></div></details>
+          <details><summary>How long does a brand identity take?<i aria-hidden="true"></i></summary><div class="qa__a"><p>Most identity projects take eight to twelve weeks from the first workshop to final files. A full rebrand with a website and launch campaign usually runs four to six months. We agree the timeline in writing before we start.</p></div></details>
+          <details><summary>Who will actually work on my project?<i aria-hidden="true"></i></summary><div class="qa__a"><p>The people you meet in the first meeting. Every client gets a senior lead, a strategist and the makers the job needs. We never hand the work to a different team once the contract is signed.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. the close: an editor's note, signed by both founders -->
+  <section class="close" id="note" data-sc-act="flow" data-head="Editor's note" data-no="Last page" aria-labelledby="note-h">
+    <div class="wrap">
+      <div class="note">
+        <div class="note__body nb"><div class="nb__sh"></div><div class="nb__face">
+          <p class="note__kicker">Editor's note</p>
+          <h2 class="note__title" id="note-h" data-ink>Tell us what's <em class="acc">next.</em></h2>
+          <div class="note__text">
+            <p class="belief-q">Every brand needs one idea it can say in a single breath. Let's find yours.</p>
+            <p>Whether it's a new identity, a website, a film or a campaign, tell us the problem in plain words and we will come back with a plan, a budget and a first idea.</p>
+            <p>The first step is a free 30 minute call with a strategist, not a salesperson. Send a short note first and we will reply within two working days.</p>
+          </div>
+          <div class="sign" id="sign">
+            <div class="sig"><span class="sig__face"><img class="p1" src="assets/people/founder-1.webp" width="900" height="1297" alt="" loading="lazy"></span><p class="sig__name" data-ink>Ines Calloway</p><p class="sig__role">Founder and Creative Director</p></div>
+            <div class="sig"><span class="sig__face"><img class="p2" src="assets/people/founder-2.webp" width="900" height="1227" alt="" loading="lazy"></span><p class="sig__name" data-ink>Tobias Okonjo-Hale</p><p class="sig__role">Co-founder and Strategy Director</p></div>
+          </div>
+          <div class="note__cta">
+            <a class="cta cta--big" href="https://example.com" rel="noopener" data-cta data-big>Book an intro call <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+            <p class="note__ps">Rather send a brief first? Call or write to us below.</p>
+          </div>
+          <ul class="contact">
+            <li><span>Call</span><a href="tel:+15550142">+1 555 0142</a></li>
+            <li><span>Write</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><span>Visit</span><address>1 Example Street, Lowmere</address></li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <img src="assets/brand/wordmark-light.svg" width="439" height="77" alt="Mosswick Studio" loading="lazy">
+    <ul>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Behance</a></li>
+      <li><a href="#">YouTube</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+    <p>Mosswick Studio. Brands, websites, films and campaigns, made in Lowmere since 2014.<br>Example content. Swap in your own.</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="cta" href="https://example.com" rel="noopener" data-cta>Book an intro call <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+</div>
+
+<script src="scrollcraft.js"></script>
+<script>
+(function () {
+  if (matchMedia('(max-width: 860px)').matches) document.getElementById('proof').setAttribute('data-sc-span', '4.6');
+})();
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var fx = root.classList.contains('fx');
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  var bar = document.getElementById('bar');
+  var dockSlot = document.getElementById('quillDock');
+  var quill = document.getElementById('quill');
+
+  /* ---- easing, cubic-bezier(.16,1,.3,1) ---- */
+  function bezier(x1, y1, x2, y2) {
+    function a(p1, p2) { return 1 - 3 * p2 + 3 * p1; }
+    function b(p1, p2) { return 3 * p2 - 6 * p1; }
+    function c(p1) { return 3 * p1; }
+    function at(t, p1, p2) { return ((a(p1, p2) * t + b(p1, p2)) * t + c(p1)) * t; }
+    function slope(t, p1, p2) { return 3 * a(p1, p2) * t * t + 2 * b(p1, p2) * t + c(p1); }
+    return function (x) {
+      if (x <= 0) return 0; if (x >= 1) return 1;
+      var t = x;
+      for (var i = 0; i < 8; i++) { var s = slope(t, x1, x2); if (Math.abs(s) < 1e-6) break; t -= (at(t, x1, x2) - x) / s; }
+      return at(Math.min(1, Math.max(0, t)), y1, y2);
+    };
+  }
+  var ease = bezier(.16, 1, .3, 1);
+  var inOut = bezier(.45, .05, .25, 1);
+
+  /* ---- the ink: wrap every word of each [data-ink] so the quill can write it in ---- */
+  var inks = [].slice.call(document.querySelectorAll('[data-ink]'));
+  inks.forEach(function (el) {
+    var words = [];
+    (function walk(node) {
+      [].slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function (p) {
+            if (!p) return;
+            if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(p)); return; }
+            var s = document.createElement('span'); s.className = 'iw'; s.textContent = p; frag.appendChild(s); words.push(s);
+          });
+          node.replaceChild(frag, n);
+        } else if (n.nodeType === 1) walk(n);
+      });
+    })(el);
+    el._words = words;
+  });
+  function inkAll(el) { el.classList.remove('inking'); el.classList.add('inked'); el._words.forEach(function (w) { w.classList.add('done'); w.style.clipPath = ''; }); }
+
+  /* ---- the quill: lifts off the wordmark in the bar ---- */
+  var QH = 120;
+  function setQuill(x, y, h, lift, rot) {
+    quill.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + (y - QH).toFixed(1) + 'px,0) rotate(' + (rot || 0).toFixed(2) + 'deg) scale(' + (h / QH).toFixed(3) + ')';
+    quill.style.setProperty('--qs', (3 + lift * 24).toFixed(1) + 'px');
+    quill.style.setProperty('--qb', (1.2 + lift * 6).toFixed(1) + 'px');
+    quill.style.setProperty('--qa', (.28 - lift * .12).toFixed(3));
+  }
+  function dockPt() {
+    var r = dockSlot.querySelector('img').getBoundingClientRect();
+    return { x: r.left, y: r.bottom, h: r.height };
+  }
+  function frame(fn) { return new Promise(function (res) { requestAnimationFrame(function (t) { fn(t); res(); }); }); }
+  function run(dur, step) {
+    return new Promise(function (res) {
+      var t0 = null;
+      function f(now) {
+        if (t0 === null) t0 = now;
+        var t = Math.min(1, (now - t0) / dur);
+        step(t);
+        if (t < 1) requestAnimationFrame(f); else res();
+      }
+      requestAnimationFrame(f);
+    });
+  }
+  function wordGeo(w) {
+    var r = w.getBoundingClientRect();
+    return { l: r.left, r: r.right, top: r.top, h: r.height, y: r.top + r.height * .74 };
+  }
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  /* write one element: fly in (from the bar, or straight from the last title), ink each word as the nib passes.
+     Time-based, never scrubbed. Budget: about 0.2 s flight plus 0.6 s of writing; a hard deadline inks the rest. */
+  var pos = null, homing = null;
+  var setQ = setQuill;
+  setQuill = function (x, y, h, lift, rot) { pos = { x: x, y: y, h: h }; setQ(x, y, h, lift, rot); };
+  function run2(dur, step, tok) {
+    return new Promise(function (res) {
+      var t0 = null;
+      function f(now) {
+        if (tok && tok.stop) { res(); return; }
+        if (t0 === null) t0 = now;
+        var t = Math.min(1, (now - t0) / dur);
+        step(t);
+        if (t < 1) requestAnimationFrame(f); else res();
+      }
+      requestAnimationFrame(f);
+    });
+  }
+  function write(el, opt) {
+    opt = opt || {};
+    var words = el._words;
+    if (!words || !words.length) { inkAll(el); return Promise.resolve(); }
+    var t0 = el._t0 || performance.now(), limit = opt.limit || 950;
+    var late = function () { return performance.now() - t0 > limit; };
+    var fs = parseFloat(getComputedStyle(words[0]).fontSize) || 40;
+    var penH = Math.max(38, Math.min(150, fs * (opt.pen || 1.2)));
+    var chars = 0, hops = 0, wraps = 0;
+    words.forEach(function (w, i) {
+      chars += w.textContent.length;
+      if (i) { var a = w.getBoundingClientRect(), b = words[i - 1].getBoundingClientRect(); if (Math.abs(a.top - b.top) > a.height * .4) wraps++; else hops++; }
+    });
+    var HOP = opt.hop || 34, WRAP = opt.wrap || 80;
+    var per = Math.max(7, ((opt.total || 620) - hops * HOP - wraps * WRAP) / chars);
+    var light = !!el.closest('.on-dark');
+    el.classList.add('inking');
+    if (homing) { homing.stop = true; homing = null; }
+    var fromDock = !quill.classList.contains('is-live') || !pos;
+    var from = fromDock ? dockPt() : pos;
+    dockSlot.classList.add('is-away');
+    quill.classList.add('is-live');
+    quill.classList.toggle('is-light', light);
+    setQuill(from.x, from.y, from.h, 0, 0);
+    /* one continuous timeline (no per-step frame waits): flight, then word, hop, word ... */
+    var segs = [], T = 0, FLY = opt.fly || 200;
+    segs.push({ k: 'fly', a: 0, d: FLY }); T = FLY;
+    words.forEach(function (w, i) {
+      var d = Math.max(40, w.textContent.length * per); segs.push({ k: 'w', i: i, a: T, d: d }); T += d;
+      if (i < words.length - 1) {
+        var a = w.getBoundingClientRect(), b = words[i + 1].getBoundingClientRect();
+        var nl = Math.abs(b.top - a.top) > a.height * .4, hd = nl ? WRAP : HOP;
+        segs.push({ k: 'h', i: i, nl: nl, a: T, d: hd }); T += hd;
+      }
+    });
+    var doneTo = -1;
+    function inkTo(n) { while (doneTo < n) { doneTo++; words[doneTo].classList.add('done'); words[doneTo].style.clipPath = ''; } }
+    return run2(T, function (tt) {
+      var ms = tt * T;
+      if (late()) { inkTo(words.length - 1); return; }
+      var sg = segs[segs.length - 1];
+      for (var j = 0; j < segs.length; j++) { if (ms < segs[j].a + segs[j].d) { sg = segs[j]; break; } }
+      var t = Math.min(1, (ms - sg.a) / sg.d);
+      if (sg.k === 'fly') {
+        var e = ease(t), g = wordGeo(words[0]), arc = Math.sin(Math.PI * Math.min(1, t * 1.1));
+        setQuill(lerp(from.x, g.l, e), lerp(from.y, g.y, e) - arc * Math.min(110, fs), lerp(from.h, penH, e), .15 + arc * .85, lerp(0, -4, e));
+      } else if (sg.k === 'w') {
+        inkTo(sg.i - 1);
+        var w = words[sg.i], gw = wordGeo(w), x = lerp(gw.l, gw.r, t);
+        var wig = Math.sin((x - gw.l) / (fs * .16) * Math.PI) * gw.h * .09;
+        w.style.clipPath = 'inset(-30% ' + (114 - t * 124).toFixed(2) + '% -40% -14%)';
+        setQuill(x, gw.y + wig, penH, .04, -4 + Math.sin((x - gw.l) / (fs * .3)) * 4);
+      } else {
+        inkTo(sg.i);
+        var A = wordGeo(words[sg.i]), B = wordGeo(words[sg.i + 1]), eh = inOut(t);
+        setQuill(lerp(A.r, B.l, eh), lerp(A.y, B.y, eh) - Math.sin(Math.PI * t) * fs * (sg.nl ? .5 : .2), penH, .2 * Math.sin(Math.PI * t) + .04, -4);
+      }
+    }).then(function () { inkAll(el); });
+  }
+  /* back into the logo, unless another title arrives on the way */
+  function goHome() {
+    if (!pos) { quill.classList.remove('is-live'); dockSlot.classList.remove('is-away'); return; }
+    var tok = homing = { stop: false }, from = pos;
+    quill.classList.remove('is-light');
+    run2(420, function (t) {
+      var e = ease(t), d = dockPt(), arc = Math.sin(Math.PI * t);
+      setQuill(lerp(from.x, d.x, e), lerp(from.y, d.y, e) - arc * Math.min(140, from.h * 1.2), lerp(from.h, d.h, e), .1 + arc * .9, lerp(-4, 0, e));
+    }, tok).then(function () {
+      if (tok.stop) return;
+      homing = null;
+      quill.classList.remove('is-live');
+      dockSlot.classList.remove('is-away');
+    });
+  }
+
+  /* one writer at a time; a title that has already left the screen is simply inked */
+  var queue = [], busy = false;
+  function onScreen(el) { var r = el.getBoundingClientRect(); return r.bottom > bar.offsetHeight && r.top < innerHeight; }
+  function pump() {
+    if (busy) return;
+    var job;
+    while ((job = queue.shift())) {
+      if (job.el.classList.contains('inked')) continue;
+      if (!onScreen(job.el) || performance.now() - job.el._t0 > 700) { inkAll(job.el); continue; }
+      break;
+    }
+    if (!job) { goHome(); return; }
+    busy = true;
+    write(job.el, job.opt).catch(function () { inkAll(job.el); }).then(function () { busy = false; pump(); });
+  }
+  function enqueue(el, opt) {
+    if (el._queued) return; el._queued = true; el._t0 = performance.now();
+    /* hard deadline: whatever happens, the title is whole within about a second of arriving */
+    setTimeout(function () { if (!el.classList.contains('inked')) inkAll(el); }, 900);
+    queue.push({ el: el, opt: opt }); pump();
+  }
+
+  var h1 = document.getElementById('h1');
+  var titles = inks.filter(function (el) { return el !== h1; });
+
+  if (fx) {
+    /* hide the chapter titles until the quill reaches them (only those still ahead of the reader) */
+    titles.forEach(function (el) {
+      if (el.getBoundingClientRect().bottom < bar.offsetHeight) return;
+      el.classList.add('inking');
+    });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (ents) {
+        ents.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          io.unobserve(en.target);
+          var sig = en.target.classList.contains('sig__name');
+          enqueue(en.target, sig ? { pen: 1.5, total: 400, fly: 170, limit: 880 } : { total: 560, fly: 180, limit: 880 });
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+      titles.forEach(function (el) { if (el.classList.contains('inking')) io.observe(el); });
+    } else titles.forEach(inkAll);
+    /* safety: nothing may stay hidden if the writer stalls */
+    setInterval(function () {
+      if (busy) return;
+      titles.forEach(function (el) { if (el.classList.contains('inking') && !el._queued && el.getBoundingClientRect().bottom < bar.offsetHeight) inkAll(el); });
+    }, 1500);
+  }
+
+  /* ---- the title page reveal, once the founders and the type have loaded ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true;
+      h1.classList.add('inking');
+      requestAnimationFrame(function () { requestAnimationFrame(function () {
+        root.classList.add('reveal'); root.classList.remove('pre-reveal');
+        if (scrollY > innerHeight * .6) { inkAll(h1); return; }
+        busy = true;
+        setTimeout(function () {
+          h1._t0 = performance.now();
+          write(h1, { total: 1050, fly: 400, limit: 2600, hop: 70, wrap: 150 }).catch(function () { inkAll(h1); }).then(function () { busy = false; pump(); });
+        }, 120);
+      }); });
+    };
+    var imgs = [].slice.call(document.querySelectorAll('.duo img'));
+    var waits = imgs.map(function (im) { return im.decode ? im.decode().catch(function () {}) : Promise.resolve(); });
+    if (document.fonts && document.fonts.ready) waits.push(document.fonts.ready);
+    Promise.all(waits).then(go);
+    setTimeout(go, 1600);
+  }
+
+  /* ---- running head: names the chapter under the bar ---- */
+  var acts = [].slice.call(document.querySelectorAll('[data-head]'));
+  var headNo = document.getElementById('headNo'), headT = document.getElementById('headT');
+  var cur = null;
+  function head() {
+    var y = bar.offsetHeight + 2, pick = acts[0];
+    for (var i = 0; i < acts.length; i++) if (acts[i].getBoundingClientRect().top <= y) pick = acts[i];
+    if (pick === cur) return;
+    var same = cur && cur.getAttribute('data-head') === pick.getAttribute('data-head');
+    cur = pick;
+    if (same) return;
+    headNo.textContent = matchMedia('(max-width: 860px)').matches ? pick.getAttribute('data-no').replace('Chapter ', 'Ch. ') : pick.getAttribute('data-no');
+    headT.textContent = pick.getAttribute('data-head');
+    if (fx) { headT.classList.remove('is-new'); void headT.offsetWidth; headT.classList.add('is-new'); }
+  }
+
+  /* ---- scroll-linked ranges, in page pixels, for the CSS scroll timelines ---- */
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    el.classList.add('sdx');
+  }
+  var drawerGeo = null;
+  var files = [].slice.call(document.querySelectorAll('.file')), idxLis = [].slice.call(document.querySelectorAll('#filesIdx li')), drawerCur = -1;
+  function measure() {
+    if (!anim) return;
+    var vh = innerHeight, phone = phoneQ.matches;
+
+    /* title page planes (desktop only, CSS media query owns the switch): decoration, so they still follow the scroll */
+    var title = document.getElementById('title'), tT = top(title), tH = title.offsetHeight;
+    [].forEach.call(title.querySelectorAll('.plane'), function (p) { setR(p, tT, tT + tH); });
+
+    /* chapter 1: where each step starts in the stack (the spread itself is triggered) */
+    var pill = document.getElementById('pillars'), cards = [].slice.call(pill.children);
+    cards.forEach(function (c, i) {
+      var sh = c.querySelector('.nb__sh');
+      if (phone) {
+        c.style.setProperty('--dx', '0px');
+        c.style.setProperty('--dy', i ? (-c.offsetHeight * .38).toFixed(1) + 'px' : '30px');
+        c.style.setProperty('--dz', '-170px');
+        c.style.setProperty('--rz', (i % 2 ? 2.5 : -2.5) + 'deg');
+        c.style.setProperty('--z1', '0px');
+        sh.style.setProperty('--o0', '2px'); sh.style.setProperty('--o1', '10px');
+      } else {
+        c.style.setProperty('--dx', (cards[0].offsetLeft - c.offsetLeft) + 'px');
+        c.style.setProperty('--dy', (cards[0].offsetTop - c.offsetTop) + 'px');
+        c.style.setProperty('--dz', (-60 - i * 70) + 'px');
+        c.style.setProperty('--rz', ([0, -3, 2.5][i] || 0) + 'deg');
+        c.style.setProperty('--z1', (i * 34) + 'px');
+        sh.style.setProperty('--o0', '2px'); sh.style.setProperty('--o1', (6 + i * 5) + 'px');
+      }
+    });
+
+    /* chapter 2: the drawer. s runs 0..5 over 86% of the pin and the drawer steps to the nearest file */
+    var proof = document.getElementById('proof'), prT = top(proof), trav = Math.max(1, proof.offsetHeight - vh);
+    var n = files.length;
+    var per = trav * .86 / (n - 1);
+    drawerGeo = { top: prT, per: per, n: n };
+    var drawer = document.getElementById('drawer');
+    /* every size: files sized to their content (numbers right under the description), never shorter than the drawer can carry without a band */
+    {
+      drawer.style.removeProperty('--fh'); drawer.style.removeProperty('--ft');
+      files.forEach(function (f) { f.style.height = 'auto'; });
+      var maxH = 0; files.forEach(function (f) { maxH = Math.max(maxH, f.querySelector('.nb').offsetHeight); });
+      files.forEach(function (f) { f.style.height = ''; });
+      var dh = drawer.clientHeight, fh = Math.min(dh - 92, Math.max(maxH, phone ? dh - vh * .17 : dh * .5));
+      drawer.style.setProperty('--fh', fh.toFixed(0) + 'px');
+      drawer.style.setProperty('--ft', Math.max(0, dh - fh).toFixed(0) + 'px');
+    }
+    drawerCur = -1; drawerStep();
+
+    /* chapter 4 and the note: how far the hard shadows grow as the cards stand up */
+    [].forEach.call(document.querySelectorAll('.pc .nb__sh, .note .nb__sh'), function (sh) { sh.style.setProperty('--o0', '2px'); sh.style.setProperty('--o1', '12px'); });
+  }
+
+  function drawerStep() {
+    if (!drawerGeo) return;
+    var cur = Math.max(0, Math.min(drawerGeo.n - 1, Math.round((scrollY - drawerGeo.top) / drawerGeo.per)));
+    if (cur === drawerCur) return;
+    drawerCur = cur;
+    files.forEach(function (f, i) { f.setAttribute('data-k', i < cur ? 'out' : String(i - cur)); });
+    idxLis.forEach(function (li, i) { li.classList.toggle('is-on', i === cur); });
+  }
+
+  /* triggered moves: each plays through on its own once its point is crossed (line = % of the screen from the bottom) */
+  function onCross(target, line, els) {
+    els.forEach(function (e) { e.classList.add('trg'); });
+    var all = [target].concat(els);
+    if (!('IntersectionObserver' in window)) { all.forEach(function (e) { e.classList.add('go'); }); return; }
+    var io = new IntersectionObserver(function (ents) {
+      if (!ents.some(function (en) { return en.isIntersecting; })) return;
+      io.disconnect();
+      all.forEach(function (e) { e.classList.add('go'); });
+    }, { rootMargin: '0px 0px -' + line + '% 0px', threshold: 0 });
+    io.observe(target);
+  }
+  function lag(el, s) { el.style.setProperty('--d', s.toFixed(2) + 's'); return el; }
+  if (anim) {
+    var ph = phoneQ.matches;
+    var pillCards = [].slice.call(document.getElementById('pillars').children);
+    if (ph) pillCards.forEach(function (c) { onCross(c, 8, [c, c.querySelector('.nb__sh')]); });
+    else onCross(document.getElementById('pillars'), 15, pillCards.reduce(function (a, c, i) { return a.concat([lag(c, i * .06), lag(c.querySelector('.nb__sh'), i * .06)]); }, []));
+    var fanLis = [].slice.call(document.getElementById('fan').children);
+    if (ph) fanLis.forEach(function (li) { onCross(li, 8, [li]); });
+    else onCross(document.getElementById('fan'), 30, fanLis.map(function (li, i) { return lag(li, i * .03); }));
+    [].forEach.call(document.querySelectorAll('.pc'), function (pc) { onCross(pc, 10, [pc.querySelector('.pc__body'), pc.querySelector('.pc__img'), pc.querySelector('.nb__sh')]); });
+    var flips = [].slice.call(document.querySelectorAll('.flip'));
+    if (ph) flips.forEach(function (fl) { onCross(fl, 26, [fl, fl.querySelector('.flip__card'), fl.querySelector('.flip__sh')]); });
+    else onCross(document.getElementById('who'), 26, flips.reduce(function (a, fl, i) { return a.concat([lag(fl, i * .06), lag(fl.querySelector('.flip__card'), i * .06), lag(fl.querySelector('.flip__sh'), i * .06)]); }, []));
+    [].forEach.call(document.querySelectorAll('#qa details'), function (d) { onCross(d, 2, [d]); });
+    var noteEl = document.querySelector('.note');
+    onCross(noteEl, 10, [noteEl.querySelector('.note__body'), noteEl.querySelector('.nb__sh')]);
+  }
+
+  /* report the drawer's state for the verification harness (the motion itself is CSS) */
+  var drawerEl = document.getElementById('drawer');
+  function drawerState() {
+    if (!drawerGeo) return;
+    var s = Math.max(0, Math.min(drawerGeo.n - 1, (scrollY - drawerGeo.top) / drawerGeo.per));
+    drawerEl.setAttribute('data-sc-verify-state', 'file ' + s.toFixed(1));
+    drawerEl.setAttribute('data-sc-verify-hold', s >= drawerGeo.n - 1 ? 'true' : 'false');
+  }
+
+  var lastW = -1;
+  function all() { measure(); head(); drawerState(); lastW = innerWidth; }
+  all();
+  addEventListener('resize', function () { if (innerWidth !== lastW || !phoneQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); } }).observe(document.body); }
+
+  /* ---- the phone bar steps away while a big CTA is on screen ---- */
+  var dock = document.getElementById('dock');
+  var bigs = [].slice.call(document.querySelectorAll('[data-big]'));
+  function dockState() {
+    var away = bigs.some(function (b) {
+      var r = b.getBoundingClientRect();
+      if (r.bottom < bar.offsetHeight || r.top > innerHeight - 70) return false;
+      return parseFloat(getComputedStyle(b).opacity) > .5;
+    });
+    dock.classList.toggle('is-away', away);
+    root.classList.toggle('dock-away', away && phoneQ.matches);
+  }
+  var tick = false;
+  addEventListener('scroll', function () {
+    if (tick) return; tick = true;
+    requestAnimationFrame(function () { tick = false; head(); dockState(); drawerStep(); drawerState(); });
+  }, { passive: true });
+  dockState(); setTimeout(dockState, 2200);
+})();
+
+</script>
+</body>
+</html>

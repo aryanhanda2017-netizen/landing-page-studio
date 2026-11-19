@@ -60,7 +60,7 @@ Ask in plain words, for example "design a landing page for my studio", "rebuild 
 
 ## Templates
 
-`templates/` holds 14 finished homepage templates in seven kinds of page: gallery, chaptered editorial, filmic one-shot, live surface (a form or planner that really works), typographic poster, rhythmic cutlist and continuous world. All of them are filled with one made-up studio's example content, so you can compare the designs side by side, and every one works at any scroll length. They're plain HTML, CSS and JS with no build step.
+`templates/` holds 20 finished homepage templates in seven kinds of page: gallery, chaptered editorial, filmic one-shot, live surface (a form or planner that really works), typographic poster, rhythmic cutlist and continuous world. All of them are filled with one made-up studio's example content, so you can compare the designs side by side, and every one works at any scroll length. They're plain HTML, CSS and JS with no build step.
 
 They arrive with the marketplace install (in `~/.claude/plugins/marketplaces/landing-page-studio/templates/`; the preflight prints the exact folder), or clone this repo. The full list, and how to preview one or make it yours, is in [`templates/README.md`](templates/README.md).
 

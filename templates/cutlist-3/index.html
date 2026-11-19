@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Brands, websites, films and campaigns</title>
+<meta name="description" content="Mosswick is a creative and marketing studio of 32 people making brands, websites, films and campaigns people notice, from Lowmere.">
+<meta name="theme-color" content="#1c1a14">
+<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Brands, websites, films and campaigns">
+<meta property="og:description" content="Brands, websites, films and campaigns from a studio of 32 people in Lowmere.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Brands, websites, films and campaigns">
+<meta name="twitter:description" content="Brands, websites, films and campaigns from a studio of 32 people.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken-700.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/work/wall-07.jpg" fetchpriority="high">
+<link rel="stylesheet" href="scrollcraft.css">
+
+
+<style>
+@font-face { font-family: "Hanken Grotesk"; src: url("assets/fonts/hanken-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url("assets/fonts/hanken-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url("assets/fonts/hanken-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+/* Colour tokens (Sunflower palette); spacing, type rhythm and motion follow. */
+:root {
+  --bg: #f7f3ea;
+  --white: #ffffff;
+  --ink: #1c1a14;
+  --night: #2d2a1f;
+  --deep: #12110d;
+  --accent: #f7c736;
+  --accent-2: #ecb91e;
+  --gold: #7a5c00;
+  --pale: #fbefc4;
+  --body: #4a4024;
+  --soft: #6b6250;
+  --line: rgba(28, 26, 20, .12);
+  --wline: rgba(255, 255, 255, .18);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --glide: cubic-bezier(.65, 0, .35, 1);
+  --display: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --gut: clamp(16px, 4vw, 56px);
+  --wrap: 1240px;
+  --bar: 68px;
+  --dock: 0px;
+  --lab: 0px;
+  --sc-canvas: #f7f3ea; --sc-surface: #ffffff;
+  --sc-ink: #1c1a14; --sc-ink-soft: #4a4024;
+  --sc-accent: #f7c736; --sc-accent-ink: #1c1a14;
+  --sc-font-display: var(--display);
+  --sc-font-text: var(--text);
+}
+html { background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+img, video { display: block; max-width: 100%; }
+a { color: inherit; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--accent); color: var(--ink); padding: 10px 14px; border-radius: 8px; font-weight: 600; }
+.skip:focus { top: 12px; }
+h1, h2, h3 { font-family: var(--display); margin: 0; font-weight: 700; letter-spacing: -.035em; line-height: 1.04; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+.kick { font: 600 12px/1.2 var(--display); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 14px; color: var(--gold); }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 6px; }
+
+/* ---------- the one CTA (Shimmer Button 10380): the accent pill, one sheen crossing it ---------- */
+.cta {
+  position: relative; overflow: hidden; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  min-height: 44px; padding: 0 1.25em; border-radius: 999px; background: var(--accent); color: var(--ink); text-decoration: none; white-space: nowrap;
+  font: 600 16px/1 var(--display); letter-spacing: -.01em; box-shadow: 0 1px 0 rgba(255, 255, 255, .35) inset, 0 6px 14px -8px rgba(28, 26, 20, .45);
+  transition: transform .35s var(--ease), background-color .35s var(--ease);
+}
+.cta::after { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; width: 60%; background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, .42) 50%, transparent 100%); transform: translateX(-120%) skewX(-12deg); }
+html.fx .cta--sheen::after { animation: sheen 5.5s var(--glide) 2.2s infinite; }
+@keyframes sheen { 0% { transform: translateX(-120%) skewX(-12deg); } 22%, 100% { transform: translateX(260%) skewX(-12deg); } }
+.cta .arw { width: 1em; height: 1em; flex: none; transition: transform .35s var(--ease); }
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover { background: var(--accent-2); }
+  .cta:hover .arw { transform: translateX(3px); }
+  .cta:hover::after { animation: sheen 1.2s var(--glide) 1; }
+}
+.cta--big { min-height: 56px; font-size: 19px; padding: 0 1.5em; }
+.cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+/* ================= the stories bar (Social Stories 9727) ================= */
+.bar { position: fixed; z-index: 60; top: 0; left: 0; right: 0; height: var(--bar); background: var(--ink); color: #fff; }
+.segs { position: absolute; left: var(--gut); right: var(--gut); top: 8px; height: 3px; display: flex; gap: 3px; }
+.seg { flex: 1 1 0; position: relative; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, .26); overflow: hidden; }
+.seg b { position: absolute; inset: 0; background: #fff; border-radius: 2px; transform-origin: 0 50%; transform: scaleX(0); }
+.seg.is-done b { transform: scaleX(1); }
+.seg.is-res { background: rgba(247, 199, 54, .42); }
+.seg.is-res b { background: var(--accent); }
+html.anim .seg b { transform: none; }
+.bar__row { position: absolute; left: var(--gut); right: var(--gut); top: 14px; bottom: 0; display: flex; align-items: center; gap: 20px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none; color: #fff; flex: none; }
+.brand img { width: 34px; height: 34px; border-radius: 50%; box-shadow: 0 0 0 1.5px rgba(255, 255, 255, .55); }
+.brand span { font: 600 22px/1 "Hanken Grotesk", var(--text); letter-spacing: -.02em; }
+.bar .cta { margin-left: auto; flex: none; }
+
+/* the peak, held in the bar: six result slots (Staged Progress Bar 37549) */
+.score { flex: 1 1 auto; display: flex; justify-content: center; gap: 8px; min-width: 0; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .35s var(--ease), transform .45s var(--ease), visibility 0s .45s; }
+html.score-on .score { opacity: 1; visibility: visible; transform: none; transition: opacity .35s var(--ease), transform .45s var(--ease), visibility 0s; }
+.slot { position: relative; flex: 0 1 auto; min-width: 70px; height: 32px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .28); perspective: 300px; }
+.slot__in { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; border-radius: 999px; background: var(--accent); color: var(--ink); white-space: nowrap; opacity: 0; transform: translateZ(-150px) scale(.7); transition: opacity .3s var(--ease), transform .55s var(--ease); }
+.slot.is-on .slot__in { opacity: 1; transform: none; }
+.slot b { font: 700 15px/1 var(--display); letter-spacing: -.01em; }
+.slot small { font: 500 12px/1 var(--text); color: var(--ink); }
+.slot__ghost { visibility: hidden; display: flex; align-items: center; gap: 6px; padding: 0 12px; height: 100%; white-space: nowrap; }
+.slot__ghost b { font: 700 15px/1 var(--display); }
+.slot__ghost small { font: 500 12px/1 var(--text); }
+@media (max-width: 1399px) { .slot small, .slot__ghost small { display: none; } }
+
+/* ================= sections: one ground per cut, hard edges ================= */
+main > section { position: relative; overflow-x: clip; }
+.wrap { width: min(100%, var(--wrap)); margin: 0 auto; padding: 0 var(--gut); box-sizing: border-box; }
+.g-bg { background: var(--bg); }
+.g-white { background: var(--white); }
+.g-ink { background: var(--ink); color: #fff; }
+.g-night { background: var(--night); color: #fff; }
+.g-pale { background: var(--pale); }
+.g-ink .kick, .g-night .kick { color: var(--accent); }
+.h2 { font-size: clamp(36px, 4.6vw, 64px); }
+.lede { font-size: 19px; line-height: 1.55; color: var(--body); max-width: 40ch; }
+
+/* ---------- 1. hero: project loops as a wall at three depths (Stacked Card Carousel 21516) ---------- */
+.hero { min-height: max(660px, 100svh); background: var(--bg); overflow: clip; }
+.hero__head { position: relative; z-index: 3; text-align: center; padding: calc(var(--bar) + 6.5vh) var(--gut) 0; max-width: 980px; margin: 0 auto; }
+.eyebrow { font: 600 13px/1.3 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+.hero h1 { font-size: clamp(40px, 4.7vw, 68px); line-height: 1.06; letter-spacing: -.04em; }
+.hero h1 .l, .hero h1 .l2 { display: block; }
+.hero h1 em { font-style: normal; color: var(--gold); }
+.pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; font-size: clamp(16px, 1.45vw, 21px); letter-spacing: -.01em; line-height: 1; }
+.pill { display: inline-flex; align-items: center; min-height: 40px; padding: 0 .9em; border-radius: 999px; font-weight: 600; }
+.p-g { color: #5c4500; background: #fbefc4; }
+.p-o { color: #4a4024; background: #efe6d4; }
+.p-p { color: #3b4220; background: #e6e8d2; }
+.hero__ask { margin-top: 26px; }
+
+.wall { position: absolute; inset: 0; z-index: 1; container-type: size; pointer-events: none; }
+@media (min-width: 861px) {
+  .hero { min-height: max(740px, 112svh); }
+  .wall { bottom: auto; height: max(660px, 100svh); }
+  .res--r .res__in { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+}
+.tile { position: absolute; left: var(--x); top: var(--y); width: var(--w); transform: perspective(1400px) translateZ(var(--z)) rotateY(var(--ry)); transform-origin: 50% 50%; }
+.tile__in { position: relative; aspect-ratio: 9 / 16; border-radius: 7%/4%; overflow: hidden; background: #111; box-shadow: 0 0 0 5px #0b0b10, 0 24px 40px -22px rgba(28, 26, 20, .55); }
+.tile__in img, .tile__in video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* the loops: a still that starts a slow push-in once its tile or phone is on screen, and pauses when it leaves */
+html.fx img[data-loop] { transform-origin: 50% 42%; animation: loop 9s var(--glide) infinite alternate paused; }
+html.fx img[data-loop].is-live { animation-play-state: running; }
+@keyframes loop { from { transform: none; } to { transform: scale(1.14) translateY(-2%); } }
+.tile--near .tile__in::before { content: ""; position: absolute; z-index: 2; top: 3.2%; left: 50%; width: 30%; height: 3.2%; border-radius: 999px; background: #0b0b10; transform: translateX(-50%); }
+/* desktop placements: x in cqw, y and size in cqh */
+.t-n  { --x: calc(50cqw - 15cqh); --y: 55cqh; --w: 30cqh; --z: 0px;    --ry: 0deg;   --d: .42s; z-index: 5; }
+.t-m1 { --x: calc(50cqw - 41cqh); --y: 61cqh; --w: 24cqh; --z: -120px; --ry: 10deg;  --d: .30s; z-index: 4; }
+.t-m2 { --x: calc(50cqw + 17cqh); --y: 61cqh; --w: 24cqh; --z: -120px; --ry: -10deg; --d: .34s; z-index: 4; }
+.t-f3 { --x: calc(50cqw - 66cqh); --y: 58cqh; --w: 22cqh; --z: -280px; --ry: 14deg;  --d: .18s; z-index: 3; }
+.t-f4 { --x: calc(50cqw + 44cqh); --y: 58cqh; --w: 22cqh; --z: -280px; --ry: -14deg; --d: .22s; z-index: 3; }
+.t-f1 { --x: max(2.5cqw, calc(50cqw - 86cqh)); --y: 15cqh; --w: 22cqh; --z: -380px; --ry: 16deg;  --d: .04s; z-index: 2; }
+.t-f2 { --x: min(calc(97.5cqw - 22cqh), calc(50cqw + 64cqh)); --y: 13cqh; --w: 22cqh; --z: -380px; --ry: -16deg; --d: .08s; z-index: 2; }
+
+/* hero load reveal (pre-reveal gate; final state with no JS and under reduced motion) */
+html.pre-reveal .tile { opacity: 0; transform: perspective(1400px) translateZ(calc(var(--z) - 900px)) translateY(-14%) rotateY(var(--ry)); }
+html.pre-reveal .eyebrow { opacity: 0; transform: translateY(10px); }
+html.pre-reveal .hero h1 .l { opacity: 0; transform: translateY(.5em); }
+html.pre-reveal .hero h1 .l2 { opacity: 0; }
+html.pre-reveal .pill { opacity: 0; transform: translateY(12px) scale(.94); }
+html.pre-reveal .hero__ask { opacity: 0; transform: translateY(18px); }
+html.reveal .tile { transition: transform .95s var(--ease) var(--d), opacity .2s linear var(--d); }
+html.reveal .eyebrow { transition: opacity .5s var(--ease) .55s, transform .6s var(--ease) .55s; }
+html.reveal .hero h1 .l { transition: opacity .5s var(--ease), transform .75s var(--ease); }
+html.reveal .hero h1 .l:nth-child(1) { transition-delay: .62s; }
+html.reveal .hero h1 .l2 { transition: opacity .5s var(--ease) .72s; }
+html.reveal .pill { transition: opacity .4s var(--ease), transform .55s var(--ease); }
+html.reveal .pill:nth-child(1) { transition-delay: .92s; }
+html.reveal .pill:nth-child(2) { transition-delay: .98s; }
+html.reveal .pill:nth-child(3) { transition-delay: 1.04s; }
+html.reveal .hero__ask { transition: opacity .5s var(--ease) 1.16s, transform .7s var(--ease) 1.16s; }
+/* desktop scroll: the three planes leave at three rates */
+@keyframes p-far { to { transform: translateY(16cqh); } }
+@keyframes p-mid { to { transform: translateY(6cqh); } }
+@keyframes p-near { to { transform: translateY(-10cqh) scale(1.05); } }
+
+/* ---------- scroll-linked depth moves (CSS scroll timelines, page-pixel ranges set by JS) ---------- */
+html.anim .sdx { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.anim .seg b.sdx { animation-name: seg-fill; }
+@keyframes seg-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+html.anim .t-f1 .tile__in.sdx, html.anim .t-f2 .tile__in.sdx, html.anim .t-f3 .tile__in.sdx, html.anim .t-f4 .tile__in.sdx { animation-name: p-far; }
+html.anim .t-m1 .tile__in.sdx, html.anim .t-m2 .tile__in.sdx { animation-name: p-mid; }
+html.anim .t-n .tile__in.sdx { animation-name: p-near; }
+
+/* ---------- 2. what we do: the services as a notification stack that opens (Stacked List x 10477) ---------- */
+.what { padding: 84px 0 88px; }
+.what__in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.what .lede { margin-top: 20px; }
+.stack { display: grid; gap: 14px; }
+.note { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 14px; padding: 18px 20px; border-radius: 22px; background: var(--bg); box-shadow: inset 0 0 0 1px var(--line); transform-origin: 50% 0; }
+.note__ic { grid-row: 1 / span 3; width: 44px; height: 44px; border-radius: 12px; background: var(--ink); display: grid; place-items: center; }
+.note__ic img { width: 30px; height: 30px; border-radius: 50%; }
+.note__app { font: 600 12px/1.3 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+.note h3 { font-size: 24px; letter-spacing: -.02em; }
+.note p { color: var(--body); font-size: 16px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; padding: 0; list-style: none; grid-column: 2; }
+.tags li { font: 600 13px/1 var(--display); padding: 7px 10px; border-radius: 999px; background: var(--pale); color: var(--gold); }
+@keyframes un-2 { from { transform: perspective(900px) translateY(calc(-1 * var(--dy, 0px))) translateZ(-60px) scale(.95); } }
+@keyframes un-3 { from { transform: perspective(900px) translateY(calc(-1 * var(--dy, 0px))) translateZ(-120px) scale(.9); } }
+@keyframes un-1 { from { transform: perspective(900px) translateZ(40px); } }
+/* triggered reveals: text never follows the scroll; the block plays through on its own once it reaches the screen */
+html.fx .stack.trg .note--1 { animation: un-1 .7s var(--ease) both paused; }
+html.fx .stack.trg .note--2 { animation: un-2 .7s var(--ease) both paused; }
+html.fx .stack.trg .note--3 { animation: un-3 .7s var(--ease) both paused; }
+html.fx .stack.trg.is-in .note { animation-play-state: running; }
+.note--1 { position: relative; z-index: 3; }
+.note--2 { position: relative; z-index: 2; }
+.note--3 { position: relative; z-index: 1; }
+
+/* ---------- 3 to 7. the ads, and the signature: the thumb-stop (Handle Reel 33159 + Phone Mockups 1 20020) ---------- */
+.ad { padding: 52px 0; }
+.ad__in { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.ad--r .ad__in { grid-template-columns: auto minmax(0, 1fr); }
+.ad--r .ad__copy { order: 2; }
+.ad__copy { max-width: 520px; }
+.ad--r .ad__copy { justify-self: start; }
+.ad:not(.ad--r) .ad__copy { justify-self: end; text-align: left; }
+.ad__intro { max-width: 1060px; margin: 0 auto 40px; }
+.ad__intro .h2 { color: #fff; }
+.ad h3 { font-size: clamp(40px, 5.2vw, 76px); letter-spacing: -.04em; }
+.ad__line { margin-top: 16px; font-size: 20px; line-height: 1.45; color: rgba(255, 255, 255, .82); max-width: 26ch; }
+.ad .kick { margin-bottom: 12px; }
+.stage { display: grid; place-items: center; }
+.phone { --pw: calc(min(74svh, 640px) * 9 / 16 + 16px); width: var(--pw); padding: 8px; box-sizing: border-box; border-radius: calc(var(--pw) * .13); background: #0b0b10; box-shadow: 0 0 0 1px rgba(255, 255, 255, .14), 0 40px 70px -40px rgba(0, 0, 0, .9); transform-origin: 50% 60%; }
+.phone__screen { position: relative; aspect-ratio: 9 / 16; border-radius: calc(var(--pw) * .1); overflow: hidden; background: #000; isolation: isolate; }
+.phone__screen::before { content: ""; position: absolute; z-index: 3; top: 2.6%; left: 50%; width: 30%; height: 3.4%; border-radius: 999px; background: #0b0b10; transform: translateX(-50%); }
+.feed { position: absolute; left: 0; right: 0; top: 0; height: 400%; display: flex; flex-direction: column; transform: translateY(-75%); }
+.feed > * { position: relative; flex: 0 0 25%; height: 25%; overflow: hidden; border-bottom: 3px solid #000; box-sizing: border-box; }
+.feed img, .feed video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ad__tag { position: absolute; z-index: 4; left: 8%; bottom: 5%; padding: 6px 10px; border-radius: 999px; background: rgba(28, 26, 20, .72); color: #fff; font: 600 12px/1 var(--display); letter-spacing: .02em; }
+@keyframes thumb-feed { from { transform: translateY(0); animation-timing-function: var(--glide); } to { transform: translateY(-75%); } }
+@keyframes thumb-phone {
+  0% { transform: perspective(1200px) rotateX(20deg) translateZ(-150px); animation-timing-function: cubic-bezier(.33, 0, .3, 1); }
+  84% { transform: perspective(1200px) rotateX(0deg) translateZ(0px); animation-timing-function: cubic-bezier(.3, 0, .5, 1); }
+  92% { transform: perspective(1200px) rotateX(0deg) translateZ(34px); animation-timing-function: cubic-bezier(.3, 0, .3, 1); }
+  100% { transform: perspective(1200px) rotateX(0deg) translateZ(0px); }
+}
+html.anim .feed.sdx { animation-name: thumb-feed; }
+html.anim .phone.sdx { animation-name: thumb-phone; }
+
+/* ---------- 8 to 13. the results (the peak): screenshots land from depth (Screenshot Capture 31173) ---------- */
+.res { padding: 44px 0; }
+.res__head { margin-bottom: 44px; max-width: 760px; }
+.res__head p:not(.kick) { margin-top: 14px; color: var(--body); font-size: 18px; max-width: 52ch; }
+.res__in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
+.res--r .res__txt { order: 2; }
+.res__fig { font-variant-numeric: tabular-nums; font-size: clamp(36px, 4.2vw, 60px); letter-spacing: -.035em; line-height: 1.04; }
+.res__src { margin-top: 16px; font-size: 15px; color: var(--soft); }
+.shot { margin: 0; justify-self: center; width: 100%; max-width: var(--mw, 640px); }
+.shot__card { position: relative; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px var(--line), 0 30px 50px -34px rgba(28, 26, 20, .45); transform-origin: 50% 100%; }
+.shot__card img { width: 100%; height: auto; }
+.shot__card::after { content: ""; position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; }
+.shot.is-snap .shot__card::after { animation: flash .42s ease-out 1; }
+@keyframes flash { 0% { opacity: 0; } 18% { opacity: .62; } 100% { opacity: 0; } }
+@keyframes land { from { transform: perspective(1100px) translateY(20px) rotateX(24deg) translateZ(-220px); } to { transform: none; } }
+html.anim .shot__card.sdx { animation-name: land; }
+
+/* ---------- 14. who it's for: rows from depth, the accent check (Animated Checkbox 10239) ---------- */
+.who { padding: 80px 0; }
+.who__in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: start; }
+.who .h2 { color: #fff; }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.check { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 16px; align-items: start; padding: 18px 20px; border-radius: 18px; background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1px var(--wline); font-size: 19px; line-height: 1.45; color: #fff; transform-origin: 50% 100%; }
+.check svg { width: 32px; height: 32px; }
+.check .ck-c { fill: var(--accent); }
+.check .ck-t { fill: none; stroke: var(--ink); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 20; stroke-dashoffset: 0; }
+@keyframes row-in { from { transform: perspective(900px) translateZ(-240px) rotateX(-16deg) translateY(30px); } }
+@keyframes tick { 0%, 55% { stroke-dashoffset: 20; } 100% { stroke-dashoffset: 0; } }
+html.fx .check.trg { animation: row-in .7s var(--ease) both paused; }
+html.fx .check.trg .ck-t { animation: tick .7s linear both paused; }
+html.fx .check.trg.is-in, html.fx .check.trg.is-in .ck-t { animation-play-state: running; }
+
+/* ---------- 15. voices: messages rising from depth (Message Bubble 34988) ---------- */
+.voices { padding: 80px 0; }
+.voices .h2 { max-width: 14ch; }
+.msgs { margin-top: 44px; columns: 3 300px; column-gap: 20px; }
+.msg { break-inside: avoid; margin: 0 0 20px; }
+.msg__b { position: relative; padding: 18px 20px; border-radius: 22px 22px 22px 6px; background: #fff; box-shadow: 0 0 0 1px var(--line); transform-origin: 0 100%; }
+.msg blockquote { margin: 0; font-size: 18px; line-height: 1.5; color: var(--ink); }
+.msg figcaption { margin: 10px 0 0 6px; font-size: 15px; color: var(--soft); }
+.msg figcaption b { color: var(--ink); font-weight: 600; }
+@keyframes msg-in { from { transform: perspective(900px) translateY(40px) rotateX(14deg) translateZ(-200px); } }
+html.fx .msg__b.trg { animation: msg-in .7s var(--ease) both paused; }
+html.fx .msg__b.trg.is-in { animation-play-state: running; }
+
+/* ---------- 16. clients: the camera pulls back from the wall (Video Scroll Hero 7512) ---------- */
+.clients { padding: 80px 0; }
+.logos { margin-top: 40px; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 12px; transform-origin: 50% 0; }
+.logo { margin: 0; aspect-ratio: 3 / 2; border-radius: 14px; background: #fff; box-shadow: 0 0 0 1px var(--line); position: relative; }
+.logo img { position: absolute; left: 14%; top: 18%; width: 72%; height: 64%; object-fit: contain; }
+.logo--dense img { left: 22%; top: 25%; width: 56%; height: 50%; }
+@keyframes pull { from { transform: perspective(1000px) translateZ(240px) rotateX(10deg); } }
+html.anim .logos.sdx { animation-name: pull; }
+
+/* ---------- 17. founders: story rings draw (Avatar Status Ring 44856), the reel card tilts flat ---------- */
+.founders { padding: 80px 0; }
+.f__in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: center; }
+.f__txt p.lede { margin-top: 18px; }
+.avs { display: flex; gap: 28px; margin-top: 32px; }
+.av { margin: 0; text-align: center; }
+.av__ring { position: relative; width: 128px; height: 128px; margin: 0 auto; }
+.av__ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.av__ring circle { fill: none; stroke: var(--gold); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 0; }
+.av__ring img { position: absolute; inset: 9px; width: calc(100% - 18px); height: calc(100% - 18px); border-radius: 50%; }
+.av figcaption { margin-top: 12px; font: 600 17px/1.3 var(--display); }
+@keyframes ring { from { stroke-dashoffset: 100; } }
+@keyframes av-up { from { transform: perspective(800px) translateZ(-180px) translateY(24px); } }
+html.fx .av.trg { animation: av-up .7s var(--ease) both paused; }
+html.fx .av.trg circle { animation: ring .6s var(--ease) .1s both paused; }
+html.fx .av.trg.is-in, html.fx .av.trg.is-in circle { animation-play-state: running; }
+.reel { position: relative; margin: 0; border-radius: 20px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; box-shadow: 0 30px 60px -34px rgba(28, 26, 20, .6); transform-origin: 50% 100%; }
+.reel img, .reel iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+.reel__cap { position: absolute; left: 16px; bottom: 14px; right: 100px; z-index: 2; color: #fff; font: 600 15px/1.3 var(--display); text-shadow: 0 1px 8px rgba(0, 0, 0, .6); }
+.reel__cap small { display: block; font: 500 13px/1.3 var(--text); opacity: .9; }
+.reel::before { content: ""; position: absolute; inset: 55% 0 0; z-index: 1; background: linear-gradient(0deg, rgba(0, 0, 0, .55), transparent); }
+.play { position: absolute; z-index: 3; left: 50%; top: 50%; width: 76px; height: 76px; margin: 0; padding: 0; border: 0; border-radius: 50%; background: var(--accent); color: var(--ink); cursor: pointer; transform: translate(-50%, -50%); display: grid; place-items: center; box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .6); transition: transform .35s var(--ease); }
+.play svg { width: 30px; height: 30px; margin-left: 4px; fill: currentColor; }
+@media (hover: hover) and (pointer: fine) { .play:hover { transform: translate(-50%, -50%) scale(1.06); } }
+.reel.is-playing .play, .reel.is-playing .reel__cap, .reel.is-playing::before { display: none; }
+@keyframes reel-in { from { transform: perspective(1100px) rotateX(18deg) translateZ(-160px); } }
+html.fx .reel.trg { animation: reel-in .7s var(--ease) both paused; }
+html.fx .reel.trg.is-in { animation-play-state: running; }
+
+/* ---------- 18. close: abrupt, full-bleed accent, the studio's giant wordmark behind (Giant Wordmark Footer 35508) ---------- */
+.close { position: relative; background: var(--accent); color: var(--ink); padding: 72px 0 0; overflow: clip; }
+.close__in { position: relative; z-index: 2; text-align: center; }
+.close h2 { font-size: clamp(44px, 6vw, 88px); letter-spacing: -.045em; max-width: 19ch; margin: 0 auto; }
+.close .cta { margin-top: 34px; background: var(--ink); color: var(--accent); min-height: 64px; font-size: 22px; padding: 0 1.6em; box-shadow: 0 14px 30px -14px rgba(28, 26, 20, .55); }
+.close .cta::after { background: linear-gradient(100deg, transparent 0%, rgba(247, 199, 54, .22) 50%, transparent 100%); }
+@media (hover: hover) and (pointer: fine) { .close .cta:hover { background: #2e2b22; } }
+.rows { list-style: none; margin: 56px auto 0; padding: 0; max-width: 1080px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); text-align: left; border-top: 1px solid rgba(28, 26, 20, .3); }
+.rows li { padding: 18px 16px 18px 0; }
+.rows li + li { padding-left: 16px; border-left: 1px solid rgba(28, 26, 20, .22); }
+.rows b { display: block; font: 600 12px/1.3 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); margin-bottom: 6px; }
+.rows a, .rows span { font-size: 16px; line-height: 1.4; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.rows a { text-decoration: underline; text-decoration-color: rgba(28, 26, 20, .45); text-underline-offset: 3px; }
+.legal { margin-top: 26px; font-size: 14px; color: var(--ink); }
+.legal a { color: var(--ink); }
+.legal--links { margin-top: 8px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; }
+.close__mark { position: relative; z-index: 1; margin-top: 30px; font: 700 clamp(80px, 21vw, 330px)/.78 "Hanken Grotesk", var(--text); letter-spacing: -.06em; text-align: center; color: rgba(28, 26, 20, .1); white-space: nowrap; transform-origin: 50% 100%; user-select: none; padding-bottom: calc(10px + var(--dock)); }
+@keyframes mark-up { from { transform: perspective(1000px) translateY(45%) translateZ(-200px) rotateX(24deg); } }
+html.anim .close__mark.sdx { animation-name: mark-up; }
+
+.dock { display: none; }
+
+/* ================= phones ================= */
+@media (max-width: 860px) {
+  :root { --bar: 58px; --lab: 0px; --dock: calc(64px + var(--lab) + env(safe-area-inset-bottom)); --score: 46px; }
+  body { font-size: 16px; }
+  .segs { top: 7px; }
+  .bar__row { top: 12px; }
+  .brand img { width: 30px; height: 30px; }
+  .brand span { font-size: 20px; }
+  .bar .cta { display: none; }
+  .score { position: absolute; left: calc(-1 * var(--gut)); right: calc(-1 * var(--gut)); top: calc(100% + 0px); height: var(--score); padding: 0 var(--gut) 8px; box-sizing: border-box; display: flex; gap: 5px; align-items: center; background: var(--ink); border-top: 1px solid var(--wline); transform-origin: 50% 0; transform: perspective(500px) rotateX(-88deg); opacity: 1; visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; }
+  html.score-on .score { transform: perspective(500px) rotateX(0deg); visibility: visible; transition: transform .5s var(--ease), visibility 0s; }
+  .slot { flex: 1 1 0; min-width: 0; height: 30px; }
+  .slot__in { padding: 0 2px; }
+  .slot b, .slot__ghost b { font-size: 13px; }
+  .slot__ghost { display: none; }
+
+  .hero { min-height: 0; padding-bottom: 18px; }
+  .hero__head { padding-top: calc(var(--bar) + 22px); }
+  .eyebrow { font-size: 11.5px; letter-spacing: .12em; margin-bottom: 12px; }
+  .hero h1 { font-size: clamp(31px, 8.7vw, 40px); line-height: 1.07; }
+  .hero h1 .l, .hero h1 .l2 { display: inline; }
+  .pills { gap: 6px; margin-top: 14px; font-size: 15px; }
+  .pill { min-height: 34px; padding: 0 .8em; }
+  .hero__ask { margin-top: 18px; }
+  .hero .cta--big { min-height: 54px; font-size: 18px; }
+  .wall { position: relative; inset: auto; width: 100%; aspect-ratio: 100 / 92; container-type: inline-size; margin-top: 18px; }
+  .t-n  { --x: 29cqw; --y: 18cqw; --w: 42cqw; }
+  .t-m1 { --x: 3cqw;  --y: 12cqw; --w: 30cqw; --z: -110px; --ry: 12deg; }
+  .t-m2 { --x: 67cqw; --y: 12cqw; --w: 30cqw; --z: -110px; --ry: -12deg; }
+  .t-f1 { --x: 15cqw; --y: 0cqw;  --w: 26cqw; --z: -240px; --ry: 8deg; }
+  .t-f2 { --x: 59cqw; --y: 0cqw;  --w: 26cqw; --z: -240px; --ry: -8deg; }
+  .t-f3, .t-f4 { display: none; }
+  .tile__in { box-shadow: 0 0 0 4px #0b0b10, 0 18px 30px -18px rgba(28, 26, 20, .55); }
+
+  .what { padding: 56px 0 64px; }
+  .what__in { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .h2 { font-size: clamp(32px, 9.2vw, 44px); }
+  .lede { font-size: 17px; }
+  .note { grid-template-columns: 38px minmax(0, 1fr); padding: 16px; border-radius: 20px; gap: 3px 12px; }
+  .note__ic { width: 38px; height: 38px; border-radius: 10px; }
+  .note__ic img { width: 26px; height: 26px; }
+  .note h3 { font-size: 21px; }
+  .note p { font-size: 15px; }
+
+  .ad { padding: 44px 0 52px; }
+  .ad__in, .ad--r .ad__in { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .ad--r .ad__copy { order: 0; }
+  .ad__copy, .ad:not(.ad--r) .ad__copy { justify-self: start; }
+  .ad__intro { margin-bottom: 26px; }
+  .ad h3 { font-size: clamp(28px, 8vw, 32px); }
+  .ad__line { font-size: 17px; margin-top: 10px; }
+  .phone { --pw: min(68vw, calc(52svh * 9 / 16 + 16px)); }
+
+  .res { padding: calc(var(--score) + 34px) 0 44px; }
+  .res--first { padding-top: 56px; }
+  .res__head { margin-bottom: 28px; }
+  .res__head p:not(.kick) { font-size: 16px; }
+  .res__in { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .res--r .res__txt { order: 0; }
+  .res__fig { font-size: clamp(30px, 8.6vw, 40px); }
+  .res__src { margin-top: 10px; font-size: 15px; }
+  .shot__card { border-radius: 14px; }
+
+  .who { padding: 56px 0 64px; }
+  .who__in { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .check { font-size: 16px; padding: 14px 16px; gap: 12px; grid-template-columns: 28px minmax(0, 1fr); }
+  .check svg { width: 28px; height: 28px; }
+
+  .voices { padding: 56px 0 64px; }
+  .msgs { margin-top: 26px; columns: 1; }
+  .msg { margin-bottom: 14px; }
+  .msg blockquote { font-size: 16px; }
+  .msg figcaption { font-size: 15px; }
+
+  .clients { padding: 56px 0 64px; }
+  .logos { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 26px; }
+  .logo { border-radius: 10px; }
+
+  .founders { padding: 56px 0 64px; }
+  .f__in { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .avs { gap: 20px; justify-content: flex-start; }
+  .av__ring { width: 112px; height: 112px; }
+  .av figcaption { font-size: 15px; }
+  .play { width: 64px; height: 64px; }
+  .play svg { width: 26px; height: 26px; }
+  .reel__cap { right: 16px; bottom: 12px; font-size: 14px; }
+  .reel__cap small { font-size: 12px; }
+
+  .close { padding-top: 72px; }
+  .close h2 { font-size: clamp(40px, 11.6vw, 54px); }
+  .close .cta { width: 100%; min-height: 60px; font-size: 20px; }
+  .close__note { font-size: 15px; }
+  .rows { grid-template-columns: minmax(0, 1fr); margin-top: 36px; }
+  .rows li, .rows li + li { padding: 14px 0; border-left: 0; border-bottom: 1px solid rgba(28, 26, 20, .22); }
+  .rows a, .legal a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+  .rows li, .rows li + li { padding: 8px 0; }
+  .close__mark { font-size: 20vw; margin-top: 24px; }
+
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock); box-sizing: border-box;
+    padding: var(--lab) var(--gut) env(safe-area-inset-bottom); align-items: center; justify-content: center;
+    background: var(--ink); border-top: 1px solid var(--wline); transition: transform .4s var(--ease);
+  }
+  .dock .cta { width: 100%; min-height: 48px; font-size: 18px; }
+  .dock.is-away { transform: translateY(calc(100% - var(--lab) - env(safe-area-inset-bottom) - 1px)); }
+  .dock.is-away .cta { visibility: hidden; }
+}
+@media (max-width: 380px) {
+  .hero h1 { font-size: 30px; }
+  .pills { font-size: 14px; }
+  .slot b { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta, .cta .arw, .dock, .score, .slot__in, .play { transition: none !important; }
+  img[data-loop] { animation: none !important; }
+  .shot.is-snap .shot__card::after { animation: none; }
+}
+</style>
+</head>
+<body id="page">
+<a class="skip" href="#what">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="arw" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="bar" id="bar">
+  <div class="segs" id="segs" aria-hidden="true"></div>
+  <div class="bar__row">
+    <a class="brand" href="#top" aria-label="Mosswick, back to top"><img src="assets/img/mark.svg" alt="" width="34" height="34"><span>Mosswick</span></a>
+    <div class="score" id="score" aria-hidden="true">
+      <span class="slot" data-slot="0"><span class="slot__ghost"><b>64</b><small>delis</small></span><span class="slot__in"><b>64</b><small>delis</small></span></span>
+      <span class="slot" data-slot="1"><span class="slot__ghost"><b>+22%</b><small>footfall</small></span><span class="slot__in"><b>+22%</b><small>footfall</small></span></span>
+      <span class="slot" data-slot="2"><span class="slot__ghost"><b>5 wks</b><small>booked out</small></span><span class="slot__in"><b>5 wks</b><small>booked out</small></span></span>
+      <span class="slot" data-slot="3"><span class="slot__ghost"><b>2.4×</b><small>subscribers</small></span><span class="slot__in"><b>2.4×</b><small>subscribers</small></span></span>
+      <span class="slot" data-slot="4"><span class="slot__ghost"><b>640</b><small>test rides</small></span><span class="slot__in"><b>640</b><small>test rides</small></span></span>
+      <span class="slot" data-slot="5"><span class="slot__ghost"><b>3×</b><small>leads</small></span><span class="slot__in"><b>3×</b><small>leads</small></span></span>
+    </div>
+    <a class="cta cta--sheen" href="https://example.com" target="_blank" rel="noopener">Start a project<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a>
+  </div>
+</header>
+
+<main>
+<!-- 1. hero -->
+<section class="hero" id="top" data-sc-act="flow" aria-labelledby="h1">
+  <div class="hero__head">
+    <p class="eyebrow">A creative and marketing studio of 32 people in Lowmere</p>
+    <h1 id="h1"><span class="l">We make brands people can <span class="l2"><em>pick out of a crowd</em> with</span></span> <span class="pills"><span class="pill p-g">Identity and websites</span> <span class="pill p-o">Film and social content</span> <span class="pill p-p">Paid media</span></span></h1>
+    <div class="hero__ask"><a class="cta cta--big cta--sheen" data-big href="https://example.com" target="_blank" rel="noopener">Start a project<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a></div>
+  </div>
+  <div class="wall" id="wall">
+    <figure class="tile t-f1" style="margin:0"><div class="tile__in"><img src="assets/work/wall-01.jpg" alt="Kilnmark: handmade plates and bowls in speckled glazes on linen." width="432" height="768" fetchpriority="low"></div></figure>
+    <figure class="tile t-f2" style="margin:0"><div class="tile__in"><img src="assets/work/wall-02.jpg" alt="Cragloft: a climbing wall with pink, yellow and teal holds." width="432" height="768" fetchpriority="low"></div></figure>
+    <figure class="tile t-f3" style="margin:0"><div class="tile__in"><img src="assets/work/wall-03.jpg" alt="Paywren: an invoice app on a phone beside a notebook and tea." width="432" height="768" fetchpriority="low"></div></figure>
+    <figure class="tile t-f4" style="margin:0"><div class="tile__in"><img src="assets/work/wall-04.jpg" alt="Hollin Gallery: a bright white room with three abstract canvases." width="432" height="768" fetchpriority="low"></div></figure>
+    <figure class="tile t-m1" style="margin:0"><div class="tile__in"><img src="assets/work/wall-05.jpg" alt="Tumblewick: wooden toys beside their open boxes." width="432" height="768" data-loop data-desk></div></figure>
+    <figure class="tile t-m2" style="margin:0"><div class="tile__in"><img src="assets/work/wall-06.jpg" alt="River Commons Trust: a heron in the misty city river." width="432" height="768" data-loop data-desk></div></figure>
+    <figure class="tile t-n tile--near" style="margin:0"><div class="tile__in"><img src="assets/work/wall-07.jpg" alt="Saltmarrow: wave-printed snack bags at the waterline." width="432" height="768" fetchpriority="high" data-loop></div></figure>
+  </div>
+</section>
+
+<!-- 2. what we do -->
+<section class="what g-white" id="what" data-sc-act="flow" aria-labelledby="what-h">
+  <div class="wrap what__in">
+    <div>
+      <p class="kick">What we do</p>
+      <h2 class="h2" id="what-h">One team, in one studio</h2>
+      <p class="lede">Mosswick is a creative and marketing studio in Lowmere. Thirty-two strategists, designers, writers, filmmakers and media buyers work in one studio, making brands that look good and marketing that earns its keep: identities, websites, films, social content and the paid media that gets them seen.</p>
+    </div>
+    <div class="stack" id="stack">
+      <article class="note note--1"><span class="note__ic" aria-hidden="true"><img src="assets/img/mark.svg" alt="" width="30" height="30" loading="lazy"></span><span class="note__app">Mosswick</span><h3>Brand identity</h3><p>Logos, type, colour and rules</p><ul class="tags"><li>Logo and wordmark</li><li>Guidelines</li></ul></article>
+      <article class="note note--2"><span class="note__ic" aria-hidden="true"><img src="assets/img/mark.svg" alt="" width="30" height="30" loading="lazy"></span><span class="note__app">Mosswick</span><h3>Performance marketing</h3><p>One plain dashboard, updated daily</p><ul class="tags"><li>Paid social</li><li>Paid search</li></ul></article>
+      <article class="note note--3"><span class="note__ic" aria-hidden="true"><img src="assets/img/mark.svg" alt="" width="30" height="30" loading="lazy"></span><span class="note__app">Mosswick</span><h3>Film and social content</h3><p>Brand films, product videos, reels and monthly series</p><ul class="tags"><li>Scripts</li><li>Shoots</li><li>Editing</li><li>Motion</li><li>Cutdowns</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 to 7. the ads -->
+<section class="ad g-ink" id="ad-1" data-sc-act="flow" aria-labelledby="ads-h">
+  <div class="wrap">
+    <div class="ad__intro"><p class="kick">Film and social</p><h2 class="h2" id="ads-h">Work people stop scrolling for</h2></div>
+    <div class="ad__in">
+      <div class="ad__copy"><h3>Brand film</h3><p class="ad__line">One shoot, cut for every place the film will run</p></div>
+      <div class="stage"><div class="phone"><div class="phone__screen"><div class="feed">
+        <div><img src="assets/feed/feed-01.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-02.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-03.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/work/cut-01.jpg" alt="Velloway brand film: a cyclist on a wet city street at dusk." width="432" height="768" loading="lazy" data-loop></div>
+      </div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ad ad--r g-night" id="ad-2" data-sc-act="flow" aria-labelledby="ad2-h">
+  <div class="wrap"><div class="ad__in">
+    <div class="ad__copy"><h3 id="ad2-h">Product video</h3><p class="ad__line">Empty pools, libraries, night trains</p></div>
+    <div class="stage"><div class="phone"><div class="phone__screen"><div class="feed">
+        <div><img src="assets/feed/feed-04.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-05.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-06.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/work/cut-02.jpg" alt="Stillreed product video: headphones on the edge of an empty pool." width="432" height="768" loading="lazy" data-loop></div>
+      </div></div></div></div>
+  </div></div>
+</section>
+
+<section class="ad g-ink" id="ad-3" data-sc-act="flow" aria-labelledby="ad3-h">
+  <div class="wrap"><div class="ad__in">
+    <div class="ad__copy"><h3 id="ad3-h">Social series</h3><p class="ad__line">Short, odd films about fermentation</p></div>
+    <div class="stage"><div class="phone"><div class="phone__screen"><div class="feed">
+        <div><img src="assets/feed/feed-07.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-08.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-09.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/work/cut-03.jpg" alt="Fizzwold social series: kombucha cans in a tub of ice." width="432" height="768" loading="lazy" data-loop></div>
+      </div></div></div></div>
+  </div></div>
+</section>
+
+<section class="ad ad--r g-night" id="ad-4" data-sc-act="flow" aria-labelledby="ad4-h">
+  <div class="wrap"><div class="ad__in">
+    <div class="ad__copy"><h3 id="ad4-h">Campaign film</h3><p class="ad__line">Run clubs on slow Sunday miles</p></div>
+    <div class="stage"><div class="phone"><div class="phone__screen"><div class="feed">
+        <div><img src="assets/feed/feed-10.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-11.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-12.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/work/cut-04.jpg" alt="Fernstride campaign film: running shoes mid-stride on a park path." width="432" height="768" loading="lazy" data-loop></div>
+      </div></div></div></div>
+  </div></div>
+</section>
+
+<section class="ad g-ink" id="ad-5" data-sc-act="flow" aria-labelledby="ad5-h">
+  <div class="wrap"><div class="ad__in">
+    <div class="ad__copy"><h3 id="ad5-h">Behind the scenes</h3><p class="ad__line">Small crews, real locations, first takes</p></div>
+    <div class="stage"><div class="phone"><div class="phone__screen"><div class="feed">
+        <div><img src="assets/feed/feed-13.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-14.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/feed/feed-15.jpg" alt="" width="216" height="384" loading="lazy"></div>
+        <div><img src="assets/work/cut-05.jpg" alt="Behind the scenes: a phone rig filming a bottle on a studio set." width="432" height="768" loading="lazy" data-loop></div>
+      </div></div></div></div>
+  </div></div>
+</section>
+
+<!-- 8 to 13. the results (the peak) -->
+<section class="res res--first g-bg" id="r1" data-sc-act="flow" data-res="0" aria-labelledby="res-h">
+  <div class="wrap">
+    <div class="res__head"><p class="kick">Results</p><h2 class="h2" id="res-h">Good work that also shows up in the numbers</h2><p>We agree two or three numbers at the start and report on them every month in plain language.</p></div>
+    <div class="res__in">
+      <div class="res__txt"><p class="kick">Food and drink</p><h3 class="res__fig">Stocked in 64 delis within a year</h3><p class="res__src">Plumtide, brand identity and packaging, 2025</p></div>
+      <figure class="shot" style="--mw: 520px"><div class="shot__card"><img src="assets/img/result-01.jpg" alt="Plumtide cordial bottles lined up in morning sun." width="790" height="615" loading="lazy"></div></figure>
+    </div>
+  </div>
+</section>
+<section class="res res--r g-pale" id="r2" data-sc-act="flow" data-res="1" aria-labelledby="r2-h">
+  <div class="wrap"><div class="res__in">
+    <div class="res__txt"><p class="kick">Retail</p><h3 class="res__fig" id="r2-h">Footfall up 22% across six shops</h3><p class="res__src">Periwink, social content and campaigns, 2026</p></div>
+    <figure class="shot" style="--mw: 600px"><div class="shot__card"><img src="assets/img/result-02.jpg" alt="Periwink: a wall of eyeglass frames sorted by colour." width="700" height="445" loading="lazy"></div></figure>
+  </div></div>
+</section>
+<section class="res g-bg" id="r3" data-sc-act="flow" data-res="2" aria-labelledby="r3-h">
+  <div class="wrap"><div class="res__in">
+    <div class="res__txt"><p class="kick">Hospitality</p><h3 class="res__fig" id="r3-h">Booked out for the first five weeks</h3><p class="res__src">Okra &amp; Ash, identity, website and social, 2025</p></div>
+    <figure class="shot" style="--mw: 640px"><div class="shot__card"><img src="assets/img/result-03.jpg" alt="Okra &amp; Ash: the wood-fired oven glowing in the kitchen." width="1055" height="642" loading="lazy"></div></figure>
+  </div></div>
+</section>
+<section class="res res--r g-pale" id="r4" data-sc-act="flow" data-res="3" aria-labelledby="r4-h">
+  <div class="wrap"><div class="res__in">
+    <div class="res__txt"><p class="kick">Pet food</p><h3 class="res__fig" id="r4-h">Subscriptions up 2.4× in a year</h3><p class="res__src">Houndsbury, packaging and paid social, 2024</p></div>
+    <figure class="shot" style="--mw: 600px"><div class="shot__card"><img src="assets/img/result-04.jpg" alt="Houndsbury: a terrier beside an open meal box." width="664" height="433" loading="lazy"></div></figure>
+  </div></div>
+</section>
+<section class="res g-bg" id="r5" data-sc-act="flow" data-res="4" aria-labelledby="r5-h">
+  <div class="wrap"><div class="res__in">
+    <div class="res__txt"><p class="kick">Mobility</p><h3 class="res__fig" id="r5-h">640 test rides booked in the launch quarter</h3><p class="res__src">Gearfinch, film, website and paid media, 2026</p></div>
+    <figure class="shot" style="--mw: 680px"><div class="shot__card"><img src="assets/img/result-05.jpg" alt="Gearfinch: a cargo e-bike parked on a leafy street." width="1200" height="520" loading="lazy"></div></figure>
+  </div></div>
+</section>
+<section class="res res--r g-pale" id="r6" data-sc-act="flow" data-res="5" aria-labelledby="r6-h">
+  <div class="wrap"><div class="res__in">
+    <div class="res__txt"><p class="kick">Energy</p><h3 class="res__fig" id="r6-h">Qualified leads up 3×</h3><p class="res__src">Voltmere, brand, website and lead campaign, 2025</p></div>
+    <figure class="shot" style="--mw: 600px"><div class="shot__card"><img src="assets/img/result-06.jpg" alt="Voltmere: solar panels on a slate roof." width="654" height="176" loading="lazy"></div></figure>
+  </div></div>
+</section>
+
+<!-- 14. who it's for -->
+<section class="who g-night" id="who" data-sc-act="flow" aria-labelledby="who-h">
+  <div class="wrap who__in">
+    <div><p class="kick">Who we work with</p><h2 class="h2" id="who-h">For founders who want bold work</h2></div>
+    <ul class="checks">
+      <li class="check"><svg viewBox="0 0 32 32" aria-hidden="true"><circle class="ck-c" cx="16" cy="16" r="16"/><path class="ck-t" pathLength="20" d="M9.5 16.5l4.4 4.3 8.6-9.3"/></svg><span>Growing companies of 10 to 500 people who want work bold enough to notice and sound enough to grow with.</span></li>
+      <li class="check"><svg viewBox="0 0 32 32" aria-hidden="true"><circle class="ck-c" cx="16" cy="16" r="16"/><path class="ck-t" pathLength="20" d="M9.5 16.5l4.4 4.3 8.6-9.3"/></svg><span>Founders and marketing leads with a brand that deserves far more attention than it gets.</span></li>
+      <li class="check"><svg viewBox="0 0 32 32" aria-hidden="true"><circle class="ck-c" cx="16" cy="16" r="16"/><path class="ck-t" pathLength="20" d="M9.5 16.5l4.4 4.3 8.6-9.3"/></svg><span>Food and drink brands, shops, clinics, charities and start-ups.</span></li>
+      <li class="check"><svg viewBox="0 0 32 32" aria-hidden="true"><circle class="ck-c" cx="16" cy="16" r="16"/><path class="ck-t" pathLength="20" d="M9.5 16.5l4.4 4.3 8.6-9.3"/></svg><span>Teams who want one idea they can say in a single breath.</span></li>
+      <li class="check"><svg viewBox="0 0 32 32" aria-hidden="true"><circle class="ck-c" cx="16" cy="16" r="16"/><path class="ck-t" pathLength="20" d="M9.5 16.5l4.4 4.3 8.6-9.3"/></svg><span>Teams who want honest numbers, reported every month in plain language.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 15. voices -->
+<section class="voices g-bg" id="voices" data-sc-act="flow" aria-labelledby="voices-h">
+  <div class="wrap">
+    <p class="kick">From our clients</p>
+    <h2 class="h2" id="voices-h">What clients tell us</h2>
+    <div class="msgs">
+      <figure class="msg"><div class="msg__b"><blockquote><p>"They asked better questions in the first week than our last agency did in a year. The new brand finally sounds like us."</p></blockquote></div><figcaption><b>Nadia Ferrante</b>, Founder, Plumtide</figcaption></figure>
+      <figure class="msg"><div class="msg__b"><blockquote><p>"Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us exactly what every bit of spend brought back."</p></blockquote></div><figcaption><b>Owen Haddad</b>, Head of Growth, Paywren</figcaption></figure>
+      <figure class="msg"><div class="msg__b"><blockquote><p>"The film crew turned up in the pouring rain, smiling. Months later, people still stop us at trade shows to talk about that campaign."</p></blockquote></div><figcaption><b>Jonas Pell</b>, Marketing Director, Velloway</figcaption></figure>
+      <figure class="msg"><div class="msg__b"><blockquote><p>"We had eight weeks to open a restaurant with no name. They gave us a name on the door, a full booking diary and a lot less stress."</p></blockquote></div><figcaption><b>Cora Mbeki-Lane</b>, Owner, Okra &amp; Ash</figcaption></figure>
+      <figure class="msg"><div class="msg__b"><blockquote><p>"Plain words, quick replies and work we are proud to put our name on. We have renewed with them every year since our first project."</p></blockquote></div><figcaption><b>Ilse Varga</b>, Director, Hollin Gallery</figcaption></figure>
+      <figure class="msg"><div class="msg__b"><blockquote><p>"Honest about what would work and what would not. That honesty saved us a lot of money in our first quarter of selling bikes."</p></blockquote></div><figcaption><b>Felix Andersen-Ruiz</b>, Co-founder, Gearfinch</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 16. clients -->
+<section class="clients g-white" id="clients" data-sc-act="flow" aria-labelledby="clients-h">
+  <div class="wrap">
+    <p class="kick">Clients</p>
+    <h2 class="h2" id="clients-h">A few of our 140+ brands</h2>
+    <div class="logos" id="logos">
+      <figure class="logo"><img src="assets/logos/client-01.svg" alt="Plumtide" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-02.svg" alt="Velloway" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-03.svg" alt="Kilnmark" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-04.svg" alt="Tallow Lane Coffee" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-05.svg" alt="Okra &amp; Ash" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-06.svg" alt="Paywren" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-07.svg" alt="Marshlight Festival" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-08.svg" alt="Fernstride" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-09.svg" alt="Hollin Gallery" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-10.svg" alt="Houndsbury" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-11.svg" alt="Stillreed" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-12.svg" alt="Tumblewick" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-13.svg" alt="Halvane Watch Co." width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-14.svg" alt="Cairnstone" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-15.svg" alt="Shelterly" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-16.svg" alt="Gilded Hare" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-17.svg" alt="Periwink" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-18.svg" alt="Owlhour" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-19.svg" alt="Saltmarrow" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-20.svg" alt="Gearfinch" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-21.svg" alt="Cragloft" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo logo--dense"><img src="assets/logos/client-22.svg" alt="Voltmere" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-23.svg" alt="Mendhaven" width="300" height="60" loading="lazy"></figure>
+      <figure class="logo"><img src="assets/logos/client-24.svg" alt="Fizzwold" width="300" height="60" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 17. founders -->
+<section class="founders g-pale" id="founders" data-sc-act="flow" aria-labelledby="founders-h">
+  <div class="wrap f__in">
+    <div class="f__txt">
+      <p class="kick">Who you'll meet</p>
+      <h2 class="h2" id="founders-h">Ines Calloway and Tobias Okonjo-Hale</h2>
+      <p class="lede">Mosswick's two founders. Your first call is with one of them.</p>
+      <div class="avs">
+        <figure class="av"><div class="av__ring"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" pathLength="100"/></svg><img src="assets/img/team-1.webp" alt="Ines Calloway" width="240" height="240" loading="lazy"></div><figcaption>Ines Calloway</figcaption></figure>
+        <figure class="av"><div class="av__ring"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" pathLength="100"/></svg><img src="assets/img/team-2.webp" alt="Tobias Okonjo-Hale" width="240" height="240" loading="lazy"></div><figcaption>Tobias Okonjo-Hale</figcaption></figure>
+      </div>
+    </div>
+    <figure class="reel" id="reel" data-video="https://example.com/">
+      <img src="assets/img/film-still.jpg" alt="Still from the Mosswick studio film: the team standing together in the studio." width="960" height="540" loading="lazy">
+      <button class="play" type="button" id="reel-play" aria-label="Play the Mosswick studio film"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.8v16.4L20 12z"/></svg></button>
+      <figcaption class="reel__cap">Mosswick studio film<small>Meet the people behind the work, 2:40</small></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 18. close -->
+<section class="close" id="contact" data-sc-act="flow" aria-labelledby="close-h">
+  <div class="wrap close__in">
+    <h2 id="close-h">Book a free 30&nbsp;minute intro call</h2>
+    <a class="cta cta--big" data-big href="https://example.com" target="_blank" rel="noopener">Start a project<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a>
+    <ul class="rows">
+      <li><b>New projects</b><a href="mailto:projects@example.com">projects@example.com</a></li>
+      <li><b>Email</b><a href="mailto:hello@example.com">hello@example.com</a></li>
+      <li><b>Call</b><a href="tel:+15550142">+1 555 0142</a></li>
+      <li><b>Studio</b><span>1 Example Street, Lowmere</span></li>
+      <li><b>Hours</b><span>Monday to Friday, 9am to 6pm</span></li>
+    </ul>
+    <p class="legal">Mosswick Studio, Lowmere. Example content. Swap in your own.</p>
+    <p class="legal legal--links"><a href="https://example.com">Privacy policy</a><a href="https://example.com">Terms</a><a href="https://example.com">Cookies</a></p>
+  </div>
+  <div class="close__mark" aria-hidden="true">Mosswick</div>
+</section>
+</main>
+
+<div class="dock" id="dock"><a class="cta cta--sheen" href="https://example.com" target="_blank" rel="noopener">Start a project<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a></div>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var fx = root.classList.contains('fx');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  var cuts = [].slice.call(document.querySelectorAll('main > section'));
+
+  /* ---- the stories bar: one segment per cut ---- */
+  var segs = document.getElementById('segs');
+  segs.innerHTML = cuts.map(function (c) { return '<span class="seg' + (c.hasAttribute('data-res') ? ' is-res' : '') + '"><b></b></span>'; }).join('');
+  var segEls = [].slice.call(segs.children);
+
+  /* ---- hero reveal, once the type and the hero frames are ready ---- */
+  function startHero() {
+    [].forEach.call(document.querySelectorAll('.hero img[data-loop]'), function (v) {
+      v.setAttribute('data-on', '');
+      if (v.hasAttribute('data-desk') && phoneQ.matches) return;
+      want(v, true);
+    });
+  }
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+      setTimeout(startHero, 1200);
+    };
+    var waits = [];
+    if (document.fonts && document.fonts.ready) waits.push(document.fonts.ready);
+    [].forEach.call(document.querySelectorAll('.hero .tile img'), function (im) { if (im.decode) waits.push(im.decode().catch(function () {})); });
+    Promise.all(waits).then(go, go);
+    setTimeout(go, 1600);
+  }
+
+  /* ---- loops: play only what is on screen, pause what leaves ---- */
+  function want(v, on) {
+    if (!fx || !v) return;
+    v.classList.toggle('is-live', !!on);
+  }
+  if ('IntersectionObserver' in window) {
+    var heroIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        [].forEach.call(e.target.querySelectorAll('img[data-loop]'), function (v) {
+          if (v.hasAttribute('data-desk') && phoneQ.matches) return;
+          if (!e.isIntersecting) want(v, false); else if (!root.classList.contains('pre-reveal') && v.hasAttribute('data-on')) want(v, true);
+        });
+      });
+    }, { threshold: 0 });
+    heroIO.observe(document.getElementById('top'));
+    var adIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var v = e.target.querySelector('img[data-loop]');
+        if (e.intersectionRatio >= .72) want(v, true); else if (e.intersectionRatio < .35) want(v, false);
+      });
+    }, { threshold: [0, .35, .72, 1] });
+    [].forEach.call(document.querySelectorAll('.phone'), function (p) { adIO.observe(p); });
+
+    /* ---- triggered reveals: each text block plays through on its own once any of it is on screen,
+       and resets out of sight below the screen so it plays again on the way back down ---- */
+    if (fx) {
+      var trg = [].slice.call(document.querySelectorAll('.stack, .check, .msg__b, .av, .reel'));
+      trg.forEach(function (el) { el.classList.add('trg'); });
+      var tIO = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          var el = e.target;
+          if (e.isIntersecting) el.classList.add('is-in');
+          else if (e.boundingClientRect.top > 0 && el.classList.contains('is-in')) {
+            el.classList.remove('is-in', 'trg'); void el.offsetWidth; el.classList.add('trg');
+          }
+        });
+      }, { threshold: 0 });
+      trg.forEach(function (el) { tIO.observe(el); });
+    }
+  }
+
+  /* ---- the studio film plays on tap: the player is created only now (swap data-video for your own embed URL) ---- */
+  var reel = document.getElementById('reel');
+  document.getElementById('reel-play').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = reel.getAttribute('data-video') || 'https://example.com/';
+    f.title = 'Mosswick studio film';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    reel.appendChild(f); reel.classList.add('is-playing');
+  });
+
+  /* ---- scroll-linked ranges, in page pixels, for the CSS scroll timelines ---- */
+  function pageTop(el) { var y = 0; for (var e = el; e; e = e.offsetParent) y += e.offsetTop; return y; }
+  function setR(el, a, b) {
+    if (!el) return;
+    if (b <= a + 1) b = a + 2;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    el.classList.add('sdx');
+  }
+  var cutTop = [], cutEnd = [], resShot = [], resTop0 = 0, resEnd = 0, maxY = 0;
+  function measure() {
+    var vh = innerHeight, phone = phoneQ.matches;
+    maxY = document.documentElement.scrollHeight - vh;
+    cutTop = cuts.map(pageTop); cutEnd = cuts.map(function (c, i) { return cutTop[i] + c.offsetHeight; });
+    var R = [].slice.call(document.querySelectorAll('[data-res]'));
+    resShot = R.map(function (r) { var s = r.querySelector('.shot'); return pageTop(s) + s.offsetHeight * .5; });
+    resTop0 = pageTop(R[0].querySelector('.res__in')); resEnd = cutEnd[cuts.indexOf(R[R.length - 1])];
+    var st = document.getElementById('stack'), n1 = st.children[0].offsetTop;
+    [].forEach.call(st.children, function (n, i) { n.style.setProperty('--dy', (n.offsetTop - n1 - 12 * i) + 'px'); });
+    if (!anim) return;
+
+    /* stories segments fill while their cut holds the middle of the screen */
+    segEls.forEach(function (s, i) { setR(s.firstChild, Math.max(0, cutTop[i] - vh * .5), Math.min(maxY, cutEnd[i] - vh * .5)); });
+
+    /* hero, desktop only: three planes leave at three rates */
+    var hero = cuts[0];
+    [].forEach.call(hero.querySelectorAll('.tile__in'), function (t) {
+      if (phone) { t.classList.remove('sdx'); return; }
+      setR(t, 0, hero.offsetHeight);
+    });
+
+    /* services: the stack opens on its own once it reaches the screen (triggered, see below) */
+
+    /* the thumb-stop: the feed and the phone share one range, ending when the phone sits just below the middle */
+    [].forEach.call(document.querySelectorAll('.phone'), function (p) {
+      var t = pageTop(p), h = p.offsetHeight;
+      var a = t - vh, b = Math.max(a + vh * .3, t + h * .5 - vh * .56);
+      setR(p, a, b); setR(p.querySelector('.feed'), a, b - (b - a) * .16);
+    });
+
+    /* results: each screenshot lands flat from depth */
+    [].forEach.call(document.querySelectorAll('.shot__card'), function (c) {
+      var t = pageTop(c), h = c.offsetHeight;
+      setR(c, t - vh * .98, Math.max(t - vh * .6, t + h * .5 - vh * .58));
+    });
+
+    /* who it's for, voices: rows and messages come forward on their own (triggered, see below) */
+    /* clients: the camera pulls back from the wall */
+    var lg = document.getElementById('logos'), lT = pageTop(lg);
+    setR(lg, lT - vh, lT + lg.offsetHeight * .5 - vh * .55);
+    /* founders: rings draw, faces rise and the film card stands up on their own (triggered, see below) */
+    /* close: the studio wordmark rises behind the CTA */
+    var mk = document.querySelector('.close__mark'), mT = pageTop(mk);
+    setR(mk, Math.min(mT - vh, maxY - vh * .7), maxY);
+  }
+
+  /* ---- the peak, held in the bar: on time, at a screen line, so a slot is never half drawn ---- */
+  var slots = [].slice.call(document.querySelectorAll('.slot'));
+  var shots = [].slice.call(document.querySelectorAll('.shot'));
+  var tick = false, lastOn = null, lastFill = [], lastSeg = -2;
+  function chrome() {
+    tick = false;
+    var y = scrollY, vh = innerHeight;
+    var on = y + vh * .62 > resTop0 && y + vh * .3 < resEnd;
+    if (on !== lastOn) { root.classList.toggle('score-on', on); lastOn = on; }
+    resShot.forEach(function (c, i) {
+      var f = y + vh * .56 > c;
+      if (f !== lastFill[i]) {
+        slots[i].classList.toggle('is-on', f); lastFill[i] = f;
+        if (f && fx) { shots[i].classList.remove('is-snap'); void shots[i].offsetWidth; shots[i].classList.add('is-snap'); }
+      }
+    });
+    if (!anim) {
+      var cur = -1; for (var i = 0; i < cutTop.length; i++) if (y + vh * .5 >= cutTop[i]) cur = i;
+      if (cur !== lastSeg) { segEls.forEach(function (s, k) { s.classList.toggle('is-done', k <= cur); }); lastSeg = cur; }
+    }
+    var away = bigs.some(function (b) { var r = b.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight - 40; });
+    dock.classList.toggle('is-away', away);
+    root.classList.toggle('dock-away', away && phoneQ.matches);
+  }
+  var dock = document.getElementById('dock');
+  var bigs = [].slice.call(document.querySelectorAll('[data-big]'));
+  var lastW = -1;
+  function all() { measure(); lastW = innerWidth; lastOn = null; lastFill = []; lastSeg = -2; chrome(); }
+  all();
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(chrome); } }, { passive: true });
+  addEventListener('resize', function () { if (innerWidth !== lastW || !phoneQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; all(); } }).observe(document.body); }
+  setTimeout(chrome, 1800);
+})();
+</script>
+</body>
+</html>

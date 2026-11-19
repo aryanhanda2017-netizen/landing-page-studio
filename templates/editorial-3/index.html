@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio in Lowmere</title>
+<meta name="description" content="Mosswick Studio is a creative and marketing studio of 32 people in Lowmere, founded in 2014. Work for Okra &amp; Ash, Velloway, Houndsbury and Fernstride.">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta property="og:description" content="We make brands people can pick out of a crowd: brand identity, social content, campaigns, websites, film and motion. Lowmere, since 2014.">
+<meta property="og:image" content="https://example.com/og-image.jpg">
+<meta property="og:image:alt" content="Sand-coloured Stillreed headphones on the edge of an empty pool.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@mosswickstudio">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta name="twitter:description" content="We make brands people can pick out of a crowd. Lowmere, since 2014.">
+<meta name="twitter:image" content="https://example.com/og-image.jpg">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-700.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/worksans-var.woff2" crossorigin>
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 700; font-display: swap; src: url(assets/fonts/cormorant-700.woff2) format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 600; font-display: swap; src: url(assets/fonts/cormorant-600i.woff2) format('woff2'); }
+@font-face { font-family: 'Work Sans'; font-style: normal; font-weight: 300 700; font-display: swap; src: url(assets/fonts/worksans-var.woff2) format('woff2'); }
+
+:root {
+  --paper: #FAF8F4; --white: #FFFFFF; --ink: #111111; --ink-2: #5C5853; --ink-3: #6B665F;
+  --acc: #B83A22; --acc-text: #9A2F1B; --acc-rim: #93301C; --acc-hi: #E0805F; --pale: #F3E6DE; --pale-2: #E8D2C6;
+  --on-ink: #FAF8F4; --on-ink-2: #B8B1A7;
+  --line: rgba(17, 17, 17, .14); --line-ink: rgba(250, 248, 244, .16);
+  --serif: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --sans: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --bar: 64px; --dock: 0px; --lab: 0px;
+  --gut: clamp(20px, 4.4vw, 72px);
+  --sc-canvas: var(--paper); --sc-surface: var(--white); --sc-ink: var(--ink); --sc-ink-soft: var(--ink-2);
+  --sc-accent: var(--acc); --sc-accent-ink: #FFFFFF;
+  --sc-font-display: var(--serif); --sc-font-text: var(--sans);
+}
+html { background: var(--paper); }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; letter-spacing: 0; overflow-x: clip; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; margin: 0; letter-spacing: -0.015em; line-height: 1.02; }
+p { margin: 0; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 200; background: var(--ink); color: #fff; padding: 10px 14px; text-decoration: none; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--acc-text); outline-offset: 3px; }
+.g-ink :focus-visible { outline-color: var(--acc-hi); }
+.eyebrow { font-size: 12px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--ink-2); }
+section { position: relative; overflow-x: clip; }
+.g-paper { background: var(--paper); }
+.g-pale { background: var(--pale); }
+.g-ink { background: var(--ink); color: var(--on-ink); }
+
+/* ---------- the one CTA ---------- */
+.cta { display: inline-flex; align-items: center; gap: 12px; height: 44px; padding: 0 18px 0 20px; background: var(--ink); color: #fff; text-decoration: none; font: 500 15px/1 var(--sans); letter-spacing: .01em; border-radius: 2px; white-space: nowrap; transition: background-color .3s var(--ease); }
+.cta:hover { background: #000; }
+.g-ink .cta, .cta--light { background: var(--acc); color: #fff; }
+.cube { position: relative; width: 16px; height: 16px; transform-style: preserve-3d; transition: transform .45s var(--ease); flex: none; }
+.cube > span { position: absolute; inset: 0; display: grid; place-items: center; backface-visibility: hidden; }
+.cube > span:first-child { transform: translateZ(8px); }
+.cube > span:last-child { transform: rotateX(90deg) translateZ(8px); }
+.cube svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.cta:hover .cube, .cta:focus-visible .cube { transform: rotateX(-90deg); }
+.cta--big { height: 56px; padding: 0 22px 0 26px; font-size: 17px; }
+
+/* ---------- running head ---------- */
+.bar { position: fixed; z-index: 90; left: 0; right: 0; top: 0; height: var(--bar); display: flex; align-items: center; gap: 28px; padding: 0 var(--gut); background: var(--paper); border-bottom: 1px solid var(--line); box-sizing: border-box; }
+.bar__brand { flex: none; display: block; padding: 6px 0; }
+.bar__brand img { width: 124px; height: 32px; }
+.bar__nav { position: relative; display: flex; align-items: center; gap: 6px; margin-left: auto; margin-right: auto; font-size: 14px; font-weight: 500; letter-spacing: .06em; }
+.bar__nav a { text-decoration: none; padding: 10px 10px; color: var(--ink-2); transition: color .3s var(--ease); }
+.bar__nav a[aria-current="true"], .bar__nav a:hover { color: var(--ink); }
+.bar__nav .dot { color: var(--ink-3); }
+.bar__mark { position: absolute; left: 0; bottom: 4px; width: 1px; height: 2px; background: var(--acc); transform-origin: 0 50%; transform: translateX(var(--mx, 0px)) scaleX(var(--mw, 0)); opacity: 0; transition: transform .5s var(--ease), opacity .3s var(--ease); }
+.bar__nav.has-mark .bar__mark { opacity: 1; }
+.bar__now { display: none; }
+.dock { display: none; }
+
+/* ---------- tin parts (shared) ---------- */
+.mk-o, .mk-mono { fill: var(--acc); }
+.mk-tint { fill: var(--acc); fill-opacity: .085; }
+.mk-glass { fill: var(--acc); fill-opacity: .035; }
+.mk-shine { fill: #fff; opacity: .7; }
+.g-ink .mk-tint { fill: #fff; fill-opacity: .06; }
+.g-ink .mk-glass { fill: #fff; fill-opacity: .03; }
+.g-ink .mk-shine { opacity: .28; }
+.g-ink .slot .mk-o, .g-ink .slot .mk-mono { fill: var(--acc-hi); }
+
+/* ---------- title page ---------- */
+.hero { min-height: 100vh; min-height: 100svh; box-sizing: border-box; padding: calc(var(--bar) + clamp(24px, 4vh, 48px)) var(--gut) calc(28px + var(--dock)); display: grid; grid-template-columns: 1fr auto 1fr; grid-template-rows: auto 1fr; column-gap: 24px; }
+.hero__type { grid-column: 1 / -1; grid-row: 1; position: relative; z-index: 2; }
+.hero__type .eyebrow { margin-bottom: 16px; }
+.hero h1 { font-size: clamp(46px, 5.4vw, 86px); line-height: .98; letter-spacing: -0.02em; }
+.ln { display: block; overflow: hidden; padding-bottom: .08em; margin-bottom: -.08em; }
+.ln > span { display: inline-block; }
+.hero__scene { grid-column: 2; grid-row: 2; position: relative; align-self: end; display: grid; justify-items: center; }
+.hero__ask { grid-column: 1; grid-row: 2; align-self: end; display: grid; gap: 16px; justify-items: start; padding-bottom: 44px; position: relative; z-index: 2; }
+.hero__where { font-size: 14px; color: var(--ink-2); letter-spacing: .02em; }
+.hero__cap { grid-column: 3; grid-row: 2; align-self: end; justify-self: end; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 22px; color: var(--ink-2); padding-bottom: 10px; position: relative; z-index: 2; }
+.floor { position: absolute; left: calc(-50vw + 50%); right: calc(-50vw + 50%); bottom: -1.2%; height: 1px; background: var(--line); }
+
+.htin { --jh: clamp(300px, calc(100svh - 352px), 700px); --jw: calc(var(--jh) * .8111); --jd: calc(var(--jw) * .12); position: relative; width: var(--jw); height: var(--jh); perspective: 1500px; perspective-origin: 50% 30%; margin-top: 28px; }
+.htin__turn, .htin__body { position: absolute; inset: 0; transform-style: preserve-3d; }
+.htin__body { transform: rotateX(-9deg) rotateY(-20deg); }
+.ht { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; }
+.ht--back { transform: translateZ(calc(var(--jd) * -1)); opacity: .42; }
+.ht--front { transform: translateZ(var(--jd)); }
+.ht--front .mk-o { stroke: var(--acc); stroke-width: 7; stroke-dasharray: 1; stroke-dashoffset: 0; }
+.ht--mono .mk-mono { stroke: var(--acc); stroke-width: 7; stroke-dasharray: 1; stroke-dashoffset: 0; }
+.rim { position: absolute; top: 0; height: calc(var(--jd) * 2); margin-top: calc(var(--jd) * -1); background: var(--acc-rim); transform: rotateX(90deg); }
+.rim--l { left: 0; width: 54.72%; border-radius: 3px 0 0 3px; }
+.rim--r { left: 64.69%; width: 35.31%; border-radius: 0 3px 3px 0; }
+.ht-shadow { position: absolute; left: 4%; width: 92%; top: 100%; height: calc(var(--jd) * 3); margin-top: calc(var(--jd) * -1.5); transform: rotateX(90deg); background: radial-gradient(closest-side, rgba(17, 17, 17, .22), rgba(17, 17, 17, 0)); }
+.disc { position: absolute; left: calc(var(--x) * 100%); top: calc(var(--y) * 100%); width: calc(var(--s) * 100%); aspect-ratio: 1; margin: calc(var(--s) * -50%) 0 0 calc(var(--s) * -50%); border-radius: 50%; overflow: hidden; background: var(--white); box-shadow: 0 0 0 2px var(--paper), 0 8px 18px -8px rgba(17, 17, 17, .45); transform: translate3d(0, 0, calc(var(--jd) * var(--z))) rotateY(var(--r)) rotateX(var(--t, 0deg)); }
+.disc img { width: 100%; height: 100%; object-fit: cover; }
+
+html.pre-reveal .hero .ln > span, html.pre-reveal .hero__type .eyebrow, html.pre-reveal .hero__ask, html.pre-reveal .hero__cap, html.pre-reveal .disc, html.pre-reveal .rim, html.pre-reveal .hero .ht--back, html.pre-reveal .hero .ht-shadow { opacity: 0; }
+html.pre-reveal .hero .ht--front .mk-o, html.pre-reveal .hero .ht--mono .mk-mono { stroke-dashoffset: 1; fill-opacity: 0; }
+html.pre-reveal .hero .htin__body { transform: none; }
+html.pre-reveal .hero .ht--front { transform: none; }
+html.reveal .hero .ht--front .mk-o, html.reveal .hero .ht--mono .mk-mono { animation: trace .82s cubic-bezier(.45, 0, .25, 1) both; }
+html.reveal .hero .htin__body { animation: tin-turn .9s var(--ease) .62s both; }
+html.reveal .hero .ht--front { animation: tin-front .9s var(--ease) .62s both; }
+html.reveal .hero .ht--back { animation: tin-back .9s var(--ease) .62s both; }
+html.reveal .rim, html.reveal .hero .ht-shadow { animation: fade-in .5s var(--ease) .9s both; }
+html.reveal .disc { animation: drop .62s cubic-bezier(.3, .6, .25, 1) both; animation-delay: calc(.86s + var(--i) * .075s); }
+html.reveal .hero .ln > span { animation: rise .8s var(--ease) both; }
+html.reveal .hero .ln + .ln > span { animation-delay: .08s; }
+html.reveal .hero__type .eyebrow { animation: fade-up .7s var(--ease) both; }
+html.reveal .hero__ask { animation: land .7s var(--ease) 1.25s both; }
+html.reveal .hero__cap { animation: fade-up .7s var(--ease) 1.4s both; }
+@keyframes trace { 0% { stroke-dashoffset: 1; fill-opacity: 0; } 72% { stroke-dashoffset: 0; fill-opacity: 0; } 100% { stroke-dashoffset: 0; fill-opacity: 1; } }
+@keyframes tin-turn { from { transform: rotateX(0deg) rotateY(0deg); } to { transform: rotateX(-9deg) rotateY(-20deg); } }
+@keyframes tin-front { from { transform: translateZ(0px); } to { transform: translateZ(var(--jd)); } }
+@keyframes tin-back { from { transform: translateZ(0px); opacity: 0; } to { transform: translateZ(calc(var(--jd) * -1)); opacity: .42; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes land { from { opacity: 0; transform: translateY(16px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes drop {
+  0% { opacity: 0; transform: translate3d(calc((.597 - var(--x)) * var(--jw)), calc((.13 - var(--y)) * var(--jh)), 0px) rotateY(90deg) rotateX(0deg); }
+  12% { opacity: 1; }
+  40% { transform: translate3d(calc((.597 - var(--x)) * var(--jw)), calc((.24 - var(--y)) * var(--jh)), 0px) rotateY(90deg) rotateX(0deg); }
+  100% { opacity: 1; transform: translate3d(0, 0, calc(var(--jd) * var(--z))) rotateY(var(--r)) rotateX(var(--t, 0deg)); }
+}
+
+/* desktop: the type plane lifts once the page moves; the tin turns with the scroll as the title page leaves */
+html.anim .hero__type.tg { transition: transform .6s var(--ease); }
+html.anim .hero__type.tg.on { transform: translateY(-70px); }
+html.anim .htin__turn.sd { animation-name: tin-scroll; }
+@keyframes tin-scroll { to { transform: translateY(-5%) rotateY(-16deg); } }
+
+/* ---------- scroll-driven plumbing (ranges in page pixels, set by JS); text moves use .tg/.on triggers instead ---------- */
+html.anim .sd { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.anim .sd2 { animation-duration: auto, auto; animation-timing-function: linear, linear; animation-fill-mode: both, forwards; animation-timeline: scroll(root block), scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px), var(--f0, 0px) var(--f1, 1px); }
+html.anim .sdn { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: none; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+
+/* ---------- chapter heads ---------- */
+.ch { padding: clamp(80px, 12vh, 140px) var(--gut) clamp(72px, 10vh, 120px); }
+.ch__head { display: grid; grid-template-columns: auto 1fr; align-items: end; column-gap: clamp(24px, 4vw, 64px); row-gap: 16px; margin-bottom: clamp(48px, 8vh, 96px); }
+.ch__verb { font-size: clamp(76px, 12.4vw, 184px); line-height: .86; letter-spacing: -0.025em; position: relative; padding-bottom: .1em; }
+.ch__verb::after { content: ''; position: absolute; left: .04em; bottom: 0; width: 1.6em; height: max(4px, .035em); background: var(--acc); transform-origin: 0 50%; }
+.ch__head[data-sc-in] .ch__verb::after { transform: scaleX(0); transition: transform .9s var(--ease) .25s; }
+.ch__head.sc-in .ch__verb::after { transform: none; }
+.ch__stand { max-width: 30ch; font-size: clamp(17px, 1.35vw, 21px); line-height: 1.45; color: var(--ink-2); padding-bottom: .9em; }
+.g-ink .ch__stand { color: var(--on-ink-2); }
+
+/* ---------- listen: the passage and the raked services plane ---------- */
+.aeo { max-width: 46ch; font-size: clamp(19px, 1.6vw, 24px); line-height: 1.5; margin: 0 0 clamp(40px, 7vh, 80px); }
+.svc__lens { perspective: 1100px; perspective-origin: 50% -70%; }
+.svc__plane { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); transform-origin: 50% 100%; }
+.svc__plane li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 5fr) minmax(0, 3fr); gap: 24px; align-items: baseline; padding: 28px 0 24px; border-bottom: 1px solid var(--line); }
+.svc__plane h3 { font-size: clamp(40px, 4.4vw, 68px); line-height: .95; }
+.svc__plane p { font-size: 17px; color: var(--ink-2); max-width: 36ch; }
+.svc__plane .seen { font-size: 13px; letter-spacing: .02em; color: var(--acc-text); }
+html.anim .svc__plane.tg { transform: rotateX(50deg) translateZ(-40px); transition: transform .6s var(--ease); }
+html.anim .svc__plane.tg.on { transform: none; }
+
+/* ---------- cases: the slot, its tin, the disc that comes out ---------- */
+.case { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: min-content 1fr; column-gap: 24px; row-gap: 0; align-items: start; margin-top: clamp(80px, 13vh, 150px); }
+.case__media { grid-column: 1 / 8; grid-row: 1 / span 2; }
+.case__head { grid-column: 9 / -1; grid-row: 1; padding-top: 6px; }
+.case__body { grid-column: 9 / -1; grid-row: 2; }
+.case--flip .case__media { grid-column: 6 / -1; }
+.case--flip .case__head, .case--flip .case__body { grid-column: 1 / 5; }
+.kick { font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--acc-text); margin-bottom: 12px; }
+.g-ink .kick { color: var(--acc-hi); }
+.case h3 { font-size: clamp(32px, 3vw, 48px); line-height: 1.02; margin-bottom: 20px; }
+.case__body p { color: var(--ink-2); margin-bottom: 16px; max-width: 42ch; }
+.g-ink .case__body p { color: var(--on-ink-2); }
+.facts { list-style: none; margin: 20px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.facts li { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.facts b { font-family: var(--serif); font-size: 34px; line-height: 1; letter-spacing: -0.01em; }
+.facts span { font-size: 15px; color: var(--ink-2); }
+.cap { font-size: 13px; color: var(--ink-3); margin-top: 12px; }
+.g-ink .cap { color: var(--on-ink-2); }
+.minis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+.minis img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 2px; }
+
+.slot { --ix: 18.75%; --mx: 3.1%; position: relative; aspect-ratio: 16 / 10; container-type: inline-size; }
+.tl { --jd: 3.4cqw; position: absolute; left: 50%; bottom: 4%; height: 64%; aspect-ratio: 1164 / 1435; translate: -50% 0; pointer-events: none; }
+.tl svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.tl--b .mk-o { opacity: .42; }
+.tl--b { z-index: 1; transform: perspective(1100px) rotateY(-18deg) translateZ(calc(var(--jd) * -1)); }
+.tl--f { z-index: 3; transform: perspective(1100px) rotateY(-18deg) translateZ(var(--jd)); }
+.pop { --rx: 0px; --ry: 14%; --rs: .26; --my1: -13%; --my2: -24%; position: absolute; inset: 0; margin: 0; z-index: 5; transform-origin: 50% 50%; background: #111111; border-radius: 4px; }
+.pop img, .pop video { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+html.anim .pop.sd2 { animation-name: pop-in, pop-out; }
+html.anim .pop.sd { animation-name: pop-in; }
+@keyframes pop-in {
+  0% { transform: perspective(1100px) translate3d(var(--rx), var(--ry), 0px) scale(var(--rs)) rotateY(0deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 2; }
+  22% { transform: perspective(1100px) translate3d(var(--mx), var(--my1), 0px) scale(var(--rs)) rotateY(86deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 2; }
+  33% { transform: perspective(1100px) translate3d(var(--mx), var(--my2), 0px) scale(var(--rs)) rotateY(90deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 2; }
+  34% { transform: perspective(1100px) translate3d(var(--mx), var(--my2), 0px) scale(var(--rs)) rotateY(90deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 5; }
+  58% { transform: perspective(1100px) translate3d(calc(var(--mx) * .5), calc(var(--my2) * .75), 90px) scale(calc(var(--rs) * 1.6)) rotateY(0deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 5; animation-timing-function: cubic-bezier(.3, .2, .2, 1); }
+  100% { transform: perspective(1100px) translate3d(0px, 0px, 0px) scale(1) rotateY(0deg); clip-path: inset(0 0 round 4px); z-index: 5; }
+}
+@keyframes pop-out {
+  0% { transform: perspective(1100px) translate3d(0px, 0px, 0px) scale(1) rotateY(0deg); clip-path: inset(0 0 round 4px); z-index: 5; animation-timing-function: cubic-bezier(.8, 0, .7, .8); }
+  42% { transform: perspective(1100px) translate3d(calc(var(--mx) * .5), calc(var(--my2) * .75), 90px) scale(calc(var(--rs) * 1.6)) rotateY(0deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 5; }
+  66% { transform: perspective(1100px) translate3d(var(--mx), var(--my2), 0px) scale(var(--rs)) rotateY(-90deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 5; }
+  67% { transform: perspective(1100px) translate3d(var(--mx), var(--my2), 0px) scale(var(--rs)) rotateY(-90deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 2; }
+  78% { transform: perspective(1100px) translate3d(var(--mx), var(--my1), 0px) scale(var(--rs)) rotateY(-86deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 2; }
+  100% { transform: perspective(1100px) translate3d(var(--rx), var(--ry), 0px) scale(var(--rs)) rotateY(0deg); clip-path: inset(0 var(--ix) round 2000px); z-index: 2; }
+}
+.play { position: absolute; left: 50%; top: 50%; width: 76px; height: 76px; margin: -38px 0 0 -38px; border-radius: 50%; border: 0; background: var(--paper); color: var(--ink); cursor: pointer; display: grid; place-items: center; box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .6); transition: transform .35s var(--ease); }
+.play:hover { transform: scale(1.06); }
+.play svg { width: 26px; height: 26px; margin-left: 4px; fill: currentColor; }
+.play__t { position: absolute; left: 50%; top: calc(100% + 10px); transform: translateX(-50%); white-space: nowrap; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: rgba(17, 17, 17, .86); padding: 5px 9px; border-radius: 2px; }
+html.anim .play.sd2 { animation-name: show-late, hide-early; animation-timing-function: step-end, step-end; }
+@keyframes show-late { 0%, 90% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; } }
+@keyframes hide-early { 0% { opacity: 1; visibility: visible; } 10%, 100% { opacity: 0; visibility: hidden; } }
+.pop.is-playing .play { display: none; }
+
+/* ---------- decide: one tin, five projects (the peak) ---------- */
+.ehead { margin-bottom: clamp(40px, 7vh, 80px); }
+.eslot { display: none; }
+html.anim #decide.is-pin { padding: 0; }
+html.anim #decide.is-pin .estage { height: 100vh; height: 100svh; box-sizing: border-box; padding: calc(var(--bar) + clamp(18px, 3.4vh, 40px)) var(--gut) calc(clamp(20px, 4vh, 44px) + var(--dock)); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: auto minmax(0, 1fr); column-gap: 24px; }
+html.anim #decide.is-pin .ehead { grid-column: 1 / -1; grid-row: 1; margin-bottom: clamp(14px, 3vh, 34px); }
+html.anim #decide.is-pin .ehead .ch__verb { font-size: clamp(64px, 8.4vw, 132px); }
+html.anim #decide.is-pin .ecase { display: contents; }
+html.anim #decide.is-pin .eslot, html.anim #decide.is-pin .ecase__media { grid-column: 1 / 8; grid-row: 2; align-self: center; width: min(100%, calc((100svh - var(--bar) - 220px - var(--dock)) * 1.6)); justify-self: start; }
+html.anim #decide.is-pin .eslot { display: block; }
+html.anim #decide.is-pin .ecase__text { grid-column: 9 / -1; grid-row: 2; align-self: center; opacity: 0; }
+html.anim #decide.is-pin .ecase__text.sdn { animation-name: on; }
+@keyframes on { from { opacity: 1; } to { opacity: 1; } }
+html.anim #decide.is-pin .ecase { margin: 0; }
+#decide .tl { --jd: 4.6cqw; height: 88%; bottom: 5%; }
+.ecase { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; margin-top: clamp(56px, 9vh, 110px); align-items: center; }
+.ecase__media { grid-column: 1 / 8; }
+.ecase__text { grid-column: 9 / -1; }
+.ecase h3 { font-size: clamp(32px, 3.2vw, 52px); margin-bottom: 16px; }
+.ecase p { color: var(--on-ink-2); max-width: 40ch; margin-bottom: 12px; }
+.ecase .facts { border-color: var(--line-ink); }
+.ecase .facts li { border-color: var(--line-ink); }
+.ecase .facts span { color: var(--on-ink-2); }
+.ecase__media .tl { display: none; }
+
+/* ---------- launch: shelves ---------- */
+.shelf { margin-top: clamp(80px, 12vh, 140px); }
+.shelf__title { font-size: clamp(30px, 2.8vw, 44px); margin-bottom: 8px; }
+.shelf__lede { color: var(--ink-2); margin-bottom: 36px; max-width: 48ch; }
+.shelf__row { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 36px); padding-bottom: 22px; margin-bottom: clamp(44px, 7vh, 72px); transform-style: preserve-3d; transform: perspective(1300px) rotateX(-4deg); transform-origin: 100% 100%; }
+.shelf__row:last-child { margin-bottom: 0; }
+#launch { padding-bottom: clamp(56px, 8vh, 84px); }
+.shelf__board { position: absolute; left: -2%; right: -2%; bottom: 0; height: 12px; background: var(--pale-2); border-top: 1px solid rgba(17, 17, 17, .12); }
+.shelf__board::before { content: ''; position: absolute; left: 0; right: 0; bottom: 100%; height: 80px; background: linear-gradient(rgba(232, 210, 198, 0), var(--pale-2)); transform-origin: 50% 100%; transform: rotateX(88deg); }
+.item { margin: 0; position: relative; }
+.item__box { aspect-ratio: 1; background: var(--white); box-shadow: 0 14px 22px -16px rgba(17, 17, 17, .5); overflow: hidden; }
+.item__box img { width: 100%; height: 100%; object-fit: cover; }
+.item figcaption { margin-top: 12px; font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.item figcaption b { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.05; color: var(--ink); margin-bottom: 4px; }
+.item--spec .item__box { display: flex; flex-direction: column; justify-content: space-between; padding: clamp(18px, 2vw, 28px); box-sizing: border-box; border: 1px solid var(--ink); background: var(--paper); }
+.spec__k { font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--acc-text); }
+.spec__t { font-family: var(--serif); font-size: clamp(26px, 2.4vw, 38px); line-height: 1; }
+.spec__l { list-style: none; margin: 0; padding: 0; font-size: 13.5px; line-height: 1.3; }
+.spec__l li { padding: 5px 0; border-top: 1px solid var(--line); }
+html.anim .shelf__row.tg { transform: perspective(1300px) rotateX(-4deg) rotateY(-34deg) translateZ(-140px); transition: transform .6s var(--ease); }
+html.anim .shelf__row.tg.on { transform: perspective(1300px) rotateX(-4deg); }
+
+/* ---------- clients: the stack spreads out ---------- */
+.clients { padding: clamp(72px, 10vh, 112px) var(--gut) clamp(72px, 10vh, 112px); text-align: left; }
+.clients h2 { font-size: clamp(48px, 6.4vw, 104px); line-height: .95; margin: 12px 0 clamp(32px, 5vh, 56px); max-width: 12ch; }
+.tokens { position: relative; list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(18px, 2.6vw, 40px); max-width: 1080px; }
+.token { aspect-ratio: 1; border-radius: 50%; background: var(--white); border: 1px solid var(--line); box-shadow: 0 12px 22px -14px rgba(17, 17, 17, .5); display: grid; place-items: center; }
+.token img { width: 74%; height: auto; }
+html.anim .token.sd { animation-name: unstack; }
+@keyframes unstack { from { transform: perspective(900px) translate3d(var(--sx, 0px), calc(var(--sy, 0px) - var(--i) * 7px), 0px) rotateX(72deg); } to { transform: perspective(900px) translate3d(0px, 0px, 0px) rotateX(0deg); } }
+
+/* ---------- founders: cards that open on a fold ---------- */
+.founders { padding: clamp(72px, 10vh, 112px) var(--gut) clamp(52px, 6.5vh, 76px); }
+.founders h2 { font-size: clamp(48px, 6vw, 96px); line-height: .95; margin-bottom: 20px; }
+.founders__lede { color: var(--on-ink-2); max-width: 46ch; margin-bottom: 32px; font-size: 18px; }
+.fcards { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 44px); }
+.fcard { position: relative; color: var(--ink); }
+.fcard__flap { position: relative; height: 124px; transform-origin: 50% 100%; transform-style: preserve-3d; }
+.fcard__front, .fcard__back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--paper); box-sizing: border-box; }
+.fcard__front { display: flex; flex-direction: column; justify-content: flex-end; padding: 24px 28px 18px; border-bottom: 1px dashed rgba(17, 17, 17, .25); }
+.fcard__front h3 { font-size: clamp(30px, 2.8vw, 42px); }
+.fcard__front p { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--acc-text); margin-top: 8px; }
+.fcard__back { transform: rotateX(180deg); display: grid; place-items: center; background: var(--paper); }
+.fcard__back svg { width: 44px; height: 54px; }
+.fcard__body { margin: 0; background: var(--paper); padding: 24px 28px 28px; min-height: 124px; box-sizing: border-box; }
+.fcard__body p { font-family: var(--serif); font-style: italic; font-weight: 600; font-size: clamp(22px, 1.9vw, 28px); line-height: 1.3; }
+html.anim .fcard__flap.tg { transform: perspective(1000px) rotateX(-178deg); transition: transform .6s var(--ease); }
+html.anim .fcard__flap.tg.on { transform: perspective(1000px) rotateX(0deg); }
+
+/* ---------- close: the tin label ---------- */
+.close { padding: clamp(80px, 12vh, 140px) var(--gut) calc(48px + var(--dock)); }
+.cstage { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: clamp(24px, 4vw, 64px); align-items: center; }
+html.anim #contact.is-pin { padding: 0; }
+html.anim #contact.is-pin .cstage { height: 100vh; height: 100svh; box-sizing: border-box; padding: calc(var(--bar) + 20px) var(--gut) calc(24px + var(--dock)); }
+.ctin { --jh: clamp(420px, calc(100svh - 196px), 740px); --jw: calc(var(--jh) * .8111); --jd: calc(var(--jw) * .14); position: relative; width: var(--jw); height: var(--jh); perspective: 1500px; justify-self: center; }
+.ctin__body { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateY(0deg); }
+.label { position: absolute; left: 13%; right: 13%; top: 17%; transform: translateZ(calc(var(--jd) + 2px)); background: var(--white); color: var(--ink); padding: clamp(18px, 2.4vw, 32px) clamp(18px, 2.2vw, 30px) clamp(20px, 2.6vw, 34px); box-sizing: border-box; border: 1px solid var(--ink); box-shadow: 0 18px 30px -22px rgba(17, 17, 17, .6); }
+.label::after { content: ''; position: absolute; right: -1px; top: -1px; width: 22px; height: 22px; background: linear-gradient(225deg, var(--paper) 50%, var(--pale-2) 50%); border-left: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.label__brand { width: 110px; height: auto; margin-bottom: 16px; }
+.label h2 { font-size: clamp(30px, 3vw, 48px); line-height: 1; margin-bottom: 16px; }
+.label__rows { margin: 0 0 18px; padding: 0; list-style: none; font-size: 13px; border-top: 1px solid var(--ink); }
+.label__rows li { display: grid; grid-template-columns: 82px 1fr; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.label__rows b { font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: 11px; color: var(--ink-2); padding-top: 2px; }
+html.anim .ctin__body.tg { transform: rotateY(-26deg) rotateX(-6deg); transition: transform .6s var(--ease); }
+html.anim .label.tg { transform: translateZ(calc(var(--jd) + 170px)) rotateY(24deg) rotateZ(-4deg); transition: transform .6s cubic-bezier(.2, .9, .3, 1.04); }
+html.anim .ctin__body.tg.on { transform: rotateY(0deg) rotateX(0deg); }
+html.anim .label.tg.on { transform: translateZ(calc(var(--jd) + 2px)) rotateY(0deg) rotateZ(0deg); }
+.close__rows { font-style: normal; }
+.close__rows h3 { font-size: clamp(28px, 2.6vw, 40px); margin-bottom: 20px; }
+.crow { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 16px; }
+.crow:last-of-type { border-bottom: 1px solid var(--line); }
+.crow span { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); padding-top: 4px; }
+.crow a { text-decoration: none; border-bottom: 1px solid var(--line); }
+.crow a:hover { border-color: var(--ink); }
+.socials { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.legal { margin-top: 20px; font-size: 13px; color: var(--ink-3); }
+
+/* ---------- reduced motion, no scroll timelines ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .cube, .bar__mark, .cta, .play { transition: none; }
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 860px) {
+  :root { --bar: 56px; --lab: 0px; --dock: calc(68px + var(--lab) + env(safe-area-inset-bottom)); --gut: 16px; }
+  body { font-size: 16px; }
+  .bar { gap: 12px; }
+  .bar__brand img { width: 108px; height: 28px; }
+  .bar__nav { display: none; }
+  .bar .cta { display: none; }
+  .bar__now { display: block; margin-left: auto; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); padding-bottom: 3px; border-bottom: 2px solid var(--acc); white-space: nowrap; }
+  .bar__now:empty { display: none; }
+  .dock { display: block; position: fixed; z-index: 90; left: 0; right: 0; bottom: 0; height: var(--dock); box-sizing: border-box; padding: var(--lab) 12px env(safe-area-inset-bottom); background: var(--paper); border-top: 1px solid var(--line); }
+  .dock .cta { width: 100%; justify-content: center; height: 52px; margin-top: 8px; font-size: 16px; }
+
+  .hero { grid-template-columns: 1fr; grid-template-rows: auto auto auto auto; row-gap: 0; padding-top: calc(var(--bar) + 18px); padding-bottom: calc(18px + var(--dock)); }
+  .hero h1 { font-size: clamp(36px, 10.2vw, 52px); max-width: none; }
+  .hero__type .eyebrow { margin-bottom: 10px; font-size: 11px; }
+  .hero__scene { grid-column: 1; grid-row: 2; align-self: center; margin-top: 10px; }
+  .hero__cap { grid-column: 1; grid-row: 3; justify-self: center; padding: 6px 0 0; font-size: 19px; }
+  .hero__ask { grid-column: 1; grid-row: 4; justify-items: center; margin-top: 16px; padding: 0; }
+  .hero__ask .cta--big { height: 50px; }
+  .htin { --jw: min(74vw, calc((100svh - 476px) * .8111)); --jh: calc(var(--jw) * 1.2328); }
+
+  .ch { padding: 72px var(--gut) 64px; }
+  .ch__head { grid-template-columns: 1fr; margin-bottom: 40px; }
+  .ch__verb { font-size: clamp(68px, 19vw, 96px); }
+  .ch__stand { padding-bottom: 0; font-size: 17px; }
+  .aeo { font-size: 18px; line-height: 1.5; margin-bottom: 36px; }
+  .svc__plane li { grid-template-columns: 1fr; gap: 8px; padding: 20px 0 18px; }
+  .svc__plane h3 { font-size: 40px; }
+  .svc__lens { perspective-origin: 50% -45%; }
+  .svc__plane p { font-size: 16px; }
+
+  .case, .case--flip { grid-template-columns: 1fr; grid-template-rows: auto auto auto; margin-top: 72px; }
+  .case__head, .case--flip .case__head { grid-column: 1; grid-row: 1; padding-top: 0; }
+  .case__media, .case--flip .case__media { grid-column: 1; grid-row: 2; margin: 4px 0 20px; }
+  .case__body, .case--flip .case__body { grid-column: 1; grid-row: 3; }
+  .case h3 { font-size: 34px; margin-bottom: 0; }
+  .slot { --ix: 12.5%; --mx: 3.8%; aspect-ratio: 4 / 3; }
+  .tl { --jd: 4cqw; }
+  .play { width: 64px; height: 64px; margin: -32px 0 0 -32px; }
+
+  .ecase { grid-template-columns: 1fr; margin-top: 56px; }
+  .ecase__media, .ecase__text { grid-column: 1; }
+  .ecase__text { margin-top: 18px; }
+  html.anim #decide.is-pin .estage { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; align-content: start; row-gap: 16px; padding-top: calc(var(--bar) + 14px); padding-bottom: calc(14px + var(--dock)); }
+  html.anim #decide.is-pin .ecase__text { margin: 0; }
+  html.anim #decide.is-pin .ehead { grid-row: 1; margin-bottom: 0; display: flex; align-items: baseline; gap: 14px; }
+  html.anim #decide.is-pin .ehead .ch__verb { font-size: 54px; }
+  html.anim #decide.is-pin .ehead .ch__stand { font-size: 14px; line-height: 1.35; }
+  html.anim #decide.is-pin .ecase__text { grid-column: 1; grid-row: 2; align-self: start; }
+  html.anim #decide.is-pin .eslot, html.anim #decide.is-pin .ecase__media { grid-column: 1; grid-row: 3; align-self: start; width: 100%; justify-self: center; margin: 0; aspect-ratio: 10 / 9; }
+  #make { padding-top: 52px; }
+  html.anim #decide.is-pin .ecase h3 { font-size: 30px; margin-bottom: 8px; }
+  html.anim #decide.is-pin .ecase p { font-size: 15px; line-height: 1.5; margin-bottom: 6px; }
+  html.anim #decide.is-pin .ecase .facts { margin-top: 8px; }
+  html.anim #decide.is-pin .ecase .facts li { padding: 7px 0; }
+  html.anim #decide.is-pin .ecase .facts b { font-size: 26px; }
+  html.anim #decide.is-pin .ecase .kick { margin-bottom: 8px; }
+  #decide .tl { --jd: 5.4cqw; }
+
+  .shelf__row { grid-template-columns: 1fr 1fr; gap: 22px 16px; }
+  .item--spec, .shelf__row:last-child .item:last-of-type { grid-column: span 2; }
+  .shelf__row:last-child .item:last-of-type .item__box { aspect-ratio: 2 / 1; }
+  .item--spec .item__box { aspect-ratio: auto; min-height: 240px; }
+  .item--spec .item__box { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; column-gap: 14px; padding: 14px; }
+  .item--spec .spec__k { grid-column: 1 / -1; margin-bottom: 6px; }
+  .item--spec .spec__l { align-self: end; }
+  html.anim .shelf__row.tg { transform: perspective(1300px) rotateX(-4deg) rotateY(-22deg) translateZ(-160px); }
+  .shelf__row { margin-left: 6px; margin-right: 8px; }
+  .item figcaption { font-size: 15px; line-height: 1.4; }
+  .item figcaption b { font-size: 22px; }
+  .spec__t { font-size: 24px; }
+  .spec__l { font-size: 15px; line-height: 1.4; }
+  .spec__l li { padding: 4px 0; }
+
+  .clients { padding: 80px var(--gut) 88px; }
+  .clients h2 { font-size: clamp(44px, 12vw, 60px); }
+  .tokens { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px 14px; }
+  .token { grid-column: span 2; }
+  .token:last-child { grid-column: 3 / span 2; }
+
+  .founders { padding: 72px var(--gut) 56px; }
+  .fcards { grid-template-columns: 1fr; gap: 28px; }
+  .fcard__flap { height: 118px; }
+  .fcard__front { padding: 18px 20px 14px; }
+  .fcard__front h3 { font-size: 30px; }
+  .fcard__body { padding: 18px 20px 22px; min-height: 118px; }
+  .fcard__body p { font-size: 21px; }
+  html.anim .label.tg { transform: translateZ(calc(var(--jd) + 70px)) rotateY(-6deg) rotateZ(-2deg); }
+  html.anim .ctin__body.tg { transform: rotateY(-12deg) rotateX(-5deg); }
+
+  .close { padding: 72px var(--gut) calc(40px + var(--dock)); }
+  .cstage { grid-template-columns: 1fr; row-gap: 22px; }
+  html.anim #contact.is-pin .cstage { padding-top: calc(var(--bar) + 12px); padding-bottom: calc(12px + var(--dock)); align-content: center; row-gap: 14px; }
+  .ctin { --jw: min(74vw, calc((100svh - 430px) * .8111)); --jh: calc(var(--jw) * 1.2328); }
+  .label { left: 9%; right: 9%; top: 12%; padding: 16px 14px 16px; }
+  .label__brand { width: 88px; margin-bottom: 10px; }
+  .label h2 { font-size: 27px; margin-bottom: 10px; }
+  .label__rows { font-size: 11.5px; margin-bottom: 12px; }
+  .label__rows li { grid-template-columns: 74px 1fr; padding: 5px 0; }
+  .label .cta--big { height: 44px; font-size: 15px; padding: 0 14px; width: 100%; justify-content: center; box-sizing: border-box; }
+  .close__rows h3 { display: none; }
+  .crow { grid-template-columns: 70px 1fr; padding-block: 0; align-items: center; font-size: 14.5px; }
+  .crow span { font-size: 11px; padding-top: 0; }
+  .bar__brand, .crow a, .socials a { min-height: 44px; display: inline-flex; align-items: center; box-sizing: border-box; }
+  .bar__brand { padding: 0; }
+  .crow a { border-bottom: 0; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+  .socials { gap: 0 16px; }
+  .legal { margin-top: 10px; font-size: 12px; }
+}
+@media (max-width: 860px) and (max-height: 700px) {
+  .htin { --jw: min(64vw, calc((100svh - 420px) * .8111)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#listen">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="m-out"><path pathLength="1" d="M825 110L825 32A32 32 0 0 0 793 0L220 0A32 32 0 0 0 188 32L188 168A12 12 0 0 0 200 180L240 180L240 1315A120 120 0 0 0 360 1435L774 1435L774 1324L360 1324A9 9 0 0 1 351 1315L351 291L299 291L299 110Z"/><path pathLength="1" d="M941 110L941 32A32 32 0 0 1 973 0L1320 0A32 32 0 0 1 1352 32L1352 168A12 12 0 0 1 1340 180L1300 180L1300 1315A120 120 0 0 1 1180 1435L766 1435L766 1324L1180 1324A9 9 0 0 0 1189 1315L1189 291L1241 291L1241 110Z"/></g>
+    <path id="m-mono" pathLength="1" d="M568 908L568 532L700 532L765 859L775 859L840 532L972 532L972 908L903 908L903 584L893 584L829 908L711 908L647 584L637 584L637 908Z"/>
+    <path id="m-in" d="M299 110L1241 110L1241 291L1189 291L1189 1315A9 9 0 0 1 1180 1324L360 1324A9 9 0 0 1 351 1315L351 291L299 291Z"/>
+    <g id="m-shine"><rect x="390" y="330" width="30" height="600" rx="15"/><rect x="442" y="330" width="11" height="300" rx="5.5"/></g>
+    <g id="i-mail"><rect x="2.5" y="4.5" width="15" height="11" rx="1"/><path d="M3 5.5l7 5.5 7-5.5"/></g>
+    <g id="i-arrow"><path d="M4 10h11M11 5.5L15.5 10 11 14.5"/></g>
+  </defs>
+</svg>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio, back to top"><img src="assets/img/wordmark.svg" alt="Mosswick Studio" width="124" height="32"></a>
+  <nav class="bar__nav" id="chapters" aria-label="Chapters">
+    <a href="#listen" data-ch="listen">Listen</a><span class="dot" aria-hidden="true">·</span>
+    <a href="#decide" data-ch="decide">Decide</a><span class="dot" aria-hidden="true">·</span>
+    <a href="#make" data-ch="make">Make</a><span class="dot" aria-hidden="true">·</span>
+    <a href="#launch" data-ch="launch">Launch</a>
+    <i class="bar__mark" aria-hidden="true"></i>
+  </nav>
+  <span class="bar__now" id="now" aria-hidden="true"></span>
+  <a class="cta" href="mailto:projects@example.com">Send us a brief<span class="cube" aria-hidden="true"><span><svg viewBox="0 0 20 20"><use href="#i-mail"/></svg></span><span><svg viewBox="0 0 20 20"><use href="#i-arrow"/></svg></span></span></a>
+</header>
+
+<main id="main">
+
+  <!-- ===================== title page ===================== -->
+  <section class="hero g-paper" id="top" data-sc-act="flow" aria-labelledby="h1">
+    <div class="hero__type">
+      <p class="eyebrow">Brands, Websites, Films and Campaigns</p>
+      <h1 id="h1"><span class="ln"><span>We make brands people</span></span> <span class="ln"><span>can pick out of a crowd.</span></span></h1>
+    </div>
+    <div class="hero__scene">
+      <div class="floor" aria-hidden="true"></div>
+      <div class="htin" aria-hidden="true">
+        <div class="htin__turn">
+          <div class="htin__body">
+            <i class="ht-shadow"></i>
+            <svg class="ht ht--back" viewBox="188 0 1164 1435"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/></svg>
+            <svg class="ht ht--mono" viewBox="188 0 1164 1435"><use class="mk-mono" href="#m-mono"/></svg>
+            <span class="disc" style="--i:0; --x:.31; --y:.37; --s:.33; --z:.5; --r:-8deg"><img src="assets/img/disc-01.webp" alt="" width="360" height="360"></span>
+            <span class="disc" style="--i:1; --x:.69; --y:.29; --s:.28; --z:-.62; --r:12deg"><img src="assets/img/disc-02.webp" alt="" width="360" height="360"></span>
+            <span class="disc" style="--i:2; --x:.65; --y:.60; --s:.31; --z:.42; --r:14deg"><img src="assets/img/disc-03.webp" alt="" width="360" height="360"></span>
+            <span class="disc" style="--i:3; --x:.32; --y:.66; --s:.31; --z:-.4; --r:-12deg"><img src="assets/img/disc-04.webp" alt="" width="360" height="360"></span>
+            <span class="disc" style="--i:4; --x:.51; --y:.83; --s:.27; --z:.18; --r:6deg"><img src="assets/img/disc-05.webp" alt="" width="360" height="360"></span>
+            <span class="disc" style="--i:5; --x:.49; --y:.47; --s:.25; --z:.72; --r:-4deg"><img src="assets/img/disc-06.webp" alt="" width="360" height="360"></span>
+            <svg class="ht ht--front" viewBox="188 0 1164 1435"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg>
+            <i class="rim rim--l"></i><i class="rim rim--r"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="hero__cap">A few projects we love.</p>
+    <div class="hero__ask">
+      <a class="cta cta--big" href="mailto:projects@example.com">Send us a brief<span class="cube" aria-hidden="true"><span><svg viewBox="0 0 20 20"><use href="#i-mail"/></svg></span><span><svg viewBox="0 0 20 20"><use href="#i-arrow"/></svg></span></span></a>
+      <p class="hero__where">Lowmere studio · since 2014</p>
+    </div>
+  </section>
+
+  <!-- ===================== chapter: listen ===================== -->
+  <section class="ch g-pale" id="listen" data-sc-act="flow" aria-labelledby="listen-h">
+    <header class="ch__head" data-sc-in>
+      <h2 class="ch__verb" id="listen-h">Listen.</h2>
+      <p class="ch__stand">Every brief starts with questions, then the five services that answer it.</p>
+    </header>
+
+    <p class="aeo">Mosswick Studio is a creative and marketing studio of 32 people, founded in Lowmere in 2014. We listen, decide, make and launch brands through brand identity, social content, campaigns, websites, and film and motion, for clients such as Okra &amp; Ash, Velloway, Houndsbury and Fernstride.</p>
+
+    <div class="svc__lens">
+      <ol class="svc__plane" aria-label="Services">
+        <li><h3>Brand Identity</h3><p>Logos, type, colour and rules that make you recognisable at a glance.</p><p class="seen">Okra &amp; Ash, Kilnmark</p></li>
+        <li><h3>Social Content</h3><p>Posts, reels and series that people stop scrolling for, made every month.</p><p class="seen">Houndsbury, Marlo Rue</p></li>
+        <li><h3>Campaigns</h3><p>One big idea, carried well across outdoor, social, print and screen, and tuned as we learn.</p><p class="seen">Velloway, Marshlight</p></li>
+        <li><h3>Websites</h3><p>Fast, clear sites that turn visits into enquiries.</p><p class="seen">The Larchway, Shelterly</p></li>
+        <li><h3>Film &amp; Motion</h3><p>Brand films, product videos and animation, script to grade.</p><p class="seen">Stillreed, Cairnstone</p></li>
+      </ol>
+    </div>
+
+    <article class="case" id="case-01" aria-labelledby="case-01-h">
+      <div class="case__head">
+        <p class="kick">Stillreed · product films and launch</p>
+        <h3 id="case-01-h">A mostly silent campaign for headphones</h3>
+      </div>
+      <div class="case__media">
+        <div class="slot">
+          <div class="tl tl--b" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+          <figure class="pop" id="film" data-video="https://example.com/film.mp4">
+            <img src="assets/img/work-01.webp" alt="Sand-coloured Stillreed headphones on the tiled edge of an empty indoor pool." width="1280" height="720" loading="lazy">
+            <button class="play" type="button" aria-label="Play the Stillreed launch film, 30 seconds, with sound"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg><span class="play__t" aria-hidden="true">Launch film · 0:30</span></button>
+          </figure>
+          <div class="tl tl--f" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg></div>
+        </div>
+      </div>
+      <div class="case__body">
+        <p>Stillreed’s headphones are about silence, so the campaign is mostly silent. We filmed them in empty pools, libraries and night trains, then let the sound fall away. Pre-orders hit target in 11 days.</p>
+        <div class="minis">
+          <img src="assets/img/work-02.webp" alt="A product on a plinth under film lights, with a camera on a tripod." width="640" height="365" loading="lazy">
+          <img src="assets/img/work-03.webp" alt="Sketches, colour swatches and a laptop on a studio desk, seen from above." width="640" height="365" loading="lazy">
+        </div>
+        <p class="cap">On set, then the edit back at the studio in Lowmere</p>
+      </div>
+    </article>
+
+    <article class="case case--flip" id="case-02" aria-labelledby="case-02-h">
+      <div class="case__head">
+        <p class="kick">Tallow Lane · packs</p>
+        <h3 id="case-02-h">One roaster, twelve bags, one system</h3>
+      </div>
+      <div class="case__media">
+        <div class="slot">
+          <div class="tl tl--b" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+          <figure class="pop"><img src="assets/img/work-04.webp" alt="Three kraft Tallow Lane Coffee bags with red, mustard and cobalt bands on a steel roastery bench." width="1200" height="734" loading="lazy"></figure>
+          <div class="tl tl--f" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg></div>
+        </div>
+      </div>
+      <div class="case__body">
+        <p>Tallow Lane had great coffee and twelve different bag designs. We built one system: a bold condensed wordmark, a colour for each origin and a tasting scale anyone can read. Wholesale accounts went from 19 to 47.</p>
+        <div class="minis"><img src="assets/img/work-05.webp" alt="Roasted beans spilled in front of the new coffee bags." width="640" height="391" loading="lazy"></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== chapter: decide (the peak) ===================== -->
+  <section class="ch g-ink" id="decide" data-sc-act="flow" aria-labelledby="decide-h">
+    <div class="estage" data-sc-stage>
+      <header class="ch__head ehead">
+        <h2 class="ch__verb" id="decide-h">Decide.</h2>
+        <p class="ch__stand">Five briefs, each cut down to one problem worth solving.</p>
+      </header>
+      <div class="eslot slot" aria-hidden="true">
+        <div class="tl tl--b"><svg viewBox="188 0 1164 1435"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+        <div class="tl tl--f"><svg viewBox="188 0 1164 1435"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg></div>
+      </div>
+
+      <article class="ecase" aria-labelledby="e1-h">
+        <div class="ecase__media slot"><figure class="pop" data-rest=".33 .62 .33"><img src="assets/img/work-06.webp" alt="A wood-fired oven glowing orange behind a pan of charred vegetables in a dim kitchen." width="1200" height="734" loading="lazy"></figure></div>
+        <div class="ecase__text">
+          <p class="kick">Okra &amp; Ash · opening</p>
+          <h3 id="e1-h">Opening night, fully booked</h3>
+          <p>A wood-fired restaurant with eight weeks to open and no name on the door. An identity built around the fire, heavy card menus and six weeks of social before the doors opened.</p>
+          <ul class="facts"><li><b>5 weeks</b><span>booked out from the first night</span></li></ul>
+        </div>
+      </article>
+
+      <article class="ecase" aria-labelledby="e2-h">
+        <div class="ecase__media slot"><figure class="pop" data-rest=".67 .70 .31"><img src="assets/img/work-07.webp" alt="A cyclist in a bottle green waterproof jacket riding down a wet city street at blue hour." width="1200" height="734" loading="lazy"></figure></div>
+        <div class="ecase__text">
+          <p class="kick">Velloway · launch film</p>
+          <h3 id="e2-h">Outerwear built for wet commutes</h3>
+          <p>Its old ads showed mountain tops. We shot riders on city streets at dusk in real drizzle: a 60 second spot and twenty short cuts. Online sales rose 38% in launch month.</p>
+        </div>
+      </article>
+
+      <article class="ecase" aria-labelledby="e3-h">
+        <div class="ecase__media slot"><figure class="pop" data-rest=".50 .83 .28"><img src="assets/img/work-08.webp" alt="A teal and orange Marshlight poster of reeds and lanterns on a brick wall at dusk." width="1200" height="684" loading="lazy"></figure></div>
+        <div class="ecase__text">
+          <p class="kick">Marshlight · tickets</p>
+          <h3 id="e3-h">Festival posters people keep, and a sell-out nine days early</h3>
+          <p>A look built from reeds, mist and lantern light, screen-printed posters and short films of the site at dawn.</p>
+        </div>
+      </article>
+
+      <article class="ecase" aria-labelledby="e4-h">
+        <div class="ecase__media slot"><figure class="pop" data-rest=".30 .40 .28"><img src="assets/img/work-09.webp" alt="A sage green cargo e-bike with a wooden box of backpacks and groceries on a leafy hill street." width="1200" height="684" loading="lazy"></figure></div>
+        <div class="ecase__text">
+          <p class="kick">Gearfinch · launch and website</p>
+          <h3 id="e4-h">Cargo e-bikes for school runs and hills</h3>
+          <p>Real families filmed on real school runs, and a website where parents can book a free test ride at home.</p>
+        </div>
+      </article>
+
+      <article class="ecase" aria-labelledby="e5-h">
+        <div class="ecase__media slot"><figure class="pop" data-rest=".66 .36 .30"><img src="assets/img/work-10.webp" alt="Moss green Fernstride running shoes mid-stride on a damp park path in low autumn sun." width="1200" height="800" loading="lazy"></figure></div>
+        <div class="ecase__text">
+          <p class="kick">Fernstride · campaign and social</p>
+          <h3 id="e5-h">Running shoes for the rest of us</h3>
+          <p>Most running ads show elite athletes. We worked with local run clubs, filmed slow Sunday miles and wrote about getting out the door. Brand searches rose 52% in twelve weeks.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== chapter: make ===================== -->
+  <section class="ch g-paper" id="make" data-sc-act="flow" aria-labelledby="make-h">
+    <header class="ch__head" data-sc-in>
+      <h2 class="ch__verb" id="make-h">Make.</h2>
+      <p class="ch__stand">Design, writing and film, made together and checked weekly.</p>
+    </header>
+
+    <article class="case" id="case-03" aria-labelledby="case-03-h">
+      <div class="case__head">
+        <p class="kick">Houndsbury · packs</p>
+        <h3 id="case-03-h">Dog food you can see into</h3>
+      </div>
+      <div class="case__media">
+        <div class="slot">
+          <div class="tl tl--b" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+          <figure class="pop"><img src="assets/img/work-11.webp" alt="A wheaten terrier beside a Houndsbury box and clear meal pouches on a tiled kitchen floor." width="1200" height="706" loading="lazy"></figure>
+          <div class="tl tl--f" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg></div>
+        </div>
+      </div>
+      <div class="case__body">
+        <p>Fresh dog meals, shipped weekly. Every pouch got a clear window onto the real food, and paid social ran short videos of dogs at dinner time, tested against price-led ads.</p>
+        <ul class="facts"><li><b>2.4x</b><span>subscriptions in a year</span></li><li><b>Weekly</b><span>ad tests against price-led ads</span></li></ul>
+      </div>
+    </article>
+
+    <article class="case case--flip" id="case-04" aria-labelledby="case-04-h">
+      <div class="case__head">
+        <p class="kick">Marlo Rue · lookbook and film</p>
+        <h3 id="case-04-h">Knitwear filmed like a slow film, on a sheep farm</h3>
+      </div>
+      <div class="case__media">
+        <div class="slot">
+          <div class="tl tl--b" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+          <figure class="pop"><img src="assets/img/work-12.webp" alt="A chunky undyed wool sweater over a fence post in a misty field, sheep behind." width="1200" height="764" loading="lazy"></figure>
+          <div class="tl tl--f" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg></div>
+        </div>
+      </div>
+      <div class="case__body">
+        <p>The winter range, shot on a working sheep farm over two grey days and edited like a short film, scored with needles and wind. It sold through in five weeks.</p>
+      </div>
+    </article>
+
+    <article class="case" id="case-05" aria-labelledby="case-05-h">
+      <div class="case__head">
+        <p class="kick">Cairnstone · brand film</p>
+        <h3 id="case-05-h">Gear for the long way round</h3>
+      </div>
+      <div class="case__media">
+        <div class="slot">
+          <div class="tl tl--b" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+          <figure class="pop"><img src="assets/img/work-13.webp" alt="A rust orange rucksack against a stone cairn on a misty ridge at sunrise." width="1200" height="684" loading="lazy"></figure>
+          <div class="tl tl--f" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg></div>
+        </div>
+      </div>
+      <div class="case__body">
+        <p>Four days in the hills with a small crew, filming the pack in rain, mud and early starts. Sell-through ran 31% above forecast.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== chapter: launch ===================== -->
+  <section class="ch g-pale" id="launch" data-sc-act="flow" aria-labelledby="launch-h">
+    <header class="ch__head" data-sc-in>
+      <h2 class="ch__verb" id="launch-h">Launch.</h2>
+      <p class="ch__stand">Websites, shops and packs, shipped and watched closely in the first weeks.</p>
+    </header>
+
+    <article class="case" id="case-06" aria-labelledby="case-06-h">
+      <div class="case__head">
+        <p class="kick">The Larchway · identity and website</p>
+        <h3 id="case-06-h">A hotel that feels like a weekend</h3>
+      </div>
+      <div class="case__media">
+        <div class="slot">
+          <div class="tl tl--b" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+          <figure class="pop"><img src="assets/img/work-14.webp" alt="A larch-panelled hotel room with white bedding and a tall window onto a canal at golden hour." width="1200" height="684" loading="lazy"></figure>
+          <div class="tl tl--f" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg></div>
+        </div>
+      </div>
+      <div class="case__body">
+        <p>A 30-room hotel in a timber warehouse by the canal. The brand comes from the building, and the new site sells rooms by mood. Direct bookings: 22% to 58%.</p>
+      </div>
+    </article>
+
+    <div class="shelf">
+      <h3 class="shelf__title">Out the door</h3>
+      <p class="shelf__lede">A quote site with no small print, and packs and shops for brands just starting out.</p>
+      <div class="shelf__row">
+        <figure class="item item--spec">
+          <div class="item__box">
+            <p class="spec__k">Shelterly</p>
+            <p class="spec__t">A quote form cut from 22 questions to 9</p>
+            <ul class="spec__l"><li>Site map and wireframes</li><li>UX and UI design</li><li>Plain-English copy</li><li>Development</li><li>Paid search landing pages</li></ul>
+          </div>
+          <figcaption><b>Shelterly</b>Home insurance, with quote completions up 64%</figcaption>
+        </figure>
+        <figure class="item"><div class="item__box"><img src="assets/img/work-15.webp" alt="Handmade plates and bowls in oatmeal, teal and rust glazes on a linen cloth." width="560" height="560" loading="lazy"></div><figcaption><b>Kilnmark</b>Identity and online shop for a ceramics studio</figcaption></figure>
+        <figure class="item"><div class="item__box"><img src="assets/img/work-16.webp" alt="An embossed Gilded Hare gin bottle on a walnut bar beside a tumbler of ice." width="560" height="560" loading="lazy"></div><figcaption><b>Gilded Hare</b>Name, embossed bottle and gold-foil label for a small-batch gin</figcaption></figure>
+        <i class="shelf__board" aria-hidden="true"></i>
+      </div>
+      <div class="shelf__row">
+        <figure class="item"><div class="item__box"><img src="assets/img/work-17.webp" alt="Four wave-printed Saltmarrow snack bags on wet sand at the waterline." width="560" height="560" loading="lazy"></div><figcaption><b>Saltmarrow</b>Loud packs for seaweed snacks</figcaption></figure>
+        <figure class="item"><div class="item__box"><img src="assets/img/work-18.webp" alt="Four patterned Fizzwold cans in a tub of crushed ice on a tangerine ground." width="560" height="560" loading="lazy"></div><figcaption><b>Fizzwold</b>Rebrand and can design for a kombucha</figcaption></figure>
+        <figure class="item"><div class="item__box"><img src="assets/img/work-19.webp" alt="A Halvane wristwatch with a cream dial and an open caseback on green leather." width="560" height="560" loading="lazy"></div><figcaption><b>Halvane</b>Identity, macro photography and a website for a small watchmaker</figcaption></figure>
+        <i class="shelf__board" aria-hidden="true"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== clients ===================== -->
+  <section class="clients g-paper" id="clients" data-sc-act="flow" aria-labelledby="clients-h">
+    <p class="eyebrow">Client list</p>
+    <h2 id="clients-h">Brands that stay for years.</h2>
+    <ul class="tokens">
+      <li class="token"><img src="assets/logos/client-01.svg" alt="Tallow Lane Coffee" width="240" height="66" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-02.svg" alt="Okra &amp; Ash" width="240" height="49" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-03.svg" alt="Houndsbury" width="240" height="39" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-04.svg" alt="Marshlight Festival" width="240" height="41" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-05.svg" alt="Marlo Rue" width="240" height="42" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-06.svg" alt="Kilnmark" width="240" height="48" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-07.svg" alt="Fizzwold" width="240" height="53" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-08.svg" alt="Halvane Watch Co." width="240" height="56" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-09.svg" alt="Shelterly" width="240" height="64" loading="lazy"></li>
+      <li class="token"><img src="assets/logos/client-10.svg" alt="Saltmarrow" width="240" height="37" loading="lazy"></li>
+    </ul>
+  </section>
+
+  <!-- ===================== founders ===================== -->
+  <section class="founders g-ink" id="founders" data-sc-act="flow" aria-labelledby="founders-h">
+    <h2 id="founders-h">Who started it</h2>
+    <p class="founders__lede">Mosswick was started in 2014 by Ines Calloway and Tobias Okonjo-Hale, at a shared desk above a bike shop in Lowmere.</p>
+    <div class="fcards">
+      <article class="fcard" aria-labelledby="f1-h">
+        <div class="fcard__flap">
+          <div class="fcard__front"><h3 id="f1-h">Ines Calloway</h3><p>Founder and Creative Director</p></div>
+          <div class="fcard__back" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+        </div>
+        <blockquote class="fcard__body"><p>“I read every brief twice, then ask the question nobody wanted to answer. If nobody remembers your ad, it might as well not have run, so we make work people still recall a week later.”</p></blockquote>
+      </article>
+      <article class="fcard" aria-labelledby="f2-h">
+        <div class="fcard__flap">
+          <div class="fcard__front"><h3 id="f2-h">Tobias Okonjo-Hale</h3><p>Co-founder and Strategy Director</p></div>
+          <div class="fcard__back" aria-hidden="true"><svg viewBox="188 0 1164 1435"><use class="mk-o" href="#m-out"/><use class="mk-mono" href="#m-mono"/></svg></div>
+        </div>
+        <blockquote class="fcard__body"><p>“My job is to turn a messy workshop into one clear page the whole client team signs. A clear sentence beats a clever one on most days. Then we measure what matters, and we stay honest about what we see.”</p></blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== close: the tin label ===================== -->
+  <section class="close g-paper" id="contact" data-sc-act="flow" aria-labelledby="close-h">
+    <div class="cstage" data-sc-stage>
+      <div class="ctin">
+        <div class="ctin__body">
+          <svg class="ht ht--back" viewBox="188 0 1164 1435" aria-hidden="true"><use class="mk-tint" href="#m-in"/><use class="mk-o" href="#m-out"/></svg>
+          <svg class="ht" viewBox="188 0 1164 1435" aria-hidden="true"><use class="mk-mono" href="#m-mono"/></svg>
+          <svg class="ht ht--front" viewBox="188 0 1164 1435" aria-hidden="true"><use class="mk-glass" href="#m-in"/><use class="mk-o" href="#m-out"/><use class="mk-shine" href="#m-shine"/></svg>
+          <div class="label">
+            <img class="label__brand" src="assets/img/wordmark.svg" alt="Mosswick Studio" width="247" height="43" loading="lazy">
+            <h2 id="close-h">Have a launch coming up?</h2>
+            <ul class="label__rows">
+              <li><b>Contents</b><span>Brand Identity, Social Content, Campaigns, Websites, Film &amp; Motion</span></li>
+              <li><b>Made in</b><span>Lowmere, 32 people, since 2014</span></li>
+            </ul>
+            <a class="cta cta--big" href="mailto:projects@example.com">Send us a brief<span class="cube" aria-hidden="true"><span><svg viewBox="0 0 20 20"><use href="#i-mail"/></svg></span><span><svg viewBox="0 0 20 20"><use href="#i-arrow"/></svg></span></span></a>
+          </div>
+        </div>
+      </div>
+      <address class="close__rows">
+        <h3>Or ring us</h3>
+        <div class="crow"><span>Phone</span><a href="tel:+15550142">+1 555 0142</a></div>
+        <div class="crow"><span>Chat</span><a href="https://wa.me/15550100" rel="noopener">WhatsApp +1 555 0100</a></div>
+        <div class="crow"><span>Email</span><a href="mailto:hello@example.com">hello@example.com</a></div>
+        <div class="crow"><span>Follow</span><p class="socials"><a href="https://example.com" rel="noopener">Instagram</a><a href="https://example.com" rel="noopener">LinkedIn</a><a href="https://example.com" rel="noopener">Behance</a><a href="https://example.com" rel="noopener">YouTube</a></p></div>
+        <p class="legal">© 2026 Mosswick. Example content. Swap in your own.</p>
+      </address>
+    </div>
+  </section>
+</main>
+
+<div class="dock" id="dock">
+  <a class="cta" href="mailto:projects@example.com">Send us a brief<span class="cube" aria-hidden="true"><span><svg viewBox="0 0 20 20"><use href="#i-mail"/></svg></span><span><svg viewBox="0 0 20 20"><use href="#i-arrow"/></svg></span></span></a>
+</div>
+
+<script src="scrollcraft.js"></script>
+<script>
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  /* the peak chapter and the close pin only when scroll timelines run; otherwise they stay ordinary flow sections */
+  if (anim) {
+    var est = document.getElementById('decide');
+    est.setAttribute('data-sc-act', 'pin'); est.setAttribute('data-sc-span', phoneQ.matches ? '5.6' : '5.4'); est.classList.add('is-pin');
+    var cl = document.getElementById('contact');
+    cl.setAttribute('data-sc-act', 'pin'); cl.setAttribute('data-sc-span', '1.5'); cl.classList.add('is-pin');
+  }
+})();
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px)');
+  var hero = document.getElementById('top');
+
+  /* ---- the title page reveal: the tin outline traces itself, turns into depth, the covers drop in ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+    };
+    var waits = [];
+    if (document.fonts && document.fonts.ready) waits.push(document.fonts.ready);
+    [].forEach.call(hero.querySelectorAll('img'), function (im) { if (im.decode) waits.push(im.decode().catch(function () {})); });
+    Promise.all(waits).then(go, go);
+    setTimeout(go, 1500);
+  }
+
+  /* ---- the case film: the URL in data-video, created only on tap, never autoplayed ---- */
+  var film = document.getElementById('film');
+  var playBtn = film.querySelector('.play');
+  playBtn.addEventListener('click', function () {
+    var v = document.createElement('video');
+    v.src = film.getAttribute('data-video');
+    v.poster = 'assets/img/work-01.webp';
+    v.controls = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.preload = 'auto';
+    v.setAttribute('aria-label', 'Stillreed launch film');
+    var img = film.querySelector('img');
+    film.insertBefore(v, img); img.remove();
+    film.classList.add('is-playing');
+    var p = v.play(); if (p && p.catch) p.catch(function () {});
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) v.pause(); }); }, { threshold: 0.2 }).observe(film);
+    v.focus();
+  });
+
+  /* ---- scroll-linked ranges, in page pixels, for the CSS scroll timelines ---- */
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b, fa, fb, cls) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    if (fa !== undefined) { if (fb <= fa) fb = fa + 1; el.style.setProperty('--f0', fa.toFixed(1) + 'px'); el.style.setProperty('--f1', fb.toFixed(1) + 'px'); }
+    el.classList.add(cls || (fa !== undefined ? 'sd2' : 'sd'));
+  }
+  /* text never follows the scroll: once its point is crossed it plays through on its own (.tg -> .on), and back when you scroll above it */
+  var trigs = [];
+  function trig(el, at) { el.classList.add('tg'); trigs.push({ el: el, at: at }); }
+  function fire() { var y = scrollY; trigs.forEach(function (t) { t.el.classList.toggle('on', y >= t.at); }); }
+  function popVars(pop, tin, slotW, slotH, fx, fy, ds) {
+    var jx = tin.offsetLeft - tin.offsetWidth / 2, jy = tin.offsetTop, jw = tin.offsetWidth, jh = tin.offsetHeight;
+    /* offsetLeft of the tin layer is its left before the -50% translate */
+    jx = tin.offsetLeft - jw / 2;
+    var cx = jx + fx * jw, cy = jy + fy * jh;
+    pop.style.setProperty('--rx', (cx - slotW / 2).toFixed(1) + 'px');
+    pop.style.setProperty('--ry', (cy - slotH / 2).toFixed(1) + 'px');
+    pop.style.setProperty('--rs', (ds * jw / slotH).toFixed(4));
+    pop.style.setProperty('--mx', (jx + .597 * jw - slotW / 2).toFixed(1) + 'px');
+    pop.style.setProperty('--my1', (jy + .12 * jh - slotH / 2).toFixed(1) + 'px');
+    pop.style.setProperty('--my2', (jy + .02 * jh - slotH / 2).toFixed(1) + 'px');
+    pop.style.setProperty('--ix', ((slotW - slotH) / 2).toFixed(1) + 'px');
+  }
+  function measure() {
+    if (!anim) return;
+    var vh = innerHeight, phone = phoneQ.matches, bar = phone ? 56 : 64;
+    trigs = [];
+
+    /* title page (desktop only): the tin turns as one object with the scroll */
+    if (!phone) {
+      var hH = hero.offsetHeight;
+      trig(hero.querySelector('.hero__type'), hH * .1);
+      setR(hero.querySelector('.htin__turn'), 0, hH);
+    } else {
+      [].forEach.call(hero.querySelectorAll('.sd, .tg'), function (el) { el.classList.remove('sd', 'tg', 'on'); });
+    }
+
+    /* listen: the services plane stands up from its rake */
+    var plane = document.querySelector('.svc__plane'), pT = top(plane);
+    trig(plane, pT - vh * .95);
+
+    /* every flow case: its disc rises out of the tin as the slot arrives, and drops back in as it leaves */
+    [].forEach.call(document.querySelectorAll('.case .slot'), function (slot) {
+      var pop = slot.querySelector('.pop'), t = top(slot), h = slot.offsetHeight;
+      var a = t - vh * .96, b = t - vh * (phone ? .30 : .24);
+      var fa = t - bar + h * (phone ? .02 : .12), fb = t + h * (phone ? .34 : .42);
+      setR(pop, a, b, fa, fb);
+      var pl = slot.querySelector('.play'); if (pl) setR(pl, a, b, fa, fb);
+    });
+
+    /* decide (the peak): one tin, five projects; each text hard-cuts at the exact point its disc arrives */
+    var est = document.getElementById('decide');
+    if (est.classList.contains('is-pin')) {
+      var T = top(est), L = Math.max(1, est.offsetHeight - vh), N = 5;
+      var eslot = est.querySelector('.eslot'), tin = eslot.querySelector('.tl--b');
+      var sW = eslot.offsetWidth, sH = eslot.offsetHeight;
+      var cases = est.querySelectorAll('.ecase');
+      [].forEach.call(cases, function (c, i) {
+        var s = T + L * i / N, e = T + L * (i + 1) / N, w = e - s;
+        var pop = c.querySelector('.pop'), txt = c.querySelector('.ecase__text');
+        var rest = (pop.getAttribute('data-rest') || '.5 .5 .3').split(' ').map(parseFloat);
+        popVars(pop, tin, sW, sH, rest[0], rest[1], rest[2]);
+        pop.classList.remove('sd', 'sd2');
+        if (i < N - 1) setR(pop, s + w * .04, s + w * .4, e - w * .32, e - 2);
+        else setR(pop, s + w * .04, s + w * .44);
+        setR(txt, i === 0 ? T - vh * 1.2 : s, i === N - 1 ? T + L + vh * 1.2 : e - 1, undefined, undefined, 'sdn');
+      });
+    }
+
+    /* launch: each shelf turns from the aisle to face you */
+    [].forEach.call(document.querySelectorAll('.shelf__row'), function (r) { trig(r, top(r) - vh * .95); });
+
+    /* clients: the ten logo discs leave one stack in turn and stand up in their places */
+    /* the stack sits at the head of the grid, under the line, so no part of the grid waits empty above it */
+    var grid = document.querySelector('.tokens'), gT = top(grid), gW = grid.offsetWidth;
+    var py = grid.children[0].offsetTop + grid.children[0].offsetHeight / 2;
+    [].forEach.call(grid.children, function (ck, i) {
+      var cx = ck.offsetLeft + ck.offsetWidth / 2, cy = ck.offsetTop + ck.offsetHeight / 2;
+      ck.style.setProperty('--sx', (gW / 2 - cx).toFixed(1) + 'px');
+      ck.style.setProperty('--sy', (py - cy).toFixed(1) + 'px');
+      ck.style.setProperty('--i', i);
+      ck.style.zIndex = 20 - i;
+      var a = gT - vh * .96 + i * vh * .022;
+      setR(ck, a, a + vh * .24);
+    });
+
+    /* founders: each card's name half unfolds off its quote */
+    [].forEach.call(document.querySelectorAll('.fcard__flap'), function (f) { trig(f, top(f.parentNode) - vh * .95); });
+
+    /* close: the label is pressed onto the glass while the tin turns to face you */
+    var cl = document.getElementById('contact');
+    if (cl.classList.contains('is-pin')) {
+      var cT = top(cl);
+      trig(cl.querySelector('.ctin__body'), cT - vh * .6);
+      trig(cl.querySelector('.label'), cT - vh * .6);
+    }
+    fire();
+  }
+
+  var lastW = -1;
+  function all() { measure(); lastW = innerWidth; head(); }
+  addEventListener('resize', function () { if (innerWidth !== lastW) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); } }).observe(document.body); }
+
+  /* ---- running head: the current chapter's verb, underlined in the accent ---- */
+  var nav = document.getElementById('chapters'), mark = nav.querySelector('.bar__mark'), now = document.getElementById('now');
+  var secs = [['top', ''], ['listen', 'Listen'], ['decide', 'Decide'], ['make', 'Make'], ['launch', 'Launch'], ['clients', 'Clients'], ['founders', 'Founders'], ['contact', 'Contact']].map(function (s) { return { el: document.getElementById(s[0]), id: s[0], name: s[1] }; });
+  var cur = null, tick = false;
+  function head() {
+    tick = false;
+    var line = innerHeight * .42, pick = secs[0];
+    secs.forEach(function (s) { if (s.el.getBoundingClientRect().top <= line) pick = s; });
+    if (pick === cur) return;
+    cur = pick;
+    now.textContent = pick.name;
+    var link = nav.querySelector('[data-ch="' + pick.id + '"]');
+    [].forEach.call(nav.querySelectorAll('a'), function (a) { a.removeAttribute('aria-current'); });
+    if (link) {
+      link.setAttribute('aria-current', 'true');
+      var nr = nav.getBoundingClientRect(), lr = link.getBoundingClientRect();
+      mark.style.setProperty('--mx', (lr.left - nr.left + 10) + 'px');
+      mark.style.setProperty('--mw', Math.max(1, lr.width - 20));
+      nav.classList.add('has-mark');
+    } else nav.classList.remove('has-mark');
+  }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(function () { fire(); head(); }); } }, { passive: true });
+  all();
+})();
+</script>
+</body>
+</html>

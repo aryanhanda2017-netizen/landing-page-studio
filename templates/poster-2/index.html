@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio in Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio in Lowmere, est. 2014: brand identity, websites, film, social content, campaigns and paid media.">
+<meta name="theme-color" content="#1b0e0a">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="apple-touch-icon" href="assets/mark-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta property="og:description" content="We build brands, websites and campaigns for companies that would rather be remembered than merely seen.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio in Lowmere">
+<meta name="twitter:description" content="Brands with a pulse. Strategy, design, film and media in one studio.">
+
+<script>
+  (function (d) {
+    var c = d.classList;
+    c.add('js');
+    var fx = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sd = !!(window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && CSS.supports('animation-range: 0px 1px'));
+    if (/[?&]nosd\b/.test(location.search)) sd = false;
+    if (fx) c.add('fx', 'pre-reveal');
+    if (fx && sd) c.add('anim');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-700.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400.woff2" crossorigin>
+<link rel="stylesheet" href="scrollcraft.css">
+
+
+<style>
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+/* Palette "Tomato Press": tomato silk at both ends, warm ink between, cream type, a cream close. */
+:root {
+  --m-accent: #f2542d;
+  --m-ground: #1b0e0a;
+  --m-tomato: #f2542d;
+  --m-cream: #ffe8c7;
+  --m-dark: #1b0e0a;
+  --m-ink: #ffe8c7;
+  --m-arw: var(--m-accent);
+  --m-soft: rgba(255, 232, 199, .74);
+  --m-line: rgba(255, 232, 199, .16);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --gut: clamp(1rem, 3.2vw, 3rem);
+  --bar: 64px;
+  --dock: 0px;
+
+  --sc-canvas: #1b0e0a; --sc-surface: #26150f;
+  --sc-ink: #ffe8c7; --sc-ink-soft: rgba(255, 232, 199, .74);
+  --sc-accent: #f2542d; --sc-accent-ink: #1b0e0a;
+  --sc-font-display: var(--font);
+  --sc-font-text: var(--font);
+  --sc-gutter: var(--gut);
+}
+html { background: var(--m-ground); }
+body { margin: 0; background: var(--m-ground); color: var(--m-ink); font-family: var(--font); font-feature-settings: "cv11", "ss03"; }
+img { max-width: 100%; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 90; background: var(--m-cream); color: var(--m-dark); padding: 10px 14px; font: 600 14px/1 var(--font); }
+.skip:focus { top: 12px; }
+main > section { overflow-x: clip; }
+a:focus-visible { outline: 2px solid var(--m-accent); outline-offset: 4px; }
+.hero a:focus-visible, .bar:not(.is-solid) a:focus-visible { outline-color: currentColor; }
+
+/* the up-right arrow: the page's one moving mark */
+.arw { display: inline-block; width: .553em; height: .547em; vertical-align: baseline; fill: var(--m-arw); margin-left: .07em; overflow: visible; }
+
+/* ---------- the one CTA: an underlined link, the arrow lifts on hover ---------- */
+.cta {
+  display: inline-flex; align-items: baseline; gap: .34em; color: inherit; text-decoration: none; white-space: nowrap;
+  font-family: var(--font); font-weight: 600; letter-spacing: -.012em; padding-bottom: .12em;
+  background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat;
+  background-size: 100% max(1px, .065em); background-position: 0 100%;
+}
+.cta .arw { margin: 0; width: .62em; height: .62em; transition: transform .38s var(--ease); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .cta { transition: background-size .42s var(--ease); }
+  .cta:hover, .cta:focus-visible { animation: cta-wipe .62s var(--ease); }
+  .cta:hover .arw, .cta:focus-visible .arw { transform: translate(.16em, -.15em); }
+}
+@keyframes cta-wipe { 0% { background-size: 100% max(1px, .065em); background-position: 100% 100%; } 45% { background-size: 0% max(1px, .065em); background-position: 100% 100%; } 46% { background-position: 0 100%; } 100% { background-size: 100% max(1px, .065em); background-position: 0 100%; } }
+.cta:active { opacity: .72; }
+
+/* ---------- the bar: the studio wordmark and the CTA; solid once the hero is behind ---------- */
+.bar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar);
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: env(safe-area-inset-top) var(--gut) 0;
+  background: transparent; border-bottom: 1px solid transparent; color: var(--m-dark); --m-arw: var(--m-cream);
+  transition: background-color .35s var(--ease), border-color .35s var(--ease), color .35s var(--ease);
+}
+.bar.is-solid { background: var(--m-ground); border-bottom-color: var(--m-line); color: var(--m-ink); --m-arw: var(--m-accent); }
+.bar__brand { display: inline-flex; align-items: center; height: 44px; color: inherit; }
+.bar__brand svg { display: block; height: 22px; width: auto; fill: currentColor; }
+.bar .cta { font-size: 16px; color: inherit; }
+.dock { display: none; }
+
+/* ---------- the silk: a neutral tomato fabric drawn in SVG (soft folds), with grain ---------- */
+.silk { position: absolute; inset: 0; overflow: hidden; isolation: isolate; background: var(--m-tomato); }
+.silk__zoom { position: absolute; inset: 0; }
+.silk__fold { position: absolute; inset: 0; background: var(--m-tomato) url("assets/silk.svg") center / cover no-repeat; }
+.silk__grain { position: absolute; inset: 0; opacity: .2; mix-blend-mode: overlay; pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='150' height='150' filter='url(%23n)'/></svg>"); background-size: 150px 150px; }
+
+/* ---------- act 1: the hero ---------- */
+.hero__stage { height: 100vh; height: 100svh; overflow: clip; background: var(--m-tomato); color: var(--m-dark); --m-arw: var(--m-cream); }
+.hero__frame { position: absolute; inset: var(--bar) 0 0 0; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.hero__top { position: relative; z-index: 6; display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; padding: clamp(.75rem, 2.4vh, 1.75rem) var(--gut) 0; }
+.hero__eyebrow { margin: 0; font: 600 14px/1.5 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--m-dark); }
+.hero__ask { position: absolute; left: 2.6cqw; top: 22.4cqw; z-index: 6; display: grid; justify-items: start; gap: .4rem; }
+.hero__ask .cta { font-size: max(1.4rem, 2.15cqw); color: var(--m-dark); }
+.hero__with { margin: 0; font: 500 max(14px, 1.08cqw)/1.4 var(--font); color: var(--m-dark); }
+
+.scene-box { position: relative; min-height: 0; container-type: size; display: flex; align-items: flex-end; justify-content: center; }
+.scene { --sw: min(100cqw, 200cqh, 1500px); position: relative; width: var(--sw); aspect-ratio: 100 / 50; container-type: inline-size; overflow: clip; overflow-clip-margin: 0; }
+.h1 { position: absolute; inset: 0; margin: 0; font-weight: 700; color: var(--m-dark); }
+.pl { position: absolute; display: block; white-space: nowrap; line-height: .8; letter-spacing: -.06em; font-weight: 700; backface-visibility: hidden; }
+.pl-back { left: 1.6cqw; top: .2cqw; font-size: 21cqw; z-index: 1; }
+.pl-front { right: 2.5cqw; top: 35.4cqw; font-size: 12.4cqw; z-index: 5; }
+.pl-front .w { display: inline-block; }
+.pl-front br { display: none; }
+.mask { display: inline-block; overflow: clip; overflow-clip-margin: 0; padding: .02em .16em .26em .02em; margin: -.02em -.16em -.26em -.02em; }
+.mask__in { display: inline-block; }
+/* the subject: three studio projects, standing between the two type planes at three depths along the arrow's line
+   (near, lower left; far, upper right), the way the arrow points */
+.hp { position: absolute; display: block; pointer-events: none; }
+.hp__in { display: block; }
+.hp img { display: block; width: 100%; height: auto; max-width: none; aspect-ratio: 800 / 635; object-fit: cover; box-shadow: 0 2.4cqw 4.8cqw -1.2cqw rgba(60, 12, 0, .45); }
+.hp--far { left: 55cqw; top: 1cqw; width: 25cqw; z-index: 0; }
+.hp--mid { left: 62cqw; top: 17cqw; width: 21cqw; z-index: 3; }
+.hp--near { left: 32cqw; top: 21.5cqw; width: 29cqw; z-index: 4; }
+
+/* the reveal on load (time-based; no-JS and reduced motion get the final state) */
+@media (prefers-reduced-motion: no-preference) {
+  html.pre-reveal .silk, html.pre-reveal .pl-back .mask__in, html.pre-reveal .hp__in, html.pre-reveal .pl-front .w,
+  html.pre-reveal .pl-back .arw, html.pre-reveal .hero__top > *, html.pre-reveal .hero__ask { opacity: 0; }
+  html.reveal .silk { animation: m-fade 1.1s var(--ease) both; }
+  html.reveal .pl-back .mask__in { animation: m-rise 1s var(--ease) .18s both; }
+  html.reveal .hp--far .hp__in { animation: m-plate 1s var(--ease) .4s both; }
+  html.reveal .hp--mid .hp__in { animation: m-plate 1s var(--ease) .54s both; }
+  html.reveal .hp--near .hp__in { animation: m-plate 1s var(--ease) .68s both; }
+  html.reveal .pl-front .w { animation: m-front 1s var(--ease) .86s both; }
+  html.reveal .pl-front .w + .w { animation-delay: .96s; }
+  html.reveal .pl-back .arw { animation: m-land .8s var(--ease) 1.32s both; transform-origin: 0 100%; }
+  html.reveal .hero__top > *, html.reveal .hero__ask { animation: m-up .7s var(--ease) 1.15s both; }
+}
+@keyframes m-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes m-rise { from { transform: translateY(108%); } to { transform: none; } }
+@keyframes m-plate { from { opacity: 0; transform: perspective(1000px) translate3d(-3cqw, 6cqw, -420px); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes m-front { from { opacity: 0; transform: perspective(1000px) translate3d(-6cqw, 0, 260px); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes m-land { from { opacity: 0; transform: translate(1.1em, -1.02em) scale(.3); } 40% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes m-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* ---------- every scroll-linked move: CSS scroll-driven animations on page-pixel ranges set by JS ---------- */
+html.anim .sdx { animation-duration: auto; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.anim .sdx2 { animation-duration: auto, auto; animation-timing-function: linear, linear; animation-fill-mode: both, both; animation-timeline: scroll(root block), scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px), var(--f0, 0px) var(--f1, 1px); }
+
+/* hero (desktop only): the planes part along the arrow's diagonal at three rates */
+html.anim .pl-back.sdx { animation-name: h-back; }
+html.anim .pl-back .arw-lead.sdx { animation-name: h-lead; }
+.arw-lead { display: inline-block; margin-left: .1em; }
+html.anim .pl-front.sdx { animation-name: h-front; }
+html.anim .hp--far.sdx { animation-name: h-far; }
+html.anim .hp--mid.sdx { animation-name: h-mid; }
+html.anim .hp--near.sdx { animation-name: h-near; }
+html.anim .silk__zoom.sdx { animation-name: h-silk; }
+@keyframes h-back { to { transform: perspective(1100px) translate3d(6cqw, -5.6cqw, -260px); } }
+@keyframes h-lead { to { transform: translate(.12em, -.11em); } }
+@keyframes h-front { to { transform: perspective(1100px) translate3d(-4.4cqw, .9cqw, 90px); } }
+@keyframes h-far { to { transform: perspective(1100px) translate3d(6.5cqw, -6cqw, -240px); } }
+@keyframes h-mid { to { transform: perspective(1100px) translate3d(3.6cqw, -3.4cqw, -120px); } }
+@keyframes h-near { to { transform: perspective(1100px) translate3d(1.2cqw, -1.1cqw, 20px); } }
+@keyframes h-silk { to { transform: scale(1.07); } }
+
+/* the arrow lift (signature): the line leaves its baseline up and to the right, into depth, the arrow leading.
+   Triggered: once its point is crossed it plays through on its own (any scroll length rests on a finished screen) */
+html.anim .lift { transform-origin: 0 100%; will-change: transform, opacity; transition: transform .7s var(--ease), opacity .3s linear; }
+html.anim .lift.is-gone { transform: perspective(1000px) translate3d(var(--lx, 9vw), calc(var(--lx, 9vw) * -.93), -520px); opacity: 0;
+  transition: transform .7s cubic-bezier(.55, 0, .8, .2), opacity .28s linear .42s; }
+html.anim .lift > .arw { transition: transform .7s var(--ease); }
+html.anim .lift.is-gone > .arw { transform: translate(.22em, -.2em); transition: transform .55s cubic-bezier(.55, 0, .8, .2); }
+@keyframes m-lift-lead { to { transform: translate(.22em, -.2em); } }
+
+/* ---------- act 2: the statement and the passage ---------- */
+.st { padding: clamp(4.5rem, 12vh, 9rem) var(--gut) clamp(3rem, 8vh, 6rem); }
+.st__in { max-width: 92rem; margin: 0 auto; }
+.label { margin: 0 0 1.5rem; font: 600 13px/1.4 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--m-soft); }
+.st__line { margin: 0; font: 700 clamp(2.3rem, 1rem + 4.6vw, 6.4rem)/1.0 var(--font); letter-spacing: -.05em; color: var(--m-ink); max-width: 15.5em; text-wrap: balance; }
+.nw { white-space: nowrap; }
+.ip { display: inline-block; width: 1.38em; height: .78em; vertical-align: -.06em; margin: 0 .08em; perspective: 600px; }
+.ip img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: .08em; transform-origin: 0 50%; backface-visibility: hidden; }
+html.anim .ip img { transform: perspective(500px) rotateY(84deg); transition: transform .6s var(--ease); }
+html.anim .ip.is-on img { transform: none; }
+.st__foot { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2rem 4rem; margin-top: clamp(2.5rem, 6vh, 4.5rem); padding-top: 1.5rem; border-top: 1px solid var(--m-line); }
+.st__aeo { margin: 0; font: 400 clamp(1.05rem, .95rem + .35vw, 1.3rem)/1.55 var(--font); color: var(--m-ink); max-width: 36em; }
+.st__tag { margin: 0; font: 500 15px/1.5 var(--font); color: var(--m-soft); }
+.st__tag b { color: var(--m-ink); font-weight: 600; }
+
+/* ---------- act 3: four disciplines, assembled from louvre slats ---------- */
+.disc { padding: clamp(2rem, 6vh, 4rem) var(--gut) clamp(3rem, 8vh, 6rem); }
+.disc__in { max-width: 92rem; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 9fr) minmax(0, 3fr); gap: 2rem 3rem; align-items: end; }
+.disc__list { list-style: none; margin: 0; padding: 0; }
+.dl { position: relative; padding: .9rem 0 .7rem; border-top: 1px solid var(--m-line); }
+.dl:last-child { border-bottom: 1px solid var(--m-line); }
+.lv { position: relative; display: block; font: 700 clamp(2.6rem, .4rem + 8.2vw, 10rem)/.9 var(--font); letter-spacing: -.06em; color: var(--m-ink); }
+.lv__t { display: block; padding-bottom: .12em; }
+.lv__s { position: absolute; inset: 0; display: none; pointer-events: none; }
+.lv__s::before { content: attr(data-t); display: block; padding-bottom: .12em; }
+html.anim .lv__s { display: block; }
+html.anim .lv__t, html.anim .lv__s { clip-path: inset(calc(var(--i) * 20%) 0 calc(100% - (var(--i) + 1) * 20% - .5px) 0); transform-origin: 50% calc((var(--i) + .5) * 20%); backface-visibility: hidden; }
+html.anim .lv__t { --i: 0; }
+html.anim .lv > span { transform: perspective(900px) rotateX(-88deg); transition: transform .5s var(--ease) calc(var(--i) * .05s); }
+html.anim .lv.is-on > span { transform: none; }
+.disc__svc h3 { margin: 0 0 1rem; font: 600 13px/1.4 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--m-soft); }
+.disc__svc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; font: 500 16px/1.35 var(--font); color: var(--m-ink); }
+.disc__svc a { color: inherit; text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .3s var(--ease); }
+.disc__svc a:hover { background-size: 100% 1px; }
+
+/* ---------- act 4: results (the peak) ---------- */
+.res__stage { height: 100vh; height: 100svh; overflow: clip; background: var(--m-ground); }
+.res__frame { position: absolute; inset: var(--bar) 0 var(--dock) 0; padding: clamp(1rem, 3vh, 2rem) var(--gut) clamp(1rem, 4vh, 2.5rem); display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.res__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem 2rem; flex-wrap: wrap; max-width: 92rem; width: 100%; margin: 0 auto; padding-bottom: .9rem; border-bottom: 1px solid var(--m-line); }
+.res__head h2 { margin: 0; font: 600 13px/1.4 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--m-ink); }
+.res__note { margin: 0; font: 500 13px/1.4 var(--font); color: var(--m-soft); }
+.slides { position: relative; max-width: 92rem; width: 100%; margin: 0 auto; min-height: 0; }
+.slide { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); grid-template-rows: auto minmax(0, 1fr); gap: 0 4vw; padding-top: clamp(1rem, 4vh, 2.5rem); }
+.slide__slot { position: relative; z-index: 2; grid-column: 1; grid-row: 1 / 3; align-self: start; --fade: 24px; height: calc(var(--slot, 0px) + var(--fade) * 2); margin: 0 -50vw 0 0; padding: var(--fade) 50vw 0 0; box-sizing: border-box; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade), #000 calc(100% - var(--fade)), transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade), #000 calc(100% - var(--fade)), transparent 100%); }
+.slide__slot a { pointer-events: auto; }
+html:not(.anim) .slide__slot { -webkit-mask-image: none; mask-image: none; margin: 0; padding: 0; }
+.slide__txt { position: relative; }
+.fig { transform-origin: 0 100%; }
+.fig { margin: 0; font: 700 clamp(5rem, 1rem + 13vw, 16rem)/.82 var(--font); letter-spacing: -.065em; color: var(--m-ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fig--2 { margin-top: clamp(1.25rem, 3.5vh, 2.5rem); font-size: clamp(3rem, 1rem + 6vw, 7.6rem); color: rgba(255, 232, 199, .92); }
+.fig__l { display: block; white-space: normal; margin-top: .9rem; max-width: 26em; font: 500 clamp(1.05rem, .95rem + .4vw, 1.4rem)/1.35 var(--font); letter-spacing: -.01em; color: var(--m-ink); }
+.fig--2 + .fig__l { font-size: clamp(.98rem, .9rem + .3vw, 1.2rem); }
+.slide__who { margin: 1.4rem 0 0; font: 600 12px/1.4 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--m-soft); }
+.slide__who a { color: inherit; }
+.plate { position: relative; margin: 0; z-index: 1; grid-column: 2; grid-row: 2; align-self: end; transform: perspective(1400px) translateZ(-140px); transform-origin: 100% 100%; }
+.plate img { display: block; width: 100%; height: auto; max-height: calc(100svh - var(--bar) - 9rem); aspect-ratio: 16 / 10; object-fit: cover; }
+.plate figcaption { margin-top: .6rem; font: 500 12px/1.4 var(--font); color: var(--m-soft); }
+/* the swap is a ticker in a fixed slot: the outgoing figure lifts up and to the right out of the top edge while the next rises from below,
+   so two figures never share a line; the plates cut at mid-swap, each seen whole: the outgoing one recedes, the next comes forward.
+   Triggered: the scroll position picks the figure, and each swap plays through on its own in .7s */
+html.anim .slide__txt { transform: translateY(calc(var(--slot) + 24px)); visibility: hidden; transition: transform .7s var(--ease), visibility 0s linear .7s; }
+html.anim .slide.is-past .slide__txt { transform: translate(calc(var(--slot) * .4), calc(var(--slot) * -1 - 24px)); transition: transform .7s cubic-bezier(.55, 0, .45, 1), visibility 0s linear .7s; }
+html.anim .slide.is-cur .slide__txt { transform: none; visibility: visible; transition: transform .7s var(--ease), visibility 0s; }
+html.anim .slide .fig:first-child { transform: perspective(900px) translateZ(-220px); transition: transform .7s var(--ease); }
+html.anim .slide.is-cur .fig:first-child { transform: none; }
+html.anim .slide.is-past .fig:first-child { transform: perspective(900px) translateZ(-260px); }
+html.anim .slide .fig > .arw { transition: transform .7s var(--ease); }
+html.anim .slide.is-past .fig > .arw { transform: translate(.22em, -.2em); }
+html.anim .slide .pclip { opacity: 0; visibility: hidden; transform: perspective(1200px) translateZ(-300px); transition: transform .35s cubic-bezier(.55, 0, .8, .2), opacity 0s linear .35s, visibility 0s linear .35s; }
+html.anim .slide.is-cur .pclip { opacity: 1; visibility: visible; transform: none; transition: transform .35s var(--ease) .35s, opacity 0s linear .35s, visibility 0s linear .35s; }
+html.anim .slides.is-set .slide .pclip, html.anim .slides.is-set .slide .slide__txt, html.anim .slides.is-set .slide .fig { transition: none; }
+
+/* without scroll timelines or with reduced motion: the results simply stack */
+html:not(.anim) .res, html:not(.anim) .close, html:not(.anim) .hero { height: auto !important; }
+html:not(.anim) .res__stage, html:not(.anim) .close__stage { position: static !important; height: auto !important; overflow: visible; }
+html:not(.anim) .res__frame { position: static; padding-top: calc(var(--bar) + 2rem); padding-bottom: 3rem; }
+html:not(.anim) .slides { display: grid; gap: 4.5rem; padding-top: 2.5rem; }
+html:not(.anim) .slide { position: static; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; gap: 1.5rem; padding-top: 0; }
+html:not(.anim) .slide__slot { grid-row: 1; height: auto; }
+html:not(.anim) .plate { grid-column: 1; grid-row: 2; width: min(100%, 44rem); justify-self: end; }
+
+/* ---------- act 5: work, names at poster scale, each plate rising from behind its name ---------- */
+.work { padding: clamp(4rem, 10vh, 7rem) var(--gut) clamp(3rem, 8vh, 6rem); }
+.work__in { max-width: 92rem; margin: 0 auto; }
+.work__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem 2rem; flex-wrap: wrap; padding-bottom: .9rem; border-bottom: 1px solid var(--m-line); }
+.work__head h2 { margin: 0; font: 600 13px/1.4 var(--font); letter-spacing: .14em; text-transform: uppercase; color: var(--m-ink); }
+.work__head p { margin: 0; font: 500 13px/1.4 var(--font); color: var(--m-soft); }
+.wl-list { list-style: none; margin: 0; padding: 0; }
+.wr { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1.5rem 3vw; align-items: center; padding: clamp(1.5rem, 4vh, 2.75rem) 0; border-bottom: 1px solid var(--m-line); }
+.wr__id { position: relative; z-index: 2; }
+.wr h3 { margin: 0; font: 700 clamp(3.2rem, .8rem + 8.4vw, 10.4rem)/.86 var(--font); letter-spacing: -.065em; color: var(--m-ink); }
+.wr h3 a { display: inline-block; color: inherit; text-decoration: none; }
+.wr h3 a:hover { text-decoration: underline; text-decoration-thickness: .03em; text-underline-offset: .08em; }
+.wr__meta { margin: 1rem 0 0; font: 500 15px/1.45 var(--font); color: var(--m-soft); max-width: 30em; }
+.wr__meta b { color: var(--m-ink); font-weight: 600; }
+.wr__plate { position: relative; z-index: 1; margin: 0; }
+.wr__plate img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+html.anim .wr__plate.sdx { animation-name: w-rise; will-change: transform; }
+@keyframes w-rise { from { transform: perspective(1100px) translate3d(-26vw, 2vw, -760px); opacity: .25; } 50% { opacity: 1; } to { transform: none; opacity: 1; } }
+
+/* ---------- act 6: the minds ---------- */
+/* questions: hairline rows; each question tilts up to flat out of depth as it reaches the screen */
+.faq { padding: clamp(3rem, 8vh, 6rem) var(--gut) clamp(4rem, 10vh, 7rem); }
+.faq__in { max-width: 92rem; margin: 0 auto; perspective: 1100px; }
+.faq__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--m-line); }
+.faq__row { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 1rem 3rem; padding: clamp(1.4rem, 3.5vh, 2.4rem) 0; border-bottom: 1px solid var(--m-line); transform-origin: 50% 100%; }
+.faq__row h3 { margin: 0; font: 700 clamp(1.7rem, .9rem + 2.4vw, 3.6rem)/1.02 var(--font); letter-spacing: -.045em; color: var(--m-ink); text-wrap: balance; }
+.faq__row p { margin: 0; padding-top: .35rem; font: 500 clamp(1rem, .9rem + .3vw, 1.2rem)/1.55 var(--font); color: var(--m-soft); max-width: 34em; }
+.faq__src { margin: 1.1rem 0 0; font: 500 13px/1.4 var(--font); color: var(--m-soft); }
+html.anim .faq__row { transform: perspective(1100px) translateZ(-220px) rotateX(-24deg); opacity: 0; transition: transform .6s var(--ease), opacity .3s linear; }
+html.anim .faq__row.is-on { transform: none; opacity: 1; }
+.minds { padding: clamp(4rem, 10vh, 7rem) var(--gut) clamp(3rem, 8vh, 6rem); }
+.minds__in { max-width: 92rem; margin: 0 auto; }
+.minds__title { margin: 0; font: 700 clamp(2.4rem, .9rem + 4.8vw, 6.6rem)/.92 var(--font); letter-spacing: -.055em; color: var(--m-ink); max-width: 12em; }
+.minds__title .lift { display: inline-block; }
+.people { list-style: none; margin: clamp(2rem, 5vh, 3.5rem) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.25rem; }
+.person { margin: 0; }
+.person__ph { perspective: 900px; }
+.person__ph img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; transform-origin: 0 50%; backface-visibility: hidden; }
+html.anim .person__ph img.sdx { animation-name: m-door; }
+@keyframes m-door { from { transform: perspective(900px) rotateY(76deg); } to { transform: none; } }
+.person h3 { margin: .85rem 0 0; font: 600 17px/1.3 var(--font); letter-spacing: -.01em; color: var(--m-ink); }
+.person p { margin: .2rem 0 0; font: 500 14px/1.4 var(--font); color: var(--m-soft); }
+.quote { margin: clamp(3rem, 8vh, 5.5rem) 0 0; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 1.5rem 3rem; }
+.quote p { margin: 0; font: 600 clamp(1.6rem, .9rem + 2.3vw, 3.4rem)/1.12 var(--font); letter-spacing: -.035em; color: var(--m-ink); max-width: 22em; text-wrap: pretty; }
+.quote footer { font: 500 14px/1.5 var(--font); color: var(--m-soft); padding-top: .4rem; }
+.quote footer b { display: block; color: var(--m-ink); font-weight: 600; }
+.team { margin: clamp(2.5rem, 6vh, 4rem) 0 0; perspective: 1200px; }
+.team img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 42%; }
+.team figcaption { margin-top: .7rem; font: 500 13px/1.4 var(--font); color: var(--m-soft); }
+html.anim .team img.sdx { animation-name: t-come; }
+@keyframes t-come { from { transform: perspective(1200px) translate3d(0, 0, -300px); } to { transform: none; } }
+
+/* ---------- act 7: the close, the silk drains and the arrow flies home ---------- */
+.close__stage { height: 100vh; height: 100svh; overflow: clip; background: var(--m-cream); color: var(--m-dark); }
+.close__frame { position: absolute; inset: var(--bar) 0 var(--dock) 0; z-index: 2; padding: clamp(1.25rem, 4vh, 3rem) var(--gut) clamp(1.25rem, 3.5vh, 2.25rem); display: grid; grid-template-rows: auto auto auto auto; align-content: space-between; gap: clamp(1rem, 3vh, 2rem); max-width: 96rem; margin: 0 auto; }
+.close__tag { margin: 0; font: 600 clamp(1.1rem, .9rem + .7vw, 1.6rem)/1.25 var(--font); letter-spacing: -.02em; color: var(--m-dark); }
+.wm { position: relative; align-self: end; width: 100%; max-width: 80rem; }
+.wm__rise { overflow: clip; overflow-clip-margin: 0; }
+.wm__in { position: relative; }
+.wm__letters { display: block; width: 100%; height: auto; }
+.wm__letters path { fill: var(--m-dark); }
+.wm__rise { position: relative; z-index: 1; }
+.wm__arw { z-index: 2; }
+/* the silk returns as a full-bleed band behind the cream wordmark, then drains to cream as the letters turn to ink */
+.wm__band { position: absolute; left: calc(50% - 50vw); width: 100vw; top: calc(-1 * (var(--bar) + clamp(1.25rem, 4vh, 3rem))); bottom: calc(-1 * clamp(1.25rem, 3.5vh, 2.25rem)); overflow: hidden; isolation: isolate; background: var(--m-tomato); }
+html:not(.anim) .wm__band { display: none; }
+html.anim .wm__letters path { fill: var(--m-cream); }
+html.anim .wm__letters path.sdx { animation-name: c-ink; }
+@keyframes c-ink { to { fill: #1b0e0a; } }
+.wm__floor { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: rgba(27, 14, 10, .25); }
+.wm__arw { position: absolute; left: 89.796%; top: 32.055%; width: 9.796%; height: 65.753%; fill: var(--m-accent); transform-origin: 0 100%; overflow: visible; }
+.close__ask { display: grid; gap: .8rem; }
+.close__cta { margin: 0; font: 700 clamp(2.2rem, .8rem + 4.4vw, 5.6rem)/1 var(--font); letter-spacing: -.05em; }
+.close__cta .cta { color: var(--m-dark); font-weight: 700; letter-spacing: -.05em; background-size: 100% max(2px, .05em); }
+.close__with { margin: 0; font: 500 13px/1.5 var(--font); color: rgba(27, 14, 10, .8); }
+.close__foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem; padding-top: .9rem; border-top: 1px solid rgba(27, 14, 10, .18); font: 500 12px/1.5 var(--font); color: rgba(27, 14, 10, .8); }
+.close__foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; }
+.close__foot a { color: var(--m-dark); text-underline-offset: .2em; }
+html.anim .wm__band.sdx { animation-name: c-drain; }
+html.anim .wm__in { transform: translateY(104%); transition: transform .65s var(--ease); }
+html.anim .wm.is-on .wm__in { transform: none; }
+html.anim .wm__arw.sdx { animation-name: c-home; }
+html.anim .wm__floor { transform: scaleX(0); transform-origin: 0 50%; transition: transform .6s var(--ease); }
+html.anim .wm.is-on .wm__floor { transform: none; }
+@keyframes c-drain { 0% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+@keyframes c-home { 0% { transform: translate(34vw, -46vh) scale(.08); opacity: 0; } 12% { opacity: 1; } 100% { transform: none; opacity: 1; } }
+@keyframes c-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+html:not(.anim) .close__stage { min-height: 100svh; }
+html:not(.anim) .close__frame { position: relative; inset: auto; min-height: 100svh; box-sizing: border-box; padding-top: calc(var(--bar) + 2rem); }
+
+
+/* ---------- desktop only: the hero is pinned and its planes part on scroll ---------- */
+@media (min-width: 861px) and (min-aspect-ratio: 4 / 5) {
+  .hero__stage { background: var(--m-tomato); }
+}
+
+/* ---------- phones and tall screens: a tall scene, the CTA in a bottom bar ---------- */
+@media (max-width: 860px), (max-aspect-ratio: 4 / 5) {
+  .hero__stage { position: relative; height: auto; min-height: 0; }
+  .hero__frame { position: relative; inset: auto; padding-top: var(--bar); display: block; }
+  .hero__top { padding-top: 1.1rem; }
+  .scene-box { container-type: inline-size; display: block; margin-top: clamp(1.25rem, 4vh, 2.5rem); }
+  .scene { --sw: 100%; width: 100%; aspect-ratio: 100 / 142; }
+  .hero__ask { left: var(--gut); top: 121cqw; }
+  .hero__ask .cta { font-size: 1.6rem; }
+  .hero__with { font-size: 14px; }
+  .pl-back { left: 2cqw; top: 0; font-size: 21cqw; }
+  .pl-front { left: 2.2cqw; right: auto; top: 68cqw; font-size: 31cqw; white-space: normal; line-height: .8; }
+  .pl-front br { display: block; }
+  .hp--far { left: 38cqw; top: 9cqw; width: 58cqw; }
+  .hp--mid { display: none; }
+  .hp--near { left: 4cqw; top: 41cqw; width: 64cqw; }
+}
+@media (max-width: 860px) {
+  :root { --bar: 56px; --dock: calc(64px + env(safe-area-inset-bottom)); --gut: 16px; }
+  .bar .cta { display: none; }
+  .bar__brand svg { height: 20px; }
+  .dock {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; height: var(--dock);
+    padding: 0 var(--gut) env(safe-area-inset-bottom); align-items: center; justify-content: center;
+    background: var(--m-ground); border-top: 1px solid var(--m-line); transition: transform .4s var(--ease);
+  }
+  .dock .cta { font-size: 19px; color: var(--m-ink); min-height: 44px; align-items: center; }
+  .dock.is-away { transform: translateY(100%); }
+  .st { padding-top: 3.5rem; }
+  .st__foot { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .disc__in { grid-template-columns: minmax(0, 1fr); }
+  .disc__svc ul { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .5rem 1rem; font-size: 15px; }
+  .slide { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; align-content: center; gap: 1.25rem; padding-top: 0; }
+  .slide__slot { grid-row: 1; }
+  .plate { grid-column: 1; grid-row: 2; }
+  .fig { font-size: clamp(3.6rem, 23.5vw, 7rem); }
+  .fig--2 { font-size: clamp(2.6rem, 14vw, 4rem); margin-top: 1rem; }
+  .fig__l { margin-top: .6rem; font-size: 1rem; }
+  .slide__who { margin-top: .9rem; }
+  .plate { transform: perspective(1000px) translateZ(-60px); width: 100%; }
+  .plate img { aspect-ratio: 1; max-height: 42svh; }
+  .res__frame { padding-bottom: .75rem; }
+  .work { padding-top: 2.5rem; }
+  .wr { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1.75rem 0; }
+  .wr h3 { font-size: clamp(3rem, 15.5vw, 5rem); }
+  .wr__meta { margin-top: .6rem; font-size: 14px; }
+  @keyframes w-rise { from { transform: perspective(900px) translate3d(0, -30%, -620px); opacity: .25; } 50% { opacity: 1; } to { transform: none; opacity: 1; } }
+  .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; }
+  .person h3 { font-size: 16px; }
+  .person p { font-size: 13px; }
+  .quote { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .faq__row { grid-template-columns: minmax(0, 1fr); gap: .7rem; }
+  .faq__row h3 { font-size: clamp(1.7rem, 8.4vw, 2.4rem); }
+  .team img { aspect-ratio: 4 / 3; }
+  .close__foot { flex-direction: column; }
+  .close__cta { font-size: 6.9vw; }
+}
+@media (max-width: 860px) and (max-height: 700px) {
+  .fig__l { font-size: .95rem; }
+  .plate img { max-height: 34svh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta .arw, .dock, .bar { transition: none; }
+}
+
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#about">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="arw" viewBox="0 0 46 46"><path d="M14 0H46V32H38V13.66L5.66 46L0 40.34L32.34 8H14Z"/></symbol></svg>
+
+<header class="bar" id="bar">
+  <a class="bar__brand" href="#top" aria-label="Mosswick Studio, back to top"><svg viewBox="-2 -2 439 76.8" width="126" height="22" aria-hidden="true" focusable="false"><path d="M0 71.4V21.8H12.4V27.2H14.2Q15.5 24.7 18.5 22.9Q21.5 21 26.4 21Q31.7 21 34.9 23.1Q38.1 25.1 39.8 28.4H41.6Q43.3 25.2 46.4 23.1Q49.5 21 55.2 21Q59.8 21 63.5 23Q67.3 24.9 69.6 28.9Q71.8 32.8 71.8 38.8V71.4H59.2V39.7Q59.2 35.6 57.1 33.5Q55 31.5 51.2 31.5Q46.9 31.5 44.6 34.2Q42.2 37 42.2 42.1V71.4H29.6V39.7Q29.6 35.6 27.5 33.5Q25.4 31.5 21.6 31.5Q17.3 31.5 15 34.2Q12.6 37 12.6 42.1V71.4ZM105 72.8Q97.6 72.8 91.7 69.8Q85.8 66.8 82.4 61.1Q79 55.4 79 47.4V45.8Q79 37.8 82.4 32.1Q85.8 26.4 91.7 23.4Q97.6 20.4 105 20.4Q112.4 20.4 118.3 23.4Q124.2 26.4 127.6 32.1Q131 37.8 131 45.8V47.4Q131 55.4 127.6 61.1Q124.2 66.8 118.3 69.8Q112.4 72.8 105 72.8ZM105 61.6Q110.8 61.6 114.6 57.9Q118.4 54.1 118.4 47.1V46.1Q118.4 39.1 114.7 35.4Q110.9 31.6 105 31.6Q99.2 31.6 95.4 35.4Q91.6 39.1 91.6 46.1V47.1Q91.6 54.1 95.4 57.9Q99.2 61.6 105 61.6ZM159.2 72.8Q149.5 72.8 143.3 68.6Q137.1 64.4 135.8 56.6L147.4 53.6Q148.1 57.1 149.8 59.1Q151.4 61.1 153.9 62Q156.3 62.8 159.2 62.8Q163.6 62.8 165.7 61.2Q167.8 59.7 167.8 57.4Q167.8 55.1 165.8 53.9Q163.8 52.6 159.4 51.8L156.6 51.3Q151.4 50.3 147.1 48.6Q142.8 46.8 140.2 43.7Q137.6 40.6 137.6 35.7Q137.6 28.3 143 24.4Q148.4 20.4 157.2 20.4Q165.5 20.4 171 24.1Q176.5 27.8 178.2 33.8L166.5 37.4Q165.7 33.6 163.2 32Q160.8 30.4 157.2 30.4Q153.6 30.4 151.7 31.7Q149.8 32.9 149.8 35.1Q149.8 37.5 151.8 38.7Q153.8 39.8 157.2 40.4L160 40.9Q165.6 41.9 170.1 43.6Q174.7 45.2 177.3 48.2Q180 51.3 180 56.5Q180 64.3 174.3 68.6Q168.7 72.8 159.2 72.8ZM207.6 72.8Q197.9 72.8 191.7 68.6Q185.5 64.4 184.2 56.6L195.8 53.6Q196.5 57.1 198.2 59.1Q199.8 61.1 202.2 62Q204.7 62.8 207.6 62.8Q212 62.8 214.1 61.2Q216.2 59.7 216.2 57.4Q216.2 55.1 214.2 53.9Q212.2 52.6 207.8 51.8L205 51.3Q199.8 50.3 195.5 48.6Q191.2 46.8 188.6 43.7Q186 40.6 186 35.7Q186 28.3 191.4 24.4Q196.8 20.4 205.6 20.4Q213.9 20.4 219.4 24.1Q224.9 27.8 226.6 33.8L214.9 37.4Q214.1 33.6 211.6 32Q209.2 30.4 205.6 30.4Q202 30.4 200.1 31.7Q198.2 32.9 198.2 35.1Q198.2 37.5 200.2 38.7Q202.2 39.8 205.6 40.4L208.4 40.9Q214 41.9 218.6 43.6Q223.1 45.2 225.8 48.2Q228.4 51.3 228.4 56.5Q228.4 64.3 222.8 68.6Q217.1 72.8 207.6 72.8ZM239.4 71.4 232.4 21.8H244.9L249.3 62.9H251.1L257.5 21.8H277.7L284.1 62.9H285.9L290.3 21.8H302.8L295.8 71.4H274.9L268.5 30.3H266.7L260.3 71.4ZM309.8 71.4V21.8H322.4V71.4ZM316.1 16Q312.7 16 310.4 13.8Q308 11.6 308 8Q308 4.4 310.4 2.2Q312.7 0 316.1 0Q319.6 0 321.9 2.2Q324.2 4.4 324.2 8Q324.2 11.6 321.9 13.8Q319.6 16 316.1 16ZM355.7 72.8Q348.5 72.8 342.7 69.8Q336.8 66.8 333.4 61.1Q330 55.4 330 47.3V45.9Q330 37.8 333.4 32.1Q336.8 26.4 342.7 23.4Q348.5 20.4 355.7 20.4Q362.8 20.4 367.9 22.9Q373 25.4 376.2 29.8Q379.3 34.1 380.3 39.6L368.1 42.2Q367.7 39.2 366.3 36.8Q364.9 34.4 362.4 33Q359.8 31.6 356 31.6Q352.2 31.6 349.2 33.2Q346.1 34.9 344.4 38.2Q342.6 41.4 342.6 46.1V47.1Q342.6 51.8 344.4 55.1Q346.1 58.3 349.2 60Q352.2 61.6 356 61.6Q361.7 61.6 364.7 58.7Q367.6 55.7 368.4 50.9L380.6 53.8Q379.3 59.1 376.2 63.5Q373 67.8 367.9 70.3Q362.8 72.8 355.7 72.8ZM387 71.4V1.4H399.6V40.1H401.4L417.8 21.8H434.2L411.3 45.8L435 71.4H418.8L401.4 51.7H399.6V71.4Z"/></svg></a>
+  <a class="cta" href="https://example.com" target="_blank" rel="noopener" data-cta>Book a 30 minute call<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a>
+</header>
+
+<main>
+  <!-- act 1: the line, with three studio projects standing inside it -->
+  <section class="hero" id="hero" data-sc-act="pin" data-sc-span="1.7" aria-labelledby="h1">
+    <div class="hero__stage" data-sc-stage>
+      <div class="silk" id="silk" aria-hidden="true">
+        <div class="silk__zoom" id="silk-zoom"><div class="silk__fold"></div></div>
+        <div class="silk__grain"></div>
+      </div>
+      <div class="hero__frame">
+        <div class="hero__top">
+          <p class="hero__eyebrow">Est. 2014 &middot; Studio in Lowmere</p>
+        </div>
+        <div class="scene-box">
+          <div class="scene" id="scene">
+            <span class="hp hp--far"><span class="hp__in"><img src="assets/img/hero-01.webp" alt="Marshlight Festival poster pasted on a brick wall at dusk, a Mosswick project" width="800" height="635" fetchpriority="high"></span></span>
+            <h1 class="h1" id="h1">
+              <span class="pl pl-back"><span class="mask"><span class="mask__in">Brands</span></span><span class="arw-lead"><svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></span></span>
+              <span class="pl pl-front"><span class="w">with a</span> <br><span class="w">pulse.</span></span>
+            </h1>
+            <span class="hp hp--mid"><span class="hp__in"><img src="assets/img/hero-02.webp" alt="Tallow Lane Coffee bags on a roastery workbench, a Mosswick project" width="800" height="635" fetchpriority="high"></span></span>
+            <span class="hp hp--near"><span class="hp__in"><img src="assets/img/hero-03.webp" alt="A colour-sorted wall of frames in a Periwink shop, a Mosswick project" width="800" height="635" fetchpriority="high"></span></span>
+            <div class="hero__ask">
+            <a class="cta cta--big" href="https://example.com" target="_blank" rel="noopener" data-cta data-big>Book a 30 minute call<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a>
+            <p class="hero__with">with a strategist, not a salesperson</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 2: what the studio does, for whom, where -->
+  <section class="st" id="about" data-sc-act="flow" aria-labelledby="about-h">
+    <div class="st__in">
+      <h2 class="label" id="about-h">What Mosswick does</h2>
+      <p class="st__line lift" id="statement">We build <span class="nw">brands<span class="ip"><img src="assets/img/inline-01.webp" alt="Tumblewick wooden toys beside their boxes" width="560" height="409" loading="lazy" decoding="async"></span>,</span> <span class="nw">websites<span class="ip"><img src="assets/img/inline-02.webp" alt="An exhibition room at Hollin Gallery" width="560" height="408" loading="lazy" decoding="async"></span></span> and <span class="nw">campaigns<span class="ip"><img src="assets/img/inline-03.webp" alt="A Cairnstone rucksack on a misty ridge" width="560" height="294" loading="lazy" decoding="async"></span></span> for companies that would rather be remembered.<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></p>
+      <div class="st__foot">
+        <p class="st__tag"><b>Brands worth remembering.</b><br>Marketing that pays back, measured honestly.</p>
+        <p class="st__aeo">Mosswick is a creative and marketing studio in Lowmere, founded in 2014. Thirty-two strategists, designers, writers, filmmakers and media buyers work in one studio, making brands that look good and marketing that earns its keep. We take on a handful of new clients each season and give each one a senior team from day one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 3: four disciplines, assembled like louvres -->
+  <section class="disc" id="disciplines" data-sc-act="flow" aria-labelledby="disc-h">
+    <div class="disc__in">
+      <div>
+        <h2 class="label" id="disc-h">Disciplines</h2>
+        <ul class="disc__list">
+          <li class="dl"><span class="lv"><span class="lv__t">Brand Identity</span><span class="lv__s" style="--i:1" data-t="Brand Identity" aria-hidden="true"></span><span class="lv__s" style="--i:2" data-t="Brand Identity" aria-hidden="true"></span><span class="lv__s" style="--i:3" data-t="Brand Identity" aria-hidden="true"></span><span class="lv__s" style="--i:4" data-t="Brand Identity" aria-hidden="true"></span></span></li>
+          <li class="dl"><span class="lv"><span class="lv__t">Performance Marketing</span><span class="lv__s" style="--i:1" data-t="Performance Marketing" aria-hidden="true"></span><span class="lv__s" style="--i:2" data-t="Performance Marketing" aria-hidden="true"></span><span class="lv__s" style="--i:3" data-t="Performance Marketing" aria-hidden="true"></span><span class="lv__s" style="--i:4" data-t="Performance Marketing" aria-hidden="true"></span></span></li>
+          <li class="dl"><span class="lv"><span class="lv__t">Film &amp; Motion</span><span class="lv__s" style="--i:1" data-t="Film &amp; Motion" aria-hidden="true"></span><span class="lv__s" style="--i:2" data-t="Film &amp; Motion" aria-hidden="true"></span><span class="lv__s" style="--i:3" data-t="Film &amp; Motion" aria-hidden="true"></span><span class="lv__s" style="--i:4" data-t="Film &amp; Motion" aria-hidden="true"></span></span></li>
+          <li class="dl"><span class="lv"><span class="lv__t">Social Content</span><span class="lv__s" style="--i:1" data-t="Social Content" aria-hidden="true"></span><span class="lv__s" style="--i:2" data-t="Social Content" aria-hidden="true"></span><span class="lv__s" style="--i:3" data-t="Social Content" aria-hidden="true"></span><span class="lv__s" style="--i:4" data-t="Social Content" aria-hidden="true"></span></span></li>
+        </ul>
+      </div>
+      <div class="disc__svc">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Brand strategy</a></li>
+          <li><a href="#">Brand identity</a></li>
+          <li><a href="#">Websites</a></li>
+          <li><a href="#">Social content</a></li>
+          <li><a href="#">Film and motion</a></li>
+          <li><a href="#">Campaigns</a></li>
+          <li><a href="#">Performance marketing</a></li>
+          <li><a href="#">Packaging</a></li>
+          <li><a href="#">Naming</a></li>
+          <li><a href="#">Photography</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 4: results (the peak) -->
+  <section class="res" id="results" data-sc-act="pin" data-sc-span="4.4" aria-labelledby="res-h">
+    <div class="res__stage" data-sc-stage>
+      <div class="res__frame">
+        <div class="res__head">
+          <h2 id="res-h">Results</h2>
+          <p class="res__note">Figures from client reports</p>
+        </div>
+        <div class="slides">
+          <article class="slide slide--first lift-group" aria-label="Shelterly">
+            <div class="slide__slot"><div class="slide__txt">
+              <p class="fig">+64%<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg><span class="fig__l">Quote completions</span></p>
+              <p class="fig fig--2">&minus;59%<span class="fig__l">Questions on the quote form</span></p>
+              <p class="slide__who"><a href="#">Shelterly</a> &middot; brand strategy, website and paid search</p>
+            </div></div>
+            <figure class="plate"><div class="pclip"><img src="assets/img/result-01.webp" alt="A small model house under a folded paper umbrella, for Shelterly" width="1200" height="750" loading="lazy" decoding="async"></div></figure>
+          </article>
+          <article class="slide" aria-label="Houndsbury">
+            <div class="slide__slot"><div class="slide__txt">
+              <p class="fig">2.4X<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg><span class="fig__l">subscriptions in a year (Houndsbury)</span></p>
+              <p class="slide__who">Houndsbury &middot; packaging, paid social, content</p>
+            </div></div>
+            <figure class="plate"><div class="pclip"><img src="assets/img/result-02.webp" alt="A terrier beside an open Houndsbury meal box" width="1200" height="750" loading="lazy" decoding="async"></div></figure>
+          </article>
+          <article class="slide" aria-label="Velloway">
+            <div class="slide__slot"><div class="slide__txt">
+              <p class="fig">38%<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg><span class="fig__l">more online sales for Velloway in launch month</span></p>
+              <p class="slide__who">Velloway &middot; film, campaign, paid media</p>
+            </div></div>
+            <figure class="plate"><div class="pclip"><img src="assets/img/result-03.webp" alt="A cyclist in a Velloway jacket on a wet street at dusk" width="1200" height="750" loading="lazy" decoding="async"></div></figure>
+          </article>
+          <article class="slide slide--last" aria-label="Gearfinch">
+            <div class="slide__slot"><div class="slide__txt">
+              <p class="fig">640<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg><span class="fig__l">test rides booked in the launch quarter, from the film, site and ads we made</span></p>
+              <p class="slide__who">Gearfinch &middot; film, website, paid media</p>
+            </div></div>
+            <figure class="plate"><div class="pclip"><img src="assets/img/result-04.webp" alt="A Gearfinch cargo e-bike on a leafy street" width="1200" height="750" loading="lazy" decoding="async"></div></figure>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- act 5: the work, project by project -->
+  <section class="work" id="work" data-sc-act="flow" aria-labelledby="work-h">
+    <div class="work__in">
+      <div class="work__head">
+        <h2 id="work-h">Selected work</h2>
+        <p>Seven from <a href="#" style="color:inherit">140+ brands launched</a> since 2014</p>
+      </div>
+      <ol class="wl-list">
+        <li class="wr">
+          <div class="wr__id"><h3><a href="#">Plumtide</a></h3><p class="wr__meta"><b>Food and drink.</b> Name, identity and packaging.</p></div>
+          <figure class="wr__plate"><img src="assets/img/work-01.webp" alt="Plumtide cordial bottles on a limestone ledge in morning sun" width="1400" height="875" loading="lazy" decoding="async"></figure>
+        </li>
+        <li class="wr">
+          <div class="wr__id"><h3><a href="#">Stillreed</a></h3><p class="wr__meta"><b>Consumer tech.</b> Product films and launch campaign.</p></div>
+          <figure class="wr__plate"><img src="assets/img/work-02.webp" alt="Stillreed headphones on the edge of an empty pool" width="1400" height="875" loading="lazy" decoding="async"></figure>
+        </li>
+        <li class="wr">
+          <div class="wr__id"><h3><a href="#">Fizzwold</a></h3><p class="wr__meta"><b>Kombucha.</b> Rebrand, can design and social launch.</p></div>
+          <figure class="wr__plate"><img src="assets/img/work-03.webp" alt="Four Fizzwold cans standing in crushed ice" width="1400" height="875" loading="lazy" decoding="async"></figure>
+        </li>
+        <li class="wr">
+          <div class="wr__id"><h3><a href="#">Kilnmark</a></h3><p class="wr__meta"><b>Ceramics.</b> Identity and online shop.</p></div>
+          <figure class="wr__plate"><img src="assets/img/work-04.webp" alt="Kilnmark plates and bowls on a linen cloth" width="1400" height="875" loading="lazy" decoding="async"></figure>
+        </li>
+        <li class="wr">
+          <div class="wr__id"><h3><a href="#">Marlo Rue</a></h3><p class="wr__meta"><b>Knitwear.</b> Lookbook, film and social launch.</p></div>
+          <figure class="wr__plate"><img src="assets/img/work-05.webp" alt="A Marlo Rue sweater on a fence post in a misty field" width="1400" height="875" loading="lazy" decoding="async"></figure>
+        </li>
+        <li class="wr">
+          <div class="wr__id"><h3><a href="#">Owlhour</a></h3><p class="wr__meta"><b>Night school.</b> Brand and enrolment campaign.</p></div>
+          <figure class="wr__plate"><img src="assets/img/work-06.webp" alt="A lit Owlhour classroom window at night" width="1400" height="875" loading="lazy" decoding="async"></figure>
+        </li>
+        <li class="wr">
+          <div class="wr__id"><h3><a href="#">Voltmere</a></h3><p class="wr__meta"><b>Home solar.</b> Brand, website and lead campaign.</p></div>
+          <figure class="wr__plate"><img src="assets/img/work-07.webp" alt="Solar panels on a terraced house roof in late sun" width="1400" height="875" loading="lazy" decoding="async"></figure>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- act 6: the minds -->
+  <section class="minds" id="minds" data-sc-act="flow" aria-labelledby="minds-h">
+    <div class="minds__in">
+      <h2 class="minds__title" id="minds-h"><span class="lift" id="minds-lift">The people who lead Mosswick<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></span></h2>
+      <ul class="people">
+        <li class="person"><div class="person__ph"><img src="assets/img/team-1.webp" alt="Ines Calloway" width="520" height="520" loading="lazy" decoding="async"></div><h3>Ines Calloway</h3><p>Founder and Creative Director</p></li>
+        <li class="person"><div class="person__ph"><img src="assets/img/team-2.webp" alt="Tobias Okonjo-Hale" width="520" height="520" loading="lazy" decoding="async"></div><h3>Tobias Okonjo-Hale</h3><p>Co-founder and Strategy Director</p></li>
+        <li class="person"><div class="person__ph"><img src="assets/img/team-3.webp" alt="Mei Lin Draper" width="520" height="520" loading="lazy" decoding="async"></div><h3>Mei Lin Draper</h3><p>Design Director</p></li>
+        <li class="person"><div class="person__ph"><img src="assets/img/team-4.webp" alt="Dario Vellacott" width="520" height="520" loading="lazy" decoding="async"></div><h3>Dario Vellacott</h3><p>Film Director</p></li>
+        <li class="person"><div class="person__ph"><img src="assets/img/team-5.webp" alt="Hana Moriyama" width="520" height="520" loading="lazy" decoding="async"></div><h3>Hana Moriyama</h3><p>Head of Social</p></li>
+      </ul>
+      <blockquote class="quote">
+        <footer><b>Ines Calloway</b>Founder, Mosswick</footer>
+        <p>&ldquo;Every brand needs one idea it can say in a single breath. If nobody remembers your ad, it might as well not have run.&rdquo;</p>
+      </blockquote>
+      <figure class="team">
+        <img src="assets/img/team-group.webp" alt="The Mosswick team together in the studio" width="1600" height="1068" loading="lazy" decoding="async">
+        <figcaption>The Mosswick team</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- act 6b: questions clients ask, answered plainly -->
+  <section class="faq" id="faq" data-sc-act="flow" aria-labelledby="faq-h">
+    <div class="faq__in">
+      <h2 class="label" id="faq-h">Questions clients ask us</h2>
+      <ol class="faq__list">
+        <li class="faq__row"><h3>How much does a project cost?</h3><p>Brand identities usually start around $18,000, websites around $15,000 and retainers around $5,000 a month. We send a fixed quote after our first call.</p></li>
+        <li class="faq__row"><h3>How long does a brand identity take?</h3><p>Most identity projects take eight to twelve weeks from the first workshop to final files. A full rebrand with a website usually runs four to six months.</p></li>
+        <li class="faq__row"><h3>Who will actually work on my project?</h3><p>The people you meet in the first meeting: a senior lead, a strategist and the makers the job needs. We never hand the work to a different team after signing.</p></li>
+      </ol>
+      <p class="faq__src">Ask us anything else on a call</p>
+    </div>
+  </section>
+
+  <!-- act 7: the close, the silk drains and the arrow comes home -->
+  <section class="close" id="contact" data-sc-act="pin" data-sc-span="1.6" aria-labelledby="close-h">
+    <div class="close__stage" data-sc-stage>
+      <div class="close__frame">
+        <div class="wm" role="img" aria-label="Mosswick">
+          <div class="wm__band" aria-hidden="true"><div class="silk__fold"></div><div class="silk__grain"></div></div>
+          <div class="wm__rise"><div class="wm__in"><svg class="wm__letters" viewBox="0 0 490 73" width="490" height="73" aria-hidden="true" focusable="false"><path d="M0 71.4V21.8H12.4V27.2H14.2Q15.5 24.7 18.5 22.9Q21.5 21 26.4 21Q31.7 21 34.9 23.1Q38.1 25.1 39.8 28.4H41.6Q43.3 25.2 46.4 23.1Q49.5 21 55.2 21Q59.8 21 63.5 23Q67.3 24.9 69.6 28.9Q71.8 32.8 71.8 38.8V71.4H59.2V39.7Q59.2 35.6 57.1 33.5Q55 31.5 51.2 31.5Q46.9 31.5 44.6 34.2Q42.2 37 42.2 42.1V71.4H29.6V39.7Q29.6 35.6 27.5 33.5Q25.4 31.5 21.6 31.5Q17.3 31.5 15 34.2Q12.6 37 12.6 42.1V71.4ZM105 72.8Q97.6 72.8 91.7 69.8Q85.8 66.8 82.4 61.1Q79 55.4 79 47.4V45.8Q79 37.8 82.4 32.1Q85.8 26.4 91.7 23.4Q97.6 20.4 105 20.4Q112.4 20.4 118.3 23.4Q124.2 26.4 127.6 32.1Q131 37.8 131 45.8V47.4Q131 55.4 127.6 61.1Q124.2 66.8 118.3 69.8Q112.4 72.8 105 72.8ZM105 61.6Q110.8 61.6 114.6 57.9Q118.4 54.1 118.4 47.1V46.1Q118.4 39.1 114.7 35.4Q110.9 31.6 105 31.6Q99.2 31.6 95.4 35.4Q91.6 39.1 91.6 46.1V47.1Q91.6 54.1 95.4 57.9Q99.2 61.6 105 61.6ZM159.2 72.8Q149.5 72.8 143.3 68.6Q137.1 64.4 135.8 56.6L147.4 53.6Q148.1 57.1 149.8 59.1Q151.4 61.1 153.9 62Q156.3 62.8 159.2 62.8Q163.6 62.8 165.7 61.2Q167.8 59.7 167.8 57.4Q167.8 55.1 165.8 53.9Q163.8 52.6 159.4 51.8L156.6 51.3Q151.4 50.3 147.1 48.6Q142.8 46.8 140.2 43.7Q137.6 40.6 137.6 35.7Q137.6 28.3 143 24.4Q148.4 20.4 157.2 20.4Q165.5 20.4 171 24.1Q176.5 27.8 178.2 33.8L166.5 37.4Q165.7 33.6 163.2 32Q160.8 30.4 157.2 30.4Q153.6 30.4 151.7 31.7Q149.8 32.9 149.8 35.1Q149.8 37.5 151.8 38.7Q153.8 39.8 157.2 40.4L160 40.9Q165.6 41.9 170.1 43.6Q174.7 45.2 177.3 48.2Q180 51.3 180 56.5Q180 64.3 174.3 68.6Q168.7 72.8 159.2 72.8ZM207.6 72.8Q197.9 72.8 191.7 68.6Q185.5 64.4 184.2 56.6L195.8 53.6Q196.5 57.1 198.2 59.1Q199.8 61.1 202.2 62Q204.7 62.8 207.6 62.8Q212 62.8 214.1 61.2Q216.2 59.7 216.2 57.4Q216.2 55.1 214.2 53.9Q212.2 52.6 207.8 51.8L205 51.3Q199.8 50.3 195.5 48.6Q191.2 46.8 188.6 43.7Q186 40.6 186 35.7Q186 28.3 191.4 24.4Q196.8 20.4 205.6 20.4Q213.9 20.4 219.4 24.1Q224.9 27.8 226.6 33.8L214.9 37.4Q214.1 33.6 211.6 32Q209.2 30.4 205.6 30.4Q202 30.4 200.1 31.7Q198.2 32.9 198.2 35.1Q198.2 37.5 200.2 38.7Q202.2 39.8 205.6 40.4L208.4 40.9Q214 41.9 218.6 43.6Q223.1 45.2 225.8 48.2Q228.4 51.3 228.4 56.5Q228.4 64.3 222.8 68.6Q217.1 72.8 207.6 72.8ZM239.4 71.4 232.4 21.8H244.9L249.3 62.9H251.1L257.5 21.8H277.7L284.1 62.9H285.9L290.3 21.8H302.8L295.8 71.4H274.9L268.5 30.3H266.7L260.3 71.4ZM309.8 71.4V21.8H322.4V71.4ZM316.1 16Q312.7 16 310.4 13.8Q308 11.6 308 8Q308 4.4 310.4 2.2Q312.7 0 316.1 0Q319.6 0 321.9 2.2Q324.2 4.4 324.2 8Q324.2 11.6 321.9 13.8Q319.6 16 316.1 16ZM355.7 72.8Q348.5 72.8 342.7 69.8Q336.8 66.8 333.4 61.1Q330 55.4 330 47.3V45.9Q330 37.8 333.4 32.1Q336.8 26.4 342.7 23.4Q348.5 20.4 355.7 20.4Q362.8 20.4 367.9 22.9Q373 25.4 376.2 29.8Q379.3 34.1 380.3 39.6L368.1 42.2Q367.7 39.2 366.3 36.8Q364.9 34.4 362.4 33Q359.8 31.6 356 31.6Q352.2 31.6 349.2 33.2Q346.1 34.9 344.4 38.2Q342.6 41.4 342.6 46.1V47.1Q342.6 51.8 344.4 55.1Q346.1 58.3 349.2 60Q352.2 61.6 356 61.6Q361.7 61.6 364.7 58.7Q367.6 55.7 368.4 50.9L380.6 53.8Q379.3 59.1 376.2 63.5Q373 67.8 367.9 70.3Q362.8 72.8 355.7 72.8ZM387 71.4V1.4H399.6V40.1H401.4L417.8 21.8H434.2L411.3 45.8L435 71.4H418.8L401.4 51.7H399.6V71.4Z"/></svg></div></div>
+          <svg class="wm__arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg>
+          <span class="wm__floor" aria-hidden="true"></span>
+        </div>
+        <p class="close__tag">Creative and Marketing Studio<br>Lowmere &middot; Est. 2014</p>
+        <div class="close__ask">
+          <h2 class="close__cta" id="close-h"><a class="cta" href="https://example.com" target="_blank" rel="noopener" data-cta data-big>Book a 30 minute call<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a></h2>
+          <p class="close__with">With a strategist, not a salesperson. Or write to <a href="mailto:hello@example.com" style="color:#1b0e0a">hello@example.com</a></p>
+        </div>
+        <footer class="close__foot">
+          <span>&copy; 2026 Mosswick Studio. Example content. Swap in your own.</span>
+          <ul>
+            <li><a href="https://example.com" rel="noopener">Instagram</a></li>
+            <li><a href="https://example.com" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://example.com" rel="noopener">Behance</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="dock" id="dock">
+  <a class="cta" href="https://example.com" target="_blank" rel="noopener" data-cta>Book a 30 minute call<svg class="arw" aria-hidden="true" focusable="false"><use href="#arw"/></svg></a>
+</div>
+
+
+<script src="scrollcraft.js"></script>
+<script>
+(function () {
+  var phone = matchMedia('(max-width: 860px), (max-aspect-ratio: 4 / 5)').matches;
+  /* phones and tall screens: the hero is an ordinary flow act (no hero scroll motion), shorter pins */
+  if (phone) {
+    var h = document.getElementById('hero');
+    h.setAttribute('data-sc-act', 'flow'); h.removeAttribute('data-sc-span');
+    document.getElementById('results').setAttribute('data-sc-span', '4');
+    document.getElementById('contact').setAttribute('data-sc-span', '1.5');
+  }
+})();
+ScrollCraft.mount(document.body);
+(function () {
+  var root = document.documentElement;
+  var anim = root.classList.contains('anim');
+  var phoneQ = matchMedia('(max-width: 860px), (max-aspect-ratio: 4 / 5)');
+  var dockQ = matchMedia('(max-width: 860px)');
+  var hero = document.getElementById('hero'), scene = document.getElementById('scene');
+  var res = document.getElementById('results'), close = document.getElementById('contact');
+  var bar = document.getElementById('bar'), dock = document.getElementById('dock');
+
+  /* ---- the hero reveal, once the type and the three plates are ready ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var done = false;
+    var go = function () {
+      if (done) return; done = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('reveal'); root.classList.remove('pre-reveal'); }); });
+    };
+    var waits = [];
+    if (document.fonts && document.fonts.ready) waits.push(document.fonts.ready);
+    [].forEach.call(document.querySelectorAll('.hp img'), function (im) {
+      if (im.decode) waits.push(im.decode().catch(function () {}));
+    });
+    Promise.all(waits).then(go, go);
+    setTimeout(go, 1600);
+  }
+
+
+  /* ---- scroll-linked ranges, in page pixels, for the CSS scroll timelines ---- */
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b, fa, fb, cls) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px'); el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    if (fa !== undefined) { if (fb <= fa) fb = fa + 1; el.style.setProperty('--f0', fa.toFixed(1) + 'px'); el.style.setProperty('--f1', fb.toFixed(1) + 'px'); }
+    el.classList.add(cls || 'sdx');
+  }
+  /* triggered reveals: each element gets a page-pixel point; crossing it toggles a class and a CSS transition plays through on its own */
+  var trig = [], resK = null;
+  function T(el, at, cls) { trig.push({ el: el, at: at, cls: cls || 'is-on' }); }
+  function runTrig() {
+    var y = scrollY;
+    for (var i = 0; i < trig.length; i++) trig[i].el.classList.toggle(trig[i].cls, y >= trig[i].at);
+    if (resK) {
+      var k = (y - resK.t) / resK.tr, n = 0;
+      for (var j = 0; j < resK.at.length; j++) if (k >= resK.at[j]) n++;
+      if (n !== resK.n) {
+        resK.n = n;
+        [].forEach.call(resK.slides, function (sl, i) { sl.classList.toggle('is-cur', i === n); sl.classList.toggle('is-past', i < n); });
+      }
+    }
+  }
+  function lift(el, at) { T(el, at, 'is-gone'); }
+  function measure() {
+    if (!anim) return;
+    var vh = innerHeight;
+    var phone = phoneQ.matches;
+    trig = [];
+
+    /* hero (desktop): the planes part along the arrow's line across the pin */
+    if (!phone) {
+      var hT = top(hero), hTr = Math.max(1, hero.offsetHeight - vh);
+      var back = scene.querySelector('.pl-back');
+      setR(back, hT, hT + hTr); setR(back.querySelector('.arw-lead'), hT, hT + hTr);
+      setR(scene.querySelector('.pl-front'), hT, hT + hTr);
+      [].forEach.call(scene.querySelectorAll('.hp'), function (l) { setR(l, hT, hT + hTr); });
+      setR(document.getElementById('silk-zoom'), hT, hT + hTr);
+    }
+
+    /* statement: the plates turn to face you as soon as they come on screen; then the arrow lifts the line away */
+    [].forEach.call(document.querySelectorAll('.ip'), function (ip) { T(ip, top(ip) - vh); });
+    var st = document.getElementById('statement');
+    var sT = top(st), sH = st.offsetHeight;
+    lift(st, sT + sH - vh * .26);
+
+    /* disciplines: five slats per line turn flat in order, top to bottom, once the line enters */
+    [].forEach.call(document.querySelectorAll('.lv'), function (lv) { T(lv, top(lv) - vh * .9); });
+
+    /* results (the peak): a ticker in a fixed slot; the arrow lifts each figure up and to the right out of the slot as the next rises in.
+       The slot is as tall as the tallest figure block, so the outgoing block always clears the incoming one. Plates cut at mid-swap. */
+    var rT = top(res), rTr = Math.max(1, res.offsetHeight - vh);
+    var at = function (k) { return rT + rTr * k; };
+    var slides = res.querySelectorAll('.slide');
+    var slot = 0;
+    [].forEach.call(res.querySelectorAll('.slide__txt'), function (t) { slot = Math.max(slot, t.offsetHeight); });
+    res.style.setProperty('--slot', Math.ceil(slot + 8) + 'px');
+    /* the swap points sit where the scrubbed swaps used to be centred: .245, .515 and .785 of the pin */
+    var first = !resK;
+    resK = { t: rT, tr: rTr, at: [.245, .515, .785], slides: slides, n: -1 };
+    if (first) {
+      /* first paint: put every slide straight into its resting state, no swap played */
+      var box = res.querySelector('.slides'); box.classList.add('is-set');
+      runTrig(); void box.offsetWidth;
+      requestAnimationFrame(function () { box.classList.remove('is-set'); });
+    }
+
+    /* work: each plate climbs out from behind its name as the row comes up */
+    [].forEach.call(document.querySelectorAll('.wr__plate'), function (p) {
+      var row = p.closest('.wr'), t = top(row);
+      setR(p, t - vh * .95, t - vh * (phone ? .42 : .38));
+    });
+
+    /* minds: portraits open on their hinges, staggered; the title lifts away; the team comes forward */
+    var cols = phone ? 2 : 5;
+    [].forEach.call(document.querySelectorAll('.person__ph img'), function (im, i) {
+      var t = top(im.parentNode), c = i % cols;
+      var a = t - vh * .98 + c * vh * .045;
+      setR(im, a, a + vh * .4);
+    });
+    var ml = document.getElementById('minds-lift');
+    var mT = top(ml), mH = ml.offsetHeight;
+    lift(ml, mT + mH - vh * .16);
+    [].forEach.call(document.querySelectorAll('.faq__row'), function (r) { T(r, top(r) - vh * .9); });
+    var team = document.querySelector('.team img');
+    var tT = top(team); setR(team, tT - vh * 1.05, tT - vh * .62);
+
+    /* close: the wordmark rises through the floor with the silk behind its letters while the stage arrives (every line of the close
+       is already on the page), then the silk drains out of the letters and the arrow flies home into the last slot */
+    var cT = top(close), cTr = Math.max(1, close.offsetHeight - vh);
+    var ct = function (k) { return cT + cTr * k; };
+    T(close.querySelector('.wm'), cT - vh * .96);
+    setR(close.querySelector('.wm__band'), ct(.08), ct(.5));
+    [].forEach.call(close.querySelectorAll('.wm__letters path'), function (pth) { setR(pth, ct(.18), ct(.4)); });
+    setR(close.querySelector('.wm__arw'), ct(.36), ct(.86));
+    runTrig();
+  }
+
+  var lastW = -1;
+  function all() { measure(); lastW = innerWidth; }
+  all();
+  addEventListener('resize', function () { if (innerWidth !== lastW || !dockQ.matches) all(); });
+  addEventListener('load', all);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); } }).observe(document.body); }
+
+  /* ---- the bar turns solid once the hero is behind; the phone bar steps away while a big CTA is on screen ---- */
+  var bigs = [].slice.call(document.querySelectorAll('[data-big]'));
+  var tick = false;
+  function chrome() {
+    tick = false;
+    runTrig();
+    var heroEnd = hero.getBoundingClientRect().bottom;
+    bar.classList.toggle('is-solid', heroEnd < 70 || (dockQ.matches && scrollY > 4));
+    var away = bigs.some(function (b) {
+      var r = b.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight - 40) return false;
+      var cs = getComputedStyle(b.closest('.close__ask') || b);
+      return cs.visibility !== 'hidden' && parseFloat(cs.opacity) > 0.5;
+    });
+    dock.classList.toggle('is-away', away);
+    root.classList.toggle('dock-away', away && dockQ.matches);
+  }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(chrome); } }, { passive: true });
+  chrome();
+  setTimeout(chrome, 1800);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosswick Studio | Creative and Marketing Studio, Lowmere</title>
+<meta name="description" content="Mosswick is a creative and marketing studio in Lowmere: brand identity, websites, social content, film and paid media. Book an intro call.">
+<meta name="theme-color" content="#0F2E2E">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mosswick Studio">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta property="og:description" content="Brands people can pick out of a crowd. Identity, websites, social, film and paid media from one studio in Lowmere. Book an intro call.">
+<meta property="og:image" content="https://example.com/assets/hero-wall.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="980">
+<meta property="og:image:alt" content="The Mosswick studio: a long room with tall windows, wooden tables and plants.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mosswick Studio | Creative and Marketing Studio, Lowmere">
+<meta name="twitter:description" content="Brands people can pick out of a crowd. A creative and marketing studio in Lowmere.">
+<meta name="twitter:image" content="https://example.com/assets/hero-wall.webp">
+
+<script>
+  (function (d) {
+    d.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('fx', 'pre-reveal');
+    if (window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()') && !/[?&]nosd\b/.test(location.search)) d.classList.add('sd');
+  })(document.documentElement);
+</script>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-900-latin.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/mark.svg">
+<link rel="stylesheet" href="scrollcraft.css">
+
+<style>
+@font-face { font-family: "Montserrat"; src: url("assets/fonts/montserrat-900-latin.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("assets/fonts/geist-semibold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+
+/* Palette: Deep Teal. A teal ground, pale and amber cards on it. */
+:root {
+  --t-accent: #F2B544;
+  --t-accent-hover: #F6C566;
+  --t-ground: #0F2E2E;
+  --t-paper: #EAF2EE;
+  --t-text: #EAF2EE;
+  --t-text-2: #CFDDD8;
+  --t-soft: #9FB8B1;
+  --t-soft-ink: #3E5A55;
+  --t-dim: #4F6C67;
+  --t-line: rgba(234, 242, 238, .14);
+  --t-line-ink: rgba(15, 46, 46, .16);
+
+  --sc-canvas: #0F2E2E;
+  --sc-surface: #163B3B;
+  --sc-ink: #EAF2EE;
+  --sc-ink-soft: #9FB8B1;
+  --sc-accent: #F2B544;
+  --sc-accent-ink: #0F2E2E;
+
+  --sys: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --display: "Montserrat", "Arial Black", var(--sys);
+  --sc-font-display: var(--display);
+  --sc-font-text: var(--sys);
+
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --g: var(--sc-gutter);
+  --bar: 64px;
+  color-scheme: dark;
+}
+html { scroll-padding-top: var(--bar); background: var(--t-ground); }
+body { margin: 0; background: var(--t-ground); color: var(--t-text); font-family: var(--sys); }
+h1, h2, h3 { color: inherit; }
+a { color: inherit; }
+img { max-width: 100%; }
+:focus-visible { outline: 2px solid var(--t-accent); outline-offset: 3px; }
+.card :focus-visible, .dcard :focus-visible, .logos :focus-visible { outline-color: var(--t-ground); }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 100; background: var(--t-paper); color: var(--t-ground); padding: 10px 14px; border-radius: 6px; }
+.skip:focus { top: 12px; }
+.caps { margin: 0; font: 600 .72rem/1.35 var(--sys); letter-spacing: .15em; text-transform: uppercase; }
+.display { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -.012em; }
+.display em, .o { font-style: normal; color: var(--t-accent); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* ---------------- the one action ---------------- */
+.cta { display: inline-flex; align-items: center; gap: .9rem; background: var(--t-accent); color: var(--t-ground); font-weight: 700; text-decoration: none; border-radius: 8px; transition: transform .16s var(--ease), background-color .2s var(--ease); }
+.cta:active { transform: scale(.97); }
+.cta__label { display: grid; overflow: hidden; line-height: 1.25; }
+.cta__label > span { grid-area: 1 / 1; transition: transform .45s var(--ease); }
+.cta__label > span + span { transform: translateY(115%); }
+.cta__chip { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 6px; background: var(--t-ground); color: var(--t-accent); transition: transform .45s var(--ease); }
+.cta__chip svg { width: 18px; height: 18px; }
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover { background: var(--t-accent-hover); }
+  .cta:hover .cta__label > span:first-child { transform: translateY(-115%); }
+  .cta:hover .cta__label > span + span { transform: none; }
+  .cta:hover .cta__chip { transform: rotate(-45deg); }
+}
+.cta--big { min-height: 60px; padding: 0 8px 0 1.4rem; font-size: 1.1rem; }
+.cta--bar { min-height: 40px; padding: 0 1rem; font-size: .88rem; }
+.call { font-size: 1rem; color: var(--t-text); text-decoration: underline; text-decoration-color: rgba(234, 242, 238, .45); text-underline-offset: .3em; }
+.call:hover { text-decoration-color: var(--t-accent); }
+
+/* fixed minimal bar: the wordmark, one button */
+.bar { position: fixed; inset: 0 0 auto 0; z-index: 60; height: var(--bar); display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 var(--g); background: rgba(15, 46, 46, 0); border-bottom: 1px solid transparent; transition: background-color .3s var(--ease), border-color .3s var(--ease); }
+.bar.is-solid { background: var(--t-ground); border-bottom-color: var(--t-line); }
+.bar__mark { font: 900 22px/1 var(--display); letter-spacing: -.01em; text-decoration: none; color: var(--t-text); }
+.bar__mark b { font-weight: 900; color: var(--t-accent); }
+/* phones: the same button lives in a dock at the bottom, with a call button */
+.dock { display: none; }
+
+/* ---------------- 1 HERO: the camera pushes into the studio ---------------- */
+.hero__stage { height: 100vh; height: 100svh; overflow: hidden; background: var(--t-ground); }
+.film { position: absolute; inset: 0; overflow: hidden; transform-origin: 50% 45%; background: #163B3B; }
+.plane { will-change: transform; }
+.plane--wall { position: absolute; inset: -2%; }
+.plane--wall img, .wall__img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.film__scrim { position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(15, 46, 46, .93) 0%, rgba(15, 46, 46, .88) 34%, rgba(15, 46, 46, .5) 50%, rgba(15, 46, 46, 0) 64%),
+    linear-gradient(180deg, rgba(15, 46, 46, .7) 0%, rgba(15, 46, 46, 0) 16%),
+    linear-gradient(0deg, rgba(15, 46, 46, .55) 0%, rgba(15, 46, 46, 0) 20%); }
+.scene { position: absolute; z-index: 2; right: 2vw; bottom: 0; margin: 0; width: min(56vw, 92svh); aspect-ratio: 100 / 96; container-type: inline-size;
+  --H: 17cqw; --cxA: 22.97cqw; --cxB: 52.65cqw; --cxC: 82.34cqw; }
+.plane--mark { position: absolute; z-index: 1; left: 23.6cqw; top: 7.2cqw; width: 58.1cqw; transform-origin: 50% 100%; }
+.plane--mark img { display: block; width: 100%; height: auto; filter: drop-shadow(1.1cqw 1.5cqw 1.3cqw rgba(0, 0, 0, .4)); }
+.plane--people { position: absolute; z-index: 2; inset: 0; transform-origin: 50% 42%; }
+.person { position: absolute; bottom: 0; height: calc(var(--H) * 2.631); width: calc(var(--ar) * var(--H) * 2.631); left: calc(var(--cx) - var(--fc) * var(--ar) * var(--H) * 2.631); }
+.person img { display: block; width: 100%; height: 100%; max-width: none; }
+.person--a { --ar: .6667; --fc: .471; --cx: var(--cxA); z-index: 2; }
+.person--b { --ar: .6667; --fc: .530; --cx: var(--cxB); z-index: 4; }
+.person--c { --ar: .6667; --fc: .529; --cx: var(--cxC); z-index: 3; }
+/* the portraits run to their own side edges, so those edges are feathered instead of cut */
+.person img { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%); }
+.scene__cap { position: absolute; z-index: 3; right: 3cqw; bottom: 2.2cqw; margin: 0; max-width: 70cqw; padding: .3rem .6rem; border-radius: 4px; background: rgba(15, 46, 46, .82); text-align: right; font-size: clamp(.7rem, .4rem + 1.1cqw, .86rem); line-height: 1.35; color: var(--t-text); }
+.hero__copy { position: absolute; z-index: 5; left: var(--g); top: 0; bottom: 0; width: min(44vw, 660px); display: flex; flex-direction: column; justify-content: center; padding-top: var(--bar); }
+.hero__copy .caps { color: #C9D9D4; margin-bottom: 1.25rem; }
+.hero h1 { margin: 0 0 2rem; font-size: clamp(2.2rem, .6rem + 3.6vw, 4.6rem); line-height: .98; }
+.kin__l { display: block; overflow: hidden; padding-bottom: .08em; margin-bottom: -.08em; }
+.kin__l > span { display: block; }
+.hero__act { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+
+/* ---------------- 2 THE ARGUMENT, word by word ---------------- */
+.argue__stage { height: 100vh; height: 100svh; box-sizing: border-box; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; align-items: center; gap: 3svh; padding: calc(var(--bar) + 6svh) var(--g) 7svh; background: var(--t-ground); }
+.argue__kicker { max-width: 38rem; color: var(--t-soft); font-size: clamp(1rem, .9rem + .4vw, 1.25rem); line-height: 1.5; margin: 0; }
+.argue__text { margin: 0; }
+.argue__biz { display: block; margin-bottom: .4em; font: 500 clamp(2.2rem, .8rem + 5vw, 6.6rem)/1.02 var(--sys); letter-spacing: -.035em; }
+.argue__brand { display: block; font-size: clamp(2.1rem, .6rem + 5.1vw, 7rem); line-height: .98; }
+.argue__after { max-width: 40rem; margin: 0; color: var(--t-soft); font-size: clamp(1rem, .9rem + .4vw, 1.25rem); line-height: 1.5; }
+.w { color: var(--t-text); }
+.w--o { color: var(--t-accent); }
+
+/* ---------------- 3 SERVICES, a stack of cards ---------------- */
+.svcs { padding: 14svh 0 0; }
+.svcs__intro { padding: 0 var(--g); max-width: 76rem; margin: 0 auto 7svh; }
+.svcs__intro h2 { margin: 0 0 2rem; font-size: clamp(1.7rem, .9rem + 2.6vw, 3.6rem); line-height: 1.02; max-width: 22ch; }
+.lede { margin: 0; max-width: 44rem; font-size: clamp(1.05rem, .98rem + .3vw, 1.22rem); line-height: 1.6; color: var(--t-text-2); text-wrap: pretty; }
+.stack { list-style: none; margin: 0; padding: 0 var(--g) 1svh; }
+.panel { margin: 0 0 3svh; }
+.card { position: relative; box-sizing: border-box; max-width: 76rem; min-height: min(50svh, 480px); margin: 0 auto; border-radius: 16px; overflow: hidden; color: var(--t-ground);
+  padding: clamp(1.5rem, 3.2vw, 3.25rem); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 2rem clamp(2rem, 5vw, 5rem); align-content: space-between; transform-origin: 50% 0; }
+.card--w { background: var(--t-paper); }
+.card--o { background: var(--t-accent); }
+.card::after { content: ""; position: absolute; inset: 0; background: var(--t-ground); opacity: 0; pointer-events: none; }
+.card h3 { grid-column: 1; margin: 0; font-size: clamp(2rem, .8rem + 3.6vw, 4.6rem); line-height: .98; }
+.card__line { grid-column: 1; align-self: end; margin: 0; max-width: 30rem; font-size: clamp(1.05rem, .95rem + .45vw, 1.35rem); line-height: 1.45; text-wrap: pretty; }
+.card__covers { grid-column: 2; grid-row: 1 / span 2; align-self: end; }
+.card__covers .caps { color: var(--t-soft-ink); margin-bottom: .9rem; }
+.card--o .card__covers .caps { color: var(--t-ground); }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.chips li { padding: .5rem .85rem; border: 1px solid var(--t-line-ink); border-radius: 999px; font-size: .95rem; background: rgba(234, 242, 238, .5); }
+.card--o .chips li { border-color: rgba(15, 46, 46, .35); background: rgba(234, 242, 238, .18); }
+
+/* ---------------- 4 PROOF: the cases dealt like a deck (peak) ---------------- */
+.deck__stage { height: 100vh; height: 100svh; display: grid; grid-template-rows: auto minmax(0, 1fr); padding: calc(var(--bar) + 3svh) var(--g) 4svh; background: var(--t-ground); }
+.deck__title { margin: 0 0 3svh; font-size: clamp(1.5rem, .9rem + 1.7vw, 2.7rem); line-height: 1.02; text-wrap: balance; max-width: 30ch; }
+.deck__cards { display: grid; gap: 4svh; justify-items: center; }
+.deal { width: min(70rem, 100%); }
+.dcard { position: relative; overflow: hidden; min-height: min(58svh, 560px); border-radius: 18px; background: var(--t-paper); color: var(--t-ground); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .7); }
+.dcard::after { content: ""; position: absolute; inset: 0; background: #071A1A; opacity: 0; pointer-events: none; }
+.dcard__art { margin: 0; background: #D5E2DD; min-height: 100%; }
+.dcard__art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.dcard__body { padding: clamp(1.25rem, 2.6vw, 2.5rem); display: grid; align-content: start; gap: .9rem; }
+.dcard__name { margin: 0; font: 600 clamp(1.4rem, 1rem + 1.1vw, 2.1rem)/1.1 var(--sys); letter-spacing: -.02em; }
+.dcard__what { margin: 0; line-height: 1.55; color: #2A4541; }
+.facts { margin: 0; display: grid; border-top: 1px solid var(--t-line-ink); }
+.facts > div { display: grid; grid-template-columns: 5.5rem 1fr; gap: .75rem; padding: .55rem 0; border-bottom: 1px solid var(--t-line-ink); }
+.facts dt { font: 600 .68rem/1.7 var(--sys); letter-spacing: .15em; text-transform: uppercase; color: var(--t-soft-ink); }
+.facts dd { margin: 0; }
+.dcard__built { margin: .25rem 0 0; font-size: 1.05rem; line-height: 1.5; }
+.dcard__built strong { display: block; margin-bottom: .25rem; font: 600 .68rem/1.4 var(--sys); letter-spacing: .15em; text-transform: uppercase; color: var(--t-soft-ink); }
+
+/* ---------------- 5 CLIENTS AND VOICES ---------------- */
+.voices { padding: 7svh var(--g) 8svh; }
+.voices__in { max-width: 76rem; margin: 0 auto; }
+.voices h2 { margin: 0 0 2.25rem; font-size: clamp(1.5rem, .9rem + 2vw, 3rem); line-height: 1.02; max-width: 20ch; }
+.logos { list-style: none; margin: 0 0 9svh; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); background: var(--t-paper); border-radius: 14px; overflow: hidden; }
+.logos li { display: grid; place-items: center; aspect-ratio: 3 / 2; padding: 1rem; border-right: 1px solid var(--t-line-ink); border-bottom: 1px solid var(--t-line-ink); }
+.logos img { display: block; max-width: 84%; max-height: 52%; width: auto; height: auto; object-fit: contain; }
+.logos img.is-tall { max-height: 72%; }
+.pull { margin: 0 0 6svh; max-width: 54rem; }
+.pull blockquote { margin: 0; font: 500 clamp(1.5rem, 1rem + 1.8vw, 2.6rem)/1.2 var(--sys); letter-spacing: -.02em; text-wrap: pretty; }
+.pull figcaption { margin-top: 1rem; color: var(--t-soft); }
+.quotes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 5vw, 4rem); border-top: 1px solid var(--t-line); }
+.quotes li { padding: 1.6rem 0; border-bottom: 1px solid var(--t-line); }
+.quotes blockquote { margin: 0; font-size: clamp(1rem, .95rem + .2vw, 1.12rem); line-height: 1.6; text-wrap: pretty; }
+.quotes .who { margin: .85rem 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; font-size: .9rem; color: var(--t-soft); }
+.quotes .who b { color: var(--t-text); font-weight: 600; }
+.stars { color: var(--t-accent); letter-spacing: .12em; font-size: .85rem; }
+.seal { margin: 6svh 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 1.75rem; }
+.seal img { display: block; height: auto; }
+.seal__badge { width: 96px; }
+.seal__strip { width: 260px; border-radius: 6px; }
+.seal p { flex: 1 1 18rem; margin: 0; color: var(--t-soft); line-height: 1.55; max-width: 34rem; }
+
+/* ---------------- 6 THE PEOPLE: a wall that blooms as you pass ---------------- */
+.people { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.wall__titlewrap, .wall__grid { grid-area: 2 / 1; }
+.wall__lede { grid-row: 1; margin: 0; padding: 8svh var(--g) 0; text-align: center; color: var(--t-soft); font-size: 1rem; }
+.wall__titlewrap { position: relative; z-index: 3; pointer-events: none; }
+.wall__title { padding: 0 var(--g); text-align: center; color: #FFFFFF; }
+.wall__title h2 { margin: 0; font-size: clamp(2.4rem, .8rem + 6vw, 7.5rem); line-height: .95; }
+.wall__title p { margin: .9rem 0 0; color: #FFFFFF; font-size: 1rem; }
+.wall__grid { list-style: none; margin: 0; padding: 6svh var(--g); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3svh 2vw; }
+.wall__grid li { min-width: 0; }
+.wall__fig { margin: 0; }
+.wall__fig img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; background: #163B3B; }
+.wall__fig figcaption { margin-top: .55rem; font-size: .9rem; line-height: 1.3; }
+.wall__fig figcaption span { display: block; color: var(--t-soft); font-size: .8rem; margin-top: .15rem; }
+.beliefs { padding: 6svh var(--g) 6svh; }
+.beliefs__in { max-width: 76rem; margin: 0 auto; }
+.beliefs h2 { margin: 0 0 3rem; max-width: 22ch; font-size: clamp(1.5rem, .9rem + 2vw, 3rem); line-height: 1.04; }
+.principles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(2rem, 5vw, 4rem); border-top: 1px solid var(--t-line); }
+.principles li { padding: 1.3rem 0; border-bottom: 1px solid var(--t-line); }
+.principles h3 { margin: 0 0 .35rem; font: 600 1.15rem/1.3 var(--sys); }
+.principles p { margin: 0; color: var(--t-soft); line-height: 1.55; }
+.since { margin: 2.25rem 0 0; max-width: 40rem; line-height: 1.6; color: var(--t-text-2); }
+
+/* ---------------- 7 QUESTIONS ---------------- */
+.faq { padding: 8svh var(--g) 5svh; }
+.faq__in { max-width: 76rem; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem clamp(2rem, 6vw, 6rem); }
+.faq h2 { margin: 0; font-size: clamp(1.5rem, .9rem + 2vw, 3rem); line-height: 1.02; }
+.qa { margin: 0; border-top: 1px solid var(--t-line); }
+.qa > div { padding: 1.4rem 0; border-bottom: 1px solid var(--t-line); }
+.qa dt { margin: 0 0 .45rem; font: 600 clamp(1.08rem, 1rem + .35vw, 1.3rem)/1.35 var(--sys); }
+.qa dd { margin: 0; color: var(--t-text-2); line-height: 1.6; max-width: 40rem; }
+
+/* ---------------- 8 CLOSE ---------------- */
+.close__stage { box-sizing: border-box; height: 100vh; height: 100svh; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: 2rem clamp(2rem, 5vw, 5rem); padding: calc(var(--bar) + 3svh) var(--g) 4svh; background: var(--t-ground); }
+.close__copy { display: grid; gap: 2.4svh; align-content: center; }
+.close h2 { margin: 0; font-size: clamp(2rem, .7rem + 3.2vw, 4.2rem); line-height: .98; }
+.stamp { display: grid; gap: .55rem; padding: 1rem 0; border-top: 1px solid var(--t-line); border-bottom: 1px solid var(--t-line); }
+.stamp label { color: var(--t-soft); }
+.stamp input { width: min(24rem, 100%); box-sizing: border-box; padding: .55rem .75rem; border: 1px solid rgba(234, 242, 238, .35); border-radius: 6px; background: transparent; color: var(--t-text); font: 500 1rem/1.3 var(--sys); }
+.stamp input::placeholder { color: #86A29B; }
+.stamp input:focus-visible { outline: 2px solid var(--t-accent); outline-offset: 1px; }
+.stamp__out { margin: .35rem 0 0; font-size: clamp(1.6rem, .9rem + 2.4vw, 3.2rem); line-height: 1; overflow-wrap: anywhere; min-height: 1em; }
+.stamp__a { color: var(--t-text); }
+.stamp__b { color: var(--t-accent); }
+.stamp__note { margin: 0; color: var(--t-soft); font-size: .9rem; }
+.close__act { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+.close__rows { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2rem; }
+.close__rows > div { padding: .6rem 0; border-top: 1px solid var(--t-line); }
+.close__rows dt { font: 600 .68rem/1.7 var(--sys); letter-spacing: .15em; text-transform: uppercase; color: var(--t-soft); }
+.close__rows dd { margin: 0; line-height: 1.45; font-size: .95rem; }
+.close__rows dd a { margin-right: .75rem; display: inline-block; text-decoration: underline; text-decoration-color: rgba(234, 242, 238, .4); text-underline-offset: .22em; }
+.legal { margin: 0; font-size: .8rem; color: var(--t-soft); }
+.close__scene { position: relative; margin: 0; align-self: stretch; max-height: 82svh; border-radius: 22px; overflow: hidden; background: #163B3B; }
+.close__scene .wall__img { position: absolute; inset: 0; }
+.close__scene::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(15, 46, 46, .35) 0%, rgba(15, 46, 46, 0) 30%); }
+.close__scene .scene { right: 0; left: 0; width: auto; }
+.close__end { position: absolute; left: 0; bottom: 0; width: 1px; height: 1px; pointer-events: none; }
+
+
+/* ================= motion layer: only with JS and motion allowed ================= */
+html.fx .hero, html.fx .argue, html.fx .deck { position: relative; }
+/* hero reveal on load: the room settles, the mark rises from behind their shoulders, they rise, the words come in */
+html.fx .wall__img--hero { transition: transform 1.25s var(--ease), opacity .7s var(--ease); }
+html.fx .plane--mark img { transition: transform .9s var(--ease) .28s, opacity .5s var(--ease) .28s; }
+html.fx .hero .person img { transition: transform .8s var(--ease); }
+html.fx .hero .person--a img { transition-delay: .4s; }
+html.fx .hero .person--b img { transition-delay: .54s; }
+html.fx .hero .person--c img { transition-delay: .68s; }
+html.fx .kin__l > span { transition: transform .8s var(--ease); }
+html.fx .hero .kin__l:nth-child(1) > span { transition-delay: .3s; }
+html.fx .hero .kin__l:nth-child(2) > span { transition-delay: .4s; }
+html.fx .hero .kin__l:nth-child(3) > span { transition-delay: .5s; }
+html.fx .hero__copy .caps, html.fx .hero__act, html.fx .scene__cap { transition: opacity .6s var(--ease), transform .6s var(--ease); }
+html.fx .hero__copy .caps { transition-delay: .2s; }
+html.fx .hero__act { transition-delay: .78s; }
+html.fx .scene__cap { transition-delay: 1s; }
+html.pre-reveal .wall__img--hero { transform: scale(1.09); opacity: .4; }
+html.pre-reveal .plane--mark img { transform: translateY(38%); opacity: 0; }
+html.pre-reveal .hero .person img { transform: translateY(104%); }
+html.pre-reveal .hero .kin__l > span { transform: translateY(110%); }
+html.pre-reveal .hero__copy .caps, html.pre-reveal .hero__act, html.pre-reveal .scene__cap { opacity: 0; transform: translateY(12px); }
+
+/* every scroll-linked move: CSS scroll-driven where supported (page-pixel ranges set by JS), negative-delay fallback otherwise */
+html.fx .sdx, html.fx .sdx::after { animation-duration: 1s; animation-timing-function: linear; animation-fill-mode: both; }
+html.fx.sd .sdx, html.fx.sd .sdx::after { animation-duration: auto; animation-timeline: scroll(root block); animation-range: var(--r0, 0px) var(--r1, 1px); }
+html.fx:not(.sd) .sdx, html.fx:not(.sd) .sdx::after { animation-play-state: paused; animation-delay: calc(var(--p, 0) * -1s); }
+
+/* the push: room slowest, the mark medium, the people fastest; then the scene contracts into a card */
+html.fx .plane--wall.sdx { animation-name: fx-push-wall; }
+html.fx .plane--mark.sdx { animation-name: fx-push-mark; }
+html.fx .plane--people.sdx { animation-name: fx-push-people; }
+html.fx .film.sdx { animation-name: fx-contract; }
+@keyframes fx-push-wall { to { transform: scale(1.08); } }
+@keyframes fx-push-mark { to { transform: scale(1.2) translateY(-2%); } }
+@keyframes fx-push-people { to { transform: scale(1.36); } }
+@keyframes fx-contract { to { transform: scale(.88); border-radius: 28px; } }
+
+/* the argument lights up word by word, played through on its own once the stage is on screen */
+html.fx .w { color: var(--t-dim); transition: color .45s var(--ease) calc(var(--i, 0) * 55ms); }
+html.fx .argue.is-lit .w { color: var(--t-text); }
+html.fx .argue.is-lit .w--o { color: var(--t-accent); }
+
+/* services: each card is pushed back and dimmed as the next one slides over it */
+html.fx .panel { position: sticky; top: calc(var(--bar) + 2.5svh + var(--k) * 14px); margin: 0; padding-bottom: 6svh; }
+html.fx .panel:last-child { padding-bottom: 0; }
+html.fx .card.sdx { animation-name: fx-cover; }
+html.fx .card.sdx::after { animation-name: fx-dim-card; }
+@keyframes fx-cover { to { transform: scale(.92) translateY(-1svh); } }
+@keyframes fx-dim-card { to { opacity: .12; } }
+/* the words on a card step out wherever the next card has slid over them */
+html.fx .card > * { transition: opacity .28s var(--ease); }
+html.fx .card > .is-under { opacity: 0; }
+
+/* proof: the deck */
+html.fx .deck__cards { gap: 0; place-items: center; perspective: 1800px; }
+html.fx .deal { grid-area: 1 / 1; transform-origin: 50% 25%; }
+html.fx .deal:nth-child(1) { z-index: 1; } html.fx .deal:nth-child(2) { z-index: 2; } html.fx .deal:nth-child(3) { z-index: 3; }
+/* each card is dealt once its point is crossed (a triggered move, not scrubbed); the ones under it sink back and go quiet */
+html.fx .deal { transition: transform .6s cubic-bezier(.33, 1, .68, 1), filter .6s cubic-bezier(.33, 1, .68, 1); }
+html.fx .deal:nth-child(n + 2) { transform: translateY(108svh) rotateX(-30deg) scale(.9); filter: blur(12px); }
+html.fx .deck[data-step="1"] .deal:nth-child(2), html.fx .deck[data-step="2"] .deal:nth-child(2), html.fx .deck[data-step="2"] .deal:nth-child(3) { transform: none; filter: blur(0); }
+html.fx .dcard { transition: transform .6s cubic-bezier(.33, 1, .68, 1); }
+html.fx .dcard::after { transition: opacity .6s var(--ease); }
+html.fx .dcard__body { transition: opacity .3s var(--ease); }
+html.fx .deck[data-step="1"] .deal:nth-child(1) .dcard, html.fx .deck[data-step="2"] .deal:nth-child(2) .dcard { transform: translateY(-5svh) rotateX(5deg) scale(.95); }
+html.fx .deck[data-step="1"] .deal:nth-child(1) .dcard::after, html.fx .deck[data-step="2"] .deal:nth-child(2) .dcard::after { opacity: .15; }
+html.fx .deck[data-step="2"] .deal:nth-child(1) .dcard { transform: translateY(-10svh) rotateX(10deg) scale(.9); }
+html.fx .deck[data-step="2"] .deal:nth-child(1) .dcard::after { opacity: .3; }
+html.fx .deck[data-step="1"] .deal:nth-child(1) .dcard__body, html.fx .deck[data-step="2"] .deal:nth-child(-n + 2) .dcard__body { opacity: 0; }
+
+/* the people wall: each tile grows in from its corner, peaks mid-screen, and goes */
+html.fx .wall__title { position: sticky; top: 50svh; transform: translateY(-50%); mix-blend-mode: difference; }
+html.fx .wall__grid { padding: 14svh var(--g) 10svh; }
+html.fx .wall__grid li:nth-child(4n + 2), html.fx .wall__grid li:nth-child(4n + 4) { margin-top: 16svh; margin-bottom: -16svh; }
+html.fx .wall__fig { transform-origin: var(--o, 50% 100%); }
+html.fx .wall__fig.sdx { animation-name: fx-bloom; }
+/* a name (and the line above the wall) steps out while it passes under the title, and back once it is clear */
+html.fx .wall__fig figcaption, html.fx .wall__lede { transition: opacity .25s var(--ease); }
+html.fx .wall__fig figcaption.is-under, html.fx .wall__lede.is-under { opacity: 0; }
+@keyframes fx-bloom {
+  0% { transform: scale(.38); animation-timing-function: cubic-bezier(.22, .61, .36, 1); }
+  50% { transform: scale(1); animation-timing-function: cubic-bezier(.55, 0, .78, .39); }
+  100% { transform: scale(.38); }
+}
+
+/* the close: the leads' card comes forward as the page settles */
+html.fx .close__scene.sdx { animation-name: fx-forward; }
+@keyframes fx-forward { from { transform: scale(.9) translateY(3svh); } to { transform: none; } }
+
+/* ---------------- tablet and phone ---------------- */
+@media (max-width: 899px) {
+  :root { --bar: 56px; }
+  .bar { padding: 0 var(--g); }
+  .bar__mark { font-size: 20px; }
+  .cta--bar { display: none; }
+  .dock { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; gap: .6rem; padding: .6rem var(--g) calc(.6rem + env(safe-area-inset-bottom)); background: var(--t-ground); border-top: 1px solid var(--t-line); transition: transform .4s var(--ease); }
+  .dock.is-away { transform: translateY(115%); }
+  .dock .cta { flex: 1; justify-content: center; min-height: 50px; font-size: 1rem; }
+  .dock__call { flex: none; display: grid; place-items: center; width: 50px; height: 50px; box-sizing: border-box; border: 1px solid rgba(234, 242, 238, .35); border-radius: 8px; color: var(--t-text); }
+  .dock__call svg { width: 20px; height: 20px; }
+
+  .film__scrim { background: linear-gradient(180deg, rgba(15, 46, 46, .94) 0%, rgba(15, 46, 46, .88) 40%, rgba(15, 46, 46, .25) 58%, rgba(15, 46, 46, 0) 68%), linear-gradient(0deg, rgba(15, 46, 46, .6) 0%, rgba(15, 46, 46, 0) 16%); }
+  .scene { right: 0; left: 50%; translate: -50% 0; width: min(100vw, calc((100svh - 400px) * 1.06)); --H: 19cqw; --cxA: 24.32cqw; --cxB: 52.97cqw; --cxC: 81.61cqw; }
+  .plane--mark { left: 23.9cqw; top: 2.9cqw; }
+  .scene__cap { display: none; }
+  .hero__copy { left: var(--g); right: var(--g); width: auto; top: calc(var(--bar) + 1.25rem); bottom: auto; justify-content: flex-start; padding-top: 0; }
+  .hero__copy .caps { margin-bottom: .9rem; }
+  .hero h1 { font-size: clamp(1.8rem, 8.4vw, 2.6rem); margin-bottom: 1.4rem; }
+  .cta--big { min-height: 54px; font-size: 1rem; }
+
+  .argue__stage { gap: 2.5svh; padding-top: calc(var(--bar) + 4svh); padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .argue__biz { font-size: clamp(2rem, 10.5vw, 3rem); }
+  .argue__brand { font-size: clamp(1.9rem, 9.6vw, 2.9rem); }
+
+  .card { grid-template-columns: minmax(0, 1fr); min-height: min(46svh, 420px); align-content: start; gap: 1.25rem; }
+  .card h3, .card__line, .card__covers { grid-column: 1; grid-row: auto; }
+  .card__line { align-self: start; }
+  .card__covers { align-self: end; }
+  .chips li { font-size: .88rem; padding: .42rem .72rem; }
+
+  .deck__stage { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .deck__title { font-size: clamp(1.35rem, 6vw, 1.9rem); margin-bottom: 2svh; }
+  .dcard { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .dcard__art { aspect-ratio: 16 / 9; min-height: 0; }
+  .dcard__body { gap: .6rem; padding: 1.1rem 1.1rem 1.25rem; }
+  .dcard__what { font-size: .92rem; line-height: 1.5; }
+  .facts > div { padding: .4rem 0; grid-template-columns: 4.75rem 1fr; }
+  .dcard__built { font-size: .95rem; line-height: 1.45; }
+
+  .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .quotes { grid-template-columns: minmax(0, 1fr); }
+  .wall__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3svh 4vw; }
+  html.fx .wall__grid li:nth-child(4n + 2), html.fx .wall__grid li:nth-child(4n + 4) { margin-top: 0; margin-bottom: 0; }
+  html.fx .wall__grid li:nth-child(2n) { margin-top: 14svh; margin-bottom: -14svh; }
+  .principles { grid-template-columns: minmax(0, 1fr); }
+  .faq__in { grid-template-columns: minmax(0, 1fr); }
+
+  .close__stage { height: auto; grid-template-columns: minmax(0, 1fr); padding: calc(var(--bar) + 2svh) var(--g) calc(90px + env(safe-area-inset-bottom)); }
+  .close__rows { grid-template-columns: minmax(0, 1fr); }
+  .close__scene { max-height: none; aspect-ratio: 1 / 1; }
+  .close__scene .scene { left: 50%; translate: -50% 0; width: 100%; }
+}
+@media (min-width: 900px) and (max-height: 699px) {
+  .close__stage { height: auto; min-height: 100svh; }
+}
+@media (min-width: 900px) and (max-width: 1180px) {
+  .logos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .wall__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  html.fx .wall__grid li:nth-child(4n + 2), html.fx .wall__grid li:nth-child(4n + 4) { margin-top: 0; margin-bottom: 0; }
+  html.fx .wall__grid li:nth-child(3n + 2) { margin-top: 14svh; margin-bottom: -14svh; }
+}
+
+/* reduced motion and no JS: everything static and complete, nothing pinned */
+html:not(.fx) [data-sc-act="pin"] { height: auto !important; }
+html:not(.fx) [data-sc-stage] { position: static !important; height: auto !important; overflow: visible !important; }
+html:not(.fx) .hero__stage { height: 100svh !important; min-height: 640px; position: relative !important; overflow: hidden !important; }
+html:not(.fx) .argue__stage { min-height: 0; padding-top: 14svh; padding-bottom: 14svh; }
+html:not(.fx) .deck__cards { gap: 4svh; }
+html:not(.fx) .close__stage { min-height: 100svh; }
+html:not(.fx) .wall__titlewrap, html:not(.fx) .wall__grid { grid-area: auto; }
+html:not(.fx) .wall__titlewrap { padding-top: 10svh; }
+/* tall portrait tablets (600 to 1100 wide): bigger type so the two sentences fill the stage (no empty band) */
+@media (min-width: 600px) and (max-width: 1100px) and (orientation: portrait) {
+  .argue__biz { font-size: 8.6vw; }
+  .argue__brand { font-size: 8.2vw; }
+  .argue__kicker, .argue__after { font-size: 1.3rem; max-width: 34rem; }
+  .dcard { min-height: min(62svh, 820px); }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Skip to what Mosswick does</a>
+
+<header class="bar" id="bar">
+  <a class="bar__mark" href="#top" aria-label="Mosswick, back to the top"><span aria-hidden="true">MOSS<b>WICK.</b></span></a>
+  <a class="cta cta--bar" href="https://example.com">Book an intro call</a>
+</header>
+
+<div class="dock" id="dock">
+  <a class="cta" href="https://example.com">Book an intro call</a>
+  <a class="dock__call" href="tel:+15550142" aria-label="Call Mosswick on +1 555 0142"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+</div>
+
+<main id="top">
+
+  <!-- 1 HERO: the studio, the round mark, three of the leads; the camera pushes in -->
+  <section class="hero" id="hero" data-sc-act="pin" data-sc-span="1.7" aria-labelledby="hero-title">
+    <div data-sc-stage class="hero__stage">
+      <div class="film sdx">
+        <div class="plane plane--wall sdx" aria-hidden="true">
+          <picture>
+            <source media="(max-width: 899px)" srcset="assets/hero-wall-phone.webp">
+            <img class="wall__img wall__img--hero" src="assets/hero-wall.webp" width="1600" height="980" alt="" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="film__scrim" aria-hidden="true"></div>
+        <figure class="scene" aria-label="Three of the Mosswick leads in the studio, with the round M mark rising behind them">
+          <div class="plane plane--mark sdx"><img src="assets/mark.svg" width="120" height="120" alt="" fetchpriority="high"></div>
+          <div class="plane plane--people sdx">
+            <div class="person person--a"><img src="assets/people/person-a.webp" srcset="assets/people/person-a-sm.webp 340w, assets/people/person-a.webp 640w" sizes="(max-width: 899px) 42vw, 22vw" width="640" height="960" fetchpriority="high" alt="Tobias Okonjo-Hale, co-founder and strategy director, in round tortoiseshell glasses and a navy jumper."></div>
+            <div class="person person--b"><img src="assets/people/person-b.webp" srcset="assets/people/person-b-sm.webp 340w, assets/people/person-b.webp 640w" sizes="(max-width: 899px) 36vw, 18vw" width="640" height="960" fetchpriority="high" alt="Ines Calloway, founder and creative director, smiling, in a rust linen shirt."></div>
+            <div class="person person--c"><img src="assets/people/person-c.webp" srcset="assets/people/person-c-sm.webp 340w, assets/people/person-c.webp 640w" sizes="(max-width: 899px) 40vw, 20vw" width="640" height="960" fetchpriority="high" alt="Mei Lin Draper, design director, in a black turtleneck and small gold hoops."></div>
+          </div>
+          <figcaption class="scene__cap">Tobias Okonjo-Hale, Ines Calloway and Mei Lin Draper, studio leads</figcaption>
+        </figure>
+        <div class="hero__copy">
+          <p class="caps">Creative and marketing studio · Lowmere</p>
+          <h1 id="hero-title" class="display"><span class="kin__l"><span>Brands people</span></span> <span class="kin__l"><span>can pick out</span></span> <span class="kin__l"><span>of a <em>crowd.</em></span></span></h1>
+          <div class="hero__act">
+            <a class="cta cta--big" href="https://example.com"><span class="cta__label"><span>Book an intro call</span><span aria-hidden="true">Book an intro call</span></span><span class="cta__chip" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="call" href="tel:+15550142">or call +1 555 0142</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 THE ARGUMENT: two sentences, lit word by word -->
+  <section class="argue" id="argument" data-sc-act="pin" data-sc-span="1.5" aria-labelledby="argue-title">
+    <div data-sc-stage class="argue__stage">
+      <p class="argue__kicker">Every brand needs one clear idea it can say in a single breath.</p>
+      <h2 class="argue__text" id="argue-title"><span class="argue__biz"><span class="w">Most</span> <span class="w">ads</span> <span class="w">are</span> <span class="w">forgotten</span> <span class="w">in</span> <span class="w">a</span> <span class="w">week.</span></span> <span class="argue__brand display"><span class="w">A</span> <span class="w w--o">brand</span> <span class="w">people</span> <span class="w w--o">remember</span> <span class="w">pays</span> <span class="w">back.</span></span></h2>
+      <p class="argue__after">We find that idea, then build the brand, the website and the campaigns that carry it every day.</p>
+    </div>
+  </section>
+
+  <!-- 3 SERVICES: five of them, stacked -->
+  <section class="svcs" id="services" data-sc-act="flow" aria-labelledby="services-title">
+    <div class="svcs__intro">
+      <h2 class="display" id="services-title">Clear thinking, bold design and media buying that knows exactly what the <em>brand is for.</em></h2>
+      <p class="lede">Mosswick is a creative and marketing studio in Lowmere, started in 2014 by three people sharing a desk above a bike shop. Today 32 strategists, designers, writers, filmmakers and media buyers make the brands, websites, films and campaigns, and run the ads that get them seen.</p>
+    </div>
+    <ul class="stack">
+      <li class="panel" style="--k:0">
+        <article class="card card--w sdx" aria-labelledby="svc-1">
+          <h3 class="display" id="svc-1">Brand identity</h3>
+          <p class="card__line">Logos, type, colour and rules that make you recognisable at a glance, from a favicon to a building wrap.</p>
+          <div class="card__covers"><p class="caps">What you get</p><ul class="chips"><li>Logo and wordmark</li><li>Colour and type system</li><li>Brand guidelines</li><li>Icons and patterns</li><li>Templates</li></ul></div>
+        </article>
+      </li>
+      <li class="panel" style="--k:1">
+        <article class="card card--o sdx" aria-labelledby="svc-2">
+          <h3 class="display" id="svc-2">Websites</h3>
+          <p class="card__line">Fast, clear websites that explain what you do and turn visits into enquiries, tested on real phones.</p>
+          <div class="card__covers"><p class="caps">What you get</p><ul class="chips"><li>Site map and wireframes</li><li>UX and UI design</li><li>Copywriting</li><li>Development</li><li>CMS setup</li></ul></div>
+        </article>
+      </li>
+      <li class="panel" style="--k:2">
+        <article class="card card--w sdx" aria-labelledby="svc-3">
+          <h3 class="display" id="svc-3">Social content</h3>
+          <p class="card__line">Posts, reels and series that people stop scrolling for, planned, shot and reported on every month.</p>
+          <div class="card__covers"><p class="caps">What you get</p><ul class="chips"><li>Content strategy</li><li>Monthly calendar</li><li>Short-form video</li><li>Community management</li><li>Monthly report</li></ul></div>
+        </article>
+      </li>
+      <li class="panel" style="--k:3">
+        <article class="card card--o sdx" aria-labelledby="svc-4">
+          <h3 class="display" id="svc-4">Film and motion</h3>
+          <p class="card__line">Brand films, product videos and animation, from the first script to the final grade.</p>
+          <div class="card__covers"><p class="caps">What you get</p><ul class="chips"><li>Scripts and storyboards</li><li>Production</li><li>Editing and grade</li><li>Motion graphics</li><li>Social cutdowns</li></ul></div>
+        </article>
+      </li>
+      <li class="panel" style="--k:4">
+        <article class="card card--w" aria-labelledby="svc-5">
+          <h3 class="display" id="svc-5">Performance marketing</h3>
+          <p class="card__line">Paid search and social, run by people who know your brand, with weekly creative tests.</p>
+          <div class="card__covers"><p class="caps">What you get</p><ul class="chips"><li>Tracking setup</li><li>Paid social and search</li><li>Creative testing</li><li>Live dashboard</li><li>Monthly review</li></ul></div>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4 PROOF (peak): three projects, dealt like a deck -->
+  <section class="deck" id="proof" data-sc-act="pin" data-sc-span="3.2" aria-labelledby="proof-title">
+    <div data-sc-stage class="deck__stage">
+      <h2 class="deck__title display" id="proof-title">Good work that also shows up <em>in the numbers.</em></h2>
+      <div class="deck__cards">
+        <article class="deal" aria-labelledby="case-1">
+          <div class="dcard">
+            <figure class="dcard__art"><img src="assets/work-01.webp" width="1200" height="900" decoding="async" alt="Kilnmark plates and bowls in speckled oatmeal, teal and rust glazes, stacked on linen in window light."></figure>
+            <div class="dcard__body">
+              <h3 class="dcard__name" id="case-1">Kilnmark</h3>
+              <p class="dcard__what">Handmade tableware from a small ceramics studio, where the glazes are the star and the brand steps back.</p>
+              <dl class="facts"><div><dt>Services</dt><dd>Brand identity, website</dd></div><div><dt>Year</dt><dd>2023</dd></div></dl>
+              <p class="dcard__built"><strong>What changed</strong>A calm serif name, a stamp for every piece and a shop they update each Friday. Orders tripled.</p>
+            </div>
+          </div>
+        </article>
+        <article class="deal" aria-labelledby="case-2">
+          <div class="dcard">
+            <figure class="dcard__art"><img src="assets/work-02.webp" width="1200" height="900" decoding="async" alt="A phone on a light ash desk showing the Paywren invoice screen in coral and cream, beside a notebook and tea."></figure>
+            <div class="dcard__body">
+              <h3 class="dcard__name" id="case-2">Paywren</h3>
+              <p class="dcard__what">An invoicing app for freelancers, who hate chasing payments and apps that feel like a tax form.</p>
+              <dl class="facts"><div><dt>Services</dt><dd>Brand identity, paid media</dd></div></dl>
+              <p class="dcard__built"><strong>What changed</strong>A small bird mark, friendly copy and forty launch ads, cut to six. Cost per sign-up down 41%.</p>
+            </div>
+          </div>
+        </article>
+        <article class="deal" aria-labelledby="case-3">
+          <div class="dcard">
+            <figure class="dcard__art"><img src="assets/work-03.webp" width="1200" height="900" decoding="async" alt="A wheaten terrier sits by an open Houndsbury meal box and two clear pouches of chicken, carrots and peas."></figure>
+            <div class="dcard__body">
+              <h3 class="dcard__name" id="case-3">Houndsbury</h3>
+              <p class="dcard__what">Fresh dog food, cooked and shipped every week to owners who like to see exactly what is inside.</p>
+              <dl class="facts"><div><dt>Services</dt><dd>Packaging, paid social</dd></div><div><dt>Year</dt><dd>2024</dd></div></dl>
+              <p class="dcard__built"><strong>What changed</strong>Pouches with a clear window, and paid social built on short videos of dogs at dinner time. Subscriptions up 2.4x in a year.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 CLIENTS AND VOICES -->
+  <section class="voices" id="voices" data-sc-act="flow" aria-labelledby="voices-title">
+    <div class="voices__in">
+      <h2 class="display" id="voices-title">Brands that came to us to get noticed</h2>
+      <ul class="logos" data-sc-in data-sc-stagger="30">
+        <li><img src="assets/clients/client-01.svg" width="389" height="99" loading="lazy" alt="Plumtide"></li>
+        <li><img src="assets/clients/client-02.svg" width="805" height="82" loading="lazy" alt="Velloway"></li>
+        <li><img src="assets/clients/client-03.svg" width="383" height="76" loading="lazy" alt="Kilnmark"></li>
+        <li><img src="assets/clients/client-04.svg" width="520" height="143" loading="lazy" alt="Tallow Lane Coffee"></li>
+        <li><img src="assets/clients/client-05.svg" width="388" height="79" loading="lazy" alt="Okra &amp; Ash"></li>
+        <li><img src="assets/clients/client-06.svg" width="421" height="87" loading="lazy" alt="Paywren"></li>
+        <li><img src="assets/clients/client-07.svg" width="736" height="125" loading="lazy" alt="Marshlight Festival"></li>
+        <li><img src="assets/clients/client-08.svg" width="603" height="77" loading="lazy" alt="Fernstride"></li>
+        <li><img src="assets/clients/client-09.svg" width="551" height="101" loading="lazy" alt="Hollin Gallery"></li>
+        <li><img src="assets/clients/client-10.svg" width="542" height="89" loading="lazy" alt="Houndsbury"></li>
+        <li><img src="assets/clients/client-11.svg" width="726" height="77" loading="lazy" alt="Stillreed"></li>
+        <li><img src="assets/clients/client-12.svg" width="508" height="84" loading="lazy" alt="Tumblewick"></li>
+        <li><img src="assets/clients/client-13.svg" width="538" height="125" loading="lazy" alt="Halvane Watch Co."></li>
+        <li><img src="assets/clients/client-14.svg" width="650" height="74" loading="lazy" alt="Cairnstone"></li>
+        <li><img src="assets/clients/client-15.svg" width="360" height="96" loading="lazy" alt="Shelterly"></li>
+        <li><img src="assets/clients/client-16.svg" width="804" height="77" loading="lazy" alt="Gilded Hare"></li>
+        <li><img src="assets/clients/client-17.svg" width="735" height="130" loading="lazy" alt="River Commons Trust"></li>
+        <li><img src="assets/clients/client-18.svg" width="574" height="74" loading="lazy" alt="Gearfinch"></li>
+        <li><img src="assets/clients/client-19.svg" width="574" height="77" loading="lazy" alt="Voltmere"></li>
+      </ul>
+      <figure class="pull" data-sc-in>
+        <blockquote>“They asked better questions in the first week than our last agency did in a year. The new brand <span class="o">finally</span> sounds like us.”</blockquote>
+        <figcaption>Nadia Ferrante, Founder at Plumtide · <span class="stars" aria-label="5 out of 5">★★★★★</span></figcaption>
+      </figure>
+      <ul class="quotes" data-sc-in data-sc-stagger="70">
+        <li>
+          <blockquote>“Our ads used to be a guessing game. Mosswick set up the tracking, cut the waste and showed us what every bit of spend brought back.”</blockquote>
+          <p class="who"><span><b>Owen Haddad</b>, Head of Growth at Paywren</span><span class="stars" aria-label="5 out of 5">★★★★★</span></p>
+        </li>
+        <li>
+          <blockquote>“The film crew turned up in the pouring rain, smiling. Months later, people still stop us at trade shows to talk about that campaign.”</blockquote>
+          <p class="who"><span><b>Jonas Pell</b>, Marketing Director at Velloway</span><span class="stars" aria-label="5 out of 5">★★★★★</span></p>
+        </li>
+        <li>
+          <blockquote>“We had eight weeks to open a restaurant with no name. They gave us a name on the door, a full booking diary and a lot less stress.”</blockquote>
+          <p class="who"><span><b>Cora Mbeki-Lane</b>, Owner at Okra &amp; Ash</span><span class="stars" aria-label="5 out of 5">★★★★★</span></p>
+        </li>
+        <li>
+          <blockquote>“The new website cut our quote form in half and far more people now finish it. Our board finally stopped asking about marketing spend.”</blockquote>
+          <p class="who"><span><b>Marcus Tilley</b>, Chief Operating Officer at Shelterly</span><span class="stars" aria-label="5 out of 5">★★★★★</span></p>
+        </li>
+      </ul>
+      <div class="seal" data-sc-in>
+        <img class="seal__badge" src="assets/mark.svg" width="120" height="120" loading="lazy" alt="The Mosswick Studio mark: an M inside a round disc.">
+        <img class="seal__strip" src="assets/wordmark.svg" width="439" height="77" loading="lazy" alt="Mosswick Studio">
+        <p>Nine in ten of our clients stay past their first year, and eighteen of them now work with us every single month.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 THE PEOPLE: portraits and studio shots bloom and go under a sticky title -->
+  <section class="people" id="people" data-sc-act="flow" aria-labelledby="team-title">
+    <div class="wall__titlewrap"><div class="wall__title"><h2 class="display" id="team-title">All in the same room</h2></div></div>
+    <p class="wall__lede">The people behind Mosswick, in Lowmere</p>
+    <ul class="wall__grid">
+      <li><figure class="wall__fig sdx" style="--o:100% 100%"><img src="assets/team/team-01.webp" width="320" height="400" loading="lazy" alt="Ines Calloway"><figcaption>Ines Calloway<span>Founder and Creative Director</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:100% 100%"><img src="assets/team/team-02.webp" width="320" height="400" loading="lazy" alt="Tobias Okonjo-Hale"><figcaption>Tobias Okonjo-Hale<span>Co-founder and Strategy Director</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:0% 100%"><img src="assets/team/team-03.webp" width="320" height="400" loading="lazy" alt="Mei Lin Draper"><figcaption>Mei Lin Draper<span>Design Director</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:0% 100%"><img src="assets/team/tile-01.webp" width="320" height="400" loading="lazy" alt="The team around a long table covered in printed layouts."><figcaption>Thursday show and tell<span>Work in progress, rough edges and all</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:100% 100%"><img src="assets/team/team-04.webp" width="320" height="400" loading="lazy" alt="Dario Vellacott"><figcaption>Dario Vellacott<span>Film Director</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:100% 100%"><img src="assets/team/tile-02.webp" width="320" height="400" loading="lazy" alt="A camera on a tripod in front of a lit product set at the back of the studio."><figcaption>The photo stage<span>Films and stills, shot in house</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:0% 100%"><img src="assets/team/team-05.webp" width="320" height="400" loading="lazy" alt="Hana Moriyama"><figcaption>Hana Moriyama<span>Head of Social</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:0% 100%"><img src="assets/team/team-06.webp" width="320" height="400" loading="lazy" alt="Selin Arslan-Hart"><figcaption>Selin Arslan-Hart<span>Head of Performance Marketing</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:100% 100%"><img src="assets/team/tile-03.webp" width="320" height="400" loading="lazy" alt="A laptop, colour swatches and pencil sketches on a wooden desk, seen from above."><figcaption>First sketches<span>Fifty ideas on paper, then a laptop</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:100% 100%"><img src="assets/team/team-07.webp" width="320" height="400" loading="lazy" alt="Callum Fenwright"><figcaption>Callum Fenwright<span>Copy Lead</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:0% 100%"><img src="assets/team/team-08.webp" width="320" height="400" loading="lazy" alt="Amara Lindqvist-Obi"><figcaption>Amara Lindqvist-Obi<span>Lead Developer</span></figcaption></figure></li>
+      <li><figure class="wall__fig sdx" style="--o:0% 100%"><img src="assets/team/tile-04.webp" width="320" height="400" loading="lazy" alt="The studio team together on a rooftop terrace in the evening light."><figcaption>The whole studio<span>Thirty-two of us, all in house</span></figcaption></figure></li>
+    </ul>
+    <div class="beliefs">
+      <div class="beliefs__in">
+        <h2 class="display">Pretty work that sells nothing is <em>decoration</em>, so we measure ours.</h2>
+        <ul class="principles" data-sc-in data-sc-stagger="70">
+          <li><h3>One idea</h3><p>Every brand needs one idea it can say in a single breath, and every piece of work should carry it.</p></li>
+          <li><h3>Plain words</h3><p>A clear sentence beats a clever one on most days, in a headline, a pitch or a report.</p></li>
+          <li><h3>Steady hands</h3><p>Consistency is boring to make and thrilling to watch work, so we keep at it.</p></li>
+          <li><h3>Honest numbers</h3><p>Measure what matters, then be honest about what you see, good news or not.</p></li>
+        </ul>
+        <p class="since" data-sc-in>Started in 2014 by three people sharing a desk above a bike shop. Today there are 32 of us, all in house.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 QUESTIONS -->
+  <section class="faq" id="questions" data-sc-act="flow" aria-labelledby="questions-title">
+    <div class="faq__in">
+      <h2 class="display" id="questions-title">Questions, <em>answered.</em></h2>
+      <dl class="qa" data-sc-in data-sc-stagger="60">
+        <div><dt>How much does a project cost?</dt><dd>Brand identities usually start around $18,000, websites around $15,000 and monthly marketing retainers around $5,000. We send a fixed quote after our first call, so you know the full cost before any work starts.</dd></div>
+        <div><dt>How long does a brand identity take?</dt><dd>Most identity projects take eight to twelve weeks from the first workshop to final files. A full rebrand with a website and launch campaign usually runs four to six months.</dd></div>
+        <div><dt>Who will actually work on my project?</dt><dd>The people you meet in the first meeting. Every client gets a senior lead, a strategist and the makers the job needs, and the team never changes once the contract is signed.</dd></div>
+        <div><dt>Do you run ads as well as make them?</dt><dd>Yes. Our performance team plans, buys and tests paid search and social, and sits in the same room as the people who make the ads.</dd></div>
+        <div><dt>How do we get started?</dt><dd>Send a short note about what you are building and what is getting in the way. We reply within two working days and set up a free 30 minute call.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 8 CLOSE: the line, your own name set like the wordmark, the one action -->
+  <section class="close" id="contact" data-sc-act="pin" data-sc-span="1.3" aria-labelledby="close-title">
+    <div data-sc-stage class="close__stage">
+      <div class="close__copy">
+        <h2 class="display" id="close-title">Brands people can pick out of a <em>crowd.</em></h2>
+        <div class="stamp">
+          <label class="caps" for="bizname">Your business name, set the way we set ours</label>
+          <input id="bizname" type="text" maxlength="28" placeholder="Type the name of your business" autocomplete="organization" spellcheck="false">
+          <p class="stamp__out display" aria-live="polite"><span class="stamp__a">YOUR</span><span class="stamp__b"> BRAND.</span></p>
+        </div>
+        <div class="close__act">
+          <a class="cta cta--big" href="https://example.com"><span class="cta__label"><span>Book an intro call</span><span aria-hidden="true">Book an intro call</span></span><span class="cta__chip" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a class="call" href="tel:+15550142">or call +1 555 0142</a>
+        </div>
+        <dl class="close__rows">
+          <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+          <div><dt>Hours</dt><dd>Monday to Friday, 9am to 6pm</dd></div>
+          <div><dt>Studio</dt><dd>1 Example Street, Lowmere</dd></div>
+          <div><dt>Follow</dt><dd><a href="https://example.com">Instagram</a><a href="https://example.com">LinkedIn</a><a href="https://example.com">Behance</a><a href="https://example.com">YouTube</a></dd></div>
+        </dl>
+        <p class="legal">Mosswick Studio, Lowmere, since 2014. Example content. Swap in your own.</p>
+      </div>
+      <figure class="close__scene sdx" aria-hidden="true">
+        <img class="wall__img" src="assets/close-wall.webp" width="540" height="657" alt="" loading="lazy">
+        <div class="scene">
+          <div class="plane--mark"><img src="assets/mark.svg" width="120" height="120" alt="" loading="lazy"></div>
+          <div class="plane--people">
+            <div class="person person--a"><img src="assets/people/person-a-sm.webp" width="340" height="510" alt="" loading="lazy"></div>
+            <div class="person person--b"><img src="assets/people/person-b-sm.webp" width="340" height="510" alt="" loading="lazy"></div>
+            <div class="person person--c"><img src="assets/people/person-c-sm.webp" width="340" height="510" alt="" loading="lazy"></div>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <span class="close__end" id="book" aria-hidden="true"></span>
+  </section>
+
+</main>
+
+
+<script src="scrollcraft.js"></script>
+<script>
+(function () {
+  var root = document.documentElement;
+  var fx = root.classList.contains('fx');
+  var sd = root.classList.contains('sd');
+  var phone = matchMedia('(max-width: 899px)').matches;
+  var close = document.getElementById('contact');
+  /* the close is a short pin on desktop; on phones and short windows it is ordinary flow */
+  if (phone || innerHeight < 700) close.setAttribute('data-sc-act', 'flow');
+  ScrollCraft.mount(document.body);
+
+  var hero = document.getElementById('hero');
+  var argue = document.getElementById('argument');
+  var deck = document.getElementById('proof');
+  var bar = document.getElementById('bar');
+  var dock = document.getElementById('dock');
+
+  /* ---- hero reveal, once the layers are decoded ---- */
+  if (root.classList.contains('pre-reveal')) {
+    var imgs = [].slice.call(hero.querySelectorAll('img'));
+    var done = false;
+    var go = function () { if (done) return; done = true; requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.remove('pre-reveal'); }); }); };
+    Promise.all(imgs.map(function (im) { return im.decode ? im.decode().catch(function () {}) : Promise.resolve(); })).then(go);
+    setTimeout(go, 1600);
+  }
+
+  /* ---- the signature: your business name, set in two halves and a full stop, the way the wordmark is set ---- */
+  var input = document.getElementById('bizname');
+  var outA = document.querySelector('.stamp__a'), outB = document.querySelector('.stamp__b');
+  function stamp() {
+    var v = (input.value || '').replace(/\s+/g, ' ').trim().replace(/\.+$/, '').toUpperCase();
+    if (!v) v = 'YOUR BRAND';
+    var cut = Math.ceil(v.length / 2);
+    if (v.charAt(cut - 1) === ' ') cut -= 1;
+    outA.textContent = v.slice(0, cut);
+    outB.textContent = v.slice(cut).replace(/^ /, ' ') + '.';
+  }
+  input.addEventListener('input', stamp);
+  stamp();
+
+  /* ---- bar goes solid off the top; the dock steps away while a big button is on screen ---- */
+  var bigs = [].slice.call(document.querySelectorAll('.cta--big'));
+  var seen = new Set();
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+      var away = seen.size > 0;
+      dock.classList.toggle('is-away', away);
+      document.body.classList.toggle('dock-away', away);
+    }, { threshold: 0.6 });
+    bigs.forEach(function (b) { io.observe(b); });
+  }
+
+  /* ---- scroll-linked ranges, in page pixels ---- */
+  var ranged = [];
+  function top(el) { return el.getBoundingClientRect().top + scrollY; }
+  function setR(el, a, b) {
+    if (b <= a) b = a + 1;
+    el.style.setProperty('--r0', a.toFixed(1) + 'px');
+    el.style.setProperty('--r1', b.toFixed(1) + 'px');
+    ranged.push([el, a, b]);
+  }
+  var words = [].slice.call(argue.querySelectorAll('.w'));
+  words.forEach(function (w, i) { w.style.setProperty('--i', i); });
+  var litAt = Infinity, dealAt = [Infinity, Infinity];
+  var cards = [].slice.call(document.querySelectorAll('.stack .card'));
+  var panels = [].slice.call(document.querySelectorAll('.stack .panel'));
+  var deals = [].slice.call(deck.querySelectorAll('.deal'));
+  var dcards = [].slice.call(deck.querySelectorAll('.dcard'));
+  var figs = [].slice.call(document.querySelectorAll('.wall__fig'));
+  var closeScene = close.querySelector('.close__scene');
+  var blocks = cards.map(function (c) { return [].slice.call(c.children); });
+  var wallTitle = document.querySelector('.wall__title h2');
+  var capts = [].slice.call(document.querySelectorAll('.wall__fig figcaption, .wall__lede'));
+  function measure() {
+    ranged = [];
+    if (!fx) return;
+    var vh = innerHeight;
+    // hero: push for the first 62% of the pin, then contract into a card
+    var hT = top(hero), hTr = Math.max(1, hero.offsetHeight - vh);
+    ['.plane--wall', '.plane--mark', '.plane--people'].forEach(function (s) { setR(hero.querySelector(s), hT, hT + hTr * 0.62); });
+    setR(hero.querySelector('.film'), hT + hTr * 0.62, hT + hTr);
+    // the argument: the words light up in turn once the stage is mostly on screen
+    litAt = top(argue) - vh * 0.35;
+    // services: card i is covered while panel i+1 travels from the bottom of the screen to its resting place
+    var bar = parseFloat(getComputedStyle(root).getPropertyValue('--bar')) || 64;
+    var ulT = top(panels[0].parentNode), ph = panels[0].offsetHeight;
+    panels.forEach(function (p, i) {
+      if (i === panels.length - 1) return;
+      var natNext = ulT + (i + 1) * ph;
+      var restNext = bar + vh * 0.025 + (i + 1) * 14;
+      setR(cards[i], natNext - vh, natNext - restNext);
+    });
+    // proof: one step of scroll per card after the first; a card is dealt once its point is crossed
+    var dT = top(deck), dTr = Math.max(1, deck.offsetHeight - vh), step = dTr / (deals.length - 1);
+    dealAt = [dT + step * 0.36, dT + step * 1.36];
+    // people: each tile over its own pass through the screen
+    figs.forEach(function (f) { var li = f.parentNode, t = top(li); setR(f, t - vh, t + li.offsetHeight); });
+    // close: the leads' card comes forward as the close arrives
+    var cT = top(close), cTr = Math.max(0, close.offsetHeight - vh);
+    setR(closeScene, cT - vh, cT + (cTr > 0 ? cTr * 0.6 : -vh * 0.25));
+  }
+
+  /* ---- per-frame: bar, fallback progress, published state for the verifier ---- */
+  var pinned = [hero, argue, deck].concat(close.getAttribute('data-sc-act') === 'pin' ? [close] : []);
+  var ticking = false;
+  function frame() {
+    ticking = false;
+    var y = scrollY, vh = innerHeight;
+    bar.classList.toggle('is-solid', y > 8);
+    if (fx) {
+      argue.classList.toggle('is-lit', y >= litAt);
+      var step = y >= dealAt[1] ? '2' : y >= dealAt[0] ? '1' : '0';
+      if (deck.getAttribute('data-step') !== step) deck.setAttribute('data-step', step);
+      // services: the words on a card step out wherever the next card has slid over them
+      for (var i = 0; i < cards.length - 1; i++) {
+        var nt = cards[i + 1].getBoundingClientRect().top;
+        blocks[i].forEach(function (b) { b.classList.toggle('is-under', b.getBoundingClientRect().bottom > nt + 1); });
+      }
+      // people: a name steps out while it passes under the title
+      var tr = wallTitle.getBoundingClientRect();
+      capts.forEach(function (c) { var r = c.getBoundingClientRect(); c.classList.toggle('is-under', r.bottom > tr.top - 4 && r.top < tr.bottom + 4); });
+    }
+    if (fx && !sd) ranged.forEach(function (r) { r[0].style.setProperty('--p', Math.max(0, Math.min(1, (y - r[1]) / (r[2] - r[1]))).toFixed(4)); });
+    pinned.forEach(function (s) {
+      var t = s.getBoundingClientRect().top, tr = s.offsetHeight - vh;
+      var p = tr > 0 ? Math.max(0, Math.min(1, -t / tr)) : 0;
+      var st = s.querySelector('[data-sc-stage]');
+      var v = fx ? String(Math.round(p * 40)) : 'still';
+      if (st.getAttribute('data-sc-verify-state') !== v) st.setAttribute('data-sc-verify-state', v);
+      var hold = !fx || (s === close && p >= 0.99) ? 'true' : 'false';
+      if (st.getAttribute('data-sc-verify-hold') !== hold) st.setAttribute('data-sc-verify-hold', hold);
+    });
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  measure(); frame();
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', function () { measure(); onScroll(); });
+  addEventListener('load', function () { measure(); onScroll(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measure(); onScroll(); });
+  if (window.ResizeObserver) { var lastH = document.body.offsetHeight; new ResizeObserver(function () { var h = document.body.offsetHeight; if (Math.abs(h - lastH) > 2) { lastH = h; measure(); onScroll(); } }).observe(document.body); }
+})();
+</script>
+</body>
+</html>
