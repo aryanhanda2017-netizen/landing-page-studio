@@ -1,6 +1,6 @@
 # Picking sections from 21st.dev
 
-21st.dev's MCP (`mcp__21st__*`, configured by this plugin's `.mcp.json` with your `TWENTYFIRST_API_KEY`) searches a large catalogue of React/shadcn components. Searches are free; `get_component` returns full code (paid tiers retrieve without a daily cap). Use it as a pattern library, not a page builder.
+21st.dev's MCP (`mcp__21st__*`, configured by this plugin's `.mcp.json` with your `TWENTYFIRST_API_KEY`, or by your own 21st.dev MCP server) searches a large catalogue of React/shadcn components. Searches are free; `get_component` returns full code (paid tiers retrieve without a daily cap). Use it as a pattern library, not a page builder.
 
 ## The site decides, not the catalogue
 

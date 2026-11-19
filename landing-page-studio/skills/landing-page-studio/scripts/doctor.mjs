@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Preflight: what this workflow needs, what is installed, and how to install the rest.
 // Never prints a key's value, only whether it is set.
-import { execSync } from 'child_process';
-import { existsSync, readdirSync } from 'fs';
-import { join, dirname } from 'path';
+import { execSync, execFileSync } from 'child_process';
+import { existsSync, readdirSync, readFileSync } from 'fs';
+import { join, dirname, resolve } from 'path';
 import { homedir, platform } from 'os';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
@@ -30,6 +30,28 @@ function findSkill(name) {
   return '';
 }
 
+// The 21st.dev key can also live in the user's own MCP server entry
+// (claude mcp add --transport http 21st https://21st.dev/api/mcp --header "x-api-key: ...")
+// instead of the environment. Look for a 21st.dev server with a real key in the user,
+// local and project MCP configs. Says where it is, never what it is.
+function find21stServer() {
+  const readJson = p => { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; } };
+  const hasKey = s => {
+    if (!s || !/21st\.dev/.test(s.url || '')) return false;
+    const key = Object.entries(s.headers || {}).find(([h]) => h.toLowerCase() === 'x-api-key')?.[1];
+    return typeof key === 'string' && key.trim() !== '' && !/^\$\{[^}]*\}$/.test(key.trim());
+  };
+  const anyKey = servers => Object.values(servers || {}).some(hasKey);
+  const dirs = [];
+  for (let d = resolve(process.cwd()); ; d = dirname(d)) { dirs.push(d); if (dirname(d) === d) break; }
+  const cfgFile = join(process.env.CLAUDE_CONFIG_DIR || home, '.claude.json');
+  const cfg = readJson(cfgFile);
+  if (cfg && anyKey(cfg.mcpServers)) return `set in your 21st MCP server (user scope, ${cfgFile})`;
+  for (const d of dirs) if (cfg && anyKey(cfg.projects?.[d]?.mcpServers)) return `set in your 21st MCP server (local scope, ${d})`;
+  for (const d of dirs) if (anyKey(readJson(join(d, '.mcp.json'))?.mcpServers)) return `set in your 21st MCP server (${join(d, '.mcp.json')})`;
+  return '';
+}
+
 const major = Number(process.versions.node.split('.')[0]);
 add('required', 'Node 18+', major >= 18, process.versions.node, 'Install Node 18 or newer from nodejs.org');
 
@@ -37,7 +59,18 @@ let pw = '';
 for (const base of [join(process.cwd(), 'package.json'), join(skillDir, 'package.json')]) {
   try { createRequire(base).resolve('playwright-core'); pw = base.replace(/package\.json$/, ''); break; } catch {}
 }
-add('required', 'playwright-core', !!pw, pw ? `found from ${pw}` : 'not found', 'npm i playwright-core   (in the build project)');
+// The check scripts find playwright-core from the folder they run in, so a miss is often
+// just the wrong folder. Look one or two levels down for a build folder that has it.
+let pwBelow = [];
+if (!pw && process.cwd() !== home && process.cwd() !== '/') {
+  try {
+    pwBelow = execFileSync('find', [process.cwd(), '-maxdepth', '3', '-type', 'd', '-path', '*/node_modules/playwright-core'], { stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString().split('\n').filter(Boolean).slice(0, 3).map(p => dirname(dirname(p)));
+  } catch {}
+}
+add('required', 'playwright-core', !!pw,
+  pw ? `found from ${pw}` : pwBelow.length ? `not found from ${process.cwd()}, but this folder has it: ${pwBelow.join(', ')}` : `not found from ${process.cwd()}`,
+  pwBelow.length ? `cd into that build folder and run this check (and the other scripts) from there` : 'cd into your build folder and npm i playwright-core there (the scripts look for it from the folder you run them in)');
 
 const chrome = chromePath();
 add('required', 'Google Chrome', !!chrome, chrome || 'not found', 'Install Chrome, or set CHROME_PATH to a Chrome/Chromium binary');
@@ -45,8 +78,9 @@ add('required', 'Google Chrome', !!chrome, chrome || 'not found', 'Install Chrom
 const sc = findSkill('scroll-craft');
 add('required', 'ScrollCraft skill', !!sc, sc || 'not installed', '/plugin marketplace add nateherkai/scroll-craft  then  /plugin install nateherk-design@nateherk');
 
-add('recommended', '21st.dev key (TWENTYFIRST_API_KEY)', !!process.env.TWENTYFIRST_API_KEY, process.env.TWENTYFIRST_API_KEY ? 'set' : 'not set',
-  'Get a key at 21st.dev, then export TWENTYFIRST_API_KEY=... before starting Claude Code (the plugin .mcp.json reads it)');
+const key21 = process.env.TWENTYFIRST_API_KEY ? 'set (TWENTYFIRST_API_KEY)' : find21stServer();
+add('recommended', '21st.dev key', !!key21, key21 || 'not set',
+  'Get a key at 21st.dev, then either export TWENTYFIRST_API_KEY=... before starting Claude Code (the plugin .mcp.json reads it), or add your own server: claude mcp add --transport http 21st https://21st.dev/api/mcp --header "x-api-key: <your key>"');
 
 const unslop = findSkill('unslop');
 add('recommended', 'unslop skill (polish pass)', !!unslop, unslop || 'not installed', '/plugin marketplace add heydamir/unslop  then  /plugin install unslop@heydamir');

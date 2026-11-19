@@ -9,7 +9,7 @@
       "name": "landing-page-studio",
       "source": "./landing-page-studio",
       "description": "Research a business, design a layered scroll-driven landing page from its real assets, verify it at phone and desktop sizes, build in SEO/AEO/GEO, and ship it.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "license": "MIT",
       "homepage": "https://github.com/aryanhanda2017-netizen/landing-page-studio"
     }

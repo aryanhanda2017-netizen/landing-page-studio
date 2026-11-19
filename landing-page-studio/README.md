@@ -45,7 +45,7 @@ The plugin doesn't copy other people's work. It calls their tools, so install th
 | Tool | What it does here | Install |
 |---|---|---|
 | **ScrollCraft** by Nate Herk (MIT) | Brief method, page grammars, scroll engine, screenshot harness | `/plugin marketplace add nateherkai/scroll-craft` then `/plugin install nateherk-design@nateherk` |
-| **21st.dev MCP** | Section and interaction patterns | Get an API key at 21st.dev, then `export TWENTYFIRST_API_KEY=...` before starting Claude Code. The plugin's `.mcp.json` reads it. |
+| **21st.dev MCP** | Section and interaction patterns | Get an API key at 21st.dev, then `export TWENTYFIRST_API_KEY=...` before starting Claude Code (the plugin's `.mcp.json` reads it), or add your own server with `claude mcp add --transport http 21st https://21st.dev/api/mcp --header "x-api-key: <your key>"`. The preflight finds either. |
 | **unslop** by Damir Sokolovsky (CC BY 4.0) | Final polish pass | `/plugin marketplace add heydamir/unslop` then `/plugin install unslop@heydamir` |
 | **claude-seo** by AgriciDaniel | Page and AI-agent checks | github.com/AgriciDaniel/claude-seo (v2.6.2 or newer) |
 | **geo-optimizer** | GEO score from 0 to 100 | `pipx install geo-optimizer-skill` |
